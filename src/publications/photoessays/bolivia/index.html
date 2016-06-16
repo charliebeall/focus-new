@@ -93,7 +93,7 @@
             <p>
                 When immigration’s impact upon people and places is discussed, images of the world’s big immigrant gateways come to mind such as New York City, Toronto, or Paris.  These cosmopolitan global cities are brimming over with immigrants from many parts of the world.  Less thought about are the thousands of localities that produce migrants decade after decade.  How do these places manage with large numbers of the working age people leaving? Do migrants return?  What impact does steady out-migration have of livelihoods, landscapes, and society?
 
-                This photo essay explores a region of Bolivia that has been producing international migrants for nearly a century.  Southeast of the city of <a href="#" class="location" data-layer-id="cochabamba">Cochabamba</a> is the Valle Alto, a fertile plain at 8,000 ft. elevation surrounded by mountains.  This agricultural region is dominated by grain production, especially corn, and in irrigated areas peaches are grown for domestic markets.  There a scores of small villages scattered across the valley floor, but this essay focuses on the villages surrounding <a href="#" class="location" data-layer-id="tarataandarbieto">Tarata and Arbieto</a>.
+                This photo essay explores a region of Bolivia that has been producing international migrants for nearly a century.  Southeast of the city of <a href="#" class="location" data-layer-id="cochabamba">Cochabamba</a> is the <a href="#" class="location" data-layer-id="vallealto-outline">Valle Alto</a>, a fertile plain at 8,000 ft. elevation surrounded by mountains.  This agricultural region is dominated by grain production, especially corn, and in irrigated areas peaches are grown for domestic markets.  There a scores of small villages scattered across the valley floor, but this essay focuses on the villages surrounding <a href="#" class="location" data-layer-id="tarataandarbieto">Tarata and Arbieto</a>.
             </p>
         </section>
         <section id="2" class="scene photo-scene" data-scene-id="place2">
@@ -373,7 +373,145 @@
                             "name": "Cochabamba"
                         }
                     }
-                },{
+                }, {
+                    "id": "vallealto-outline",
+                    "type": "geojson",
+                    "style": {
+                        "fillOpacity": 0.2,
+                        "fillColor": "red",
+                        "color": "#333",
+                        "opacity": 0.7,
+                        "dashArray": [2, 2],
+                        "text": {
+                            "text": "Valle Alto"
+                        }
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Valle Alto"
+                        },
+                        "geometry": {
+                            "type": "Polygon",
+                            "coordinates": [
+                                [
+                                    [
+                                        -66.03401184082031,
+                                        -17.539296556236692
+                                    ],
+                                    [
+                                        -66.06147766113281,
+                                        -17.577921135881425
+                                    ],
+                                    [
+                                        -66.02577209472656,
+                                        -17.611956301535436
+                                    ],
+                                    [
+                                        -66.05667114257812,
+                                        -17.63813283223744
+                                    ],
+                                    [
+                                        -66.05598449707031,
+                                        -17.65318261616436
+                                    ],
+                                    [
+                                        -65.95848083496094,
+                                        -17.683278409289212
+                                    ],
+                                    [
+                                        -65.92414855957031,
+                                        -17.65252830388338
+                                    ],
+                                    [
+                                        -65.88638305664062,
+                                        -17.657108439910708
+                                    ],
+                                    [
+                                        -65.86509704589844,
+                                        -17.646639386359777
+                                    ],
+                                    [
+                                        -65.83900451660156,
+                                        -17.6139196731067
+                                    ],
+                                    [
+                                        -65.80879211425781,
+                                        -17.65318261616436
+                                    ],
+                                    [
+                                        -65.79025268554688,
+                                        -17.633552213674417
+                                    ],
+                                    [
+                                        -65.80879211425781,
+                                        -17.604102601691288
+                                    ],
+                                    [
+                                        -65.79093933105469,
+                                        -17.5929759421994
+                                    ],
+                                    [
+                                        -65.7586669921875,
+                                        -17.607375018147227
+                                    ],
+                                    [
+                                        -65.77102661132812,
+                                        -17.575302780737246
+                                    ],
+                                    [
+                                        -65.76141357421875,
+                                        -17.569411343095137
+                                    ],
+                                    [
+                                        -65.77720642089844,
+                                        -17.558282548685316
+                                    ],
+                                    [
+                                        -65.79505920410156,
+                                        -17.543879564143634
+                                    ],
+                                    [
+                                        -65.80879211425781,
+                                        -17.513760534752066
+                                    ],
+                                    [
+                                        -65.84518432617188,
+                                        -17.503938031340173
+                                    ],
+                                    [
+                                        -65.89462280273438,
+                                        -17.509176765934782
+                                    ],
+                                    [
+                                        -65.9296417236328,
+                                        -17.520308575179257
+                                    ],
+                                    [
+                                        -65.950927734375,
+                                        -17.51637977926615
+                                    ],
+                                    [
+                                        -65.97564697265625,
+                                        -17.530784948463122
+                                    ],
+                                    [
+                                        -65.9893798828125,
+                                        -17.536022908221458
+                                    ],
+                                    [
+                                        -66.01821899414062,
+                                        -17.53864183136249
+                                    ],
+                                    [
+                                        -66.03401184082031,
+                                        -17.539296556236692
+                                    ]
+                                ]
+                            ]
+                        }
+                    }
+                },/*{
                     "id": "vallealto",
                     "type": "geojson",
                     "style": {
@@ -401,7 +539,7 @@
                             "name": "Valle Alto"
                         }
                     }
-                }, {
+                },*/ {
                     //-17.583494, -66.008273
                     "id": "tarataandarbieto",
                     "type": "geojson",
@@ -482,11 +620,149 @@
                         }
                     }
                 }, {
+                    "id": "vallealto-outline",
+                    "type": "geojson",
+                    "style": {
+                        "fillOpacity": 0.2,
+                        "fillColor": "red",
+                        "color": "#333",
+                        "opacity": 0.7,
+                        "dashArray": [2, 2],
+                        "text": {
+                            "text": "Valle Alto"
+                        }
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Valle Alto"
+                        },
+                        "geometry": {
+                            "type": "Polygon",
+                            "coordinates": [
+                                [
+                                    [
+                                        -66.03401184082031,
+                                        -17.539296556236692
+                                    ],
+                                    [
+                                        -66.06147766113281,
+                                        -17.577921135881425
+                                    ],
+                                    [
+                                        -66.02577209472656,
+                                        -17.611956301535436
+                                    ],
+                                    [
+                                        -66.05667114257812,
+                                        -17.63813283223744
+                                    ],
+                                    [
+                                        -66.05598449707031,
+                                        -17.65318261616436
+                                    ],
+                                    [
+                                        -65.95848083496094,
+                                        -17.683278409289212
+                                    ],
+                                    [
+                                        -65.92414855957031,
+                                        -17.65252830388338
+                                    ],
+                                    [
+                                        -65.88638305664062,
+                                        -17.657108439910708
+                                    ],
+                                    [
+                                        -65.86509704589844,
+                                        -17.646639386359777
+                                    ],
+                                    [
+                                        -65.83900451660156,
+                                        -17.6139196731067
+                                    ],
+                                    [
+                                        -65.80879211425781,
+                                        -17.65318261616436
+                                    ],
+                                    [
+                                        -65.79025268554688,
+                                        -17.633552213674417
+                                    ],
+                                    [
+                                        -65.80879211425781,
+                                        -17.604102601691288
+                                    ],
+                                    [
+                                        -65.79093933105469,
+                                        -17.5929759421994
+                                    ],
+                                    [
+                                        -65.7586669921875,
+                                        -17.607375018147227
+                                    ],
+                                    [
+                                        -65.77102661132812,
+                                        -17.575302780737246
+                                    ],
+                                    [
+                                        -65.76141357421875,
+                                        -17.569411343095137
+                                    ],
+                                    [
+                                        -65.77720642089844,
+                                        -17.558282548685316
+                                    ],
+                                    [
+                                        -65.79505920410156,
+                                        -17.543879564143634
+                                    ],
+                                    [
+                                        -65.80879211425781,
+                                        -17.513760534752066
+                                    ],
+                                    [
+                                        -65.84518432617188,
+                                        -17.503938031340173
+                                    ],
+                                    [
+                                        -65.89462280273438,
+                                        -17.509176765934782
+                                    ],
+                                    [
+                                        -65.9296417236328,
+                                        -17.520308575179257
+                                    ],
+                                    [
+                                        -65.950927734375,
+                                        -17.51637977926615
+                                    ],
+                                    [
+                                        -65.97564697265625,
+                                        -17.530784948463122
+                                    ],
+                                    [
+                                        -65.9893798828125,
+                                        -17.536022908221458
+                                    ],
+                                    [
+                                        -66.01821899414062,
+                                        -17.53864183136249
+                                    ],
+                                    [
+                                        -66.03401184082031,
+                                        -17.539296556236692
+                                    ]
+                                ]
+                            ]
+                        }
+                    }
+                }, {
                     "id": "chapare",
                     "type": "geojson",
                     "style": {
                         "fill": true,
-                        "weight": 1,
+                        "weight": 2,
                         "color": "orange",
                         "fillColor": "orange",
                         "fillOpacity": 0.2,

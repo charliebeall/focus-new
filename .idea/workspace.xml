@@ -24,24 +24,24 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/publications/quizzes/one/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="451.66666">
-              <caret line="109" column="53" selection-start-line="109" selection-start-column="53" selection-end-line="109" selection-end-column="53" />
+            <state vertical-scroll-proportion="-6.179487">
+              <caret line="2070" column="18" selection-start-line="2070" selection-start-column="18" selection-end-line="2070" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#path#1;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1465953047000" expanded="true" signature="10886:10898" placeholder="..." />
-                <marker date="1465953047000" expanded="true" signature="43914:43940" placeholder="..." />
-                <marker date="1465953047000" expanded="true" signature="45640:45664" placeholder="..." />
-                <marker date="1465953047000" expanded="true" signature="45850:45874" placeholder="..." />
-                <marker date="1465953047000" expanded="true" signature="54057:54081" placeholder="..." />
-                <marker date="1465953047000" expanded="true" signature="54267:54291" placeholder="..." />
-                <marker date="1465953047000" expanded="true" signature="104297:104309" placeholder="..." />
-                <marker date="1465953047000" expanded="true" signature="105191:105203" placeholder="..." />
-                <marker date="1465953047000" expanded="true" signature="109855:109867" placeholder="..." />
-                <marker date="1465953047000" expanded="true" signature="120731:120776" placeholder="..." />
-                <marker date="1465953047000" expanded="true" signature="120751:120776" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="10886:10898" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="43926:43952" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="45652:45676" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="45862:45886" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="54069:54093" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="54279:54303" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="104311:104323" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="105205:105217" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="109871:109883" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="120747:120792" placeholder="..." />
+                <marker date="1466038829000" expanded="true" signature="120767:120792" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -57,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5084088">
-              <caret line="487" column="36" selection-start-line="487" selection-start-column="36" selection-end-line="487" selection-end-column="36" />
+            <state vertical-scroll-proportion="20.35238">
+              <caret line="541" column="20" selection-start-line="541" selection-start-column="20" selection-end-line="541" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -114,8 +114,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/publications/articles/baja/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="16.35238">
-              <caret line="328" column="64" selection-start-line="328" selection-start-column="64" selection-end-line="328" selection-end-column="64" />
+            <state vertical-scroll-proportion="59.980953">
+              <caret line="106" column="564" selection-start-line="106" selection-start-column="563" selection-end-line="106" selection-end-column="564" />
               <folding>
                 <element signature="n#style#0;n#div#4;n#section#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#8;n#section#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -138,11 +138,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.602564">
-              <caret line="561" column="26" selection-start-line="561" selection-start-column="26" selection-end-line="561" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.9625">
+              <caret line="1234" column="4" selection-start-line="1234" selection-start-column="4" selection-end-line="1234" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -508,13 +508,13 @@
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/publications/quizzes/one/index.html" />
         <option value="$PROJECT_DIR$/src/js/quizview.js" />
-        <option value="$PROJECT_DIR$/src/css/main.css" />
         <option value="$PROJECT_DIR$/src/js/mapview.js" />
         <option value="$PROJECT_DIR$/dist/js/mapview.js" />
         <option value="$PROJECT_DIR$/src/publications/articles/baja/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/quizzes/one/index.html" />
         <option value="$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html" />
+        <option value="$PROJECT_DIR$/src/css/main.css" />
       </list>
     </option>
   </component>
@@ -1057,7 +1057,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1695,42 +1695,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/quizzes/one/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="451.66666">
-          <caret line="109" column="53" selection-start-line="109" selection-start-column="53" selection-end-line="109" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#path#1;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1465953047000" expanded="true" signature="10886:10898" placeholder="..." />
-            <marker date="1465953047000" expanded="true" signature="43914:43940" placeholder="..." />
-            <marker date="1465953047000" expanded="true" signature="45640:45664" placeholder="..." />
-            <marker date="1465953047000" expanded="true" signature="45850:45874" placeholder="..." />
-            <marker date="1465953047000" expanded="true" signature="54057:54081" placeholder="..." />
-            <marker date="1465953047000" expanded="true" signature="54267:54291" placeholder="..." />
-            <marker date="1465953047000" expanded="true" signature="104297:104309" placeholder="..." />
-            <marker date="1465953047000" expanded="true" signature="105191:105203" placeholder="..." />
-            <marker date="1465953047000" expanded="true" signature="109855:109867" placeholder="..." />
-            <marker date="1465953047000" expanded="true" signature="120731:120776" placeholder="..." />
-            <marker date="1465953047000" expanded="true" signature="120751:120776" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/quizview.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.851852">
           <caret line="256" column="212" selection-start-line="256" selection-start-column="212" selection-end-line="256" selection-end-column="212" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.602564">
-          <caret line="561" column="26" selection-start-line="561" selection-start-column="26" selection-end-line="561" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1761,8 +1729,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/articles/baja/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.35238">
-          <caret line="328" column="64" selection-start-line="328" selection-start-column="64" selection-end-line="328" selection-end-column="64" />
+        <state vertical-scroll-proportion="59.980953">
+          <caret line="106" column="564" selection-start-line="106" selection-start-column="563" selection-end-line="106" selection-end-column="564" />
           <folding>
             <element signature="n#style#0;n#div#4;n#section#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#8;n#section#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1784,10 +1752,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/quizzes/one/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.179487">
+          <caret line="2070" column="18" selection-start-line="2070" selection-start-column="18" selection-end-line="2070" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#1;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1466038829000" expanded="true" signature="10886:10898" placeholder="..." />
+            <marker date="1466038829000" expanded="true" signature="43926:43952" placeholder="..." />
+            <marker date="1466038829000" expanded="true" signature="45652:45676" placeholder="..." />
+            <marker date="1466038829000" expanded="true" signature="45862:45886" placeholder="..." />
+            <marker date="1466038829000" expanded="true" signature="54069:54093" placeholder="..." />
+            <marker date="1466038829000" expanded="true" signature="54279:54303" placeholder="..." />
+            <marker date="1466038829000" expanded="true" signature="104311:104323" placeholder="..." />
+            <marker date="1466038829000" expanded="true" signature="105205:105217" placeholder="..." />
+            <marker date="1466038829000" expanded="true" signature="109871:109883" placeholder="..." />
+            <marker date="1466038829000" expanded="true" signature="120747:120792" placeholder="..." />
+            <marker date="1466038829000" expanded="true" signature="120767:120792" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5084088">
-          <caret line="487" column="36" selection-start-line="487" selection-start-column="36" selection-end-line="487" selection-end-column="36" />
+        <state vertical-scroll-proportion="20.35238">
+          <caret line="541" column="20" selection-start-line="541" selection-start-column="20" selection-end-line="541" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1813,6 +1805,14 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#13;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9625">
+          <caret line="1234" column="4" selection-start-line="1234" selection-start-column="4" selection-end-line="1234" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
