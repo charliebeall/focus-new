@@ -1232,7 +1232,7 @@ body.scrolled .title-hidden {
     .photo-scene .intro {
         position: relative;
     }
-    
+
     .photo-scene div.figure {
         height: 300px;
     }
@@ -1251,11 +1251,16 @@ body.scrolled .title-hidden {
         height: 300px;
     }
 
-    #map, #overview-map, #foreground, #shadow, #photos, #nav, #progress {
+    #overview-map, #foreground, #shadow, #photos, #nav, #progress {
         display: none;
     }
 
+    #map {
+        opacity: 0;
+    }
+
     #map.fill {
+        opacity: 1;
         display: block;
     }
 
