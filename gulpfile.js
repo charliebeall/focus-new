@@ -229,7 +229,8 @@ gulp.task('minify1', function () {
         'bower_components/jquery.scrollex/jquery.scrollex.min.js',
         'bower_components/leaflet-dvf/dist/leaflet-dvf.min.js',
         'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
-        'src/js/index.js'])
+        'src/js/vendor/*.js',
+        'src/js/*.js'])
         .pipe(concat('combined.js'))
         .pipe(gulp.dest('src'))
         .pipe(uglify())
