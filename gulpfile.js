@@ -183,14 +183,59 @@ gulp.task('concat', function() {
         .pipe(gulp.dest('src'));
 });
 
+gulp.task('concat1', function () {
+    return gulp.src([
+            'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/underscore/underscore.js',
+            'bower_components/backbone/backbone.js',
+            'bower_components/hidpi-canvas/dist/hidpi-canvas.min.js',
+            'bower_components/leaflet/dist/leaflet.js',
+            'bower_components/flowtype/flowtype.js',
+            'bower_components/d3/d3.min.js',
+            'bower_components/topojson/topojson.js',
+            'bower_components/velocity/velocity.min.js',
+            'bower_components/velocity/velocity.ui.min.js',
+            'bower_components/bootstrap/dist/js/bootstrap.min.js',
+            'bower_components/jquery.scrollex/jquery.scrollex.min.js',
+            'bower_components/leaflet-dvf/dist/leaflet-dvf.min.js',
+            'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
+            'src/js/vendor/*.js',
+            'src/js/*.js'])
+        .pipe(concat('combined.js'))
+        .pipe(gulp.dest('src'));
+});
+
 gulp.task('minify', function() {
     return gulp.src(['src/js/vendor/*.js', 'src/js/*.js'])
         .pipe(concat('index.js'))
         .pipe(gulp.dest('src'))
-        //.pipe(rename('scripts.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('src'));
 });
+
+gulp.task('minify1', function () {
+    return gulp.src([
+        'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/underscore/underscore.js',
+        'bower_components/backbone/backbone.js',
+        'bower_components/hidpi-canvas/dist/hidpi-canvas.min.js',
+        'bower_components/leaflet/dist/leaflet.js',
+        'bower_components/flowtype/flowtype.js',
+        'bower_components/d3/d3.min.js',
+        'bower_components/topojson/topojson.js',
+        'bower_components/velocity/velocity.min.js',
+        'bower_components/velocity/velocity.ui.min.js',
+        'bower_components/bootstrap/dist/js/bootstrap.min.js',
+        'bower_components/jquery.scrollex/jquery.scrollex.min.js',
+        'bower_components/leaflet-dvf/dist/leaflet-dvf.min.js',
+        'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
+        'src/js/index.js'])
+        .pipe(concat('combined.js'))
+        .pipe(gulp.dest('src'))
+        .pipe(uglify())
+        .pipe(gulp.dest('src'));
+});
+
 
 gulp.task('copyfonts', function() {
     gulp.src('bower_components/fontawesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')

@@ -59,8 +59,8 @@ Focus.Views.MapView = Backbone.View.extend({
             me._engine.resize();
         });
     },
-    _layerClick: function () {
-
+    _layerClick: function (id) {
+        Focus.Events.trigger('layerClick', id);
     },
     setCenter: function (center) {
         this._engine.setCenter(center);
@@ -335,6 +335,14 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 fillColor: 'rgb(39,171,226)',
                 fillOpacity: 0.9
             }, layerDef.style);
+
+            var onEachRecord = function (layerDef) {
+                return function (layer, record) {
+                    layer.on('click', function (e) {
+                        me.trigger('layerClick', layerDef.id);
+                    });
+                };
+            };
             layer = new L.ChoroplethDataLayer([layerDef.data], {
                 recordsField: null,
                 geoJSONField: null,
@@ -369,9 +377,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                         }
                     }
                 },
-                onEachRecord: function (layer, record) {
-                    me.trigger('layerClick', layerDef.id);
-                }
+                onEachRecord: onEachRecord(layerDef)
             });
 
             var extent = turf.extent(layerDef.data);
@@ -406,7 +412,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
     _flyTo: function (sceneModel, fly) {
 
         var coordinates = sceneModel.get('center');
-        var bounds;
+        var bounds = null;
+        var me = this;
 
         if (!coordinates) {
             bounds = this._calculateBounds();
@@ -416,13 +423,20 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         var zoom = sceneModel.get('zoom');
         var latLng = new L.LatLng(coordinates[1], coordinates[0]);
 
-        fly = false;
+        fly = true;
         if (fly) {
-            this._map.flyTo(latLng, zoom);
+            if (bounds) {
+                me._map.flyToBounds(bounds, {
+                    maxZoom: zoom
+                });
+            }
+            else {
+                me._map.flyTo(latLng, zoom);
+            }
         }
         else {
             if (bounds) {
-                this._map.fitBounds(bounds, {
+                me._map.fitBounds(bounds, {
                     maxZoom: zoom
                 });
             }
@@ -907,6 +921,7 @@ Focus.Views.ScrollingSceneNavigator = Focus.Views.SceneNavigator.extend({
             top: '400px',
             bottom: '400px',
             scroll: function (progress) {
+
                 if (progress > 0.01) {
                     //$('body').addClass('scrolled');
                 }
@@ -974,7 +989,7 @@ Focus.Views.ProgressView = Backbone.View.extend({
 });
 
 Focus.Util = {
-    getLine: function (mapView, $target, layerId) {
+    getLine: function (mapView, $target, layerId, drawStyle) {
         var offset = $target.offset();
         var point = mapView.getLayerPoint(layerId);
         var x1 = point.x + mapView.$el.offset().left;
@@ -1008,8 +1023,19 @@ Focus.Util = {
             .attr('stroke-width', '0.1px')
             .attr('fill', 'darkgreen');
 
+        var anchorX = (x1 - x2 - ($target.outerWidth()/2))/2;
+        var anchorY = 0;
+        drawStyle = drawStyle || 'hv';
+        if (drawStyle === 'c') {
+            anchorY = (y1 - y2 - ($target.outerHeight()/2))/2;
+        }
+        else if (drawStyle === 'vh') {
+            anchorY = y1 - y2 - ($target.outerHeight()/2);
+            anchorX = 0
+        }
+
         var path = svg.append('path')
-            .attr("d", bezierLine([[0, 0], [(x1 - x2 - ($target.outerWidth()/2))/2, 0], [x1 - x2 - ($target.outerWidth()/2),y1 - y2 - ($target.outerHeight()/2)]]))
+            .attr("d", bezierLine([[0, 0], [anchorX, anchorY], [x1 - x2 - ($target.outerWidth()/2),y1 - y2 - ($target.outerHeight()/2)]]))
             .attr("stroke", "darkgreen")
             .attr("stroke-width", 3)
             .attr("fill", "none")
@@ -1032,8 +1058,8 @@ Focus.Views.ShareView = Backbone.View.extend({
             var $this = $(this);
             var href = $this.attr('href');
 
-            href = href.replace('[TITLE]', 'Focus on Geography: ' + $('h2.title').text());
-            href = href.replace('[URL]', window.location.href);
+            href = href.replace(/\[TITLE\]/gi, 'Focus on Geography - ' + $('h2.title').text());
+            href = href.replace(/\[URL\]/gi, window.location.href);
 
             $this.attr('href', href);
         });
@@ -1077,6 +1103,10 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
 
         var me = this;
         this.$el.find('a.location').each(function () {
+            var textClick = function () {
+                $('#text').removeClass('transparent');
+            };
+
             var mouseover = _.throttle(function (e) {
                 e.preventDefault();
                 var offset = $(this).offset();
@@ -1125,21 +1155,28 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                         var len = this.getTotalLength();
                         return function(t) { return (d3.interpolateString("0," + len, len + ",0"))(t) };
                     });
-            }, 10)
+                $('#text').addClass('transparent');
+                $('#text').on('click', textClick);
+                $(this).addClass('selected-link');
+
+            }, 10);
             $(this).on('mouseover', mouseover).on('mouseout', function (e) {
                 e.preventDefault();
                 var id = $(this).attr('data-layer-id');
                 me._mapView0.unhighlight(id);
                 me.$el.find('#' + id + '-line').remove();
+                $('#text').removeClass('transparent');
+                $('#text').off('click', textClick);
+                $(this).removeClass('selected-link');
             }).on('click', function (e) {
                 e.preventDefault();
                 var id = $(this).attr('data-layer-id');
-                me._mapView0._engine.zoomToLayer(id);
+                //me._mapView0._engine.zoomToLayer(id);
             });
         });
     },
     drawLine: function (event) {
-        var $el = Focus.Util.getLine(this._mapView0, event.$target, event.layerId);
+        var $el = Focus.Util.getLine(this._mapView0, event.$target, event.layerId, event.drawStyle);
         $('body').prepend($el);
     },
     _scenesLoaded: function (scenes) {
@@ -1275,11 +1312,22 @@ Focus.Views.OverviewMapView = Focus.Views.MapView.extend({
         options.engineClass = options.engineClass || Focus.Views.LeafletMapEngine;
         Focus.Views.MapView.prototype.initialize.call(this, options);
         this.listenTo(Focus.Events, 'viewChanged', this.viewChanged);
+        this._centerPoint = new L.RegularPolygonMarker(new L.LatLng(0,0), {
+            radius: 30,
+            color: '#333',
+            numberOfSides: 4,
+            rotation: 45,
+            fill: false,
+            gradient: false,
+            weight: 1,
+            opacity: 1
+        });
+        this._engine._map.addLayer(this._centerPoint);
     },
     viewChanged: function (view) {
         this.setCenter(view.center);
         this.setZoom(3);
-
+        this._centerPoint.setLatLng(new L.LatLng(view.center[1], view.center[0]));
     }
 });
 
@@ -1323,184 +1371,5 @@ Focus.Views.ModalView = Backbone.View.extend({
 
         Focus.Events.trigger('next');
         this.hide();
-    }
-});
-
-/*
-index,
-complete,
-correct,
-value
- */
-Focus.Models.ScoreItemModel = Backbone.Model.extend({
-    defaults: function () {
-        return {
-            complete: false,
-            correct: false,
-            value: 1
-        };
-    }
-});
-
-Focus.Collections.ScoreItemCollection = Backbone.Collection.extend({
-    model: Focus.Models.ScoreItemModel
-});
-
-Focus.Views.QuizScoreView = Backbone.View.extend({
-    el: $('#score-view'),
-    initialize: function (options) {
-        options = options || {};
-        var count = options.count || 10;
-        var items = [];
-
-        for (var i = 1; i <= count; ++i) {
-            items.push({
-                index: i,
-                complete: false,
-                correct: false,
-                value: 1
-            });
-        }
-
-        this.collection = new Focus.Collections.ScoreItemCollection(items);
-
-        this._setupChart();
-
-        this.listenTo(this.collection, 'change', this.render);
-
-        this._score = 0;
-
-    },
-    incrementScore: function (model) {
-        var found = this.collection.findWhere({
-            index: model.index
-        });
-
-        if (model.correct) {
-            this._score++;
-        }
-
-        found.set(model);
-        found.set('complete', true);
-    },
-    _setupChart: function () {
-        var width = this.$el.width();
-        var height = this.$el.height();
-        var radius = Math.min(width, height) / 2;
-        this._svg = d3.select(this.$el[0])
-            .append("svg")
-            .append("g")
-
-        this._svg.append("g")
-            .attr("class", "slices");
-        this._svg.append("g")
-            .attr("class", "labels");
-        this._svg.append("g")
-            .attr("class", "lines");
-
-        this._svg.attr("transform", "translate(" + radius + "," + radius + ")");
-    },
-    _buildPie: function () {
-        var me = this;
-        var width = this.$el.width();
-        var height = this.$el.height();
-
-        this.$el.find('h3').html(this._score);
-
-        var radius = Math.min(width, height) / 2;
-
-        var pie = d3.layout.pie()
-            .sort(null)
-            .value(function (d) {
-                return d.value;
-            });
-
-        var arc = d3.svg.arc()
-            .innerRadius(radius * 0.3)
-            .outerRadius(radius * 0.4);
-
-        var midArc = d3.svg.arc()
-            .innerRadius(radius * 0.4)
-            .outerRadius(radius * 0.6);
-
-        var outerArc = d3.svg.arc()
-            .innerRadius(radius * 0.8)
-            .outerRadius(radius * 0.9);
-
-        var key = function (d) {
-            return d.data.index;
-        };
-
-        var change = function (data) {
-            /* ------- PIE SLICES -------*/
-            var slice = me._svg.select(".slices").selectAll("path.slice")
-                .data(pie(data), key);
-
-            slice.enter()
-                .insert("path")
-                .style("fill", function (d) {
-                    if (d.data.complete) {
-                        if (d.data.correct) {
-                            return 'green';
-                        }
-                        else {
-                            return 'red';
-                        }
-                    }
-                    else {
-                        return 'gray';
-                    }
-                })
-                .style("stroke", '#333') //"rgba(0,0,0,0.25)")
-                //.style("opacity", 0.5)
-                .attr("class", "slice")
-                .on('mouseover', function (e) {
-                    //d3.select(this).style('fill', 'rgba(255,165,0,0.0)');
-                })
-                .on('mouseout', function (d, i) {
-                    //if (!d.data.selected) {
-                    //    d3.select(this).style('fill', 'rgba(255,165,0,0.5)');
-                    //}
-                })
-                .on('click', function (d, i) {
-                    //change(next(d));
-                });
-
-            slice
-                .transition().duration(1000)
-                .style("fill", function (d) {
-                    if (d.data.complete) {
-                        if (d.data.correct) {
-                            return 'green';
-                        }
-                        else {
-                            return 'red';
-                        }
-                    }
-                    else {
-                        return 'gray';
-                    }
-                })
-                .attrTween("d", function (d) {
-                    this._current = this._current || d;
-                    var interpolate = d3.interpolate(this._current, d);
-                    this._current = interpolate(0);
-                    return function (t) {
-                        return outerArc(interpolate(t));
-                    };
-                });
-
-            slice.exit()
-                .remove();
-
-        };
-
-        change(this.collection.toJSON());
-
-
-    },
-    render: function () {
-        this._buildPie();
-        return this;
     }
 });

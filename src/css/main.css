@@ -575,7 +575,8 @@ svg {
     bottom: 0px;
     right: 0px;
     left: 0px;
-    height: 260px;
+    *height: 260px;
+    height: 220px;
 }
 
 #questions .choice {
@@ -585,9 +586,14 @@ svg {
 }
 
 .choice-body {
-    height: 160px;
+    *height: 160px;
+    *height: 120px;
+    height: 170px;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
 }
 
 .focus-blue {
@@ -651,7 +657,8 @@ svg {
 }
 
 .choice .photo-row {
-    height: 120px;
+    *height: 120px;
+    height: 80px;
 }
 
 .choice .id-row span {
@@ -679,9 +686,9 @@ svg {
 
 .choice-body {
     box-sizing: border-box;
-    border: solid 5px rgba(0,0,0,0);
+    border: solid 5px #fff;
     transition: border 0.5s linear;
-    background-position: 50% 50%;
+    *background-position: 50% 50%;
 }
 
 .choice-body.selected, .choice-body.right {
@@ -690,6 +697,32 @@ svg {
 
 .choice-body.wrong {
     border: solid 5px rgba(255, 0, 0, 0.8);
+}
+
+.modal {
+    color: #fff;
+}
+
+.modal a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: none;
+    margin: 0px;
+}
+
+.modal a span.fa {
+    font-size: 40px;
+}
+.modal-header {
+    border-bottom: solid 1px rgba(255,255,255,0.6);
+}
+
+.modal-footer {
+    border-top: solid 1px rgba(255,255,255,0.6);
+}
+
+.modal-dialog {
+    margin: 200px auto;
 }
 
 #nav .nav a {
@@ -772,7 +805,7 @@ span.result {
     display: inline-block;
     font-size: 80px;
     *padding: 30px;
-    top: calc(50% - 30px);
+    top: calc(50% - 0px);
     text-shadow: 0px 1px 3px #000;
 }
 
@@ -920,8 +953,10 @@ svg text {
 }
 
 #score-view {
-    width: 200px;
-    height: 200px;
+    *width: 200px;
+    *height: 200px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     background: rgba(60,60,60,0.8);
     position: fixed;
@@ -929,7 +964,8 @@ svg text {
     *right: 30px;
     z-index: 10;
     bottom: 60px;
-    left: calc(50% - 100px);
+    *left: calc(50% - 100px);
+    left: calc(50% - 80px);
 }
 
 #score-view h3 {
@@ -942,8 +978,10 @@ svg text {
     margin: 0px;
     text-align: center;
     vertical-align: middle;
-    line-height: 200px;
-    font-size: 100px;
+    *line-height: 200px;
+    line-height: 160px;
+    *font-size: 100px;
+    font-size: 80px;
     color: white;
 }
 
@@ -1032,7 +1070,7 @@ div.figure.col-12 {
     padding: 10px 5px;
     overflow-y: auto;
     height: calc(100% - 60px);
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url(../img/stereographic.svg);
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url(../img/robinson.svg);
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -1256,7 +1294,13 @@ body.scrolled .title-hidden {
     }
 
     #map {
-        opacity: 0;
+        opacity: 1;
+    }
+
+    #map.photo-essay {
+        width: 100%;
+        height: 100%;
+        left: 0px;
     }
 
     #map.fill {
@@ -1275,6 +1319,11 @@ body.scrolled .title-hidden {
 
     #questions {
         height: 200px;
+    }
+
+    #text.transparent {
+        opacity: 0.1;
+        transition: opacity, 0.2s ease-in;
     }
 }
 

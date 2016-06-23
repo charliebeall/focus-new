@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>Geo Quiz #1</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -58,7 +58,9 @@
 <!--<div id="prompt-view" class="jumbotron"><h3></h3></div>-->
 <script id="modal-template" type="text/template">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="background-image: linear-gradient(0deg, rgba(242, 121, 33, 0.7), rgba(242, 121, 33, 0.7)), url(img/agsglobe.png);
+    background-size: cover;
+    background-repeat: no-repeat;">
             <div class="modal-header">
                 <h4 class="modal-title"><%= title %></h4>
             </div>
@@ -77,7 +79,7 @@
     </div>
 </script>
 <script id="choice-template" type="text/template">
-    <div class="choice-body <% print(selected ? 'selected' : '') %> <%=result%>" style="background-size: contain; background-repeat: no-repeat; background-image:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5)), url(<%= photo %>), linear-gradient(180deg, rgba(31,31,31,0.9), rgba(51,51,51,0.9))">
+    <div class="choice-body <% print(selected ? 'selected' : '') %> <%=result%>" style="background-image:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5)), url(<%= photo %>), linear-gradient(180deg, rgba(31,31,31,0.9), rgba(51,51,51,0.9))">
         <div class="row id-row">
             <span><%= id %></span>
         </div>
@@ -130,6 +132,7 @@
     <div class="col-12 col-sm-10"><div class="item-title"><a href="<%= url %>"><%= title %></a></div></div>-->
 </script>
 <!-- build:js ../../../js/combined.js js/combined.js -->
+<!--
 <script src='../../../../bower_components/jquery/dist/jquery.min.js'></script>
 <script src="../../../../bower_components/d3/d3.min.js"></script>
 <script src="../../../../bower_components/topojson/topojson.js"></script>
@@ -145,7 +148,9 @@
 <script src="../../../../bower_components/leaflet-dvf/dist/leaflet-dvf.js"></script>
 <script src="../../../../node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js"></script>
 <script src="../../../index.js"></script>
+-->
 <!-- endbuild -->
+<script src="../../../combined.js"></script>
 <script>
     var scenes = {
         "scenes": [
@@ -939,7 +944,7 @@
                 }
             }, {
                 "id": "place7",
-                //"center": [170, -3.3704],
+                "center": [170, -3.3704],
                 "zoom": 4,
                 "baseLayer": {
                     "type": "tile",
@@ -2075,8 +2080,8 @@
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
                 }],
                 "style": {
-                    "filter": "grayscale(0%)",
-                    "opacity": 0.8,
+                    "filter": "sepia(80%)",
+                    "opacity": 0.6,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
                 },
                 "layers": [{
@@ -2485,7 +2490,7 @@
         el: $('.scenes'),
         model: new Focus.Models.ModalModel({
             title: 'Welcome to the first Geo Quiz!',
-            content: "Welcome to the Focus on Geography quarterly GeoQuiz! This time our theme is explorers, in honor of the American Geographical Society’s longtime efforts in exploration around the world, as evidenced by the Explorer’s Globe that the AGS holds with over 100 famous explorers signatures.<img src='img/agsglobe.png' style='margin: 15px -15px; width: calc(100% + 30px);'/>",
+            content: "Welcome to the Focus on Geography quarterly GeoQuiz! This time our theme is explorers, in honor of the American Geographical Society’s longtime efforts in exploration around the world, as evidenced by the Explorer’s Globe that the AGS holds with over 100 famous explorers signatures.",
             buttonText: 'Start Quiz'
         }),
         collection: questionCollection

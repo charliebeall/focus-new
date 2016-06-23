@@ -69,6 +69,7 @@ Focus.Views.QuestionView = Backbone.View.extend({
     template: _.template($('#question-template').html()),
     initialize: function (options) {
         this.listenTo(this.model, 'change', this.render);
+        this.listenTo(Focus.Events, 'layerClick', this.selectChoice);
     },
     render: function () {
         var me = this;
@@ -108,6 +109,15 @@ Focus.Views.QuestionView = Backbone.View.extend({
 
         return this;
     },
+    selectChoice: function (id) {
+        var selectedModel = this._choiceCollection.findWhere({
+            sceneId: id
+        });
+
+        if (selectedModel) {
+            this.select(selectedModel);
+        }
+    },
     select: function (selectedModel) {
         this._choiceCollection.each(function (model) {
             model.set('selected', false);
@@ -130,7 +140,8 @@ Focus.Views.QuestionView = Backbone.View.extend({
             me._choiceCollection.each(function (choiceModel, index) {
                 Focus.Events.trigger('drawLine', {
                     $target: $($choices[index]).find('.id-row span'),
-                    layerId: choiceModel.get('sceneId')
+                    layerId: choiceModel.get('sceneId'),
+                    drawStyle: 'c'
                 });
             });
         };
@@ -247,14 +258,14 @@ Focus.Views.QuizSceneNavigator = Focus.Views.ButtonSceneNavigator.extend({
             this._questionViews[this._sceneIndex].show();
         }
         else {
-            var $el = $("<div class='row share-row'><div class='col-12 col-sm-4'><a href='https://twitter.com/intent/tweet?status=@focusongeography @americangeo I just completed this Geo Quiz: [URL] with a score of'><span class='fa fa-twitter'></span></a></div><div class='col-12 col-sm-4'><a href='http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]'><span class='fa fa-facebook'></span></a></div></div>");
+            var $el = $("<div class='row share-row'><div class='col-12 col-sm-4'><a href='https://twitter.com/intent/tweet?status=@focusongeography @americangeo I just completed this Geo Quiz: [URL] with a score of " + this._scoreView._score + " out of " + this._questionViews.length + "'><span class='fa fa-twitter'></span></a></div><div class='col-12 col-sm-4'><a href='http://www.facebook.com/sharer/sharer.php?u=[URL]&amp;title=[TITLE]'><span class='fa fa-facebook'></span></a></div><div class='col-12 col-sm-4'><a href='mailto:?subject=[TITLE]&amp;body=I just completed [TITLE]: [URL] with a score of " + this._scoreView._score + " out of " + this._questionViews.length + "'><span class='share-button fa fa-envelope'></span></a></div></div>");
             var shareView = new Focus.Views.ShareView({
                 el: $el
             });
             var modal = new Focus.Views.ModalView({
                 model: new Focus.Models.ModalModel({
                     title: 'Congratulations!',
-                    content: "You've just completed this Geo Quiz with a score of " + this._scoreView._score + " out of " + this._questionViews.length + "! Challenge your friends:" + shareView.render().$el.html(),
+                    content: "You've just completed this Geo Quiz with a score of " + this._scoreView._score + " out of " + this._questionViews.length + "! Challenge your friends:" + shareView.render().$el.wrap('div').parent().html(),
                     buttonText: 'OK',
                     showFooter: false
                 })
@@ -263,3 +274,183 @@ Focus.Views.QuizSceneNavigator = Focus.Views.ButtonSceneNavigator.extend({
         }
     }
 });
+
+/*
+ index,
+ complete,
+ correct,
+ value
+ */
+Focus.Models.ScoreItemModel = Backbone.Model.extend({
+    defaults: function () {
+        return {
+            complete: false,
+            correct: false,
+            value: 1
+        };
+    }
+});
+
+Focus.Collections.ScoreItemCollection = Backbone.Collection.extend({
+    model: Focus.Models.ScoreItemModel
+});
+
+Focus.Views.QuizScoreView = Backbone.View.extend({
+    el: $('#score-view'),
+    initialize: function (options) {
+        options = options || {};
+        var count = options.count || 10;
+        var items = [];
+
+        for (var i = 1; i <= count; ++i) {
+            items.push({
+                index: i,
+                complete: false,
+                correct: false,
+                value: 1
+            });
+        }
+
+        this.collection = new Focus.Collections.ScoreItemCollection(items);
+
+        this._setupChart();
+
+        this.listenTo(this.collection, 'change', this.render);
+
+        this._score = 0;
+
+    },
+    incrementScore: function (model) {
+        var found = this.collection.findWhere({
+            index: model.index
+        });
+
+        if (model.correct) {
+            this._score++;
+        }
+
+        found.set(model);
+        found.set('complete', true);
+    },
+    _setupChart: function () {
+        var width = this.$el.width();
+        var height = this.$el.height();
+        var radius = Math.min(width, height) / 2;
+        this._svg = d3.select(this.$el[0])
+            .append("svg")
+            .append("g")
+
+        this._svg.append("g")
+            .attr("class", "slices");
+        this._svg.append("g")
+            .attr("class", "labels");
+        this._svg.append("g")
+            .attr("class", "lines");
+
+        this._svg.attr("transform", "translate(" + radius + "," + radius + ")");
+    },
+    _buildPie: function () {
+        var me = this;
+        var width = this.$el.width();
+        var height = this.$el.height();
+
+        this.$el.find('h3').html(this._score);
+
+        var radius = Math.min(width, height) / 2;
+
+        var pie = d3.layout.pie()
+            .sort(null)
+            .value(function (d) {
+                return d.value;
+            });
+
+        var arc = d3.svg.arc()
+            .innerRadius(radius * 0.3)
+            .outerRadius(radius * 0.4);
+
+        var midArc = d3.svg.arc()
+            .innerRadius(radius * 0.4)
+            .outerRadius(radius * 0.6);
+
+        var outerArc = d3.svg.arc()
+            .innerRadius(radius * 0.8)
+            .outerRadius(radius * 0.9);
+
+        var key = function (d) {
+            return d.data.index;
+        };
+
+        var change = function (data) {
+            /* ------- PIE SLICES -------*/
+            var slice = me._svg.select(".slices").selectAll("path.slice")
+                .data(pie(data), key);
+
+            slice.enter()
+                .insert("path")
+                .style("fill", function (d) {
+                    if (d.data.complete) {
+                        if (d.data.correct) {
+                            return 'green';
+                        }
+                        else {
+                            return 'red';
+                        }
+                    }
+                    else {
+                        return 'gray';
+                    }
+                })
+                .style("stroke", '#333') //"rgba(0,0,0,0.25)")
+                //.style("opacity", 0.5)
+                .attr("class", "slice")
+                .on('mouseover', function (e) {
+                    //d3.select(this).style('fill', 'rgba(255,165,0,0.0)');
+                })
+                .on('mouseout', function (d, i) {
+                    //if (!d.data.selected) {
+                    //    d3.select(this).style('fill', 'rgba(255,165,0,0.5)');
+                    //}
+                })
+                .on('click', function (d, i) {
+                    //change(next(d));
+                });
+
+            slice
+                .transition().duration(1000)
+                .style("fill", function (d) {
+                    if (d.data.complete) {
+                        if (d.data.correct) {
+                            return 'green';
+                        }
+                        else {
+                            return 'red';
+                        }
+                    }
+                    else {
+                        return 'gray';
+                    }
+                })
+                .attrTween("d", function (d) {
+                    this._current = this._current || d;
+                    var interpolate = d3.interpolate(this._current, d);
+                    this._current = interpolate(0);
+                    return function (t) {
+                        return outerArc(interpolate(t));
+                    };
+                });
+
+            slice.exit()
+                .remove();
+
+        };
+
+        change(this.collection.toJSON());
+
+
+    },
+    render: function () {
+        this._buildPie();
+        return this;
+    }
+});
+
