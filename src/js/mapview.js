@@ -183,7 +183,10 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             center: this.model.get('center'),
             zoom: this.model.get('zoom'),
             zoomControl: false,
-            worldCopyJump: true
+            worldCopyJump: true,
+            zoomAnimationThreshold: 3,
+            markerZoomAnimation: false,
+            zoomDelta: 0.5,
             //renderer: L.canvas()
         });
     },

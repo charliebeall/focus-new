@@ -11,6 +11,7 @@
     <!-- Place favicon.ico in the root directory -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <!-- build:css ../../../css/combined.css css/combined.css-->
     <link rel="stylesheet" href="../../../../bower_components/fontawesome/css/font-awesome.min.css">
     <link href="../../../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel='stylesheet' />
@@ -36,19 +37,19 @@
 <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="position: absolute;bottom: 50px;z-index: 10;right: calc(50% - 100px);text-align: center;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
     <g transform="matrix(0.748233,-0.663437,0.663437,0.748233,-71.4993,95.3792)">
         <g transform="matrix(0.974148,0.22591,-0.22591,0.974148,14.9332,-26.5052)">
-            <text x="123.276px" y="51.996px" style="font-family:'Raleway-SemiBold';font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">S</text>
+            <text x="123.276px" y="51.996px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">S</text>
         </g>
         <g transform="matrix(0.889935,0.456088,-0.456088,0.889935,41.1167,-58.1446)">
-            <text x="141.028px" y="56.117px" style="font-family:'Raleway-SemiBold';font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">C</text>
+            <text x="141.028px" y="56.117px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">C</text>
         </g>
         <g transform="matrix(0.741486,0.670968,-0.670968,0.741486,84.934,-89.7957)">
-            <text x="158.999px" y="65.324px" style="font-family:'Raleway-SemiBold';font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">O</text>
+            <text x="158.999px" y="65.324px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">O</text>
         </g>
         <g transform="matrix(0.533523,0.845785,-0.845785,0.533523,149.897,-110.802)">
-            <text x="175.398px" y="80.49px" style="font-family:'Raleway-SemiBold';font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">R</text>
+            <text x="175.398px" y="80.49px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">R</text>
         </g>
         <g transform="matrix(0.322984,0.946405,-0.946405,0.322984,217.645,-110.12)">
-            <text x="185.791px" y="97.063px" style="font-family:'Raleway-SemiBold';font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">E</text>
+            <text x="185.791px" y="97.063px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">E</text>
         </g>
     </g>
 </svg>
@@ -533,7 +534,9 @@
                     },
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            "name": "California, Nevada, and parts of Mexico"
+                        },
                         "geometry": {
                             "type": "Polygon",
                             "coordinates": [
@@ -652,7 +655,9 @@
                     },
                     "data":     {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            "name": "Southern Mexico"
+                        },
                         "geometry": {
                             "type": "Polygon",
                             "coordinates": [
@@ -747,7 +752,9 @@
                     },
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            "name": "Texas and Northern Mexico"
+                        },
                         "geometry": {
                             "type": "Polygon",
                             "coordinates": [
@@ -965,13 +972,17 @@
                 "id": "place7",
                 "center": [170, -3.3704],
                 "zoom": 4,
-                "baseLayer": {
+                "baseLayer": /*{
                     "type": "tile",
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
+                }*/ {
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+                    "scheme": "xyz"
                 },
                 "style": {
-                    "filter": "grayscale(95%)",
-                    "opacity": 0.8,
+                    "filter": "invert(100%) sepia(50%)",
+                    "opacity": 0.7,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/paper_3.png)"
                 },
                 "layers": [{
