@@ -459,6 +459,9 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             var $tileContainer = this.$el.find('.leaflet-tile-pane');
             $tileContainer.css('opacity', opacity);
             $tileContainer.css('-webkit-filter', filter);
+            $tileContainer.css('-moz-filter', filter);
+            $tileContainer.css('-ms-filter', filter);
+            $tileContainer.css('filter', filter);
 
             this.$el.css('background', background);
         }
