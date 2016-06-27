@@ -3,13 +3,16 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Scott Fairgrieve -- Lead Designer/Developer -- @s_fairgrieve
+    Marie Price
+    Antoinette WinklerPrins
+    Wessley Reisser
 
 # THANKS
 
-    <name>
+    HumanGeo
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Apache Server Configs, LeafletJS, Backbone, jQuery, Modernizr, Normalize.css

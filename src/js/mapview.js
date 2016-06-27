@@ -1228,7 +1228,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                 initialScene: new Focus.Models.SceneModel({
                     baseLayer: {
                         type: 'tile',
-                        url: 'https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' //'http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png' //'https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg'
+                        url: 'http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png' //'https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', ''https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' //
                     },
                     center: [0,0],
                     zoom: 4,

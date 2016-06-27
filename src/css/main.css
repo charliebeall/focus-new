@@ -551,6 +551,7 @@ a:hover {
 }
 
 a:visited {
+    color: rgba(50, 117, 60,1);
     text-decoration: none;
 }
 
