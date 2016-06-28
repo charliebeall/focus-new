@@ -70,6 +70,9 @@ Focus.Views.MapView = Backbone.View.extend({
         this._engine.setZoom(zoom);
         return this;
     },
+    setFeatures: function (featureLookup) {
+        this._engine.setFeatures(featureLookup);
+    },
     setScene: function (sceneModel, fly) {
         this._engine.setScene(sceneModel, fly);
         Focus.Events.trigger('viewChanged', sceneModel.toJSON());
@@ -104,6 +107,9 @@ Focus.Views.MapEngine = Backbone.View.extend({
         this._initContainer();
         this.setScene(this.model, false);
         this._disableControls();
+    },
+    setFeatures: function (featureLookup) {
+        this._featureLookup = featureLookup;
     },
     setScene: function (sceneModel, fly) {
         this._setBaseLayer(sceneModel.get('baseLayer'));
@@ -163,7 +169,7 @@ Focus.Views.MapEngine = Backbone.View.extend({
         _.each(layers, function (layer, key) {
             var newLayer = me._layerDefToLayer(layer);
             me._addLayer(newLayer);
-            me._layers[layer.id] = newLayer;
+            me._layers[layer.id || layer.idRef] = newLayer;
         });
     },
     _disableControls: function () {
@@ -193,6 +199,13 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
     _layerDefToLayer: function (layerDef) {
         var layer;
         var me = this;
+
+        // If there's an idRef attribute then get the layer definition from the feature lookup
+        // and merge it with the style info. included in layer
+        if (layerDef.idRef && this._featureLookup) {
+            layerDef = $.extend(true, {}, this._featureLookup[layerDef.idRef], layerDef);
+        }
+
         if (layerDef.type === 'vector') {
             var colors = {
                 base: '#f7ecdc',
@@ -1185,6 +1198,18 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
         var $el = Focus.Util.getLine(this._mapView0, event.$target, event.layerId, event.drawStyle);
         $('body').prepend($el);
     },
+    _loadFeatures: function (features) {
+        var me = this;
+        me._featureLookup = {};
+
+        if (features) {
+            _.each(features, function (feature) {
+                me._featureLookup[feature.id] = feature;
+            });
+
+            me._mapView0.setFeatures(me._featureLookup);
+        }
+    },
     _scenesLoaded: function (scenes) {
         this._scenes.add(scenes);
         this._sceneNavigator = this._sceneNavigator || new this._navigatorClass({
@@ -1217,6 +1242,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
             }
         });
         */
+        me._loadFeatures(scenes.features);
         me._scenesLoaded(scenes.scenes);
 
     },
