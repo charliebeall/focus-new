@@ -5295,12 +5295,12 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         var zoom = sceneModel.get('zoom');
         var latLng = new L.LatLng(coordinates[1], coordinates[0]);
 
-        fly = true;
+        fly = 'fly' in sceneModel.attributes ? sceneModel.get('fly') : true;
         if (fly) {
             if (bounds) {
-                me._map.flyToBounds(bounds, {
+                me._map.flyToBounds(bounds, $.extend(true, sceneModel.get('panZoomOptions') || {}, {
                     maxZoom: zoom
-                });
+                }));
             }
             else {
                 me._map.flyTo(latLng, zoom);

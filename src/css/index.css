@@ -354,3 +354,12 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
     position: relative;
     text-align: left;
 }
+
+#editors .row {
+    margin-bottom: 20px;
+}
+
+#editors .row h3 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
