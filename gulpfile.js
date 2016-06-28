@@ -237,10 +237,24 @@ gulp.task('minify1', function () {
         .pipe(gulp.dest('src'));
 });
 
+gulp.task('concatcss', function () {
+   return gulp.src([
+       'bower_components/fontawesome/css/font-awesome.min.css',
+       'bower_components/bootstrap/dist/css/bootstrap.min.css',
+       'src/css/normalize.css',
+       'bower_components/leaflet/dist/leaflet.css',
+       'bower_components/leaflet-dvf/dist/css/dvf.css',
+       'src/css/main.css',
+       'src/css/index.css'
+   ])
+       .pipe(concat('combined.css'))
+       .pipe(gulp.dest('src/css'));
+});
 
 gulp.task('copyfonts', function() {
     gulp.src('bower_components/fontawesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
-        .pipe(gulp.dest('dist/fonts'));
+        .pipe(gulp.dest('dist/fonts'))
+        .pipe(gulp.dest('src/fonts'));
 });
 
 gulp.task('html', function () {

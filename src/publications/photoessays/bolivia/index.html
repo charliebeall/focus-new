@@ -12,15 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <!-- build:css ../../../css/combined.css css/combined.css -->
-    <link rel="stylesheet" href="../../../../bower_components/fontawesome/css/font-awesome.min.css">
-    <link href="../../../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel='stylesheet' />
-    <link rel="stylesheet" href="../../../css/normalize.css">
-    <link href="../../../../bower_components/leaflet/dist/leaflet.css" rel='stylesheet' />
-    <link href="../../../../bower_components/leaflet-dvf/dist/css/dvf.css" rel='stylesheet' />
-    <link rel="stylesheet" href="../../../css/main.css">
-    <link rel="stylesheet" href="../../../css/index.css">
-    <!-- endbuild -->
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
     <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body data-spy="scroll" target="#nav">
@@ -63,7 +55,6 @@
 </div>
 <!-- Add your site or application content here -->
 <div id="background"></div>
-<div id="map1"></div>
 <div id="map" class="photo-essay"></div>
 <div id="overview-map"></div>
 <div id="foreground"></div>
@@ -228,12 +219,6 @@
     </div>
 </script>
 <script id="menu-items-template" type="text/template">
-    <!--<div class="row">
-        <h3 class="col-12 col-sm-12"><%= text %></h3>
-    </div>-->
-    <!--<div class="row">
-        <div class="col-12 col-sm-12 items"></div>
-    </div>-->
     <div class="items"></div>
 </script>
 <script id="menu-item-template" type="text/template">
@@ -248,29 +233,7 @@
             </a>
         </div>
     </div>
-    <!--<div class="col-12 col-sm-2"><div class="item-thumbnail" style="background-image:url(<%=thumbnail%>); background-size: cover;"></div></div>
-    <div class="col-12 col-sm-10"><div class="item-title"><a href="<%= url %>"><%= title %></a></div></div>-->
 </script>
-<!-- build:js ../../../js/combined.js js/combined.js -->
-<!--
-<script src='../../../../bower_components/jquery/dist/jquery.min.js'></script>
-<script src="../../../../bower_components/underscore/underscore.js"></script>
-<script src="../../../../bower_components/backbone/backbone.js"></script>
-<script src="../../../../bower_components/hidpi-canvas/dist/hidpi-canvas.min.js"></script>
-<script src="../../../../bower_components/leaflet/dist/leaflet.js"></script>
-<script src="../../../../bower_components/flowtype/flowtype.js"></script>
-<script src="../../../../bower_components/d3/d3.min.js"></script>
-<script src="../../../../bower_components/topojson/topojson.js"></script>
-<script src="../../../../bower_components/velocity/velocity.min.js"></script>
-<script src="../../../../bower_components/velocity/velocity.ui.min.js"></script>
-<script src="../../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../../../bower_components/jquery.scrollex/jquery.scrollex.min.js"></script>
-<script src="../../../../bower_components/leaflet-dvf/dist/leaflet-dvf.js"></script>
-<script src="../../../../bower_components/esri-leaflet/dist/esri-leaflet.js"></script>
-<script src="../../../../node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js"></script>
-<script src="../../../index.js"></script>
--->
-<!-- endbuild -->
 <script src="../../../combined.js"></script>
 <script>
     var scenes = {
@@ -280,35 +243,7 @@
                 "baseLayer": [{
                     "type": "tile",
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                }/*{
-                    "type": "wmts",
-                    "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                    "params": {
-                        layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                        tileMatrixSet: "GoogleMapsCompatible_Level9",
-                        time: "2016-01-23",
-                        //tileSize: 256,
-                        detectRetina: true,
-                        subdomains: "abc",
-                        noWrap: true,
-                        continuousWorld: true,
-                        crs: L.CRS.EPSG3857
-                    }
-                }*//* {
-                    "type": "wmts",
-                    "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi?layer={layer}&tilematrixset={tileMatrixSet}&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fjpeg&TileMatrix={z}&TileCol={x}&TileRow={y}", //ASTER_GDEM_Color_Shaded_Relief
-                    "params": {
-                        layer: "ASTER_GDEM_Color_Shaded_Relief",
-                        tileMatrixSet: "EPSG4326_31m",
-                        time: "2016-01-23",
-                        //tileSize: 256,
-                        //detectRetina: true,
-                        subdomains: "abc",
-                        noWrap: true,
-                        continuousWorld: true,
-                        crs: L.CRS.EPSG4326
-                    }
-                } */],
+                }],
                 "layers": [{
                     "id": "cochabamba-outline",
                     "type": "geojson",
@@ -485,35 +420,7 @@
                             ]
                         }
                     }
-                },/*{
-                    "id": "vallealto",
-                    "type": "geojson",
-                    "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "text": {
-                            "text": "Valle Alto",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)'
-                            }
-                        }
-                    },
-                    "data": {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [-65.852255, -17.537959]
-                        },
-                        "properties": {
-                            "name": "Valle Alto"
-                        }
-                    }
-                },*/ {
+                },{
                     //-17.583494, -66.008273
                     "id": "tarataandarbieto",
                     "type": "geojson",
@@ -2676,11 +2583,7 @@
                     }
                 }]
             }
-            // -77.4753, 38.7509 - Manassas
-            // -77.0910, 38.8816 - Arlington
         ]
-        // -17.583494, -66.008273 [Arbieto]  -17.587058, -66.011422, <!---17.587276, -66.011376--> [Soccer Field]
-        // -17.608925, -66.025529 [Tarata]
     };
 </script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

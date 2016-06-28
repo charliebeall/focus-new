@@ -5364,7 +5364,6 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
             if (!(layerDef.url in me._lastLayer)) {
                 me._map.addLayer(layer);
-                console.log('Added: ' + layerDef.url);
             }
 
             layers.push(layer);
@@ -5377,7 +5376,6 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 return function (layer, key) {
                     if (!(key in layerIndex)) {
                         me._map.removeLayer(layer);
-                        console.log('Removed: ' + key);
                     }
                 };
             };
