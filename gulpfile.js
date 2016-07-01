@@ -186,8 +186,8 @@ gulp.task('concat', function() {
 gulp.task('concat1', function () {
     return gulp.src([
             'bower_components/jquery/dist/jquery.min.js',
-            'bower_components/underscore/underscore.js',
-            'bower_components/backbone/backbone.js',
+            'bower_components/underscore/underscore-min.js',
+            'bower_components/backbone/backbone-min.js',
             'bower_components/hidpi-canvas/dist/hidpi-canvas.min.js',
             'bower_components/leaflet/dist/leaflet.js',
             'bower_components/flowtype/flowtype.js',
@@ -199,10 +199,12 @@ gulp.task('concat1', function () {
             'bower_components/jquery.scrollex/jquery.scrollex.min.js',
             'bower_components/leaflet-dvf/dist/leaflet-dvf.min.js',
             'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
+            'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.js',
             'src/js/vendor/*.js',
+            '!src/js/combined.js',
             'src/js/*.js'])
         .pipe(concat('combined.js'))
-        .pipe(gulp.dest('src'));
+        .pipe(gulp.dest('src/js'));
 });
 
 gulp.task('minify', function() {
@@ -216,8 +218,8 @@ gulp.task('minify', function() {
 gulp.task('minify1', function () {
     return gulp.src([
         'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/underscore/underscore.js',
-        'bower_components/backbone/backbone.js',
+        'bower_components/underscore/underscore-min.js',
+        'bower_components/backbone/backbone-min.js',
         'bower_components/hidpi-canvas/dist/hidpi-canvas.min.js',
         'bower_components/leaflet/dist/leaflet.js',
         'bower_components/flowtype/flowtype.js',
@@ -229,12 +231,14 @@ gulp.task('minify1', function () {
         'bower_components/jquery.scrollex/jquery.scrollex.min.js',
         'bower_components/leaflet-dvf/dist/leaflet-dvf.min.js',
         'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
+        'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.min.js',
         'src/js/vendor/*.js',
+        '!src/js/combined.js',
         'src/js/*.js'])
         .pipe(concat('combined.js'))
-        .pipe(gulp.dest('src'))
+        .pipe(gulp.dest('src/js'))
         .pipe(uglify())
-        .pipe(gulp.dest('src'));
+        .pipe(gulp.dest('src/js'));
 });
 
 gulp.task('concatcss', function () {
@@ -258,9 +262,12 @@ gulp.task('copyfonts', function() {
 });
 
 gulp.task('html', function () {
-    return gulp.src(['src/**/*.html', 'src/**/*.{png,jpg,jpeg,svg}', 'src/**/*.js', 'src/**/*.css'])
-        .pipe(gulpif('*.html', useref()))
+    return gulp.src(['src/**/*.html', 'src/**/*.{png,jpg,jpeg,svg}', 'src/**/combined.js', 'src/**/index.js', 'src/**/combined.css'])
+        //.pipe(gulpif('*.html', useref()))
         //.pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(gulp.dest('dist'));
 });
+
+gulp.task('build:dev', function (done) {runSequence('copyfonts','concatcss','concat1', 'html', done)});
+gulp.task('build:prod', ['copyfonts', 'concatcss', 'minify1', 'html']);

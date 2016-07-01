@@ -185,9 +185,11 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
     },
     _initContainer: function () {
+        var showAttribution = 'showAttribution' in this.model.attributes ? this.model.get('showAttribution') : true;
         this._map = new L.Map(this.$el.attr('id'), {
             center: this.model.get('center'),
             zoom: this.model.get('zoom'),
+            attributionControl: showAttribution,
             zoomControl: false,
             worldCopyJump: true,
             zoomAnimationThreshold: 3,
@@ -206,6 +208,33 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             layerDef = $.extend(true, {}, this._featureLookup[layerDef.idRef], layerDef);
         }
 
+        if (layerDef.type === 'vector') {
+            var defaultParams = {
+                rendererFactory: L.svg.tile,
+                vectorTileLayerStyles: {
+                    roads: function (properties, zoom) {
+                        return {
+                            weight: 2,
+                            color: '#aaa',
+                            fill: false
+                        };
+                    },
+                    boundaries: [],
+                    buildings: [],
+                    earth: [],
+                    landuse: [],
+                    transit: {
+                        weight: 2,
+                        color: '#aaa',
+                        fill: false
+                    },
+                    water: []
+                }
+            };
+            layer = L.vectorGrid.protobuf(layerDef.url, $.extend(true, {}, defaultParams, layerDef.params || {}));
+        }
+
+        /*
         if (layerDef.type === 'vector') {
             var colors = {
                 base: '#f7ecdc',
@@ -321,10 +350,14 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 .stroke(3.75, 'rgba(255, 255, 255, 0.5)')
                 .stroke(0.75, colors.big_road)
         }
+        */
         else if (layerDef.type === 'tile') {
-            layer = new L.TileLayer(layerDef.url, $.extend(true, {}, layerDef, {
+            layer = new L.TileLayer(layerDef.url, $.extend(true, {}, layerDef.params, {
                 detectRetina: true
             }));
+        }
+        else if (layerDef.type === 'mapquest') {
+            layer = MQ[layerDef.url]();
         }
         else if (layerDef.type === 'wms') {
             layer = new L.TileLayer.WMS(layerDef.url, $.extend(true, layerDef.params, {
@@ -443,7 +476,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         if (fly) {
             if (bounds) {
                 me._map.flyToBounds(bounds, $.extend(true, sceneModel.get('panZoomOptions') || {}, {
-                    maxZoom: zoom
+                    maxZoom: zoom,
+                    padding: [30,30]
                 }));
             }
             else {
@@ -453,7 +487,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         else {
             if (bounds) {
                 me._map.fitBounds(bounds, {
-                    maxZoom: zoom
+                    maxZoom: zoom,
+                    padding: [30,30]
                 });
             }
             else {
@@ -551,11 +586,59 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
     },
     highlight: function (id) {
         var layer = this._layers[id];
-        layer.fire('mouseover');
+
+        var bindEvents = function (layer) {
+            if (layer.eachLayer) {
+                layer.eachLayer(function (subLayer) {
+                    bindEvents(subLayer);
+                });
+            }
+            else {
+                if (!layer._originalOptions) {
+                    layer._originalOptions = $.extend(true, {}, layer.options);
+                }
+                var options = layer.options;
+
+                if (options.text) {
+                    options.text['font-size'] = 'font-size' in options.text ? Number(options.text['font-size']) * 2 : 'inherit';
+                }
+                options.weight = layer._originalOptions.weight * 3;
+
+                if (!layer._animId) {
+                    L.AnimationUtils.animate(layer, {
+                        from: layer._originalOptions,
+                        to: options
+                    });
+                }
+                else {
+                    L.Util.cancelAnimFrame(layer._animId);
+                    layer._animId = null;
+                    layer.setStyle(layer._originalOptions);
+                }
+                //layer.setStyle(options);
+            }
+        };
+
+        bindEvents(layer);
     },
     unhighlight: function (id) {
         var layer = this._layers[id];
-        layer.fire('mouseout');
+        var bindEvents = function (layer) {
+            if (layer.eachLayer) {
+                layer.eachLayer(function (subLayer) {
+                    bindEvents(subLayer);
+                });
+            }
+            else {
+                if (layer._animId) {
+                    L.Util.cancelAnimFrame(layer._animId);
+                    layer._animId = null;
+                }
+                layer.setStyle(layer._originalOptions);
+            }
+        };
+
+        bindEvents(layer);
     },
     zoomToLayer: function (id) {
         var layer = this._layers[id];
@@ -935,8 +1018,8 @@ Focus.Views.ScrollingSceneNavigator = Focus.Views.SceneNavigator.extend({
         var lasti = 0;
         var me = this;
         this.$el.scrollex({
-            top: '400px',
-            bottom: '400px',
+            top: '300px',
+            bottom: '300px',
             scroll: function (progress) {
 
                 if (progress > 0.01) {
