@@ -3,6 +3,7 @@ var Focus = Focus || {};
 Focus.Items = [{
             type: 'Feature Article',
             title: 'From Ranching to Fishing – the Cultural Landscape of the Northern Pacific Coast of Baja California, Mexico',
+            author: 'Antoinette WinklerPrins, Pablo Alvarez, Gerardo Bocco, Ileana Espejel',
             description: '',
             thumbnail: '../../articles/baja/img/fig1.jpg',
             url: '../../articles/baja/index.html',
@@ -16,6 +17,7 @@ Focus.Items = [{
         }, {
             type: 'Photo Essay',
             title: 'Many Destinations, One Place Called Home:  Migration and Livelihood for Rural Bolivians',
+            author: 'Marie Price',
             description: '',
             thumbnail: '../../photoessays/bolivia/img/figure1.jpg',
             url: '../../photoessays/bolivia/index.html',
@@ -29,6 +31,7 @@ Focus.Items = [{
         }, {
             type: 'Geo Quiz',
             title: 'Quiz One:  Explorers',
+            author: 'Wesley Reisser',
             description: '',
             thumbnail: '../../quizzes/one/img/agsglobe.png',
             url: '../../quizzes/one/index.html',

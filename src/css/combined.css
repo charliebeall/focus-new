@@ -2258,6 +2258,35 @@ div.figure.col-12 {
     padding-bottom: 15px;
 }
 
+#main-nav .nav.share {
+    float: right;
+    width: 130px;
+    height: 80px;
+    padding: 0px;
+    margin: 0px;
+    background: none;
+}
+
+#main-nav .nav.share>li {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#main-nav .nav.share>li>a {
+    width: 40px;
+    height: 80px;
+    margin: 0px auto;
+    font-size: 24px;
+    padding: 28px 8px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: none;
+}
+
 .nav.previous {
     margin-top: 10px;
 }
@@ -2997,5 +3026,6 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
     .sep {
         background-position: center center !important;
         background-size: contain;
+        background-attachment: inherit;
     }
 }

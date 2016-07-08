@@ -72,6 +72,17 @@
         <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
     </div>
     <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
     <div id="menu"></div>
 </div>
 <div id="questions">
@@ -152,6 +163,9 @@
                 <h2><%= type %></h2>
                 <div class="content">
                     <p><%= title %></p>
+                </div>
+                <div class="author">
+                    <p><%= author %></p>
                 </div>
             </a>
         </div>
@@ -2519,7 +2533,6 @@
         navigator: navigator,
         mapEngineClass: Focus.Views.LeafletMapEngine //OpenLayersMapEngine //LeafletMapEngine
     });
-
 
     });
 </script>

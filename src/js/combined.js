@@ -4823,7 +4823,7 @@ Focus.Views.ShareView = Backbone.View.extend({
             var $this = $(this);
             var href = $this.attr('href');
 
-            href = href.replace(/\[TITLE\]/gi, 'Focus on Geography - ' + $('h2.title').text());
+            href = href.replace(/\[TITLE\]/gi, 'Focus on Geography - ' + (document.title.length > 0 ? document.title : $('h2.title').text()));
             href = href.replace(/\[URL\]/gi, window.location.href);
 
             $this.attr('href', href);
@@ -5108,22 +5108,28 @@ Focus.Views.OverviewMapView = Focus.Views.MapView.extend({
         options.engineClass = options.engineClass || Focus.Views.LeafletMapEngine;
         Focus.Views.MapView.prototype.initialize.call(this, options);
         this.listenTo(Focus.Events, 'viewChanged', this.viewChanged);
-        this._centerPoint = new L.RegularPolygonMarker(new L.LatLng(0,0), {
-            radius: 30,
-            color: '#333',
-            numberOfSides: 4,
-            rotation: 45,
-            fill: false,
-            gradient: false,
-            weight: 1,
-            opacity: 1
-        });
-        this._engine._map.addLayer(this._centerPoint);
+
+        if (options.showCenterPoint) {
+            this._centerPoint = new L.RegularPolygonMarker(new L.LatLng(0, 0), {
+                radius: 30,
+                color: '#333',
+                numberOfSides: 4,
+                rotation: 45,
+                fill: false,
+                gradient: false,
+                weight: 1,
+                opacity: 1
+            });
+            this._engine._map.addLayer(this._centerPoint);
+        }
     },
     viewChanged: function (view) {
         this.setCenter(view.center);
         this.setZoom(3);
-        this._centerPoint.setLatLng(new L.LatLng(view.center[1], view.center[0]));
+
+        if (this._centerPoint) {
+            this._centerPoint.setLatLng(new L.LatLng(view.center[1], view.center[0]));
+        }
     }
 });
 
@@ -5182,6 +5188,7 @@ var Focus = Focus || {};
 Focus.Items = [{
             type: 'Feature Article',
             title: 'From Ranching to Fishing – the Cultural Landscape of the Northern Pacific Coast of Baja California, Mexico',
+            author: 'Antoinette WinklerPrins, Pablo Alvarez, Gerardo Bocco, Ileana Espejel',
             description: '',
             thumbnail: '../../articles/baja/img/fig1.jpg',
             url: '../../articles/baja/index.html',
@@ -5195,6 +5202,7 @@ Focus.Items = [{
         }, {
             type: 'Photo Essay',
             title: 'Many Destinations, One Place Called Home:  Migration and Livelihood for Rural Bolivians',
+            author: 'Marie Price',
             description: '',
             thumbnail: '../../photoessays/bolivia/img/figure1.jpg',
             url: '../../photoessays/bolivia/index.html',
@@ -5208,6 +5216,7 @@ Focus.Items = [{
         }, {
             type: 'Geo Quiz',
             title: 'Quiz One:  Explorers',
+            author: 'Wesley Reisser',
             description: '',
             thumbnail: '../../quizzes/one/img/agsglobe.png',
             url: '../../quizzes/one/index.html',
