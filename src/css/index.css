@@ -74,7 +74,8 @@ p {
     background-repeat: no-repeat;
     height: 450px;
     position: relative;
-    *background-size: cover;
+    background-size: cover;
+    background-position: 50% 100%;
 }
 .about {
     background-image: url(../img/photo1.jpeg);
@@ -246,6 +247,7 @@ p {
 .publication {
     transition: transform 0.5s ease, opacity 0.5s ease;
     height: 300px;
+    margin-bottom: 30px;
     position: relative;
 }
 
@@ -362,4 +364,16 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
 #editors .row h3 {
     margin-top: 0px;
     margin-bottom: 20px;
+}
+
+.editor-photo {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .sep {
+        background-position: center center !important;
+        background-size: contain;
+    }
 }

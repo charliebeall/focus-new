@@ -4122,12 +4122,12 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         var zoom = sceneModel.get('zoom');
         var latLng = new L.LatLng(coordinates[1], coordinates[0]);
 
-        fly = 'fly' in sceneModel.attributes ? sceneModel.get('fly') : true;
+        fly = 'fly' in sceneModel.attributes ? sceneModel.get('fly') : !L.Browser.mobile;
         if (fly) {
             if (bounds) {
                 me._map.flyToBounds(bounds, $.extend(true, sceneModel.get('panZoomOptions') || {}, {
                     maxZoom: zoom,
-                    padding: [30,30]
+                    padding: [15,15]
                 }));
             }
             else {
@@ -4138,7 +4138,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             if (bounds) {
                 me._map.fitBounds(bounds, {
                     maxZoom: zoom,
-                    padding: [30,30]
+                    padding: [15,15]
                 });
             }
             else {
@@ -4637,7 +4637,6 @@ Focus.Views.SceneNavigator = Backbone.View.extend({
     changeScene: function (sceneIndex) {
         this._sceneChange(sceneIndex);
         this.trigger('sceneChanged', {sceneIndex: sceneIndex, nextSceneIndex: sceneIndex + 1, sceneId: $(this._$scenes.get(sceneIndex)).attr('data-scene-id'), nextSceneId: $(this._$scenes.get(sceneIndex + 1)).attr('data-scene-id')});
-
     }
 });
 
@@ -4665,11 +4664,37 @@ Focus.Views.ScrollingSceneNavigator = Focus.Views.SceneNavigator.extend({
         Focus.Views.SceneNavigator.prototype.initialize.call(this, options);
 
         var i = 0;
-        var lasti = 0;
         var me = this;
+
+        me._lasti = 0;
+
+        var changeScene = function (i, progress) {
+            return function () {
+                /*
+                i = ~~(progress * me._sceneCount) % me._sceneCount;
+
+                if (i !== me._lasti) {
+                    me.changeScene(i);
+                }
+
+                me._lasti = i;
+                */
+                me.trigger('progressChanged', progress);
+            };
+        };
+
+        this._$scenes.each(function (index) {
+            var $this = $(this);
+            $this.scrollex({
+                mode: $this.hasClass('photo-scene') ? 'middle' : 'top',
+                enter: function () {
+                    me.trigger('sceneChanged', {sceneIndex: index, nextSceneIndex: index + 1, sceneId: $this.attr('data-scene-id')});
+                }
+           });
+        });
         this.$el.scrollex({
-            top: '300px',
-            bottom: '300px',
+            top: 0,
+            bottom: 0,
             scroll: function (progress) {
 
                 if (progress > 0.01) {
@@ -4679,17 +4704,7 @@ Focus.Views.ScrollingSceneNavigator = Focus.Views.SceneNavigator.extend({
                     //$('body').removeClass('scrolled');
                 }
 
-                setTimeout(function () {
-                    i = ~~(progress * me._sceneCount) % me._sceneCount;
-
-                    if (i !== lasti) {
-                        me.changeScene(i);
-                    }
-
-                    lasti = i;
-
-                    me.trigger('progressChanged', progress);
-                }, 0);
+                setTimeout(changeScene(i, progress), 0);
             }
         });
     }
@@ -4834,8 +4849,9 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
         this.loadScenes();
 
         $(document).ready(function () {
+            var $mainNav = $('#main-nav');
             // bind click event to all internal page anchors
-            $('a[href*="#"]').on('click', function (e) {
+            $('a:not(.location)[href*="#"]').on('click', function (e) {
                 // prevent default action and bubbling
                 e.preventDefault();
                 e.stopPropagation();
@@ -4845,7 +4861,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                 $(target).velocity('scroll', {
                     duration: 500,
                     //offset: 40,
-                    offset: 0,
+                    offset: L.Browser.mobile ? -1 * $mainNav.outerHeight() : 0,
                     easing: 'ease-in-out'
                 });
             });
@@ -4855,14 +4871,21 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
         this.$el.find('a.location').each(function () {
             var textClick = function () {
                 $('#text').removeClass('transparent');
+                $('#overview-map').addClass('transparent');
             };
 
             var mouseover = _.throttle(function (e) {
                 e.preventDefault();
+                e.stopPropagation();
                 var offset = $(this).offset();
                 var id = $(this).attr('data-layer-id');
                 var point = me._mapView0.getLayerPoint(id);
-                me._mapView0.highlight(id);
+                try {
+                    me._mapView0.highlight(id);
+                }
+                catch (ex) {
+                    console.log(ex);
+                }
                 var x1 = point.x + me._mapView0.$el.offset().left;
                 var y1 = point.y + me._mapView0.$el.offset().top;
                 var x2 = offset.left;
@@ -4906,23 +4929,33 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                         return function(t) { return (d3.interpolateString("0," + len, len + ",0"))(t) };
                     });
                 $('#text').addClass('transparent');
+                $('#overview-map').removeClass('transparent');
                 $('#text').on('click', textClick);
                 $(this).addClass('selected-link');
 
             }, 10);
-            $(this).on('mouseover', mouseover).on('mouseout', function (e) {
+            $(this).on('mouseenter touchstart', mouseover).on('mouseleave touchend click', function (e) {
                 e.preventDefault();
+                e.stopPropagation();
                 var id = $(this).attr('data-layer-id');
-                me._mapView0.unhighlight(id);
+                try {
+                    me._mapView0.unhighlight(id);
+                }
+                catch (ex) {
+                    console.log(ex);
+                }
                 me.$el.find('#' + id + '-line').remove();
                 $('#text').removeClass('transparent');
+                $('#overview-map').addClass('transparent');
                 $('#text').off('click', textClick);
                 $(this).removeClass('selected-link');
-            }).on('click', function (e) {
+            }); /*.on('click', function (e) {
                 e.preventDefault();
-                var id = $(this).attr('data-layer-id');
+                e.stopPropagation();
+                return false;
+                //var id = $(this).attr('data-layer-id');
                 //me._mapView0._engine.zoomToLayer(id);
-            });
+            });*/
         });
     },
     drawLine: function (event) {
@@ -5135,6 +5168,13 @@ Focus.Views.ModalView = Backbone.View.extend({
         Focus.Events.trigger('next');
         this.hide();
     }
+});
+
+
+$(document).ready(function () {
+   $('#toggle-map').on('click', function (e) {
+      $('#text').toggleClass('shifted');
+   });
 });
 
 var Focus = Focus || {};

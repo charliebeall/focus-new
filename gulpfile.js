@@ -262,8 +262,8 @@ gulp.task('copyfonts', function() {
 });
 
 gulp.task('html', function () {
-    return gulp.src(['src/**/*.html', 'src/**/*.{png,jpg,jpeg,svg}', 'src/**/combined.js', 'src/**/index.js', 'src/**/combined.css'])
-        //.pipe(gulpif('*.html', useref()))
+    return gulp.src(['src/**/*.html', 'src/**/*.{png,jpg,jpeg,svg,ico}', 'src/**/combined.js', 'src/**/combined.css'])
+        .pipe(gulpif('*.html', useref()))
         //.pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(gulp.dest('dist'));
