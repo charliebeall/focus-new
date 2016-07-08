@@ -4621,12 +4621,17 @@ Focus.Views.SceneNavigator = Backbone.View.extend({
         this._sceneCount = this._$scenes.length;
 
         $('#nav ul.sections').empty();
-        this._$scenes.each(function () {
+        this._$scenes.each(function (index) {
            var $this = $(this);
 
             var id = $this.attr('id');
+            var $li = $('<li><a href="#' + id + '"><span class="fa fa-circle-o"></span></a></li>');
 
-            $('#nav ul.sections').append('<li><a href="#' + id + '"><span class="fa fa-circle-o"></span></a></li>');
+            if (index === 0) {
+                $li.addClass('active');
+            }
+
+            $('#nav ul.sections').append($li);
         });
 
 

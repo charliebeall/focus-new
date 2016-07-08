@@ -31,7 +31,7 @@
         <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
         <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body class="scrolled" data-spy="scroll" target="#nav">
+    <body class="scrolled">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -766,6 +766,7 @@
                     }
                 });
 
+                $('body').scrollspy({ target: '#nav' })
                 var overviewMap = new Focus.Views.OverviewMapView({
                     model: new Backbone.Model({
                         initialScene: new Focus.Models.SceneModel({
