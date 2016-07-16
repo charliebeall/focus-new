@@ -142,7 +142,7 @@ Focus.Views.MapEngine = Backbone.View.extend({
     _setMapStyle: function (sceneModel) {
 
     },
-    _addLayer: function (layer) {
+    _addLayer: function (layer, id) {
 
     },
     _removeLayer: function (layer) {
@@ -168,7 +168,8 @@ Focus.Views.MapEngine = Backbone.View.extend({
 
         _.each(layers, function (layer, key) {
             var newLayer = me._layerDefToLayer(layer);
-            me._addLayer(newLayer);
+
+            me._addLayer(newLayer, layer.id || layer.idRef);
             me._layers[layer.id || layer.idRef] = newLayer;
         });
     },
@@ -185,11 +186,49 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
     },
     _initContainer: function () {
+
+        L.Control.CustomAttribution = L.Control.Attribution.extend({
+            _update: function () {
+                if (!this._map) { return; }
+
+                var attribs = [];
+
+                for (var i in this._attributions) {
+                    if (this._attributions[i]) {
+                        attribs.push(i);
+                    }
+                }
+
+                var prefixAndAttribs = [];
+
+                if (this.options.prefix) {
+                    prefixAndAttribs.push(this.options.prefix);
+                }
+                if (attribs.length) {
+                    prefixAndAttribs.push(attribs.join(', '));
+                }
+
+                $(this._container).html('<a href="" data-toggle="tooltip" title="" style="text-align: left; white-space:nowrap;"><span class="fa fa-info"></span></a>');
+                $(this._container).find('a').tooltip('destroy');
+                $(this._container).find('a').tooltip({
+                    container: 'body',
+                    html: true,
+                    title: '<div class="attribution">' + prefixAndAttribs.join('<span> | </span>') + '</div>',
+                    placement: 'top'
+                });
+
+                $(this._container).find('a').on('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+            }
+        });
+
         var showAttribution = 'showAttribution' in this.model.attributes ? this.model.get('showAttribution') : true;
         this._map = new L.Map(this.$el.attr('id'), {
             center: this.model.get('center'),
             zoom: this.model.get('zoom'),
-            attributionControl: showAttribution,
+            attributionControl: false,
             zoomControl: false,
             worldCopyJump: true,
             zoomAnimationThreshold: 3,
@@ -197,6 +236,11 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             zoomDelta: 0.5,
             //renderer: L.canvas()
         });
+
+        if (showAttribution) {
+            var attributionControl = new L.Control.CustomAttribution();
+            attributionControl.addTo(this._map);
+        }
     },
     _layerDefToLayer: function (layerDef) {
         var layer;
@@ -233,124 +277,6 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             };
             layer = L.vectorGrid.protobuf(layerDef.url, $.extend(true, {}, defaultParams, layerDef.params || {}));
         }
-
-        /*
-        if (layerDef.type === 'vector') {
-            var colors = {
-                base: '#f7ecdc',
-                land: '#f7ecdc',
-                water: 'rgba(0,0,0,0.2)', //'#357abf',
-                //coastline: '#000',
-                grass: '#E6F2C1',
-                beach: '#FFEEC7',
-                park: '#a5af6e',
-                cemetery: '#D6DED2',
-                wooded: '#C3D9AD',
-                agriculture: '#F2E8B6',
-                building: '#b3bdc4',
-                hospital: 'rgb(229,198,195)',
-                school: '#FFF5CC',
-                sports: '#B8E6B8',
-                residential: '#f7ecdc',
-                commercial: '#f7ecdc',
-                industrial: '#f7ecdc',
-                parking: '#EEE',
-                big_road: '#673919',
-                little_road: '#b29176',
-                railway: '#ef7369'
-            };
-
-            layer = L.tileLayer.hoverboard(layerDef.url, {hidpiPolyfill: true});
-            layer
-                .render('landuse')
-                .minZoom(9)
-                .fillBy('kind', {
-                    allotments: colors.base,
-                    apron: colors.base,
-                    cemetery: colors.cemetery,
-                    cinema: colors.base,
-                    college: colors.school,
-                    //coastline: colors.coastline,
-                    commercial: colors.industrial,
-                    common: colors.residential,
-                    farm: colors.park,
-                    farmland: colors.park,
-                    farmyard: colors.park,
-                    footway: colors.little_road,
-                    forest: colors.park,
-                    fuel: colors.base,
-                    garden: colors.park,
-                    glacier: colors.water,
-                    golf_course: colors.sports,
-                    grass: colors.park,
-                    hospital: colors.hospital,
-                    industrial: colors.industrial,
-                    land: colors.land,
-                    library: colors.school,
-                    meadow: colors.park,
-                    nature_reserve: colors.park,
-                    park: colors.park,
-                    parking: colors.parking,
-                    pedestrian: colors.little_road,
-                    pitch: colors.base,
-                    place_of_worship: colors.base,
-                    playground: colors.sports,
-                    quarry: colors.industrial,
-                    railway: colors.railway,
-                    recreation_ground: colors.park,
-                    residential: colors.residential,
-                    retail: colors.industrial,
-                    runway: colors.base,
-                    school: colors.school,
-                    scrub: colors.park,
-                    sports_centre: colors.sports,
-                    stadium: colors.sports,
-                    taxiway: colors.little_road,
-                    theatre: colors.industrial,
-                    university: colors.school,
-                    village_green: colors.park,
-                    wetland: colors.water,
-                    conservation: colors.park,
-                    wood: colors.wooded,
-                    urban_area: colors.residential,
-                    park: colors.park,
-                    brownfield: colors.park,
-                    protected: colors.park,
-                    protected_area: colors.park,
-                    //maritime: '#ff0000'
-                })
-
-                .render('roads')
-                .minZoom(7)
-                .where('kind', ['minor_road', 'path'])
-                .stroke(2, 'rgba(255, 255, 255, 0.5)')
-                .stroke(0.5, colors.little_road)
-
-                .render('buildings')
-                .fill('#888896')
-                .stroke(0.5, 'rgba(0,0,0,0.4)')
-
-                .render('water')
-                .where('kind', ['ocean', 'water'])
-                .whereNot('boundary', ['yes'])
-                .fill(colors.water)
-                .stroke(0.5, colors.water)
-
-                .render('water')
-                .where('kind', ['river', 'stream', 'canal'])
-                .stroke(0.5, colors.water)
-
-                .render('water')
-                .where('kind', ['riverbank'])
-                .whereNot('boundary', ['yes'])
-                .fill(colors.water)
-
-                .render('roads')
-                .where('kind', ['major_road', 'highway', 'rail'])
-                .stroke(3.75, 'rgba(255, 255, 255, 0.5)')
-                .stroke(0.75, colors.big_road)
-        }
-        */
         else if (layerDef.type === 'tile') {
             layer = new L.TileLayer(layerDef.url, $.extend(true, {}, layerDef.params, {
                 detectRetina: true
@@ -406,10 +332,10 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                     if (options.icon) {
                         marker = new L.Marker(location, {
                             icon: new L.DivIcon({
-                                className: options.icon.className,
+                                className: options.icon.className || 'marker-text',
                                 html: options.icon.html,
-                                iconSize: new L.Point(options.icon.iconSize[0], options.icon.iconSize[1]),
-                                iconAnchor: new L.Point(options.icon.iconAnchor[0], options.icon.iconAnchor[1])
+                                iconSize: options.icon.iconSize ? new L.Point(options.icon.iconSize[0], options.icon.iconSize[1]) : null,
+                                iconAnchor: options.icon.iconAnchor ? new L.Point(options.icon.iconAnchor[0], options.icon.iconAnchor[1]): null
                             })
                         });
                     }
@@ -474,6 +400,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
         fly = 'fly' in sceneModel.attributes ? sceneModel.get('fly') : !L.Browser.mobile;
         if (fly) {
+            me._map.stop();
             if (bounds) {
                 me._map.flyToBounds(bounds, $.extend(true, sceneModel.get('panZoomOptions') || {}, {
                     maxZoom: zoom,
@@ -654,7 +581,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         var centerPoint = new L.LatLng(center[1], center[0]);
         this._map.setView(centerPoint);
     },
-    _addLayer: function (layer) {
+    _addLayer: function (layer, id) {
         var me = this;
 
         layer.clickHandler = me._layerClick(layer);
@@ -919,7 +846,7 @@ Focus.Views.OpenLayersMapEngine = Focus.Views.MapEngine.extend({
         var centerPoint = ol.proj.transform(center, 'EPSG:4326', 'EPSG:3857');
         this._map.setView(centerPoint);
     },
-    _addLayer: function (layer) {
+    _addLayer: function (layer, id) {
         var me = this;
 
         layer.clickHandler = me._layerClick(layer);
@@ -975,11 +902,16 @@ Focus.Views.SceneNavigator = Backbone.View.extend({
            var $this = $(this);
 
             var id = $this.attr('id');
-            var $li = $('<li><a href="#' + id + '"><span class="fa fa-circle-o"></span></a></li>');
+            var text = $this.attr('title') || ($this.find('p').text().substring(0, 50) + '...');
+            var $li = $('<li><a href="#' + id + '" data-toggle="tooltip" title="' + text  + '" data-placement="auto left" style="white-space: nowrap;"><span class="fa fa-circle-o"></span></a></li>');
 
             if (index === 0) {
                 $li.addClass('active');
             }
+
+            $li.find('a').tooltip({
+                container: 'body'
+            });
 
             $('#nav ul.sections').append($li);
         });
@@ -1018,25 +950,14 @@ Focus.Views.ScrollingSceneNavigator = Focus.Views.SceneNavigator.extend({
     initialize: function (options) {
         Focus.Views.SceneNavigator.prototype.initialize.call(this, options);
 
+        $('body').scrollspy({
+            target: '#nav'
+        });
+
         var i = 0;
         var me = this;
 
         me._lasti = 0;
-
-        var changeScene = function (i, progress) {
-            return function () {
-                /*
-                i = ~~(progress * me._sceneCount) % me._sceneCount;
-
-                if (i !== me._lasti) {
-                    me.changeScene(i);
-                }
-
-                me._lasti = i;
-                */
-                me.trigger('progressChanged', progress);
-            };
-        };
 
         this._$scenes.each(function (index) {
             var $this = $(this);
@@ -1047,6 +968,31 @@ Focus.Views.ScrollingSceneNavigator = Focus.Views.SceneNavigator.extend({
                 }
            });
         });
+
+        this.$el.find('.figure').each(function (index) {
+            var $this = $(this);
+            $this.append('<div class="helper"><span class="fa fa-hand-pointer-o helper-icon element-animation"></span><span class="helper-text">Hover to view larger</span></div>');
+            $this.on('mouseenter', function (e) {
+                $(this).removeClass('help');
+            });
+            $this.scrollex({
+                mode: 'middle',
+                enter: function () {
+                    $(this).addClass('help');
+                },
+                leave: function () {
+                    $(this).removeClass('help');
+                }
+            });
+        });
+
+
+        var changeScene = function (progress) {
+            return function () {
+                me.trigger('progressChanged', progress);
+            };
+        };
+
         this.$el.scrollex({
             top: 0,
             bottom: 0,
@@ -1059,7 +1005,8 @@ Focus.Views.ScrollingSceneNavigator = Focus.Views.SceneNavigator.extend({
                     //$('body').removeClass('scrolled');
                 }
 
-                setTimeout(changeScene(i, progress), 0);
+                //setTimeout(changeScene(progress), 0);
+                me.trigger('progressChanged', progress);
             }
         });
     }
@@ -1182,7 +1129,13 @@ Focus.Views.ShareView = Backbone.View.extend({
             href = href.replace(/\[URL\]/gi, window.location.href);
 
             $this.attr('href', href);
+
+            $this.tooltip({
+                container: 'body',
+                placement: 'auto left'
+            });
         });
+
         return this;
     }
 });
@@ -1230,6 +1183,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
             };
 
             var mouseover = _.throttle(function (e) {
+                $(this).tooltip('hide');
                 e.preventDefault();
                 e.stopPropagation();
                 var offset = $(this).offset();
@@ -1290,6 +1244,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
 
             }, 10);
             $(this).on('mouseenter touchstart', mouseover).on('mouseleave touchend click', function (e) {
+                $(this).tooltip('hide');
                 e.preventDefault();
                 e.stopPropagation();
                 var id = $(this).attr('data-layer-id');
@@ -1536,4 +1491,18 @@ $(document).ready(function () {
    $('#toggle-map').on('click', function (e) {
       $('#text').toggleClass('shifted');
    });
+
+    $('a.location:first').tooltip({
+        container: '#text',
+        html: true,
+        template: '<div class="tooltip helper-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+        title: '<a class="location">Text with a dotted underline</a> indicates a place mention. Hover over any place mention to see the associated place on the map.'
+    })
+        .on('shown.bs.tooltip', function () {
+            $(this).append('<span class="fa fa-hand-pointer-o helper-icon element-animation1"></span>');
+        })
+        .on('hidden.bs.tooltip', function () {
+            $(this).find('span').remove();
+            $(this).tooltip('destroy');
+        }).tooltip('show');
 });

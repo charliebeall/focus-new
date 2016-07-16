@@ -74,13 +74,13 @@
     <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
     <ul class="nav share">
         <li>
-            <a href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
         </li>
         <li>
-            <a href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
         </li>
         <li>
-            <a href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
         </li>
     </ul>
     <div id="menu"></div>
@@ -179,7 +179,10 @@
                 "id": "place1",
                 "baseLayer": {
                     "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+                    /*
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
+                    */
                 },
                 "layers": [{
                     "id": "ns",
@@ -277,7 +280,7 @@
                 //"center": [-60, 48],
                 "zoom": 4,
                 "style": {
-                    "filter": "sepia(60%)",
+                    "filter": "sepia(80%) brightness(80%)",
                     "opacity": 0.7,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
                 }
@@ -416,8 +419,15 @@
                 //"center": [0, 0],
                 "zoom": 7, //3
                 "baseLayer": {
+                    /*
                     "type": "tile",
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 layers: [{
                     "id": "md",
@@ -522,8 +532,15 @@
                 //"center": [-107.0068359375, 27.353636941500987],
                 "zoom": 4,
                 "baseLayer": {
+                    /*
                     "type": "tile",
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [{
                     "id": "ca",
@@ -928,8 +945,15 @@
                 //"center": [-40, 38],
                 "zoom": 4,
                 "baseLayer": {
+                    /*
                     "type": "tile",
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [{
                     "id": "eu",
@@ -971,8 +995,8 @@
                 }
             }, {
                 "id": "place7",
-                "center": [170, -3.3704],
-                "zoom": 4,
+                //"center": [170, -3.3704],
+                "zoom": 5,
                 "baseLayer": /*{
                     "type": "tile",
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
@@ -991,7 +1015,9 @@
                     "type": "geojson",
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            name: "Near Guam"
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
@@ -1005,7 +1031,9 @@
                     "type": "geojson",
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            name: "Near Howland Island"
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
@@ -1019,7 +1047,9 @@
                     "type": "geojson",
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            name: "Near Papua New Guinea"
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
@@ -1033,7 +1063,9 @@
                     "type": "geojson",
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            name: "In the Phillipine Sea"
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
@@ -1048,8 +1080,8 @@
                     "style": {
                         "icon": {
                             "html": "<img style='transform: rotate(180deg);' src='img/electra1white.svg'/>",
-                            "iconSize": [60, 60],
-                            "iconAnchor": [30, 30]
+                            "iconSize": [50, 50],
+                            "iconAnchor": [35, 35]
                         },
                         "color": "#ff3333",
                         "dashArray": [3, 3],
@@ -1058,837 +1090,6 @@
                     "data": {
                         "type": "FeatureCollection",
                         "features": [
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [
-                                        -122.2708026,
-                                        37.8043722,
-                                        0
-                                    ]
-                                },
-                                "properties": {
-                                    "name": "Oakland, CA, USA",
-                                    "styleUrl": "#icon1",
-                                    "styleHash": "-5868a3bd",
-                                    "description": "<table width=\"400\"><tr><td>The second attempt began with an unpublicized flight from Oakland to Miami, Florida. The flight's opposite direction was partly the result of changes in global wind and weather patterns along the planned route since the earlier attempt. Fred Noonan was Earhart's only crew member for the second flight.<br/></td></tr><tr><td><a href=\"http://farm3.static.flickr.com/2706/4167459105_e77990d211.jpg\" target=\"_blank\"><img src=\"http://farm3.static.flickr.com/2706/4167459105_e77990d211_s.jpg\" style=\"padding:5px 5px 5px 0px;\" /></a><a href=\"http://farm5.static.flickr.com/4033/4325866096_08bfb7dbc9.jpg\" target=\"_blank\"><img src=\"http://farm5.static.flickr.com/4033/4325866096_08bfb7dbc9_s.jpg\" style=\"padding:5px 5px 5px 0px;\" /></a></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -118.308966,
-                                                    34.180839,
-                                                    0
-                                                ],
-                                                [
-                                                    -122.2708026,
-                                                    37.8043722,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -118.308966,
-                                                34.180839,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Burbank, CA",
-                                    "styleUrl": "#icon2",
-                                    "styleHash": "-125a1739",
-                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -110.926479,
-                                                    32.221743,
-                                                    0
-                                                ],
-                                                [
-                                                    -118.308966,
-                                                    34.180839,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -110.926479,
-                                                32.221743,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Tucson, AZ",
-                                    "styleUrl": "#icon3",
-                                    "styleHash": "33b4754b",
-                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -90.070556,
-                                                    29.964722,
-                                                    0
-                                                ],
-                                                [
-                                                    -110.926479,
-                                                    32.221743,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -90.070556,
-                                                29.964722,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "New Orleans, LA",
-                                    "styleUrl": "#icon4",
-                                    "styleHash": "79c301cf",
-                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -80.226439,
-                                                    25.788969,
-                                                    0
-                                                ],
-                                                [
-                                                    -90.070556,
-                                                    29.964722,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -80.226439,
-                                                25.788969,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Miami, FL",
-                                    "styleUrl": "#icon5",
-                                    "styleHash": "-402e71ad",
-                                    "description": "<table width=\"400\"><tr><td>After arriving in Miami, Earhart publicly announced her plans to circumnavigate the globe. They departed Miami on June 1st headed to San Juan Puerto Rico.<br/></td></tr><tr><td><a href=\"http://farm5.static.flickr.com/4134/4857808016_4cf8b63290.jpg\" target=\"_blank\"><img src=\"http://farm5.static.flickr.com/4134/4857808016_4cf8b63290_s.jpg\" style=\"padding:5px 5px 5px 0px;\" /></a><a href=\"http://farm5.static.flickr.com/4074/4863447199_d6952393a1.jpg\" target=\"_blank\"><img src=\"http://farm5.static.flickr.com/4074/4863447199_d6952393a1_s.jpg\" style=\"padding:5px 5px 5px 0px;\" /></a></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -66.105722,
-                                                    18.466334,
-                                                    0
-                                                ],
-                                                [
-                                                    -80.226439,
-                                                    25.788969,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -66.105722,
-                                                18.466334,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "San Juan, Puerto Rico",
-                                    "styleUrl": "#icon6",
-                                    "styleHash": "5e01ad7",
-                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -63.100899,
-                                                    10.1073,
-                                                    0
-                                                ],
-                                                [
-                                                    -66.105722,
-                                                    18.466334,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -63.100899,
-                                                10.1073,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Caripito, Venezuela",
-                                    "styleUrl": "#icon7",
-                                    "styleHash": "4beea75b",
-                                    "description": "<table width=\"400\"><tr><td>Pan American Airways reported that 'Amelia Earhart landed at Capripito, Venezuela, at 10:18 a.m., (Eastern Standard Time) after a flight from San Juan, Puerto Rico.  It was expected that she and her navigator, Capt. Fred J. Noonan, would remain overnight in the Standard Oil company's guest house there and take off tomorrow for Paramaribo, Dutch Guiana. From there, she probably would fly to Natal by way of Uara, Brazil.  The aviatrix is flying around the world as near the equator as practicable, making the 28,000-mile journey for pleasure.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -55.166667,
-                                                    5.866667,
-                                                    0
-                                                ],
-                                                [
-                                                    -63.100899,
-                                                    10.1073,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -55.166667,
-                                                5.866667,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Paramaribo, Suriname",
-                                    "styleUrl": "#icon8",
-                                    "styleHash": "-6e02cc21",
-                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart landed here today at 12:50 a.m. (10:50 a.m. CST) on the third leg of her round-the-world flight. The American woman flier set her heavy plane safely down after a flight of five hours and two minutes from Caripito, Venezuela. She was expected to stay here until some time tomorrow.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -38.543395,
-                                                    -3.718394,
-                                                    0
-                                                ],
-                                                [
-                                                    -55.166667,
-                                                    5.866667,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -38.543395,
-                                                -3.718394,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Fortaleza, Brazil",
-                                    "styleUrl": "#icon9",
-                                    "styleHash": "-27f43f9d",
-                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart postponed her take-off here today to have her big round-the-world monoplane inspected. She probably will remain over at least until tomorrow at this northeast Brazil port, 287 miles from Natal. After Natal, her goal will be Daka, Senegal, 1,900 miles across the Atlantic.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -35.210953,
-                                                    -5.794478,
-                                                    0
-                                                ],
-                                                [
-                                                    -38.543395,
-                                                    -3.718394,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -35.210953,
-                                                -5.794478,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Natal, Brazil",
-                                    "styleUrl": "#icon10",
-                                    "styleHash": -73075839,
-                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart headed over the South Atlantic in a light rain today for Dakar, Senegal, her goal on the African continent in her intended flight around the world. She left here on the 1,900 mile flight at 12:16 a. m. Central Standard Time and radioed more than four hours later that everything is going fine.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -16.489531,
-                                                    16.02463,
-                                                    0
-                                                ],
-                                                [
-                                                    -35.210953,
-                                                    -5.794478,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -16.489531,
-                                                16.02463,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "St Louis, Senegal",
-                                    "styleUrl": "#icon11",
-                                    "styleHash": "3e558207",
-                                    "description": "<table width=\"400\"><tr><td>'Miss Earhart's time of 13 hours and 22 minutes for the 1,900 miles from Natal, Brazil, to Saint Louis, Senegal... apparently was a record for the eastward South Atlantic crossing. The westward mark of 12 hours and 5 minutes also is held by a woman, Maryse Bastie. Miss Earhart flew through rain most of the way across the ocean, she said. The visibility at nightfall was bad and her wireless worked poorly.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -17.333333,
-                                                    14.75,
-                                                    0
-                                                ],
-                                                [
-                                                    -16.489531,
-                                                    16.02463,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -17.333333,
-                                                14.75,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Dakar, Senegal",
-                                    "styleUrl": "#icon12",
-                                    "styleHash": "-104da3b9",
-                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart flew here today from St. Louis, capital of Senegal, for an easier take-off on the next leg of her flight around the world.  The slim American flier laid up her plane here for repairs. She said it would be tomorrow or Thursday before she could hop off across Africa.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    -0.005494,
-                                                    16.247142,
-                                                    0
-                                                ],
-                                                [
-                                                    -17.333333,
-                                                    14.75,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                -0.005494,
-                                                16.247142,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Gao, Mali",
-                                    "styleUrl": "#icon13",
-                                    "styleHash": "-5ef0c979",
-                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    15.044506,
-                                                    12.104797,
-                                                    0
-                                                ],
-                                                [
-                                                    -0.005494,
-                                                    16.247142,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                15.044506,
-                                                12.104797,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Ndjamena, Chad (Ft. Lamy)",
-                                    "styleUrl": "#icon14",
-                                    "styleHash": "526c10c7",
-                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart landed here today to complete a 1,000-mile leg of her flight around the world. She set her twin-engined monoplane down at 6:55 a.m. (C.S.T.) after flying from Gao over equatorial Africa.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    25.349581,
-                                                    13.62698,
-                                                    0
-                                                ],
-                                                [
-                                                    15.044506,
-                                                    12.104797,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                25.349581,
-                                                13.62698,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Al Fashir, Sudan",
-                                    "styleUrl": "#icon15",
-                                    "styleHash": "3c8eb07",
-                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart, flying around the world, arrived here late today after a flight from Fort Lamy French equatorial Africa. She expected to leave for Khartoum, also in the Sudan, at 5:30 a.m. local time Sunday (9:30 p.m. Saturday, Central Standard Time). Miss Earhart landed here following a flight of about 900 miles from Fort Lamy. It is about 500 miles farther northeast to Khartoum. She got a late start this morning, due to the necessity of adjusting the shock absorbers on her plan.[sic] They were damaged when she landed at Forty Lamy. She had planned originally to fly from Fort Lamy to Khartoum in one hop.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    32.532241,
-                                                    15.550101,
-                                                    0
-                                                ],
-                                                [
-                                                    25.349581,
-                                                    13.62698,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                32.532241,
-                                                15.550101,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Khartoum, Sudan",
-                                    "styleUrl": "#icon16",
-                                    "styleHash": "-4ada3ab9",
-                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    39.445278,
-                                                    15.609167,
-                                                    0
-                                                ],
-                                                [
-                                                    32.532241,
-                                                    15.550101,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                39.445278,
-                                                15.609167,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Massawa, Eritrea",
-                                    "styleUrl": "#icon17",
-                                    "styleHash": "66829f87",
-                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    42.733333,
-                                                    13.016667,
-                                                    0
-                                                ],
-                                                [
-                                                    39.445278,
-                                                    15.609167,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                42.733333,
-                                                13.016667,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Assab, Eritrea",
-                                    "styleUrl": "#icon18",
-                                    "styleHash": "17df79c7",
-                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    67.028061,
-                                                    24.893379,
-                                                    0
-                                                ],
-                                                [
-                                                    42.733333,
-                                                    13.016667,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                67.028061,
-                                                24.893379,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Karachi, Pakistan",
-                                    "styleUrl": "#icon19",
-                                    "styleHash": "-36c3abf9",
-                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart arrived here tonight, completing a long and interrupted flight from Massawa, Eritrea, on her just for fun aerial flight around the world. She had been reported for more than 29 hours on a leg of her flight that lay over Arabian desert and mountains and for about 1,000 miles across the Arabian sea. Miss Earhart sad she flew from Assab, Eritrea, on the African coast of the Red sea just north of the Gulf of Aden, to Karachi, on the Inrwan coast of the Arabian sea, in one hop. The airline distance is approximately 1,400 miles.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    88.363895,
-                                                    22.572646,
-                                                    0
-                                                ],
-                                                [
-                                                    67.028061,
-                                                    24.893379,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                88.363895,
-                                                22.572646,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Kolkata (Calcutta), India",
-                                    "styleUrl": "#icon20",
-                                    "styleHash": 7371587,
-                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart landed her round-the-world plane at DumDum airdrome here today after a 1,350 mile hope across Indian from Karachi. Miss Earhart took off from Karachi at 7:25 a.m. Karachi time (7:55 p.m. C.S.T. Wednesday). The flier, who is making a leisurely flight around the world just for fun, said she intended to take off shortly after dawn Friday for Bangkok, capital of Siam. If she adheres to her planned itinerary, she will go from Bangkok, to Darwin, Australia, by way of Singapore, then Batavia, Dutch East Indies, and Surabaya, Java, before starting across the Pacific.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    92.89694399999999,
-                                                    20.144444,
-                                                    0
-                                                ],
-                                                [
-                                                    88.363895,
-                                                    22.572646,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                92.89694399999999,
-                                                20.144444,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Sittwe (Akyab), Burma",
-                                    "styleUrl": "#icon21",
-                                    "styleHash": "-476c1039",
-                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart started another leg of her round-the-world flight today after arriving from Calcutta, but bad weather forced her to return to Akyab. She first landed her twin-motored monoplane at 12:34 p.m. (12:04 a.m. C.S.T.) after a 400-mile flight across the Bay of Bengal, and took off immediately in an effort to reach Bangkok, Siam. She was back in Akyab within two hours. The flyer said she expects to start again for Bangkok early Saturday if the weather is favorable.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    96.15,
-                                                    16.8,
-                                                    0
-                                                ],
-                                                [
-                                                    92.89694399999999,
-                                                    20.144444,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                96.15,
-                                                16.8,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Yangon (Rangoon), Burma",
-                                    "styleUrl": "#icon22",
-                                    "styleHash": "69f0ca07",
-                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart reached Rangoon today after a 300-mile flight from Akyab on her leisurely globe-circling journey. She landed her monoplane at 6:35 a.m. Greenwich time (12:35 a.m. C.S.T.) after a trip of two hours 53 minutes Her next destination was Bangkok, Siam, 400 miles southeast of Rangoon.'<br/></td></tr><tr><td></td></tr></table>"
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "geometry": {
-                                    "geometries": [
-                                        {
-                                            "type": "LineString",
-                                            "coordinates": [
-                                                [
-                                                    100.476232,
-                                                    13.723419,
-                                                    0
-                                                ],
-                                                [
-                                                    96.15,
-                                                    16.8,
-                                                    0
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                100.476232,
-                                                13.723419,
-                                                0
-                                            ]
-                                        }
-                                    ],
-                                    "type": "GeometryCollection"
-                                },
-                                "properties": {
-                                    "name": "Bangkok, Thailand",
-                                    "styleUrl": "#icon23",
-                                    "styleHash": "1b4da447",
-                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
-                                }
-                            },
                             {
                                 "type": "Feature",
                                 "geometry": {
@@ -2046,8 +1247,20 @@
                 //"center": [0, 30],
                 "zoom": 3,
                 "baseLayer": {
+                    /*
                     "type": "tile",
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
+                    */
+                    /*
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+
                 },
                 "style": {
                     "filter": "grayscale(70%)",
@@ -2107,11 +1320,18 @@
                 //"center": [0, 0],
                 "zoom": 2,
                 "baseLayer": [{
+                    /*
                     "type": "tile",
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
                 }],
                 "style": {
-                    "filter": "sepia(80%)",
+                    "filter": "sepia(0%)",
                     "opacity": 0.6,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
                 },
@@ -2120,7 +1340,9 @@
                     "type": "geojson",
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            "name": "South Africa"
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
@@ -2138,7 +1360,9 @@
                     "type": "geojson",
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            "name": "The southern tip of India"
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
@@ -2156,7 +1380,9 @@
                     "type": "geojson",
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            "name": "The southern tip of Greenland"
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
@@ -2174,7 +1400,9 @@
                     "type": "geojson",
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            "name": 'Off the coast of Chile'
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
@@ -2209,7 +1437,9 @@
                     "type": "geojson",
                     "data": {
                         "type": "Feature",
-                        "properties": {},
+                        "properties": {
+                            "name": "Mariana Trench"
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
@@ -2515,24 +1745,27 @@
         }
     }];
 
-    var questionCollection = new Focus.Collections.QuestionCollection(questions);
+        var questionCollection = new Focus.Collections.QuestionCollection(questions);
 
-    var navigator = new Focus.Views.QuizSceneNavigator({
-        el: $('.scenes'),
-        model: new Focus.Models.ModalModel({
-            title: 'Welcome to the first Geo Quiz!',
-            content: "Welcome to the Focus on Geography quarterly GeoQuiz! This time our theme is explorers, in honor of the American Geographical Society’s longtime efforts in exploration around the world, as evidenced by the Explorer’s Globe that the AGS holds with over 100 famous explorers signatures.",
-            buttonText: 'Start Quiz'
-        }),
-        collection: questionCollection
-    });
-    navigator.render();
+        var navigator = new Focus.Views.QuizSceneNavigator({
+            el: $('.scenes'),
+            model: new Focus.Models.ModalModel({
+                title: 'Welcome to the first Geo Quiz!',
+                content: "Welcome to the Focus on Geography quarterly GeoQuiz! This time our theme is explorers, in honor of the American Geographical Society’s longtime efforts in exploration around the world, as evidenced by the Explorer’s Globe that the AGS holds with over 100 famous explorers signatures.",
+                buttonText: 'Start Quiz'
+            }),
+            collection: questionCollection
+        });
+        navigator.render();
 
-    var sceneManager = new Focus.Views.SceneManagerView({
-        el: $('body'),
-        navigator: navigator,
-        mapEngineClass: Focus.Views.LeafletMapEngine //OpenLayersMapEngine //LeafletMapEngine
-    });
+        var sceneManager = new Focus.Views.SceneManagerView({
+            el: $('body'),
+            navigator: navigator,
+            mapEngineClass: Focus.Views.LeafletMapEngine //OpenLayersMapEngine //LeafletMapEngine
+        });
+
+        var shareView = new Focus.Views.ShareView();
+        shareView.render();
 
     });
 </script>

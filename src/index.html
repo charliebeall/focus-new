@@ -59,7 +59,7 @@
             <div id="menu"></div>
         </div>
         <section id="home" name="home"></section>
-        <div style="background-image:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url(img/robinson.svg);background-repeat:no-repeat;background-size:cover;background-position:50% 50%;">
+        <div data-stellar-background-ratio="0.5" style="background-image:url(img/robinson.svg);background-repeat:no-repeat;background-size:cover;background-position:50% 50%;">
         <div id="headerwrap">
             <div class="container-fluid">
                 <div class="row">
@@ -98,7 +98,6 @@
                 </div><! --/row -->
             </div><! --/container -->
         </div><! --/headerwrap -->
-
         <! -- PORTFOLIO SECTION -->
         <section id="portfolio" name="portfolio"></section>
         <div id="portfoliowrap">
@@ -184,7 +183,8 @@
 
                             distinct features: feature articles, photo essays, and geo-quizzes. For all issues pertaining to the publication
 
-                            of FOCUS on Geography the editors can be contacted at <a href="mailto:focus@americangeo.com">focus@americangeo.org</a>.</p></div>
+                            of FOCUS on Geography the editors can be contacted at <a href="mailto:focus@americangeo.org">focus@americangeo.org</a>.
+                        Detailed submission guidelines are available <a href="guidelines.html" target="_blank">here</a>.</p></div>
 
                         </div>
                     </div><! --/col-lg-8-->
@@ -212,12 +212,12 @@
                     <div class="col-lg-4 proc">
                         <i class="fa fa-newspaper-o focus-blue-text"></i>
                         <h3 class="focus-blue-text">Feature Articles</h3>
-                        <p>These should consist of approximately 2,500-4,000 words with accompanying visuals consisting of at least one map and four-five photos.  Additional graphs/charts, and dynamic content such as animations or short video clips can be included.  Feature articles can be about a geographic perspective on current events, or can be based on geographic research that is oriented to a broader audience than academics and written with little to no jargon.  Feature Articles should contain cited references but should avoid footnotes and endnotes.  Standards for style, formatting and citations should be the same as the Geographical Review.</p>
+                        <p>These should consist of approximately 2,500-4,000 words with accompanying visuals consisting of at least one map and four-five photos.  Additional graphs/charts, and dynamic content such as animations or short video clips can be included.  Feature articles can be about a geographic perspective on current events, or can be based on geographic research that is oriented to a broader audience than academics and written with little to no jargon.  Feature Articles should contain cited references but should avoid footnotes and endnotes.  Standards for style, formatting and citations should be the same as the <a href="http://americangeo.org/download/Author-Guidelines.pdf" target="_blank">Geographical Review</a>.</p>
                     </div>
                     <div class="col-lg-4 proc">
                         <i class="fa fa-camera-retro focus-yellow-text"></i>
                         <h3 class="focus-yellow-text">Photo Essays</h3>
-                        <p>These should be visually rich with approximately 15-25 images and an accompanying text that should consist of an introductory and concluding paragraph and captions only (no other narrative).  Video clips may be included as well.  Photo Essays should be oriented around fieldwork or a geographic topic of broad interest.  Citations are discouraged, but if used these should conform to the Geographical Review guidelines.  Clear location (preferably latitude and longitude, but named places with associated city, state, and country info. are also acceptable) needs to be provided for each photo.  If people are identifiable in photos, please indicate in your cover letter that you have made every effort possible to receive permission to use their likeness.</p>
+                        <p>These should be visually rich with approximately 15-25 images and an accompanying text that should consist of an introductory and concluding paragraph and captions only (no other narrative).  Video clips may be included as well.  Photo Essays should be oriented around fieldwork or a geographic topic of broad interest.  Citations are discouraged, but if used these should conform to the <a href="http://americangeo.org/download/Author-Guidelines.pdf" target="_blank">Geographical Review</a> guidelines.  Clear location (preferably latitude and longitude, but named places with associated city, state, and country info. are also acceptable) needs to be provided for each photo.  If people are identifiable in photos, please indicate in your cover letter that you have made every effort possible to receive permission to use their likeness.</p>
                     </div>
                     <div class="col-lg-4 proc">
                         <i class="fa fa-trophy focus-orange-text"></i>
@@ -306,7 +306,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <p><strong>Have Questions? Interested in Submitting?</strong></p>
-                        <p>Use the associated contact form to send the editors an e-mail, or e-mail us <a href="mailto:focus@americangeo.com">directly</a></p>
+                        <p>Use the associated contact form to send the editors an e-mail, or e-mail us at <a href="mailto:focus@americangeo.org">focus@americangeo.org</a></p>
 
                     </div>
 
@@ -322,9 +322,7 @@
                     </div>
 
                 </div><! --/row -->
-                <div class="row">
-                    <div class="col-lg-4">© 2016, <a href="//americangeo.org" target="_blank">American Geographical Society</a>.  All Rights Reserved.</div>
-                </div>
+                <div class="row footer-row"></div>
             </div><!-- /container -->
         </div>
         <script id="menu-items-template" type="text/template">
@@ -373,108 +371,6 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-79613259-1','auto');ga('send','pageview');
-        </script>
-        <script type="text/javascript">
-
-            /*
-            var map = new L.Map('map', {
-                center: [0, 0],
-                zoom: 3,
-                zoomControl: false,
-                worldCopyJump: true
-            });
-
-            map.dragging.disable();
-            map.touchZoom.disable();
-            map.doubleClickZoom.disable();
-            map.scrollWheelZoom.disable();
-
-            $(window).on('resize', function () {
-                map.invalidateSize();
-            });
-
-            var baseLayer = new L.TileLayer('http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png', {
-                detectRetina: true
-            });
-            map.addLayer(baseLayer);
-
-            var photoEssays = Focus.Items.photoEssays;
-            var featuredArticles = Focus.Items.articles;
-
-            var photoEssayLayer = new L.DataLayer(photoEssays, {
-                recordsField: 'items',
-                //locationMode: L.LocationModes.LATLNG,
-                locationMode: L.LocationModes.GEOJSON,
-                geoJSONField: 'location.0',
-                //latitudeField: 'location.0.geometry.coordinates.1',
-                //longitudeField: 'location.0.geometry.coordinates.0',
-                layerOptions: {
-                    weight: 10,
-                    fillOpacity: 1,
-                    opacity: 0.3,
-                    radius: 10,
-                    numberOfSides: 50,
-                    color: 'rgb(39,171,226)',
-                    fillColor: 'rgb(39,171,226)'
-                },
-                tooltipOptions: {
-                    iconSize: null,
-                    iconAnchor: new L.Point(-5, 0)
-                },
-                displayOptions: {
-                    title: {
-                        displayName: 'Photo Essay',
-                        displayText: function (value) {
-                            return value;
-                        }
-                    }
-                },
-                onEachRecord: function (layer, record) {
-                    layer.on('click', function (e) {
-                        window.open(record.url);
-                    });
-                }
-            });
-
-            map.addLayer(photoEssayLayer);
-
-            var articleLayer = new L.DataLayer(featuredArticles, {
-                recordsField: 'items',
-                //locationMode: L.LocationModes.LATLNG,
-                locationMode: L.LocationModes.GEOJSON,
-                geoJSONField: 'location.0',
-                //latitudeField: 'location.0.geometry.coordinates.1',
-                //longitudeField: 'location.0.geometry.coordinates.0',
-                layerOptions: {
-                    weight: 10,
-                    fillOpacity: 1,
-                    opacity: 0.3,
-                    radius: 10,
-                    numberOfSides: 50,
-                    color: 'rgb(39,171,226)',
-                    fillColor: 'rgb(39,171,226)'
-                },
-                tooltipOptions: {
-                    iconSize: null,
-                    iconAnchor: new L.Point(-5, 0)
-                },
-                displayOptions: {
-                    title: {
-                        displayName: 'Featured Article',
-                        displayText: function (value) {
-                            return value;
-                        }
-                    }
-                },
-                onEachRecord: function (layer, record) {
-                    layer.on('click', function (e) {
-                        window.open(record.url);
-                    });
-                }
-            });
-
-            map.addLayer(articleLayer);
-            */
         </script>
     </body>
 </html>

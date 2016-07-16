@@ -229,3 +229,10 @@ Focus.Views.MenuView = Backbone.View.extend({
 
 var menuView = new Focus.Views.MenuView();
 menuView.render();
+
+var $footer = $('.footer-row');
+var yearText = 2016;
+var currentYear = new Date().getFullYear();
+
+yearText = currentYear > yearText ? yearText + '-' + currentYear : yearText;
+$footer.html('<div class="col-lg-6">© ' + yearText + ' <a href="//americangeo.org" target="_blank">American Geographical Society</a>.  All Rights Reserved.</div><div class="col-lg-6"><span class="pull-right">Site design by <a href="https://github.com/sfairgrieve" target="_blank">Scott Fairgrieve</a>, <a href="//www.thehumangeo.com" target="_blank">HumanGeo</a></span></div>');

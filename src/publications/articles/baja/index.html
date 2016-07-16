@@ -38,13 +38,13 @@
         <div id="nav" class="title-hidden dotstyle dotstyle-scaleup">
             <ul class="nav share">
                 <li>
-                    <a href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+                    <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
                 </li>
                 <li>
-                    <a href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+                    <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
                 </li>
                 <li>
-                    <a href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+                    <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
                 </li>
             </ul>
             <ul class="nav previous">
@@ -53,18 +53,6 @@
                 </li>
             </ul>
             <ul class="nav sections">
-                <li class="active">
-                    <a href="#introduction"><span class="fa fa-circle-o"></span></a>
-                </li>
-                <li>
-                    <a href="#2"><span class="fa fa-circle-o"></span></a>
-                </li>
-                <li>
-                    <a href="#3"><span class="fa fa-circle-o"></span></a>
-                </li>
-                <li>
-                    <a href="#4"><span class="fa fa-circle-o"></span></a>
-                </li>
             </ul>
             <ul class="nav next">
                 <li class="next">
@@ -74,7 +62,7 @@
         </div>
         <!-- Add your site or application content here -->
         <div id="background"></div>
-        <div id="map" class="title-hidden"></div>
+        <div id="map" class="title-hidden feature-article"></div>
         <div id="overview-map" class="title-hidden transparent"></div>
         <div id="foreground"></div>
         <div id="photos" style=""><div id="photo-caption" class="title-hidden"></div></div>
@@ -93,23 +81,22 @@
             <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
             <ul class="nav share">
                 <li>
-                    <a href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+                    <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
                 </li>
                 <li>
-                    <a href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+                    <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
                 </li>
                 <li>
-                    <a href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+                    <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
                 </li>
             </ul>
             <div id="menu" class="container-fluid"></div>
         </div>
         <div id="text" class="title-hidden">
             <div class="content scenes">
-                <section id="introduction" class="scene" data-scene-id="place1">
-                    <h2 class="title">From Ranching to Fishing – the Cultural Landscape of the Northern Pacific Coast of Baja California, Mexico</h2>
-
-                    <div class="author"><span class="name">Antoinette WinklerPrins</span>, <span class="organization">Department of Earth and Planetary Sciences, Johns Hopkins University</span></div>
+                <section id="introduction" class="scene" data-scene-id="place1" title="Introduction">
+                    <h2 class="title title-photo" style="background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), url(img/bajaauthors2.jpg);">From Ranching to Fishing – The Cultural Landscape of the Northern Pacific Coast of Baja California, Mexico</h2>
+                    <div class="author"><span class="name">Antoinette WinklerPrins</span>, <span class="organization">Environmental Sciences and Policy Program, Johns Hopkins University</span></div>
                     <div class="author"><span class="name">Pablo Alvarez</span>, <span class="organization">Faculty of Marine Science, Universidad Autonoma de Baja California</span></div>
                     <div class="author"><span class="name">Gerardo Bocco</span>, <span class="organization">Center for Environmental Geography (CIGA), Universidad Nacional Autonoma de Mexico (UNAM) – Morelia Campus</span></div>
                     <div class="author"><span class="name">Ileana Espejel</span>, <span class="organization">Faculty of Sciences, Universidad Autonoma de Baja California</span></div>
@@ -119,18 +106,18 @@
                 Baja California conjures up images of rally car races, beaches, surfing, tacos, deserts, and exotic endemic flora and fauna.  There is of course a lot more to this fascinating region, including people and their livelihoods, and this paper explores the cultural landscape of the rural space that constitutes the North Pacific Coast of Mexico, specifically the coastal zone of the <a href="#" class="location" data-layer-id="elvizcaino">El Vizcaíno protected area</a> in the Mexican state of <a href="#" class="location" data-layer-id="bcs1">Baja California Sur (BCS)</a>, and how it came to be (Figures <a href="#figure1">1</a> and <a href="#figure2">2</a>).
                     </p>
                 </section>
-                <section id="2" class="scene" data-scene-id="place2">
+                <section id="2" class="scene" data-scene-id="place2" title="Overview">
                     <div id="figure1" class="figure " style="background-image:url(img/fig1.jpg);"></div>
                     <div class="caption">Figure 1: Punta Abreojos, a coastal community along the North Pacific coast of Mexico (Photography by Antoinette WinklerPrins, March 2013)</div>
                     <div id="figure2" class="figure " style="background-image:url(img/fig2.jpg);"></div>
                     <div class="caption">Figure 2: View of Bahía Asunción, BCS (Photography by Antoinette WinklerPrins, March 2013)</div>
                     <p>
-                In order to understand the creation and maintenance of the cultural landscape and its resource base we asked: (1) What have been the cultural and historical factors shaping the current landscape of the El Vizcaíno coastal zone? (2) What are the future trends of this cultural landscape?  We conducted fieldwork primarily in two communities, <a href="#" class="location" data-layer-id="pa">Punta Abreojos (PA)</a> and <a href="#" class="location" data-layer-id="bt">Bahía de Tortugas (BT)</a>, although to a lesser extent also <a href="#" class="location" data-layer-id="ba">Bahía Asuncíon</a> and <a href="#" class="location" data-layer-id="lb">La Bocana</a> (<a href="#figure3">Figure 3</a>).  In-depth and semi-structured interviews as well as open-ended conversations and focus group were used to elicit information about the history of the region, current workings of the fisher coops, and the communities.  This work was combined with GIS in order to depict landscape and landscape change spatially, through the analysis of landscape units (LUs).  Through the engagement of workshops with a variety of age-groups and participatory GIS methods (PGIS)(McCall 2006), multiple perspectives and observations were combined into a series of three maps (Álvarez 2014; Álvarez et al. 2015).
+                In order to understand the creation and maintenance of the cultural landscape and its resource base we asked the following two questions.  What have been the cultural and historical factors shaping the current landscape of the El Vizcaíno coastal zone? What are the future trends of this cultural landscape?  We conducted fieldwork primarily in two communities, <a href="#" class="location" data-layer-id="pa">Punta Abreojos (PA)</a> and <a href="#" class="location" data-layer-id="bt">Bahía de Tortugas (BT)</a>, although to a lesser extent also <a href="#" class="location" data-layer-id="ba">Bahía Asuncíon</a> and <a href="#" class="location" data-layer-id="lb">La Bocana</a> (<a href="#figure3">Figure 3</a>).  In-depth and semi-structured interviews as well as open-ended conversations and focus groups were used to elicit information about the history of the region, current workings of the fisher coops, and the communities.  This work was combined with GIS in order to depict the landscape and spatial changes to the landscape, through the analysis of landscape units (LUs).  Through the engagement of workshops with a variety of age groups and participatory GIS methods (PGIS) (McCall 2006), multiple perspectives and observations were combined into a series of three maps (Álvarez 2014; Álvarez et al. 2015).
                     </p>
                     <div id="figure3" class="figure contain" style="background-image:url(img/fig3.jpg);"></div>
                     <div class="caption">Figure 3: Study area.  Field work was conducted primarily in the communities of Punta Abreojos and Bahía de Tortugas. (Cartography by Pablo Alvarez)</div>
                     <p>
-                The resultant series of maps (<a href="#figure4a">Figure 4</a>) represent locally defined historic eras representing the changes in fisheries management that are essential to today’s cultural landscape: (1) Pre-fishing cooperatives, 1912–1939, (2) Consolidation of the fishing cooperatives, 1940–1979; and (3) Co-management/sustainable fisheries, 1980–2011.  We found that strong cooperative organization and co-management of marine resources have created strong fisher communities that have been able to capitalize on state investment and a high value global supply-chain for seafood, thereby developing their communities and maintaining an active presence in this rural region.  This despite the challenges faced by an unforgiving environment and alternative socio-economic development pressures such as intensive industrial agriculture in inland areas.  Young people in the communities indicate that current livelihoods may not be sustainable in the future as fishing in the way it has been done offers limited opportunities for growth and full community engagement.  Emerging other economic activities such as ecotourism may shift livelihoods away from the fisher coops.
+                The resultant series of maps (<a href="#figure4a">Figure 4</a>) represent locally defined historic eras representing the changes in fisheries management that are essential to today’s cultural landscape: pre-fishing cooperatives, 1912–1939; consolidation of the fishing cooperatives, 1940–1979; and co-management/sustainable fisheries, 1980–2011.  We found that strong cooperative organization and co-management of marine resources have created strong fisher communities that have been able to capitalize on state investment and a high-value global supply chain for seafood, thereby developing their communities and maintaining an active presence in this rural region.  This despite the challenges faced by an unforgiving environment and alternative socioeconomic development pressures such as intensive inland industrial agriculture.  Young people in the communities indicate that current livelihoods may not be sustainable in the future as traditional fishing offers limited opportunities for growth and full community engagement.  Emerging other economic activities, such as ecotourism, may shift livelihoods away from the fisher coops.
                     </p>
                     <div id="figure4a" class="figure contain" style="background-image:url(img/fig4a.png);"></div>
                     <div class="caption">Figure 4a: Landscape Units (LUs) defined in the first phase of the region’s environmental history: Pre-fishing cooperatives (1912-1939). Note the unique marine LU, due to a single fishing permit authorized to a Japanese company.</div>
@@ -139,16 +126,16 @@
                     <div id="figure4c" class="figure contain" style="background-image:url(img/fig4c.png);"></div>
                     <div class="caption">Figure 4c: LUs defined in the last phase of the region's environmental history: Co-management/sustainable fisheries (1980-2011). Fishing area expands seawards due to the introduction of new technology.</div>
                     </section>
-                    <section id="3" class="scene" data-scene-id="place3">
+                    <section id="3" class="scene" data-scene-id="place3" title="The Pacific Coast of Northern Baja California">
                         <h3>The Pacific Coast of Northern Baja California</h3>
-                The communities where we worked are located on the west coast of El Vizcaíno Desert, a highly biodiverse ecoregion at the center of the Baja California peninsula, in the Mexican state of Baja California Sur (<a href="#figure3">Figure 3</a>). The cold California Current that flows along this coast creates a relatively cool and arid climate and provides coastal waters with rich nutrients, supporting the significant fishery that underpins the livelihoods of the fisher communities in the region (Lluch-Belda et al. 2003). Annual precipitation averages 80 mm (inland) to 100mm (along the coast), while mean annual temperature ranges from 18° C to 22° C with extreme diurnal thermal oscillations (Salinas-Zavala et. al. 1991). Physiography contrasts between the coast and the inland area. The inland area consists primarily of plains, low foothills, hills, plateaus, and a few mountain ranges, all dissected by seasonally active gullies and ravines (Ortega and Arriaga 1991) while the coastal plain includes lagoons, saltmarshes and sand dunes, while the coastline presents bays, rocky cliffs and points, and rocky and sandy beaches (<a href="#figure5">Figure 5</a>).
+                <p>The communities where we worked are located on the west coast of the El Vizcaíno Desert, a highly biodiverse ecoregion at the center of the Baja California peninsula, in the Mexican state of Baja California Sur (<a href="#figure3">Figure 3</a>). The cold California Current that flows along this coast creates a relatively cool and arid climate and provides coastal waters with rich nutrients, supporting the significant fishery that underpins the livelihoods of the fisher communities in the region (Lluch-Belda et al. 2003). Annual precipitation averages 80 mm (inland) to 100mm (along the coast), while mean annual temperature ranges from 18° C to 22° C with extreme diurnal thermal oscillations (Salinas-Zavala et. al. 1991). Physiography contrasts between the coast and the inland area. The inland area consists primarily of plains, low foothills, hills, plateaus, and a few mountain ranges, all dissected by seasonally active gullies and ravines (Ortega and Arriaga 1991) while the coastal plain includes lagoons, saltmarshes and sand dunes, while the coastline presents bays, rocky cliffs and points, and rocky and sandy beaches (<a href="#figure5">Figure 5</a>).</p>
 
                 <div id="figure5" class="figure" style="background-image:url(img/fig5.jpg);"></div>
                 <div class="caption">Figure 5: Coastal bay near Punta Abreojos, BCS (Photography by Antoinette WinklerPrins, March 2013)</div>
-                The region has always been sparsely populated. The Vizcaíno Desert was occupied by semi-nomadic hunter-gatherer-fishers from about 6000 years BP until about 400-800 AD (Ritter 2008).  While some portions of the shoreline had already been abandoned before the Spanish conquest, disease and other consequences of colonization thinned and relocated the remaining indigenous people to inland locations (Del Barco 1988).  Central Mexicans migrated to Baja to practice cattle ranching and subsistence agriculture based in the Sierras, highland regions where there is water, but also depending on the coastal plan for grazing access.  They carried with them a strong sense of communal resource management derived from the ejido system of mainland Mexico (Cariño and Monteforte 2008).
-                The cultural landscape that exists today along the Pacific coast of Baja California Sur is the result of the inland ranchers being initially recruited into a seasonal fishing way of life by Japanese companies with state-sponsored concessions along the coast fishing camps, which evolved into sophisticated fisher coops who developed their communities and manage the marine resource carefully.  Today’s population ranges from temporary fishing camps with less than five inhabitants to permanent settlements of up to 2,500 inhabitants.  There are four major ones, with a total of 5910 dwellers in 2010 according to the Mexican Bureau of the Census (INEGI, 2010). In the last few decades, basic health services, and primary and secondary schools have become available through the federal and state governments. Before then local community-based social organizations and fisher cooperatives provided services to the populations in the larger communities, while the smaller ones continue to lack even basic amenities such as fresh water and electricity today.
-
-                Today’s coastal fisheries play an essential role in the subsistence of coastal communities and in the construction of their landscapes, both regionally in Baja and elsewhere in the world (Botwick and McClane 2005; Buanes et al. 2005; Cudney-Bueno et al. 2008; Ponce et al. 2009).  There are seven fishing cooperatives operating in the study area, each having strong social organization, and all are members of the Regional Federation of Cooperatives (FEDECOOP).  Such small-scale fisheries are very important at the state level (Young 2001), and locally 95% of economically actively people are involved in this industry (Álvarez 2014)(Figures 6 and 7).  According to the Government of Baja California Sur (GBCS), in 2008, fishing production reached 175,120 tons live weight, worth ~US$72.69 million (GBCS 2010).  Table 1 summarizes the important species in this fishery.  The Mexican Ministry of the Environment (SEMARNAT) reports that there were 418 fishing localities with 2,429 boats, of which 98% are dedicated to coastal fishing along the west coast of the state of Baja California (SEMARNAT 2013).
+                <p>The region has always been sparsely populated. The Vizcaíno Desert was occupied by semi-nomadic hunter-gatherer-fishers from about 6000 years BP until about 400-800 AD (Ritter 2008).  While some portions of the shoreline had already been abandoned before the Spanish conquest, disease and other consequences of colonization thinned and relocated the remaining indigenous people to inland locations (Del Barco 1988).  Central Mexicans migrated to Baja to practice cattle ranching and subsistence agriculture based in the Sierras, highland regions where there is water, but also depending on the coastal plan for grazing access.  They carried with them a strong sense of communal resource management derived from the ejido system of mainland Mexico (Cariño and Monteforte 2008).</p>
+                <p>The cultural landscape that exists today along the Pacific coast of Baja California Sur is the result of the inland ranchers being initially recruited into a seasonal fishing way of life by Japanese companies with state-sponsored concessions along the coast fishing camps, which evolved into sophisticated fisher coops who developed their communities and manage the marine resource carefully.  Today’s population ranges from temporary fishing camps with less than five inhabitants to permanent settlements of up to 2,500 inhabitants.  There are four major ones, with a total of 5910 dwellers in 2010 according to the Mexican Bureau of the Census (INEGI, 2010). In the last few decades, basic health services, and primary and secondary schools have become available through the federal and state governments. Before then local community-based social organizations and fisher cooperatives provided services to the populations in the larger communities, while the smaller ones continue to lack even basic amenities such as fresh water and electricity today.
+                        </p>
+                <p>Today’s coastal fisheries play an essential role in the subsistence of coastal communities and in the construction of their landscapes, both regionally in Baja and elsewhere in the world (Botwick and McClane 2005; Buanes et al. 2005; Cudney-Bueno et al. 2008; Ponce et al. 2009).  There are seven fishing cooperatives operating in the study area, each having strong social organization, and all are members of the Regional Federation of Cooperatives (FEDECOOP).  Such small-scale fisheries are very important at the state level (Young 2001), and locally 95% of economically actively people are involved in this industry (Álvarez 2014)(Figures <a href="#figure6">6</a> and <a href="#figure7">7</a>).  According to the Government of Baja California Sur (GBCS), in 2008, fishing production reached 175,120 tons live weight, worth ~US$72.69 million (GBCS 2010).  Table 1 summarizes the important species in this fishery.  The Mexican Ministry of the Environment (SEMARNAT) reports that there were 418 fishing localities with 2,429 boats, of which 98% are dedicated to coastal fishing along the west coast of the state of Baja California (SEMARNAT 2013).</p>
                         <div id="table1" class="figure contain" style="background-image: url(img/table1.png);"></div>
                         <div class="caption">Table 1: Principal species captured in the Mexican North Pacific Fishery.</div>
                         <div id="figure6" class="figure " style="background-image:url(img/fig6.jpg);"></div>
@@ -157,16 +144,16 @@
                         <div class="caption">Figure 7: Fisher on typical fisher boat with lobster trap (Photography by Antoinette WinklerPrins, March 2013)</div>
 
                         <h3>Environmental History of the Region</h3>
-                Our research yielded a tripartite division of the past, the combination of which resulted in the cultural landscape as it is today (Álvarez 2014; Álvarez et al. 2015).  The first era, which we consider to be the ‘Pre-fishing cooperatives’ era (1912–1939)(<a href="#figure4a">Figure 4a</a>), started as small temporary fishing camps installed by a Japanese company that employed Mexicans from nearby ranches.  A Japanese company obtained a concession from the Mexican state to fish on the Pacific coast and local ranchers were recruited and trained to fish and process abalone and lobster. This changes the lifeways of local producers substantially as a new dimension, the coast and the sea, was incorporated into their terrestrially-based landscape. During this time the Mexican fishers lived in seasonal fishing camps on the coast established and provisioned by the company from which they fished and processed the catch (<a href="#figure8">Figure 8</a>). The seascape consisted of the exclusive concession granted to the Japanese company by the Mexican state, a three nautical mile strip used for fishing, illustrating the technological range accessible for the fishing vessels of that time, rowing boats.
+                <p>Our research yielded a tripartite division of the past, the combination of which resulted in the cultural landscape as it is today (Álvarez 2014; Álvarez et al. 2015).  The first era, which we consider to be the ‘Pre-fishing cooperatives’ era (1912–1939)(<a href="#figure4a">Figure 4a</a>), started as small temporary fishing camps installed by a Japanese company that employed Mexicans from nearby ranches.  A Japanese company obtained a concession from the Mexican state to fish on the Pacific coast and local ranchers were recruited and trained to fish and process abalone and lobster. This changes the lifeways of local producers substantially as a new dimension, the coast and the sea, was incorporated into their terrestrially-based landscape. During this time the Mexican fishers lived in seasonal fishing camps on the coast established and provisioned by the company from which they fished and processed the catch (<a href="#figure8">Figure 8</a>). The seascape consisted of the exclusive concession granted to the Japanese company by the Mexican state, a three nautical mile strip used for fishing, illustrating the technological range accessible for the fishing vessels of that time, rowing boats.</p>
                         <div id="figure8" class="figure " style="background-image:url(img/fig8.jpg);"></div>
                         <div class="caption">Figure 8: Old Japanese processing plant in Bahía de Tortugas (Photography by Antoinette WinklerPrins, March 2013)</div>
-                The second era, which we called the ‘Consolidation of fishing cooperatives’ (1940–1979)(<a href="#figure4b">Figure 4b</a>), occurred when the Japanese company went bankrupt and Mexican fishers created their own fishing cooperatives, an organizational structure already known by the local population due to antecedent communal organization (Young, 1999; Lagunas et al., 2009).  Seasonal fishers became permanent coastal residents, moving their families to the coastal zone from inland highland locations and establishing permanent settlements.  Dirt roads were created so that the coast could be linked to inland areas and the main transportation network of Baja.  In the interior, extensive ranching was significantly reduced, although there was development of industrial-scale groundwater irrigated intensive agriculture in the north-east region of the study area that attracted some labor. The original single seascape was divided among the newly created six fishing cooperatives.  The cooperative boundaries were drawn according to the historical location of small fishing camps on land and their associated traditional fishing zones (<a href="#figure9a">Figure 9</a>). After a period of struggle with the Mexican state, the coops gained their own fishing concession, expanding offshore from three to six nautical miles following the introduction of the first motorboats. Daily fishing became safer and respect for the boundaries of the six fishing areas was enforced by local agreements and vigilance.
+               <p>The second era, which we called the ‘Consolidation of fishing cooperatives’ (1940–1979)(<a href="#figure4b">Figure 4b</a>), occurred when the Japanese company went bankrupt and Mexican fishers created their own fishing cooperatives, an organizational structure already known by the local population due to antecedent communal organization (Young, 1999; Lagunas et al., 2009).  Seasonal fishers became permanent coastal residents, moving their families to the coastal zone from inland highland locations and establishing permanent settlements.  Dirt roads were created so that the coast could be linked to inland areas and the main transportation network of Baja.  In the interior, extensive ranching was significantly reduced, although there was development of industrial-scale groundwater irrigated intensive agriculture in the north-east region of the study area that attracted some labor. The original single seascape was divided among the newly created six fishing cooperatives.  The cooperative boundaries were drawn according to the historical location of small fishing camps on land and their associated traditional fishing zones (<a href="#figure9a">Figure 9</a>). After a period of struggle with the Mexican state, the coops gained their own fishing concession, expanding offshore from three to six nautical miles following the introduction of the first motorboats. Daily fishing became safer and respect for the boundaries of the six fishing areas was enforced by local agreements and vigilance.</p>
 
                         <div id="figure9a" class="figure " style="background-image:url(img/fig9a.jpg);"></div>
                         <div class="caption">Figure 9a: The seascape: Demarcated sea territory</div>
                         <div id="figure9b" class="figure " style="background-image:url(img/fig9b.jpg);"></div>
                         <div class="caption">Figure 9b: The seascape: Aligned to points on land (Photography by Antoinette WinklerPrins, March 2013)</div>
-                The third era we labelled, ‘Co-management/sustainable fisheries’ (1980–2011)(Figure 4c), and includes the development and consolidation of co-management of marine resources, the shared responsibilities between fisher coops, the Mexican federal government (through granting concessions to fisher coops), civil organizations, and academic institutions, to sustainably manage marine resources (Figures <a href="figure10">10</a> and <a href="figure11">11</a>).
+                The third era we labelled, ‘Co-management/sustainable fisheries’ (1980–2011) (<a href="#figure4c">Figure 4c</a>), and includes the development and consolidation of co-management of marine resources, the shared responsibilities between fisher coops, the Mexican federal government (through granting concessions to fisher coops), civil organizations, and academic institutions, to sustainably manage marine resources (Figures <a href="figure10">10</a> and <a href="figure11">11</a>).
 
                         <div id="figure10" class="figure " style="background-image:url(img/fig10.jpg);"></div>
                         <div class="caption">Figure 10: Sign along road between Bahía de Tortugas and the Punta Eugenia fishing camp to the north, Upper sign: “Products - concession to Purisima coop: lobster, abalone, squid, sea-snail, do not catch or transport.”  Lower sign: “General Fishing law: Art 72 – Subsistence fishing can be practiced without capturing species granted to a third party, as these are concessioned.” (Photography by Antoinette WinklerPrins, March 2013)</div>
@@ -180,7 +167,7 @@
                         <div id="figure13" class="figure " style="background-image:url(img/fig13.jpg);"></div>
                         <div class="caption">Figure 13: Pipe carrying potable water for fishing communities from inland sources (Photography by Antoinette WinklerPrins, March 2013)</div>
 
-                        New roads were built and old dirt roads paved, providing communities with better accessibility, including a more regular supply of freshwater (Figures <a href="#figure12">12</a> and <a href="#figure13">13</a>).  Although fishing vessels remain relatively small today (as seen in Figures <a href="#figure6">6</a> and <a href="#figure7">7</a>), technological improvements such as the introduction of fiberglass boats and bigger engines increased the fishing distance from the coast up to 25 nautical miles.  At the same time the creation of the <a href="#" class="location" data-layer-id="elvizcaino">El Vizcaíno National Protected Area (NPA)</a> in 1988 included a 5-km-wide marine strip buffer zone where fishing is controlled through agreements between the NPA and the fisher cooperatives.
+                        <p>New roads were built and old dirt roads paved, providing communities with better accessibility, including a more regular supply of freshwater (Figures <a href="#figure12">12</a> and <a href="#figure13">13</a>).  Although fishing vessels remain relatively small today (as seen in Figures <a href="#figure6">6</a> and <a href="#figure7">7</a>), technological improvements such as the introduction of fiberglass boats and bigger engines increased the fishing distance from the coast up to 25 nautical miles.  At the same time the creation of the <a href="#" class="location" data-layer-id="elvizcaino">El Vizcaíno National Protected Area (NPA)</a> in 1988 included a 5-km-wide marine strip buffer zone where fishing is controlled through agreements between the NPA and the fisher cooperatives.</p>
 
                 <p>In 1990, one of the fishing cooperatives in <a href="#" class="location" data-layer-id="bt">Bahía de Tortugas</a> was split into two and a new fishing area was created, linked to a satellite fishing camp at <a class="location" href="#" data-layer-id="pe">Punta Eugenia</a> (<a href="#figure14">Figure 14</a>).  During this era and continuing today, significant differences between <a href="#" class="location" data-layer-id="pa">Punta Abreojos</a> and <a href="#" class="location" data-layer-id="bt">Bahía de Tortugas</a> emerged, the former remaining a community with very strong association with one fishing coop and with little to no economic diversification.  In contrast, the latter grew in population and split among several coops, while also diversifying its economy. It has become an important regional service and administrative town.</p>
 
@@ -188,8 +175,8 @@
                         <div class="caption">Figure 14: Purisima fishing coop in Punta Eugenia (Photography by Antoinette WinklerPrins, March 2013)</div>
                     </section>
                     <section id="4" class="scene" data-scene-id="place4">
-                The cooperatives have complied with the necessary legal requirements in order to maintain fishing concessions from the Mexican federal government.  They have also invested their own resources to work collaboratively with regional academic and national and international non-governmental institutions to generate information regarding the fishing stocks and their ecological dynamics.  This collaboration has resulted in an increase in productivity through the strict enforcement of limited seasonal fishing and quotas, especially for lobster fishing. The process has been recognized internationally as a successful case of co-management, especially for abalone and lobster fishing, the latter having received international ‘green’ certification from the Marine Stewardship Council and the Mexican entity ‘Comunidad y Diversidad’ (COBI). These communities are considered pioneers in the development of sustainable systems of fishery management, based on a cooperative and communitarian organization (Álvarez, 2014; Ponce et al., 2009; Sáenz-Arroyo et al. 2005) (<a href="#figure15">Figure 15</a>).  Today this region is part of a global supply chain provisioning live lobster and canned abalone that are green certified to the growing and lucrative East Asian markets (<a href="#figure16">Figure 16</a>).
-
+                <p>The cooperatives have complied with the necessary legal requirements in order to maintain fishing concessions from the Mexican federal government.  They have also invested their own resources to work collaboratively with regional academic and national and international non-governmental institutions to generate information regarding the fishing stocks and their ecological dynamics.  This collaboration has resulted in an increase in productivity through the strict enforcement of limited seasonal fishing and quotas, especially for lobster fishing. The process has been recognized internationally as a successful case of co-management, especially for abalone and lobster fishing, the latter having received international ‘green’ certification from the Marine Stewardship Council and the Mexican entity ‘Comunidad y Diversidad’ (COBI). These communities are considered pioneers in the development of sustainable systems of fishery management, based on a cooperative and communitarian organization (Álvarez, 2014; Ponce et al., 2009; Sáenz-Arroyo et al. 2005) (<a href="#figure15">Figure 15</a>).  Today this region is part of a global supply chain provisioning live lobster and canned abalone that are green certified to the growing and lucrative East Asian markets (<a href="#figure16">Figure 16</a>).
+                </p>
                         <div id="figure15" class="figure " style="background-image:url(img/fig15.jpg);"></div>
                         <div class="caption">Figure 15: New processing plant in Bahía de Tortugas, shared among three fisher coops and co-funded by Mexican state and coops (Photography by Antoinette WinklerPrins, March 2013)</div>
                         <div id="figure16" class="figure " style="background-image:url(img/fig16.jpg);"></div>
@@ -203,12 +190,16 @@
                 Young people do see themselves as remaining active agents in their communities and feel that they have been part of the recent history of their places.  There are differences between the two communities we studied with participants in <a href="#" class="location" data-layer-id="bt">Bahía de Tortugas</a> expecting more involvement from the community in facilitating outside opportunities, and feeling that the cooperatives would play a less substantial role in community life in the future.  They suggest a future with more ecotourism, and showed some concern about a loss of control over potential changes in the current landscape.  In contrast in <a href="#" class="location" data-layer-id="pa">Punta Abreojos</a> participants showed a strong interest in maintaining the dominance of fishing and the cooperative organization as the central element of future community life. They too shared concern about maintaining control over changes in the landscape, but felt more in control over it and agreed that the “cooperative had created the community.”
                         </p>
                 <h3>Conclusions</h3>
+                        <p>
                 Our research suggests that the strong cooperative organization of communities and successful co-management of marine resources has been crucial for the shaping and persistence of the cultural landscapes of the North Pacific coast of Mexico.  The process of constructing a participatory environmental history was a powerful means of discussing past and future for local people.  It elucidated a strong sense of belonging to what is a relatively recently inscribed cultural landscape, and with a strong sense of place that will continue to play a role in the future of the communities.
+                            </p>
+                        <p>
                 Our case points to how careful natural resource management in a conservation area can result in positive outcomes for the environment as well as for human welfare.  The stability in the region results from the fisher coops being anchors in the communities at the local scale while enabling their communities to be part of a global supply chains for local products.  At the regional scale the changes that are occurring in the communities, are linked to regional inland landscape dynamics such as a decrease in cattle grazing and the increase of irrigated commercial agriculture, but in the future might also be related to the development of aquaculture (shrimping in lagoons), salt mining in lagoons, and the extraction of other minerals.  It also includes the growing interest in developing the region as an ecotourism destination, and also as a retirement destination for North Americans.   At a global scale it is possible that economic or other forces change the demand of local marine resources, which could then have a local impact.  Lastly, but not insignificantly, global climate change might impact the region as sea temperature changes may impact fishing stock distribution (northward or southward) which could upset the current allocation of coop territories and access to key resources.  This could be a dramatic disruptive force and radically alter livelihoods, lifeways, and the regional cultural landscape.
-
+                        </p>
                 <h3>Acknowledgements</h3>
+                        <p>
                 We thank the National Geographic Society (award #9186-12) as well as support from UNAM DGAPA PAPIIT project In301914, UABC for financial and logistical support, and CONACYT.  We also thank the community members who gave of their time to participate in this project.
-
+                        </p>
                 <h3>References</h3>
                         <ul class="references">
                             <li>Álvarez, P. 2014.Construcción del Paisaje Cultural en las Comunidades Pesqueras del Pacífico Norte Mexicano. Dissertation for a Doctorate in Environment and Development, Instituto de Investigaciones Oceanológicas, Facultad de Ciencias Marinas, Facultad de Ciencias, Universidad Autónoma de Baja California.</li>
@@ -233,6 +224,7 @@
                             <li>Young, E. 2001. State Intervention and Abuse of the Commons: Fisheries Development in Baja California Sur, Mexico.  Annals of the Association of American Geographers 91(2) 283-306.</li>
                         </ul>
                     </section>
+                <div class="row footer-row"></div>
             </div>
         </div>
         <div id="progress">
@@ -585,7 +577,8 @@
                                 subdomains: "abc",
                                 noWrap: true,
                                 continuousWorld: true,
-                                crs: L.CRS.EPSG3857
+                                crs: L.CRS.EPSG3857,
+                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
                             }
                             //"type": "vector",
                             //"url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk"
@@ -631,7 +624,8 @@
                                 subdomains: "abc",
                                 noWrap: true,
                                 continuousWorld: true,
-                                crs: L.CRS.EPSG3857
+                                crs: L.CRS.EPSG3857,
+                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
                             }
                         }],
                         "layers": [
@@ -677,7 +671,8 @@
                                 subdomains: "abc",
                                 noWrap: true,
                                 continuousWorld: true,
-                                crs: L.CRS.EPSG3857
+                                crs: L.CRS.EPSG3857,
+                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
                             }
                             //"type": "vector",
                             //"url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk"
@@ -708,7 +703,8 @@
                                 subdomains: "abc",
                                 noWrap: true,
                                 continuousWorld: true,
-                                crs: L.CRS.EPSG3857
+                                crs: L.CRS.EPSG3857,
+                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
                             }
                             //"type": "vector",
                             //"url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk"
@@ -766,13 +762,12 @@
                     }
                 });
 
-                $('body').scrollspy({ target: '#nav' })
                 var overviewMap = new Focus.Views.OverviewMapView({
                     model: new Backbone.Model({
                         initialScene: new Focus.Models.SceneModel({
                             baseLayer: {
                                 type: 'tile',
-                                url: 'http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png' //'https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg'
+                                url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png'
                             },
                             center: [0,0],
                             zoom: 12,

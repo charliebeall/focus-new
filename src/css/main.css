@@ -461,6 +461,7 @@ body {
     width: 100%;
     z-index: 3;
     background: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0.1));
+    pointer-events: none;
 }
 
 #bar-bottom {
@@ -472,6 +473,7 @@ body {
     width: 100%;
     z-index: 3;
     background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.1));
+    pointer-events: none;
 }
 
 #bar-bottom.large {
@@ -535,10 +537,11 @@ a.location:hover {
 a {
     color: rgba(50, 117, 60,1);
     text-decoration: none;
-    padding: 2px 0px;
+    padding: 2px 0px 0px 0px;
     border-bottom: solid 3px rgba(50,255,50,0.7);
-    margin-bottom: -4px;
+    *margin-bottom: -4px;
     line-height: 14px;
+    cursor: pointer;
 }
 
 a.item-title {
@@ -569,6 +572,31 @@ a:active {
 .photo-scene a.location {
     color: rgba(140, 207, 150,1);
 }
+
+.photo-scene a {
+    color: rgba(140, 207, 150,1);
+}
+
+.photo-scene .footer-row {
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 0px 15px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.photo-scene .author .row {
+    margin: 0px -15px;
+}
+
+.photo-scene .author-photo {
+    width: calc(100% + 15px);
+    margin: -20px 0px -20px 0px;
+    vertical-align: middle;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+}
+
 svg {
     overflow: visible !important;
 }
@@ -785,7 +813,7 @@ div.caption {
 }
 
 div.leaflet-div-icon {
-    background-color: #333;
+    background-color: rgba(0,0,0,0.8);
     border-radius: 0px;
     background-image: none;
     color: #fff;
@@ -946,6 +974,7 @@ span.result.wrong {
 
 .author .name {
     font-weight: bold;
+    text-align: left;
 }
 
 .author .organization {
@@ -1035,7 +1064,7 @@ svg text {
 
 .photo-scene .author {
     position: relative;
-    padding: 10px 30px;
+    padding: 10px 15px;
     background: #222;
     color: #fff;
 }
@@ -1307,7 +1336,246 @@ body.scrolled .title-hidden {
     display: none;
 }
 
+.leaflet-container .leaflet-control-attribution {
+    background: none;
+    padding: 5px 10px;
+}
+
+#map.feature-article.leaflet-container .leaflet-control-attribution {
+    position: fixed;
+    right: 45%;
+    bottom: 0px;
+}
+
+
+.leaflet-control-attribution a {
+    color: white;
+    border: none;
+    text-shadow: 0px 1px 3px black;
+    font-size: 16px;
+}
+
+div.tooltip-inner {
+    max-width: 600px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+div.tooltip-inner .attribution {
+    font-size: 9px;
+}
+
+.helper-tooltip div.tooltip-inner {
+    max-width: 250px;
+}
+
+.photo-essay .helper-tooltip .tooltip-arrow {
+    border-top-color: #fff;
+}
+
+.photo-essay .helper-tooltip div.tooltip-inner {
+    background: #fff;
+    color: #000;
+}
+
+.helper {
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 10px;
+    margin: 0px;
+    float: right;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    font-size: 10px;
+}
+
+.photo-essay .helper {
+    display: none;
+}
+
+.help .helper {
+    opacity: 1;
+}
+
+.helper-icon {
+    margin-right: 4px;
+}
+
+.element-animation{
+    animation: animationFrames ease-in-out 2s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    -webkit-animation: animationFrames ease-in-out 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation: animationFrames ease-in-out 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: animationFrames ease-in-out 2s;
+    -o-animation-iteration-count: infinite;
+    -o-transform-origin: 50% 50%;
+    -ms-animation: animationFrames ease-in-out 2s;
+    -ms-animation-iteration-count: infinite;
+    -ms-transform-origin: 50% 50%;
+}
+
+.element-animation1 {
+    animation: animationFrames1 ease-in-out 2s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    -webkit-animation: animationFrames1 ease-in-out 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation: animationFrames1 ease-in-out 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: animationFrames1 ease-in-out 2s;
+    -o-animation-iteration-count: infinite;
+    -o-transform-origin: 50% 50%;
+    -ms-animation: animationFrames1 ease-in-out 2s;
+    -ms-animation-iteration-count: infinite;
+    -ms-transform-origin: 50% 50%;
+}
+
+@keyframes animationFrames{
+    0% {
+        transform:  translate(-4px,0px)  ;
+    }
+    50% {
+        transform:  translate(4px,0px)  ;
+    }
+    100% {
+        transform:  translate(-4px,0px)  ;
+    }
+}
+
+@-moz-keyframes animationFrames{
+    0% {
+        -moz-transform:  translate(-4px,0px)  ;
+    }
+    50% {
+        -moz-transform:  translate(4px,0px)  ;
+    }
+    100% {
+        -moz-transform:  translate(-4px,0px)  ;
+    }
+}
+
+@-webkit-keyframes animationFrames {
+    0% {
+        -webkit-transform:  translate(-4px,0px)  ;
+    }
+    50% {
+        -webkit-transform:  translate(4px,0px)  ;
+    }
+    100% {
+        -webkit-transform:  translate(-4px,0px)  ;
+    }
+}
+
+@-o-keyframes animationFrames {
+    0% {
+        -o-transform:  translate(-4px,0px)  ;
+    }
+    50% {
+        -o-transform:  translate(4px,0px)  ;
+    }
+    100% {
+        -o-transform:  translate(-4px,0px)  ;
+    }
+}
+
+@-ms-keyframes animationFrames {
+    0% {
+        -ms-transform:  translate(-4px,0px)  ;
+    }
+    50% {
+        -ms-transform:  translate(4px,0px)  ;
+    }
+    100% {
+        -ms-transform:  translate(-4px,0px)  ;
+    }
+}
+
+@keyframes animationFrames1 {
+    0% {
+        transform:  translate(8px,8px)  ;
+    }
+    50% {
+        transform:  translate(-8px,0px) ;
+    }
+    100% {
+        transform:  translate(8px,8px)  ;
+    }
+}
+
+@-moz-keyframes animationFrames1 {
+    0% {
+        -moz-transform:  translate(8px,8px)  ;
+    }
+    50% {
+        -moz-transform:  translate(-8px,0px) ;
+    }
+    100% {
+        -moz-transform:  translate(8px,8px)  ;
+    }
+}
+
+@-webkit-keyframes animationFrames1 {
+    0% {
+        -webkit-transform:  translate(8px,8px) ;
+    }
+    50% {
+        -webkit-transform:  translate(-8px,0px)  ;
+    }
+    100% {
+        -webkit-transform:  translate(8px,8px) ;
+    }
+}
+
+@-o-keyframes animationFrames1 {
+    0% {
+        -o-transform:  translate(8px,8px)  ;
+    }
+    50% {
+        -o-transform:  translate(-8px,0px)  ;
+    }
+    100% {
+        -o-transform:  translate(8px,8px)  ;
+    }
+}
+
+@-ms-keyframes animationFrames1 {
+    0% {
+        -ms-transform:  translate(8px,8px)  ;
+    }
+    50% {
+        -ms-transform:  translate(-8px,0px)  ;
+    }
+    100% {
+        -ms-transform:  translate(8px,8px)  ;
+    }
+}
+
+.photo-essay .help .helper {
+    display: none;
+}
+
+.footer-row {
+    font-size: 10px;
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+.title-photo {
+    min-height: 280px;background-size: cover;margin: 0px -30px 30px -30px;background-repeat: no-repeat;padding: 30px;background-position: 50% 50%;
+}
 @media (max-width: 768px) {
+
+    h2.title {
+        font-size: 24px;
+    }
 
     #toggle-map {
         display: block;
@@ -1356,6 +1624,11 @@ body.scrolled .title-hidden {
 
     .figure {
         height: 300px;
+        background-size: cover !important;
+    }
+
+    .figure.contain {
+        background-size: contain !important;
     }
 
     #foreground, #shadow, #photos, #nav, #progress {
@@ -1383,6 +1656,16 @@ body.scrolled .title-hidden {
         width: 100%;
         *height: 100%;
         left: 0px;
+    }
+
+    #map.feature-article.leaflet-container .leaflet-control-attribution, #map.leaflet-container .leaflet-control-attribution {
+        position: relative;
+        right: 30px;
+        bottom: 0px;
+    }
+
+    .esri-leaflet-logo {
+        right: 35px;
     }
 
     #map.fill {
@@ -1459,6 +1742,14 @@ body.scrolled .title-hidden {
 
     .choice-body {
         height: 120px;
+    }
+
+    .helper {
+        display: none;
+    }
+
+    .title-photo {
+        margin-top: -10px;
     }
 }
 
