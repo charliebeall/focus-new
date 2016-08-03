@@ -7,6 +7,7 @@ Focus.Models = Focus.Models || {};
 Focus.Collections = Focus.Collections || {};
 Focus.Events = _.extend({}, Backbone.Events);
 
+var BING_MAPS_KEY = 'AgcrLvy9a1P_nNYA6Afwjmx7l9KX62qrBnb0_vFxqVyFpwJ2mGmT4IEWvjAO-w34'
 Focus.Models.ProgressModel = Backbone.Model.extend({
     default: function () {
         progress: 0
@@ -298,6 +299,11 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         }
         else if (layerDef.type === 'esri-dynamicmaplayer') {
             layer = L.esri.dynamicMapLayer(layerDef.params);
+        }
+        else if (layerDef.type === 'bing') {
+            layer = L.tileLayer.bing($.extend(true, {
+                bingMapsKey: BING_MAPS_KEY
+            }, layerDef.params));
         }
         else if (layerDef.type === 'geojson') {
             layerDef.style = layerDef.style || {};
@@ -986,28 +992,60 @@ Focus.Views.ScrollingSceneNavigator = Focus.Views.SceneNavigator.extend({
             });
         });
 
+        $(document).ready(function() {
 
-        var changeScene = function (progress) {
-            return function () {
-                me.trigger('progressChanged', progress);
-            };
-        };
-
-        this.$el.scrollex({
-            top: 0,
-            bottom: 0,
-            scroll: function (progress) {
-
-                if (progress > 0.01) {
-                    //$('body').addClass('scrolled');
-                }
-                else {
-                    //$('body').removeClass('scrolled');
-                }
-
-                //setTimeout(changeScene(progress), 0);
-                me.trigger('progressChanged', progress);
+            var getMax = function(){
+                return $(document).height() - $(window).height();
             }
+
+            var getValue = function(){
+                return $(window).scrollTop();
+            }
+
+            if ('max' in document.createElement('progress')) {
+                // Browser supports progress element
+                var progressBar = $('progress');
+
+                // Set the Max attr for the first time
+                progressBar.attr({ max: getMax() });
+
+                $(document).on('scroll', _.throttle(function(){
+                    // On scroll only Value attr needs to be calculated
+                    progressBar.attr({ value: getValue() });
+                }, 300));
+
+                $(window).resize(function(){
+                    // On resize, both Max/Value attr needs to be calculated
+                    progressBar.attr({ max: getMax(), value: getValue() });
+                });
+
+            } else {
+
+                var progressBar = $('.progress-bar'),
+                    max = getMax(),
+                    value, width;
+
+                var getWidth = function() {
+                    // Calculate width in percentage
+                    value = getValue();
+                    width = (value/max) * 100;
+                    width = width + '%';
+                    return width;
+                }
+
+                var setWidth = _.throttle(function(){
+                    progressBar.css({ width: getWidth() });
+                }, 300);
+
+                $(document).on('scroll', setWidth);
+                $(window).on('resize', function(){
+                    // Need to reset the Max attr
+                    max = getMax();
+                    setWidth();
+                });
+            }
+
+            $(document).trigger('scroll');
         });
     }
 });
@@ -1086,9 +1124,9 @@ Focus.Util = {
             .attr('orient', 'auto');
         var markerPath = marker.append('path')
             .attr('d','M 0 0 L 10 5 L 0 10 z')
-            .attr('stroke', 'darkgreen')
+            .attr('stroke', 'rgb(0, 123, 71)')
             .attr('stroke-width', '0.1px')
-            .attr('fill', 'darkgreen');
+            .attr('fill', 'rgb(0, 123, 71)');
 
         var anchorX = (x1 - x2 - ($target.outerWidth()/2))/2;
         var anchorY = 0;
@@ -1103,7 +1141,7 @@ Focus.Util = {
 
         var path = svg.append('path')
             .attr("d", bezierLine([[0, 0], [anchorX, anchorY], [x1 - x2 - ($target.outerWidth()/2),y1 - y2 - ($target.outerHeight()/2)]]))
-            .attr("stroke", "darkgreen")
+            .attr("stroke", "rgb(0, 123, 71)")
             .attr("stroke-width", 3)
             .attr("fill", "none")
             .attr('marker-end', 'url(#marker)')
@@ -1221,13 +1259,13 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                     .attr('orient', 'auto');
                 var markerPath = marker.append('path')
                     .attr('d','M 0 0 L 10 5 L 0 10 z')
-                    .attr('stroke', 'darkgreen')
+                    .attr('stroke', 'rgb(0, 123, 71)')
                     .attr('stroke-width', '0.1px')
-                    .attr('fill', 'darkgreen');
+                    .attr('fill', 'rgb(0, 123, 71)');
 
                 var path = svg.append('path')
                     .attr("d", bezierLine([[0, 0], [(x1 - x2)/2, 0], [x1 - x2,y1 - y2 - ($(this).outerHeight()/2)]]))
-                    .attr("stroke", "darkgreen")
+                    .attr("stroke", "rgb(0, 123, 71)")
                     .attr("stroke-width", 3)
                     .attr("fill", "none")
                     .attr('marker-end', 'url(#marker)')
@@ -1363,7 +1401,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                 caption = $next.html();
             }
 
-            $(this).on('mouseover', function (e) {
+            $(this).on('mouseover touchstart', function (e) {
                 $photos.css('background-image',$(this).css('background-image'));
                 if ($(this).hasClass('contain')) {
                     $photos.addClass('contain');
@@ -1375,11 +1413,11 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                 $overviewMap.css('opacity',0);
                 $photos.find('#photo-caption').html(caption);
             });
-            $(this).on('mouseout', function (e) {
+            $(this).on('mouseout touchend', function (e) {
                 $map.css('opacity',1);
                 $overviewMap.css('opacity',1);
             });
-            $(this).on('mousemove', function (e) {
+            $(this).on('mousemove touchmove', function (e) {
                 var $this = $(this);
                 var offset = $this.offset();
                 var distance = e.clientX - offset.left;

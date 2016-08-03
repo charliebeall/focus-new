@@ -201,9 +201,12 @@ gulp.task('concat1', function () {
             'bower_components/leaflet-dvf/dist/leaflet-dvf.min.js',
             'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
             'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.js',
+            'node_modules/leaflet-bing-layer/leaflet-bing-layer.min.js',
             'src/js/vendor/*.js',
-            '!src/js/combined.js',
-            'src/js/*.js'])
+            'src/js/publications.js',
+            'src/js/menu.js',
+            'src/js/mapview.js',
+            'src/js/quizview.js'])
         .pipe(concat('combined.js'))
         .pipe(gulp.dest('src/js'));
 });

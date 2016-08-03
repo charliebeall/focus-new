@@ -373,6 +373,14 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
     width: 100%;
 }
 
+p {
+    line-height: 1.45;
+    font-size: 18px;
+}
+
+#aboutwrap h5 {
+    text-align: justify;
+}
 @media (max-width: 768px) {
     .sep {
         background-position: center center !important;

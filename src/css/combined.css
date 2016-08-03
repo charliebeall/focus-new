@@ -1590,13 +1590,15 @@ body {
 }
 
 #text h2 {
-    color: rgba(50, 117, 60, 1);
+    *color: rgba(50, 117, 60, 1);
+    color: rgba(0, 123, 71, 1);
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
 }
 
 #text h3 {
-    color: rgba(50, 117, 60, 1);
+    *color: rgba(50, 117, 60, 1);
+    color: rgba(0, 123, 71, 1);
     text-transform: uppercase;
 }
 
@@ -1609,7 +1611,8 @@ body {
     right: 0;
     width: 50px;
     color: #fff;
-    background: rgba(50, 117, 60, 1);
+    *background: rgba(50, 117, 60, 1);
+    background: rgba(0, 123, 71, 1);
     z-index: 5;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
@@ -1699,7 +1702,7 @@ a.main-link:hover {
 }
 
 a.location {
-    border-bottom: dotted 2px rgba(50,255,50,0.7);
+    border-bottom: dotted 2px rgba(100,223,171,0.7);
     display: inline-block;
     -webkit-touch-callout: none;
 }
@@ -1708,15 +1711,15 @@ a:hover {
     text-decoration: none;
 }
 a.location:hover {
-    background: rgba(0,255,0,0.2);
+    background: rgba(0,123,71,0.1);
     text-decoration: none;
 }
 
 a {
-    color: rgba(50, 117, 60,1);
+    color: rgba(0, 123, 71,1);
     text-decoration: none;
     padding: 2px 0px 0px 0px;
-    border-bottom: solid 3px rgba(50,255,50,0.7);
+    border-bottom: solid 3px rgba(100,223,171,0.7);
     *margin-bottom: -4px;
     line-height: 14px;
     cursor: pointer;
@@ -1729,7 +1732,7 @@ a.item-title {
 }
 
 a:hover {
-    background: rgba(120,255,120,0.2);
+    background: rgba(0,123,71,0.1);
     color: rgba(0, 123, 71, 1);
     text-decoration: none;
 }
@@ -1753,15 +1756,6 @@ a:active {
 
 .photo-scene a {
     color: rgba(140, 207, 150,1);
-}
-
-.photo-scene .footer-row {
-    color: white;
-    display: block;
-    width: 100%;
-    padding: 0px 15px;
-    position: absolute;
-    bottom: 0px;
 }
 
 .photo-scene .author .row {
@@ -2580,6 +2574,57 @@ div.tooltip-inner .attribution {
     margin-right: 4px;
 }
 
+.volume-number {
+    width: 100%;
+    text-align: center;
+}
+
+progress {
+    /* Positioning */
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    /* Dimensions */
+    width: 100%;
+    height: .25em;
+
+    /* Reset the apperance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Get rid of the default border in Firefox/Opera. */
+    border: none;
+
+    /* For Firefox/IE10+ */
+    background-color: transparent;
+
+    /* For IE10+, color of the progress bar */
+    color: rgb(0, 123, 71);
+    z-index: 20000;
+}
+
+progress::-webkit-progress-bar {
+    background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+    background-color: rgb(0, 123, 71);
+    -webkit-transition: width 0.5s ease-in-out;
+}
+
+progress::-moz-progress-bar {
+    background-color: rgb(0, 123, 71);
+    transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+}
+
+progress::-ms-fill {
+    background-color: rgb(0, 123, 71);
+    -ms-transition: width 0.5s ease-in-out;
+}
+
 .element-animation{
     animation: animationFrames ease-in-out 2s;
     animation-iteration-count: infinite;
@@ -2742,8 +2787,18 @@ div.tooltip-inner .attribution {
 
 .footer-row {
     font-size: 10px;
-    margin-top: 30px;
+    margin-top: 30px !important;
     opacity: 0.8;
+    line-height: 14px;
+    position: relative;
+}
+
+.photo-scene .row.footer-row {
+    color: white;
+    display: block;
+    width: calc(100% + 60px);
+    padding: 0px 15px;
+    bottom: 0px;
 }
 
 .title-photo {
@@ -3316,6 +3371,14 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
     width: 100%;
 }
 
+p {
+    line-height: 1.45;
+    font-size: 18px;
+}
+
+#aboutwrap h5 {
+    text-align: justify;
+}
 @media (max-width: 768px) {
     .sep {
         background-position: center center !important;

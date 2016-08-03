@@ -1,43 +1,4 @@
 var Focus = Focus || {};
-
-Focus.Items = [{
-            type: 'Feature Article',
-            title: 'From Ranching to Fishing – the Cultural Landscape of the Northern Pacific Coast of Baja California, Mexico',
-            author: 'Antoinette WinklerPrins, Pablo Alvarez, Gerardo Bocco, Ileana Espejel',
-            description: '',
-            thumbnail: '../../articles/baja/img/fig1.jpg',
-            url: '../../articles/baja/index.html',
-            location: [{
-                type: 'Feature',
-                geometry: {
-                    type: 'Point',
-                    coordinates: [-113.77222, 27.33072]
-                }
-            }]
-        }, {
-            type: 'Photo Essay',
-            title: 'Many Destinations, One Place Called Home:  Migration and Livelihood for Rural Bolivians',
-            author: 'Marie Price',
-            description: '',
-            thumbnail: '../../photoessays/bolivia/img/figure1.jpg',
-            url: '../../photoessays/bolivia/index.html',
-            location: [{
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-65.852255, -17.537959]
-                }
-            }]
-        }, {
-            type: 'Geo Quiz',
-            title: 'Quiz One:  Explorers',
-            author: 'Wesley Reisser',
-            description: '',
-            thumbnail: '../../quizzes/one/img/agsglobe.png',
-            url: '../../quizzes/one/index.html',
-            location: []
-        }];
-
 Focus.Models = Focus.Models || {};
 Focus.Collections = Focus.Collections || {};
 Focus.Views = Focus.Views || {};
@@ -67,6 +28,7 @@ Focus.Views.MenuItemsView = Backbone.View.extend({
     className: 'row', //'col-12 col-sm-12',
     template: _.template($('#menu-items-template').html()),
     initialize: function (options) {
+        this._basePath = options.basePath || '../../../';
         this.listenTo(this.collection, 'add', this.addItem);
     },
     render: function () {
@@ -74,6 +36,8 @@ Focus.Views.MenuItemsView = Backbone.View.extend({
         return this;
     },
     addItem: function (model) {
+        model.set('thumbnail', this._basePath + model.get('thumbnail'));
+        model.set('url', this._basePath + model.get('url'));
         var view = new Focus.Views.MenuItemView({
             model: model
         });
@@ -84,8 +48,17 @@ Focus.Views.MenuItemsView = Backbone.View.extend({
 
 Focus.Views.MenuView = Backbone.View.extend({
     el: $('#menu'),
-    initialize: function () {
-        this.initHamburger();
+    initialize: function (options) {
+        options = options || {};
+        options.mode = options.mode || 'hamburger';
+
+        this._basePath = options.basePath || '../../../';
+
+        if (options.mode === 'hamburger') {
+            this.initHamburger();
+        }
+
+
     },
     initHamburger: function () {
         var beginAC = 80,
@@ -200,29 +173,20 @@ Focus.Views.MenuView = Backbone.View.extend({
     },
     render: function () {
         var me = this;
-        /*
-        _.each(Focus.Items, function (value, key) {
+
+        _.each(Focus.Volumes, function (volume) {
             var view = new Focus.Views.MenuItemsView({
+                basePath: me._basePath,
                 model: new Backbone.Model({
-                   text: value.text
+                    text: 'Publications'
                 }),
                 collection: new Focus.Collections.ItemCollection()
             });
+            me.$el.append('<h2 class="volume-number">Volume ' + volume.number + '</h2>');
             me.$el.append(view.render().el);
-            _.each(value.items, function (item) {
-               item.type = value.text;
-            });
-            view.collection.add(value.items);
+            view.collection.add(volume.publications);
         });
-        */
-        var view = new Focus.Views.MenuItemsView({
-            model: new Backbone.Model({
-                text: 'Publications'
-            }),
-            collection: new Focus.Collections.ItemCollection()
-        });
-        me.$el.append(view.render().el);
-        view.collection.add(Focus.Items);
+
         return this;
     }
 });
@@ -235,4 +199,4 @@ var yearText = 2016;
 var currentYear = new Date().getFullYear();
 
 yearText = currentYear > yearText ? yearText + '-' + currentYear : yearText;
-$footer.html('<div class="col-lg-6">© ' + yearText + ' <a href="//americangeo.org" target="_blank">American Geographical Society</a>.  All Rights Reserved.</div><div class="col-lg-6"><span class="pull-right">Site design by <a href="https://github.com/sfairgrieve" target="_blank">Scott Fairgrieve</a>, <a href="//www.thehumangeo.com" target="_blank">HumanGeo</a></span></div>');
+$footer.html('<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">© ' + yearText + ' <a href="//americangeo.org" target="_blank">American Geographical Society</a>.  All Rights Reserved.</div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><span class="pull-right">Site design by <a href="https://github.com/sfairgrieve" target="_blank">Scott Fairgrieve</a>, <a href="//www.thehumangeo.com" target="_blank">HumanGeo</a></span></div>');

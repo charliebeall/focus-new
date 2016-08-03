@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Many Destinations, One Place Called Home:  Migration and Livelihood for Rural Bolivians</title>
-    <meta name="description" content="">
+    <meta name="description" content="FOCUS on Geography: Many Destinations, One Place Called Home:  Migration and Livelihood for Rural Bolivians">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -35,6 +35,7 @@
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
+<progress></progress>
 <div id="nav" class="dotstyle dotstyle-scaleup">
     <ul class="nav share">
         <li>
@@ -264,7 +265,7 @@
     <div class="items"></div>
 </script>
 <script id="menu-item-template" type="text/template">
-    <div class="publication col-lg-3 col-md-4 col-sm-4 col-xs-12">
+    <div class="publication col-lg-4 col-md-4 col-sm-4 col-xs-12">
         <div class="publication-wrapper">
             <span class="image" style="background-image:url(<%=thumbnail%>); background-size:cover;"></span>
             <a href="<%= url %>" class="<%= type.replace(' ', '').toLowerCase() %>">
@@ -649,7 +650,8 @@
                     "type": "esri-basemap",
                     "url": "Imagery",
                     "options": {
-                        "detectRetina": true
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
                 }/*{
                     "type": "tile",
@@ -1156,35 +1158,44 @@
                 }]
             }, {
                 "id": "place10",
-                "zoom": 15,
+                "zoom": 16,
                 "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }/*{
                     "type": "tile",
                     //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
                     "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png",
                     "params": {
                         "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
                     }
-                }],
+                }*/],
                 "layers": [{
                     //-17.583494, -66.008273
                     "id": "soccerstadium",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "fill": true,
+                        "fillColor": "orange",
+                        "fillOpacity": 0.2,
+                        "opacity": 1,
+                        "weight": 2,
+                        "color": "orange",
                         "text": {
                             "text": "Soccer Stadium",
                             "style": {
                                 'stroke': 'none',
-                                'fill': '#000',
+                                'fill': 'orange',
                                 'stroke-width': '0.1px',
                                 'font-weight': 'bold',
                                 'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)'
                             }
                         }
                     },
-                    "data": {
+                    "data": /*{
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
@@ -1193,27 +1204,55 @@
                         "properties": {
                             "name": "Soccer Stadium"
                         }
+                    }*/
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Soccer Stadium"
+                        },
+                        "geometry": {
+                            "type": "Polygon",
+                            "coordinates": [
+                                [
+                                    [
+                                        -66.01155638694763,
+                                        -17.58644075568157
+                                    ],
+                                    [
+                                        -66.01195335388184,
+                                        -17.587596447491524
+                                    ],
+                                    [
+                                        -66.01108431816101,
+                                        -17.5878419032078
+                                    ],
+                                    [
+                                        -66.01071953773499,
+                                        -17.586686212967155
+                                    ],
+                                    [
+                                        -66.01155638694763,
+                                        -17.58644075568157
+                                    ]
+                                ]
+                            ]
+                        }
                     }
                 }, {
                     //-17.583494, -66.008273
                     "id": "arbieto",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "color": "#000",
-                        "fillColor": "#333",
-                        "dropShadow": true,
+                        "weight": 10,
+                        "opacity": 0.3,
                         "text": {
                             "text": "Arbieto",
                             "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                                'text-anchor': 'start'
+                                "stroke": "rgba(0,0,0,0.5)",
+                                "fill": "#fff",
+                                "stroke-width": 0.1,
+                                "font-family": "Raleway", "font-weight": "bold",
+                                "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
                             }
                         }
                     },
