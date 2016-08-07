@@ -2,97 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db415e42-930a-421f-9360-1a36d1e5ce72" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/publications.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig1.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig10.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig11.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig12.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig13.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig14.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig15.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig16.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig2.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig3.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig4a.png" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig4a.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig4b.png" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig4b.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig4c.png" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig4c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig5.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig6.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig7.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig8.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig9a.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig9a.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/fig9b.jpg" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/fig9b.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/img/table1.png" afterPath="$PROJECT_DIR$/src/publications/articles/baja/img/table1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure1.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure10.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure11.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure12.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure13.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure14.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure15.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure16.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure17.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure18.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure19.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure2.png" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure3.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure4.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure5.png" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure6.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure7.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure8.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure9.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/figure9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/marieprice.jpg" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/img/marieprice.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/ae-photo.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/ae-photo.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/ae-photo2.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/ae-photo2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/ae-photo3.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/ae-photo3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/ae-photo4.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/ae-photo4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/ae-signature.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/ae-signature.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/agsglobe.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/agsglobe.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/anchor.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/anchor.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/astrolab.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/astrolab.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/atacama.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/atacama.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/bakerthemonkey.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/bakerthemonkey.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/ballard.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/ballard.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/cameron.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/cameron.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/capetown.jpeg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/capetown.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/cattle.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/cattle.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/compass.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/compass.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/cook.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/cook.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/cousteau.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/cousteau.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/gobi.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/gobi.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/grapes.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/grapes.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/hamthechimp.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/hamthechimp.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/housecats.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/housecats.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/hudson.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/hudson.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/india.jpeg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/india.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/laikathedog.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/laikathedog.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/landsat1.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/landsat1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/landsat2.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/landsat2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/landsat3.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/landsat3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/landsat4.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/landsat4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/mojave.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/mojave.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/negev.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/negev.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/powell.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/powell.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/sextant.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/sextant.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/spence.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/spence.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/tomatoes.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/tomatoes.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/veterokandugoliok.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/veterokandugoliok.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/veterokandugoliok.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/veterokandugoliok.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/img/vonhumbolt.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/img/vonhumbolt.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/combined.css" afterPath="$PROJECT_DIR$/src/css/combined.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/index.css" afterPath="$PROJECT_DIR$/src/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/main.css" afterPath="$PROJECT_DIR$/src/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/guidelines.html" afterPath="$PROJECT_DIR$/src/guidelines.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/combined.js" afterPath="$PROJECT_DIR$/src/js/combined.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mapview.js" afterPath="$PROJECT_DIR$/src/js/mapview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/menu.js" afterPath="$PROJECT_DIR$/src/js/menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/index.html" afterPath="$PROJECT_DIR$/src/publications/articles/baja/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/index.html" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/index.html" />
     </list>
     <ignored path="focus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guidelines.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="guidelines.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/guidelines.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18329178">
+            <state vertical-scroll-proportion="-1.8846154">
               <caret line="221" column="56" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="56" />
               <folding />
             </state>
@@ -218,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.777779">
-              <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
+            <state vertical-scroll-proportion="4.660023">
+              <caret line="265" column="96" selection-start-line="265" selection-start-column="96" selection-end-line="265" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -328,7 +239,6 @@
         <option value="$PROJECT_DIR$/src/humans.txt" />
         <option value="$PROJECT_DIR$/dist/humans.txt" />
         <option value="$PROJECT_DIR$/src/js/publications.js" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html" />
         <option value="$PROJECT_DIR$/src/publications/quizzes/one/index.html" />
         <option value="$PROJECT_DIR$/src/js/menu.js" />
@@ -338,6 +248,7 @@
         <option value="$PROJECT_DIR$/src/js/mapview.js" />
         <option value="$PROJECT_DIR$/src/publications/articles/baja/index.html" />
         <option value="$PROJECT_DIR$/src/guidelines.html" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -853,10 +764,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="977" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1176,14 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.777779">
-          <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.542857">
@@ -1326,8 +1229,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/guidelines.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18329178">
+        <state vertical-scroll-proportion="-1.8846154">
           <caret line="221" column="56" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.660023">
+          <caret line="265" column="96" selection-start-line="265" selection-start-column="96" selection-end-line="265" selection-end-column="96" />
           <folding />
         </state>
       </provider>

@@ -177,13 +177,7 @@ gulp.task('build', function (done) {
 
 gulp.task('default', ['build']);
 
-gulp.task('concat', function() {
-    return gulp.src(['src/js/vendor/*.js', 'src/js/*.js'])
-        .pipe(concat('index.js'))
-        .pipe(gulp.dest('src'));
-});
-
-gulp.task('concat1', function () {
+gulp.task('concat', function () {
     return gulp.src([
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/underscore/underscore-min.js',
@@ -211,15 +205,7 @@ gulp.task('concat1', function () {
         .pipe(gulp.dest('src/js'));
 });
 
-gulp.task('minify', function() {
-    return gulp.src(['src/js/vendor/*.js', 'src/js/*.js'])
-        .pipe(concat('index.js'))
-        .pipe(gulp.dest('src'))
-        .pipe(uglify())
-        .pipe(gulp.dest('src'));
-});
-
-gulp.task('minify1', function () {
+gulp.task('minify', function () {
     return gulp.src([
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/underscore/underscore-min.js',
@@ -235,10 +221,13 @@ gulp.task('minify1', function () {
         'bower_components/jquery.scrollex/jquery.scrollex.min.js',
         'bower_components/leaflet-dvf/dist/leaflet-dvf.min.js',
         'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
-        'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.min.js',
+        'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.js',
+        'node_modules/leaflet-bing-layer/leaflet-bing-layer.min.js',
         'src/js/vendor/*.js',
-        '!src/js/combined.js',
-        'src/js/*.js'])
+        'src/js/publications.js',
+        'src/js/menu.js',
+        'src/js/mapview.js',
+        'src/js/quizview.js'])
         .pipe(concat('combined.js'))
         .pipe(gulp.dest('src/js'))
         .pipe(uglify())
@@ -273,5 +262,5 @@ gulp.task('html', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build:dev', function (done) {runSequence('copyfonts','concatcss','concat1', 'html', done)});
-gulp.task('build:prod', ['copyfonts', 'concatcss', 'minify1', 'html']);
+gulp.task('build:dev', function (done) {runSequence('copyfonts','concatcss','concat', 'html', done)});
+gulp.task('build:prod', function (done) {runSequence('copyfonts', 'concatcss', 'minify', 'html', done)});
