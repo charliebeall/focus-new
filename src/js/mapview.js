@@ -470,15 +470,16 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             layerIndex[layerDef.url] = layer;
         });
 
-        if (this._lastLayer) {
+        if (me._lastLayer) {
             var removeFunc = function (layerIndex) {
                 return function (layer, key) {
                     if (!(key in layerIndex)) {
+                        console.log('Removing: ' + key);
                         me._map.removeLayer(layer);
                     }
                 };
             };
-            _.each(this._lastLayer, removeFunc(layerIndex));
+            _.each(me._lastLayer, removeFunc(layerIndex));
         }
 
         this._lastLayer = layerIndex;
