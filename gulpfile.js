@@ -182,8 +182,8 @@ gulp.task('concat', function () {
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/underscore/underscore-min.js',
             'bower_components/backbone/backbone-min.js',
-            'bower_components/hidpi-canvas/dist/hidpi-canvas.min.js',
-            'bower_components/leaflet/dist/leaflet.js',
+            //'bower_components/hidpi-canvas/dist/hidpi-canvas.min.js',
+            'node_modules/leaflet/dist/leaflet.js',
             'bower_components/flowtype/flowtype.js',
             'bower_components/d3/d3.min.js',
             'bower_components/topojson/topojson.js',
@@ -210,8 +210,8 @@ gulp.task('minify', function () {
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/underscore/underscore-min.js',
         'bower_components/backbone/backbone-min.js',
-        'bower_components/hidpi-canvas/dist/hidpi-canvas.min.js',
-        'bower_components/leaflet/dist/leaflet.js',
+        //'bower_components/hidpi-canvas/dist/hidpi-canvas.min.js',
+        'node_modules/leaflet/dist/leaflet.js',
         'bower_components/flowtype/flowtype.js',
         'bower_components/d3/d3.min.js',
         'bower_components/topojson/topojson.js',
@@ -254,6 +254,12 @@ gulp.task('copyfonts', function() {
         .pipe(gulp.dest('src/fonts'));
 });
 
+gulp.task('copy2020', function() {
+    gulp.src('bower_components/twentytwenty/**/*')
+        .pipe(gulp.dest('dist/js/twentytwenty'))
+        .pipe(gulp.dest('src/js/twentytwenty'));
+});
+
 gulp.task('html', function () {
     return gulp.src(['src/**/*.html', 'src/**/*.{png,jpg,jpeg,svg,ico}', 'src/**/combined.js', 'src/**/combined.css'])
         .pipe(gulpif('*.html', useref()))
@@ -262,5 +268,5 @@ gulp.task('html', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build:dev', function (done) {runSequence('copyfonts','concatcss','concat', 'html', done)});
-gulp.task('build:prod', function (done) {runSequence('copyfonts', 'concatcss', 'minify', 'html', done)});
+gulp.task('build:dev', function (done) {runSequence('copy2020', 'copyfonts','concatcss','concat', 'html', done)});
+gulp.task('build:prod', function (done) {runSequence('copy2020', 'copyfonts', 'concatcss', 'minify', 'html', done)});

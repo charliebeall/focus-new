@@ -38,6 +38,14 @@ Focus.Volumes = [
             thumbnail: 'publications/quizzes/one/img/agsglobe.png',
             url: 'publications/quizzes/one/index.html',
             location: []
+        }, {
+            type: 'Photo Essay',
+            title: 'Postcards from Oaxaca\'s Past and Present',
+            author: 'Scott Brady',
+            description: '',
+            thumbnail: 'publications/photoessays/oaxaca/img/1a.jpg',
+            url: 'publications/photoessays/oaxaca/index.html',
+            location: []
         }]
     }
 ];

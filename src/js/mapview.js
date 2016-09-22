@@ -7,6 +7,16 @@ Focus.Models = Focus.Models || {};
 Focus.Collections = Focus.Collections || {};
 Focus.Events = _.extend({}, Backbone.Events);
 
+Focus.Map = Focus.Map || {};
+
+// Override this to change default layer style
+Focus.Map.defaultOptions = Focus.Map.defaultOptions || {};
+
+Focus.Map.Handlers = Focus.Map.Handlers || {};
+Focus.Map.Handlers.Leaflet = Focus.Map.Handlers.Leaflet || {};
+Focus.Map.options = Focus.Map.options || {};
+
+
 var BING_MAPS_KEY = 'AgcrLvy9a1P_nNYA6Afwjmx7l9KX62qrBnb0_vFxqVyFpwJ2mGmT4IEWvjAO-w34'
 Focus.Models.ProgressModel = Backbone.Model.extend({
     default: function () {
@@ -234,13 +244,20 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             worldCopyJump: true,
             zoomAnimationThreshold: 3,
             markerZoomAnimation: false,
-            zoomDelta: 0.5,
+            zoomDelta: 0.5
             //renderer: L.canvas()
         });
 
         if (showAttribution) {
             var attributionControl = new L.Control.CustomAttribution();
             attributionControl.addTo(this._map);
+        }
+
+        var me = this;
+        if (Focus.Map.options.panes) {
+            _.each(Focus.Map.options.panes, function (pane) {
+                me._map.createPane(pane);
+            });
         }
     },
     _layerDefToLayer: function (layerDef) {
@@ -315,7 +332,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 color: 'rgb(39,171,226)',
                 fillColor: 'rgb(39,171,226)',
                 fillOpacity: 0.9
-            }, layerDef.style);
+            }, Focus.Map.defaultOptions, layerDef.style);
 
             var onEachRecord = function (layerDef) {
                 return function (layer, record) {
@@ -336,14 +353,20 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 getMarker: function (location, options, record) {
                     var marker;
                     if (options.icon) {
-                        marker = new L.Marker(location, {
+                        var markerOptions = {
                             icon: new L.DivIcon({
                                 className: options.icon.className || 'marker-text',
                                 html: options.icon.html,
                                 iconSize: options.icon.iconSize ? new L.Point(options.icon.iconSize[0], options.icon.iconSize[1]) : null,
                                 iconAnchor: options.icon.iconAnchor ? new L.Point(options.icon.iconAnchor[0], options.icon.iconAnchor[1]): null
                             })
-                        });
+                        };
+
+                        if (options.pane) {
+                            markerOptions.pane = options.pane;
+                        }
+
+                        marker = new L.Marker(location, markerOptions);
                     }
                     else {
                         marker = new L.RegularPolygonMarker(location, options);
@@ -419,6 +442,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         }
         else {
             if (bounds) {
+
                 me._map.fitBounds(bounds, {
                     maxZoom: zoom,
                     padding: [15,15]
@@ -462,7 +486,9 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             var layer = me.addBaseLayer(layerDef); //this._baseLayerIndex[layerDef.url] || this.addBaseLayer(layerDef);
 
             if (!(layerDef.url in me._lastLayer)) {
+
                 me._map.addLayer(layer);
+
             }
 
             layers.push(layer);
@@ -475,6 +501,10 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 return function (layer, key) {
                     if (!(key in layerIndex)) {
                         console.log('Removing: ' + key);
+                        if (layer.getEvents) {
+                            var events = layer.getEvents();
+                            me._map.off(events, layer);
+                        }
                         me._map.removeLayer(layer);
                     }
                 };
@@ -1367,7 +1397,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                 initialScene: new Focus.Models.SceneModel({
                     baseLayer: {
                         type: 'tile',
-                        url: 'http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png' //'https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', ''https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' //
+                        url: 'https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' //'https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', ''https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' //
                     },
                     center: [0,0],
                     zoom: 4,
