@@ -192,7 +192,7 @@ gulp.task('concat', function () {
             'bower_components/bootstrap/dist/js/bootstrap.min.js',
             'bower_components/jquery.scrollex/jquery.scrollex.min.js',
             'bower_components/esri-leaflet/dist/esri-leaflet.js',
-            'bower_components/leaflet-dvf/dist/leaflet-dvf.min.js',
+            'bower_components/leaflet-dvf/dist/leaflet-dvf.js',
             'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
             'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.js',
             'node_modules/leaflet-bing-layer/leaflet-bing-layer.min.js',

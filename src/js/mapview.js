@@ -179,9 +179,10 @@ Focus.Views.MapEngine = Backbone.View.extend({
 
         _.each(layers, function (layer, key) {
             var newLayer = me._layerDefToLayer(layer);
-
-            me._addLayer(newLayer, layer.id || layer.idRef);
-            me._layers[layer.id || layer.idRef] = newLayer;
+            if (newLayer) {
+                me._addLayer(newLayer, layer.id || layer.idRef);
+                me._layers[layer.id || layer.idRef] = newLayer;
+            }
         });
     },
     _disableControls: function () {
@@ -322,6 +323,150 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 bingMapsKey: BING_MAPS_KEY
             }, layerDef.params));
         }
+        else if (layerDef.type === 'country') {
+            layer = new L.ChoroplethDataLayer(_.map([layerDef.data], function (value) {
+                return {code: value};
+            }), {
+                recordsField: null,
+                locationMode: L.LocationModes.COUNTRY,
+                codeField: 'code',
+                tooltipOptions: {
+                    iconSize: null,
+                    iconAnchor: new L.Point(-5, 0)
+                },
+                layerOptions: layerDef.style || {}
+            });
+        }
+        else if (layerDef.type === 'csv') {
+            var me = this;
+            var resultFunc = function (layerDef) {
+                return function (error, rows) {
+                    var latField = layerDef.params.latitudeField;
+                    var lonField = layerDef.params.longitudeField;
+                    var nameField = layerDef.params.nameField;
+                    var descField = layerDef.params.descriptionField;
+                    var sourceField = layerDef.params.sourceField;
+                    var dateField = layerDef.params.dateField;
+
+                    layerDef.style = layerDef.style || {};
+                    var style = $.extend(true, {
+                        numberOfSides: 50,
+                        radius: 10,
+                        //dropShadow: true,
+                        weight: 0.5,
+                        color: 'rgb(39,171,226)',
+                        fillColor: 'rgb(39,171,226)',
+                        fillOpacity: 0.9
+                    }, Focus.Map.defaultOptions, layerDef.style);
+
+                    var onEachRecord = function (layerDef) {
+                        return function (layer, record) {
+                            layer.on('click', function (e) {
+                                me.trigger('layerClick', layerDef.id);
+                            });
+                        };
+                    };
+
+                    var options = {
+                        recordsField: null,
+                        latitudeField: latField,
+                        longitudeField: lonField,
+                        locationMode: L.LocationModes.LATLNG,
+                        layerOptions: style,
+                        tooltipOptions: {
+                            iconSize: null,
+                            iconAnchor: new L.Point(-5, 0)
+                        },
+                        getMarker: function (location, options, record) {
+                            var marker;
+                            if (options.icon) {
+                                var markerOptions = {
+                                    icon: new L.DivIcon({
+                                        className: options.icon.className || 'marker-text',
+                                        html: options.icon.html,
+                                        iconSize: options.icon.iconSize ? new L.Point(options.icon.iconSize[0], options.icon.iconSize[1]) : null,
+                                        iconAnchor: options.icon.iconAnchor ? new L.Point(options.icon.iconAnchor[0], options.icon.iconAnchor[1]): null
+                                    })
+                                };
+
+                                if (options.pane) {
+                                    markerOptions.pane = options.pane;
+                                }
+
+                                marker = new L.Marker(location, markerOptions);
+                            }
+                            else {
+                                marker = new L.RegularPolygonMarker(location, options);
+                            }
+                            return marker;
+                        },
+                        displayOptions: {
+                        },
+                        onEachRecord: onEachRecord(layerDef)
+                    };
+
+                    options.displayOptions[nameField] = {
+                        displayName: 'Name',
+                        displayText: function (value) {
+                            return value;
+                        }
+                    };
+                    options.displayOptions[descField] = {
+                        displayName: 'Description',
+                        displayText: function (value) {
+                            return value;
+                        }
+                    };
+
+                    if (dateField) {
+                        options.displayOptions[dateField] = {
+                            displayName: 'Date',
+                            displayText: function (value) {
+                                return value;
+                            }
+                        };
+                    }
+
+                    if (sourceField) {
+                        options.displayOptions[sourceField] = {
+                            displayName: 'Source',
+                            displayText: function (value) {
+                                return value;
+                            }
+                        };
+                    }
+
+                    layer = new L.ChoroplethDataLayer(rows, options);
+
+                    me._addLayer(layer, layerDef.id || layerDef.idRef);
+                    me._layers[layerDef.id || layerDef.idRef] = layer;
+                };
+            };
+            d3.csv(layerDef.url).get(resultFunc(layerDef));
+        }
+        else if (layerDef.type === 'link') {
+            layerDef.style = layerDef.style || {};
+            var fromLayer = this._layers[layerDef.from];
+            var toLayer = this._layers[layerDef.to];
+            var fromCenter = fromLayer._bounds.getCenter();
+            var toCenter = toLayer._bounds.getCenter();
+            layer = new L.Graph([{
+                "from": fromCenter,
+                "to": toCenter
+            }], {
+                recordsField: null,
+                fromField: 'from',
+                toField: "to",
+                locationMode: L.LocationModes.LATLNG,
+                latitudeField: 'lat',
+                longitudeField: 'lng',
+                layerOptions: layerDef.style,
+                tooltipOptions: {
+                    iconSize: null,
+                    iconAnchor: new L.Point(-5, 0)
+                }
+            });
+        }
         else if (layerDef.type === 'geojson') {
             layerDef.style = layerDef.style || {};
             var style = $.extend(true, {
@@ -341,8 +486,9 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                     });
                 };
             };
-            layer = new L.ChoroplethDataLayer([layerDef.data], {
-                recordsField: null,
+
+            layer = new L.ChoroplethDataLayer(layerDef.data.features ? layerDef.data : [layerDef.data], {
+                recordsField: layerDef.data.features ? 'features': null,
                 geoJSONField: null,
                 locationMode: L.LocationModes.GEOJSON,
                 layerOptions: style,
@@ -384,7 +530,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 onEachRecord: onEachRecord(layerDef)
             });
 
-            var extent = turf.extent(layerDef.data);
+            var extent = turf.bbox(layerDef.data);
 
             var bounds = new L.LatLngBounds(new L.LatLng(extent[1], extent[0]), new L.LatLng(extent[3], extent[2]));
 
@@ -1154,6 +1300,7 @@ Focus.Util = {
             .attr('markerHeight', '6')
             .attr('orient', 'auto');
         var markerPath = marker.append('path')
+            .attr('class', 'marker-path')
             .attr('d','M 0 0 L 10 5 L 0 10 z')
             .attr('stroke', 'rgb(0, 123, 71)')
             .attr('stroke-width', '0.1px')
@@ -1171,6 +1318,7 @@ Focus.Util = {
         }
 
         var path = svg.append('path')
+            .attr('class', 'line')
             .attr("d", bezierLine([[0, 0], [anchorX, anchorY], [x1 - x2 - ($target.outerWidth()/2),y1 - y2 - ($target.outerHeight()/2)]]))
             .attr("stroke", "rgb(0, 123, 71)")
             .attr("stroke-width", 3)
@@ -1276,6 +1424,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
 
                 var svg = d3.select(me.$el[0])
                     .append("svg")
+                    .attr('class', 'line')
                     .attr('id', id + '-line')
                     .attr('style', 'z-index:100000;position:absolute;top:' + ~~(y2 + $(this).outerHeight()/2) + 'px;left:' + ~~x2 + 'px;');
 
@@ -1289,12 +1438,14 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                     .attr('markerHeight', '6')
                     .attr('orient', 'auto');
                 var markerPath = marker.append('path')
+                    .attr('class', 'marker-path')
                     .attr('d','M 0 0 L 10 5 L 0 10 z')
                     .attr('stroke', 'rgb(0, 123, 71)')
                     .attr('stroke-width', '0.1px')
                     .attr('fill', 'rgb(0, 123, 71)');
 
                 var path = svg.append('path')
+                    .attr("class", "line")
                     .attr("d", bezierLine([[0, 0], [(x1 - x2)/2, 0], [x1 - x2,y1 - y2 - ($(this).outerHeight()/2)]]))
                     .attr("stroke", "rgb(0, 123, 71)")
                     .attr("stroke-width", 3)
