@@ -368,12 +368,12 @@
             {
                 "id": "place4",
                 //"center": [-79.541015625, -10.811724143275514],
-                "zoom": 4,
+                "zoom": 7,
                 "baseLayer": {
-                    "type": "wms",
-                    "url": "http://nowcoast.noaa.gov/arcgis/services/nowcoast/analysis_ocean_sfc_sst_time/MapServer/WMSServer",
-                    "params": {
-                        "layers": "1"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
                 },
                 "layers": [{"id": "savedarea", "type": "geojson", "data": {
@@ -408,7 +408,7 @@
                     }
                 }}],
                 "style": {
-                    "filter": "sepia(50%)",
+                    "filter": "grayscale(100%)",
                     "opacity": 0.8,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
                 }

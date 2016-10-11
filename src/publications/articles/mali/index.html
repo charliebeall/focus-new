@@ -38,12 +38,17 @@
                 font-family: 'Aladin', cursive;
             }
 
-            #text a, a.location {
+            span.place-text {
+                font-family: 'Aladin', cursive;
+                color: #fff;
+            }
+
+            #text a, a.location, div.tooltip a {
                 color: rgba(152, 75, 54, 1) !important;
                 border-bottom-color: rgba(152, 75, 54, 1);
             }
 
-            #text a:hover, a.location:hover {
+            #text a:hover, a.location:hover, div.tooltip a {
                 background: rgba(152, 75, 54, 0.1);
                 text-decoration: none;
             }
@@ -162,19 +167,22 @@
         <div id="text" class="title-hidden">
             <div class="content scenes">
                 <section id="introduction" class="scene" data-scene-id="place1" title="Introduction">
-                    <h2 class="title" style="z-index: 10; margin: 0px -30px; padding: 30px; position: absolute;">Living and Spirtual Worlds of Mali's Dogon People</h2>
+                    <div class="video-title" style="z-index: 10; position: absolute; top: 0px; margin: 0px -30px;"><h2 class="title" style="z-index: 10; padding: 30px; margin: 0px 80px 0px 0px;">Living and Spirtual Worlds of Mali's Dogon People</h2><div class="author" style="margin: 0px 110px 0px 30px;"><span class="name">Thomas Wikle</span>, <span class="organization">Professor of Geography, Oklahoma State University</span></div></div>
                     <div style="position: relative; height: 530px; width: calc(100% + 60px); margin: 0px -30px;"><video style="width: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-left: -50%;
     margin-top: -265px;
-    height: 530px;" src="media/mali1.webm" loop="true" autoplay="true" autostart="true" muted="true" poster="img/figure14.png">
+    height: 530px;" loop="true" autoplay="true" autostart="true" muted="true" poster="img/figure14.png">
+                        <source src="media/mali4.webm" type="video/webm">
+                        <source src="media/mali4.mp4" type="video/mp4">
+                        <source src="media/mali4.ogg" type="video/ogg">
                         Sorry, your browser doesn't support embedded videos,
-                        but don't worry, you can <a href="videofile.webm">download it</a>
+                        but don't worry, you can <a href="media/mali4.mp4">download it</a>
                         and watch it with your favorite video player!
-                    </video><div class="cover" style="position: absolute; top: 0px; height: 530px; width: 100%; background: linear-gradient(180deg, rgba(254, 252, 238, 0.5), rgba(254, 252, 238, 1));"></div></div>
-                    <div class="author"><span class="name">Thomas Wikle</span>, <span class="organization">Professor of Geography, Oklahoma State University</span></div>
+                    </video><div class="cover" style="pointer-events: none; position: absolute; top: 0px; height: 530px; width: 100%; background: linear-gradient(180deg, rgba(254, 252, 238, 0.5), rgba(254, 252, 238, 1));"></div></div>
+
                 <h3>Introduction</h3>
                     <p>
                         Viewed from a distance, the colossal <a class="location" data-layer-id="escarpment">Bandiagara Escarpment</a> appears like an endless wall rising high above the surrounding scrubland. Forming the edge of a 200 km-long plateau, the jagged sandstone cliff lies near the Sahara’s southern limit, within a transition area separating arid lands to the north from tropical forests farther south. Distributed along the escarpment’s base, and in a few places on the plateau it encircles, are clusters of villages inhabited by a West African people whose culture, artistic expression, and complex belief system have remained mostly unchanged for centuries. Far from a paved road, this isolated place is home to Mali’s Dogon people.
@@ -191,28 +199,28 @@
                     <div id="figure1" class="figure contain" style="background-image:url(img/figure1.png);"></div>
                     <div class="caption">Figure 1: Location of the Bandiagara Escarpment</div>
                     <p>
-                        The <a class="location" data-layer-id="escarpment">Bandiagara Escarpment</a> forms the edge of a Precambrian plateau sloping gently northwest towards the Niger and Bani basins. To the northeast is <a class="location" data-layer-id="homboritondo">Hombori Tondo</a>, Mali’s highest point at 1,115 m. This region of central Mali is part of the <a class="location" data-layer-id="sahel">Sahel,</a> a semiarid zone separating desert to the north from tropical forest to the south (Figure 1). Running roughly parallel to the Niger River, the escarpment’s promontories and indentations hide deep ravines and rocky gorges that contain vegetation fed by seasonal rainfall.
+                        The <a class="location" data-layer-id="escarpment">Bandiagara Escarpment</a> forms the edge of a Precambrian plateau sloping gently northwest towards the Niger and Bani basins. To the northeast is <a class="location" data-layer-id="homboritondo">Hombori Tondo</a>, Mali’s highest point at 1,115 m. This region of central Mali is part of the <a class="location" data-layer-id="sahel">Sahel,</a> a semiarid zone separating desert to the north from tropical forest to the south (<a href="#figure1">Figure 1</a>). Running roughly parallel to the Niger River, the escarpment’s promontories and indentations hide deep ravines and rocky gorges that contain vegetation fed by seasonal rainfall.
                         </p>
                     <div id="figure2" class="figure " style="background-image:url(img/figure2.png);"></div>
                     <div class="caption">Figure 2: The edge of the Bandiagara Escarpment</div>
-                    <p>Punctuated by steep-sided mesas and buttes, the dry tablelands surrounding the plateau support a Sudano-Sahelian vegetation of open woodland savanna mixed with steppe and flora living in the crevices of rocks (Figure 2). Common tree species include the thorny acacia and wide-trunked baobab. Climate change and years of overhunting have severely depleted wildlife in the area. Once found in abundance, large herbivores such as zebra, elephant, and giraffe are gone. A few smaller mammals can be found in the area, including rock hyrax, hystrix porcupine, common jackal, and Dorca gazelle.
+                    <p>Punctuated by steep-sided mesas and buttes, the dry tablelands surrounding the plateau support a Sudano-Sahelian vegetation of open woodland savanna mixed with steppe and flora living in the crevices of rocks (<a href="#figure2">Figure 2</a>). Common tree species include the thorny acacia and wide-trunked baobab. Climate change and years of overhunting have severely depleted wildlife in the area. Once found in abundance, large herbivores such as zebra, elephant, and giraffe are gone. A few smaller mammals can be found in the area, including rock hyrax, hystrix porcupine, common jackal, and Dorca gazelle.
                     </p>
                     <p>
                         Located within a warm tropical climate influenced by seasonal monsoon rains, the Bandiagara Escarpment and adjacent lands experience a wet season lasting from June to mid-October, and a dry season extending from January until May (Mayor and others 2005). Temperatures during the hottest months from mid-February through March may reach 47°C. A defining characteristic of the escarpment and plateau is the relative lack of surface water. Drought conditions are made worse by hot, dry Harmatten winds that bring dust and sand southward from the Sahara.
                     </p>
                     </section>
-                    <section id="3" class="scene" data-scene-id="place3" title="The Pacific Coast of Northern Baja California">
+                    <section id="3" class="scene" data-scene-id="place3" title="Human Imprint on the Bandiagara">
                         <h3>Human Imprint on the Bandiagara</h3>
                         <div id="figure3" class="figure " style="background-image:url(img/figure3.png);"></div>
                         <div class="caption">Figure 3: Tellem caves high on the cliff face.  Dogon dwellings can be seen near the base.</div>
-                <p>Despite its harsh climate, humans have occupied the region surrounding the plateau for thousands of years. Among the earliest inhabitants were the Toloy, who arrived sometime in the third century BCE (Joffroy and Cissé 2005). During the eleventh century, a hunter-gatherer group known as the Tellem constructed dwellings high on the cliff face as protection from raiders and hostile neighbors (Mayor and others 2005) (Figure 3). Along with occupying caves on the escarpment face, the Tellem built cylindrical granaries in shallow recesses of the rock (Douny 2014). Possibly as a result of conflict with the Dogon and neighboring groups, the Tellem---described by the Dogon as “the ones we found”---abandoned the escarpment sometime in the 1800s, leaving behind pottery, baskets, leather bags used to carry water, jewelry, and other items. </p>
+                <p>Despite its harsh climate, humans have occupied the region surrounding the plateau for thousands of years. Among the earliest inhabitants were the Toloy, who arrived sometime in the third century BCE (Joffroy and Cissé 2005). During the eleventh century, a hunter-gatherer group known as the Tellem constructed dwellings high on the cliff face as protection from raiders and hostile neighbors (Mayor and others 2005) (<a href="#figure3">Figure 3</a>). Along with occupying caves on the escarpment face, the Tellem built cylindrical granaries in shallow recesses of the rock (Douny 2014). Possibly as a result of conflict with the Dogon and neighboring groups, the Tellem---described by the Dogon as “the ones we found”---abandoned the escarpment sometime in the 1800s, leaving behind pottery, baskets, leather bags used to carry water, jewelry, and other items. </p>
                 <p>Arriving in the fourteenth century, the Dogon are relative newcomers to the Bandiagara. Older references sometimes identify them as the “Habe,” a Fulani word meaning “stranger” (Gray 2007). An absence of written evidence has contributed to debate about the origin of the Dogon, with some scholars suggesting they may be descendants of Egyptians who settled in Libya before migrating to present-day Burkina Faso (Scranton 2006; Kamalu 2012). Most agree that the Dogon traveled by way of southwest Mali. Today about 250,000 Dogon live in the vicinity of the escarpment.</p>
                         <div id="figure4" class="figure" style="background-image:url(img/figure4.png);"></div>
                         <div class="caption">Figure 4: Dogon cliff dwellings along recesses of the cliff face at <a class="location" data-layer-id="teli">Teli</a>.</div>
 
                     </section>
-                    <section id="4" class="scene" data-scene-id="place4">
-                        <p>As noted by Stephenie Hollyman, two factors contributed to the Dogon’s decision to construct dwellings along the base of the Bandiagara Escarpment (2001). The first was a need for protection. Pursued by slave traders and later by warriors seeking their conversion to Islam, the cliff was easily defended compared to the flat scrubland. Constructed on parts of the lower cliff above boulders and loose rock, early Dogon settlements offered unobstructed views for spotting approaching raiders (Figure 4). Always fearful of attack, the Dogon were weary of venturing away from the cliff and to prevent kidnappings, nearby agricultural fields were worked by groups of men, with elders serving as lookouts. A second factor that attracted the Dogon was the availability of water. The plateau’s sandstone holds an abundance of moisture, much of it emerging from hidden springs. The arrival of a French colonial administration in West Africa in the nineteenth century reduced the threat of attack, making it possible for the Dogon to settle the valley floor and the top of the plateau. Located away from springs and surface water, the residents of newly established villages in the scrublands dug wells to supply water for domestic needs.
+                    <section id="4" class="scene" data-scene-id="place4" title="A Dogon Village">
+                        <p>As noted by Stephenie Hollyman, two factors contributed to the Dogon’s decision to construct dwellings along the base of the Bandiagara Escarpment (2001). The first was a need for protection. Pursued by slave traders and later by warriors seeking their conversion to Islam, the cliff was easily defended compared to the flat scrubland. Constructed on parts of the lower cliff above boulders and loose rock, early Dogon settlements offered unobstructed views for spotting approaching raiders (<a href="#figure4">Figure 4</a>). Always fearful of attack, the Dogon were weary of venturing away from the cliff and to prevent kidnappings, nearby agricultural fields were worked by groups of men, with elders serving as lookouts. A second factor that attracted the Dogon was the availability of water. The plateau’s sandstone holds an abundance of moisture, much of it emerging from hidden springs. The arrival of a French colonial administration in West Africa in the nineteenth century reduced the threat of attack, making it possible for the Dogon to settle the valley floor and the top of the plateau. Located away from springs and surface water, the residents of newly established villages in the scrublands dug wells to supply water for domestic needs.
                         </p>
                         <h3>A Dogon Village</h3>
                 <p>Independent travelers discovered Dogon villages in the early 1960s. For most visitors, the journey to Pays Dogon (Dogon County) begins in <a class="location" data-layer-id="bamako">Bamako</a>, Mali’s bustling capital city. Located on the Niger River, the city of <a class="location" data-layer-id="mopti">Mopti</a> serves as a final gateway to the escarpment.  Guidebooks about Pays Dogon advise visitors to hire a guide/translator who speaks both French and Dogon. From <a class="location" data-layer-id="mopti">Mopti</a>, the 150 km trip continues by four-wheel drive vehicle over unimproved roads. Although some visitors camp, most take advantage of lodging at a locally operated “Dogon hotel” that consists of a courtyard surrounded by windowless, dirt-floored rooms with access to bathrooms having running water, but no showers. During warmer months, visitors may be offered the option of sleeping on the roof of their hotel room, accessible by climbing a ladder. A typical tourist meal consists of couscous in an onion sauce cooked over a wood fire. Morning arrives early with a wakeup call provided by a chorus of sheep, goats, and roosters.
@@ -224,7 +232,7 @@
 
                         </p>
                     </section>
-                <section id="5" class="scene" data-scene-id="place5">
+                <section id="5" class="scene" data-scene-id="place5" title="Religious Practices and Beliefs">
                         <p>
                             Granaries are among the ubiquitous features of a Dogon village. Topped by a mud roof or cap of millet straw, symmetrically shaped granaries are often taller than other structures; interior access is provided by a square wooden door carved with images representing the owner’s family history. Most villages have several types of granaries. The guy ana (male granary) is a square building used to store millet or sorghum. A Dogon saying is that high granary roofs identify prosperous villages. Used as a shelter by older men, a second type of male granary called a guyo togu has a door at ground level. Men are forbidden from entering a guyo ya (square female granary), used by women to store personal belongings such as clothing and jewelry. Less common are guyo totori (round female granaries), which are reserved for special foods used in cooking, such as beans and baobab leaves. Both male and female granaries are constructed with mud, dung, and straw over a raised platform of rocks that creates a barrier to insects and rodents.
                         </p>
@@ -234,22 +242,22 @@
                         <div id="figure5" class="figure" style="background-image:url(img/figure5.png);"></div>
                         <div class="caption">Figure 5: A Dogon village with a mosque located near the center.  Male granaries are topped with millet straw.</div>
                         <p>
-                            The Dogon are tolerant of diverse religions and belief systems. In the early nineteenth century, Dogon living on the flat scrublands were exposed to Islam by Fulani shepherds; fifty years later, Christianity was introduced with French administration of West Africa. As a result, Dogon villages often have either a church or Sudanese-style mosque (Figure 5). Larger villages may have an intermingling of Christians, Muslims, and animists.
+                            The Dogon are tolerant of diverse religions and belief systems. In the early nineteenth century, Dogon living on the flat scrublands were exposed to Islam by Fulani shepherds; fifty years later, Christianity was introduced with French administration of West Africa. As a result, Dogon villages often have either a church or Sudanese-style mosque (<a href="#figure5">Figure 5</a>). Larger villages may have an intermingling of Christians, Muslims, and animists.
                         </p>
                         <div id="figure6" class="figure" style="background-image:url(img/figure6.png);"></div>
                         <div class="caption">Figure 6: The hunter’s lodge in a Dogon village. The hunter serves as a link between the village and bush.</div>
                         <p>
-                            Dogon society is socially stratified with farmers occupying high status properties near the center of the village. Over the period of a farmer’s life, his family may occupy a succession of homes as he gains seniority. Blacksmiths, ironworkers, hunters, leather craftsmen, wood carvers, and others from lower castes live on the outskirts of a village (Haardt 1991) (Figure 6). Also on the village periphery are circular-shaped huts called yapunu gina, where women cook and sleep during their menstrual cycles.
+                            Dogon society is socially stratified with farmers occupying high status properties near the center of the village. Over the period of a farmer’s life, his family may occupy a succession of homes as he gains seniority. Blacksmiths, ironworkers, hunters, leather craftsmen, wood carvers, and others from lower castes live on the outskirts of a village (Haardt 1991) (<a href="#figure6">Figure 6</a>). Also on the village periphery are circular-shaped huts called yapunu gina, where women cook and sleep during their menstrual cycles.
                         </p>
                         <p>
                             Social harmony is of considerable importance within Dogon culture. The official language is French, but most Dogon don’t speak it well because there are few schools and infrequent opportunities for interaction with outsiders. A greeting among Dogon is complex and may take several minutes, beginning with formal questions about the other’s health (Are you well?) before moving on to queries about family members (Is your wife well? Are your children well?). </p>
                         <div id="figure7" class="figure" style="background-image:url(img/figure7.png);"></div>
                         <div class="caption">Figure 7: Suspicious eyes of a Dogon girl and her brother after accepting the gift of a pen.</div>
-                        <p>Within Dogon culture, an individual’s status is determined by position within a family group according to rules of descent and age. Dogon lineage is patrilineal, meaning that family members belong to their father’s clan and share a common village surname (Figure 7). A man and a woman are not considered married until the birth of their first child. Property in Dogon villages is inherited by the oldest son, who has responsibility for supporting his extended family.
+                        <p>Within Dogon culture, an individual’s status is determined by position within a family group according to rules of descent and age. Dogon lineage is patrilineal, meaning that family members belong to their father’s clan and share a common village surname (<a href="#figure7">Figure 7</a>). A man and a woman are not considered married until the birth of their first child. Property in Dogon villages is inherited by the oldest son, who has responsibility for supporting his extended family.
                             </p>
                         <div id="figure8" class="figure" style="background-image:url(img/figure8.png);"></div>
                         <div class="caption">Figure 8: Men prepare land for planting millet in a common field.  Millet is a food staple grown on unirrigated fields.</div>
-                        <p>The basic unit of farmland is the field, often marked using short walls or earthen embankments (Figure 8). Field assignments are based on seniority with the most desirable plots closest to the village reserved for the oldest men. Agricultural production is divided among common fields used to grow subsistence crops such as millet and sorghum, and smaller family fields that include farm plots belonging to single women. Millet is planted after the first rain in June or July, and harvested in October. Other subsistence crops are sorghum, groundnuts (peanuts), calabash, and cassava. Rain falling during wetter months can be intense, leading to the erosion of unprotected soil surfaces. To combat soil loss, the Dogon utilize planting pits and stone lines on flat ground and terraces in sloping areas.
+                        <p>The basic unit of farmland is the field, often marked using short walls or earthen embankments (<a href="#figure8">Figure 8</a>). Field assignments are based on seniority with the most desirable plots closest to the village reserved for the oldest men. Agricultural production is divided among common fields used to grow subsistence crops such as millet and sorghum, and smaller family fields that include farm plots belonging to single women. Millet is planted after the first rain in June or July, and harvested in October. Other subsistence crops are sorghum, groundnuts (peanuts), calabash, and cassava. Rain falling during wetter months can be intense, leading to the erosion of unprotected soil surfaces. To combat soil loss, the Dogon utilize planting pits and stone lines on flat ground and terraces in sloping areas.
                         </p>
                         <p>
                             Along with rain-fed crops, the Dogon grow irrigated vegetables to generate currency needed for the purchase of seed and other supplies. Among the most important are onions, often grown at the top of the plateau using water supplied by small reservoirs. Tobacco grown in riverbeds also serves as a cash crop (Van Beek, 1991b). In some villages, potable water has become increasingly scarce as the water table has dropped, prompting villagers to deepen wells. In addition to water, the Dogon value trees as important resources. For example, the baobab’s fruit pulp and leaves are eaten and its bark used to make rope. Trees located within or adjacent to villages may be “owned” by individuals or families.
@@ -257,27 +265,36 @@
                         <div id="figure9" class="figure" style="background-image:url(img/figure9.png);"></div>
                         <div class="caption">Figure 9: Women pounding millet.  Millet beer is an important drink consumed after work in the fields has been completed and during ceremonial events.</div>
                         <p>
-                            Communal labor and collective action are important with fields worked by kadaga, groups of ten to twenty similarly aged men (Hollyman 2001). Hard work earns young men respect from elders and may enhance their status among peers. Men do the majority of agricultural work and are responsible for making utensils, and constructing and maintaining buildings. In years with less rainfall, young Dogon men may travel to nearby towns in search of seasonal work. Women are responsible for tasks such as carrying water, pounding millet, making beer, and collecting and cutting firewood (Figure 9). When other tasks have been completed, they may join men in the fields.
+                            Communal labor and collective action are important with fields worked by kadaga, groups of ten to twenty similarly aged men (Hollyman 2001). Hard work earns young men respect from elders and may enhance their status among peers. Men do the majority of agricultural work and are responsible for making utensils, and constructing and maintaining buildings. In years with less rainfall, young Dogon men may travel to nearby towns in search of seasonal work. Women are responsible for tasks such as carrying water, pounding millet, making beer, and collecting and cutting firewood (<a href="#figure9">Figure 9</a>). When other tasks have been completed, they may join men in the fields.
                         </p>
                         <h3>Religious Practices and Beliefs</h3>
                         <p>The Dogon creation myth interprets the universe and explains the structure and rationale for male and female roles, and other aspects of social organization. Villages are believed to be shared by the inneomo (living) and innepuru (dead), who coexist in a symbiotic union. The all-knowing sky god Amma is responsible for maintaining a balance between living and dead worlds. Each village has a shrine containing a small bit of soil to honor Lebe, the earth god who maintains the agricultural cycle and serves as a source of inspiration for the hogon, or spiritual leader (Douny 2011). The role of the hogon falls to the oldest man in a village. The third supernatural entity is Nommo, the water god, often depicted with a human torso attached to a snakelike body. </p>
                         <div id="figure10" class="figure" style="background-image:url(img/figure10.png);"></div>
                         <div class="caption">Figure 10: Painted symbols represent local families at a grotto near the village of <a class="location" data-layer-id="sanga">Sanga</a> where circumcisions are performed.</div>
                         <p>
-                            Although they have no written language, the Dogon utilize a system of hieroglyphics to represent all things in the universe (Vergani 1998). Social rules, traditions, and etiquette are passed to subsequent generations through stories, music, dance, and rituals (Douglas 1968). Sacred objects within a village may be communal, or specific to a family unit or individual. For example, small, single-chamber buildings called binu serve as public shrines for maintaining peace with the spiritual world (Gray 2007). An individual or family may also maintain a fetish (personal shrine), sometimes marked with a circle of stones as a warning not to be disturbed. In addition to shrines within villages, the Dogon recognize sacred spaces for ceremonies such as ponds, tunnels, and caves. For example, the village of <a class="location" data-layer-id="sanga">Sanga</a> is known for its circumcision ceremony, where boys ages nine to fourteen are brought to a sandstone grotto for a three-day event marking their transition to adulthood. A rock ledge forming one side of the grotto is painted with red, black, and white symbols to represent nearby families (Figure 10).
+                            Although they have no written language, the Dogon utilize a system of hieroglyphics to represent all things in the universe (Vergani 1998). Social rules, traditions, and etiquette are passed to subsequent generations through stories, music, dance, and rituals (Douglas 1968). Sacred objects within a village may be communal, or specific to a family unit or individual. For example, small, single-chamber buildings called binu serve as public shrines for maintaining peace with the spiritual world (Gray 2007). An individual or family may also maintain a fetish (personal shrine), sometimes marked with a circle of stones as a warning not to be disturbed. In addition to shrines within villages, the Dogon recognize sacred spaces for ceremonies such as ponds, tunnels, and caves. For example, the village of <a class="location" data-layer-id="sanga">Sanga</a> is known for its circumcision ceremony, where boys ages nine to fourteen are brought to a sandstone grotto for a three-day event marking their transition to adulthood. A rock ledge forming one side of the grotto is painted with red, black, and white symbols to represent nearby families (<a href="#figure10">Figure 10</a>).
                         </p>
                         <p>
                             Death in Dogon society is celebrated by three events, the funeral (called the nyû yana), the dama ceremony, and the sigui. Immediately after death the nyû is held to mourn the deceased. The body is interred either in a cemetery located on flat land or in some cases, within a Tellem cave where it is covered with the bones of ancestors (Douny 2014). The Dogon believe that following a person’s passing their spirit lingers to watch over the living. The purpose of the dama (end of mourning) is to enable the kikinu, or soul, to depart the world of the living (DeMott 1982). Less common is the sigui ceremony, held every sixty-five years to commemorate the replacement of one generation by the next (Van Beek1992).
                         </p>
 
                 <h3>The Dama</h3>
+                    <video style="width: calc(100% + 60px); margin: 0px -30px 30px -30px;" controls poster="img/figure14.png" preload="metadata">
+                        <source src="media/mali3.webm" type="video/webm">
+
+                        <source src="media/mali3.ogg" type="video/ogg">
+                        <source src="media/mali4.mp4" type="video/mp4">
+                        Sorry, your browser doesn't support embedded videos,
+                        but don't worry, you can <a href="media/mali4.mp4">download it</a>
+                        and watch it with your favorite video player!
+                    </video>
                         <p>
                             The highlight of most visits to a Dogon village is an opportunity to see a dama performance. Dama dancers are young men in their late teens or early twenties who have been circumcised, making them eligible to join the awa, or “society of masks” (Maurer 1969). The timing of a dama varies across villages, with many holding a single celebration in April for all deaths that have happened in the last year. Because of the need to carve and paint masks, assemble regalia, and rehearse routines, a dama may require a month or more of preparation time.
                         </p>
                         <div id="figure11" class="figure" style="background-image:url(img/figure11.png);"></div>
                         <div class="caption">Figure 11: Dancers wearing satimbe or “great woman” masks (left) and antelope masks (right).</div>
                         <p>
-                            The most impressive element of a dancer’s regalia is the headpiece, or imina (mask), that is tied to the dancer’s face with cloth bands. Sometimes decorated with fibers, cowry shells, or beads, the masks are highly valued by foreign collectors. More than sixty different masks symbolize the worlds of the living and dead; some represent animals or people, and others portray spiritual beings or human attributes such as male or female power (Lane 1988). Masks are said to contain nyama, the life force within both humans and animals (Richards 2006). Because of their association with death, women (who are associated with fertility) may not touch or come in contact with a dancer’s mask (Figure 12). Most dancers wear regalia designed to enhance movements, such as colored hibiscus fibers attached to the wrists and ankles. Decorations may also include breastplates made from shells and beads worn above loose pants. Colors used within regalia represent the four basic elements: red (fire), black (water), white (sky), and yellow or ochre (earth). To maintain the integrity of costumes, materials such as paint, dye, and fiber must be obtained from the bush (Figure 11).
+                            The most impressive element of a dancer’s regalia is the headpiece, or imina (mask), that is tied to the dancer’s face with cloth bands. Sometimes decorated with fibers, cowry shells, or beads, the masks are highly valued by foreign collectors. More than sixty different masks symbolize the worlds of the living and dead; some represent animals or people, and others portray spiritual beings or human attributes such as male or female power (Lane 1988). Masks are said to contain nyama, the life force within both humans and animals (Richards 2006). Because of their association with death, women (who are associated with fertility) may not touch or come in contact with a dancer’s mask (Figure 12). Most dancers wear regalia designed to enhance movements, such as colored hibiscus fibers attached to the wrists and ankles. Decorations may also include breastplates made from shells and beads worn above loose pants. Colors used within regalia represent the four basic elements: red (fire), black (water), white (sky), and yellow or ochre (earth). To maintain the integrity of costumes, materials such as paint, dye, and fiber must be obtained from the bush (<a href="#figure11">Figure 11</a>).
                         </p>
                         <div id="figure12" class="figure" style="background-image:url(img/figure12.png);"></div>
                         <div class="caption">Figure 12: Village elders assemble to watch a dama performance.  Women and children may view the event from a distance.</div>
@@ -290,30 +307,30 @@
                         <div id="figure13" class="figure" style="height: 675px; background-image:url(img/figure13.png);"></div>
                         <div class="caption">Figure 13: A kanaga mask followed by a buffalo and hornbill.</div>
                         <p>
-                            The most remarkable elements of public dances are specialized routines performed by solo dancers. Standing more than a meter in height, the kanaga mask is painted black and white with a triangular face and a long, thin nose (Figure 13). Topped by two crosses representing the outstretched wings of a stork, the kanaga depicts connections between the earth and sky (Haardt 1991). Up-stretched arms of the higher cross symbolize the supernatural world, while the lower cross with down-stretched arms represents the world of people. Kanaga dancers frequently move their heads rapidly from side to side in a sweeping motion that allows the top of their mask to touch the ground.
+                            The most remarkable elements of public dances are specialized routines performed by solo dancers. Standing more than a meter in height, the kanaga mask is painted black and white with a triangular face and a long, thin nose (<a href="#figure13">Figure 13</a>). Topped by two crosses representing the outstretched wings of a stork, the kanaga depicts connections between the earth and sky (Haardt 1991). Up-stretched arms of the higher cross symbolize the supernatural world, while the lower cross with down-stretched arms represents the world of people. Kanaga dancers frequently move their heads rapidly from side to side in a sweeping motion that allows the top of their mask to touch the ground.
                         </p>
                         <div id="figure14" class="figure" style="background-image:url(img/figure14.png);"></div>
                         <div class="caption">Figure 14: This mask represents the mythical walu antelope.  The dancer on the far left wears the satimbe mask.</div>
                         <p>
-                            Another popular dancer is the walu, a mythical antelope represented by a rectangular mask with an elongated, arrow-shaped nose and deep-set eye holes, framed by a rectangular face and topped by horns (Dieterlen 1989) (Figure 14). The Dogon believe that Amma assigned the walu the task of protecting the sun from the fox (Yurugu). The tingetange, or stilt mask, symbolizes a water bird. The ankles of tingetange dancers are bound with cloth to poles, which represent the bird’s long legs.
+                            Another popular dancer is the walu, a mythical antelope represented by a rectangular mask with an elongated, arrow-shaped nose and deep-set eye holes, framed by a rectangular face and topped by horns (Dieterlen 1989) (<a href="#figure14">Figure 14</a>). The Dogon believe that Amma assigned the walu the task of protecting the sun from the fox (Yurugu). The tingetange, or stilt mask, symbolizes a water bird. The ankles of tingetange dancers are bound with cloth to poles, which represent the bird’s long legs.
                         </p>
                         <div id="figure15" class="figure" style="height: 675px; background-image:url(img/figure15.png);"></div>
                         <div class="caption">Figure 15: The sirige mask symbolizes a tree or great house.  The dancer uses his teeth to hold the mask in place which may be up to five meters in height.
                         </div>
                         <p>
-                            Among the particularly remarkable headpieces is the sirige, reserved for the most experienced dancers. The mask itself is formed by a rectangular box, with two vertical openings held in place by a net around the dancer’s head. Extending upward from the box is a flat wooden blade up to five meters in length. To provide additional stability, a portion of the mask is held by the dancer’s teeth and hidden cords are tied to his waist (Vogel 1981). With its huge blade painted with opposing triangles and vertical lines, the sirige mask represents a tree or ginna (Figure 15). The mask’s straight lines are believed to connect the celestial world of the living with the spiritual world. During their routines, sirige dancers may take a few steps and then kneel toward the east.
+                            Among the particularly remarkable headpieces is the sirige, reserved for the most experienced dancers. The mask itself is formed by a rectangular box, with two vertical openings held in place by a net around the dancer’s head. Extending upward from the box is a flat wooden blade up to five meters in length. To provide additional stability, a portion of the mask is held by the dancer’s teeth and hidden cords are tied to his waist (Vogel 1981). With its huge blade painted with opposing triangles and vertical lines, the sirige mask represents a tree or ginna (<a href="#figure15">Figure 15</a>). The mask’s straight lines are believed to connect the celestial world of the living with the spiritual world. During their routines, sirige dancers may take a few steps and then kneel toward the east.
                         </p>
                         <div id="figure16" class="figure" style="height: 675px; background-image:url(img/figure16.png);"></div>
                         <div class="caption">Figure 16: An odyogoro mask with under-chin “groiters.”</div>
                         <p>
-                            Some masks are associated with a story pertaining to the character portrayed. For example, the fox represents disorder and disobedience within the world and is considered the enemy of water, fertility, and civilization. A mythical fox named Yurugu is said to have been condemned by Amma to search the world for a lost twin (Griaule 2005). Dancers wearing rabbit masks may hide from the “hunter,” while the walu antelope chases girls and small boys in the audience (Van Beek 1998). In addition to animals and spirits, masks also represent outsiders, often depicting them as aliens who exhibit strange or humorous behavior. Wearing a mask covered by cowry shells, the Fulani woman hops around trying to collect animal dung, while the Mossi herdsman repeatedly falls off his horse (Van Beek 1991a). Also drawing laughter from the crowd, the odyogoro mask has two under-chin bulges representing goiters, a common Dogon ailment caused by a lack of iodine in the diet (Figure 16).
+                            Some masks are associated with a story pertaining to the character portrayed. For example, the fox represents disorder and disobedience within the world and is considered the enemy of water, fertility, and civilization. A mythical fox named Yurugu is said to have been condemned by Amma to search the world for a lost twin (Griaule 2005). Dancers wearing rabbit masks may hide from the “hunter,” while the walu antelope chases girls and small boys in the audience (Van Beek 1998). In addition to animals and spirits, masks also represent outsiders, often depicting them as aliens who exhibit strange or humorous behavior. Wearing a mask covered by cowry shells, the Fulani woman hops around trying to collect animal dung, while the Mossi herdsman repeatedly falls off his horse (Van Beek 1991a). Also drawing laughter from the crowd, the odyogoro mask has two under-chin bulges representing goiters, a common Dogon ailment caused by a lack of iodine in the diet (<a href="#figure16">Figure 16</a>).
                             </p>
                         <div id="figure17" class="figure" style="height: 675px; background-image:url(img/figure17.png);"></div>
                         <div class="caption">Figure 17: The white man mask.  To the left behind the dancer is a rabbit mask.</div>
-                        <p>Topped by a statuette with outstretched arms, the satimbe (great woman) mask symbolizes the fertility of farmland and people and the power of women. The white man (anyara) has a long beard with wavy hair and a hooked nose. At times, the anyara may hold up a wooden “camera” to take a good “shot” of spectators (Figure 17). Others portrayed by masks include the blacksmith, shoemaker, Peul woman, old man, young girl, modibo (teacher of Islam), and anthropologist.       If a mask is damaged during a performance, it is hidden from the view of spectators until it can be repaired. Masks are discarded following the dama for which they were made, or in some cases sold to tourists.
+                        <p>Topped by a statuette with outstretched arms, the satimbe (great woman) mask symbolizes the fertility of farmland and people and the power of women. The white man (anyara) has a long beard with wavy hair and a hooked nose. At times, the anyara may hold up a wooden “camera” to take a good “shot” of spectators (<a href="#figure17">Figure 17</a>). Others portrayed by masks include the blacksmith, shoemaker, Peul woman, old man, young girl, modibo (teacher of Islam), and anthropologist.       If a mask is damaged during a performance, it is hidden from the view of spectators until it can be repaired. Masks are discarded following the dama for which they were made, or in some cases sold to tourists.
                         </p>
                     </section>
-                <section id="6" class="scene" data-scene-id="place6">
+                <section id="6" class="scene" data-scene-id="place6" title="Conclusion">
                         <h3>Conclusion</h3>
                         <p>
                             There is little doubt that tourism has changed elements of Dogon life. Attracted by published accounts of mysterious cliff dwellings, exquisite wood carvings, and exotic dances, outsiders began arriving in Pays Dogon in the early 1960s. Some villages along the escarpment now have tourist lodges, while guides offer visitors an opportunity to climb up to cliff structures and explore settlements on the top of the plateau. In some cases, entire villages have become involved in tourism. For a fee, village elders may be willing to arrange a private mask dance for visitors. Contact with outsiders has also created social and economic changes where young Dogon men have opted out of subsistence agriculture in favor of wage jobs.
@@ -386,7 +403,7 @@
                         </ul>
                     </section>
                 <div class="row footer-row"></div>
-            </div>
+            </section>
         </div>
         <div id="progress">
             <div id="bar"></div>
@@ -454,7 +471,7 @@
             </div>
         </script>
         <script src="../../../js/combined.js"></script>
-        <script src="../../../../bower_components/leaflet-dvf/dist/data/countryData.min.js"></script>
+        <script src="js/countryData.min.js"></script>
         <script>
             Focus.Map = {};
             Focus.Map.defaultOptions = {
@@ -484,7 +501,13 @@
                             "name": "Bamako"
                         }
                     }},
-                    {"id": "homboritondo", "type": "geojson", "data": {
+                    {"id": "homboritondo", "type": "geojson", "style": {
+                        "icon": {
+                            "html": "<div><img width='50px' style='text-align: center;' src='img/hombori.svg'/><div style='width: 100px; margin-left: -25px; text-align: center;'><span class='place-text'>Hombori Tondo</span></div></div>",
+                            "iconSize": [50, 50],
+                            "iconAnchor": [35, 35]
+                        }
+                    }, "data": {
                     // 15.257222, -1.668889
                     "type": "Feature",
                     "geometry": {
@@ -492,11 +515,20 @@
                         "coordinates": [-1.668889, 15.257222]
                     },
                     "properties": {
-                        "name": "Hombori Tondo"
+                        "name": "Hombori Tondo",
+                        "elevation": '1115m'
                     }
                 }}, {
                         "id": "kanikombole",
                         "type": "geojson",
+                        "style": {
+                            "text": {
+                                "text": "- Kani Kombole",
+                                "style": {
+                                    "text-anchor": "start"
+                                }
+                            }
+                        },
                         "data": {
                             "type": "Feature",
                             "geometry": {
@@ -510,6 +542,14 @@
                     }, {
                         "id": "timbuktu",
                         "type": "geojson",
+                        "style": {
+                            "text": {
+                                "text": "Timbuktu -",
+                                "style": {
+                                    "text-anchor": "end"
+                                }
+                            }
+                        },
                         "data": {
                             "type": "Feature",
                             "geometry": {
@@ -522,9 +562,17 @@
                         }
                     }, {"id": "escarpment", "type": "geojson", "style": {
                     "color": "#fff",
-                    "weight": 4,
+                    "weight": 1,
                     "dashArray": [4, 4],
-                        "opacity": 1
+                        "opacity": 1,
+                        "text": {
+                            "text": "Bandiagara Escarpment",
+
+                            "path": {
+                                "startOffset": "65%"
+                            }
+
+                        }
                 }, "data": {"type": "Feature",
                         "properties": {
                             "name": "Bandiagara Escarpment"
@@ -735,7 +783,7 @@
                             "name": "Sanga"
                         }
                     }},
-                    {"id": "villages", "type": "geojson", "style": {"weight": 7, "radius": 3, "opacity": 0.5, "fillOpacity": 1}, "data": {
+                    {"id": "villages", "type": "geojson", "style": {"weight": 4, "radius": 2, "opacity": 0.5, "fillOpacity": 1}, "data": {
                         "type": "FeatureCollection",
                         "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 
@@ -779,7 +827,14 @@
                     }
 
                     },
-                    {"id": "mopti", "type": "geojson", "data": {
+                    {"id": "mopti", "type": "geojson", "style": {
+                        "text": {
+                            "text": "Mopti -",
+                            "style": {
+                                "text-anchor": "end"
+                            }
+                        }
+                    }, "data": {
                         "type": "Feature",
                         "properties": {
                             "name": "Mopti"
@@ -833,12 +888,12 @@
                                         {
                                             offset: '0%',
                                             style: {
-                                                color:  "orange",
-                                                opacity: 1
+                                                color:  "darkorange",
+                                                opacity: 0.8
                                             }
                                         },
                                         {
-                                            offset: '30%',
+                                            offset: '25%',
                                             style: {
                                                 color: "orange",
                                                 opacity: 0.2
@@ -847,7 +902,7 @@
                                         {
                                             offset: '100%',
                                             style: {
-                                                color: "orange",
+                                                color: "gold",
                                                 opacity: 0
                                             }
                                         }
@@ -859,6 +914,15 @@
                     {
                         "id": "place1",
                         "baseLayer": [{
+                            "type": "esri-basemap",
+                            "url": "Imagery",
+                            "options": {
+                                "detectRetina": true,
+                                "imagerySet": "AerialWithLabels",
+
+                            }
+
+                        }/*{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
                             "params": {
@@ -874,7 +938,7 @@
                                 crs: L.CRS.EPSG3857,
                                 attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
                             }
-                        }/*{
+                        }*//*{
                             "type": "tile",
                             "url": 'http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png'
                         },*//*{
@@ -903,23 +967,20 @@
                         "zoom": 8,
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/sandpaper.png')"
+                            "opacity": 0.6,
+                            "background": "#A27A54" //"url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/sandpaper.png')"
                         }
                     },
                     {
                         "id": "place2",
                         "baseLayer": [/*{
-                         "type": "tile",
-                         "url": 'http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png'
-                         },*/{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
                             "params": {
                                 layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
                                 maxNativeZoom: 9,
                                 tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: '2015-10-31',//"2016-04-27",
+                                time: '2016-09-07',//"2016-04-27",
                                 //tileSize: 256,
                                 detectRetina: true,
                                 subdomains: "abc",
@@ -928,6 +989,15 @@
                                 crs: L.CRS.EPSG3857,
                                 attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
                             }
+                        }*/{
+                            "type": "esri-basemap",
+                            "url": "Imagery",
+                            "options": {
+                                "detectRetina": true,
+                                "imagerySet": "AerialWithLabels",
+
+                            }
+
                         }],
                         "center": [-3.487967, 14.231845],
                         "zoom": 8,
@@ -943,8 +1013,8 @@
                         ],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 0.6,
+                            "background": "#A27A54" //"url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/sandpaper.png')"
                         }
                     },
                     {
@@ -961,7 +1031,7 @@
                         ],
                         "center": [-3.487967, 14.231845],
                         "zoom": 8,
-                        "baseLayer": [{
+                        "baseLayer": [/*{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
                             "params": {
@@ -977,23 +1047,32 @@
                                 crs: L.CRS.EPSG3857,
                                 attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
                             }
-                            //"type": "vector",
-                            //"url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk"
-                        }, /*{
+                        },*/
+                            {
+                                "type": "esri-basemap",
+                                "url": "Imagery",
+                                "options": {
+                                    "detectRetina": true,
+                                    "imagerySet": "AerialWithLabels",
+
+                                }
+
+                            }
+                            /*{
                             "type": "vector",
                             "url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk" //"http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
                         }*/],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 0.6,
+                            "background": "#A27A54" //"url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/sandpaper.png')"
                         }
                     },
                     {
                         "id": "place4",
                         //"center": [-114.8986353,27.6924942],
 
-                        "baseLayer": [{
+                        "baseLayer": [/*{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
                             "params": {
@@ -1011,7 +1090,18 @@
                             }
                             //"type": "vector",
                             //"url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk"
-                        }, /*{
+                        },*/
+                            {
+                                "type": "esri-basemap",
+                                "url": "Imagery",
+                                "options": {
+                                    "detectRetina": true,
+                                    "imagerySet": "AerialWithLabels",
+
+                                }
+
+                            }
+                            /*{
                             "type": "vector",
                             "url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk" //"http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
                         }*/],
@@ -1080,8 +1170,8 @@
                         ],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 0.6,
+                            "background": "#A27A54" //"url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/sandpaper.png')"
                         }
                     },                    {
                         "id": "place5",
@@ -1096,8 +1186,8 @@
                             {"idRef": "sanga"}
                         ],
                         "center": [-3.487967, 14.231845],
-                        "zoom": 8,
-                        "baseLayer": [{
+                        "zoom": 9,
+                        "baseLayer": [/*{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
                             "params": {
@@ -1115,14 +1205,25 @@
                             }
                             //"type": "vector",
                             //"url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk"
-                        }, /*{
+                        },*/
+                            {
+                                "type": "esri-basemap",
+                                "url": "Imagery",
+                                "options": {
+                                    "detectRetina": true,
+                                    "imagerySet": "AerialWithLabels",
+
+                                }
+
+                            }
+                            /*{
                          "type": "vector",
                          "url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk" //"http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
                          }*/],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 0.6,
+                            "background": "#A27A54" //"url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/sandpaper.png')"
                         }
                     },{
                         "id": "place6",
@@ -1151,7 +1252,7 @@
                                 "options": {
                                     "detectRetina": true,
                                     "imagerySet": "AerialWithLabels",
-                                    "attribution": "Data from ACLED"
+
                                 }
 
                             }
@@ -1166,20 +1267,22 @@
                         "center": [-3.487967, 14.231845],
                         "zoom": 6,
                         "layers": [
-                            {"id": "mali", "type": "country", "data": "ML", "style": {"fillOpacity": 0.1, "opacity": 0.8, "fillColor": "#333", "color": "#fff", "text": {"text": "Mali"}}},
-                            {"id": "burkinafaso", "type": "country", "data": "BF", "style": {"fillOpacity": 0.1, "opacity": 0.8, "fillColor": "#333", "color": "#fff", "text": {"text": "Burkina Faso"}}},
-                            {"id": "mauritania", "type": "country", "data": "MR", "style": {"fillOpacity": 0.1, "opacity": 0.8, "fillColor": "#333", "color": "#fff", "text": {"text": "Mauritania"}}},
-                            {"id": "niger", "type": "country", "data": "NE", "style": {"fillOpacity": 0.1, "opacity": 0.8, "fillColor": "#333", "color": "#fff", "text": {"text": "Niger"}}},
-                            {"idRef": "escarpment"},
+                            {"id": "mali", "type": "country", "data": "ML", "style": {"weight": 2, "fillOpacity": 0.1, "opacity": 0.8, "fillColor": "#333", "color": "#fff", "text": {"text": "Mali"}}},
+                            {"id": "burkinafaso", "type": "country", "data": "BF", "style": {"weight": 2, "fillOpacity": 0.1, "opacity": 0.8, "fillColor": "#333", "color": "#fff", "text": {"text": "Burkina Faso"}}},
+                            {"id": "mauritania", "type": "country", "data": "MR", "style": {"weight": 2, "fillOpacity": 0.1, "opacity": 0.8, "fillColor": "#333", "color": "#fff", "text": {"text": "Mauritania"}}},
+                            {"id": "niger", "type": "country", "data": "NE", "style": {"weight": 2, "fillOpacity": 0.1, "opacity": 0.8, "fillColor": "#333", "color": "#fff", "text": {"text": "Niger"}}},
+                            {"idRef": "escarpment", "style": {
+                                "text": null
+                            }},
                             {"idRef": "acled"},
                             {"idRef": "timbuktu"},
                             {"idRef": "mopti"},
                             {"idRef": "kanikombole"}
                         ],
                         "style": {
-                            "filter": "sepia(20%)",
-                            "opacity": 0.8,
-                            "background": "url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/sandpaper.png')"
+                            "filter": "sepia(0%)",
+                            "opacity": 0.6,
+                            "background": "#A27A54" //"url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/sandpaper.png')"
                         }
                     }
                 ]

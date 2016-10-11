@@ -1639,6 +1639,15 @@ span.acknowledgements {
     padding-left: 10px;
     border-left: solid 3px rgba(0, 123, 71, 0.7);
 }
+
+section {
+    position: relative;
+}
+
+div.content.scenes {
+    position: relative;
+}
+
 @media (max-width: 768px) {
 
     h2.title {

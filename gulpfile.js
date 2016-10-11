@@ -261,7 +261,7 @@ gulp.task('copy2020', function() {
 });
 
 gulp.task('html', function () {
-    return gulp.src(['src/**/*.html', 'src/**/*.{png,jpg,jpeg,svg,ico}', 'src/**/combined.js', 'src/**/combined.css'])
+    return gulp.src(['src/**/*.html', 'src/**/*.{png,jpg,jpeg,svg,ico}', 'src/**/combined.js', 'src/**/combined.css', 'src/**/*.js'])
         .pipe(gulpif('*.html', useref()))
         //.pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
