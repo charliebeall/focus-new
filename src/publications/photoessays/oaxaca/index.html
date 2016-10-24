@@ -303,7 +303,7 @@
                 <img src="img/8b.jpg"/>
             </div>
                 <p>
-                    Completed in 1951, the <a href="#" class="location" data-layer-id="templolospobres">Templo de los Pobres’</a> Rationalist design announced that Modernist ideas from Mexico City had arrived in Oaxaca City, awakening a local historic preservation movement. The city’s Colonia Reforma has since engulfed the church.
+                    Completed in 1951, the <a href="#" class="location" data-layer-id="templolospobres">Templo de los Pobres’</a> Rationalist design announced that Modernist ideas from Mexico City had arrived in Oaxaca City, awakening a local historic preservation movement. The city’s Colonia Reforma has since engulfed the church and made a proper repeat photograph impossible.
             </p>
         </section>
         <section id="11" class="scene photo-scene" data-scene-id="place10">
@@ -339,10 +339,18 @@
                 <img src="img/12b.jpg"/>
             </div>
             <p>
-                The Zocalo is a center of activity for residents and visitors, its southwest corner framed by the state capitol, the <a href="#" class="location" data-layer-id="templodelacompania">Jesuits church</a>, and the arched portales (portal, doorway). The Zocalo is a stage for restaurateurs, musicians, vendors, and visitors. In July 2016, the Zocalo also was a stage for political protest. In this case, teachers protesting educational reform marked the second month of occupation of the Zocalo.
+                The Zocalo is a center of activity for residents and visitors, its southwest corner framed by the state capitol, the <a href="#" class="location" data-layer-id="templodelacompania">Jesuits church</a>, and the arched portales (portal, doorway). The Zocalo is a stage for restaurateurs, musicians, vendors, and visitors.
             </p>
         </section>
         <section id="15" class="scene photo-scene" data-scene-id="place14">
+            <div class="figure twentytwenty-container">
+                <img src="img/12b.jpg"/>
+                <img src="img/12c.jpg"/>
+            </div>
+            <p>In July 2016, the Zocalo also was a stage for political protest. In this case, teachers protesting educational reform marked the second month of occupation of the Zocalo.
+            </p>
+        </section>
+        <section id="16" class="scene photo-scene" data-scene-id="place15">
             <div class="figure" style="overflow: hidden;">
                 <ul class="grid">
                     <li class="grid-item" style="opacity: 1; transform: translateX(169.738px) translateY(-60.1781px) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-20deg);">
@@ -747,7 +755,9 @@
                 "fillOpacity": 0.3
             }, "data": {
                 "type": "Feature",
-                "properties": {},
+                "properties": {
+                    "name": "Cathedral"
+                },
                 "geometry": {
                     "type": "Polygon",
                     "coordinates": [
@@ -792,7 +802,9 @@
                 "fillOpacity": 0.3
             }, "data": {
                 "type": "Feature",
-                "properties": {},
+                "properties": {
+                    "name": ""
+                },
                 "geometry": {
                     "type": "Polygon",
                     "coordinates": [
@@ -829,7 +841,9 @@
                 "fillOpacity": 0.3
             }, "data": {
                 "type": "Feature",
-                "properties": {},
+                "properties": {
+                    "name": "Oaxaca Cathedral"
+                },
                 "geometry": {
                     "type": "Polygon",
                     "coordinates": [
@@ -890,7 +904,9 @@
                 "fillOpacity": 0.3
             }, "data": {
                 "type": "Feature",
-                "properties": {},
+                "properties": {
+                    "name": "Hotel"
+                },
                 "geometry": {
                     "type": "Polygon",
                     "coordinates": [
@@ -935,7 +951,9 @@
                 "opacity": 0.5
             }, "data": {
                 "type": "Feature",
-                "properties": {},
+                "properties": {
+                    "name": "Monumento de Juarez"
+                },
                 "geometry": {
                     "type": "Point",
                     "coordinates": [
@@ -952,7 +970,9 @@
                 "fillOpacity": 0.3
             }, "data": {
                 "type": "Feature",
-                "properties": {},
+                "properties": {
+                    "name": "Jardin de la Bastida"
+                },
                 "geometry": {
                     "type": "Polygon",
                     "coordinates": [
@@ -1626,6 +1646,29 @@
                 }]
             }, {
                 "id": "place14",
+                "zoom": 16,
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "zocalo"
+                }, {
+                    "idRef": "statecapital"
+                }, {
+                    "idRef": "templo"
+                }, {
+                    "idRef": "templodelacompania"
+                }, {
+                    //-17.583494, -66.008273
+                    "idRef": "tccamera"
+                }]
+            }, {
+                "id": "place15",
                 "zoom": 14,
                 "baseLayer": [{
                     "type": "esri-basemap",
