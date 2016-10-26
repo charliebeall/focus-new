@@ -337,6 +337,14 @@ span.image {
     font-size: 16px;
 }
 
+.publication a .date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px 15px;
+    font-size: 10px;
+}
+
 input[type="text"], input[type="password"], input[type="email"], input[type="tel"], select, textarea {
     -moz-appearance: none;
     -webkit-appearance: none;

@@ -8,6 +8,7 @@ var uglify = require('gulp-uglify');
 var useref = require('gulp-useref');
 var gulpif = require('gulp-if');
 var minifyCss = require('gulp-minify-css');
+var inject = require('gulp-inject');
 
 // Load all gulp plugins automatically
 // and attach them to the `plugins` object
@@ -263,8 +264,14 @@ gulp.task('copy2020', function() {
 });
 
 gulp.task('html', function () {
-    return gulp.src(['src/**/*.html', 'src/**/*.{png,jpg,jpeg,svg,ico}', 'src/**/combined.js', 'src/**/combined.css', 'src/**/*.js'])
+    return gulp.src(['src/**/*.html', 'src/**/*.{png,jpg,jpeg,svg,ico,mp4,webm,ogg}', 'src/**/combined.js', 'src/**/combined.css', 'src/**/*.js'])
         .pipe(gulpif('*.html', useref()))
+        .pipe(gulpif('*.html', inject(gulp.src(['./src/templates.html']), {
+            starttag: '<!-- inject:templates:{{ext}} -->',
+            transform: function (filePath, file) {
+                return file.contents.toString('utf8');
+            }
+        })))
         //.pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(gulp.dest('dist'));

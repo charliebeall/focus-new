@@ -412,66 +412,10 @@
         </div>
         <div id="bar-top"></div>
         <div id="bar-bottom"></div>
-        <script id="modal-template" type="text/template">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title"><%= title %></h4>
-                    </div>
-                    <div class="modal-body">
-                        <p><%= content %></p>
-                    </div>
-                    <div class="modal-footer" style="display:<% print(showFooter ? 'block' : 'none') %>;">
-                        <button type="button" class="btn btn-success">Start Quiz</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </script>
-        <script id="quiz-score-template" type="text/template">
-            <div class="quiz-score">
+            <!-- inject:templates:html -->
+            <!-- endinject -->
 
-            </div>
-        </script>
-        <script id="choice-template" type="text/template">
-            <div class="choice-body <% print(selected ? 'selected' : '') %>" style="background-size: cover; background-repeat: no-repeat; background-image:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5)), url(<%= photo %>)">
-                <div class="row id-row">
-                    <span><%= id %></span>
-                </div>
-                <div class="row photo-row">
 
-                </div>
-                <div class="row text-row">
-                    <%= text %>
-                </div>
-            </div>
-        </script>
-        <script id="question-template" type="text/template" >
-            <div class="row choice-row">
-
-            </div>
-            <div class="row button-row">
-                <button class="btn btn-success next">Check Answer</button>
-            </div>
-        </script>
-        <script id="menu-items-template" type="text/template">
-            <div class="items"></div>
-        </script>
-        <script id="menu-item-template" type="text/template">
-            <div class="publication col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="publication-wrapper">
-                    <span class="image" style="background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(<%=thumbnail%>); background-size:cover;"></span>
-                    <a href="<%= url %>" class="<%= type.replace(' ', '').toLowerCase() %>">
-                        <h2><%= type %></h2>
-                        <div class="content">
-                            <p><%= title %></p>
-                        </div>
-                        <div class="author">
-                            <p><%= author %></p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </script>
         <script src="../../../js/combined.js"></script>
         <script src="js/countryData.min.js"></script>
         <script>

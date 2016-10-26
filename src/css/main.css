@@ -1653,12 +1653,18 @@ div.content.scenes {
 
 div.citation {
     position: relative;
-    *top: -70px;
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+div.citation .citation-label {
+    font-weight: bold;
 }
 
 div.photo-essay div.citation {
-    top: 0px;
-    padding: 0px 30px 30px 30px;
+    margin-left: 15px;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {

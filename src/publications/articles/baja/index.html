@@ -105,7 +105,7 @@
                     <div class="author"><span class="name">Pablo Alvarez</span>, <span class="organization">Faculty of Marine Science, Universidad Autonoma de Baja California</span></div>
                     <div class="author"><span class="name">Gerardo Bocco</span>, <span class="organization">Center for Environmental Geography (CIGA), Universidad Nacional Autonoma de Mexico (UNAM) – Morelia Campus</span></div>
                     <div class="author"><span class="name">Ileana Espejel</span>, <span class="organization">Faculty of Sciences, Universidad Autonoma de Baja California</span></div>
-                    <div class="citation">DOI: 10.21690/foge/2016.59.1f</div>
+                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2016.59.1f</div>
                 <h3>Introduction</h3>
                     <p>
                 Baja California conjures up images of rally car races, beaches, surfing, tacos, deserts, and exotic endemic flora and fauna.  There is of course a lot more to this fascinating region, including people and their livelihoods, and this paper explores the cultural landscape of the rural space that constitutes the North Pacific Coast of Mexico, specifically the coastal zone of the <a href="#" class="location" data-layer-id="elvizcaino">El Vizcaíno protected area</a> in the Mexican state of <a href="#" class="location" data-layer-id="bcs1">Baja California Sur (BCS)</a>, and how it came to be (Figures <a href="#figure1">1</a> and <a href="#figure2">2</a>).
@@ -245,66 +245,8 @@
         </div>
         <div id="bar-top"></div>
         <div id="bar-bottom"></div>
-        <script id="modal-template" type="text/template">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title"><%= title %></h4>
-                    </div>
-                    <div class="modal-body">
-                        <p><%= content %></p>
-                    </div>
-                    <div class="modal-footer" style="display:<% print(showFooter ? 'block' : 'none') %>;">
-                        <button type="button" class="btn btn-success">Start Quiz</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </script>
-        <script id="quiz-score-template" type="text/template">
-            <div class="quiz-score">
-
-            </div>
-        </script>
-        <script id="choice-template" type="text/template">
-            <div class="choice-body <% print(selected ? 'selected' : '') %>" style="background-size: cover; background-repeat: no-repeat; background-image:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5)), url(<%= photo %>)">
-                <div class="row id-row">
-                    <span><%= id %></span>
-                </div>
-                <div class="row photo-row">
-
-                </div>
-                <div class="row text-row">
-                    <%= text %>
-                </div>
-            </div>
-        </script>
-        <script id="question-template" type="text/template" >
-            <div class="row choice-row">
-
-            </div>
-            <div class="row button-row">
-                <button class="btn btn-success next">Check Answer</button>
-            </div>
-        </script>
-        <script id="menu-items-template" type="text/template">
-            <div class="items"></div>
-        </script>
-        <script id="menu-item-template" type="text/template">
-            <div class="publication col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="publication-wrapper">
-                    <span class="image" style="background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(<%=thumbnail%>); background-size:cover;"></span>
-                    <a href="<%= url %>" class="<%= type.replace(' ', '').toLowerCase() %>">
-                        <h2><%= type %></h2>
-                        <div class="content">
-                            <p><%= title %></p>
-                        </div>
-                        <div class="author">
-                            <p><%= author %></p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </script>
+        <!-- inject:templates:html -->
+        <!-- endinject -->
         <script src="../../../js/combined.js"></script>
         <script>
             var scenes = {

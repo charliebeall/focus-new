@@ -13816,6 +13816,7 @@ Focus.Volumes = [
             citationAuthor: 'Wikle, T.',
             doi: '',
             description: '',
+            date: '10/26/16',
             thumbnail: 'publications/articles/mali/img/figure13.png',
             url: 'publications/articles/mali/index.html',
             location: [{
@@ -13831,6 +13832,7 @@ Focus.Volumes = [
             author: 'Scott Brady',
             citationAuthor: 'Brady, S.',
             description: '',
+            date: '10/26/16',
             doi: '',
             thumbnail: 'publications/photoessays/oaxaca/img/1a.jpg',
             url: 'publications/photoessays/oaxaca/index.html',
@@ -13840,6 +13842,7 @@ Focus.Volumes = [
             title: 'Quiz Two:  Sustainability and Conservation',
             author: 'Wesley Reisser',
             description: '',
+            date: '10/26/16',
             thumbnail: 'publications/quizzes/two/img/2050_logo.png',
             url: 'publications/quizzes/two/index.html',
             location: []
@@ -13848,6 +13851,7 @@ Focus.Volumes = [
             title: 'From Ranching to Fishing – the Cultural Landscape of the Northern Pacific Coast of Baja California, Mexico',
             author: 'Antoinette WinklerPrins, Pablo Alvarez, Gerardo Bocco, Ileana Espejel',
             citationAuthor: 'WinklerPrins, A., Alvarez, P., Bocco, G., & Espejel, I.',
+            date: '07/15/16',
             description: '',
             doi: '10.21690/foge/2016.59.1f',
             thumbnail: 'publications/articles/baja/img/fig1.jpg',
@@ -13866,7 +13870,7 @@ Focus.Volumes = [
             description: '',
             doi: '10.21690/foge/2016.59.1p',
             citationAuthor: 'Price, M.',
-            date: '',
+            date: '07/15/16',
             thumbnail: 'publications/photoessays/bolivia/img/figure1.jpg',
             url: 'publications/photoessays/bolivia/index.html',
             location: [{
@@ -13881,6 +13885,7 @@ Focus.Volumes = [
             title: 'Quiz One:  Explorers',
             author: 'Wesley Reisser',
             description: '',
+            date: '07/15/16',
             thumbnail: 'publications/quizzes/one/img/agsglobe.png',
             url: 'publications/quizzes/one/index.html',
             location: []
