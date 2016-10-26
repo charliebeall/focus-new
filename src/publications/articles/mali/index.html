@@ -167,7 +167,9 @@
         <div id="text" class="title-hidden">
             <div class="content scenes">
                 <section id="introduction" class="scene" data-scene-id="place1" title="Introduction">
-                    <div class="video-title" style="z-index: 10; position: absolute; top: 0px; margin: 0px -30px;"><h2 class="title" style="z-index: 10; padding: 30px; margin: 0px 80px 0px 0px;">Living and Spirtual Worlds of Mali's Dogon People</h2><div class="author" style="margin: 0px 110px 0px 30px;"><span class="name">Thomas Wikle</span>, <span class="organization">Professor of Geography, Oklahoma State University</span></div></div>
+                    <div class="video-title" style="z-index: 10; position: absolute; top: 0px; margin: 0px -30px;"><h2 class="title" style="z-index: 10; padding: 30px; margin: 0px 80px 0px 0px;">Living and Spirtual Worlds of Mali's Dogon People</h2>
+
+                        <div class="author" style="margin: 0px 110px 0px 30px;"><span class="name">Thomas Wikle</span>, <span class="organization">Professor of Geography, Oklahoma State University</span></div></div>
                     <div style="position: relative; height: 530px; width: calc(100% + 60px); margin: 0px -30px;"><video style="width: auto;
     position: absolute;
     top: 50%;
@@ -181,7 +183,7 @@
                         Sorry, your browser doesn't support embedded videos,
                         but don't worry, you can <a href="media/mali4.mp4">download it</a>
                         and watch it with your favorite video player!
-                    </video><div class="cover" style="pointer-events: none; position: absolute; top: 0px; height: 530px; width: 100%; background: linear-gradient(180deg, rgba(254, 252, 238, 0.5), rgba(254, 252, 238, 1));"></div></div>
+                    </video><div class="cover" style="pointer-events: none; position: absolute; top: 0px; height: 530px; width: 100%; background: radial-gradient(ellipse farthest-corner at 50px 20%, rgba(254, 252, 238, 0.5) 0%, rgba(254, 252, 238, 1) 75%);"></div></div>
 
                 <h3>Introduction</h3>
                     <p>
@@ -457,7 +459,7 @@
         <script id="menu-item-template" type="text/template">
             <div class="publication col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="publication-wrapper">
-                    <span class="image" style="background-image:url(<%=thumbnail%>); background-size:cover;"></span>
+                    <span class="image" style="background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(<%=thumbnail%>); background-size:cover;"></span>
                     <a href="<%= url %>" class="<%= type.replace(' ', '').toLowerCase() %>">
                         <h2><%= type %></h2>
                         <div class="content">

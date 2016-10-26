@@ -6,6 +6,8 @@ Focus.Volumes = [
             type: 'Feature Article',
             title: 'Living and Spirtual Worlds of Mali\'s Dogon People',
             author: 'Thomas Wikle',
+            citationAuthor: 'Wikle, T.',
+            doi: '',
             description: '',
             thumbnail: 'publications/articles/mali/img/figure13.png',
             url: 'publications/articles/mali/index.html',
@@ -20,7 +22,9 @@ Focus.Volumes = [
             type: 'Photo Essay',
             title: 'Postcards from Oaxaca\'s Past and Present',
             author: 'Scott Brady',
+            citationAuthor: 'Brady, S.',
             description: '',
+            doi: '',
             thumbnail: 'publications/photoessays/oaxaca/img/1a.jpg',
             url: 'publications/photoessays/oaxaca/index.html',
             location: []
@@ -36,7 +40,9 @@ Focus.Volumes = [
             type: 'Feature Article',
             title: 'From Ranching to Fishing – the Cultural Landscape of the Northern Pacific Coast of Baja California, Mexico',
             author: 'Antoinette WinklerPrins, Pablo Alvarez, Gerardo Bocco, Ileana Espejel',
+            citationAuthor: 'WinklerPrins, A., Alvarez, P., Bocco, G., & Espejel, I.',
             description: '',
+            doi: '10.21690/foge/2016.59.1f',
             thumbnail: 'publications/articles/baja/img/fig1.jpg',
             url: 'publications/articles/baja/index.html',
             location: [{
@@ -51,6 +57,9 @@ Focus.Volumes = [
             title: 'Many Destinations, One Place Called Home:  Migration and Livelihood for Rural Bolivians',
             author: 'Marie Price',
             description: '',
+            doi: '10.21690/foge/2016.59.1p',
+            citationAuthor: 'Price, M.',
+            date: '',
             thumbnail: 'publications/photoessays/bolivia/img/figure1.jpg',
             url: 'publications/photoessays/bolivia/index.html',
             location: [{

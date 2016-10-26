@@ -1881,12 +1881,14 @@ svg {
     left: 0px;
     *height: 260px;
     height: 220px;
+    pointer-events: none;
 }
 
 #questions .choice {
     text-align: center;
     padding: 20px;
     cursor: pointer;
+    pointer-events: all;
 }
 
 .choice-body {
@@ -2067,6 +2069,7 @@ svg {
     height: 200px;
     color: #fff;
     text-shadow: 1px 1px 1px black;
+    pointer-events: all;
 }
 
 div.caption {
@@ -2926,6 +2929,16 @@ div.content.scenes {
     position: relative;
 }
 
+div.citation {
+    position: relative;
+    *top: -70px;
+}
+
+div.photo-essay div.citation {
+    top: 0px;
+    padding: 0px 30px 30px 30px;
+}
+
 @media (max-width: 768px) {
 
     h2.title {
@@ -3390,7 +3403,7 @@ p {
 }
 
 .publication .content p {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .publication-wrapper {

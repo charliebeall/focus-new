@@ -12975,6 +12975,759 @@ L.vectorGrid.protobuf = function (url, options) {
 //# sourceMappingURL=Leaflet.VectorGrid.bundled.js.map
 
 !function t(e,n,i){function o(a,s){if(!n[a]){if(!e[a]){var u="function"==typeof require&&require;if(!s&&u)return u(a,!0);if(r)return r(a,!0);var l=new Error("Cannot find module '"+a+"'");throw l.code="MODULE_NOT_FOUND",l}var c=n[a]={exports:{}};e[a][0].call(c.exports,function(t){var n=e[a][1][t];return o(n?n:t)},c,c.exports,t,e,n,i)}return n[a].exports}for(var r="function"==typeof require&&require,a=0;a<i.length;a++)o(i[a]);return o}({1:[function(t,e,n){(function(n){function i(t,e,n){for(var i="",o=n;o>0;o--){var r=0,a=1<<o-1;0!==(t&a)&&r++,0!==(e&a)&&(r+=2),i+=r.toString()}return i}function o(t){var e=t.split(",");return[e[1],e[0],e[3],e[2]]}var r="undefined"!=typeof window?window.L:"undefined"!=typeof n?n.L:null,a=t("fetch-jsonp"),s=t("bbox-intersect"),u=["Aerial","AerialWithLabels","Road"];r.TileLayer.Bing=r.TileLayer.extend({options:{bingMapsKey:null,imagerySet:"Aerial",culture:"en-US",minZoom:1},statics:{METADATA_URL:"https://dev.virtualearth.net/REST/v1/Imagery/Metadata/{imagerySet}?key={bingMapsKey}&include=ImageryProviders",POINT_METADATA_URL:"https://dev.virtualearth.net/REST/v1/Imagery/Metadata/{imagerySet}/{lat},{lng}?zl={z}&key={bingMapsKey}"},initialize:function(t){if("string"==typeof t&&(t={bingMapsKey:t}),t&&t.BingMapsKey&&(t.bingMapsKey=t.BingMapsKey,console.warn("use options.bingMapsKey instead of options.BingMapsKey")),!t||!t.bingMapsKey)throw new Error("Must supply options.BingMapsKey");if(t=r.setOptions(this,t),u.indexOf(t.imagerySet)<0)throw new Error("'"+t.imagerySet+"' is an invalid imagerySet, see https://github.com/gmaclennan/leaflet-bing-layer#parameters");t.minZoom=Math.max(1,t.minZoom);var e=r.Util.template(r.TileLayer.Bing.METADATA_URL,{bingMapsKey:this.options.bingMapsKey,imagerySet:this.options.imagerySet});this._imageryProviders=[],this._attributions=[],this._fetch=a(e,{jsonpCallback:"jsonp"}).then(function(t){return t.json()}).then(this._metaDataOnLoad.bind(this))["catch"](console.error.bind(console)),r.Browser.android||this.on("tileunload",this._onTileRemove)},createTile:function(t,e){var n=document.createElement("img");return r.DomEvent.on(n,"load",r.bind(this._tileOnLoad,this,e,n)),r.DomEvent.on(n,"error",r.bind(this._tileOnError,this,e,n)),this.options.crossOrigin&&(n.crossOrigin=""),n.alt="",this._url?n.src=this.getTileUrl(t):this._fetch.then(function(){n.src=this.getTileUrl(t)}.bind(this))["catch"](function(t){console.error(t),e(t)}),n},getTileUrl:function(t){var e=i(t.x,t.y,t.z);return r.Util.template(this._url,{quadkey:e,subdomain:this._getSubdomain(t),culture:this.options.culture})},onAdd:function(t){t.on("moveend",this._updateAttribution,this),r.TileLayer.prototype.onAdd.call(this,t),this._attributions.forEach(function(e){t.attributionControl.addAttribution(e)})},onRemove:function(t){t.off("moveend",this._updateAttribution,this),this._attributions.forEach(function(e){t.attributionControl.removeAttribution(e)}),r.TileLayer.prototype.onRemove.call(this,t)},getMetaData:function(t,e){if(!(this._map||t&&e))return Promise.reject(new Error("If layer is not attached to map, you must provide LatLng and zoom"));t=t||this._map.getCenter(),e=e||this._map.getZoom();var n=r.Util.template(r.TileLayer.Bing.POINT_METADATA_URL,{bingMapsKey:this.options.bingMapsKey,imagerySet:this.options.imagerySet,z:e,lat:t.lat,lng:t.lng});return a(n,{jsonpCallback:"jsonp"}).then(function(t){return t.json()})["catch"](console.error.bind(console))},_metaDataOnLoad:function(t){if(200!==t.statusCode)throw new Error("Bing Imagery Metadata error: \n"+JSON.stringify(t,null,"  "));var e=t.resourceSets[0].resources[0];return this._url=e.imageUrl,this._imageryProviders=e.imageryProviders,this.options.subdomains=e.imageUrlSubdomains,this._updateAttribution(),Promise.resolve()},_updateAttribution:function(){var t=this._map;if(t&&t.attributionControl){var e=t.getZoom(),n=o(t.getBounds().toBBoxString());this._fetch.then(function(){var i=this._getAttributions(n,e),o=this._attributions;i.forEach(function(e){o.indexOf(e)>-1||t.attributionControl.addAttribution(e)}),o.filter(function(e){i.indexOf(e)>-1||t.attributionControl.removeAttribution(e)}),this._attributions=i}.bind(this))}},_getAttributions:function(t,e){return this._imageryProviders.reduce(function(n,i){for(var o=0;o<i.coverageAreas.length;o++)if(s(t,i.coverageAreas[o].bbox)&&e>=i.coverageAreas[o].zoomMin&&e<=i.coverageAreas[o].zoomMax)return n.push(i.attribution),n;return n},[])}}),r.tileLayer.bing=function(t){return new r.TileLayer.Bing(t)},e.exports=r.TileLayer.Bing}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"bbox-intersect":2,"fetch-jsonp":3}],2:[function(t,e,n){e.exports=function(t,e){return t[0]>e[2]||t[2]<e[0]||t[3]<e[1]||t[1]>e[3]?!1:!0}},{}],3:[function(t,e,n){!function(t,i){if("function"==typeof define&&define.amd)define(["exports","module"],i);else if("undefined"!=typeof n&&"undefined"!=typeof e)i(n,e);else{var o={exports:{}};i(o.exports,o),t.fetchJsonp=o.exports}}(this,function(t,e){"use strict";function n(){return"jsonp_"+Date.now()+"_"+Math.ceil(1e5*Math.random())}function i(t){try{delete window[t]}catch(e){window[t]=void 0}}function o(t){var e=document.getElementById(t);document.getElementsByTagName("head")[0].removeChild(e)}var r={timeout:5e3,jsonpCallback:"callback",jsonpCallbackFunction:null},a=function(t){var e=void 0===arguments[1]?{}:arguments[1],a=null!=e.timeout?e.timeout:r.timeout,s=null!=e.jsonpCallback?e.jsonpCallback:r.jsonpCallback,u=void 0;return new Promise(function(r,l){var c=e.jsonpCallbackFunction||n();window[c]=function(t){r({ok:!0,json:function(){return Promise.resolve(t)}}),u&&clearTimeout(u),o(s+"_"+c),i(c)},t+=-1===t.indexOf("?")?"?":"&";var d=document.createElement("script");d.setAttribute("src",t+s+"="+c),d.id=s+"_"+c,document.getElementsByTagName("head")[0].appendChild(d),u=setTimeout(function(){l(new Error("JSONP request to "+t+" timed out")),i(c),o(s+"_"+c)},a)})};e.exports=a})},{}]},{},[1]);
+/*!
+ * clipboard.js v1.5.15
+ * https://zenorocha.github.io/clipboard.js
+ *
+ * Licensed MIT © Zeno Rocha
+ */
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Clipboard = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/**
+ * A polyfill for Element.matches()
+ */
+if (Element && !Element.prototype.matches) {
+    var proto = Element.prototype;
+
+    proto.matches = proto.matchesSelector ||
+                    proto.mozMatchesSelector ||
+                    proto.msMatchesSelector ||
+                    proto.oMatchesSelector ||
+                    proto.webkitMatchesSelector;
+}
+
+/**
+ * Finds the closest parent that matches a selector.
+ *
+ * @param {Element} element
+ * @param {String} selector
+ * @return {Function}
+ */
+function closest (element, selector) {
+    while (element && element !== document) {
+        if (element.matches(selector)) return element;
+        element = element.parentNode;
+    }
+}
+
+module.exports = closest;
+
+},{}],2:[function(require,module,exports){
+var closest = require('./closest');
+
+/**
+ * Delegates event to a selector.
+ *
+ * @param {Element} element
+ * @param {String} selector
+ * @param {String} type
+ * @param {Function} callback
+ * @param {Boolean} useCapture
+ * @return {Object}
+ */
+function delegate(element, selector, type, callback, useCapture) {
+    var listenerFn = listener.apply(this, arguments);
+
+    element.addEventListener(type, listenerFn, useCapture);
+
+    return {
+        destroy: function() {
+            element.removeEventListener(type, listenerFn, useCapture);
+        }
+    }
+}
+
+/**
+ * Finds closest match and invokes callback.
+ *
+ * @param {Element} element
+ * @param {String} selector
+ * @param {String} type
+ * @param {Function} callback
+ * @return {Function}
+ */
+function listener(element, selector, type, callback) {
+    return function(e) {
+        e.delegateTarget = closest(e.target, selector);
+
+        if (e.delegateTarget) {
+            callback.call(element, e);
+        }
+    }
+}
+
+module.exports = delegate;
+
+},{"./closest":1}],3:[function(require,module,exports){
+/**
+ * Check if argument is a HTML element.
+ *
+ * @param {Object} value
+ * @return {Boolean}
+ */
+exports.node = function(value) {
+    return value !== undefined
+        && value instanceof HTMLElement
+        && value.nodeType === 1;
+};
+
+/**
+ * Check if argument is a list of HTML elements.
+ *
+ * @param {Object} value
+ * @return {Boolean}
+ */
+exports.nodeList = function(value) {
+    var type = Object.prototype.toString.call(value);
+
+    return value !== undefined
+        && (type === '[object NodeList]' || type === '[object HTMLCollection]')
+        && ('length' in value)
+        && (value.length === 0 || exports.node(value[0]));
+};
+
+/**
+ * Check if argument is a string.
+ *
+ * @param {Object} value
+ * @return {Boolean}
+ */
+exports.string = function(value) {
+    return typeof value === 'string'
+        || value instanceof String;
+};
+
+/**
+ * Check if argument is a function.
+ *
+ * @param {Object} value
+ * @return {Boolean}
+ */
+exports.fn = function(value) {
+    var type = Object.prototype.toString.call(value);
+
+    return type === '[object Function]';
+};
+
+},{}],4:[function(require,module,exports){
+var is = require('./is');
+var delegate = require('delegate');
+
+/**
+ * Validates all params and calls the right
+ * listener function based on its target type.
+ *
+ * @param {String|HTMLElement|HTMLCollection|NodeList} target
+ * @param {String} type
+ * @param {Function} callback
+ * @return {Object}
+ */
+function listen(target, type, callback) {
+    if (!target && !type && !callback) {
+        throw new Error('Missing required arguments');
+    }
+
+    if (!is.string(type)) {
+        throw new TypeError('Second argument must be a String');
+    }
+
+    if (!is.fn(callback)) {
+        throw new TypeError('Third argument must be a Function');
+    }
+
+    if (is.node(target)) {
+        return listenNode(target, type, callback);
+    }
+    else if (is.nodeList(target)) {
+        return listenNodeList(target, type, callback);
+    }
+    else if (is.string(target)) {
+        return listenSelector(target, type, callback);
+    }
+    else {
+        throw new TypeError('First argument must be a String, HTMLElement, HTMLCollection, or NodeList');
+    }
+}
+
+/**
+ * Adds an event listener to a HTML element
+ * and returns a remove listener function.
+ *
+ * @param {HTMLElement} node
+ * @param {String} type
+ * @param {Function} callback
+ * @return {Object}
+ */
+function listenNode(node, type, callback) {
+    node.addEventListener(type, callback);
+
+    return {
+        destroy: function() {
+            node.removeEventListener(type, callback);
+        }
+    }
+}
+
+/**
+ * Add an event listener to a list of HTML elements
+ * and returns a remove listener function.
+ *
+ * @param {NodeList|HTMLCollection} nodeList
+ * @param {String} type
+ * @param {Function} callback
+ * @return {Object}
+ */
+function listenNodeList(nodeList, type, callback) {
+    Array.prototype.forEach.call(nodeList, function(node) {
+        node.addEventListener(type, callback);
+    });
+
+    return {
+        destroy: function() {
+            Array.prototype.forEach.call(nodeList, function(node) {
+                node.removeEventListener(type, callback);
+            });
+        }
+    }
+}
+
+/**
+ * Add an event listener to a selector
+ * and returns a remove listener function.
+ *
+ * @param {String} selector
+ * @param {String} type
+ * @param {Function} callback
+ * @return {Object}
+ */
+function listenSelector(selector, type, callback) {
+    return delegate(document.body, selector, type, callback);
+}
+
+module.exports = listen;
+
+},{"./is":3,"delegate":2}],5:[function(require,module,exports){
+function select(element) {
+    var selectedText;
+
+    if (element.nodeName === 'SELECT') {
+        element.focus();
+
+        selectedText = element.value;
+    }
+    else if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
+        element.focus();
+        element.setSelectionRange(0, element.value.length);
+
+        selectedText = element.value;
+    }
+    else {
+        if (element.hasAttribute('contenteditable')) {
+            element.focus();
+        }
+
+        var selection = window.getSelection();
+        var range = document.createRange();
+
+        range.selectNodeContents(element);
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        selectedText = selection.toString();
+    }
+
+    return selectedText;
+}
+
+module.exports = select;
+
+},{}],6:[function(require,module,exports){
+function E () {
+  // Keep this empty so it's easier to inherit from
+  // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
+}
+
+E.prototype = {
+  on: function (name, callback, ctx) {
+    var e = this.e || (this.e = {});
+
+    (e[name] || (e[name] = [])).push({
+      fn: callback,
+      ctx: ctx
+    });
+
+    return this;
+  },
+
+  once: function (name, callback, ctx) {
+    var self = this;
+    function listener () {
+      self.off(name, listener);
+      callback.apply(ctx, arguments);
+    };
+
+    listener._ = callback
+    return this.on(name, listener, ctx);
+  },
+
+  emit: function (name) {
+    var data = [].slice.call(arguments, 1);
+    var evtArr = ((this.e || (this.e = {}))[name] || []).slice();
+    var i = 0;
+    var len = evtArr.length;
+
+    for (i; i < len; i++) {
+      evtArr[i].fn.apply(evtArr[i].ctx, data);
+    }
+
+    return this;
+  },
+
+  off: function (name, callback) {
+    var e = this.e || (this.e = {});
+    var evts = e[name];
+    var liveEvents = [];
+
+    if (evts && callback) {
+      for (var i = 0, len = evts.length; i < len; i++) {
+        if (evts[i].fn !== callback && evts[i].fn._ !== callback)
+          liveEvents.push(evts[i]);
+      }
+    }
+
+    // Remove event from queue to prevent memory leak
+    // Suggested by https://github.com/lazd
+    // Ref: https://github.com/scottcorgan/tiny-emitter/commit/c6ebfaa9bc973b33d110a84a307742b7cf94c953#commitcomment-5024910
+
+    (liveEvents.length)
+      ? e[name] = liveEvents
+      : delete e[name];
+
+    return this;
+  }
+};
+
+module.exports = E;
+
+},{}],7:[function(require,module,exports){
+(function (global, factory) {
+    if (typeof define === "function" && define.amd) {
+        define(['module', 'select'], factory);
+    } else if (typeof exports !== "undefined") {
+        factory(module, require('select'));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod, global.select);
+        global.clipboardAction = mod.exports;
+    }
+})(this, function (module, _select) {
+    'use strict';
+
+    var _select2 = _interopRequireDefault(_select);
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+
+    var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+        return typeof obj;
+    } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+        }
+    }
+
+    var _createClass = function () {
+        function defineProperties(target, props) {
+            for (var i = 0; i < props.length; i++) {
+                var descriptor = props[i];
+                descriptor.enumerable = descriptor.enumerable || false;
+                descriptor.configurable = true;
+                if ("value" in descriptor) descriptor.writable = true;
+                Object.defineProperty(target, descriptor.key, descriptor);
+            }
+        }
+
+        return function (Constructor, protoProps, staticProps) {
+            if (protoProps) defineProperties(Constructor.prototype, protoProps);
+            if (staticProps) defineProperties(Constructor, staticProps);
+            return Constructor;
+        };
+    }();
+
+    var ClipboardAction = function () {
+        /**
+         * @param {Object} options
+         */
+        function ClipboardAction(options) {
+            _classCallCheck(this, ClipboardAction);
+
+            this.resolveOptions(options);
+            this.initSelection();
+        }
+
+        /**
+         * Defines base properties passed from constructor.
+         * @param {Object} options
+         */
+
+
+        _createClass(ClipboardAction, [{
+            key: 'resolveOptions',
+            value: function resolveOptions() {
+                var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+                this.action = options.action;
+                this.emitter = options.emitter;
+                this.target = options.target;
+                this.text = options.text;
+                this.trigger = options.trigger;
+
+                this.selectedText = '';
+            }
+        }, {
+            key: 'initSelection',
+            value: function initSelection() {
+                if (this.text) {
+                    this.selectFake();
+                } else if (this.target) {
+                    this.selectTarget();
+                }
+            }
+        }, {
+            key: 'selectFake',
+            value: function selectFake() {
+                var _this = this;
+
+                var isRTL = document.documentElement.getAttribute('dir') == 'rtl';
+
+                this.removeFake();
+
+                this.fakeHandlerCallback = function () {
+                    return _this.removeFake();
+                };
+                this.fakeHandler = document.body.addEventListener('click', this.fakeHandlerCallback) || true;
+
+                this.fakeElem = document.createElement('textarea');
+                // Prevent zooming on iOS
+                this.fakeElem.style.fontSize = '12pt';
+                // Reset box model
+                this.fakeElem.style.border = '0';
+                this.fakeElem.style.padding = '0';
+                this.fakeElem.style.margin = '0';
+                // Move element out of screen horizontally
+                this.fakeElem.style.position = 'absolute';
+                this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
+                // Move element to the same position vertically
+                var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+                this.fakeElem.addEventListener('focus', window.scrollTo(0, yPosition));
+                this.fakeElem.style.top = yPosition + 'px';
+
+                this.fakeElem.setAttribute('readonly', '');
+                this.fakeElem.value = this.text;
+
+                document.body.appendChild(this.fakeElem);
+
+                this.selectedText = (0, _select2.default)(this.fakeElem);
+                this.copyText();
+            }
+        }, {
+            key: 'removeFake',
+            value: function removeFake() {
+                if (this.fakeHandler) {
+                    document.body.removeEventListener('click', this.fakeHandlerCallback);
+                    this.fakeHandler = null;
+                    this.fakeHandlerCallback = null;
+                }
+
+                if (this.fakeElem) {
+                    document.body.removeChild(this.fakeElem);
+                    this.fakeElem = null;
+                }
+            }
+        }, {
+            key: 'selectTarget',
+            value: function selectTarget() {
+                this.selectedText = (0, _select2.default)(this.target);
+                this.copyText();
+            }
+        }, {
+            key: 'copyText',
+            value: function copyText() {
+                var succeeded = void 0;
+
+                try {
+                    succeeded = document.execCommand(this.action);
+                } catch (err) {
+                    succeeded = false;
+                }
+
+                this.handleResult(succeeded);
+            }
+        }, {
+            key: 'handleResult',
+            value: function handleResult(succeeded) {
+                this.emitter.emit(succeeded ? 'success' : 'error', {
+                    action: this.action,
+                    text: this.selectedText,
+                    trigger: this.trigger,
+                    clearSelection: this.clearSelection.bind(this)
+                });
+            }
+        }, {
+            key: 'clearSelection',
+            value: function clearSelection() {
+                if (this.target) {
+                    this.target.blur();
+                }
+
+                window.getSelection().removeAllRanges();
+            }
+        }, {
+            key: 'destroy',
+            value: function destroy() {
+                this.removeFake();
+            }
+        }, {
+            key: 'action',
+            set: function set() {
+                var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'copy';
+
+                this._action = action;
+
+                if (this._action !== 'copy' && this._action !== 'cut') {
+                    throw new Error('Invalid "action" value, use either "copy" or "cut"');
+                }
+            },
+            get: function get() {
+                return this._action;
+            }
+        }, {
+            key: 'target',
+            set: function set(target) {
+                if (target !== undefined) {
+                    if (target && (typeof target === 'undefined' ? 'undefined' : _typeof(target)) === 'object' && target.nodeType === 1) {
+                        if (this.action === 'copy' && target.hasAttribute('disabled')) {
+                            throw new Error('Invalid "target" attribute. Please use "readonly" instead of "disabled" attribute');
+                        }
+
+                        if (this.action === 'cut' && (target.hasAttribute('readonly') || target.hasAttribute('disabled'))) {
+                            throw new Error('Invalid "target" attribute. You can\'t cut text from elements with "readonly" or "disabled" attributes');
+                        }
+
+                        this._target = target;
+                    } else {
+                        throw new Error('Invalid "target" value, use a valid Element');
+                    }
+                }
+            },
+            get: function get() {
+                return this._target;
+            }
+        }]);
+
+        return ClipboardAction;
+    }();
+
+    module.exports = ClipboardAction;
+});
+
+},{"select":5}],8:[function(require,module,exports){
+(function (global, factory) {
+    if (typeof define === "function" && define.amd) {
+        define(['module', './clipboard-action', 'tiny-emitter', 'good-listener'], factory);
+    } else if (typeof exports !== "undefined") {
+        factory(module, require('./clipboard-action'), require('tiny-emitter'), require('good-listener'));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod, global.clipboardAction, global.tinyEmitter, global.goodListener);
+        global.clipboard = mod.exports;
+    }
+})(this, function (module, _clipboardAction, _tinyEmitter, _goodListener) {
+    'use strict';
+
+    var _clipboardAction2 = _interopRequireDefault(_clipboardAction);
+
+    var _tinyEmitter2 = _interopRequireDefault(_tinyEmitter);
+
+    var _goodListener2 = _interopRequireDefault(_goodListener);
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+        }
+    }
+
+    var _createClass = function () {
+        function defineProperties(target, props) {
+            for (var i = 0; i < props.length; i++) {
+                var descriptor = props[i];
+                descriptor.enumerable = descriptor.enumerable || false;
+                descriptor.configurable = true;
+                if ("value" in descriptor) descriptor.writable = true;
+                Object.defineProperty(target, descriptor.key, descriptor);
+            }
+        }
+
+        return function (Constructor, protoProps, staticProps) {
+            if (protoProps) defineProperties(Constructor.prototype, protoProps);
+            if (staticProps) defineProperties(Constructor, staticProps);
+            return Constructor;
+        };
+    }();
+
+    function _possibleConstructorReturn(self, call) {
+        if (!self) {
+            throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        }
+
+        return call && (typeof call === "object" || typeof call === "function") ? call : self;
+    }
+
+    function _inherits(subClass, superClass) {
+        if (typeof superClass !== "function" && superClass !== null) {
+            throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+        }
+
+        subClass.prototype = Object.create(superClass && superClass.prototype, {
+            constructor: {
+                value: subClass,
+                enumerable: false,
+                writable: true,
+                configurable: true
+            }
+        });
+        if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+    }
+
+    var Clipboard = function (_Emitter) {
+        _inherits(Clipboard, _Emitter);
+
+        /**
+         * @param {String|HTMLElement|HTMLCollection|NodeList} trigger
+         * @param {Object} options
+         */
+        function Clipboard(trigger, options) {
+            _classCallCheck(this, Clipboard);
+
+            var _this = _possibleConstructorReturn(this, (Clipboard.__proto__ || Object.getPrototypeOf(Clipboard)).call(this));
+
+            _this.resolveOptions(options);
+            _this.listenClick(trigger);
+            return _this;
+        }
+
+        /**
+         * Defines if attributes would be resolved using internal setter functions
+         * or custom functions that were passed in the constructor.
+         * @param {Object} options
+         */
+
+
+        _createClass(Clipboard, [{
+            key: 'resolveOptions',
+            value: function resolveOptions() {
+                var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+                this.action = typeof options.action === 'function' ? options.action : this.defaultAction;
+                this.target = typeof options.target === 'function' ? options.target : this.defaultTarget;
+                this.text = typeof options.text === 'function' ? options.text : this.defaultText;
+            }
+        }, {
+            key: 'listenClick',
+            value: function listenClick(trigger) {
+                var _this2 = this;
+
+                this.listener = (0, _goodListener2.default)(trigger, 'click', function (e) {
+                    return _this2.onClick(e);
+                });
+            }
+        }, {
+            key: 'onClick',
+            value: function onClick(e) {
+                var trigger = e.delegateTarget || e.currentTarget;
+
+                if (this.clipboardAction) {
+                    this.clipboardAction = null;
+                }
+
+                this.clipboardAction = new _clipboardAction2.default({
+                    action: this.action(trigger),
+                    target: this.target(trigger),
+                    text: this.text(trigger),
+                    trigger: trigger,
+                    emitter: this
+                });
+            }
+        }, {
+            key: 'defaultAction',
+            value: function defaultAction(trigger) {
+                return getAttributeValue('action', trigger);
+            }
+        }, {
+            key: 'defaultTarget',
+            value: function defaultTarget(trigger) {
+                var selector = getAttributeValue('target', trigger);
+
+                if (selector) {
+                    return document.querySelector(selector);
+                }
+            }
+        }, {
+            key: 'defaultText',
+            value: function defaultText(trigger) {
+                return getAttributeValue('text', trigger);
+            }
+        }, {
+            key: 'destroy',
+            value: function destroy() {
+                this.listener.destroy();
+
+                if (this.clipboardAction) {
+                    this.clipboardAction.destroy();
+                    this.clipboardAction = null;
+                }
+            }
+        }]);
+
+        return Clipboard;
+    }(_tinyEmitter2.default);
+
+    /**
+     * Helper function to retrieve attribute value.
+     * @param {String} suffix
+     * @param {Element} element
+     */
+    function getAttributeValue(suffix, element) {
+        var attribute = 'data-clipboard-' + suffix;
+
+        if (!element.hasAttribute(attribute)) {
+            return;
+        }
+
+        return element.getAttribute(attribute);
+    }
+
+    module.exports = Clipboard;
+});
+
+},{"./clipboard-action":7,"good-listener":4,"tiny-emitter":6}]},{},[8])(8)
+});
 !function(n,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t(n.ease={})}(this,function(n){"use strict";function t(n,t){return null==n||isNaN(n)?t:+n}function u(n,u){n=Math.max(1,t(n,1)),u=t(u,.3)*A;var i=u*Math.asin(1/n);return function(t){return n*Math.pow(2,10*--t)*Math.sin((i-t)/u)}}function i(n,u){n=Math.max(1,t(n,1)),u=t(u,.3)*A;var i=u*Math.asin(1/n);return function(t){return n*Math.pow(2,-10*t)*Math.sin((t-i)/u)+1}}function r(n,u){n=Math.max(1,t(n,1)),u=1.5*t(u,.3)*A;var i=u*Math.asin(1/n);return function(t){return n*((t=2*t-1)<0?Math.pow(2,10*t)*Math.sin((i-t)/u):Math.pow(2,-10*t)*Math.sin((t-i)/u)+2)/2}}function o(n){return n=t(n,1.70158),function(t){return t*t*((n+1)*t-n)}}function e(n){return n=t(n,1.70158),function(t){return--t*t*((n+1)*t+n)+1}}function c(n){return n=1.525*t(n,1.70158),function(t){return((t*=2)<1?t*t*((n+1)*t-n):(t-=2)*t*((n+1)*t+n)+2)/2}}function a(n){return 1-f(1-n)}function f(n){return B>n?L*n*n:D>n?L*(n-=C)*n+E:G>n?L*(n-=F)*n+H:L*(n-=J)*n+K}function h(n){return((n*=2)<=1?1-f(1-n):f(n-1)+1)/2}function s(n){return 1-Math.sqrt(1-n*n)}function M(n){return Math.sqrt(1- --n*n)}function p(n){return((n*=2)<=1?1-Math.sqrt(1-n*n):Math.sqrt(1-(n-=2)*n)+1)/2}function l(n){return Math.pow(2,10*n-10)}function w(n){return 1-Math.pow(2,-10*n)}function b(n){return((n*=2)<=1?Math.pow(2,10*n-10):2-Math.pow(2,10-10*n))/2}function d(n){return 1-Math.cos(n*R)}function y(n){return Math.sin(n*R)}function x(n){return(1-Math.cos(Q*n))/2}function q(n){return n*n*n}function k(n){return--n*n*n+1}function m(n){return((n*=2)<=1?n*n*n:(n-=2)*n*n+2)/2}function v(n){return n*n}function P(n){return n*(2-n)}function O(n){return((n*=2)<=1?n*n:--n*(2-n)+1)/2}function g(n){return+n}function I(n){return n=t(n,3),function(t){return Math.pow(t,n)}}function N(n){return n=t(n,3),function(t){return 1-Math.pow(1-t,n)}}function j(n){return n=t(n,3),function(t){return((t*=2)<=1?Math.pow(t,n):2-Math.pow(2-t,n))/2}}function z(n,t,u){var i=(n+="").indexOf("-");return 0>i&&(n+="-in"),arguments.length>1&&T.hasOwnProperty(n)?T[n](t,u):S.hasOwnProperty(n)?S[n]:g}var A=1/(2*Math.PI),B=4/11,C=6/11,D=8/11,E=.75,F=9/11,G=10/11,H=.9375,J=21/22,K=63/64,L=1/B/B,Q=Math.PI,R=Q/2,S={"linear-in":g,"linear-out":g,"linear-in-out":g,"quad-in":v,"quad-out":P,"quad-in-out":O,"cubic-in":q,"cubic-out":k,"cubic-in-out":m,"poly-in":q,"poly-out":k,"poly-in-out":m,"sin-in":d,"sin-out":y,"sin-in-out":x,"exp-in":l,"exp-out":w,"exp-in-out":b,"circle-in":s,"circle-out":M,"circle-in-out":p,"bounce-in":a,"bounce-out":f,"bounce-in-out":h,"back-in":o(),"back-out":e(),"back-in-out":c(),"elastic-in":u(),"elastic-out":i(),"elastic-in-out":r()},T={"poly-in":I,"poly-out":N,"poly-in-out":j,"back-in":o,"back-out":e,"back-in-out":c,"elastic-in":u,"elastic-out":i,"elastic-in-out":r};n.ease=z});
 
 /* Modernizr 2.8.3 (Custom Build) | MIT & BSD
@@ -13060,6 +13813,8 @@ Focus.Volumes = [
             type: 'Feature Article',
             title: 'Living and Spirtual Worlds of Mali\'s Dogon People',
             author: 'Thomas Wikle',
+            citationAuthor: 'Wikle, T.',
+            doi: '',
             description: '',
             thumbnail: 'publications/articles/mali/img/figure13.png',
             url: 'publications/articles/mali/index.html',
@@ -13074,7 +13829,9 @@ Focus.Volumes = [
             type: 'Photo Essay',
             title: 'Postcards from Oaxaca\'s Past and Present',
             author: 'Scott Brady',
+            citationAuthor: 'Brady, S.',
             description: '',
+            doi: '',
             thumbnail: 'publications/photoessays/oaxaca/img/1a.jpg',
             url: 'publications/photoessays/oaxaca/index.html',
             location: []
@@ -13090,7 +13847,9 @@ Focus.Volumes = [
             type: 'Feature Article',
             title: 'From Ranching to Fishing – the Cultural Landscape of the Northern Pacific Coast of Baja California, Mexico',
             author: 'Antoinette WinklerPrins, Pablo Alvarez, Gerardo Bocco, Ileana Espejel',
+            citationAuthor: 'WinklerPrins, A., Alvarez, P., Bocco, G., & Espejel, I.',
             description: '',
+            doi: '10.21690/foge/2016.59.1f',
             thumbnail: 'publications/articles/baja/img/fig1.jpg',
             url: 'publications/articles/baja/index.html',
             location: [{
@@ -13105,6 +13864,9 @@ Focus.Volumes = [
             title: 'Many Destinations, One Place Called Home:  Migration and Livelihood for Rural Bolivians',
             author: 'Marie Price',
             description: '',
+            doi: '10.21690/foge/2016.59.1p',
+            citationAuthor: 'Price, M.',
+            date: '',
             thumbnail: 'publications/photoessays/bolivia/img/figure1.jpg',
             url: 'publications/photoessays/bolivia/index.html',
             location: [{
