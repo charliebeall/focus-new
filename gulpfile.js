@@ -264,7 +264,13 @@ gulp.task('copy2020', function() {
 });
 
 gulp.task('html', function () {
-    return gulp.src(['src/**/*.html', 'src/**/*.{png,jpg,jpeg,svg,ico,mp4,webm,ogg}', 'src/**/combined.js', 'src/**/combined.css', 'src/**/*.js'])
+    return gulp.src([
+        'src/**/*.html',
+        'src/**/*.{png,jpg,jpeg,svg,ico,mp4,webm,ogg,csv,json}',
+        'src/**/combined.js',
+        'src/**/combined.css',
+        'src/**/*.js'
+    ])
         .pipe(gulpif('*.html', useref()))
         .pipe(gulpif('*.html', inject(gulp.src(['./src/templates.html']), {
             starttag: '<!-- inject:templates:{{ext}} -->',

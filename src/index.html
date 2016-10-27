@@ -429,28 +429,6 @@
         </div>
         <!-- inject:templates:html -->
         <!-- endinject -->
-        <script id="menu-items-template" type="text/template">
-            <div class="items"></div>
-        </script>
-        <script id="menu-item-template" type="text/template">
-            <div class="publication col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="publication-wrapper">
-                    <span class="image" style="background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(<%=thumbnail%>); background-size:cover;"></span>
-                    <a href="<%= url %>" class="<%= type.replace(' ', '').toLowerCase() %>">
-                        <h2><%= type %></h2>
-                        <div class="content">
-                            <p><%= title %></p>
-                        </div>
-                        <div class="author">
-                            <p><%= author %></p>
-                        </div>
-                        <div class="date">
-                            <p><%= date %></p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </script>
         <!-- build:js js/index1.js -->
         <script src='../bower_components/jquery/dist/jquery.min.js'></script>
         <script src="../bower_components/underscore/underscore.js"></script>
