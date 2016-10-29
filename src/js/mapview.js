@@ -1400,11 +1400,12 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
             };
 
             var mouseover = _.throttle(function (e) {
-                $(this).tooltip('hide');
+                var $this = $(this);
+                $this.tooltip('hide');
                 e.preventDefault();
                 e.stopPropagation();
-                var offset = $(this).offset();
-                var id = $(this).attr('data-layer-id');
+                var offset = $this.offset();
+                var id = $this.attr('data-layer-id');
                 var point = me._mapView0.getLayerPoint(id);
                 try {
                     me._mapView0.highlight(id);
@@ -1457,17 +1458,20 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                         var len = this.getTotalLength();
                         return function(t) { return (d3.interpolateString("0," + len, len + ",0"))(t) };
                     });
-                $('#text').addClass('transparent');
+                var $text = $('#text');
+                $text.addClass('transparent');
                 $('#overview-map').removeClass('transparent');
-                $('#text').on('click', textClick);
-                $(this).addClass('selected-link');
+                $text.on('click', textClick);
+                $this.addClass('selected-link');
 
             }, 10);
-            $(this).on('mouseenter touchstart', mouseover).on('mouseleave touchend click', function (e) {
-                $(this).tooltip('hide');
+
+            var mouseleave = _.throttle(function (e) {
+                var $this = $(this);
+                $this.tooltip('hide');
                 e.preventDefault();
                 e.stopPropagation();
-                var id = $(this).attr('data-layer-id');
+                var id = $this.attr('data-layer-id');
                 try {
                     me._mapView0.unhighlight(id);
                 }
@@ -1475,17 +1479,15 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                     console.log(ex);
                 }
                 me.$el.find('#' + id + '-line').remove();
-                $('#text').removeClass('transparent');
+
+                var $text = $('#text');
+                $text.removeClass('transparent');
                 $('#overview-map').addClass('transparent');
-                $('#text').off('click', textClick);
-                $(this).removeClass('selected-link');
-            }); /*.on('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-                //var id = $(this).attr('data-layer-id');
-                //me._mapView0._engine.zoomToLayer(id);
-            });*/
+                $text.off('click', textClick);
+                $this.removeClass('selected-link');
+            }, 10);
+
+            $(this).on('mouseenter touchstart', mouseover).on('mouseleave touchend click', mouseleave);
         });
     },
     drawLine: function (event) {
@@ -1523,19 +1525,6 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
     },
     loadScenes: function () {
         var me = this;
-        /*
-        $.ajax({
-            url: 'scenes.json',
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-                me._scenesLoaded(data.scenes);
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log(errorThrown);
-            }
-        });
-        */
         me._loadFeatures(scenes.features);
         me._scenesLoaded(scenes.scenes);
 

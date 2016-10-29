@@ -9,7 +9,7 @@ Focus.Volumes = [
             citationAuthor: 'Wikle, T.',
             doi: '',
             description: '',
-            date: '10/26/16',
+            date: '10/27/16',
             thumbnail: 'publications/articles/mali/img/figure13.png',
             url: 'publications/articles/mali/index.html',
             location: [{
@@ -25,7 +25,7 @@ Focus.Volumes = [
             author: 'Scott Brady',
             citationAuthor: 'Brady, S.',
             description: '',
-            date: '10/26/16',
+            date: '10/27/16',
             doi: '',
             thumbnail: 'publications/photoessays/oaxaca/img/1a.jpg',
             url: 'publications/photoessays/oaxaca/index.html',
@@ -35,7 +35,7 @@ Focus.Volumes = [
             title: 'Quiz Two:  Sustainability and Conservation',
             author: 'Wesley Reisser',
             description: '',
-            date: '10/26/16',
+            date: '10/27/16',
             thumbnail: 'publications/quizzes/two/img/2050_logo.png',
             url: 'publications/quizzes/two/index.html',
             location: []
