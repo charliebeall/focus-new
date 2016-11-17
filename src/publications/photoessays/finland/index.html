@@ -1,0 +1,1273 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Urban Agriculture in Helsinki, Finland</title>
+    <meta name="description" content="FOCUS on Geography: Urban Agriculture in Helsinki, Finland">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,bolivia,map">
+    <meta name="author" content="Marie Price">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Slabo+27px:400normal" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        body {
+            font-family: 'Lato', sans serif;
+        }
+        #text.photo-essay {
+            background: white;
+        }
+
+        #text h2, #text h3 {
+            color: rgba(0, 47, 108, 1);
+            font-family: 'Slabo 27px', sans serif;
+            text-transform: none;
+
+        }
+
+        div.author {
+            opacity: 1;
+        }
+
+        .photo-scene h2 {
+            background: linear-gradient(180deg,rgba(255,255,255,1),rgba(255,255,255,0))
+        }
+
+        .photo-scene p {
+            background: linear-gradient(0deg,rgba(255,255,255,.9) 90%,rgba(255,255,255,0));
+            color: rgba(0, 47, 108, 1);
+            text-shadow: none;
+        }
+        .photo-scene .author {
+            background: rgba(10, 95, 169, 0.95);
+        }
+
+        #text.photo-essay h2 {
+            color: rgba(242, 223, 6, 1);
+            text-shadow: 0px 1px 1px rgba(0, 47, 108, 1);
+            font-size: 50px;
+        }
+
+        span.place-text {
+            *font-family: 'Aladin', cursive;
+            color: #fff;
+        }
+
+        #text a, a.location, div.tooltip a {
+            color: rgba(0, 47, 108, 1) !important;
+            border-bottom-color: rgba(0, 47, 108, 1);
+        }
+
+        #text a:hover, a.location:hover, div.tooltip a {
+            background: rgba(0, 47, 108, 0.1);
+            text-decoration: none;
+        }
+
+        path.line {
+            stroke: rgba(0, 47, 108, 1) !important;
+        }
+        path.marker-path {
+            stroke: rgba(0, 47, 108, 1) !important;
+            fill: rgba(0, 47, 108, 1) !important;
+        }
+
+        #text h2 {
+            *text-shadow: 1px 0 0 #222, -1px 0 0 #222, 2px 0 0 #fff, -2px 0 0 #fff;
+            font-size: 40px;
+        }
+
+        #nav, #toggle-map {
+            background: rgba(0, 47, 108, 1);
+        }
+
+        #text {
+            *background: linear-gradient(90deg, rgba(254, 252, 238, 0.7), rgba(254, 252, 238, 1) 50%);
+            background: rgba(254, 252, 238, 1);
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: rgba(0, 47, 108, 1);
+            -webkit-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgba(0, 47, 108, 1);
+            transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-ms-fill {
+            background-color: rgba(0, 47, 108, 1);
+            -ms-transition: width 0.5s ease-in-out;
+        }
+
+        svg text {
+            font-family: 'Aladin', cursive;
+            font-size: 16px;
+            fill: #fff;
+        }
+
+        ul.grid {
+            top: 100px;
+            position: relative;
+            z-index: 100;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            justify-content: center;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 0 6em;
+            list-style: none;
+        }
+        li.grid-item {
+            display: block;
+            -webkit-flex: none;
+            flex: none;
+            width: 35%;
+            min-width: 180px;
+            padding: 10px;
+        }
+
+        .grid-item a {
+            border-bottom: none;
+        }
+
+        .grid-img {
+            display: block;
+            width: 100%;
+        }
+
+        .grid-link {
+            display: block;
+            padding: 13px 13px;
+            background: #fff;
+        }
+
+        .figure {
+            z-index: 1000;
+        }
+        p {
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<progress></progress>
+<div id="nav" class="dotstyle dotstyle-scaleup">
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <ul class="nav previous">
+        <li class="previous">
+            <a href="#"><span class="fa fa-chevron-up"></span></a>
+        </li>
+    </ul>
+    <ul class="nav sections">
+    </ul>
+    <ul class="nav next">
+        <li class="next">
+            <a href="#"><span class="fa fa-chevron-down"></span></a>
+        </li>
+    </ul>
+</div>
+<!-- Add your site or application content here -->
+<div id="background"></div>
+<div id="map" class="photo-essay"></div>
+<div id="overview-map" class="title-hidden transparent"></div>
+<div id="foreground"></div>
+<div id="photos"><div id="photo-caption"></div></div>
+<div id="shadow"></div>
+<div id="toggle-map" class="focus-black"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+<div id="main-nav" class="light">
+    <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+        <svg width="1000px" height="1000px">
+            <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800" style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+            <path id="pathE" d="M 300 500 L 700 500" style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+            <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200" style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+        </svg>
+
+        <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+    </div>
+    <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <div id="menu"></div>
+</div>
+<div id="text" class="photo-essay">
+    <div class="content scenes">
+        <section id="introduction" class="scene photo-scene" data-scene-id="place0">
+            <div class="intro">
+            <h2 class="title">Urban Agriculture in Helsinki, Finland</h2>
+            <div class="author">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-xs-3 col-sm-2 col-md-1 col-lg-1">
+                            <img class="author-photo" src="img/salbov.jpg"/>
+                        </div>
+                        <div class="col-12 col-xs-9 col-sm-10 col-md-11 col-lg-11">
+                            <div class="row">
+                                <div class="col-12 col-xs-12 name">
+                                    Sophia Albov
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-xs-12 organization">
+                                    Doctoral Student in Agricultural Sciences at the University of Helsinki, Helsinki, Finland
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2016.59.1p</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="figure" style="overflow: hidden;">
+                <ul class="grid">
+                    <li class="grid-item" style="opacity: 1; transform: translateX(169.738px) translateY(-60.1781px) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-20deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/figure1.jpg" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(89.0125px) translateY(-222.278px) scaleX(1.4) scaleY(1.4) scaleZ(1.4) rotateZ(1deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/figure2.jpg" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(-195.812px) translateY(-141.578px) scaleX(1.3) scaleY(1.3) scaleZ(1.3) rotateZ(15deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/figure3.jpg" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(332.538px) translateY(-549.941px) scaleX(1.4) scaleY(1.4) scaleZ(1.4) rotateZ(-17deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/figure4.jpg" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(-53.0875px) translateY(-549.541px) scaleX(1.2) scaleY(1.2) scaleZ(1.2) rotateZ(-5deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/figure5.jpg" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="z-index: 1; opacity: 1; transform: translateX(-184.412px) translateY(-408.541px) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-15deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/coauusimaa.svg" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(256.412px) translateY(-868.541px) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(24deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/coafinland.svg" alt="Some image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                Finland has become a predominantly urban society. When Finland gained its independence in 1917, only 10 percent of the population lived in urban areas. By 1960 that figure had risen to 55 percent, and presently 70 percent of Finns live in urban areas, according to the Finnish Environmental Institute. Yet most Finns, even those living in cities, have close ties to their cultural heritage and agricultural roots in the countryside. This photo journey explores the spaces, places, and practices of urban agriculture (UA) in Finland’s capital, Helsinki. The city sits at latitude 60.6˚ N and has approximately 600,000 residents. This might not seem like a place well suited for urban agriculture, but an enthusiastic population of growers and the long summer days make this a hotbed of UA development. UA has over a century-long history in Helsinki, and it is embedded in the fabric of the city through zoning regulations. Over the last decade, the number and types of projects have increased rapidly through both municipally supported and grassroots efforts. Grassroots UA projects include box and sack gardens in interstitial spaces, and the establishment of Finland’s first Community Supported Agriculture (CSA) project. This photo essay illustrates how each of the four main types of UA projects found in Helsinki---cottage allotments, allotment gardens, box gardening, and CSAs---fit into its urban landscape.
+            </p>
+        </section>
+        <section id="2" class="scene photo-scene" data-scene-id="place1">
+            <div class="row">
+            <div class="figure col-12 col-sm-6" style="background-image:url(img/figure1.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/figure2.jpg);"></div>
+            </div>
+            <p>
+                Helsinki is an interwoven tapestry of built and green space. The downtown is a tightly packed collection of five- to seven-story buildings. However, even in the city center there is still greenspace, with numerous parks and pockets of forest. As you move away from the center, apartment buildings get taller and the green spaces get larger. By the edges of the city, each building is surrounding by its own parklike green space.
+            </p>
+        </section>
+        <section id="4" class="scene photo-scene" data-scene-id="place2">
+            <div class="figure " style="background-image:url(img/figure3.jpg);"></div>
+            <p>
+                The oldest type of UA in Helsinki is a Siirtolapuutarhat, which translates to “colony gardens,” but in casual speech they are called cottage allotments. The first garden was founded in 1918 and at present there are nine gardens with a total of 1,926 plots. These gardens are a mix of public and private space. The paths that run through the gardens are designated in the city plan as parkland and anyone is allowed access. However, the individual cottages and gardens are private.
+            </p>
+        </section>
+        <section id="5" class="scene photo-scene" data-scene-id="place3">
+            <div class="row">
+                <div class="figure col-12 col-sm-6" style="background-image:url(img/figure4.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/figure5.jpg);"></div>
+            </div>
+            <p>
+                The grounds of the gardens are designed to look like miniature villages, complete with whimsical street names, such as Pear or Strawberry lanes. The average-size plot is about 3,000 square feet and the cabins vary in size. There are no cars allowed in the gardens, yet the community restrooms, showers, and saunas can be located quite far from an individual cottage. Bicycles, therefore, are the preferred mode of transportation.
+            </p>
+        </section>
+        <section id="6" class="scene photo-scene" data-scene-id="place4">
+            <div class="figure " style="background-image:url(img/figure6.jpg);"></div>
+            <p>
+                Cottage owners are encouraged by the cottage association to live at their cottage for the duration of the summer season, from May to September. The cottages enjoy many municipal services, including mail delivery directly to the front door.
+            </p>
+        </section>
+        <section id="7" class="scene photo-scene" data-scene-id="place5">
+            <div class="figure " style="background-image:url(img/figure7.jpg);"></div>
+            <p>
+                In addition to the cultural and aesthetic values of the cottage allotments, they also provide a refuge in the city for Helsinki’s bees. Hives are a common sight on garden grounds.
+            </p>
+        </section>
+        <section id="8" class="scene photo-scene" data-scene-id="place6">
+            <div class="figure " style="background-image:url(img/figure8.jpg);"></div>
+            <p>
+                The second oldest type of UA in Helsinki is called Viljelyspalstat, translated as “plantation plots,” commonly referred to as allotments.  These allotments were formalized in the municipal plan in the early twentieth century as a place for the increasing population of urban dwellers to cultivate food. The plots are owned by the city and the space is part of the city plan. They are on long-term lease to management associations formed by the gardeners. Gardeners must apply through the association, but once they receive an allotment they are welcome to keep it indefinitely, as long as they pay their annual dues and plant every year. This arrangement leads to a low turnover in the allotment gardens; currently, waiting lists can be several years long.
+            </p>
+        </section>
+        <section id="9" class="scene photo-scene" data-scene-id="place7">
+            <div class="figure " style="background-image:url(img/figure9.jpg);"></div>
+            <p>
+                The gardeners do not have to fight to keep their space and there is no tension over zoning or land use. This means the gardens tend not to be politicized places, which creates a very relaxing atmosphere.
+            </p>
+        </section>
+        <section id="10" class="scene photo-scene" data-scene-id="place8">
+            <div class="row">
+            <div class="figure col-12 col-sm-6" style="background-image:url(img/figure8.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/figure9.jpg);"></div>
+            </div>
+                <p>
+                    One gardener likened her plot to a second living room. Permanent structures are not generally allowed, but it is not unusual to see barbeques and chairs. On any given evening, gardeners can be found relaxing in their garden. Another gardener explained that her garden was a way to “put her stress into the ground.”
+            </p>
+        </section>
+        <section id="11" class="scene photo-scene" data-scene-id="place9">
+            <div class="figure" style="background-image:url(img/figure10.jpg);"></div>
+            <p>
+                The third category of UA is sack and box gardening. Started on a wide scale in 2010 by the grassroots urban vitality and environmental organization, Dodo, sack gardens create another outlet for Helsinki’s enthusiastic urban gardeners. The ease and ability to relocate a particular sack garden makes them a workable solution to plant gardens in interstitial and unexpected places. These gardens have fewer plots than the allotment gardens, the space is not generally formally leased, and there is usually a shorter waiting list. The lack of a formal lease is not a problem, because the growing space is self-contained and not dependent on the particular ground where it is placed.
+            </p>
+        </section>
+        <section id="12" class="scene photo-scene" data-scene-id="place10">
+            <div class="figure" style="background-image:url(img/figure11.jpg);"></div>
+            <p>
+                Box gardens are approximately ten square feet each and serve as an example of how productive a small space can be. The box concept is similar to raised beds, but the boxes are taller so the gardener can tend the garden from a standing position. Kale and Swiss chard are some of the most popular box crops, as they are still difficult to find in supermarkets.
+            </p>
+        </section>
+        <section id="13" class="scene photo-scene" data-scene-id="place11">
+            <div class="row">
+                <div class="figure col-12 col-sm-6 contain" style="background-image:url(img/figure12.jpg);"></div><div class="figure col-12 col-sm-6 contain" style="background-image:url(img/figure13.jpg);"></div>
+            </div>
+            <p>
+                The most recent UA activity in Helsinki is the Kaupunkilaisten oma pelto, which translates to “city residents own field.” This is a community-supported agriculture (CSA) project started in 2011 and is referred to in English as the Herttoneimi CSA. The fields are located in the city of Vantaa, which is immediately adjacent to Helsinki. The fields are surrounded by forests and a neighborhood of single-family homes. They are also directly under one of the flight paths of nearby Helsinki International Airport. The members of the CSA rented this land and hired a farmer to produce their food.
+            </p>
+        </section>
+        <section id="14" class="scene photo-scene" data-scene-id="place12">
+            <div class="row">
+                <div class="figure col-12 col-sm-6" style="background-image:url(img/figure14.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/figure15.jpg);"></div>
+            </div>
+            <p>
+                All members of the CSA are required to perform fourteen hours of talkoot each growing season. Talkoot is a traditional concept of mutual assistance between friends and neighbors, with its origin in the countryside. Members are encouraged to perform talkoot in the way that works best for them, and talkoot activities range from fieldwork to administrative tasks. Even the youngest members are encouraged to participate as they are able, and special field days are organized for children to teach them about the origins of their food.
+            </p>
+        </section>
+        <section id="15" class="scene photo-scene" data-scene-id="place13">
+            <div class="figure " style="background-image:url(img/figure16.jpg);"></div>
+            <p>
+                There are pickups on Tuesday and Wednesday in various neighborhoods of the city, which creates a space for the 200+ members to meet and visit, as well as collect their generous vegetable harvest. The food from the CSA is organic and Demeter certified (biodynamic). This is one of the few opportunities in Helsinki to purchase truly local vegetables. While these are farmers’ markets, the vendors are usually middlemen selling produce similar to what is available in the grocery stores.
+            </p>
+        </section>
+        <section id="16" class="scene photo-scene" data-scene-id="place14">
+            <div class="figure " style="background-image:url(img/figure17.jpg);"></div>
+            <p>
+                From stress management, to desire for local food, to growing crops that cannot be found in the grocery store, Helsinki’s residents are enthusiastic participants in the global trend of UA. While doing fieldwork, it felt like every moment I was discovering more expressions of UA practice. Behind hedges and in boxes, Helsinki’s urban citizens are active urban growers.
+            </p>
+        </section>
+    </div>
+</div>
+<div id="progress">
+    <div id="bar"></div>
+</div>
+<div id="bar-top"></div>
+<div id="bar-bottom"></div>
+<!-- inject:templates:html -->
+<!-- endinject -->
+<script src="../../../js/combined.js"></script>
+<script>
+
+    Focus.Map = Focus.Map || {};
+    Focus.Map.defaultOptions = {
+        //color: 'rgba(140, 207, 150,1)',
+        //fillColor: 'rgba(140, 207, 150,1)'
+        color: 'rgba(242, 223, 6, 1)',
+        fillColor: 'rgba(242, 223, 6, 1)',
+        radius: 6,
+        weight: 10,
+        opacity: 0.3
+    };
+
+    var scenes = {
+        "features": [
+            {
+                "id": "1", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "View from Senate Square",
+                        "lon": 24.951972,
+                        "lat": 60.170056,
+                        "location": "60.170056, 24.951972",
+                        "id": 1
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            24.951972,
+                            60.170056
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "2", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Antti Korpin Tie Apartments",
+                        "lon": 24.965715,
+                        "lat": 60.218769,
+                        "location": "60.218769, 24.965715",
+                        "id": 2
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            24.965715,
+                            60.218769
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "3", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Vallila Cottage Allotment White Cottage Peak",
+                        "lon": 24.958256,
+                        "lat": 60.200326,
+                        "location": "60.200326, 24.958256",
+                        "id": 3
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            24.958256,
+                            60.200326
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "4", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Vallila Map",
+                        "lon": 24.958256,
+                        "lat": 60.200326,
+                        "location": "60.200326, 24.958256",
+                        "id": 4
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            24.958256,
+                            60.200326
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "5", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Vallila paths with bike",
+                    "lon": 24.958256,
+                    "lat": 60.200326,
+                    "location": "60.200326, 24.958256",
+                    "id": 5
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.958256,
+                        60.200326
+                    ]
+                }
+            }
+            },
+            {
+                "id": "6", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Valilla Posti Box",
+                    "lon": 24.958256,
+                    "lat": 60.200326,
+                    "location": "60.200326, 24.958256",
+                    "id": 6
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.958256,
+                        60.200326
+                    ]
+                }
+            }
+            },
+            {
+                "id": "7", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Vallila Bees",
+                    "lon": 24.958256,
+                    "lat": 60.200326,
+                    "location": "60.200326, 24.958256",
+                    "id": 7
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.958256,
+                        60.200326
+                    ]
+                }
+            }
+            },
+            {
+                "id": "8", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Viiki Allotment (Corn)",
+                    "lon": 25.048047,
+                    "lat": 60.218007,
+                    "location": "60.218007, 25.048047",
+                    "id": 8
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        25.048047,
+                        60.218007
+                    ]
+                }
+            }
+            },
+            {
+                "id": "9", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Lush garden western Helsinki",
+                    "lon": 24.895222,
+                    "lat": 60.197333,
+                    "location": "60.197333, 24.895222",
+                    "id": 9
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.895222,
+                        60.197333
+                    ]
+                }
+            }
+            },
+            {
+                "id": "10", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "\"Living room\" allotment ",
+                    "lon": 24.976724,
+                    "lat": 60.214224,
+                    "location": "60.214224, 24.976724",
+                    "id": 10
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.976724,
+                        60.214224
+                    ]
+                }
+            }
+            },
+            {
+                "id": "11", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Sack garden Kalastama",
+                    "lon": 24.970227,
+                    "lat": 60.190383,
+                    "location": "60.190383, 24.970227",
+                    "id": 11
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.970227,
+                        60.190383
+                    ]
+                }
+            }
+            },
+            {
+                "id": "12", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Kosela apartment garden",
+                    "lon": 24.959884,
+                    "lat": 60.218265,
+                    "location": "60.218265, 24.959884",
+                    "id": 12
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.959884,
+                        60.218265
+                    ]
+                }
+            }
+            },
+            {
+                "id": "13", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Viiki campus box garden",
+                    "lon": 25.018042,
+                    "lat": 60.225104,
+                    "location": "60.225104, 25.018042",
+                    "id": 13
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        25.018042,
+                        60.225104
+                    ]
+                }
+            }
+            },
+            {
+                "id": "14", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Heidi Hovi CSA ",
+                    "lon": 25.080898,
+                    "lat": 60.368632,
+                    "location": "60.368632, 25.080898",
+                    "id": 14
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        25.080898,
+                        60.368632
+                    ]
+                }
+            }
+            },
+            {
+                "id": "15", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Volunteer Talkoot",
+                    "lon": 25.080898,
+                    "lat": 60.368632,
+                    "location": "60.368632, 25.080898",
+                    "id": 15
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        25.080898,
+                        60.368632
+                    ]
+                }
+            }
+            },
+            {
+                "id": "16", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Potatoes Kalastama pickup point",
+                    "lon": 24.970227,
+                    "lat": 60.190383,
+                    "location": "60.190383, 24.970227",
+                    "id": 16
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.970227,
+                        60.190383
+                    ]
+                }
+            }
+            },
+            {
+                "id": "17", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Basket Kalastama pickup point",
+                    "lon": 24.970227,
+                    "lat": 60.190383,
+                    "location": "60.190383, 24.970227",
+                    "id": 17
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.970227,
+                        60.190383
+                    ]
+                }
+            }
+            },
+            {
+                "id": "18", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Vegtable share Kalastama pickup point",
+                    "lon": 24.970227,
+                    "lat": 60.190383,
+                    "location": "60.190383, 24.970227",
+                    "id": 18
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.970227,
+                        60.190383
+                    ]
+                }
+            }
+            },
+            {
+                "id": "19", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Teurastamo box garden",
+                    "lon": 24.972161,
+                    "lat": 60.190108,
+                    "location": "60.190108, 24.972161",
+                    "id": 19
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        24.972161,
+                        60.190108
+                    ]
+                }
+            }
+            },
+            {
+                "id": "helsinki",
+                "type": "geojson",
+                "data": {"geometry": {"type": "GeometryCollection", "geometries": [{"type": "Polygon", "coordinates": [[[25.19025, 60.285681], [25.196279, 60.281962], [25.21336, 60.290124], [25.22952, 60.29784], [25.252892, 60.297459], [25.254495, 60.295226], [25.253889, 60.289631], [25.243865, 60.284883], [25.244127, 60.278341], [25.252291, 60.275751], [25.250902, 60.273519], [25.234846, 60.271963], [25.22734, 60.261104], [25.234576, 60.257645], [25.222018, 60.256356], [25.212871, 60.25433], [25.200573, 60.254167], [25.195496, 60.248726], [25.193976, 60.247741], [25.189373, 60.247312], [25.188737, 60.245374], [25.191837, 60.244474], [25.210365, 60.243963], [25.215018, 60.243427], [25.218979, 60.241964], [25.21982, 60.240046], [25.218258, 60.239841], [25.201335, 60.239801], [25.201415, 60.238287], [25.207649, 60.237589], [25.21082, 60.235334], [25.210899, 60.233819], [25.208669, 60.232274], [25.200139, 60.232712], [25.188486, 60.234486], [25.187901, 60.231585], [25.193382, 60.229361], [25.193752, 60.228066], [25.190665, 60.228302], [25.187269, 60.22909], [25.183236, 60.231258], [25.171113, 60.233176], [25.159267, 60.235097], [25.153844, 60.233834], [25.153929, 60.232274], [25.156301, 60.231158], [25.165622, 60.229769], [25.17131, 60.227182], [25.173527, 60.227212], [25.18445, 60.223501], [25.185485, 60.219702], [25.176977, 60.219772], [25.176268, 60.219211], [25.177152, 60.216513], [25.185064, 60.212027], [25.185186, 60.209732], [25.178404, 60.206977], [25.178527, 60.204682], [25.180906, 60.203382], [25.1834, 60.20167], [25.184877, 60.20169], [25.185799, 60.198258], [25.178413, 60.193014], [25.176158, 60.192019], [25.171553, 60.191773], [25.160478, 60.196767], [25.158772, 60.20097], [25.150289, 60.20067], [25.141881, 60.199016], [25.140478, 60.197642], [25.141405, 60.19421], [25.149054, 60.194522], [25.152223, 60.193991], [25.14944, 60.187431], [25.153481, 60.184455], [25.15291, 60.181369], [25.146749, 60.180918], [25.14197, 60.183884], [25.1319, 60.185674], [25.130248, 60.187167], [25.129044, 60.195601], [25.125158, 60.195731], [25.116794, 60.193318], [25.105322, 60.19201], [25.09334, 60.186651], [25.089453, 60.186803], [25.087924, 60.187723], [25.087771, 60.19043], [25.092215, 60.193525], [25.100441, 60.196718], [25.10482, 60.201005], [25.11683, 60.207649], [25.121065, 60.214597], [25.120938, 60.216892], [25.119368, 60.21687], [25.119431, 60.215723], [25.109051, 60.207954], [25.099156, 60.20646], [25.096924, 60.205074], [25.097897, 60.200908], [25.095653, 60.199728], [25.082672, 60.198947], [25.078871, 60.197561], [25.065016, 60.197547], [25.064398, 60.195425], [25.069772, 60.195135], [25.072165, 60.193653], [25.07234, 60.190579], [25.067987, 60.185923], [25.062647, 60.185663], [25.060285, 60.186594], [25.050992, 60.187608], [25.04862, 60.188722], [25.048554, 60.189869], [25.050752, 60.191784], [25.04535, 60.190971], [25.044768, 60.188253], [25.042549, 60.186705], [25.031072, 60.185574], [25.027949, 60.18686], [25.013963, 60.189158], [24.999818, 60.194117], [25.001148, 60.196617], [25.014208, 60.19759], [25.018151, 60.1965], [25.021197, 60.196545], [25.021724, 60.200181], [25.017041, 60.201261], [25.017692, 60.204348], [25.020696, 60.205127], [25.020537, 60.207834], [25.016571, 60.209292], [25.01942, 60.214294], [25.014825, 60.213859], [25.012573, 60.212862], [25.009422, 60.212999], [25.001531, 60.216741], [25.000635, 60.219392], [24.998292, 60.219931], [24.993912, 60.215847], [24.993307, 60.212026], [24.985009, 60.210156], [24.982826, 60.208011], [24.982222, 60.20419], [24.973219, 60.200242], [24.973382, 60.197535], [24.976769, 60.193406], [24.983873, 60.190435], [24.98468, 60.189298], [24.983453, 60.183539], [24.981261, 60.181577], [24.972762, 60.183195], [24.965854, 60.182907], [24.962972, 60.178638], [24.961496, 60.178615], [24.959281, 60.177066], [24.950036, 60.177293], [24.948398, 60.178417], [24.9414, 60.179642], [24.93825, 60.18134], [24.935943, 60.181304], [24.935183, 60.180144], [24.935393, 60.176703], [24.945552, 60.175112], [24.955489, 60.175654], [24.959397, 60.175139], [24.96092, 60.174381], [24.96207, 60.16907], [24.976708, 60.168142], [24.978322, 60.167386], [24.979175, 60.165469], [24.973203, 60.161935], [24.968605, 60.161682], [24.963153, 60.163345], [24.961494, 60.164836], [24.958499, 60.164009], [24.964191, 60.158354], [24.964398, 60.154912], [24.959949, 60.152181], [24.958474, 60.152158], [24.955685, 60.151675], [24.951573, 60.15187], [24.932359, 60.150796], [24.927224, 60.147272], [24.921913, 60.146639], [24.921014, 60.147773], [24.92244, 60.150092], [24.928359, 60.154363], [24.929598, 60.15824], [24.924277, 60.157745], [24.922979, 60.153339], [24.919246, 60.152523], [24.913786, 60.152806], [24.90913, 60.153515], [24.90831, 60.154834], [24.910508, 60.156591], [24.915059, 60.157603], [24.914941, 60.15953], [24.90495, 60.15995], [24.90178, 60.160475], [24.900971, 60.16161], [24.902419, 60.163562], [24.913779, 60.166402], [24.913686, 60.167917], [24.908198, 60.168613], [24.905821, 60.169724], [24.906416, 60.173546], [24.910149, 60.174385], [24.911623, 60.175923], [24.911504, 60.177851], [24.908199, 60.182025], [24.897384, 60.182224], [24.892557, 60.185594], [24.887135, 60.186658], [24.886848, 60.191246], [24.883022, 60.190405], [24.877102, 60.186132], [24.873297, 60.18644], [24.869631, 60.194788], [24.867252, 60.195899], [24.861112, 60.196582], [24.853995, 60.199547], [24.855988, 60.204539], [24.855061, 60.20604], [24.846095, 60.210068], [24.846211, 60.210572], [24.848062, 60.2186], [24.841913, 60.2212], [24.831403, 60.254055], [24.838646, 60.259098], [24.857816, 60.253608], [24.872417, 60.254143], [24.892824, 60.268532], [24.91895, 60.273417], [24.927796, 60.27507], [24.945653, 60.278404], [24.956263, 60.276343], [24.965876, 60.266308], [24.975627, 60.264975], [24.97734, 60.26856], [24.982291, 60.278917], [25.000148, 60.286318], [25.020906, 60.289318], [25.053391, 60.276016], [25.076645, 60.275551], [25.088002, 60.271247], [25.082436, 60.2497], [25.091377, 60.245184], [25.135844, 60.237228], [25.159883, 60.248817], [25.156817, 60.254514], [25.144627, 60.25924], [25.142535, 60.269779], [25.187656, 60.279881], [25.19025, 60.285681]]]}, {"type": "Polygon", "coordinates": [[[25.209142, 60.204066], [25.211079, 60.203878], [25.214247, 60.201624], [25.216576, 60.201241], [25.216675, 60.199359], [25.214408, 60.198548], [25.214449, 60.197768], [25.212141, 60.197738], [25.209763, 60.199061], [25.202061, 60.199717], [25.198507, 60.201415], [25.196473, 60.204052], [25.197899, 60.205035], [25.202883, 60.204673], [25.209142, 60.204066]]]}, {"type": "Polygon", "coordinates": [[[25.217278, 60.244421], [25.199296, 60.248593], [25.199235, 60.24974], [25.202288, 60.251503], [25.215284, 60.252433], [25.225261, 60.254493], [25.231395, 60.253976], [25.237807, 60.24988], [25.237888, 60.248319], [25.231874, 60.244796], [25.217278, 60.244421]]]}, {"type": "Polygon", "coordinates": [[[25.175709, 60.143603], [25.175567, 60.146265], [25.180184, 60.146144], [25.180297, 60.144033], [25.175709, 60.143603]]]}, {"type": "Polygon", "coordinates": [[[25.175288, 60.165231], [25.170677, 60.165168], [25.16829, 60.166652], [25.167449, 60.168569], [25.168125, 60.169727], [25.169683, 60.169931], [25.175064, 60.169407], [25.175288, 60.165231]]]}, {"type": "Polygon", "coordinates": [[[25.167506, 60.181201], [25.162145, 60.181312], [25.158917, 60.182967], [25.159633, 60.18509], [25.164236, 60.185336], [25.165752, 60.184622], [25.167506, 60.181201]]]}, {"type": "Polygon", "coordinates": [[[25.155172, 60.139696], [25.153566, 60.140409], [25.153481, 60.141969], [25.154965, 60.143505], [25.157259, 60.14372], [25.163351, 60.14362], [25.16496, 60.142861], [25.165041, 60.141346], [25.1628, 60.140167], [25.155172, 60.139696]]]}, {"type": "Polygon", "coordinates": [[[25.11122, 60.150957], [25.10615, 60.150684], [25.103687, 60.153497], [25.095975, 60.152837], [25.092142, 60.153748], [25.092037, 60.155629], [25.093839, 60.157216], [25.095676, 60.158184], [25.104105, 60.159244], [25.104755, 60.160815], [25.107008, 60.161788], [25.122457, 60.161062], [25.124889, 60.158799], [25.134772, 60.160268], [25.144013, 60.160005], [25.145632, 60.159086], [25.145757, 60.156791], [25.141222, 60.155373], [25.131298, 60.154662], [25.126835, 60.151937], [25.115347, 60.15118], [25.11122, 60.150957]]]}, {"type": "Polygon", "coordinates": [[[25.105706, 60.171897], [25.100313, 60.172602], [25.100185, 60.174897], [25.102416, 60.176261], [25.107038, 60.176142], [25.107948, 60.173077], [25.105706, 60.171897]]]}, {"type": "Polygon", "coordinates": [[[25.11591, 60.167654], [25.112076, 60.168542], [25.110422, 60.17008], [25.111906, 60.171617], [25.120341, 60.170954], [25.12271, 60.169838], [25.122814, 60.167957], [25.11591, 60.167654]]]}, {"type": "Polygon", "coordinates": [[[25.133754, 60.17881], [25.12536, 60.178694], [25.124466, 60.179829], [25.125961, 60.181182], [25.132132, 60.181451], [25.134553, 60.179395], [25.133754, 60.17881]]]}, {"type": "Polygon", "coordinates": [[[25.157397, 60.168433], [25.15129, 60.168717], [25.14968, 60.169475], [25.14888, 60.170613], [25.150283, 60.171964], [25.157252, 60.171095], [25.157397, 60.168433]]]}, {"type": "Polygon", "coordinates": [[[25.092637, 60.144936], [25.090269, 60.146051], [25.09014, 60.148345], [25.094609, 60.150889], [25.099228, 60.15077], [25.100851, 60.148129], [25.097961, 60.145378], [25.092637, 60.144936]]]}, {"type": "Polygon", "coordinates": [[[25.142983, 60.136635], [25.139173, 60.13718], [25.13911, 60.138327], [25.141362, 60.1393], [25.146718, 60.139167], [25.148386, 60.137306], [25.142983, 60.136635]]]}, {"type": "Polygon", "coordinates": [[[25.124609, 60.122051], [25.120005, 60.121987], [25.119858, 60.124649], [25.125199, 60.124723], [25.126849, 60.12323], [25.124609, 60.122051]]]}, {"type": "Polygon", "coordinates": [[[25.148216, 60.111629], [25.144349, 60.111576], [25.142834, 60.112336], [25.143455, 60.114457], [25.148049, 60.114704], [25.149738, 60.112431], [25.148216, 60.111629]]]}, {"type": "Polygon", "coordinates": [[[25.023305, 60.176065], [25.030677, 60.179643], [25.034438, 60.180065], [25.036061, 60.179147], [25.042991, 60.179041], [25.044448, 60.180991], [25.041134, 60.184021], [25.041898, 60.18518], [25.044911, 60.185775], [25.049524, 60.185841], [25.058089, 60.184633], [25.061199, 60.183529], [25.063657, 60.180901], [25.063898, 60.176678], [25.061679, 60.175131], [25.061899, 60.171276], [25.06427, 60.170161], [25.064443, 60.167133], [25.055266, 60.16622], [25.055377, 60.164292], [25.06304, 60.164219], [25.070709, 60.165661], [25.074381, 60.167642], [25.077321, 60.171129], [25.081943, 60.171011], [25.085061, 60.169723], [25.085993, 60.166292], [25.091413, 60.166736], [25.095278, 60.165275], [25.096365, 60.160697], [25.091843, 60.159071], [25.074977, 60.157132], [25.072748, 60.155768], [25.065086, 60.155843], [25.056519, 60.157235], [25.048141, 60.156931], [25.041888, 60.158172], [25.038724, 60.160239], [25.034103, 60.160355], [25.032592, 60.159369], [25.029538, 60.159531], [25.026303, 60.161206], [25.021637, 60.162102], [25.014769, 60.161221], [25.012418, 60.161967], [25.008915, 60.16977], [25.013359, 60.172683], [25.018676, 60.174342], [25.023305, 60.176065]]]}, {"type": "Polygon", "coordinates": [[[25.077625, 60.178804], [25.069958, 60.178878], [25.067576, 60.180176], [25.06749, 60.18169], [25.069642, 60.184431], [25.071118, 60.184452], [25.071884, 60.185611], [25.078652, 60.188372], [25.083266, 60.188437], [25.084787, 60.187678], [25.086526, 60.184671], [25.085066, 60.182722], [25.077625, 60.178804]]]}, {"type": "Polygon", "coordinates": [[[25.016145, 60.177133], [25.011476, 60.178029], [25.002847, 60.181898], [24.994963, 60.184078], [24.99487, 60.185638], [24.999337, 60.188184], [25.003167, 60.188999], [25.009362, 60.188884], [25.015608, 60.186312], [25.017635, 60.178487], [25.016145, 60.177133]]]}, {"type": "Polygon", "coordinates": [[[24.995331, 60.204385], [24.995241, 60.205899], [24.998127, 60.208652], [24.998665, 60.213621], [25.001712, 60.213666], [25.004873, 60.211784], [25.004427, 60.206816], [25.00147, 60.205257], [24.995331, 60.204385]]]}, {"type": "Polygon", "coordinates": [[[25.01623, 60.096753], [25.013194, 60.096709], [25.011429, 60.100128], [25.014289, 60.104763], [25.018958, 60.103683], [25.021459, 60.100275], [25.01623, 60.096753]]]}, {"type": "Polygon", "coordinates": [[[25.04078, 60.101487], [25.042485, 60.103608], [25.047368, 60.104499], [25.054318, 60.104417], [25.061241, 60.10479], [25.065938, 60.105769], [25.069194, 60.106362], [25.071781, 60.105853], [25.07201, 60.105036], [25.071717, 60.103756], [25.064787, 60.100284], [25.058506, 60.09828], [25.048762, 60.096135], [25.044234, 60.095431], [25.041433, 60.096484], [25.039847, 60.098648], [25.04078, 60.101487]]]}, {"type": "Polygon", "coordinates": [[[25.082339, 60.108412], [25.078565, 60.108359], [25.076957, 60.109116], [25.078424, 60.11086], [25.08221, 60.110707], [25.082339, 60.108412]]]}, {"type": "Polygon", "coordinates": [[[25.024897, 60.133052], [25.022716, 60.13093], [25.015808, 60.130829], [25.013416, 60.13231], [25.013304, 60.134237], [25.018458, 60.137551], [25.023031, 60.138192], [25.025401, 60.137079], [25.025903, 60.13557], [25.024897, 60.133052]]]}, {"type": "Polygon", "coordinates": [[[24.99242, 60.136592], [24.996165, 60.13876], [25.009178, 60.138563], [25.010799, 60.137645], [25.01089, 60.136085], [25.009481, 60.1334], [25.00501, 60.131037], [24.995108, 60.130109], [24.994304, 60.131246], [24.992556, 60.134297], [24.99242, 60.136592]]]}, {"type": "Polygon", "coordinates": [[[25.048252, 60.155003], [25.065293, 60.152217], [25.070043, 60.149782], [25.080073, 60.14857], [25.080115, 60.147836], [25.082442, 60.147455], [25.082572, 60.145161], [25.081162, 60.143992], [25.06045, 60.143329], [25.059036, 60.140644], [25.06534, 60.138438], [25.066154, 60.137095], [25.063948, 60.135341], [25.054791, 60.134245], [25.04708, 60.135281], [25.033461, 60.131639], [25.028866, 60.131388], [25.027188, 60.133293], [25.027033, 60.135954], [25.027459, 60.141335], [25.024375, 60.142024], [25.024274, 60.143768], [25.031678, 60.148079], [25.038512, 60.149534], [25.043012, 60.151482], [25.048252, 60.155003]]]}, {"type": "Polygon", "coordinates": [[[25.010194, 60.147971], [25.007042, 60.149808], [25.007486, 60.154821], [25.008998, 60.155785], [25.014378, 60.15529], [25.016771, 60.153809], [25.016972, 60.150367], [25.01478, 60.148406], [25.010194, 60.147971]]]}, {"type": "Polygon", "coordinates": [[[25.024442, 60.074275], [25.019821, 60.074621], [25.021954, 60.0775], [25.025827, 60.077373], [25.025939, 60.075446], [25.024442, 60.074275]]]}, {"type": "Polygon", "coordinates": [[[24.961609, 60.146379], [24.95746, 60.146583], [24.95465, 60.148263], [24.953878, 60.148825], [24.956078, 60.150581], [24.960181, 60.150147], [24.961732, 60.148775], [24.962761, 60.147195], [24.961609, 60.146379]]]}, {"type": "Polygon", "coordinates": [[[24.987361, 60.170598], [24.983488, 60.17054], [24.97949, 60.17257], [24.978718, 60.173133], [24.980921, 60.174888], [24.986283, 60.174762], [24.989487, 60.173661], [24.989598, 60.17178], [24.987361, 60.170598]]]}, {"type": "Polygon", "coordinates": [[[24.990259, 60.138265], [24.988772, 60.136343], [24.985533, 60.136122], [24.983162, 60.137234], [24.980585, 60.141789], [24.975842, 60.144015], [24.975014, 60.145518], [24.977215, 60.147273], [24.983252, 60.148122], [24.989484, 60.14725], [24.992614, 60.145781], [24.994316, 60.14351], [24.992981, 60.141784], [24.990259, 60.138265]]]}, {"type": "Polygon", "coordinates": [[[24.990791, 60.176575], [24.984658, 60.177241], [24.982988, 60.178938], [24.985168, 60.181084], [24.994404, 60.181038], [24.998392, 60.179168], [24.998482, 60.177653], [24.990791, 60.176575]]]}, {"type": "Polygon", "coordinates": [[[24.960889, 60.124268], [24.956989, 60.12476], [24.955457, 60.125701], [24.956044, 60.128191], [24.959902, 60.128433], [24.961419, 60.127721], [24.960889, 60.124268]]]}, {"type": "Polygon", "coordinates": [[[24.986361, 60.109723], [24.984753, 60.110434], [24.98466, 60.111994], [24.986861, 60.113726], [24.989139, 60.114151], [24.993754, 60.114013], [24.99458, 60.112509], [24.990942, 60.110159], [24.986361, 60.109723]]]}, {"type": "Polygon", "coordinates": [[[24.972989, 60.102219], [24.972828, 60.104927], [24.974244, 60.105889], [24.976558, 60.105717], [24.976694, 60.103423], [24.972989, 60.102219]]]}, {"type": "Polygon", "coordinates": [[[24.881327, 60.095066], [24.877391, 60.096152], [24.877984, 60.098458], [24.879535, 60.09869], [24.884171, 60.098188], [24.884265, 60.096674], [24.881327, 60.095066]]]}, {"type": "Polygon", "coordinates": [[[24.912722, 60.095189], [24.911845, 60.097472], [24.919993, 60.102766], [24.923801, 60.10225], [24.92477, 60.099969], [24.922657, 60.096859], [24.912722, 60.095189]]]}, {"type": "Polygon", "coordinates": [[[24.92381, 60.115663], [24.923647, 60.118325], [24.928251, 60.118396], [24.929864, 60.116124], [24.92381, 60.115663]]]}, {"type": "Polygon", "coordinates": [[[24.874462, 60.117925], [24.871424, 60.117877], [24.86905, 60.118988], [24.869582, 60.122257], [24.873438, 60.122502], [24.875857, 60.120657], [24.874462, 60.117925]]]}, {"type": "Polygon", "coordinates": [[[24.927842, 60.125096], [24.925458, 60.126391], [24.926873, 60.127377], [24.929993, 60.127609], [24.932435, 60.12535], [24.927842, 60.125096]]]}, {"type": "Polygon", "coordinates": [[[24.885432, 60.126733], [24.883484, 60.127667], [24.882998, 60.128808], [24.889536, 60.134836], [24.893394, 60.13508], [24.894202, 60.133944], [24.895768, 60.133969], [24.900657, 60.129452], [24.90004, 60.127513], [24.885432, 60.126733]]]}, {"type": "Polygon", "coordinates": [[[24.911958, 60.133072], [24.911057, 60.135723], [24.914704, 60.137892], [24.919299, 60.138147], [24.92098, 60.13629], [24.916541, 60.133511], [24.911958, 60.133072]]]}, {"type": "Polygon", "coordinates": [[[24.934669, 60.088637], [24.933013, 60.090128], [24.934519, 60.091116], [24.939129, 60.091002], [24.939246, 60.089075], [24.934669, 60.088637]]]}, {"type": "Polygon", "coordinates": [[[24.87752, 60.142686], [24.874419, 60.143601], [24.874373, 60.144336], [24.87805, 60.147471], [24.877762, 60.15206], [24.876897, 60.15262], [24.871552, 60.152536], [24.859403, 60.150621], [24.856174, 60.152086], [24.856075, 60.153646], [24.859705, 60.157516], [24.859583, 60.159443], [24.85716, 60.161288], [24.852478, 60.162362], [24.852405, 60.163509], [24.85763, 60.165521], [24.860536, 60.169197], [24.865918, 60.168731], [24.867703, 60.165314], [24.873969, 60.162519], [24.877853, 60.162397], [24.88074, 60.164922], [24.886179, 60.165008], [24.897077, 60.161917], [24.898237, 60.156607], [24.891336, 60.156292], [24.890543, 60.155706], [24.894782, 60.149846], [24.893538, 60.144637], [24.890555, 60.143648], [24.87752, 60.142686]]]}, {"type": "Polygon", "coordinates": [[[24.853675, 60.174325], [24.848958, 60.1772], [24.848444, 60.179795], [24.849761, 60.181031], [24.860695, 60.179122], [24.859935, 60.174598], [24.853675, 60.174325]]]}, {"type": "Polygon", "coordinates": [[[24.886319, 60.174587], [24.88241, 60.1751], [24.881552, 60.177016], [24.88129, 60.181192], [24.88413, 60.184497], [24.888754, 60.184386], [24.891252, 60.181348], [24.891513, 60.177172], [24.886319, 60.174587]]]}, {"type": "Polygon", "coordinates": [[[24.862091, 60.181095], [24.85893, 60.181435], [24.855753, 60.183498], [24.862491, 60.186453], [24.870967, 60.186771], [24.87249, 60.18606], [24.872634, 60.183765], [24.862091, 60.181095]]]}, {"type": "Polygon", "coordinates": [[[24.855509, 60.029981], [24.854561, 60.031895], [24.856822, 60.032482], [24.858371, 60.032691], [24.858489, 60.030809], [24.855509, 60.029981]]]}, {"type": "Polygon", "coordinates": [[[24.893399, 60.035541], [24.893244, 60.038042], [24.897089, 60.038309], [24.898769, 60.036406], [24.893399, 60.035541]]]}, {"type": "Polygon", "coordinates": [[[24.851349, 60.082739], [24.849877, 60.082716], [24.848192, 60.084618], [24.848855, 60.085777], [24.851119, 60.086365], [24.854258, 60.086231], [24.855066, 60.085095], [24.851349, 60.082739]]]}, {"type": "Polygon", "coordinates": [[[24.834207, 60.098909], [24.831783, 60.100799], [24.833974, 60.102557], [24.838588, 60.102425], [24.840199, 60.101716], [24.840333, 60.099605], [24.834207, 60.098909]]]}]}, "type": "Feature", "properties": {"code": "area091", "name": "Helsinki"}}
+            },
+            {
+                "id": "helsinkicity",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [[[24.7828131,60.0999549],[24.8356577,60.130414],[24.8371856,60.1380207],[24.837145,60.1382937],[24.8379686,60.1426563],[24.8394378,60.150306],[24.8408741,60.150879],[24.8407638,60.155074],[24.8409358,60.1570101],[24.8442397,60.1651576],[24.8442602,60.1652082],[24.8442819,60.165263],[24.8442993,60.1653164],[24.8443054,60.1653351],[24.8444095,60.1655923],[24.8444078,60.1659976],[24.8441294,60.173508],[24.8436954,60.1806715],[24.8433886,60.1852542],[24.8428235,60.1951312],[24.842786,60.1957592],[24.8429711,60.1961161],[24.846874,60.2037279],[24.8468462,60.2040096],[24.8466874,60.2056164],[24.8466481,60.2060312],[24.845927,60.2130107],[24.8459462,60.214651],[24.8480783,60.2185671],[24.8481477,60.2191132],[24.848056,60.2195059],[24.8477579,60.2201601],[24.8476397,60.2204834],[24.8478124,60.2210394],[24.8478757,60.2216036],[24.8479197,60.2216822],[24.8482415,60.2219937],[24.8512843,60.224875],[24.8513144,60.2249055],[24.8513844,60.2249765],[24.8508526,60.2249654],[24.8502426,60.2249205],[24.8496518,60.2248282],[24.8490784,60.2246614],[24.8483653,60.2243487],[24.8470983,60.2238627],[24.8462638,60.2232636],[24.8451637,60.2227399],[24.8439423,60.2220278],[24.8431685,60.2216058],[24.8419098,60.2212043],[24.841893,60.2212929],[24.841674,60.2222098],[24.8416482,60.2223179],[24.8416315,60.222388],[24.8415057,60.2229146],[24.8411636,60.2243472],[24.8410972,60.2245792],[24.8408732,60.2254699],[24.8408627,60.2255241],[24.8408503,60.2255742],[24.8408357,60.2256332],[24.840659,60.2262686],[24.8404882,60.2268863],[24.8401584,60.2282851],[24.8400636,60.2287182],[24.8399613,60.2291605],[24.8398074,60.2291495],[24.8381052,60.2290274],[24.8380025,60.229493],[24.8379871,60.2295627],[24.8379001,60.2298709],[24.8370727,60.2328702],[24.8370398,60.2329771],[24.8369161,60.2333788],[24.836252,60.235711],[24.8361485,60.236089],[24.8359746,60.2366937],[24.8369455,60.2367602],[24.8367431,60.2373897],[24.8366271,60.237747],[24.8362855,60.2388124],[24.8361655,60.2391305],[24.8358449,60.2401991],[24.8358274,60.2402471],[24.8349597,60.24294],[24.8349496,60.2429712],[24.8347915,60.2434508],[24.8347517,60.2435828],[24.8345858,60.2441331],[24.8343272,60.244941],[24.8341736,60.2453656],[24.8336486,60.2470531],[24.8336092,60.2471746],[24.8327723,60.2497505],[24.8314026,60.254055],[24.8325776,60.25437],[24.8336845,60.2546667],[24.8347196,60.2582898],[24.8347825,60.2585099],[24.8354485,60.2587439],[24.8367162,60.2589837],[24.837614,60.2590713],[24.8386532,60.2591115],[24.8387802,60.2590749],[24.8423616,60.2580444],[24.8424255,60.258026],[24.8425207,60.2579986],[24.8426324,60.257966],[24.8449232,60.2572984],[24.8451657,60.2572277],[24.8453995,60.2571596],[24.8455962,60.2571022],[24.8456533,60.2570856],[24.8457443,60.2570612],[24.8459112,60.2570114],[24.846629,60.2567967],[24.8468017,60.2567417],[24.8468763,60.2567521],[24.847013,60.2567126],[24.848133,60.2563889],[24.8487245,60.2562215],[24.849807,60.2559109],[24.8498525,60.2558978],[24.8498984,60.2558844],[24.849974,60.2558665],[24.8500182,60.2558538],[24.85204,60.2552728],[24.8525352,60.2551305],[24.8540848,60.2546818],[24.8541848,60.2546533],[24.854991,60.2544203],[24.8551254,60.2543815],[24.8564324,60.2540038],[24.856661,60.2539378],[24.8570814,60.2538179],[24.8582104,60.253496],[24.8625273,60.2531209],[24.8627548,60.2532163],[24.8630697,60.2533481],[24.863665,60.2535903],[24.8641173,60.2537744],[24.8643183,60.2538562],[24.8646198,60.2536452],[24.8648651,60.2535613],[24.8651962,60.2534708],[24.8654034,60.2533689],[24.8655818,60.253288],[24.8657815,60.2532407],[24.8661135,60.2532221],[24.8665903,60.2532268],[24.8668342,60.2532196],[24.8670784,60.2531764],[24.8672049,60.2530976],[24.8673841,60.2529755],[24.8676121,60.2527214],[24.8676857,60.2524777],[24.8677051,60.2524347],[24.8677628,60.2523073],[24.8687557,60.2532641],[24.8689739,60.2533196],[24.8690881,60.2533471],[24.8719335,60.2540313],[24.872433,60.2541514],[24.8741249,60.2562822],[24.8757678,60.2584197],[24.8760808,60.2588152],[24.8768599,60.2598241],[24.8770054,60.2600126],[24.8772429,60.260301],[24.8785225,60.2608506],[24.8794072,60.2612307],[24.8794695,60.2612599],[24.8795752,60.2613053],[24.8849212,60.2636036],[24.8908183,60.2661395],[24.8914714,60.2664204],[24.8924569,60.2671387],[24.892561,60.2675183],[24.8926796,60.26797],[24.8928329,60.2685353],[24.8938925,60.2685103],[24.8943651,60.2684973],[24.895197,60.2685231],[24.8961579,60.2685649],[24.8975399,60.2686477],[24.8978997,60.2686735],[24.8980698,60.2687002],[24.8983564,60.2687451],[24.8988077,60.2688345],[24.900318,60.2692185],[24.9039019,60.2699844],[24.9057124,60.2703212],[24.9063717,60.2704516],[24.9069548,60.2706847],[24.9075216,60.2707928],[24.9079536,60.2708226],[24.9082707,60.2709462],[24.9085438,60.2709984],[24.9091337,60.2710208],[24.909668,60.2709598],[24.9100209,60.2709302],[24.910291,60.2710053],[24.910562,60.2711441],[24.9108901,60.2713716],[24.9112409,60.2715769],[24.9119597,60.2718488],[24.9126541,60.2720327],[24.9135048,60.2722047],[24.9149442,60.2724375],[24.9174414,60.2726989],[24.9187148,60.2728162],[24.9198142,60.2728866],[24.9203704,60.2729987],[24.9205874,60.2731271],[24.9206589,60.2731695],[24.9212114,60.2735373],[24.9215557,60.2736518],[24.9227438,60.2739439],[24.9241539,60.2745671],[24.9245483,60.2747295],[24.9249529,60.2747715],[24.9284151,60.2750068],[24.9290417,60.2750068],[24.9298785,60.2749523],[24.9309614,60.2749826],[24.9320436,60.2750702],[24.9328151,60.2752454],[24.9351721,60.2756243],[24.9361535,60.2758815],[24.9373475,60.2762113],[24.9397863,60.2766888],[24.9420002,60.2774171],[24.9432659,60.2777333],[24.9442611,60.2779418],[24.945635,60.2782784],[24.9464834,60.2783966],[24.9473908,60.2784652],[24.9480452,60.2784546],[24.9484535,60.2783813],[24.9492654,60.2781857],[24.9497405,60.2781908],[24.9501408,60.2782011],[24.9516765,60.2783027],[24.9520121,60.2782953],[24.9524884,60.2782086],[24.9527652,60.2780797],[24.9528348,60.2780054],[24.952923,60.2776144],[24.9530386,60.2773231],[24.9532192,60.2771432],[24.953447,60.276996],[24.9537521,60.2768739],[24.9540591,60.2767788],[24.954598,60.2767161],[24.9553606,60.2766744],[24.9557106,60.2765767],[24.9560211,60.2764547],[24.9563839,60.2762379],[24.9565707,60.2760526],[24.9566663,60.2758469],[24.9567268,60.2756461],[24.9566704,60.275418],[24.9559715,60.2737999],[24.9558276,60.2734418],[24.9557862,60.2731459],[24.9558334,60.2729154],[24.9559018,60.2727003],[24.9566821,60.2718317],[24.9574798,60.2711528],[24.9585624,60.27044],[24.9593447,60.2699417],[24.9596363,60.2697522],[24.9598466,60.2695492],[24.9599902,60.2692703],[24.9600585,60.2689882],[24.9600882,60.2686714],[24.9602076,60.268465],[24.960376,60.2682858],[24.9605455,60.2681761],[24.9608242,60.2680906],[24.9612259,60.2679741],[24.9615578,60.2678818],[24.9620819,60.2676633],[24.9625949,60.2674123],[24.9630526,60.2672196],[24.9638079,60.2669334],[24.9647385,60.2666962],[24.9657664,60.2663583],[24.9663279,60.2662197],[24.9668779,60.2660937],[24.9674117,60.2660092],[24.9681966,60.2658188],[24.968534,60.2656969],[24.96884,60.2655974],[24.9694574,60.265334],[24.9698863,60.2650918],[24.9702337,60.2649064],[24.9705071,60.2648004],[24.9709583,60.2646815],[24.9714179,60.2646043],[24.9731653,60.2643801],[24.9732936,60.2644252],[24.9735219,60.2645178],[24.9737992,60.2646015],[24.974117,60.2646591],[24.9749966,60.2647759],[24.9753469,60.2648356],[24.9755134,60.2648865],[24.975628,60.2649438],[24.975728,60.2650228],[24.9757662,60.2651164],[24.9758119,60.265272],[24.9756962,60.2654715],[24.9755897,60.2657108],[24.9755251,60.2659177],[24.9755429,60.2661448],[24.9756144,60.2663143],[24.9757516,60.2665156],[24.9760455,60.2667788],[24.9763636,60.2669727],[24.9767719,60.2671524],[24.9772716,60.2673211],[24.9777079,60.2675132],[24.9780276,60.2676752],[24.9780856,60.2677774],[24.9780801,60.2678835],[24.9780499,60.2679706],[24.9779621,60.2680672],[24.9778304,60.2681965],[24.977578,60.268357],[24.9772625,60.2685843],[24.9769031,60.2687176],[24.976508,60.2688374],[24.9761541,60.2689816],[24.9758632,60.2692102],[24.9756629,60.2694211],[24.9755724,60.2695803],[24.9755367,60.2697245],[24.9755562,60.2699226],[24.9755946,60.2699906],[24.9756597,60.2700481],[24.9758031,60.2701498],[24.9758964,60.2702573],[24.9760226,60.2705022],[24.9761634,60.2707314],[24.9763639,60.2709646],[24.9766115,60.2711532],[24.9769115,60.2713847],[24.9771629,60.271734],[24.9772018,60.2722255],[24.9771674,60.2731201],[24.9773133,60.2734122],[24.9774634,60.2738576],[24.9776625,60.2740843],[24.9778459,60.2742157],[24.978588,60.2745081],[24.9792983,60.2749592],[24.9794816,60.2751492],[24.9797501,60.2752628],[24.980107,60.2753569],[24.9803231,60.2754641],[24.9804606,60.2756605],[24.980729,60.2758926],[24.9807683,60.2759527],[24.9807696,60.2760437],[24.9807454,60.2762027],[24.9808356,60.2764498],[24.9808397,60.276941],[24.9807714,60.2772462],[24.9808049,60.2773645],[24.9809114,60.2775023],[24.9812248,60.2776704],[24.98156,60.2778581],[24.9819342,60.2780047],[24.9819904,60.2780559],[24.982021,60.2781122],[24.9820074,60.2784811],[24.9820799,60.2786823],[24.9822576,60.2788883],[24.9825068,60.279005],[24.9823979,60.2790305],[24.9824941,60.2791278],[24.9825651,60.2791865],[24.9827406,60.2792529],[24.9832,60.2793927],[24.9833853,60.2794377],[24.9834681,60.2794719],[24.9834637,60.2795509],[24.9835095,60.2796449],[24.9835884,60.2796771],[24.9837224,60.2796938],[24.9842331,60.2797182],[24.9845189,60.279683],[24.9848324,60.2796644],[24.9852049,60.279684],[24.9856485,60.2796889],[24.9859758,60.2797442],[24.9868471,60.2797895],[24.9876793,60.2797103],[24.9893747,60.27973],[24.9897567,60.2797843],[24.990484,60.2799613],[24.9911207,60.2801991],[24.9921207,60.2806386],[24.9930856,60.2811292],[24.9933559,60.2812274],[24.9936676,60.2812981],[24.9941196,60.2813411],[24.9949914,60.2813369],[24.9953658,60.2813505],[24.9956342,60.281435],[24.9960257,60.2816744],[24.9971807,60.2825542],[24.9983529,60.2836172],[24.9992254,60.2843466],[24.9995961,60.2846814],[24.9996702,60.2848182],[24.9997485,60.2849775],[24.9999133,60.2857493],[24.9999524,60.2859074],[25.0000121,60.286129],[25.000148,60.2863209],[25.000424,60.2864659],[25.0007041,60.2865557],[25.0009801,60.2866068],[25.0012561,60.2866231],[25.0015526,60.2866231],[25.0020538,60.2865841],[25.0032357,60.2864972],[25.0040634,60.2864304],[25.0045768,60.2863577],[25.0052505,60.2861717],[25.0054658,60.2861206],[25.0056306,60.2861005],[25.0059725,60.2861348],[25.0063084,60.2862103],[25.0069531,60.2864639],[25.0070511,60.286503],[25.0075968,60.2867504],[25.007904,60.287028],[25.008114,60.2872087],[25.0083273,60.2874885],[25.0085144,60.2876515],[25.0087393,60.2877523],[25.0092436,60.2878238],[25.010011,60.2878412],[25.0107998,60.287777],[25.0111171,60.2876609],[25.0113499,60.2875452],[25.0114678,60.2874356],[25.0116449,60.2873544],[25.0118051,60.2873354],[25.0120814,60.2873456],[25.0123676,60.2873892],[25.0126465,60.2875003],[25.0129423,60.2876545],[25.0133955,60.2878232],[25.0136231,60.287914],[25.0138201,60.2880271],[25.0140321,60.2882114],[25.0143718,60.2884253],[25.0146113,60.2885475],[25.0154217,60.2888061],[25.015933,60.288932],[25.0164852,60.2889781],[25.0180848,60.2888792],[25.0183515,60.2888728],[25.0185491,60.2888935],[25.0187403,60.2889389],[25.0196673,60.289216],[25.0199291,60.2892677],[25.0201348,60.289294],[25.0205798,60.2893155],[25.0209862,60.2893227],[25.0212915,60.2892996],[25.0215855,60.2892407],[25.0219196,60.2891467],[25.0224811,60.2889296],[25.0229371,60.2886973],[25.0233662,60.2883825],[25.0238983,60.288062],[25.0242992,60.2879308],[25.025306,60.2877104],[25.0264475,60.287519],[25.0267068,60.2874363],[25.0268853,60.2873275],[25.0270569,60.2870978],[25.0270999,60.2868],[25.0271573,60.2866079],[25.0272723,60.28646],[25.0275719,60.2862937],[25.0287306,60.28583],[25.0291619,60.2856918],[25.0294415,60.285617],[25.029943,60.2855147],[25.0308248,60.285433],[25.031368,60.2853876],[25.0317195,60.2852974],[25.0322926,60.2850812],[25.0326664,60.2849785],[25.0331277,60.2849411],[25.0335168,60.2849551],[25.0338588,60.2850018],[25.0341978,60.2851309],[25.0343798,60.285232],[25.0345241,60.2853673],[25.0345837,60.2855664],[25.0344519,60.2859677],[25.0344739,60.2863659],[25.0346057,60.2865572],[25.0349258,60.2868621],[25.0351737,60.287139],[25.0354624,60.2873116],[25.0357699,60.2873676],[25.0361277,60.2873832],[25.036606,60.2873498],[25.0368821,60.2873436],[25.0371049,60.2873809],[25.0372901,60.2874338],[25.0375066,60.2875147],[25.0376792,60.2876033],[25.0378204,60.2877184],[25.0379378,60.2878716],[25.0380316,60.2877763],[25.0383633,60.2874389],[25.0384689,60.2873315],[25.0393059,60.2864803],[25.0393306,60.286455],[25.0406039,60.2851602],[25.0410508,60.284724],[25.0408166,60.2842065],[25.041904,60.2831405],[25.0426005,60.2830678],[25.0425638,60.282983],[25.0431503,60.2824137],[25.0434232,60.2818521],[25.0421829,60.2814503],[25.0423773,60.2811333],[25.0424941,60.2811584],[25.0438516,60.2798514],[25.0442972,60.2799388],[25.0450222,60.2794564],[25.0451173,60.2793564],[25.045169,60.2787316],[25.0458281,60.2787477],[25.0460016,60.2791551],[25.0462037,60.2789196],[25.0472197,60.2777358],[25.0491557,60.2781285],[25.0508294,60.2783425],[25.0512485,60.2779749],[25.0534727,60.2760243],[25.0566724,60.2758431],[25.0572798,60.2759088],[25.0594282,60.2761413],[25.061555,60.2763742],[25.0618047,60.276091],[25.0623772,60.2754352],[25.0634713,60.2753613],[25.0635943,60.275353],[25.0640753,60.2753242],[25.0647295,60.27528],[25.0650898,60.2752607],[25.065399,60.2752349],[25.0659209,60.2752066],[25.0664238,60.2751704],[25.0670496,60.2751292],[25.0677344,60.2750856],[25.0683143,60.2750471],[25.0684844,60.2750317],[25.0689492,60.2750639],[25.0694652,60.2750923],[25.0700232,60.275128],[25.0705593,60.2751579],[25.0710982,60.2751944],[25.0717309,60.275231],[25.0724551,60.2752736],[25.0731382,60.2753176],[25.0735095,60.275344],[25.0735891,60.2753469],[25.0762216,60.2755146],[25.076555,60.2755358],[25.084722,60.2725988],[25.0857594,60.2722275],[25.086148,60.2720871],[25.0882105,60.2713417],[25.0892104,60.2676612],[25.0864787,60.2607111],[25.0875308,60.2592976],[25.0866058,60.2575784],[25.0847949,60.2541885],[25.0823359,60.2496391],[25.0859571,60.2478774],[25.0914736,60.2451936],[25.0955676,60.2444576],[25.0956945,60.2444348],[25.098727,60.2438896],[25.1087084,60.2420951],[25.1088313,60.242073],[25.1089839,60.2420182],[25.1295995,60.2382195],[25.1296069,60.2379612],[25.1350875,60.2372174],[25.1354537,60.2372468],[25.1358461,60.2372286],[25.1359002,60.2373611],[25.1363065,60.2376623],[25.1366333,60.2380906],[25.1367222,60.2382032],[25.1368251,60.2384066],[25.136895,60.2385298],[25.1370972,60.2387954],[25.1371761,60.2389411],[25.1373315,60.2392961],[25.1380492,60.2401555],[25.1387102,60.2407113],[25.1390148,60.2409352],[25.1397072,60.2415342],[25.140739,60.2427021],[25.1418668,60.2435836],[25.1417081,60.2436316],[25.1416813,60.2438833],[25.1422441,60.2441494],[25.1431759,60.2447264],[25.1446726,60.2450896],[25.1451879,60.2452912],[25.1470578,60.2454753],[25.1476061,60.2454692],[25.1483483,60.2455337],[25.1501088,60.2454283],[25.1507582,60.2455296],[25.1519642,60.2461404],[25.1522817,60.2458958],[25.1537887,60.2463092],[25.1541064,60.2464351],[25.1552835,60.2467512],[25.1574404,60.2480769],[25.1583228,60.2484554],[25.1588278,60.2485946],[25.1598757,60.2488133],[25.159585,60.2492184],[25.1598502,60.2497345],[25.1591183,60.2507513],[25.1589864,60.2507247],[25.1586153,60.250964],[25.1573867,60.2510766],[25.157369,60.2512447],[25.1573071,60.251706],[25.1571027,60.2536152],[25.1576881,60.2538842],[25.1574861,60.2539967],[25.1573191,60.2540468],[25.1571707,60.2541256],[25.157016,60.2542375],[25.1569571,60.2543044],[25.156926,60.2544081],[25.1569234,60.2544453],[25.1568792,60.2544881],[25.156793,60.2545174],[25.1565783,60.254509],[25.1560669,60.2546614],[25.155968,60.2547157],[25.1558102,60.2548849],[25.1557407,60.2549319],[25.1556545,60.2549548],[25.1555577,60.2549569],[25.1553809,60.2549277],[25.1552315,60.2548818],[25.1551305,60.2548703],[25.1550379,60.2548807],[25.1549495,60.2549079],[25.1548422,60.2550519],[25.154678,60.2550655],[25.1545854,60.2551188],[25.1544276,60.2553171],[25.1544192,60.255408],[25.1544697,60.2555092],[25.1547033,60.2556732],[25.1547054,60.2557369],[25.1545307,60.2559467],[25.1544444,60.2561023],[25.1542929,60.2562432],[25.1542529,60.2563633],[25.1540256,60.2565397],[25.1539814,60.2566462],[25.1539078,60.2566807],[25.1538341,60.2566755],[25.1535711,60.2566243],[25.1534553,60.2566452],[25.1530955,60.2568394],[25.1530113,60.2568394],[25.1528072,60.256806],[25.1527945,60.2569908],[25.1525315,60.2570148],[25.1524663,60.2570148],[25.15238,60.2570231],[25.1522895,60.2570618],[25.1522747,60.2570931],[25.1522642,60.2572006],[25.1522558,60.2572779],[25.15222,60.2573499],[25.1521401,60.2574429],[25.1520633,60.2574951],[25.1519623,60.2575504],[25.1518329,60.2575901],[25.1517245,60.2576146],[25.1516182,60.2576199],[25.1515014,60.2576219],[25.1513878,60.2576423],[25.151292,60.2576757],[25.1510995,60.2577754],[25.1510216,60.2577817],[25.1509217,60.257753],[25.1508354,60.2577478],[25.1506933,60.2577556],[25.1505302,60.2577932],[25.1504945,60.2578125],[25.1505039,60.2578704],[25.1505902,60.2579122],[25.1507649,60.257956],[25.150787,60.2579884],[25.1506397,60.258086],[25.1505397,60.2581779],[25.1504713,60.2581988],[25.1498626,60.258233],[25.1490962,60.2581968],[25.149004,60.2583171],[25.1488879,60.2583747],[25.1487644,60.2583666],[25.1486141,60.2583046],[25.1485293,60.2581968],[25.1484132,60.2581149],[25.1483046,60.2580152],[25.1482123,60.2579997],[25.1480174,60.2580374],[25.1477138,60.2580721],[25.1474028,60.2581968],[25.146818,60.2582928],[25.1467183,60.2583474],[25.1466469,60.2584079],[25.1465204,60.2584877],[25.1447413,60.2591685],[25.1446424,60.2592227],[25.1445919,60.2592822],[25.1440158,60.2602906],[25.1443194,60.2607571],[25.1440827,60.2611869],[25.1426741,60.2629311],[25.1426413,60.2630108],[25.1425163,60.2630891],[25.1423884,60.2632869],[25.1417447,60.2648484],[25.1419315,60.2655804],[25.143115,60.2658136],[25.1427958,60.2660912],[25.1424085,60.266856],[25.1423713,60.2669295],[25.1423388,60.267167],[25.1424295,60.2674255],[25.1422538,60.267775],[25.1420891,60.2680271],[25.1419041,60.2682925],[25.1420014,60.2687461],[25.1420138,60.269097],[25.1425242,60.2697779],[25.1723849,60.2764326],[25.1737823,60.2782564],[25.1748286,60.2783329],[25.1768699,60.2779906],[25.1777961,60.2778992],[25.1782336,60.277829],[25.1787619,60.2778176],[25.1876582,60.2798927],[25.1877453,60.2800381],[25.1878029,60.2802283],[25.1895733,60.284101],[25.190239,60.2856803],[25.1902617,60.2856663],[25.1918718,60.284676],[25.1921912,60.2844805],[25.1962809,60.281952],[25.1964092,60.282446],[25.1966755,60.2828764],[25.1967347,60.2831551],[25.1993673,60.284206],[25.202058,60.2852783],[25.2048411,60.2863874],[25.2015314,60.2880017],[25.2072385,60.2890229],[25.2128753,60.2900254],[25.2206412,60.2914287],[25.2225607,60.2920388],[25.2247331,60.2937017],[25.2254886,60.293903],[25.2251924,60.2941815],[25.2284728,60.2957724],[25.2290602,60.2960479],[25.2270378,60.2966159],[25.2295278,60.2978497],[25.2328586,60.2969833],[25.2328167,60.2968313],[25.2381881,60.2953311],[25.2433921,60.2961745],[25.2528932,60.2974534],[25.2545116,60.2952274],[25.2455407,60.2935335],[25.2515678,60.2901317],[25.2513306,60.2896408],[25.2539256,60.2896477],[25.2438804,60.2848555],[25.2473544,60.2829813],[25.2470059,60.2816965],[25.2470753,60.2785201],[25.2448291,60.2789628],[25.2441594,60.2783195],[25.2461127,60.2776001],[25.2466847,60.2777315],[25.2522654,60.2757532],[25.2519927,60.2752988],[25.2509121,60.2734979],[25.2430014,60.272308],[25.2432386,60.2718237],[25.2348537,60.271969],[25.231854,60.2671811],[25.2320773,60.2656934],[25.231868,60.2652851],[25.2325549,60.262551],[25.231586,60.2625212],[25.2307014,60.2621592],[25.2306103,60.2614191],[25.2302441,60.2614316],[25.2299883,60.2614172],[25.2282055,60.2613854],[25.2276338,60.2612345],[25.2273451,60.2611057],[25.228854,60.2599251],[25.2290982,60.260001],[25.2335309,60.2565508],[25.2374554,60.2562705],[25.2408283,60.2505491],[25.2407725,60.2491645],[25.240926,60.246305],[25.2271138,60.2451349],[25.2231515,60.2428222],[25.2266255,60.2393735],[25.2043883,60.2298966],[25.2014099,60.2181613],[25.2204176,60.1997262],[25.2192225,60.1972231],[25.1913767,60.1456224],[25.1800446,60.0987408],[25.1792539,60.0872821],[25.1767783,60.0513799],[25.1743027,60.0154386],[25.1718272,59.9794582],[25.1693516,59.9434386],[25.0895598,59.9360766],[25.0097679,59.928713],[24.9423061,59.922486],[24.911915,59.9564191],[24.8815239,59.9903175],[24.8511328,60.0241812],[24.816973,60.0620898],[24.7828131,60.0999549]]]
+                    }
+                }
+            }
+        ],
+        "scenes": [
+            {
+                "id": "place0",
+                "zoom": 10,
+                "baseLayer": [{
+                "type": "esri-basemap",
+                "url": "Imagery",
+                "options": {
+                    "detectRetina": true,
+                    "imagerySet": "AerialWithLabels"
+                }
+            }],
+                "layers": [{
+                    "idRef": "helsinki"
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place1",
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "1"
+                }, {
+                    "idRef": "2"
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place2",
+                "layers": [{
+                    "idRef": "3"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place3",
+                "layers": [{
+                    "idRef": "4"
+                }, {
+                    "idRef": "5"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place4",
+                "layers": [{
+                    "idRef": "6"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place5",
+                "layers": [{
+                    "idRef": "7"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place6",
+                "layers": [{
+                    "idRef": "6"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place7",
+                "zoom": 7,
+                "layers": [{
+                    "idRef": "7"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place8",
+                "zoom": 7,
+                "layers": [{
+                    "idRef": "8"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place9",
+                "zoom": 7,
+                "layers": [{
+                    "idRef": "9"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place10",
+                "zoom": 7,
+                "layers": [{
+                    "idRef": "10"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place11",
+                "zoom": 7,
+                "layers": [{
+                    "idRef": "11"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place12",
+                "zoom": 7,
+                "layers": [{
+                    "idRef": "12"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place13",
+                "zoom": 7,
+                "layers": [{
+                    "idRef": "13"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place14",
+                "zoom": 7,
+                "layers": [{
+                    "idRef": "14"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place15",
+                "zoom": 7,
+                "layers": [{
+                    "idRef": "15"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place16",
+                "zoom": 7,
+                "layers": [{
+                    "idRef": "16"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place17",
+                "layers": [{
+                    "idRef": "17"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place18",
+                "layers": [{
+                    "idRef": "18"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place19",
+                "layers": [{
+                    "idRef": "19"
+                }],
+                "zoom": 17, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }
+
+
+        ]
+    };
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79613259-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav li.previous a').on('click', function (e) {
+            e.preventDefault();
+            var $prev = $('#nav').find('.sections li.active').prev();
+
+            if (!$prev.hasClass('previous')) {
+                $prev.find('a').click();
+            }
+        });
+
+        $('#nav li.next a').on('click', function (e) {
+            e.preventDefault();
+            var $next = $('#nav').find('.sections li.active').next();
+
+            if (!$next.hasClass('next')) {
+                $next.find('a').click();
+            }
+        });
+
+        document.onkeydown = function (e) {
+            if (e.keyCode == '38') {
+                // up arrow
+                $('#nav li.previous a').click();
+            }
+            else if (e.keyCode == '40') {
+                // down arrow
+                $('#nav li.next a').click();
+            }
+        };
+
+        var overviewMap = new Focus.Views.OverviewMapView({
+            model: new Backbone.Model({
+                initialScene: new Focus.Models.SceneModel({
+                    baseLayer: {
+                        type: 'tile',
+                        url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', //'//{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
+                        params: {
+                            attribution: 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                        }
+                    },
+                    center: [0,0],
+                    zoom: 12,
+                    showAttribution: false
+                })
+            }),
+            showCenterPoint: true
+        });
+        var sceneManager = new Focus.Views.SceneManagerView({
+            el: $('body'),
+            navigatorClass: Focus.Views.ScrollingSceneNavigator,
+            mapEngineClass: Focus.Views.LeafletMapEngine //Focus.Views.OpenLayersMapEngine //LeafletMapEngine
+        });
+
+        var shareView = new Focus.Views.ShareView();
+        shareView.render();
+    });
+
+</script>
+</body>
+</html>

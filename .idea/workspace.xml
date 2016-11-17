@@ -2,70 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db415e42-930a-421f-9360-1a36d1e5ce72" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure1.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure10.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure11.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure12.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure13.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure13.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure14.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure14.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure15.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure15.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure16.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure16.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure17.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure17.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure2.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure3.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure4.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure5.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure6.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure7.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure8.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/img/figure9.png" afterPath="$PROJECT_DIR$/src/publications/articles/mali/img/figure9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/2050_logo.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/2050_logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/baldeagle.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/baldeagle.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/brazil.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/brazil.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/ca.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/ca.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/carson.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/carson.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/centralpark.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/centralpark.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/congo.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/congo.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/garbagepatch.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/garbagepatch.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/gbr.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/gbr.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/giantpanda.JPG" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/giantpanda.JPG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/guadalajara.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/guadalajara.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/hydropower.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/hydropower.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/indonesia.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/indonesia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/kyoto.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/kyoto.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/london.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/london.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/mtrainier.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/mtrainier.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/muir.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/muir.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/nationalforest.JPG" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/nationalforest.JPG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/nationalmonument.JPG" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/nationalmonument.JPG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/nationalpark.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/nationalpark.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/nationalwildliferefuge.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/nationalwildliferefuge.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/northpacificgyre.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/northpacificgyre.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/nuclearpower.JPG" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/nuclearpower.JPG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/oceanicgyres.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/oceanicgyres.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/paris.JPG" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/paris.JPG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/peru.JPG" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/peru.JPG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/pipa.JPG" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/pipa.JPG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/pnm.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/pnm.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/polarbear.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/polarbear.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/rio.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/rio.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/rockcreekpark.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/rockcreekpark.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/rockefeller.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/rockefeller.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/roosevelt.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/roosevelt.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/seaturtle.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/seaturtle.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/sequoia.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/sequoia.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/siberiantiger.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/siberiantiger.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/solarpower.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/solarpower.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/southpacificgyre.png" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/southpacificgyre.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/tablemountain.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/tablemountain.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/windpower.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/windpower.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/yellowstone.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/yellowstone.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/img/yosemite.jpg" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/img/yosemite.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/salbov.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/coafinland.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/coauusimaa.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/combined.js" afterPath="$PROJECT_DIR$/src/js/combined.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mapview.js" afterPath="$PROJECT_DIR$/src/js/mapview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/publications.js" afterPath="$PROJECT_DIR$/src/js/publications.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/index.html" afterPath="$PROJECT_DIR$/src/publications/articles/mali/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html" afterPath="$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates.html" afterPath="$PROJECT_DIR$/src/templates.html" />
     </list>
     <ignored path="focus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,52 +51,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="publications.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/publications.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".jshintrc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.jshintrc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="268" column="61" selection-start-line="268" selection-start-column="61" selection-end-line="268" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.5">
+              <caret line="441" column="81" selection-start-line="441" selection-start-column="81" selection-end-line="441" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.html">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.5">
-              <caret line="398" column="147" selection-start-line="398" selection-start-column="147" selection-end-line="398" selection-end-column="147" />
+            <state vertical-scroll-proportion="-10.882353">
+              <caret line="121" column="34" selection-start-line="119" selection-start-column="28" selection-end-line="121" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.941176">
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="92" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#path#1;n#svg#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#4;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#5;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#6;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#section#11;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#0;n#section#11;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#6;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1478969581000" expanded="true" signature="67511:67549" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="68793:68830" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="70093:70132" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="71442:71479" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="72760:72796" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="74077:74115" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="75411:75448" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="77272:77310" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="78595:78632" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="79904:79941" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="81230:81267" placeholder="..." />
+                <marker date="1478969581000" expanded="true" signature="93349:93387" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,8 +120,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/publications/articles/mali/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="284" column="47" selection-start-line="284" selection-start-column="47" selection-end-line="284" selection-end-column="47" />
+            <state vertical-scroll-proportion="33.871796">
+              <caret line="423" column="12" selection-start-line="423" selection-start-column="12" selection-end-line="431" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -150,6 +131,7 @@
                 <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#video#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -171,50 +153,91 @@
                 <element signature="n#style#0;n#div#20;n#section#4;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#22;n#section#4;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#24;n#section#4;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1477529687000" expanded="true" signature="55719:55738" placeholder="..." />
-                <marker date="1477529687000" expanded="true" signature="55775:55782" placeholder="..." />
-                <marker date="1477529687000" expanded="true" signature="55775:55828" placeholder="..." />
+                <marker date="1478969953000" expanded="true" signature="55896:55915" placeholder="..." />
+                <marker date="1478969953000" expanded="true" signature="55952:55959" placeholder="..." />
+                <marker date="1478969953000" expanded="true" signature="55952:56005" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mapview.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="306" column="69" selection-start-line="306" selection-start-column="69" selection-end-line="306" selection-end-column="69" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#4;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#5;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#6;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#2;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#4;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#5;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#6;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#7;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#8;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#8;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#9;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#10;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#11;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#11;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#13;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coauusimaa.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/img/coauusimaa.svg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coafinland.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/img/coafinland.svg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/publications/articles/baja/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6470587">
+              <caret line="107" column="113" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="113" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mapview.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/mapview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45614034">
-              <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+            <state vertical-scroll-proportion="-253.88889">
+              <caret line="930" column="21" selection-start-line="930" selection-start-column="20" selection-end-line="930" selection-end-column="21" />
               <folding>
-                <marker date="1477701093000" expanded="true" signature="5736:5773" placeholder="..." />
-                <marker date="1477701093000" expanded="true" signature="5754:5773" placeholder="..." />
-                <marker date="1477701093000" expanded="true" signature="6828:6877" placeholder="//..." />
-                <marker date="1477701093000" expanded="true" signature="36874:36894" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/publications/quizzes/two/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-              <folding>
-                <marker date="1477701708000" expanded="true" signature="7090:7121" placeholder="..." />
-                <marker date="1477701708000" expanded="true" signature="8334:8354" placeholder="..." />
-                <marker date="1477701708000" expanded="true" signature="110107:110131" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/publications/quizzes/two/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
-              <folding>
-                <marker date="1477508445000" expanded="true" signature="107284:107308" placeholder="..." />
+                <marker date="1477704765000" expanded="true" signature="5736:5773" placeholder="..." />
+                <marker date="1477704765000" expanded="true" signature="5754:5773" placeholder="..." />
+                <marker date="1477704765000" expanded="true" signature="36894:36914" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -223,8 +246,8 @@
       <file leaf-file-name="templates.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/templates.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state vertical-scroll-proportion="-20.75">
+              <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -260,7 +283,6 @@
         <option value="$PROJECT_DIR$/src/quizzes/one/index.html" />
         <option value="$PROJECT_DIR$/bower_components/leaflet-dvf/dist/leaflet-dvf.js" />
         <option value="$PROJECT_DIR$/src/img/stereographic.svg" />
-        <option value="$PROJECT_DIR$/dist/js/mapview.js" />
         <option value="$PROJECT_DIR$/src/img/robinson.svg" />
         <option value="$PROJECT_DIR$/dist/css/index.css" />
         <option value="$PROJECT_DIR$/src/js/quizview.js" />
@@ -279,16 +301,18 @@
         <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/src/publications/articles/baja/index.html" />
         <option value="$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html" />
-        <option value="$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html" />
         <option value="$PROJECT_DIR$/src/publications/quizzes/two/index.html" />
         <option value="$PROJECT_DIR$/src/publications/quizzes/one/index.html" />
         <option value="$PROJECT_DIR$/dist/js/publications.js" />
-        <option value="$PROJECT_DIR$/src/templates.html" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/src/publications/articles/mali/index.html" />
         <option value="$PROJECT_DIR$/src/js/publications.js" />
-        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/dist/js/mapview.js" />
         <option value="$PROJECT_DIR$/src/js/mapview.js" />
+        <option value="$PROJECT_DIR$/src/templates.html" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/articles/mali/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" />
       </list>
     </option>
   </component>
@@ -466,6 +490,66 @@
               <option name="myItemId" value="photoessays" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oaxaca" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="focus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="focus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publications" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="photoessays" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="finland" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="focus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="focus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publications" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="photoessays" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="finland" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -511,36 +595,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="photoessays" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bolivia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="articles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -568,100 +622,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mali" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mali" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baja" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="baja" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -680,174 +640,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="two" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mali" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twentytwenty" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1205,11 +997,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/publications/photoessays/finland/img" />
+      <recent name="$PROJECT_DIR$/src/publications/photoessays" />
       <recent name="$PROJECT_DIR$/src/publications/articles/mali/img" />
       <recent name="$PROJECT_DIR$/src/publications/quizzes/two/img" />
       <recent name="$PROJECT_DIR$/src/publications/articles/mali/media" />
-      <recent name="$PROJECT_DIR$/src/publications/articles/mali/js" />
-      <recent name="$PROJECT_DIR$/src/publications/articles/mali" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/publications" />
@@ -1281,10 +1073,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="979" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22380953" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22380953" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1321,27 +1113,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/img/focus-logo1.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="167" column="6" selection-start-line="2" selection-start-column="0" selection-end-line="167" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/leaflet/dist/leaflet-src.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/photoessays/oaxaca/img/camerafov.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1415,6 +1186,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1515,6 +1287,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1530,6 +1303,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1551,27 +1325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2435896">
           <caret line="414" column="12" selection-start-line="414" selection-start-column="12" selection-end-line="414" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/articles/baja/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="35.588234">
-          <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="248" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.038462">
-          <caret line="227" column="18" selection-start-line="227" selection-start-column="18" selection-end-line="227" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.461538">
-          <caret line="406" column="18" selection-start-line="406" selection-start-column="18" selection-end-line="406" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1613,18 +1366,163 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dist/publications/quizzes/two/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+          <folding>
+            <marker date="1479417537000" expanded="true" signature="7090:7121" placeholder="..." />
+            <marker date="1479417537000" expanded="true" signature="8334:8354" placeholder="..." />
+            <marker date="1479417537000" expanded="true" signature="110107:110131" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/quizzes/two/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
+          <folding>
+            <marker date="1477508445000" expanded="true" signature="107284:107308" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="268" column="61" selection-start-line="268" selection-start-column="61" selection-end-line="268" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/mapview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8888888">
+          <caret line="1151" column="17" selection-start-line="1151" selection-start-column="17" selection-end-line="1151" selection-end-column="17" />
+          <folding>
+            <marker date="1479417538000" expanded="true" signature="5736:5773" placeholder="..." />
+            <marker date="1479417538000" expanded="true" signature="36894:36914" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.75">
+          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/mapview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-253.88889">
+          <caret line="930" column="21" selection-start-line="930" selection-start-column="20" selection-end-line="930" selection-end-column="21" />
+          <folding>
+            <marker date="1477704765000" expanded="true" signature="5736:5773" placeholder="..." />
+            <marker date="1477704765000" expanded="true" signature="5754:5773" placeholder="..." />
+            <marker date="1477704765000" expanded="true" signature="36894:36914" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.5">
-          <caret line="398" column="147" selection-start-line="398" selection-start-column="147" selection-end-line="398" selection-end-column="147" />
+        <state vertical-scroll-proportion="-9.5">
+          <caret line="441" column="81" selection-start-line="441" selection-start-column="81" selection-end-line="441" selection-end-column="81" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.882353">
+          <caret line="121" column="34" selection-start-line="119" selection-start-column="28" selection-end-line="121" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/articles/baja/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6470587">
+          <caret line="107" column="113" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/img/coauusimaa.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/img/coafinland.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.941176">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="92" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#1;n#svg#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#5;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#6;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#section#11;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#section#11;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#6;n#ul#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1478969581000" expanded="true" signature="67511:67549" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="68793:68830" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="70093:70132" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="71442:71479" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="72760:72796" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="74077:74115" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="75411:75448" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="77272:77310" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="78595:78632" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="79904:79941" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="81230:81267" placeholder="..." />
+            <marker date="1478969581000" expanded="true" signature="93349:93387" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/articles/mali/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="284" column="47" selection-start-line="284" selection-start-column="47" selection-end-line="284" selection-end-column="47" />
+        <state vertical-scroll-proportion="33.871796">
+          <caret line="423" column="12" selection-start-line="423" selection-start-column="12" selection-end-line="431" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1634,6 +1532,7 @@
             <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#video#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1655,68 +1554,45 @@
             <element signature="n#style#0;n#div#20;n#section#4;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#22;n#section#4;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#24;n#section#4;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477529687000" expanded="true" signature="55719:55738" placeholder="..." />
-            <marker date="1477529687000" expanded="true" signature="55775:55782" placeholder="..." />
-            <marker date="1477529687000" expanded="true" signature="55775:55828" placeholder="..." />
+            <marker date="1478969953000" expanded="true" signature="55896:55915" placeholder="..." />
+            <marker date="1478969953000" expanded="true" signature="55952:55959" placeholder="..." />
+            <marker date="1478969953000" expanded="true" signature="55952:56005" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/publications/quizzes/two/index.html">
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="306" column="69" selection-start-line="306" selection-start-column="69" selection-end-line="306" selection-end-column="69" />
           <folding>
-            <marker date="1477701708000" expanded="true" signature="7090:7121" placeholder="..." />
-            <marker date="1477701708000" expanded="true" signature="8334:8354" placeholder="..." />
-            <marker date="1477701708000" expanded="true" signature="110107:110131" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/quizzes/two/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
-          <folding>
-            <marker date="1477508445000" expanded="true" signature="107284:107308" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="268" column="61" selection-start-line="268" selection-start-column="61" selection-end-line="268" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/mapview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45614034">
-          <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-          <folding>
-            <marker date="1477701093000" expanded="true" signature="5736:5773" placeholder="..." />
-            <marker date="1477701093000" expanded="true" signature="5754:5773" placeholder="..." />
-            <marker date="1477701093000" expanded="true" signature="6828:6877" placeholder="//..." />
-            <marker date="1477701093000" expanded="true" signature="36874:36894" placeholder="..." />
+            <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#5;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#6;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#2;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#4;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#5;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#6;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#7;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#8;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#8;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#9;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#10;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#11;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#11;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#13;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

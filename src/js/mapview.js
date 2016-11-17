@@ -244,7 +244,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             zoomControl: false,
             worldCopyJump: true,
             zoomAnimationThreshold: 3,
-            markerZoomAnimation: false,
+            markerZoomAnimation: true,
             zoomDelta: 0.5
             //renderer: L.canvas()
         });
@@ -341,6 +341,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             var me = this;
             var resultFunc = function (layerDef) {
                 return function (error, rows) {
+                    var layerId = layerDef.id || layerDef.idRef;
                     var latField = layerDef.params.latitudeField;
                     var lonField = layerDef.params.longitudeField;
                     var nameField = layerDef.params.nameField;
@@ -438,8 +439,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
                     layer = new L.ChoroplethDataLayer(rows, options);
 
-                    me._addLayer(layer, layerDef.id || layerDef.idRef);
-                    me._layers[layerDef.id || layerDef.idRef] = layer;
+                    me._addLayer(layer, layerId);
+                    me._layers[layerId] = layer;
                 };
             };
             d3.csv(layerDef.url).get(resultFunc(layerDef));
