@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db415e42-930a-421f-9360-1a36d1e5ce72" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure16.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure19.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/figure9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/salbov.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/coafinland.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/coauusimaa.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/combined.js" afterPath="$PROJECT_DIR$/src/js/combined.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mapview.js" afterPath="$PROJECT_DIR$/src/js/mapview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/index.html" afterPath="$PROJECT_DIR$/src/publications/articles/mali/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html" afterPath="$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates.html" afterPath="$PROJECT_DIR$/src/templates.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/img/coahelsinki.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" />
     </list>
     <ignored path="focus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,8 +137,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="306" column="69" selection-start-line="306" selection-start-column="69" selection-end-line="306" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.12810946">
+              <caret line="295" column="54" selection-start-line="295" selection-start-column="54" selection-end-line="295" selection-end-column="54" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -195,6 +168,16 @@
                 <element signature="n#style#0;n#div#0;n#section#13;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#section#14;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coahelsinki.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/img/coahelsinki.svg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -239,16 +222,6 @@
                 <marker date="1477704765000" expanded="true" signature="5754:5773" placeholder="..." />
                 <marker date="1477704765000" expanded="true" signature="36894:36914" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="templates.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.75">
-              <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1113,13 +1086,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/oaxaca/img/camerafov.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/twentytwenty/js/jquery.twentytwenty.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.222221">
@@ -1371,9 +1337,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
           <folding>
-            <marker date="1479417537000" expanded="true" signature="7090:7121" placeholder="..." />
-            <marker date="1479417537000" expanded="true" signature="8334:8354" placeholder="..." />
-            <marker date="1479417537000" expanded="true" signature="110107:110131" placeholder="..." />
+            <marker date="1479417590000" expanded="true" signature="7090:7121" placeholder="..." />
+            <marker date="1479417590000" expanded="true" signature="8334:8354" placeholder="..." />
+            <marker date="1479417590000" expanded="true" signature="110107:110131" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1409,8 +1375,8 @@
         <state vertical-scroll-proportion="-3.8888888">
           <caret line="1151" column="17" selection-start-line="1151" selection-start-column="17" selection-end-line="1151" selection-end-column="17" />
           <folding>
-            <marker date="1479417538000" expanded="true" signature="5736:5773" placeholder="..." />
-            <marker date="1479417538000" expanded="true" signature="36894:36914" placeholder="..." />
+            <marker date="1479417591000" expanded="true" signature="5736:5773" placeholder="..." />
+            <marker date="1479417591000" expanded="true" signature="36894:36914" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1561,10 +1527,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/img/coahelsinki.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="306" column="69" selection-start-line="306" selection-start-column="69" selection-end-line="306" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.12810946">
+          <caret line="295" column="54" selection-start-line="295" selection-start-column="54" selection-end-line="295" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
