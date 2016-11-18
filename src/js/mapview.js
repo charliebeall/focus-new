@@ -260,6 +260,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 me._map.createPane(pane);
             });
         }
+
+        me._map.createPane('trace');
     },
     _layerDefToLayer: function (layerDef) {
         var layer;
@@ -575,6 +577,20 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         var latLng = new L.LatLng(coordinates[1], coordinates[0]);
 
         fly = 'fly' in sceneModel.attributes ? sceneModel.get('fly') : !L.Browser.mobile;
+
+        if (me._lastCoordinates && coordinates && sceneModel.attributes.trace) {
+            me._map.addLayer(new L.ArcedPolyline([[this._lastCoordinates[1], this._lastCoordinates[0]], [coordinates[1], coordinates[0]]], $.extend(true, {}, {
+                pane: 'trace',
+                mode: 'Q',
+                weight: 3,
+                markers: {
+                    end: {}
+                }
+            }, Focus.Map.traceOptions || {}, sceneModel.attributes.trace)));
+        }
+
+        this._lastCoordinates = coordinates;
+
         if (fly) {
             me._map.stop();
             if (bounds) {
@@ -596,7 +612,9 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 });
             }
             else {
-                this._map.setView(latLng, zoom);
+                this._map.setView(latLng, zoom, {
+                    animate: true
+                });
             }
         }
 
@@ -1365,7 +1383,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
         this._sceneNavigator = options.navigator;
         this._navigatorClass = options.navigatorClass;
         this._mapEngineClass = options.mapEngineClass;
-
+        this.options = options;
         this.listenTo(Focus.Events, 'drawLine', this.drawLine);
 
         this.setupProgress();
@@ -1531,11 +1549,12 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
 
     },
     setupMap: function () {
+        console.log(this.options.initialScene);
         this._mapView0 = new Focus.Views.MapView({
             el: this.$el.find('#map'),
             engineClass: this._mapEngineClass,
             model: new Backbone.Model({
-                initialScene: new Focus.Models.SceneModel({
+                initialScene: new Focus.Models.SceneModel($.extend(true, {}, {
                     baseLayer: {
                         type: 'tile',
                         url: 'https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' //'https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', ''https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' //
@@ -1546,7 +1565,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                         filter: 'sepia(0%)',
                         opacity: 0.8
                     }
-                })
+                }, this.options.initialScene))
             })
         });
     },
