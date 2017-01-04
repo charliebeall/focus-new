@@ -1,6 +1,21 @@
 var Focus = Focus || {};
 Focus.Volumes = [
     {
+        number: 60,
+        publications: [{
+            type: 'Photo Essay',
+            title: 'Urban Agriculture in Helsinki, Finland',
+            author: 'Sophia Albov',
+            citationAuthor: 'Albov, S.',
+            description: '',
+            date: '01/03/17',
+            doi: '',
+            thumbnail: 'publications/photoessays/finland/img/figure5.jpg',
+            url: 'publications/photoessays/finland/index.html',
+            location: []
+        }]
+    },
+    {
         number: 59,
         publications: [{
             type: 'Feature Article',

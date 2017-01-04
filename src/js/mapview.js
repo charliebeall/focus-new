@@ -147,6 +147,18 @@ Focus.Views.MapEngine = Backbone.View.extend({
     _setBaseLayer: function (layer) {
 
     },
+    _getLayer: function (layerDef) {
+        // If there's an idRef attribute then get the layer definition from the feature lookup
+        // and merge it with the style info. included in layer
+        if (layerDef.idRef && this._featureLookup) {
+            layerDef = $.extend(true, {}, this._featureLookup[layerDef.idRef], layerDef);
+        }
+
+        return this._layerDefToLayer(layerDef);
+    },
+    _layerDefToLayer: function (layerDef) {
+
+    },
     setBaseLayers: function (layers) {
 
     },
@@ -177,11 +189,11 @@ Focus.Views.MapEngine = Backbone.View.extend({
 
         this._layers = {};
 
-        _.each(layers, function (layer, key) {
-            var newLayer = me._layerDefToLayer(layer);
+        _.each(layers, function (layerDef, key) {
+            var newLayer = me._getLayer(layerDef); //me._layerDefToLayer(layer);
             if (newLayer) {
-                me._addLayer(newLayer, layer.id || layer.idRef);
-                me._layers[layer.id || layer.idRef] = newLayer;
+                me._addLayer(newLayer, layerDef.id || layerDef.idRef);
+                me._layers[layerDef.id || layerDef.idRef] = newLayer;
             }
         });
     },
@@ -269,9 +281,11 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
         // If there's an idRef attribute then get the layer definition from the feature lookup
         // and merge it with the style info. included in layer
+        /*
         if (layerDef.idRef && this._featureLookup) {
             layerDef = $.extend(true, {}, this._featureLookup[layerDef.idRef], layerDef);
         }
+        */
 
         if (layerDef.type === 'vector') {
             var defaultParams = {
@@ -579,14 +593,24 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         fly = 'fly' in sceneModel.attributes ? sceneModel.get('fly') : !L.Browser.mobile;
 
         if (me._lastCoordinates && coordinates && sceneModel.attributes.trace) {
-            me._map.addLayer(new L.ArcedPolyline([[this._lastCoordinates[1], this._lastCoordinates[0]], [coordinates[1], coordinates[0]]], $.extend(true, {}, {
+            me._traceQueue = me._traceQueue || [];
+            var traceLine = new L.ArcedPolyline([[this._lastCoordinates[1], this._lastCoordinates[0]], [coordinates[1], coordinates[0]]], $.extend(true, {}, {
                 pane: 'trace',
                 mode: 'Q',
                 weight: 3,
                 markers: {
                     end: {}
                 }
-            }, Focus.Map.traceOptions || {}, sceneModel.attributes.trace)));
+            }, Focus.Map.traceOptions.style || {}, sceneModel.attributes.trace));
+            me._map.addLayer(traceLine);
+
+            me._traceQueue.push(traceLine);
+
+            if (Focus.Map.traceOptions.maxLength && (me._traceQueue.length > Focus.Map.traceOptions.maxLength)) {
+                var lineToRemove = me._traceQueue.shift();
+
+                me._map.removeLayer(lineToRemove);
+            }
         }
 
         this._lastCoordinates = coordinates;
@@ -605,7 +629,6 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         }
         else {
             if (bounds) {
-
                 me._map.fitBounds(bounds, {
                     maxZoom: zoom,
                     padding: [15,15]
@@ -780,8 +803,10 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         this._map.setZoom(zoom);
     },
     setCenter: function (center) {
-        var centerPoint = new L.LatLng(center[1], center[0]);
-        this._map.setView(centerPoint);
+        if (center) {
+            var centerPoint = new L.LatLng(center[1], center[0]);
+            this._map.setView(centerPoint);
+        }
     },
     _addLayer: function (layer, id) {
         var me = this;
@@ -1073,18 +1098,69 @@ Focus.Views.MapboxMapEngine = Focus.Views.MapEngine.extend({
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2ZhaXJncmlldmUiLCJhIjoiY2FmNGI2OGEwZDI1YTcyMjJkNzQyY2MyMmI0NTRhMzAifQ.b03Wm6qBoeErDTg77XuvzQ';
         this._map = new mapboxgl.Map({
             container: this.$el.attr('id'), // container id
-            style: this.model.get('baseLayer'), //'mapbox://styles/mapbox/streets-v8', //stylesheet location
-            center: this.model.get('center'), // starting position
+            style: 'mapbox://styles/mapbox/streets-v8', //'mapbox://styles/mapbox/satellite-v8', //this.model.get('baseLayer'), //'mapbox://styles/mapbox/streets-v8', //stylesheet location
+            center: this._getCenter(this.model), // starting position
             zoom: this.model.get('zoom') // starting zoom
         });
     },
+    _layerDefToLayer: function (layerDef) {
+        return layerDef;
+    },
+    _addLayer: function (layer, id) {
+        if (layer.type === 'geojson') {
+            this._map.addSource(id, layer);
+
+            this._map.addLayer({
+                "id": id,
+                "type": "symbol",
+                "source": id,
+                "layout": {
+                    "icon-image": "{icon}-15",
+                    "text-field": "{name}",
+                    "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                    "text-offset": [0, 0.6],
+                    "text-anchor": "top"
+                }
+            });
+        }
+    },
+    _getCenter: function (sceneModel) {
+        var center = sceneModel.get('center');
+
+        if (center) {
+            return {lat: center[1], lng: center[0]};
+        }
+    },
+    _getLayersCenter: function (fc) {
+        var center = turf.center(fc);
+
+        return {lat: center.geometry.coordinates[1], lng: center.geometry.coordinates[0]};
+    },
     _flyTo: function (sceneModel) {
-        this._map.flyTo({
-            center: sceneModel.get('center'),
-            zoom: sceneModel.get('zoom'),
-            pitch: sceneModel.get('pitch'),
-            bearing: sceneModel.get('rotation')
+        var center = this._getCenter(sceneModel);
+        var me = this;
+        var layers = sceneModel.get('layers');
+        var fc = {
+            type: 'FeatureCollection',
+            features: []
+        };
+        _.each(layers, function (layerDef) {
+            if (layerDef.idRef && me._featureLookup) {
+                layerDef = $.extend(true, {}, me._featureLookup[layerDef.idRef], layerDef);
+            }
+            fc.features.push(layerDef.data);
         });
+
+        center = center || this._getLayersCenter(fc);
+
+        if (center) {
+            this._map.flyTo({
+                center: center,
+                zoom: sceneModel.get('zoom'),
+                pitch: sceneModel.get('pitch') || 60,
+                bearing: sceneModel.get('rotation') || 60
+            });
+        }
     },
     _disableControls: function () {
         this._map.scrollZoom.disable();
@@ -1662,12 +1738,17 @@ Focus.Views.OverviewMapView = Focus.Views.MapView.extend({
             this._engine._map.addLayer(this._centerPoint);
         }
     },
+    toggle: function () {
+        this.$el.toggleClass('transparent');
+    },
     viewChanged: function (view) {
-        this.setCenter(view.center);
-        this.setZoom(3);
+        if (view.center) {
+            this.setCenter(view.center);
+            this.setZoom(3);
 
-        if (this._centerPoint) {
-            this._centerPoint.setLatLng(new L.LatLng(view.center[1], view.center[0]));
+            if (this._centerPoint) {
+                this._centerPoint.setLatLng(new L.LatLng(view.center[1], view.center[0]));
+            }
         }
     }
 });
@@ -1715,14 +1796,52 @@ Focus.Views.ModalView = Backbone.View.extend({
     }
 });
 
+Focus.Views.LazyLoader = Backbone.View.extend({
+    el: $('#text'),
+    initialize: function (options) {
+        this.options = options || {};
+        this.options.imgSelector = this.options.imgSelector || 'img';
+        this.options.divSelector = this.options.divSelector || 'div.figure';
+    },
+    render: function () {
+        var $text = this.$el;
+        var location = '' + window.location;
+        var me = this;
+        location = location.replace('index.html','');
+
+        $text.find(this.options.imgSelector).each(function () {
+            var $this = $(this);
+            $this.attr('data-original', $(this).attr('src'));
+            $this.removeAttr('src');
+
+        });
+        $text.find(this.options.divSelector).each(function () {
+            var $this = $(this);
+            var backgroundImage = $this.css('background-image');
+
+            if (backgroundImage !== 'none') {
+                backgroundImage = backgroundImage.replace(/url\(/g, '').replace(/\)/g, '').replace(location, '').replace(/['"]/g, '');
+
+                $this.attr('data-original', backgroundImage);
+                $this.css('background-image', 'url(' + me.options.loadingImage || '../../../img/focus-logo-notext.svg' + ')');
+            }
+        });
+        var lazyLoad = new LazyLoad({
+            elements_selector: [this.options.imgSelector, this.options.divSelector].join(', ')
+        });
+        return this;
+    }
+});
+
 
 $(document).ready(function () {
-   $('#toggle-map').on('click', function (e) {
+    $('#toggle-map').on('click', function (e) {
       $('#text').toggleClass('shifted');
-   });
+    });
 
     $('a.location:first').tooltip({
-        container: '#text',
+        //container: '#text',
+        container: 'body',
         html: true,
         template: '<div class="tooltip helper-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
         title: '<a class="location">Text with a dotted underline</a> indicates a place mention. Hover over any place mention to see the associated place on the map.'

@@ -194,6 +194,8 @@ gulp.task('concat', function () {
             'bower_components/jquery.scrollex/jquery.scrollex.min.js',
             'bower_components/esri-leaflet/dist/esri-leaflet.js',
             'bower_components/leaflet-dvf/dist/leaflet-dvf.js',
+            //'node_modules/mapbox-gl/dist/mapbox-gl-dev.js',
+            'bower_components/vanilla-lazyload/dist/lazyload.min.js',
             'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
             'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.js',
             'node_modules/leaflet-bing-layer/leaflet-bing-layer.min.js',
@@ -241,6 +243,7 @@ gulp.task('concatcss', function () {
    return gulp.src([
        'bower_components/fontawesome/css/font-awesome.min.css',
        'bower_components/bootstrap/dist/css/bootstrap.min.css',
+       //'node_modules/mapbox-gl/dist/mapbox-gl.css',
        'src/css/normalize.css',
        'bower_components/leaflet/dist/leaflet.css',
        'bower_components/leaflet-dvf/dist/css/dvf.css',
