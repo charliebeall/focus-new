@@ -5,7 +5,7 @@ Focus.Volumes = [
         publications: [{
             type: 'Photo Essay',
             title: 'Urban Agriculture in Helsinki, Finland',
-            author: 'Sophia Albov',
+            author: 'Sophia E. Hagolani-Albov',
             citationAuthor: 'Albov, S.',
             description: '',
             date: '01/03/17',
