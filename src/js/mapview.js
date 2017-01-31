@@ -168,7 +168,7 @@ Focus.Views.MapEngine = Backbone.View.extend({
     _addLayer: function (layer, id) {
 
     },
-    _removeLayer: function (layer) {
+    _removeLayer: function (layer, id) {
 
     },
     _flyTo: function (sceneModel, fly) {
@@ -184,7 +184,7 @@ Focus.Views.MapEngine = Backbone.View.extend({
         var me = this;
 
         _.each(this._layers, function (layer, key) {
-            me._removeLayer(key);
+            me._removeLayer(layer, key);
         });
 
         this._layers = {};
@@ -497,10 +497,28 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             }, Focus.Map.defaultOptions, layerDef.style);
 
             var onEachRecord = function (layerDef) {
-                return function (layer, record) {
+                return function (layer, record, location) {
                     layer.on('click', function (e) {
                         me.trigger('layerClick', layerDef.id);
                     });
+
+                    if (layerDef.style && layerDef.style.animate) {
+                        layer.eachLayer(function (subLayer) {
+                            var updater = function (latlngs) {
+                                return function (layer, points, interpolatedPoint) {
+                                    var index = latlngs.indexOf(points[0]);
+                                    layer.setLatLngs(latlngs.slice(0, index + 1)); //.concat(new L.LatLng(interpolatedPoint.y, interpolatedPoint.x)));
+                                };
+                            };
+
+                            L.AnimationUtils.animateLine(subLayer, L.extend({}, {
+                                update: updater(subLayer._latlngs.slice()),
+                                duration: layerDef.style.animate.duration,
+                                easing: L.AnimationUtils.easingFunctions.linear
+                            }));
+                        });
+
+                    }
                 };
             };
 
@@ -734,7 +752,9 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
     },
     getLayerPoint: function (id) {
         var layer = this._layers[id];
-        return this._map.latLngToContainerPoint(this._getLayerCenter(layer));
+        if (layer) {
+            return this._map.latLngToContainerPoint(this._getLayerCenter(layer));
+        }
     },
     highlight: function (id) {
         var layer = this._layers[id];
@@ -816,8 +836,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
         this._map.addLayer(layer);
     },
-    _removeLayer: function (layer) {
-        this._map.removeLayer(this._layers[layer]);
+    _removeLayer: function (layer, id) {
+        this._map.removeLayer(this._layers[id]);
     },
     _disableControls: function () {
         this._map.dragging.disable();
@@ -1081,7 +1101,7 @@ Focus.Views.OpenLayersMapEngine = Focus.Views.MapEngine.extend({
 
         this._map.addLayer(layer);
     },
-    _removeLayer: function (layer) {
+    _removeLayer: function (layer, id) {
         //layer.off('click', layer.clickHandler);
         //this._map.removeLayer(layer);
     },
@@ -1369,64 +1389,73 @@ Focus.Util = {
     getLine: function (mapView, $target, layerId, drawStyle) {
         var offset = $target.offset();
         var point = mapView.getLayerPoint(layerId);
-        var x1 = point.x + mapView.$el.offset().left;
-        var y1 = point.y + mapView.$el.offset().top;
-        var x2 = offset.left;
-        var y2 = offset.top;
 
-        var bezierLine = d3.svg.line()
-            .x(function(d) { return d[0]; })
-            .y(function(d) { return d[1]; })
-            .interpolate("basis");
+        if (point) {
+            var x1 = point.x + mapView.$el.offset().left;
+            var y1 = point.y + mapView.$el.offset().top;
+            var x2 = offset.left;
+            var y2 = offset.top;
 
-        var svg = d3.select(document.createElement('div'))
-            .append("svg")
-            .attr('class', 'line')
-            .attr('id', layerId + '-line')
-            .attr('style', 'z-index:9;position:absolute;top:' + ~~(y2 + $target.outerHeight()/2) + 'px;left:' + ~~(x2 + $target.outerWidth()/2) + 'px;');
+            var bezierLine = d3.svg.line()
+                .x(function (d) {
+                    return d[0];
+                })
+                .y(function (d) {
+                    return d[1];
+                })
+                .interpolate("basis");
 
-        var defs = svg.append('defs');
-        var marker = defs.append('marker')
-            .attr('id','marker')
-            .attr("viewBox","0 0 10 10")
-            .attr('refX', '9')
-            .attr('refY', '5')
-            .attr('markerWidth', '6')
-            .attr('markerHeight', '6')
-            .attr('orient', 'auto');
-        var markerPath = marker.append('path')
-            .attr('class', 'marker-path')
-            .attr('d','M 0 0 L 10 5 L 0 10 z')
-            .attr('stroke', 'rgb(0, 123, 71)')
-            .attr('stroke-width', '0.1px')
-            .attr('fill', 'rgb(0, 123, 71)');
+            var svg = d3.select(document.createElement('div'))
+                .append("svg")
+                .attr('class', 'line')
+                .attr('id', layerId + '-line')
+                .attr('style', 'z-index:9;position:absolute;top:' + ~~(y2 + $target.outerHeight() / 2) + 'px;left:' + ~~(x2 + $target.outerWidth() / 2) + 'px;');
 
-        var anchorX = (x1 - x2 - ($target.outerWidth()/2))/2;
-        var anchorY = 0;
-        drawStyle = drawStyle || 'hv';
-        if (drawStyle === 'c') {
-            anchorY = (y1 - y2 - ($target.outerHeight()/2))/2;
+            var defs = svg.append('defs');
+            var marker = defs.append('marker')
+                .attr('id', 'marker')
+                .attr("viewBox", "0 0 10 10")
+                .attr('refX', '9')
+                .attr('refY', '5')
+                .attr('markerWidth', '6')
+                .attr('markerHeight', '6')
+                .attr('orient', 'auto');
+            var markerPath = marker.append('path')
+                .attr('class', 'marker-path')
+                .attr('d', 'M 0 0 L 10 5 L 0 10 z')
+                .attr('stroke', 'rgb(0, 123, 71)')
+                .attr('stroke-width', '0.1px')
+                .attr('fill', 'rgb(0, 123, 71)');
+
+            var anchorX = (x1 - x2 - ($target.outerWidth() / 2)) / 2;
+            var anchorY = 0;
+            drawStyle = drawStyle || 'hv';
+            if (drawStyle === 'c') {
+                anchorY = (y1 - y2 - ($target.outerHeight() / 2)) / 2;
+            }
+            else if (drawStyle === 'vh') {
+                anchorY = y1 - y2 - ($target.outerHeight() / 2);
+                anchorX = 0
+            }
+
+            var path = svg.append('path')
+                .attr('class', 'line')
+                .attr("d", bezierLine([[0, 0], [anchorX, anchorY], [x1 - x2 - ($target.outerWidth() / 2), y1 - y2 - ($target.outerHeight() / 2)]]))
+                .attr("stroke", "rgb(0, 123, 71)")
+                .attr("stroke-width", 3)
+                .attr("fill", "none")
+                .attr('marker-end', 'url(#marker)')
+                .transition()
+                .duration(500)
+                .attrTween("stroke-dasharray", function () {
+                    var len = this.getTotalLength();
+                    return function (t) {
+                        return (d3.interpolateString("0," + len, len + ",0"))(t)
+                    };
+                });
+
+            return $(svg.node());
         }
-        else if (drawStyle === 'vh') {
-            anchorY = y1 - y2 - ($target.outerHeight()/2);
-            anchorX = 0
-        }
-
-        var path = svg.append('path')
-            .attr('class', 'line')
-            .attr("d", bezierLine([[0, 0], [anchorX, anchorY], [x1 - x2 - ($target.outerWidth()/2),y1 - y2 - ($target.outerHeight()/2)]]))
-            .attr("stroke", "rgb(0, 123, 71)")
-            .attr("stroke-width", 3)
-            .attr("fill", "none")
-            .attr('marker-end', 'url(#marker)')
-            .transition()
-            .duration(500)
-            .attrTween("stroke-dasharray", function() {
-                var len = this.getTotalLength();
-                return function(t) { return (d3.interpolateString("0," + len, len + ",0"))(t) };
-            });
-
-        return $(svg.node());
     }
 };
 
@@ -1502,63 +1531,70 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                 var offset = $this.offset();
                 var id = $this.attr('data-layer-id');
                 var point = me._mapView0.getLayerPoint(id);
-                try {
-                    me._mapView0.highlight(id);
+                if (point) {
+                    try {
+                        me._mapView0.highlight(id);
+                    }
+                    catch (ex) {
+                        console.log(ex);
+                    }
+                    var x1 = point.x + me._mapView0.$el.offset().left;
+                    var y1 = point.y + me._mapView0.$el.offset().top;
+                    var x2 = offset.left;
+                    var y2 = offset.top;
+
+                    var bezierLine = d3.svg.line()
+                        .x(function (d) {
+                            return d[0];
+                        })
+                        .y(function (d) {
+                            return d[1];
+                        })
+                        .interpolate("basis");
+
+                    var svg = d3.select(me.$el[0])
+                        .append("svg")
+                        .attr('class', 'line')
+                        .attr('id', id + '-line')
+                        .attr('style', 'z-index:100000;position:absolute;top:' + ~~(y2 + $(this).outerHeight() / 2) + 'px;left:' + ~~x2 + 'px;');
+
+                    var defs = svg.append('defs');
+                    var marker = defs.append('marker')
+                        .attr('id', 'marker')
+                        .attr("viewBox", "0 0 10 10")
+                        .attr('refX', '9')
+                        .attr('refY', '5')
+                        .attr('markerWidth', '6')
+                        .attr('markerHeight', '6')
+                        .attr('orient', 'auto');
+                    var markerPath = marker.append('path')
+                        .attr('class', 'marker-path')
+                        .attr('d', 'M 0 0 L 10 5 L 0 10 z')
+                        .attr('stroke', 'rgb(0, 123, 71)')
+                        .attr('stroke-width', '0.1px')
+                        .attr('fill', 'rgb(0, 123, 71)');
+
+                    var path = svg.append('path')
+                        .attr("class", "line")
+                        .attr("d", bezierLine([[0, 0], [(x1 - x2) / 2, 0], [x1 - x2, y1 - y2 - ($(this).outerHeight() / 2)]]))
+                        .attr("stroke", "rgb(0, 123, 71)")
+                        .attr("stroke-width", 3)
+                        .attr("fill", "none")
+                        .attr('marker-end', 'url(#marker)')
+                        .transition()
+                        .duration(500)
+                        .attrTween("stroke-dasharray", function () {
+                            var len = this.getTotalLength();
+                            return function (t) {
+                                return (d3.interpolateString("0," + len, len + ",0"))(t)
+                            };
+                        });
+                    var $text = $('#text');
+                    $text.addClass('transparent');
+                    $('#overview-map').removeClass('transparent');
+                    $text.on('click', textClick);
+                    $this.addClass('selected-link');
                 }
-                catch (ex) {
-                    console.log(ex);
-                }
-                var x1 = point.x + me._mapView0.$el.offset().left;
-                var y1 = point.y + me._mapView0.$el.offset().top;
-                var x2 = offset.left;
-                var y2 = offset.top;
-
-                var bezierLine = d3.svg.line()
-                    .x(function(d) { return d[0]; })
-                    .y(function(d) { return d[1]; })
-                    .interpolate("basis");
-
-                var svg = d3.select(me.$el[0])
-                    .append("svg")
-                    .attr('class', 'line')
-                    .attr('id', id + '-line')
-                    .attr('style', 'z-index:100000;position:absolute;top:' + ~~(y2 + $(this).outerHeight()/2) + 'px;left:' + ~~x2 + 'px;');
-
-                var defs = svg.append('defs');
-                var marker = defs.append('marker')
-                    .attr('id','marker')
-                    .attr("viewBox","0 0 10 10")
-                    .attr('refX', '9')
-                    .attr('refY', '5')
-                    .attr('markerWidth', '6')
-                    .attr('markerHeight', '6')
-                    .attr('orient', 'auto');
-                var markerPath = marker.append('path')
-                    .attr('class', 'marker-path')
-                    .attr('d','M 0 0 L 10 5 L 0 10 z')
-                    .attr('stroke', 'rgb(0, 123, 71)')
-                    .attr('stroke-width', '0.1px')
-                    .attr('fill', 'rgb(0, 123, 71)');
-
-                var path = svg.append('path')
-                    .attr("class", "line")
-                    .attr("d", bezierLine([[0, 0], [(x1 - x2)/2, 0], [x1 - x2,y1 - y2 - ($(this).outerHeight()/2)]]))
-                    .attr("stroke", "rgb(0, 123, 71)")
-                    .attr("stroke-width", 3)
-                    .attr("fill", "none")
-                    .attr('marker-end', 'url(#marker)')
-                    .transition()
-                    .duration(500)
-                    .attrTween("stroke-dasharray", function() {
-                        var len = this.getTotalLength();
-                        return function(t) { return (d3.interpolateString("0," + len, len + ",0"))(t) };
-                    });
-                var $text = $('#text');
-                $text.addClass('transparent');
-                $('#overview-map').removeClass('transparent');
-                $text.on('click', textClick);
-                $this.addClass('selected-link');
-
             }, 10);
 
             var mouseleave = _.throttle(function (e) {
@@ -1686,9 +1722,13 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
             });
             $(this).on('mousemove touchmove', function (e) {
                 var $this = $(this);
+                var height = $this.height();
+                var width = $this.width();
                 var offset = $this.offset();
-                var distance = e.clientX - offset.left;
-                $photos.css('left', -1 * distance);
+                var distanceX = e.offsetX;
+                var distanceY = e.offsetY;
+                $photos.css('left', -1 * distanceX);
+                $photos.css('background-position-y', (distanceY/height * 100) + '%');
             });
         });
     },

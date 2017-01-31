@@ -1,0 +1,1705 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Geo Quiz #1</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .modal-content {
+            background-image: linear-gradient(0deg, rgba(242, 121, 33, 0.7), rgba(242, 121, 33, 0.7)), url(img/agsglobe.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- Add your site or application content here -->
+<div id="background"></div>
+<div id="map" class="fill"></div>
+<div id="foreground"></div>
+<div id="photos"></div>
+<div id="shadow"></div>
+<div id="score-view"><h3>0</h3></div>
+<svg id="score-text" width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="position: absolute;bottom: 50px;z-index: 10;right: calc(50% - 100px);text-align: center;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(0.748233,-0.663437,0.663437,0.748233,-71.4993,95.3792)">
+        <g transform="matrix(0.974148,0.22591,-0.22591,0.974148,14.9332,-26.5052)">
+            <text x="123.276px" y="51.996px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">S</text>
+        </g>
+        <g transform="matrix(0.889935,0.456088,-0.456088,0.889935,41.1167,-58.1446)">
+            <text x="141.028px" y="56.117px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">C</text>
+        </g>
+        <g transform="matrix(0.741486,0.670968,-0.670968,0.741486,84.934,-89.7957)">
+            <text x="158.999px" y="65.324px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">O</text>
+        </g>
+        <g transform="matrix(0.533523,0.845785,-0.845785,0.533523,149.897,-110.802)">
+            <text x="175.398px" y="80.49px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">R</text>
+        </g>
+        <g transform="matrix(0.322984,0.946405,-0.946405,0.322984,217.645,-110.12)">
+            <text x="185.791px" y="97.063px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">E</text>
+        </g>
+    </g>
+</svg>
+<div id="main-nav" class="light">
+    <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+        <svg width="1000px" height="1000px">
+            <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800" style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+            <path id="pathE" d="M 300 500 L 700 500" style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+            <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200" style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+        </svg>
+
+        <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+    </div>
+    <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <div id="menu"></div>
+</div>
+<div id="questions">
+    <div class="content scenes">
+    </div>
+</div>
+<div id="progress">
+    <div id="bar"></div>
+</div>
+<div id="bar-top"></div>
+<div id="bar-bottom" class="large"></div>
+<!-- inject:templates:html -->
+<!-- endinject -->
+<script src="../../../js/combined.js"></script>
+<script>
+    var scenes = {
+        "scenes": [
+            {
+                "id": "place1",
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+                    /*
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
+                    */
+                },
+                "layers": [{
+                    "id": "ns",
+                    "type": 'geojson',
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "coordinates": [-63.7443, 44.6820],
+                            "type": "Point"
+                        },
+                        "properties": {
+                            "name": "Nova Scotia",
+                            "style": {}
+                        }
+                    }
+                }, {
+                    "id": "me",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-69.4455, 45.2538]
+                        },
+                        "properties": {
+                            "name": "Maine",
+                            "style": {}
+                        }
+                    }
+                }, {
+                    "id": "nw",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-55.531222, 51.595267]
+                        },
+                        "properties": {
+                            "name": "Newfoundland",
+                            "style": {}
+                        }
+                    }
+                }, {
+                    "id": "ma",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-71.3824, 42.4072]
+                        },
+                        "properties": {
+                            "name": "Massachusetts",
+                            "style": {}
+                        }
+                    }
+                }, {
+                    "id": "greenland",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-45.3515625, 61.438767493682825]
+                        },
+                        "properties": {
+                            "name": "Greenland"
+                        }
+                    },
+                    "style": {
+                        "icon": {
+                            "html": '<img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Rigging-longship.svg" style="width: 80px;"/>',
+                            "iconSize": [80, 80],
+                            "iconAnchor": [40, 0]
+                        }
+                    }
+                }],
+                //"center": [-60, 48],
+                "zoom": 4,
+                "style": {
+                    "filter": "sepia(80%) brightness(80%)",
+                    "opacity": 0.7,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
+                }
+            },
+            {
+                "id": "place2",
+                //"center": [0, 40],
+                "zoom": 2,
+                "layers": [
+                    {
+                        "id": "latitude-lines",
+                        "type": "geojson",
+                        "style": {
+                            "color": "#ff0000",
+                            "weight": 2,
+                            "dashArray": [4, 4],
+                            "opacity": 1,
+                            "text": {
+                                "text": "Latitude Line",
+                                "style": {
+                                    "fill": "#ff0000",
+                                    "stroke": "#333",
+                                    "stroke-width": 0.5,
+                                    "alignment-baseline": "baseline",
+                                    "text-anchor": "start"
+                                }
+                            }
+                        },
+                        "data": {
+                            "type": "FeatureCollection",
+                            "features": [
+                                {
+                                    "type": "Feature",
+                                    "properties": {},
+                                    "geometry": {
+                                        "type": "LineString",
+                                        "coordinates": [
+                                            [
+                                                -180,
+                                                0
+                                            ],
+                                            [
+                                                180,
+                                                0
+                                            ]
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "Feature",
+                                    "properties": {},
+                                    "geometry": {
+                                        "type": "LineString",
+                                        "coordinates": [
+                                            [
+                                                -180,
+                                                20
+                                            ],
+                                            [
+                                                180,
+                                                20
+                                            ]
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "Feature",
+                                    "properties": {},
+                                    "geometry": {
+                                        "type": "LineString",
+                                        "coordinates": [
+                                            [
+                                                -180,
+                                                40
+                                            ],
+                                            [
+                                                180,
+                                                40
+                                            ]
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "Feature",
+                                    "properties": {},
+                                    "geometry": {
+                                        "type": "LineString",
+                                        "coordinates": [
+                                            [
+                                                -180,
+                                                60
+                                            ],
+                                            [
+                                                180,
+                                                60
+                                            ]
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "Feature",
+                                    "properties": {},
+                                    "geometry": {
+                                        "type": "LineString",
+                                        "coordinates": [
+                                            [
+                                                -180,
+                                                80
+                                            ],
+                                            [
+                                                180,
+                                                80
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "baseLayer": {
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                    "scheme": "xyz"
+
+                },
+                "style": {
+                    "filter": "sepia(70%)",
+                    "opacity": 0.3,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/old_mathematics.png)"
+                }
+            },
+            {
+                "id": "place3",
+                //"center": [0, 0],
+                "zoom": 7, //3
+                "baseLayer": {
+                    /*
+                    "type": "tile",
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },
+                layers: [{
+                    "id": "md",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-115.5842, 35.4166]
+                        },
+                        "properties": {
+                            "name": "Mojave Desert",
+                            "style": {}
+                        }
+                    }
+                }, {
+                    "id": "ad",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-69.1328, -23.8634]
+                        },
+                        "properties": {
+                            "name": "Atacama Desert",
+                            "style": {}
+                        }
+                    }
+                }, {
+                    "id": "nd",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [34.8757, 30.7141]
+                        },
+                        "properties": {
+                            "name": "Negev Desert",
+                            "style": {}
+                        }
+                    }
+                }, {
+                    "id": "gd",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [103.4300, 42.5900]
+                        },
+                        "properties": {
+                            "name": "Gobi Desert",
+                            "style": {}
+                        }
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(100%)",
+                    "opacity": 0.6,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place4",
+                //"center": [-79.541015625, -10.811724143275514],
+                "zoom": 4,
+                "baseLayer": {
+                    "type": "wms",
+                    "url": "http://nowcoast.noaa.gov/arcgis/services/nowcoast/analysis_ocean_sfc_sst_time/MapServer/WMSServer",
+                    "params": {
+                        "layers": "1"
+                    }
+                },
+                "layers": [{
+                    "id": "vh",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -79.541015625,
+                                -10.811724143275514
+                            ]
+                        },
+                        "properties": {
+                            "name": "??? Current",
+                            "style": {}
+                        }
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(50%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place5",
+                //"center": [-107.0068359375, 27.353636941500987],
+                "zoom": 4,
+                "baseLayer": {
+                    /*
+                    "type": "tile",
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },
+                "layers": [{
+                    "id": "ca",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 5,
+                        "dropShadow": true,
+                        "color": "#333"
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "California, Nevada, and parts of Mexico"
+                        },
+                        "geometry": {
+                            "type": "Polygon",
+                            "coordinates": [
+                                [
+                                    [
+                                        -124.27734374999999,
+                                        42.09822241118974
+                                    ],
+                                    [
+                                        -113.99414062499999,
+                                        41.96765920367816
+                                    ],
+                                    [
+                                        -113.99414062499999,
+                                        36.80928470205937
+                                    ],
+                                    [
+                                        -114.521484375,
+                                        32.694865977875075
+                                    ],
+                                    [
+                                        -110.91796875,
+                                        31.27855085894653
+                                    ],
+                                    [
+                                        -107.9296875,
+                                        31.50362930577303
+                                    ],
+                                    [
+                                        -107.841796875,
+                                        31.87755764334002
+                                    ],
+                                    [
+                                        -106.34765625,
+                                        31.653381399664
+                                    ],
+                                    [
+                                        -106.083984375,
+                                        32.10118973232094
+                                    ],
+                                    [
+                                        -103.0078125,
+                                        32.24997445586331
+                                    ],
+                                    [
+                                        -112.32421875,
+                                        29.38217507514529
+                                    ],
+                                    [
+                                        -113.203125,
+                                        31.203404950917395
+                                    ],
+                                    [
+                                        -113.99414062499999,
+                                        31.57853542647338
+                                    ],
+                                    [
+                                        -114.60937499999999,
+                                        31.653381399664
+                                    ],
+                                    [
+                                        -114.60937499999999,
+                                        30.44867367928756
+                                    ],
+                                    [
+                                        -115.83984375,
+                                        30.14512718337613
+                                    ],
+                                    [
+                                        -117.0703125,
+                                        32.02670629333614
+                                    ],
+                                    [
+                                        -117.333984375,
+                                        32.76880048488168
+                                    ],
+                                    [
+                                        -118.38867187500001,
+                                        33.87041555094183
+                                    ],
+                                    [
+                                        -120.58593749999999,
+                                        34.452218472826566
+                                    ],
+                                    [
+                                        -122.08007812499999,
+                                        36.31512514748051
+                                    ],
+                                    [
+                                        -122.607421875,
+                                        37.579412513438385
+                                    ],
+                                    [
+                                        -123.837890625,
+                                        39.36827914916011
+                                    ],
+                                    [
+                                        -124.45312499999999,
+                                        40.17887331434696
+                                    ],
+                                    [
+                                        -124.27734374999999,
+                                        42.09822241118974
+                                    ]
+                                ]
+                            ]
+                        }
+                    }
+                },{
+                    "id": "mx1",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 5,
+                        "dropShadow": true,
+                        "color": "#333"
+                    },
+                    "data":     {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Southern Mexico"
+                        },
+                        "geometry": {
+                            "type": "Polygon",
+                            "coordinates": [
+                                [
+                                    [
+                                        -109.423828125,
+                                        26.352497858154
+                                    ],
+                                    [
+                                        -109.423828125,
+                                        25.878994400196202
+                                    ],
+                                    [
+                                        -108.10546875,
+                                        24.926294766395593
+                                    ],
+                                    [
+                                        -105.8203125,
+                                        22.59372606392931
+                                    ],
+                                    [
+                                        -105.205078125,
+                                        21.207458730482653
+                                    ],
+                                    [
+                                        -105.556640625,
+                                        20.05593126519445
+                                    ],
+                                    [
+                                        -104.0625,
+                                        18.646245142670608
+                                    ],
+                                    [
+                                        -96.50390625,
+                                        15.368949896534705
+                                    ],
+                                    [
+                                        -95.2734375,
+                                        16.214674588248556
+                                    ],
+                                    [
+                                        -92.548828125,
+                                        15.029685756555674
+                                    ],
+                                    [
+                                        -91.14257812499999,
+                                        18.729501999072138
+                                    ],
+                                    [
+                                        -92.10937499999999,
+                                        18.729501999072138
+                                    ],
+                                    [
+                                        -94.39453125,
+                                        18.312810846425442
+                                    ],
+                                    [
+                                        -95.00976562499999,
+                                        18.89589255941504
+                                    ],
+                                    [
+                                        -95.712890625,
+                                        18.979025953255267
+                                    ],
+                                    [
+                                        -97.119140625,
+                                        20.715015145512098
+                                    ],
+                                    [
+                                        -97.734375,
+                                        22.43134015636061
+                                    ],
+                                    [
+                                        -97.646484375,
+                                        23.241346102386135
+                                    ],
+                                    [
+                                        -109.423828125,
+                                        26.352497858154
+                                    ]
+                                ]
+                            ]
+                        }
+                    }
+                },{
+                    "id": "mx",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 5,
+                        "dropShadow": true,
+                        "color": "#333"
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Texas and Northern Mexico"
+                        },
+                        "geometry": {
+                            "type": "Polygon",
+                            "coordinates": [
+                                [
+                                    [
+                                        -102.919921875,
+                                        36.66841891894786
+                                    ],
+                                    [
+                                        -99.580078125,
+                                        36.80928470205937
+                                    ],
+                                    [
+                                        -99.66796875,
+                                        34.66935854524545
+                                    ],
+                                    [
+                                        -98.0859375,
+                                        33.87041555094183
+                                    ],
+                                    [
+                                        -94.658203125,
+                                        33.94335994657882
+                                    ],
+                                    [
+                                        -94.04296874999999,
+                                        33.65120829920497
+                                    ],
+                                    [
+                                        -93.515625,
+                                        31.653381399664
+                                    ],
+                                    [
+                                        -93.515625,
+                                        29.99300228455108
+                                    ],
+                                    [
+                                        -96.50390625,
+                                        28.536274512989916
+                                    ],
+                                    [
+                                        -97.20703125,
+                                        27.761329874505233
+                                    ],
+                                    [
+                                        -97.55859375,
+                                        26.667095801104814
+                                    ],
+                                    [
+                                        -97.119140625,
+                                        26.03704188651584
+                                    ],
+                                    [
+                                        -97.822265625,
+                                        23.32208001137843
+                                    ],
+                                    [
+                                        -109.248046875,
+                                        26.43122806450644
+                                    ],
+                                    [
+                                        -112.32421875,
+                                        29.22889003019423
+                                    ],
+                                    [
+                                        -103.095703125,
+                                        32.10118973232094
+                                    ],
+                                    [
+                                        -102.919921875,
+                                        36.66841891894786
+                                    ]
+                                ]
+                            ]
+                        }
+                    }
+                }, {
+                    "id": "sw",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 5,
+                        "dropShadow": true,
+                        "color": "#333"
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Utah, Arizona, and New Mexico"
+                        },
+                        "geometry": {
+                            "type": "Polygon",
+                            "coordinates": [
+                                [
+                                    [
+                                        -113.99414062499999,
+                                        41.96765920367816
+                                    ],
+                                    [
+                                        -111.26953125,
+                                        41.96765920367816
+                                    ],
+                                    [
+                                        -111.26953125,
+                                        41.11246878918086
+                                    ],
+                                    [
+                                        -109.072265625,
+                                        40.979898069620155
+                                    ],
+                                    [
+                                        -108.984375,
+                                        37.09023980307208
+                                    ],
+                                    [
+                                        -103.095703125,
+                                        37.16031654673677
+                                    ],
+                                    [
+                                        -103.18359375,
+                                        32.175612478499346
+                                    ],
+                                    [
+                                        -106.25976562499999,
+                                        32.175612478499346
+                                    ],
+                                    [
+                                        -106.5234375,
+                                        31.728167146023935
+                                    ],
+                                    [
+                                        -108.017578125,
+                                        31.87755764334002
+                                    ],
+                                    [
+                                        -107.9296875,
+                                        31.353636941500987
+                                    ],
+                                    [
+                                        -108.45703125,
+                                        31.353636941500987
+                                    ],
+                                    [
+                                        -110.91796875,
+                                        31.42866311735861
+                                    ],
+                                    [
+                                        -114.43359375,
+                                        32.62087018318113
+                                    ],
+                                    [
+                                        -114.08203125,
+                                        37.020098201368114
+                                    ],
+                                    [
+                                        -113.99414062499999,
+                                        41.96765920367816
+                                    ]
+                                ]
+                            ]
+                        }
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(90%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place6",
+                //"center": [-40, 38],
+                "zoom": 4,
+                "baseLayer": {
+                    /*
+                    "type": "tile",
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },
+                "layers": [{
+                    "id": "eu",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 5,
+                        "color": "#ff7777",
+                        "opacity": 1,
+                        "markers": {
+                            "start": {
+                                "reverse": true
+                            },
+                            "end": {}
+                        }
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "LineString",
+                            "coordinates": [
+                                [
+                                    -79.453125,
+                                    35.746512259918504
+                                ],
+                                [
+                                    -0.3515625,
+                                    44.59046718130883
+                                ]
+                            ]
+                        }
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(90%)",
+                    "opacity": 0.8,
+
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place7",
+                //"center": [170, -3.3704],
+                "zoom": 5,
+                "baseLayer": /*{
+                    "type": "tile",
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
+                }*/ {
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+                    "scheme": "xyz"
+                },
+                "style": {
+                    "filter": "invert(100%) sepia(50%)",
+                    "opacity": 0.7,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/paper_3.png)"
+                },
+                "layers": [{
+                    "id": "guam",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            name: "Near Guam"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                145.39306640624997,
+                                12.833226023521243
+                            ]
+                        }
+                    }
+                }, {
+                    "id": "howland-island",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            name: "Near Howland Island"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                179.999999,
+                                0.7803484934016784
+                            ]
+                        }
+                    }
+                }, {
+                    "id": "papua-new-guinea",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            name: "Near Papua New Guinea"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                144.4921875,
+                                -1.142502403706165
+                            ]
+                        }
+                    }
+                }, {
+                    "id": "phillipine-sea",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            name: "In the Phillipine Sea"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                132.01171875,
+                                17.895114303749153
+                            ]
+                        }
+                    }
+                }, {
+                    "id": "earhart",
+                    "type": "geojson",
+                    "style": {
+                        "icon": {
+                            "html": "<img style='transform: rotate(180deg);' src='img/electra1white.svg'/>",
+                            "iconSize": [50, 50],
+                            "iconAnchor": [35, 35]
+                        },
+                        "color": "#ff3333",
+                        "dashArray": [3, 3],
+                        "weight": 2
+                    },
+                    "data": {
+                        "type": "FeatureCollection",
+                        "features": [
+                            {
+                                "type": "Feature",
+                                "geometry": {
+                                    "geometries": [
+                                        {
+                                            "type": "LineString",
+                                            "coordinates": [
+                                                [
+                                                    103.819836,
+                                                    1.352083,
+                                                    0
+                                                ],
+                                                [
+                                                    100.476232,
+                                                    13.723419,
+                                                    0
+                                                ]
+                                            ]
+                                        },
+                                        {
+                                            "type": "Point",
+                                            "coordinates": [
+                                                103.819836,
+                                                1.352083,
+                                                0
+                                            ]
+                                        }
+                                    ],
+                                    "type": "GeometryCollection"
+                                },
+                                "properties": {
+                                    "name": "Singapore",
+                                    "styleUrl": "#icon24",
+                                    "styleHash": -33558179,
+                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
+                                }
+                            },
+                            {
+                                "type": "Feature",
+                                "geometry": {
+                                    "geometries": [
+                                        {
+                                            "type": "LineString",
+                                            "coordinates": [
+                                                [
+                                                    107.606903,
+                                                    -6.91243,
+                                                    0
+                                                ],
+                                                [
+                                                    103.819836,
+                                                    1.352083,
+                                                    0
+                                                ]
+                                            ]
+                                        },
+                                        {
+                                            "type": "Point",
+                                            "coordinates": [
+                                                107.606903,
+                                                -6.91243,
+                                                0
+                                            ]
+                                        }
+                                    ],
+                                    "type": "GeometryCollection"
+                                },
+                                "properties": {
+                                    "name": "Bandung, Indonesia",
+                                    "styleUrl": "#icon25",
+                                    "styleHash": "7e0758c7",
+                                    "description": "<table width=\"400\"><tr><td>'Amelia Earhart decided today to take a three day rest and have her plane overhauled before taking off on the next leg of her flight around the world. She landed at Bandoeng at 10:17 a.m. today (10:37 p.m. E.S.T.) after a flight from Singapore over the Java sea and a part of mountainous Java. After her plane is checked she plans to take off for Darwin, Australia.'<br/></td></tr><tr><td></td></tr></table>"
+                                }
+                            },
+                            {
+                                "type": "Feature",
+                                "geometry": {
+                                    "geometries": [
+                                        {
+                                            "type": "LineString",
+                                            "coordinates": [
+                                                [
+                                                    123.594852,
+                                                    -10.184301,
+                                                    0
+                                                ],
+                                                [
+                                                    107.606903,
+                                                    -6.91243,
+                                                    0
+                                                ]
+                                            ]
+                                        },
+                                        {
+                                            "type": "Point",
+                                            "coordinates": [
+                                                123.594852,
+                                                -10.184301,
+                                                0
+                                            ]
+                                        }
+                                    ],
+                                    "type": "GeometryCollection"
+                                },
+                                "properties": {
+                                    "name": "Kupang, Indonesia",
+                                    "styleUrl": "#icon26",
+                                    "styleHash": "2f643307",
+                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
+                                }
+                            },
+                            {
+                                "type": "Feature",
+                                "geometry": {
+                                    "geometries": [
+                                        {
+                                            "type": "LineString",
+                                            "coordinates": [
+                                                [
+                                                    130.841904,
+                                                    -12.461334,
+                                                    0
+                                                ],
+                                                [
+                                                    123.594852,
+                                                    -10.184301,
+                                                    0
+                                                ]
+                                            ]
+                                        },
+                                        {
+                                            "type": "Point",
+                                            "coordinates": [
+                                                130.841904,
+                                                -12.461334,
+                                                0
+                                            ]
+                                        }
+                                    ],
+                                    "type": "GeometryCollection"
+                                },
+                                "properties": {
+                                    "name": "Darwin, Australia",
+                                    "styleUrl": "#icon27",
+                                    "styleHash": "-1f3ef2b9",
+                                    "description": "<table width=\"400\"><tr><td></td></tr></table>"
+                                }
+                            }
+                        ]
+                    }
+                }]
+            },
+            {
+                "id": "place8",
+                //"center": [0, 30],
+                "zoom": 3,
+                "baseLayer": {
+                    /*
+                    "type": "tile",
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
+                    */
+                    /*
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+
+                },
+                "style": {
+                    "filter": "grayscale(70%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                },
+                "layers": [{
+                    "id": "canaveral",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Cape Canaveral, Florida, USA"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -80.5772,
+                                28.4740
+                            ]
+                        }
+                    },
+                    "style": {
+                        "icon": {
+                            "html": "<img src='img/atlasv.svg' style='width: 100%;'/>",
+                            "iconSize": [40, 80],
+                            "iconAnchor": [20, 80]
+                        }
+                    }
+                }, {
+                    "id": "baikonur",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Baikonur Cosmodrome, Kazakhstan"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                63.3134,
+                                45.8595
+                            ]
+                        }
+                    },
+                    "style": {
+                        "icon": {
+                            "html": "<img src='img/r7.svg' style='width: 100%;'/>",
+                            "iconSize": [40, 80],
+                            "iconAnchor": [20, 80]
+                        }
+                    }
+                }]
+            },
+            {
+                "id": "place9",
+                //"center": [0, 0],
+                "zoom": 2,
+                "baseLayer": [{
+                    /*
+                    "type": "tile",
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.6,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                },
+                "layers": [{
+                    "id": "southafrica",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "South Africa"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                18.6492919921875,
+                                -34.26175652445979
+                            ]
+                        }
+                    },
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    }
+                }, {
+                    "id": "india",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "The southern tip of India"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                77.541,
+                                8.078
+                            ]
+                        }
+                    },
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    }
+                }, {
+                    "id": "greenland",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "The southern tip of Greenland"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -44.00024414062499,
+                                59.77299162570672
+                            ]
+                        }
+                    },
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    }
+                }, {
+                    "id": "chile",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": 'Off the coast of Chile'
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -70.3564453125,
+                                -55.17886766328199
+                            ]
+                        }
+                    },
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    }
+                }]
+            }, {
+                "id": "place10",
+                "center": [142.5, 17.75],
+                "zoom": 6,
+                "baseLayer": {
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+                },
+                "style": {
+                    "filter": "grayscale(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                },
+                "layers": [{
+                    "id": "mariana",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Mariana Trench"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                142.5,
+                                17.75
+                            ]
+                        }
+                    },
+                    "style": {
+                        "icon": {
+                            "html": "<img src='img/ship.svg' style='width: 100%;'/>",
+                            "iconSize": [80, 40],
+                            "iconAnchor": [40, 40]
+                        }
+                    }
+                }]
+            }
+        ]
+    };
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79613259-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    var questions = [{
+        choices: [{
+            id: 'A',
+            text: 'Massachusetts',
+            photo: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Massachusetts.svg',
+            sceneId: 'ma'
+        }, {
+            id: 'B',
+            text: 'Maine',
+            photo: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Maine.svg',
+            sceneId: 'me'
+        }, {
+            id: 'C',
+            text: 'Nova Scotia',
+            photo: 'https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Nova_Scotia.svg',
+            sceneId: 'ns'
+        }, {
+            id: 'D',
+            text: 'Newfoundland',
+            photo: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Newfoundland_and_Labrador.svg',
+            sceneId: 'nw'
+        }, ],
+        prompt: 'Although many credit Christopher Columbus with being the first European to discover the New World, he was actually beaten by almost 500 years by Leif Erikson. Where did Erikson first land in North America?',
+        rightAnswer: {
+            id: 'D',
+            description: 'Newfoundland'
+        }
+    }, {
+        choices: [{
+            id: '1',
+            text: 'Astrolab',
+            photo: 'img/astrolab.png',
+            sceneId: 'latitude-lines'
+        }, {
+            id: '2',
+            text: 'Anchor',
+            photo: 'img/anchor.png',
+            sceneId: 'latitude-lines'
+        }, {
+            id: '3',
+            text: 'Compass',
+            photo: 'img/compass.png',
+            sceneId: 'latitude-lines'
+        }, {
+            id: '4',
+            text: 'Sextant',
+            photo: 'img/sextant.png',
+            sceneId: 'latitude-lines'
+        }],
+        prompt: 'Many technological inventions helped explorers better map the world. Which of the following inventions made it possible to calculate the latitude while exploring?',
+        rightAnswer: {
+            id: '4',
+            description: 'Sextant'
+        }
+    }, {
+        choices: [{
+            id: '1',
+            text: 'Mojave Desert',
+            photo: 'img/mojave.png',
+            sceneId: 'md'
+        }, {
+            id: '2',
+            text: 'Atacama Desert',
+            photo: 'img/atacama.png',
+            sceneId: 'ad'
+        }, {
+            id: '3',
+            text: 'Negev Desert',
+            photo: 'img/negev.png',
+            sceneId: 'nd'
+        }, {
+            id: '4',
+            text: 'Gobi Desert',
+            photo: 'img/gobi.png',
+            sceneId: 'gd'
+        }],
+        prompt: 'The American Geographical Society financed exploration in the early 20th Century that travelled to the driest desert on Earth. Which of the following deserts is the driest?',
+        rightAnswer: {
+            id: '2',
+            description: 'Atacama Desert'
+        }
+    }, {
+        choices: [{
+            id: '1',
+            text: 'Alexander von Humboldt',
+            photo: 'img/vonhumbolt.png',
+            sceneId: 'vh'
+        }, {
+            id: '2',
+            text: 'James Cook',
+            photo: 'img/cook.png',
+            sceneId: 'vh'
+        }, {
+            id: '3',
+            text: 'Henry Hudson',
+            photo: 'img/hudson.png',
+            sceneId: 'vh'
+        }, {
+            id: '4',
+            text: 'John Wesley Powell',
+            photo: 'img/powell.png',
+            sceneId: 'vh'
+        }],
+        prompt: 'Many great explorers get geographical features bearing their names, including which explorer of South America whose name is now attached to the cold-water current that flows off the Pacific coast of South America?',
+        rightAnswer: {
+            id: '1',
+            description: 'Alexander von Humboldt'
+        }
+    }, {
+        choices: [{
+            id: '1',
+            text: 'California, Nevada, and parts of Mexico',
+            photo: 'https://upload.wikimedia.org/wikipedia/commons/f/f4/Conquistadors_Discover_the_Pacific_20862v.jpg',
+            sceneId: 'ca'
+        }, {
+            id: '2',
+            text: 'Utah, Arizona, and New Mexico',
+            photo: 'https://upload.wikimedia.org/wikipedia/commons/3/39/Inca-Spanish_confrontation.JPG',
+            sceneId: 'sw'
+        }, {
+            id: '3',
+            text: 'Texas and Northern Mexico',
+            photo: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Coronado-Remington.jpg',
+            sceneId: 'mx'
+        }, {
+            id: '4',
+            text: 'Southern Mexico',
+            photo: 'https://upload.wikimedia.org/wikipedia/commons/2/25/The_Conquest_of_Tenochtitlan.jpg',
+            sceneId: 'mx1'
+        }],
+        prompt: 'Not all explorers find what they’re looking for. Where did Conquistador Francisco Pizarro go looking for the 7 Cities of Cibola?',
+        rightAnswer: {
+            id: '2',
+            description: 'Utah, Arizona, and New Mexico - what is now the Southwestern United States'
+        }
+    }, {
+        choices: [{
+            id: '1',
+            text: 'Grapes',
+            photo: 'img/grapes.png',
+            sceneId: 'eu'
+        }, {
+            id: '2',
+            text: 'Cattle',
+            photo: 'img/cattle.png',
+            sceneId: 'eu'
+        }, {
+            id: '3',
+            text: 'Tomatoes',
+            photo: 'img/tomatoes.png',
+            sceneId: 'eu'
+        }, {
+            id: '4',
+            text: 'House Cats',
+            photo: 'img/housecats.png',
+            sceneId: 'eu'
+        }],
+        prompt: 'Early exploration often led to major cultural exchanges. Which of the following products did the post-Christopher Columbus exchange bring to Europe?',
+        rightAnswer: {
+            id: '3',
+            description: 'Tomatoes'
+        }
+    }, {
+        choices: [{
+            id: '1',
+            text: 'The Phillipine Sea',
+            photo: 'img/ae-photo.jpg',
+            sceneId: 'phillipine-sea'
+        }, {
+            id: '2',
+            text: 'The Southwestern Pacific near Papua New Guinea',
+            photo: 'img/ae-photo2.jpg',
+            sceneId: 'papua-new-guinea'
+        }, {
+            id: '3',
+            text: 'The Northwestern Pacific near Guam',
+            photo: 'img/ae-photo3.jpg',
+            sceneId: 'guam'
+        }, {
+            id: '4',
+            text: 'The South Pacific near Howland Island',
+            photo: 'img/ae-photo4.jpg',
+            sceneId: 'howland-island'
+        }],
+        prompt: 'Most of the famous explorers on the AGS Explorer’s Globe are men, but one woman stands out above others on the globe, Amelia Earhart, partly because of her famous disappearance. Approximately where was Earhart lost?',
+        rightAnswer: {
+            id: '4',
+            description: 'The South Pacific near Howland Island'
+        }
+    }, {
+        choices: [{
+            id: '1',
+            text: 'Ham the Chimp',
+            photo: 'img/hamthechimp.png',
+            sceneId: 'canaveral'
+        }, {
+            id: '2',
+            text: 'Baker the Monkey',
+            photo: 'img/bakerthemonkey.png',
+            sceneId: 'canaveral'
+        }, {
+            id: '3',
+            text: 'Laika the Dog',
+            photo: 'img/laikathedog.png',
+            sceneId: 'baikonur'
+        }, {
+            id: '4',
+            text: 'Veterok and Ugoljok the dogs',
+            photo: 'img/veterokandugoliok.jpg',
+            sceneId: 'baikonur'
+        }],
+        prompt: 'Although most famous explorers are human, a few were not. Which of the following was the first animal rocketed into outer space that made it back home?',
+        rightAnswer: {
+            id: '2',
+            description: 'Baker the Monkey'
+        }
+    }, {
+        choices: [{
+            id: '1',
+            text: 'The southern end of Greenland',
+            photo: 'img/landsat2.jpg',
+            sceneId: 'greenland'
+        }, {
+            id: '2',
+            text: 'The southern end of Chile',
+            photo: 'img/landsat1.jpg',
+            sceneId: 'chile'
+        }, {
+            id: '3',
+            text: 'The southern tip of India',
+            photo: 'img/india.jpeg',
+            sceneId: 'india'
+        }, {
+            id: '4',
+            text: 'Near Cape Town, South Africa',
+            photo: 'img/capetown.jpeg',
+            sceneId: 'southafrica'
+        }],
+        prompt: 'Vasco da Gama, the famous Portuguese explorer, rounded the Cape of Good Hope, helping usher in the Age of Exploration. Where is the Cape of Good Hope?',
+        rightAnswer: {
+            id: '4',
+            description: 'The Cape of Good Hope is off the coast of Cape Town, South Africa'
+        }
+    }, {
+        choices: [{
+            id: '1',
+            text: 'Robert Ballard',
+            photo: 'img/ballard.png',
+            sceneId: 'mariana'
+        }, {
+            id: '2',
+            text: 'Jacques Cousteau',
+            photo: 'img/cousteau.png',
+            sceneId: 'mariana'
+        }, {
+            id: '3',
+            text: 'James Cameron',
+            photo: 'img/cameron.png',
+            sceneId: 'mariana'
+        }, {
+            id: '4',
+            text: 'E. Lee Spence',
+            photo: 'img/spence.png',
+            sceneId: 'mariana'
+        }],
+        prompt: 'Which explorer was the first to reach the bottom of the Marianas Trench on a solo voyage, the deepest point on the bottom of the ocean?',
+        rightAnswer: {
+            id: '3',
+            description: 'James Cameron'
+        }
+    }];
+
+        var questionCollection = new Focus.Collections.QuestionCollection(questions);
+
+        var navigator = new Focus.Views.QuizSceneNavigator({
+            el: $('.scenes'),
+            model: new Focus.Models.ModalModel({
+                title: 'Welcome to the first Geo Quiz!',
+                content: "Welcome to the Focus on Geography quarterly GeoQuiz! This time our theme is explorers, in honor of the American Geographical Society’s longtime efforts in exploration around the world, as evidenced by the Explorer’s Globe that the AGS holds with over 100 famous explorers signatures.",
+                buttonText: 'Start Quiz'
+            }),
+            collection: questionCollection
+        });
+        navigator.render();
+
+        var sceneManager = new Focus.Views.SceneManagerView({
+            el: $('body'),
+            navigator: navigator,
+            mapEngineClass: Focus.Views.LeafletMapEngine //OpenLayersMapEngine //LeafletMapEngine
+        });
+
+        var shareView = new Focus.Views.ShareView();
+        shareView.render();
+
+    });
+</script>
+</body>
+</html>

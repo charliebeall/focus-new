@@ -13,6 +13,23 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/finland/img/figure5.jpg',
             url: 'publications/photoessays/finland/index.html',
             location: []
+        }, {
+            type: 'Feature Article',
+            title: 'Exploring Arctic Diversity by Hitting the Road:  Where Finland, Norway, and Russia Meet',
+            author: 'Julia Gerlach, Nadir Kinossian',
+            citationAuthor: 'Gerlach, J., Kinossian, N.',
+            doi: '',
+            description: '',
+            date: '01/31/17',
+            thumbnail: 'publications/articles/norway/img/figure11.jpg',
+            url: 'publications/articles/norway/index.html',
+            location: [{
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-113.77222, 27.33072]
+                }
+            }]
         }]
     },
     {
