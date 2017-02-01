@@ -574,19 +574,14 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
         return layer;
     },
-    _calculateBounds: function () {
+    _calculateBounds: function (sceneModel) {
         var bounds = new L.LatLngBounds();
         var me = this;
-
-        _.each(this._layers, function (layer) {
+        var boundIds = sceneModel.get('bounds');
+        _.each(this._layers, function (layer, id) {
             if (me._map.hasLayer(layer)) {
-                /*if (layer.getLatLng) {
-                    bounds.extend(layer.getLatLng());
-                }
-                else if (layer.getBounds) {
-                    bounds.extend(layer.getBounds());
-                }*/
-                if (layer._bounds) {
+                var shouldInclude = boundIds ? id in boundIds : true;
+                if (layer._bounds && shouldInclude) {
                     bounds.extend(layer._bounds);
                 }
             }
@@ -601,7 +596,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         var me = this;
 
         if (!coordinates) {
-            bounds = this._calculateBounds();
+            bounds = this._calculateBounds(sceneModel);
             coordinates = [bounds.getCenter().lng, bounds.getCenter().lat];
             sceneModel.set('center', coordinates);
         }

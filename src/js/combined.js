@@ -13812,17 +13812,6 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
-            type: 'Photo Essay',
-            title: 'Urban Agriculture in Helsinki, Finland',
-            author: 'Sophia E. Hagolani-Albov',
-            citationAuthor: 'Albov, S.',
-            description: '',
-            date: '01/03/17',
-            doi: '',
-            thumbnail: 'publications/photoessays/finland/img/figure5.jpg',
-            url: 'publications/photoessays/finland/index.html',
-            location: []
-        }, {
             type: 'Feature Article',
             title: 'Exploring Arctic Diversity by Hitting the Road:  Where Finland, Norway, and Russia Meet',
             author: 'Julia Gerlach, Nadir Kinossian',
@@ -13839,6 +13828,17 @@ Focus.Volumes = [
                     coordinates: [-113.77222, 27.33072]
                 }
             }]
+        }, {
+            type: 'Photo Essay',
+            title: 'Urban Agriculture in Helsinki, Finland',
+            author: 'Sophia E. Hagolani-Albov',
+            citationAuthor: 'Albov, S.',
+            description: '',
+            date: '01/03/17',
+            doi: '',
+            thumbnail: 'publications/photoessays/finland/img/figure5.jpg',
+            url: 'publications/photoessays/finland/index.html',
+            location: []
         }]
     },
     {
@@ -14706,19 +14706,14 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
         return layer;
     },
-    _calculateBounds: function () {
+    _calculateBounds: function (sceneModel) {
         var bounds = new L.LatLngBounds();
         var me = this;
-
-        _.each(this._layers, function (layer) {
+        var boundIds = sceneModel.get('bounds');
+        _.each(this._layers, function (layer, id) {
             if (me._map.hasLayer(layer)) {
-                /*if (layer.getLatLng) {
-                    bounds.extend(layer.getLatLng());
-                }
-                else if (layer.getBounds) {
-                    bounds.extend(layer.getBounds());
-                }*/
-                if (layer._bounds) {
+                var shouldInclude = boundIds ? id in boundIds : true;
+                if (layer._bounds && shouldInclude) {
                     bounds.extend(layer._bounds);
                 }
             }
@@ -14733,7 +14728,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         var me = this;
 
         if (!coordinates) {
-            bounds = this._calculateBounds();
+            bounds = this._calculateBounds(sceneModel);
             coordinates = [bounds.getCenter().lng, bounds.getCenter().lat];
             sceneModel.set('center', coordinates);
         }

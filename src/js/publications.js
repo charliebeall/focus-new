@@ -3,17 +3,6 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
-            type: 'Photo Essay',
-            title: 'Urban Agriculture in Helsinki, Finland',
-            author: 'Sophia E. Hagolani-Albov',
-            citationAuthor: 'Albov, S.',
-            description: '',
-            date: '01/03/17',
-            doi: '',
-            thumbnail: 'publications/photoessays/finland/img/figure5.jpg',
-            url: 'publications/photoessays/finland/index.html',
-            location: []
-        }, {
             type: 'Feature Article',
             title: 'Exploring Arctic Diversity by Hitting the Road:  Where Finland, Norway, and Russia Meet',
             author: 'Julia Gerlach, Nadir Kinossian',
@@ -30,6 +19,17 @@ Focus.Volumes = [
                     coordinates: [-113.77222, 27.33072]
                 }
             }]
+        }, {
+            type: 'Photo Essay',
+            title: 'Urban Agriculture in Helsinki, Finland',
+            author: 'Sophia E. Hagolani-Albov',
+            citationAuthor: 'Albov, S.',
+            description: '',
+            date: '01/03/17',
+            doi: '',
+            thumbnail: 'publications/photoessays/finland/img/figure5.jpg',
+            url: 'publications/photoessays/finland/index.html',
+            location: []
         }]
     },
     {
