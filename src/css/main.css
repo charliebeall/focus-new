@@ -1668,9 +1668,38 @@ div.photo-essay div.citation {
     opacity: 1;
 }
 
+@media (max-width: 1024px) {
+    #text h2.title {
+        font-size: 30px;
+    }
+
+    #map {
+        opacity: 1;
+        left: calc(0px - 50%);
+        right: 0;
+        width: calc(150% - 0px);
+        height: calc(100vh - 0px);
+        margin: 0px;
+    }
+
+    #map.photo-essay {
+        width: 30%;
+        left: 0px;
+    }
+
+    #overview-map {
+        width: 120px;
+        height: 120px;
+    }
+
+    #text {
+        width: 50%;
+    }
+}
+
 @media (max-width: 768px) {
 
-    h2.title {
+    #text h2.title {
         font-size: 24px;
     }
 
@@ -1801,7 +1830,7 @@ div.photo-essay div.citation {
 
     .choice .text-row {
         width: 150px;
-        bottom: 75px;
+        bottom: 50px;
         transform: rotate(45deg);
         background: black;
         padding: 4px;

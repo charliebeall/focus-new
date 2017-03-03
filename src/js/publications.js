@@ -3,13 +3,22 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+            type: 'Geo Quiz',
+            title: 'Quiz Three:  The Arctic',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '03/05/17',
+            thumbnail: 'publications/quizzes/three/img/North_Pole_1907.jpg',
+            url: 'publications/quizzes/three/index.html',
+            location: []
+        }, {
             type: 'Feature Article',
             title: 'Exploring Arctic Diversity by Hitting the Road:  Where Finland, Norway, and Russia Meet',
             author: 'Julia Gerlach, Nadir Kinossian',
             citationAuthor: 'Gerlach, J., Kinossian, N.',
             doi: '',
             description: '',
-            date: '01/31/17',
+            date: '02/06/17',
             thumbnail: 'publications/articles/norway/img/figure11.jpg',
             url: 'publications/articles/norway/index.html',
             location: [{

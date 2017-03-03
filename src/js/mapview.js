@@ -249,7 +249,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         });
 
         var showAttribution = 'showAttribution' in this.model.attributes ? this.model.get('showAttribution') : true;
-        this._map = new L.Map(this.$el.attr('id'), {
+        var mapOptions = {
             center: this.model.get('center'),
             zoom: this.model.get('zoom'),
             attributionControl: false,
@@ -259,7 +259,21 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             markerZoomAnimation: true,
             zoomDelta: 0.5
             //renderer: L.canvas()
-        });
+        };
+        if (this.model.get('crs')) {
+            mapOptions.crs = this.model.get('crs');
+        }
+        if (this.model.get('renderer')) {
+            mapOptions.renderer = this.model.get('renderer');
+        }
+        if (this.model.get('maxBounds')) {
+            mapOptions.maxBounds = this.model.get('maxBounds');
+        }
+        if (this.model.get('zoomAnimation')) {
+            mapOptions.zoomAnimation = this.model.get('zoomAnimation');
+        }
+
+        this._map = new L.Map(this.$el.attr('id'), mapOptions);
 
         if (showAttribution) {
             var attributionControl = new L.Control.CustomAttribution();
@@ -278,14 +292,6 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
     _layerDefToLayer: function (layerDef) {
         var layer;
         var me = this;
-
-        // If there's an idRef attribute then get the layer definition from the feature lookup
-        // and merge it with the style info. included in layer
-        /*
-        if (layerDef.idRef && this._featureLookup) {
-            layerDef = $.extend(true, {}, this._featureLookup[layerDef.idRef], layerDef);
-        }
-        */
 
         if (layerDef.type === 'vector') {
             var defaultParams = {
@@ -321,7 +327,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             layer = MQ[layerDef.url]();
         }
         else if (layerDef.type === 'wms') {
-            layer = new L.TileLayer.WMS(layerDef.url, $.extend(true, layerDef.params, {
+            layer = new L.TileLayer.WMS(layerDef.url, $.extend(true, {}, layerDef.params, {
                 detectRetina: true
             }));
         }
@@ -352,6 +358,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 },
                 layerOptions: layerDef.style || {}
             });
+
+            layer._bounds = layer.getBounds();
         }
         else if (layerDef.type === 'csv') {
             var me = this;
@@ -507,7 +515,13 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                             var updater = function (latlngs) {
                                 return function (layer, points, interpolatedPoint) {
                                     var index = latlngs.indexOf(points[0]);
-                                    layer.setLatLngs(latlngs.slice(0, index + 1)); //.concat(new L.LatLng(interpolatedPoint.y, interpolatedPoint.x)));
+
+                                    if (layerDef.style.animate.interpolate) {
+                                        layer.setLatLngs(latlngs.slice(0, index + 1).concat(new L.LatLng(interpolatedPoint.y, interpolatedPoint.x)));
+                                    }
+                                    else {
+                                        layer.setLatLngs(latlngs.slice(0, index + 1));
+                                    }
                                 };
                             };
 
@@ -522,52 +536,60 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 };
             };
 
-            layer = new L.ChoroplethDataLayer(layerDef.data.features ? layerDef.data : [layerDef.data], {
-                recordsField: layerDef.data.features ? 'features': null,
-                geoJSONField: null,
-                locationMode: L.LocationModes.GEOJSON,
-                layerOptions: style,
-                tooltipOptions: {
-                    iconSize: null,
-                    iconAnchor: new L.Point(-5, 0)
-                },
-                getMarker: function (location, options, record) {
-                    var marker;
-                    if (options.icon) {
-                        var markerOptions = {
-                            icon: new L.DivIcon({
-                                className: options.icon.className || 'marker-text',
-                                html: options.icon.html,
-                                iconSize: options.icon.iconSize ? new L.Point(options.icon.iconSize[0], options.icon.iconSize[1]) : null,
-                                iconAnchor: options.icon.iconAnchor ? new L.Point(options.icon.iconAnchor[0], options.icon.iconAnchor[1]): null
-                            })
-                        };
+            var bounds;
+            //if (layerDef.data.crs) {
+            //    layer = L.Proj.geoJson(layerDef.data);
+            //    bounds = new L.LatLngBounds(new L.LatLng(83, -69), new L.LatLng(83, -69));
+            //}
+            //else {
+                layer = new L.ChoroplethDataLayer(layerDef.data.features ? layerDef.data : [layerDef.data], {
+                    recordsField: layerDef.data.features ? 'features' : null,
+                    geoJSONField: null,
+                    locationMode: L.LocationModes.GEOJSON,
+                    layerOptions: style,
+                    tooltipOptions: {
+                        iconSize: null,
+                        iconAnchor: new L.Point(-5, 0)
+                    },
+                    getMarker: function (location, options, record) {
+                        var marker;
+                        if (options.icon) {
+                            var markerOptions = {
+                                icon: new L.DivIcon({
+                                    className: options.icon.className || 'marker-text',
+                                    html: options.icon.html,
+                                    iconSize: options.icon.iconSize ? new L.Point(options.icon.iconSize[0], options.icon.iconSize[1]) : null,
+                                    iconAnchor: options.icon.iconAnchor ? new L.Point(options.icon.iconAnchor[0], options.icon.iconAnchor[1]) : null
+                                })
+                            };
 
-                        if (options.pane) {
-                            markerOptions.pane = options.pane;
+                            if (options.pane) {
+                                markerOptions.pane = options.pane;
+                            }
+
+                            marker = new L.Marker(location, markerOptions);
                         }
-
-                        marker = new L.Marker(location, markerOptions);
-                    }
-                    else {
-                        marker = new L.RegularPolygonMarker(location, options);
-                    }
-                    return marker;
-                },
-                displayOptions: {
-                    'properties.name': {
-                        displayName: 'Name',
-                        displayText: function (value) {
-                            return value;
+                        else {
+                            marker = new L.RegularPolygonMarker(location, options);
                         }
-                    }
-                },
-                onEachRecord: onEachRecord(layerDef)
-            });
+                        return marker;
+                    },
+                    displayOptions: {
+                        'properties.name': {
+                            displayName: 'Name',
+                            displayText: function (value) {
+                                return value;
+                            }
+                        }
+                    },
+                    onEachRecord: onEachRecord(layerDef)
+                });
 
-            var extent = turf.bbox(layerDef.data);
+                var extent = turf.bbox(layerDef.data);
 
-            var bounds = new L.LatLngBounds(new L.LatLng(extent[1], extent[0]), new L.LatLng(extent[3], extent[2]));
+                bounds = new L.LatLngBounds(new L.LatLng(extent[1], extent[0]), new L.LatLng(extent[3], extent[2]));
+            //}
+
 
             layer._bounds = bounds;
         }
@@ -628,33 +650,43 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
         this._lastCoordinates = coordinates;
 
-        if (fly) {
-            me._map.stop();
-            if (bounds) {
-                me._map.flyToBounds(bounds, $.extend(true, sceneModel.get('panZoomOptions') || {}, {
-                    maxZoom: zoom,
-                    padding: [15,15]
-                }));
+        try {
+            if (fly) {
+                me._map.stop();
+                if (bounds) {
+                    me._map.flyToBounds(bounds, $.extend(true, sceneModel.get('panZoomOptions') || {}, {
+                        maxZoom: zoom,
+                        padding: [15, 15]
+                    }));
+                }
+                else {
+                    me._map.flyTo(latLng, zoom);
+                }
             }
             else {
-                me._map.flyTo(latLng, zoom);
+                if (bounds) {
+                    me._map.fitBounds(bounds, {
+                        maxZoom: zoom,
+                        padding: [15, 15]
+                    });
+                }
+                else {
+                    this._map.setView(latLng, zoom, {
+                        animate: true
+                    });
+                }
             }
         }
-        else {
-            if (bounds) {
-                me._map.fitBounds(bounds, {
-                    maxZoom: zoom,
-                    padding: [15,15]
-                });
-            }
-            else {
-                this._map.setView(latLng, zoom, {
-                    animate: true
-                });
-            }
+        catch (ex) {
+            console.log(ex);
         }
 
-        sceneModel.set('bounds', this._map.getBounds());
+        try {
+            sceneModel.set('bounds', this._map.getBounds());
+        }
+        catch (ex) {
+            console.log('Could not update scene bounds');
+        }
 
     },
     _setMapStyle: function (sceneModel) {
@@ -675,6 +707,19 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             this.$el.css('background', background);
         }
     },
+    _removeFunc: function (layerIndex) {
+        var me = this;
+        return function (layer, key) {
+            if (!(key in layerIndex)) {
+                console.log('Removing: ' + key);
+                if (layer.getEvents) {
+                    var events = layer.getEvents();
+                    me._map.off(events, layer);
+                }
+                me._map.removeLayer(layer);
+            }
+        };
+    },
     _setBaseLayer: function (layerDef) {
         var me = this;
         var layerDefs = _.isArray(layerDef) ? layerDef : [layerDef];
@@ -686,40 +731,45 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         _.each(layerDefs, function (layerDef) {
             var layer = me.addBaseLayer(layerDef); //this._baseLayerIndex[layerDef.url] || this.addBaseLayer(layerDef);
 
-            if (!(layerDef.url in me._lastLayer)) {
+            if (layer) {
+                if (layerDef.crs) {
+                    me._map.options.crs = layerDef.crs;
+                }
 
-                me._map.addLayer(layer);
+                if (!(layerDef.url in me._lastLayer)) {
+                    try {
+                        me._map.addLayer(layer);
+                    }
+                    catch (ex) {
+                        console.log(ex);
+                    }
 
+                }
+
+                layers.push(layer);
+
+                layerIndex[layerDef.url] = layer;
             }
-
-            layers.push(layer);
-
-            layerIndex[layerDef.url] = layer;
         });
 
         if (me._lastLayer) {
-            var removeFunc = function (layerIndex) {
-                return function (layer, key) {
-                    if (!(key in layerIndex)) {
-                        console.log('Removing: ' + key);
-                        if (layer.getEvents) {
-                            var events = layer.getEvents();
-                            me._map.off(events, layer);
-                        }
-                        me._map.removeLayer(layer);
-                    }
-                };
-            };
-            _.each(me._lastLayer, removeFunc(layerIndex));
+            _.each(me._lastLayer, me._removeFunc(layerIndex));
         }
 
         this._lastLayer = layerIndex;
     },
     addBaseLayer: function (layerDef) {
-        var layer = this._baseLayerIndex[layerDef.url] || this._layerDefToLayer(layerDef);
-        //this._map.addLayer(layer);
-        //layer.bringToBack();
-        this._baseLayerIndex[layerDef.url] = layer;
+        var layer;
+
+        try {
+            layer = this._baseLayerIndex[layerDef.url] || this._layerDefToLayer(layerDef);
+            //this._map.addLayer(layer);
+            //layer.bringToBack();
+            this._baseLayerIndex[layerDef.url] = layer;
+        }
+        catch (ex) {
+            console.log(ex);
+        }
         return layer;
     },
     setBaseLayers: function (layerDefs) {
@@ -731,17 +781,22 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
     },
     _getLayerCenter: function (layer) {
         var center;
-        if (layer.getLatLng) {
-            center = layer.getLatLng();
-        }
-        else {
-            var bounds = layer.getBounds();
-            if (bounds) {
-                center = bounds.getCenter();
+        try {
+            if (layer.getLatLng) {
+                center = layer.getLatLng();
             }
             else {
-                center = new L.LatLng(0,0);
+                var bounds = layer.getBounds();
+                if (bounds) {
+                    center = bounds.getCenter();
+                }
+                else {
+                    center = new L.LatLng(0, 0);
+                }
             }
+        }
+        catch (ex) {
+            console.log(ex);
         }
         return center;
     },
@@ -754,85 +809,123 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
     highlight: function (id) {
         var layer = this._layers[id];
 
-        var bindEvents = function (layer) {
-            if (layer.eachLayer) {
-                layer.eachLayer(function (subLayer) {
-                    bindEvents(subLayer);
-                });
-            }
-            else {
-                if (!layer._originalOptions) {
-                    layer._originalOptions = $.extend(true, {}, layer.options);
-                }
-                var options = layer.options;
-
-                if (options.text) {
-                    options.text['font-size'] = 'font-size' in options.text ? Number(options.text['font-size']) * 2 : 'inherit';
-                }
-                options.weight = layer._originalOptions.weight * 3;
-
-                if (!layer._animId) {
-                    L.AnimationUtils.animate(layer, {
-                        from: layer._originalOptions,
-                        to: options
+        if (layer) {
+            var bindEvents = function (layer) {
+                if (layer.eachLayer) {
+                    layer.eachLayer(function (subLayer) {
+                        bindEvents(subLayer);
                     });
                 }
                 else {
-                    L.Util.cancelAnimFrame(layer._animId);
-                    layer._animId = null;
-                    layer.setStyle(layer._originalOptions);
-                }
-                //layer.setStyle(options);
-            }
-        };
+                    if (!layer._originalOptions) {
+                        layer._originalOptions = $.extend(true, {}, layer.options);
+                    }
+                    var options = layer.options;
 
-        bindEvents(layer);
+                    if (options.text) {
+                        options.text['font-size'] = 'font-size' in options.text ? Number(options.text['font-size']) * 2 : 'inherit';
+                    }
+                    options.weight = layer._originalOptions.weight * 3;
+
+                    if (!layer._animId) {
+                        L.AnimationUtils.animate(layer, {
+                            from: layer._originalOptions,
+                            to: options
+                        });
+                    }
+                    else {
+                        L.Util.cancelAnimFrame(layer._animId);
+                        layer._animId = null;
+                        layer.setStyle(layer._originalOptions);
+                    }
+                    //layer.setStyle(options);
+                }
+            };
+
+            bindEvents(layer);
+        }
     },
     unhighlight: function (id) {
         var layer = this._layers[id];
-        var bindEvents = function (layer) {
-            if (layer.eachLayer) {
-                layer.eachLayer(function (subLayer) {
-                    bindEvents(subLayer);
-                });
-            }
-            else {
-                if (layer._animId) {
-                    L.Util.cancelAnimFrame(layer._animId);
-                    layer._animId = null;
-                }
-                layer.setStyle(layer._originalOptions);
-            }
-        };
 
-        bindEvents(layer);
+        if (layer) {
+            var bindEvents = function (layer) {
+                if (layer.eachLayer) {
+                    layer.eachLayer(function (subLayer) {
+                        bindEvents(subLayer);
+                    });
+                }
+                else {
+                    if (layer._animId) {
+                        L.Util.cancelAnimFrame(layer._animId);
+                        layer._animId = null;
+                    }
+                    layer.setStyle(layer._originalOptions);
+                }
+            };
+
+            bindEvents(layer);
+        }
     },
     zoomToLayer: function (id) {
         var layer = this._layers[id];
-        this._map.setView(this._getLayerCenter(layer), 8); //flyTo
+        if (layer) {
+            try {
+                this._map.setView(this._getLayerCenter(layer), 8); //flyTo
+            }
+            catch (ex) {
+                console.log(ex);
+            }
+        }
     },
     resize: function (e) {
-        this._map.invalidateSize();
+        try {
+            this._map.invalidateSize();
+        }
+        catch (ex) {
+            console.log(ex);
+        }
     },
     setZoom: function (zoom) {
-        this._map.setZoom(zoom);
+        try {
+            this._map.setZoom(zoom);
+        }
+        catch (ex) {
+            console.log(ex);
+        }
     },
     setCenter: function (center) {
-        if (center) {
-            var centerPoint = new L.LatLng(center[1], center[0]);
-            this._map.setView(centerPoint);
+        try {
+            if (center) {
+                var centerPoint = new L.LatLng(center[1], center[0]);
+                this._map.setView(centerPoint);
+            }
+        }
+        catch (ex) {
+            console.log(ex);
         }
     },
     _addLayer: function (layer, id) {
         var me = this;
 
-        layer.clickHandler = me._layerClick(layer);
-        layer.on('click', layer.clickHandler);
-
-        this._map.addLayer(layer);
+        try {
+            layer.clickHandler = me._layerClick(layer);
+            layer.on('click', layer.clickHandler);
+            this._map.addLayer(layer);
+        }
+        catch (ex) {
+            console.log('Could not add layer: ' + id + '. ' + ex);
+        }
     },
     _removeLayer: function (layer, id) {
-        this._map.removeLayer(this._layers[id]);
+        try {
+            if (id in this._layers && this._map.hasLayer(this._layers[id])) {
+                this._map.removeLayer(this._layers[id]);
+            }
+        }
+        catch (ex) {
+            console.log(ex);
+        }
     },
     _disableControls: function () {
         this._map.dragging.disable();
@@ -1719,11 +1812,10 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                 var $this = $(this);
                 var height = $this.height();
                 var width = $this.width();
-                var offset = $this.offset();
-                var distanceX = e.offsetX;
-                var distanceY = e.offsetY;
-                $photos.css('left', -1 * distanceX);
-                $photos.css('background-position-y', (distanceY/height * 100) + '%');
+                var x = e.offsetX==undefined?e.layerX:e.offsetX;
+                var y = e.offsetY==undefined?e.layerY:e.offsetY;
+                $photos.css('left', -1 * x);
+                $photos.css('background-position', '50% ' + (y/height * 100) + '%')
             });
         });
     },
