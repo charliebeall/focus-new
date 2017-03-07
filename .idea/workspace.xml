@@ -2,44 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db415e42-930a-421f-9360-1a36d1e5ce72" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/amedeo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/amundsen.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/anian.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/chukchi.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/fortyfive.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/gatesofarctic.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/glacierbay.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/globe.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/hudson.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/katmai.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/labrador.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/lapland.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/mountjarvis.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/nepassage.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/nunavut.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/nwpassage.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/peary.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/ryuhyoh.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/sahka.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/stmatthewisland.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/ten.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/twentyfour.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/polar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/Flag_of_Canada.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/Flag_of_Denmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/Flag_of_Russia.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/Flag_of_the_United_States.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/five.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/img/karelia.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/combined.css" afterPath="$PROJECT_DIR$/src/css/combined.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/main.css" afterPath="$PROJECT_DIR$/src/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/combined.js" afterPath="$PROJECT_DIR$/src/js/combined.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mapview.js" afterPath="$PROJECT_DIR$/src/js/mapview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/publications.js" afterPath="$PROJECT_DIR$/src/js/publications.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/norway/index.html" afterPath="$PROJECT_DIR$/src/publications/articles/norway/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/three/index.html" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/index.html" />
     </list>
     <ignored path="focus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/publications/quizzes/three/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3859.5686">
-              <caret line="1726" column="36" selection-start-line="1726" selection-start-column="36" selection-end-line="1726" selection-end-column="36" />
+            <state vertical-scroll-proportion="8.169154">
+              <caret line="1258" column="20" selection-start-line="1258" selection-start-column="20" selection-end-line="1258" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#text#0;n#g#0;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -117,12 +83,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="publications.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="publications.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/publications.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17006803">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="185" column="46" selection-start-line="185" selection-start-column="46" selection-end-line="185" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/templates/quizzes/default/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
+              <folding>
+                <marker date="1477508510000" expanded="true" signature="10145:10157" placeholder="..." />
+                <marker date="1477508510000" expanded="true" signature="44663:44689" placeholder="..." />
+                <marker date="1477508510000" expanded="true" signature="55104:55116" placeholder="..." />
+                <marker date="1477508510000" expanded="true" signature="55998:56010" placeholder="..." />
+                <marker date="1477508510000" expanded="true" signature="61310:61322" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,32 +137,6 @@
               <folding>
                 <marker date="1477508445000" expanded="true" signature="107284:107308" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/publications/quizzes/one/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="209" column="21" selection-start-line="203" selection-start-column="29" selection-end-line="209" selection-end-column="21" />
-              <folding>
-                <marker date="1477508510000" expanded="true" signature="10145:10157" placeholder="..." />
-                <marker date="1477508510000" expanded="true" signature="44663:44689" placeholder="..." />
-                <marker date="1477508510000" expanded="true" signature="55104:55116" placeholder="..." />
-                <marker date="1477508510000" expanded="true" signature="55998:56010" placeholder="..." />
-                <marker date="1477508510000" expanded="true" signature="61310:61322" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="countryData.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/publications/quizzes/three/js/countryData.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="296206" selection-start-line="1" selection-start-column="296206" selection-end-line="1" selection-end-column="296206" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -236,12 +202,12 @@
         <option value="$PROJECT_DIR$/src/js/polar.js" />
         <option value="$PROJECT_DIR$/src/publications/articles/norway/index.html" />
         <option value="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/publications/quizzes/three/js/countryData.min.js" />
         <option value="$PROJECT_DIR$/src/js/mapview.js" />
-        <option value="$PROJECT_DIR$/src/publications/quizzes/three/index.html" />
         <option value="$PROJECT_DIR$/src/css/main.css" />
         <option value="$PROJECT_DIR$/src/js/publications.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/src/publications/quizzes/three/index.html" />
       </list>
     </option>
   </component>
@@ -849,16 +815,16 @@
     <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/publications" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/publications/quizzes/three/img" />
       <recent name="$PROJECT_DIR$/src/publications/quizzes/three" />
       <recent name="$PROJECT_DIR$/src/publications/articles/norway/img" />
       <recent name="$PROJECT_DIR$/src/templates/quizzes/default" />
       <recent name="$PROJECT_DIR$/src/templates/photoessays/photo-compare" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/publications" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager">
@@ -933,7 +899,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24970202" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22380953" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -941,9 +909,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -1059,6 +1025,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,13 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/quizzes/default/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1233,13 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="185" column="50" selection-start-line="185" selection-start-column="50" selection-end-line="185" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/articles/mali/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="46.47059">
@@ -1330,18 +1283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/quizzes/three/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3859.5686">
-          <caret line="1726" column="36" selection-start-line="1726" selection-start-column="36" selection-end-line="1726" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#text#0;n#g#0;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.431373">
@@ -1352,9 +1293,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/publications.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17006803">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="185" column="46" selection-start-line="185" selection-start-column="46" selection-end-line="185" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/quizzes/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
+          <folding>
+            <marker date="1477508510000" expanded="true" signature="10145:10157" placeholder="..." />
+            <marker date="1477508510000" expanded="true" signature="44663:44689" placeholder="..." />
+            <marker date="1477508510000" expanded="true" signature="55104:55116" placeholder="..." />
+            <marker date="1477508510000" expanded="true" signature="55998:56010" placeholder="..." />
+            <marker date="1477508510000" expanded="true" signature="61310:61322" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/quizzes/three/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.169154">
+          <caret line="1258" column="20" selection-start-line="1258" selection-start-column="20" selection-end-line="1258" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#text#0;n#g#0;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

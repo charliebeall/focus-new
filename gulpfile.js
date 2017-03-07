@@ -183,7 +183,7 @@ gulp.task('concat', function () {
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/underscore/underscore-min.js',
             'bower_components/backbone/backbone-min.js',
-            'node_modules/leaflet/dist/leaflet-src.js',
+            'node_modules/leaflet/dist/leaflet.js',
             'bower_components/flowtype/flowtype.js',
             'bower_components/d3/d3.min.js',
             'bower_components/topojson/topojson.js',
