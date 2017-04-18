@@ -123,6 +123,11 @@ Focus.Views.MapEngine = Backbone.View.extend({
         this._featureLookup = featureLookup;
     },
     setScene: function (sceneModel, fly) {
+        if (this._intervals) {
+            _.each(this._intervals, function (value) {
+                clearInterval(value);
+            });
+        }
         this._setBaseLayer(sceneModel.get('baseLayer'));
         this._setMapStyle(sceneModel);
         this._addLayers(sceneModel.get('layers') || []);
@@ -232,7 +237,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                     prefixAndAttribs.push(attribs.join(', '));
                 }
 
-                $(this._container).html('<a href="" data-toggle="tooltip" title="" style="text-align: left; white-space:nowrap;"><span class="fa fa-info"></span></a>');
+                $(this._container).html('<a href="" data-toggle="tooltip" title="" style="text-align: left; white-space:nowrap;"><span class="fa fa-info"></span><span class="esri-dynamic-attribution" style="display: none;"></a>');
                 $(this._container).find('a').tooltip('destroy');
                 $(this._container).find('a').tooltip({
                     container: 'body',
@@ -262,6 +267,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         };
         if (this.model.get('crs')) {
             mapOptions.crs = this.model.get('crs');
+            console.log(mapOptions.crs);
         }
         if (this.model.get('renderer')) {
             mapOptions.renderer = this.model.get('renderer');
@@ -727,28 +733,58 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         var layerIndex = {};
 
         me._lastLayer = me._lastLayer || {};
+        me._intervals = me._intervals || {};
+        me._intervalLayers = me._intervalLayers || {};
 
         _.each(layerDefs, function (layerDef) {
-            var layer = me.addBaseLayer(layerDef); //this._baseLayerIndex[layerDef.url] || this.addBaseLayer(layerDef);
+            try {
+                if (layerDef.type === 'cycle') {
+                    var prevLayer;
+                    var intervalId = setInterval((function (layerDef) {
+                        return function () {
+                            var newLayerDef = layerDef.layers.shift();
+                            layerDef.layers.push(newLayerDef);
+                            var newLayer = layerIndex[newLayerDef.url] || me._layerDefToLayer(newLayerDef);
+                            layerIndex[newLayerDef.url] = newLayer;
+                            me._map.addLayer(newLayer);
 
-            if (layer) {
-                if (layerDef.crs) {
-                    me._map.options.crs = layerDef.crs;
+                            if (prevLayer) {
+                                me._map.removeLayer(prevLayer);
+                            }
+                            prevLayer = newLayer;
+                        }
+                    }(layerDef)), 5000);
+
+                    me._intervals[layerDef.id] = intervalId;
                 }
+                else {
 
-                if (!(layerDef.url in me._lastLayer)) {
-                    try {
-                        me._map.addLayer(layer);
-                    }
-                    catch (ex) {
-                        console.log(ex);
-                    }
+                    var layer = me.addBaseLayer(layerDef); //this._baseLayerIndex[layerDef.url] || this.addBaseLayer(layerDef);
 
+                    if (layer) {
+                        if (layerDef.crs) {
+                            me._map.options.crs = layerDef.crs;
+                        }
+
+                        if (!(layerDef.url in me._lastLayer)) {
+                            try {
+                                me._map.addLayer(layer);
+                            }
+                            catch (ex) {
+                                console.log(ex);
+                            }
+
+                        }
+
+                        layers.push(layer);
+
+                        layerIndex[layerDef.url] = layer;
+                    }
                 }
-
-                layers.push(layer);
-
-                layerIndex[layerDef.url] = layer;
+            }
+            catch (ex) {
+                console.log('Could not load layer: ' + layerDef);
+                console.log(ex);
             }
         });
 
@@ -1757,7 +1793,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                 initialScene: new Focus.Models.SceneModel($.extend(true, {}, {
                     baseLayer: {
                         type: 'tile',
-                        url: 'https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' //'https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', ''https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' //
+                        url: 'https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00' //'https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', ''https://a.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' //
                     },
                     center: [0,0],
                     zoom: 4,
@@ -1957,6 +1993,38 @@ Focus.Views.LazyLoader = Backbone.View.extend({
             elements_selector: [this.options.imgSelector, this.options.divSelector].join(', ')
         });
         return this;
+    }
+});
+
+Focus.Views.LegendView = Backbone.View.extend({
+    initialize: function (options) {
+        this.options = options || {};
+    },
+    _success: function (data) {
+        var layers = data.layers;
+        var me = this;
+        var template = _.template('<div class="legend-line"><img class="legend-key" src="data:<%= contentType %>;base64,<%= imageData %>" style="width: <%= width %>px; height: <%= height %>px;"/><span class="legend-label"><%= label %></span></div>');
+
+        me.$el.addClass('legend');
+        _.each(layers, function (layer) {
+            me.$el.append('<h4 class="legend-title">' + layer.layerName + '</h4>');
+            if (layer.legend) {
+               _.each(layer.legend, function (legend) {
+                   me.$el.append(template(legend));
+               });
+            }
+        });
+    },
+    render: function () {
+        var me = this;
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: this.options.url,
+            success: function (data) {
+                me._success(data);
+            }
+        });
     }
 });
 

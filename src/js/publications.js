@@ -7,7 +7,7 @@ Focus.Volumes = [
             title: 'Quiz Three:  The Arctic',
             author: 'Wesley Reisser',
             description: '',
-            date: '03/05/17',
+            date: '03/08/17',
             thumbnail: 'publications/quizzes/three/img/North_Pole_1907.jpg',
             url: 'publications/quizzes/three/index.html',
             location: []

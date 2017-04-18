@@ -2440,6 +2440,17 @@ div.figure.col-12 {
     text-align: center;
 }
 
+.legend {
+
+}
+
+.legend-line {
+    margin: 4px;
+}
+
+.legend-key {
+    margin-right: 4px;
+}
 
 /* -------------------------- */
 /* Side Fixed */

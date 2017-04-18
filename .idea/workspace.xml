@@ -2,10 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db415e42-930a-421f-9360-1a36d1e5ce72" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure1a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure1b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure7a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure7b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/articles/louisiana/img/figure9.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/main.css" afterPath="$PROJECT_DIR$/src/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/combined.js" afterPath="$PROJECT_DIR$/src/js/combined.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mapview.js" afterPath="$PROJECT_DIR$/src/js/mapview.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/publications.js" afterPath="$PROJECT_DIR$/src/js/publications.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/quizview.js" afterPath="$PROJECT_DIR$/src/js/quizview.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/baja/index.html" afterPath="$PROJECT_DIR$/src/publications/articles/baja/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/mali/index.html" afterPath="$PROJECT_DIR$/src/publications/articles/mali/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/articles/norway/index.html" afterPath="$PROJECT_DIR$/src/publications/articles/norway/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html" afterPath="$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" afterPath="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html" afterPath="$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/one/index.html" afterPath="$PROJECT_DIR$/src/publications/quizzes/one/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/three/index.html" afterPath="$PROJECT_DIR$/src/publications/quizzes/three/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/quizzes/two/index.html" afterPath="$PROJECT_DIR$/src/publications/quizzes/two/index.html" />
     </list>
     <ignored path="focus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +53,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/publications/articles/norway/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="54196" column="36881" selection-start-line="54196" selection-start-column="11" selection-end-line="54196" selection-end-column="36881" />
+            <state vertical-scroll-proportion="107.14103">
+              <caret line="192" column="40" selection-start-line="192" selection-start-column="29" selection-end-line="192" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -39,31 +63,43 @@
       <file leaf-file-name="mapview.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/mapview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="680" column="28" selection-start-line="680" selection-start-column="28" selection-end-line="680" selection-end-column="28" />
+            <state vertical-scroll-proportion="-13.333333">
+              <caret line="2005" column="220" selection-start-line="2005" selection-start-column="220" selection-end-line="2005" selection-end-column="220" />
               <folding>
-                <marker date="1488504777000" expanded="true" signature="6244:6281" placeholder="..." />
-                <marker date="1488504777000" expanded="true" signature="43807:43827" placeholder="..." />
+                <marker date="1492510798000" expanded="true" signature="6394:6431" placeholder="..." />
+                <marker date="1492510798000" expanded="true" signature="6511:6525" placeholder="..." />
+                <marker date="1492510798000" expanded="true" signature="45404:45424" placeholder="..." />
+                <marker date="1492510798000" expanded="true" signature="69174:69221" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="polar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/polar.js">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="105" column="14" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="91" />
+            <state vertical-scroll-proportion="0.9125874">
+              <caret line="1171" column="0" selection-start-line="1171" selection-start-column="0" selection-end-line="1171" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="75.94118">
+              <caret line="1192" column="13" selection-start-line="1185" selection-start-column="42" selection-end-line="1192" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/publications/quizzes/three/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.169154">
-              <caret line="1258" column="20" selection-start-line="1258" selection-start-column="20" selection-end-line="1258" selection-end-column="20" />
+            <state vertical-scroll-proportion="-11.294118">
+              <caret line="1916" column="18" selection-start-line="1901" selection-start-column="16" selection-end-line="1916" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#text#0;n#g#0;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -73,22 +109,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/main.css">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/publications/articles/baja/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.431373">
-              <caret line="1832" column="18" selection-start-line="1832" selection-start-column="18" selection-end-line="1832" selection-end-column="18" />
-              <folding />
+            <state vertical-scroll-proportion="4.6410255">
+              <caret line="110" column="618" selection-start-line="110" selection-start-column="618" selection-end-line="110" selection-end-column="637" />
+              <folding>
+                <element signature="n#style#0;n#h2#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="publications.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/publications.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/publications/articles/louisiana/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
-              <folding />
+            <state vertical-scroll-proportion="1067.7693">
+              <caret line="984" column="42" selection-start-line="984" selection-start-column="42" selection-end-line="984" selection-end-column="42" />
+              <folding>
+                <element signature="n#style#0;n#h2#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#8;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#10;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#12;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,38 +155,25 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/quizzes/default/index.html">
+        <entry file="file://$PROJECT_DIR$/src/publications/articles/mali/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625">
-              <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
+            <state vertical-scroll-proportion="64.833336">
+              <caret line="1109" column="41" selection-start-line="1107" selection-start-column="40" selection-end-line="1109" selection-end-column="41" />
               <folding>
-                <marker date="1477508510000" expanded="true" signature="10145:10157" placeholder="..." />
-                <marker date="1477508510000" expanded="true" signature="44663:44689" placeholder="..." />
-                <marker date="1477508510000" expanded="true" signature="55104:55116" placeholder="..." />
-                <marker date="1477508510000" expanded="true" signature="55998:56010" placeholder="..." />
-                <marker date="1477508510000" expanded="true" signature="61310:61322" placeholder="..." />
+                <marker date="1490316293000" expanded="true" signature="55911:55930" placeholder="..." />
+                <marker date="1490316293000" expanded="true" signature="55967:56020" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="five.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/publications/quizzes/three/img/five.svg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/publications/quizzes/two/index.html">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
+            <state vertical-scroll-proportion="-1.1282052">
+              <caret line="135" column="149" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="149" />
               <folding>
-                <marker date="1477508445000" expanded="true" signature="107284:107308" placeholder="..." />
+                <element signature="n#style#0;n#div#0;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,7 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/geoquiz.html" />
         <option value="$PROJECT_DIR$/src/articles/baja/scenes.json" />
         <option value="$PROJECT_DIR$/bower_components/leaflet/dist/leaflet-src.js" />
         <option value="$PROJECT_DIR$/node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js" />
@@ -173,7 +210,6 @@
         <option value="$PROJECT_DIR$/src/img/stereographic.svg" />
         <option value="$PROJECT_DIR$/src/img/robinson.svg" />
         <option value="$PROJECT_DIR$/dist/css/index.css" />
-        <option value="$PROJECT_DIR$/src/js/quizview.js" />
         <option value="$PROJECT_DIR$/src/js/index.js" />
         <option value="$PROJECT_DIR$/src/humans.txt" />
         <option value="$PROJECT_DIR$/dist/humans.txt" />
@@ -185,29 +221,31 @@
         <option value="$PROJECT_DIR$/bower_components/turf/packages/turf/package.json" />
         <option value="$PROJECT_DIR$/src/publications/articles/mali/img/hombori.svg" />
         <option value="$PROJECT_DIR$/dist/index.html" />
-        <option value="$PROJECT_DIR$/src/publications/articles/baja/index.html" />
-        <option value="$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html" />
-        <option value="$PROJECT_DIR$/src/publications/quizzes/two/index.html" />
-        <option value="$PROJECT_DIR$/src/publications/quizzes/one/index.html" />
         <option value="$PROJECT_DIR$/dist/js/publications.js" />
         <option value="$PROJECT_DIR$/dist/js/mapview.js" />
         <option value="$PROJECT_DIR$/src/templates.html" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/src/css/index.css" />
-        <option value="$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html" />
-        <option value="$PROJECT_DIR$/src/publications/articles/mali/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/templates/quizzes/default/index.html" />
         <option value="$PROJECT_DIR$/src/js/polar.js" />
-        <option value="$PROJECT_DIR$/src/publications/articles/norway/index.html" />
-        <option value="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" />
         <option value="$PROJECT_DIR$/src/publications/quizzes/three/js/countryData.min.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/src/js/publications.js" />
+        <option value="$PROJECT_DIR$/src/publications/articles/mali/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/articles/norway/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/photoessays/finland/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/quizzes/two/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/quizzes/three/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/quizzes/one/index.html" />
+        <option value="$PROJECT_DIR$/src/js/quizview.js" />
+        <option value="$PROJECT_DIR$/src/publications/articles/baja/index.html" />
+        <option value="$PROJECT_DIR$/src/publications/articles/louisiana/index.html" />
         <option value="$PROJECT_DIR$/src/js/mapview.js" />
         <option value="$PROJECT_DIR$/src/css/main.css" />
-        <option value="$PROJECT_DIR$/src/js/publications.js" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/src/publications/quizzes/three/index.html" />
       </list>
     </option>
   </component>
@@ -489,40 +527,6 @@
               <option name="myItemId" value="quizzes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="three" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quizzes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="one" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -676,6 +680,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="louisiana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="focus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="focus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publications" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="articles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="louisiana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="focus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="focus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publications" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="articles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="baja" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -716,92 +776,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proj4leaflet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proj4leaflet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="leaflet-dvf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -816,11 +790,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/publications/articles/louisiana/img" />
+      <recent name="$PROJECT_DIR$/src/publications/articles/louisiana" />
       <recent name="$PROJECT_DIR$/src/publications/quizzes/three/img" />
       <recent name="$PROJECT_DIR$/src/publications/quizzes/three" />
       <recent name="$PROJECT_DIR$/src/publications/articles/norway/img" />
-      <recent name="$PROJECT_DIR$/src/templates/quizzes/default" />
-      <recent name="$PROJECT_DIR$/src/templates/photoessays/photo-compare" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/publications" />
@@ -932,41 +906,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/css/combined.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/publications/articles/mali/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2435896">
-          <caret line="414" column="12" selection-start-line="414" selection-start-column="12" selection-end-line="414" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/publications.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2962964">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="450" column="9" selection-start-line="450" selection-start-column="9" selection-end-line="450" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.jshintrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/publications/quizzes/two/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1072,13 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/articles/default/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/articles/video-header/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1090,20 +1022,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/photoessays/photo-compare/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/articles/baja/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="24" selection-start-line="99" selection-start-column="8" selection-end-line="241" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1141,20 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="89.76471">
-          <caret line="1751" column="0" selection-start-line="1751" selection-start-column="0" selection-end-line="1764" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="555.58826">
-          <caret line="121" column="34" selection-start-line="119" selection-start-column="28" selection-end-line="121" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/proj4leaflet/README.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -1186,20 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.470589">
-          <caret line="286" column="30" selection-start-line="286" selection-start-column="30" selection-end-line="286" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/articles/mali/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="46.47059">
-          <caret line="421" column="0" selection-start-line="421" selection-start-column="0" selection-end-line="421" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/quizzes/three/img/Flag_of_Canada.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1216,32 +1106,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/quizzes/one/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="209" column="21" selection-start-line="203" selection-start-column="29" selection-end-line="209" selection-end-column="21" />
-          <folding>
-            <marker date="1477508510000" expanded="true" signature="10145:10157" placeholder="..." />
-            <marker date="1477508510000" expanded="true" signature="44663:44689" placeholder="..." />
-            <marker date="1477508510000" expanded="true" signature="55104:55116" placeholder="..." />
-            <marker date="1477508510000" expanded="true" signature="55998:56010" placeholder="..." />
-            <marker date="1477508510000" expanded="true" signature="61310:61322" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/quizzes/three/js/countryData.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="296206" selection-start-line="1" selection-start-column="296206" selection-end-line="1" selection-end-column="296206" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/articles/norway/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54196" column="36881" selection-start-line="54196" selection-start-column="11" selection-end-line="54196" selection-end-column="36881" />
           <folding />
         </state>
       </provider>
@@ -1254,55 +1122,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/quizzes/two/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
-          <folding>
-            <marker date="1477508445000" expanded="true" signature="107284:107308" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/quizzes/three/img/five.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/mapview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="680" column="28" selection-start-line="680" selection-start-column="28" selection-end-line="680" selection-end-column="28" />
-          <folding>
-            <marker date="1488504777000" expanded="true" signature="6244:6281" placeholder="..." />
-            <marker date="1488504777000" expanded="true" signature="43807:43827" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.431373">
-          <caret line="1832" column="18" selection-start-line="1832" selection-start-column="18" selection-end-line="1832" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/publications.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="185" column="46" selection-start-line="185" selection-start-column="46" selection-end-line="185" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1321,15 +1144,210 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/publications.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/quizzes/one/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="6" column="70" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
+          <folding>
+            <marker date="1490398518000" expanded="true" signature="10176:10188" placeholder="..." />
+            <marker date="1490398518000" expanded="true" signature="44694:44720" placeholder="..." />
+            <marker date="1490398518000" expanded="true" signature="55135:55147" placeholder="..." />
+            <marker date="1490398518000" expanded="true" signature="56029:56041" placeholder="..." />
+            <marker date="1490398518000" expanded="true" signature="61341:61353" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/quizview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="260" column="163" selection-start-line="260" selection-start-column="163" selection-end-line="260" selection-end-column="163" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/articles/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/quizzes/two/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.625">
+          <caret line="1771" column="11" selection-start-line="1771" selection-start-column="11" selection-end-line="1771" selection-end-column="11" />
+          <folding>
+            <marker date="1490398518000" expanded="true" signature="107283:107307" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/photoessays/photo-compare/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="86.94118">
+          <caret line="1781" column="0" selection-start-line="1781" selection-start-column="0" selection-end-line="1810" selection-end-column="5" />
+          <folding>
+            <marker date="1483655660000" expanded="true" signature="67511:67549" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="68793:68830" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="70093:70132" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="71442:71479" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="72760:72796" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="74077:74115" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="75411:75448" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="77272:77310" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="78595:78632" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="79904:79941" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="81230:81267" placeholder="..." />
+            <marker date="1483655660000" expanded="true" signature="93349:93387" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.6153846">
+          <caret line="411" column="0" selection-start-line="411" selection-start-column="0" selection-end-line="412" selection-end-column="74" />
+          <folding>
+            <marker date="1490316509000" expanded="true" signature="67511:67549" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="68793:68830" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="70093:70132" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="71442:71479" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="72760:72796" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="74077:74115" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="75411:75448" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="77272:77310" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="78595:78632" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="79904:79941" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="81230:81267" placeholder="..." />
+            <marker date="1490316509000" expanded="true" signature="93349:93387" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1282052">
+          <caret line="135" column="149" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="149" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/articles/norway/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="107.14103">
+          <caret line="192" column="40" selection-start-line="192" selection-start-column="29" selection-end-line="192" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="75.94118">
+          <caret line="1192" column="13" selection-start-line="1185" selection-start-column="42" selection-end-line="1192" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/articles/mali/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="64.833336">
+          <caret line="1109" column="41" selection-start-line="1107" selection-start-column="40" selection-end-line="1109" selection-end-column="41" />
+          <folding>
+            <marker date="1490316293000" expanded="true" signature="55911:55930" placeholder="..." />
+            <marker date="1490316293000" expanded="true" signature="55967:56020" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/quizzes/three/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.169154">
-          <caret line="1258" column="20" selection-start-line="1258" selection-start-column="20" selection-end-line="1258" selection-end-column="20" />
+        <state vertical-scroll-proportion="-11.294118">
+          <caret line="1916" column="18" selection-start-line="1901" selection-start-column="16" selection-end-line="1916" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#text#0;n#g#0;n#g#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#path#0;n#svg#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="185" column="46" selection-start-line="185" selection-start-column="46" selection-end-line="185" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/articles/baja/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.6410255">
+          <caret line="110" column="618" selection-start-line="110" selection-start-column="618" selection-end-line="110" selection-end-column="637" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/articles/louisiana/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1067.7693">
+          <caret line="984" column="42" selection-start-line="984" selection-start-column="42" selection-end-line="984" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#10;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#12;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/mapview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.333333">
+          <caret line="2005" column="220" selection-start-line="2005" selection-start-column="220" selection-end-line="2005" selection-end-column="220" />
+          <folding>
+            <marker date="1492510798000" expanded="true" signature="6394:6431" placeholder="..." />
+            <marker date="1492510798000" expanded="true" signature="6511:6525" placeholder="..." />
+            <marker date="1492510798000" expanded="true" signature="45404:45424" placeholder="..." />
+            <marker date="1492510798000" expanded="true" signature="69174:69221" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9125874">
+          <caret line="1171" column="0" selection-start-line="1171" selection-start-column="0" selection-end-line="1171" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
