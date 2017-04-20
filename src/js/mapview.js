@@ -739,23 +739,28 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         _.each(layerDefs, function (layerDef) {
             try {
                 if (layerDef.type === 'cycle') {
-                    var prevLayer;
-                    var intervalId = setInterval((function (layerDef) {
+					var layerDefId = layerDef.id;
+					var cycleFunction = function (layerDef) {
                         return function () {
-                            var newLayerDef = layerDef.layers.shift();
-                            layerDef.layers.push(newLayerDef);
-                            var newLayer = layerIndex[newLayerDef.url] || me._layerDefToLayer(newLayerDef);
-                            layerIndex[newLayerDef.url] = newLayer;
-                            me._map.addLayer(newLayer);
+							if (!me._prevLayer || (me._prevLayer && !me._prevLayer.isLoading())) {
+								
+								
+                            	var newLayerDef = layerDef.layers.shift();
+                            	layerDef.layers.push(newLayerDef);
+                            	var newLayer = layerIndex[newLayerDef.url] || me._layerDefToLayer(newLayerDef);
+                            	layerIndex[newLayerDef.url] = newLayer;
+                            	me._map.addLayer(newLayer);
 
-                            if (prevLayer) {
-                                me._map.removeLayer(prevLayer);
-                            }
-                            prevLayer = newLayer;
-                        }
-                    }(layerDef)), 5000);
-
-                    me._intervals[layerDef.id] = intervalId;
+								if (me._prevLayer && me._map.hasLayer(me._prevLayer)) {
+									me._map.removeLayer(me._prevLayer);
+								}
+								
+								me._prevLayer = newLayer;
+							}
+                        };
+                    };
+					
+                    me._intervals[layerDefId] = setInterval(cycleFunction(layerDef), layerDef.interval || 1000);
                 }
                 else {
 
