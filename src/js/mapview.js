@@ -2012,12 +2012,17 @@ Focus.Views.LegendView = Backbone.View.extend({
 
         me.$el.addClass('legend');
         _.each(layers, function (layer) {
-            me.$el.append('<h4 class="legend-title">' + layer.layerName + '</h4>');
-            if (layer.legend) {
-               _.each(layer.legend, function (legend) {
-                   me.$el.append(template(legend));
-               });
-            }
+			var include = me.options.text ? me.options.text[layer.layerName] : true;
+			
+			if (include) {
+				var title = me.options.text && me.options.text[layer.layerName] ? me.options.text[layer.layerName] : layer.layerName;
+            	me.$el.append('<h4 class="legend-title">' + title + '</h4>');
+            	if (layer.legend) {
+               		_.each(layer.legend, function (legend) {
+                		me.$el.append(template(legend));
+               		});
+            	}
+			}
         });
     },
     render: function () {
