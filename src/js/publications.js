@@ -3,6 +3,16 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+        	type: 'Feature Article',
+			title: 'Floods Collide with Sprawl in Louisiana\'s Amite River Basin',
+			author: 'Craig Colten',
+			citationAuthor: 'Colten, C.',
+			description: '',
+			date: '04/24/17',
+			thumbnail: 'publications/articles/louisiana/img/titlefigure.jpg',
+			url: 'publications/articles/louisiana/index.html',
+			location: []
+        }, {
             type: 'Geo Quiz',
             title: 'Quiz Three:  The Arctic',
             author: 'Wesley Reisser',

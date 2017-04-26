@@ -2428,7 +2428,9 @@ div.figure.col-12 {
     background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url(../img/robinson.svg);
     background-size: cover;
     background-position: 50% 50%;
+	z-index: 1071;
 }
+
 .item-thumbnail {
     height: 120px;
     background-position: 50% 50%;

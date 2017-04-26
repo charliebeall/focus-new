@@ -14079,6 +14079,16 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+        	type: 'Feature Article',
+			title: 'Floods Collide with Sprawl in Louisiana\'s Amite River Basin',
+			author: 'Craig Colten',
+			citationAuthor: 'Colten, C.',
+			description: '',
+			date: '04/24/17',
+			thumbnail: 'publications/articles/louisiana/img/titlefigure.jpg',
+			url: 'publications/articles/louisiana/index.html',
+			location: []
+        }, {
             type: 'Geo Quiz',
             title: 'Quiz Three:  The Arctic',
             author: 'Wesley Reisser',
@@ -14240,9 +14250,11 @@ Focus.Views.MenuItemsView = Backbone.View.extend({
         this.$el.html(this.template(this.model.attributes));
         return this;
     },
-    addItem: function (model) {
+    addItem: function (model, collection, options) {
         model.set('thumbnail', this._basePath + model.get('thumbnail'));
         model.set('url', this._basePath + model.get('url'));
+		model.set('publicationCount', collection.size());
+		model.set('index', options.index);
         var view = new Focus.Views.MenuItemView({
             model: model
         });
@@ -14535,6 +14547,11 @@ Focus.Views.MapEngine = Backbone.View.extend({
             _.each(this._intervals, function (value) {
                 clearInterval(value);
             });
+
+			if (this._prevLayer) {
+				this._map.removeLayer(this._prevLayer);
+				this._prevLayer = null;
+			}
         }
         this._setBaseLayer(sceneModel.get('baseLayer'));
         this._setMapStyle(sceneModel);
@@ -15134,6 +15151,10 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             }
         };
     },
+	_setInterval: function (fn, interval) {
+		fn();
+		return setInterval(fn, interval);
+	},
     _setBaseLayer: function (layerDef) {
         var me = this;
         var layerDefs = _.isArray(layerDef) ? layerDef : [layerDef];
@@ -15151,12 +15172,12 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 					var cycleFunction = function (layerDef) {
                         return function () {
 							if (!me._prevLayer || (me._prevLayer && !me._prevLayer.isLoading())) {
-								
-								
+
                             	var newLayerDef = layerDef.layers.shift();
                             	layerDef.layers.push(newLayerDef);
                             	var newLayer = layerIndex[newLayerDef.url] || me._layerDefToLayer(newLayerDef);
                             	layerIndex[newLayerDef.url] = newLayer;
+								me._intervalLayers[newLayerDef.url] = newLayer;
                             	me._map.addLayer(newLayer);
 
 								if (me._prevLayer && me._map.hasLayer(me._prevLayer)) {
@@ -15168,7 +15189,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                         };
                     };
 					
-                    me._intervals[layerDefId] = setInterval(cycleFunction(layerDef), layerDef.interval || 1000);
+                    me._intervals[layerDefId] = me._setInterval(cycleFunction(layerDef), layerDef.interval || 1000);
                 }
                 else {
 
@@ -16457,7 +16478,8 @@ $(document).ready(function () {
         container: 'body',
         html: true,
         template: '<div class="tooltip helper-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
-        title: '<a class="location">Text with a dotted underline</a> indicates a place mention. Hover over any place mention to see the associated place on the map.'
+        title: '<a class="location">Text with a dotted underline</a> indicates a place mention. Hover over any place mention to see the associated place on the map.',
+		placement: 'bottom'
     })
         .on('shown.bs.tooltip', function () {
             $(this).append('<span class="fa fa-hand-pointer-o helper-icon element-animation1"></span>');

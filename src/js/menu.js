@@ -35,9 +35,11 @@ Focus.Views.MenuItemsView = Backbone.View.extend({
         this.$el.html(this.template(this.model.attributes));
         return this;
     },
-    addItem: function (model) {
+    addItem: function (model, collection, options) {
         model.set('thumbnail', this._basePath + model.get('thumbnail'));
         model.set('url', this._basePath + model.get('url'));
+		model.set('publicationCount', collection.size());
+		model.set('index', options.index);
         var view = new Focus.Views.MenuItemView({
             model: model
         });
