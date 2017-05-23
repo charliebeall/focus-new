@@ -130,7 +130,7 @@
                     <h2 class="title title-photo">Floods Collide with Sprawl in Louisiana’s Amite River Basin</h2>
                         <span></span>
                     <div class="author"><span class="name">Craig Colten</span>, <span class="organization">Department of Geography and Anthropology, Louisiana State University</span></div>
-                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2017.69.2f</div>
+                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2017.60.2f</div>
                     <h3>Introduction</h3>
                     <p>
                         Before daybreak on the morning of August 12th, 2016, I was driving my wife to catch an early flight from <a class="location" data-layer-id="batonrouge">Baton Rouge’s</a> airport. Before heading out, I’d checked the airline’s website and the local weather radar. The airline optimistically proclaimed an anticipated on-time departure, but the radar showed heavy rains. Nonetheless, I was hopeful for a smooth connection, since the aircraft had arrived the night before. As we drove, rain pelted our car, and we inched through city streets filled with water from curb to curb. Leaving the surface streets for the elevated and well-drained interstate, we were able to arrive at the airport in ample time, and the flight made its departure through the continuing downpour. On my return trip, I detoured off the main surface streets to slightly higher terrain to avoid the prospect of flooding my low-clearance auto. This was obviously a big-rain event, but street flooding is all too common in Louisiana’s capital city, and I continued my day more or less as planned. Others were not so fortunate.
@@ -1319,7 +1319,7 @@
 
                 var legendView = new Focus.Views.LegendView({
                     el: $('#legend1'),
-                    url: 'http://terra2.agcenter.lsu.edu/arcgis/rest/services/LAFloodMaps/EBR_EFF_DFIRM/MapServer/legend?f=json',
+                    url: '//terra2.agcenter.lsu.edu/arcgis/rest/services/LAFloodMaps/EBR_EFF_DFIRM/MapServer/legend?f=json',
 					text: {
 						s_bfe: 'Base Flood Elevation Line (ft)',
 						s_fld_haz_ln: 'Flood Hazard Line',
@@ -1330,7 +1330,7 @@
 
                 var legendView2 = new Focus.Views.LegendView({
                     el: $('#legend2'),
-                    url: 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/NHC_NationalMOM_Category3_CONUS/MapServer/legend?f=json'
+                    url: '//tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/NHC_NationalMOM_Category3_CONUS/MapServer/legend?f=json'
                 });
                 legendView2.render();
 
