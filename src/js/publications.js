@@ -3,6 +3,16 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+        	type: 'Photo Essay',
+			title: 'Wildlife Conservation in Kenya and Tanzania and Effects on Maasai Communities',
+			author: 'Daniel Sambu',
+			citationAuthor: 'Sambu, D.',
+			description: '',
+			date: '05/24/17',
+			thumbnail: 'publications/photoessays/kenya/img/3.jpg',
+			url: 'publications/photoessays/kenya/index.html',
+			location: []
+        }, {
         	type: 'Feature Article',
 			title: 'Floods Collide with Sprawl in Louisiana\'s Amite River Basin',
 			author: 'Craig Colten',
