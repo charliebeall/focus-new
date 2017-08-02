@@ -3,6 +3,24 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+            type: 'Photo Essay',
+            title: 'A Stroll through Seville',
+            author: 'George Lovell',
+            description: '',
+            date: '08/01/17',
+            thumbnail: 'publications/photoessays/seville/img/escuelapalms.jpg',
+            url: 'publications/photoessays/seville/index.html',
+            location: []
+        }, {
+            type: 'Geo Quiz',
+            title: 'Quiz Four:  Water',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '06/22/17',
+            thumbnail: 'publications/quizzes/four/img/water.jpg',
+            url: 'publications/quizzes/four/index.html',
+            location: []
+        }, {
         	type: 'Photo Essay',
 			title: 'Wildlife Conservation in Kenya and Tanzania and Effects on Maasai Communities',
 			author: 'Daniel Sambu',

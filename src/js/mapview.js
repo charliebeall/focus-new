@@ -213,6 +213,149 @@ Focus.Views.MapEngine = Backbone.View.extend({
     }
 });
 
+var KEY = 'AIzaSyBw665hppQIz8zlv82yGUaFSSqcp_1a4Lk';
+Focus.Views.StreeviewMapEngine = Focus.Views.MapEngine.extend({
+//https://maps.googleapis.com/maps/api/streetview/metadata?size=600x300&location=78.648401,14.194336&fov=90&heading=235&pitch=10&key=YOUR_API_KEY
+    initialize: function (options) {
+        Focus.Views.MapEngine.prototype.initialize.call(this, options);
+    },
+    _initContainer: function () {
+        var key = 'AIzaSyCwwps8stS0eDJ4xOcvngtQYuXtPjngwTk';
+        var center = this.model.get('center');
+        var centerPoint = new L.LatLng(center[1], center[0]);
+ 
+		var elId = L.Browser.mobile ? 'map' : 'overview-map';
+		this._panId = L.Browser.mobile ? 'overview-map' : 'map';
+        this._map = new google.maps.Map(document.getElementById(elId), {
+			mapTypeId: 'hybrid',
+            center: centerPoint,
+            zoom: this.model.get('zoom'),
+            zoomControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+            streetViewControl: true,
+            rotateControl: false,
+            fullscreenControl: false
+        });
+		
+        var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById(this._panId), {
+                position: centerPoint,
+                pov: {
+                    heading: 34,
+                    pitch: 10
+                },
+                linksControl: true,
+                fullscreenControl: false,
+                addressControl: false,
+                enableCloseButton: false,
+				motionTracking: false
+            });
+        this._map.setStreetView(panorama);
+    },
+    _layerDefToLayer: function (layerDef) {
+        var layer = {};
+        var extent = turf.bbox(layerDef.data);
+
+        var bounds = new L.LatLngBounds(new L.LatLng(extent[1], extent[0]), new L.LatLng(extent[3], extent[2]));
+
+        layer._bounds = bounds;
+
+        return layer;
+    },
+    _calculateBounds: function (sceneModel) {
+        var bounds = new L.LatLngBounds();
+        var me = this;
+        var boundIds = sceneModel.get('bounds');
+        _.each(this._layers, function (layer, id) {
+            bounds.extend(layer._bounds);
+        });
+
+        return bounds;
+    },
+    _flyTo: function (sceneModel, fly) {
+
+        var coordinates = sceneModel.get('center');
+        var bounds = null;
+        var me = this;
+
+        if (!coordinates) {
+            bounds = this._calculateBounds(sceneModel);
+            coordinates = [bounds.getCenter().lng, bounds.getCenter().lat];
+            sceneModel.set('center', coordinates);
+        }
+        var zoom = sceneModel.get('zoom');
+        var latLng = new L.LatLng(coordinates[1], coordinates[0]);
+        var path = sceneModel.get('path');
+        var me = this;
+		
+		if (me._isNavigating) {
+			_.each(me._timeoutIds, function (id) {
+				clearTimeout(id);
+			});
+		}
+
+		me._isNavigating = false;
+		me._timeoutIds = [];
+		
+        var setPano = function (ll, pov) {
+            return function () {
+                var pano = new google.maps.StreetViewPanorama(
+                    document.getElementById(me._panId), {
+                        position: ll,
+						pov: pov,
+                        linksControl: true,
+                        fullscreenControl: false,
+                        addressControl: false,
+                        enableCloseButton: false,
+						motionTracking: false
+                    });
+
+				
+                me._map.setStreetView(pano);
+		        me._map.setCenter(ll);
+		        me._map.setZoom(zoom);
+				me._isNavigating = true;
+            }
+        };
+
+        if (path && !L.Browser.mobile) {
+            _.each(path, function (point, index) {
+				var ll = point.position;
+				var pov = point.pov;
+                me._timeoutIds.push(setTimeout(setPano(new L.LatLng(ll[1], ll[0]), pov), index * 2000));
+            });
+
+            me._timeoutIds.push(setTimeout(setPano(latLng, sceneModel.get('pov')), path.length * 2000));
+        }
+		else {
+	        setPano(latLng, sceneModel.get('pov'))();
+			
+		}
+
+        if (this._lastLocation) {
+            // Get directions from last location to current location and animate it
+            /*
+            var request = {
+                origin: this._lastLocation,
+                destination: latLng,
+                travelMode: 'WALKING'
+            };
+            this._directionsService.route(request, function(result, status) {
+                if (status == 'OK') {
+                    _.each(result.overview_path, function (waypoint) {
+
+                    });
+                }
+            });
+            */
+        }
+        
+        this._lastLocation = latLng;
+
+    }
+});
+
 Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
     initialize: function (options) {
         this._baseLayerIndex = {};
@@ -763,12 +906,12 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 								if (me._prevLayer && me._map.hasLayer(me._prevLayer)) {
 									me._map.removeLayer(me._prevLayer);
 								}
-								
+
 								me._prevLayer = newLayer;
 							}
                         };
                     };
-					
+
                     me._intervals[layerDefId] = me._setInterval(cycleFunction(layerDef), layerDef.interval || 1000);
                 }
                 else {
@@ -2022,7 +2165,7 @@ Focus.Views.LegendView = Backbone.View.extend({
         me.$el.addClass('legend');
         _.each(layers, function (layer) {
 			var include = me.options.text ? me.options.text[layer.layerName] : true;
-			
+
 			if (include) {
 				var title = me.options.text && me.options.text[layer.layerName] ? me.options.text[layer.layerName] : layer.layerName;
             	me.$el.append('<h4 class="legend-title">' + title + '</h4>');

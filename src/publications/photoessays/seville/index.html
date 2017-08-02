@@ -1,0 +1,1853 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>A Stroll through Seville</title>
+    <meta name="description" content="FOCUS on Geography: A Stroll through Seville">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,spain,seville,map">
+    <meta name="author" content="George Lovell">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x1521.jpg.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Chela+One|Hammersmith+One|Montserrat:900|Righteous|Corben|EB+Garamond"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        #map, #overview-map {
+            position: fixed !important;
+        }
+
+        #overview-map {
+            border-radius: 0px !important;
+        }
+
+        .dotstyle .sections li {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 2px 17px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .dotstyle .sections li a {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            outline: 0;
+            border-radius: 0px;
+            background-color: #fff;
+            background-color: rgba(255, 255, 255, .3);
+            text-indent: -999em;
+            cursor: pointer;
+            position: absolute;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans serif;
+        }
+
+        #text {
+            width: 40% !important;
+            background: linear-gradient(0deg, rgba(252, 221, 9, 0.3), rgba(252, 221, 9, 0.3)), linear-gradient(0deg, white, white);
+            *background: url("https://www.toptal.com/designers/subtlepatterns/patterns/wov.png");
+        }
+
+        #map {
+            width: 60%;
+            left: 0;
+        }
+
+        #text h2 {
+            font-size: 90px;
+            font-weight: 900;
+        }
+
+        #text h2, #text h3 {
+            font-family: 'Corben', sans serif;
+            text-transform: none;
+
+        }
+
+        .figure {
+            pointer-events: none;
+        }
+
+        .figure .helper {
+            display: none;
+        }
+
+        div.author {
+            opacity: 1;
+        }
+
+        .helper-tooltip div.tooltip-inner {
+            *background: rgba(255, 198, 30, 1);
+            z-index: 50000;
+            *color: rgba(0, 47, 108, 1);
+        }
+
+        .helper-tooltip.tooltip.top div.tooltip-arrow {
+            *border-top-color: rgba(255, 198, 30, 1);
+        }
+
+        #text h2 {
+            color: rgba(252, 221, 9, 1);
+            font-size: 80px;
+            font-family: 'Corben';
+        }
+
+        span.place-text {
+            *font-family: 'Aladin', cursive;
+            color: #fff;
+        }
+
+        #text a, a.location, div.tooltip a {
+            color: rgba(255, 55, 55, 1) !important;
+            border-bottom-color: rgba(255, 55, 55, 1);
+        }
+
+        #text a:hover, a.location:hover, div.tooltip a {
+            background: rgba(255, 55, 55, 0.1);
+            text-decoration: none;
+        }
+
+        path.line {
+            stroke: rgba(0, 102, 0, 1) !important;
+        }
+
+        path.marker-path {
+            stroke: rgba(0, 102, 0, 1) !important;
+            fill: rgba(0, 102, 0, 1) !important;
+        }
+
+        #text h2 {
+            *text-shadow: 1px 0 0 #222, -1px 0 0 #222, 2px 0 0 #fff, -2px 0 0 #fff;
+            *font-size: 40px;
+        }
+
+        #nav, #toggle-map {
+            background: black;
+        }
+
+        #text {
+            *background: linear-gradient(90deg, rgba(254, 252, 238, 0.7), rgba(254, 252, 238, 1) 50%);
+            *background: rgba(254, 252, 238, 1);
+            font-family: 'EB Garamond', serif;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: rgba(252, 221, 9, 1);
+            -webkit-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgba(252, 221, 9, 1);
+            transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-ms-fill {
+            background-color: rgba(252, 221, 9, 1);
+            -ms-transition: width 0.5s ease-in-out;
+        }
+
+        svg text {
+            font-family: 'Lato', sans serif;
+            font-size: 16px;
+            fill: #fff;
+        }
+
+        ul.grid {
+            top: 100px;
+            position: relative;
+            z-index: 100;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            justify-content: center;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 0 6em;
+            list-style: none;
+        }
+
+        li.grid-item {
+            display: block;
+            -webkit-flex: none;
+            flex: none;
+            width: 35%;
+            min-width: 180px;
+            padding: 10px;
+        }
+
+        .grid-item a {
+            border-bottom: none;
+        }
+
+        .grid-img {
+            display: block;
+            width: 100%;
+        }
+
+        .grid-link {
+            display: block;
+            padding: 13px 13px;
+            background: #fff;
+        }
+
+        .figure {
+            z-index: 1000;
+        }
+
+        p {
+            z-index: 1001;
+        }
+
+        #acknowledgements {
+            *border-color: rgba(0, 47, 108, 1);
+        }
+
+        . .row.footer-row {
+            *color: rgba(0, 47, 108, 1);
+        }
+
+        .photogrid .col-12 {
+            height: 200px;
+            background-position: 50% 50%;
+            background-size: cover;
+            filter: blur(3px);
+        }
+
+        #nav .nav a:hover {
+            background: rgba(184, 22, 38, 1);
+        }
+
+        .place-image {
+            background: rgba(187, 0, 0, 0.9);
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .place-image img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<progress></progress>
+<div id="nav" class="dotstyle dotstyle-scaleup">
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter"
+               href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook"
+               href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <ul class="nav previous">
+        <li class="previous">
+            <a href="#"><span class="fa fa-chevron-up"></span></a>
+        </li>
+    </ul>
+    <ul class="nav sections">
+    </ul>
+    <ul class="nav next">
+        <li class="next">
+            <a href="#"><span class="fa fa-chevron-down"></span></a>
+        </li>
+    </ul>
+</div>
+<!-- Add your site or application content here -->
+<div id="background"></div>
+<div id="map"></div>
+<div id="overview-map" class="title-hidden transparent"></div>
+<div id="foreground"></div>
+<div id="photos">
+    <div id="photo-caption"></div>
+</div>
+<div id="shadow"></div>
+<div id="toggle-map" class="focus-black"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+<div id="main-nav" class="light">
+    <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+        <svg width="1000px" height="1000px">
+            <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"
+                  style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+            <path id="pathE" d="M 300 500 L 700 500"
+                  style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+            <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
+                  style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+        </svg>
+
+        <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+    </div>
+    <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter"
+               href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook"
+               href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <div id="menu"></div>
+</div>
+<div id="text">
+    <div class="content scenes">
+        <section id="introduction" class="scene " data-scene-id="place0">
+            <h2 class="title title-photo"
+                style="background-image: linear-gradient(0deg,rgba(184,22,38,1) 30%,rgba(184,22,38,0.4)), url(img/escuelapalms.jpg); background-position: 50% 50%; background-size: 200%;">
+                <span>A Stroll through Seville</span>
+            </h2>
+            <div
+                style="background: rgba(184,22,38,1); margin: -30px -30px 30px; padding: 30px; color: rgb(254, 245, 181); position: relative;">
+                <div class="author"><span class="name">George Lovell</span>, <span class="organization">Department of Geography, Queen's University</span>
+                </div>
+                <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2017.60.3p</div>
+                <img src="img/walking.svg" style="
+			    position: absolute;
+			    bottom: -5px;
+			    width: 40%;
+			    right: -10px;
+			    opacity: 0.3;
+			">
+            </div>
+            <p>
+                <span
+                    style="float: left; font-size: 90px; line-height: 60px; color: rgba(184,22,38,1); padding-right: 15px; font-family: 'Corben';">I</span><span> walk through the twin-columned portico of the School of Spanish American Studies and down the steps into the garden. Beds of roses flower beneath tall, stately palms, swaying in the breeze. Rafael, a retired concierge, once showed me a photograph of himself when he started working there. He stands, more a boy than a man, alongside one of the palm trees, which rise above him, but not by much. Now they soar into the sky, towering higher than the building itself and the adjoining church. The school’s marble fence posts, a row of nine, used to be linked by thick iron chains, which children swung on before they were chased off. Word has it that those marble fence posts once were pillars lifted from the ruins of Itálica, the city that the Romans built not far away. I turn right as I exit on Alfonso XII, and right again at the corner where Santa Vicenta María begins, named after the founder of an order of nuns. My morning’s work in the Archive of the Indies fruitfully concluded, I’m heading off for lunch. Three narrow streets and the edge of a plaza take me in a near-straight line to the heart of San Lorenzo, the neighborhood in Seville where I spend the winter.</span>
+            </p>
+            <p>Nothing in my Scottish roots -- I was born and raised in Glasgow -- would appear to connect the two
+                cities, separated by language and myriad expressions of culture. Yet the street I grew up on in Govan,
+                where my father’s grocery store linked us to families and livelihoods, attitudes and circumstances
+                different than those of our own, is never far away when I stroll through this barrio of Seville. The
+                trick is to relish the so-called small things in life for the great gifts they are, the mini-marvels of
+                human interaction foremost of all, what can transpire in a snip of conversation, an offhand remark, a
+                curious look, a fleeting observation or a passing thought. Spaniards know how to live in the mode of a
+                moment, none more so than the people of Seville.
+            </p>
+        </section>
+        <section id="2" class="scene " data-scene-id="place1">
+            <div class="figure" style="background-image:url(img/manolobarberofseville.jpg);"></div>
+            <div class="caption">Manolo of Eladio's Peluqueria</div>
+            <p>
+                On the left as I begin my walk is Eladio’s Peluquería, a salon with a sign advertising its services in
+                English as “Heir Dresser.” Manolo, my barber in Seville, scribbles the appointment that I make with him,
+                one Saturday each month for the four I am usually there, on a scrap of paper, recording it as “Operación
+                Menos Feo.” He refers to me as “El Guiri,” the foreigner. “I can’t make you look handsome,” Manolo
+                declares, “but I can make you look less ugly.” No miracles, not even on this holy street.
+            </p>
+        </section>
+        <section id="3" class="scene " data-scene-id="place2">
+            <div class="figure" style="background-image:url(img/pepeerpepe.jpg);"></div>
+            <p>
+                Bar Granado, which I hear being opened at 6am sharp, lies opposite. I greet Oscar whenever I see him
+                closing it down, eighteen hours later. Next in line is Bar Er Pepe, whose eponymous owner calls me
+                “Jordi.” His daughter, Paula, a growing girl, eats more jamón serrano, keenly sliced Iberian ham, than
+                her father sells. I catch the sound of a whistle, and turn to greet the man whose job it is to sharpen
+                knives. He’s just pulled up at the bar called Los Niños de Flor, three clients in close proximity for
+                him a strategic location. The back wheel of his bicycle is deployed to turn a grinder, whose sparks draw
+                an audience of inquisitive children. Other youngsters play in an alley while their parents and
+                grandparents sit in the sun, discussing family matters or reading the newspapers. Eugenio of Los Niños
+                de Flor has nicknamed me “Steven” -- on account, so he alleges, of my striking resemblance to Steven
+                Seagal, his hero of action-movie fame.
+            </p>
+        </section>
+        <!--My surname is what Eduardo, Julio, and Luis address me by. Their bookstore, Céfiro, has one display window on Santa Vicenta María and another (surely only in Seville) on a street named La Virgin de los Buenos Libros, “The Virgin of Good Books.” I’ve seen titles of mine featured on the Virgin side of Céfiro, but not on the Santa Vicenta María side. Eugenio, in whose droopy moustache birds could nest, keeps a watchful eye, and would alert me of any such sighting, a stone’s throw from where he waits on tables.-->
+        <section id="4" class="scene " data-scene-id="place3">
+            <div class="figure " style="background-image:url(img/bookstore.jpg);"></div>
+            <p>
+                My surname is what Eduardo, Julio, and Luis address me by. Their bookstore, Céfiro, has one display
+                window on Santa Vicenta María and another (surely only in Seville) on a street named La Virgin de los
+                Buenos Libros, “The Virgin of Good Books.” I’ve seen titles of mine featured on the Virgin side of
+                Céfiro, but not on the Santa Vicenta María side. Eugenio, in whose droopy moustache birds could nest,
+                keeps a watchful eye, and would alert me of any such sighting, a stone’s throw from where he waits on
+                tables.
+        </section>
+        <section id="5" class="scene " data-scene-id="place4">
+            <p>
+                Crossing the Virgen de los Buenos Libros I enter the Calle San Juan de Ávila, home of the Colegio
+                Sagrado Corazón. I notice Mónica at the stand where pupils hover to buy candy and soft drinks. She’s the
+                daughter of Marina, who runs the school residence where I stay. “Hola,” Mónica shouts, and skips up to
+                greet me with two of her friends, the braces on her teeth unable to clamp a glorious smile The classroom
+                windows of Sagrado Corazón are sometimes ajar, allowing me to eavesdrop on a lesson being taught. A
+                teacher asks a question; her charges chant a response in unison.
+            </p>
+        </section>
+        <section id="6" class="scene " data-scene-id="place5">
+            <p>
+                On the right, looming above cars parked with tight precision and guarded by a street hound known as The
+                Angel, is the former police station, its crumbling edifice taking up more than half the block. The state
+                of ruin on the side facing the Plaza de la Concordia has been covered by a massive tarpaulin, printed
+                with lines by Manuel Chaves Nogales (1897-1944) that extol the virtues of a city as beautiful and
+                haunted as Seville:</p>
+            <blockquote
+                style="color: rgba(184,22,38,1); font-family: 'Corben'; border-left: solid 4px rgba(184,22,38,1);">You
+                contemplate that plaza, that square, that house, and become aware of its essence. You surrender to what
+                you think is one final impression, unraveling it, only to find, just around the corner, a new surprise
+                that makes you reel, and think again. From encounters like these is this place, mysterious and
+                inscrutable, magically spun.
+            </blockquote>
+            <p>No poetic graffiti adorns the San Juan de Ávila side of the police station, where the pavement has been
+                cordoned off to prevent pedestrians from being hit by falling debris. Adjacent to its ominous hulk, a
+                homeless assortment seeks shelter outside an apartment complex. A reminder to those with a roof over
+                their head exhorts: “Por favor: Cierren la puerta -- Please be sure to close the door.” When San Juan de
+                Ávila is hosed down at night, the street cleaners avoid soaking the makeshift refuge. Its cardboard
+                boxes and plastic coverings are dismantled from time to time by municipal authority, but sooner or later
+                the occupants return.</p>
+        </section>
+        <section id="8" class="scene " data-scene-id="place6">
+            <p>
+                The Plaza de la Gavídia is a lively, welcoming square, wide and airy after the tight passage of San Juan
+                de Ávila. There Susanna and Tomás run the Café Bar Vintage. For quieter moments, none too many, Susanna
+                always has a novel at hand. I observe her reading Mario Vargas Llosa’s The Bad Girl, and joke with her
+                that the book’s racy title surely cannot apply to its reader, a very attractive redhead. “I don’t like
+                his politics one little bit,” I add.</p>
+            <p>
+                “Nor do I,” she replies, “but he’s a good writer. That’s why he won the Nobel.”</p>
+            <p>
+                After I pay for my coffee I leave a small tip, which Tomás thanks me for and tosses into a jar. The
+                “bote” gets emptied and divvied up four times a year -- at Christmas, at Easter, during the annual city
+                fair known as the Feria, and before the summer holidays. As Easter approaches, a tell-tale sign of which
+                is the smell of azahar (orange blossom) scenting up the city, the “bote” is designated “Para la Mantilla
+                y el Costal,” suitably reverential but somewhat, I suspect, tongue in cheek. I cannot imagine Susanna
+                covering her locks with a mantilla, a religious headscarf, or Tomás padding his shoulders with a
+                protective sack to bear the weight, along with less stoutly built costaleros, of an Easter float laden
+                with images of Jesus, his Mother, Roman soldiers, or anguished disciples.
+            </p>
+            </p>
+        </section>
+        <section id="10" class="scene " data-scene-id="place7">
+            <div class="figure" style="background-image:url(img/manuel.jpg);"></div>
+            <p>
+                Kitty-corner to one another are the Amarillo Albero and the Dos de Mayo. Thursday in the former tapas
+                bar is Antonio’s day off. A fellow waiter of his, Federico, maintains that a day off for Antonio is also
+                a day off for anyone else still working. The owner, Manuel, smiles and nods his agreement. Paco and the
+                staff at Dos de Mayo take turns bolting from its habitual mayhem to have a quick smoke and tipple in a
+                nearby establishment not nearly as packed as their own.
+            </p>
+        </section>
+        <section id="11" class="scene " data-scene-id="place8">
+            <p>
+                An accordionist plays for alms outside the gates of Santa Rosalía, a convent whose patron saint, a
+                plaque tells us, was “Abogada para los enfermos,” attendant to the sick and infirm. Confined inside,
+                Capuchin sisters elaborate sweets and pastas for take-away sale, inspired no doubt by the wondrous
+                smells of the bakery across the street. Their artisan ways are matched by the family of Francisco J.
+                García, three generations of whom have crafted and repaired chairs, sofas, and all manner of furniture,
+                specializing in items of lattice, reed, and wicker. Far more utilitarian is the Bazar King Kong and
+                another retail jamboree several doors along, commercial ventures opened by recent arrivals from China
+                selling everything imaginable. If they don’t have what you are looking for on the shelves, they can get
+                it for you by first thing tomorrow morning. At this juncture in the thoroughfare, past the fishmonger
+                and greengrocer, a Moorish minaret long part of a Christian complex comes into view. The clock at the
+                top is visible until the arrival of spring, when plane trees burst in green splendor and floppy leaves
+                obscure the trace of time.
+            </p>
+        </section>
+        <section id="12" class="scene " data-scene-id="place9">
+            <div class="figure" style="background-image:url(img/sculptorofgranpoder.jpg);"></div>
+            <div class="figure" style="background-image:url(img/plazadesanlorenzo2.jpg);"></div>
+            <p>
+                The Plaza de San Lorenzo is the heart of the neighborhood, spiritually and socially. At the Church of El
+                Gran Poder, entered from a corner, not a central location, the great power in question belongs to one of
+                Seville’s most revered Catholic icons, the almighty Jesus. Faithful by the thousands pay him homage all
+                year long, filing past to pray at the image that dominates the altar. Created by Juan de Mesa
+                (1583-1627), whose mastery is commemorated in a bust outside, El Gran Poder presides over a remarkable
+                circular space, the cupola of which looks like a flying saucer. The Stations of the Cross are rendered,
+                counter clockwise from the Saviour’s perspective, in a series of paintings by Antonio Agudo, an artist
+                whose wife, Pilar, happens to be a colleague of mine. Antonio, whose curriculum vitae also includes a
+                portrait of former king Juan Carlos, was honored to receive the commission but especially excited by the
+                challenge of producing work that would satisfy a traditionalist bent yet not compromise his aesthetic
+                principles.
+            </p>
+            <p>
+                His models, he decided, would be members of his own family. The sequence conforms, as needs must, to
+                depicting the last days of Christ on Earth, painted by Antonio with stunning economy and impact. His
+                pared-down representations, however, I always find disconcerting, as Pilar appears as Mary, and his son,
+                Alejandro, as King of the Jews. The crucifixion scenes are the most powerful of the fourteen canvases.
+                In one painting Jesus is nailed to his cross as it lies on the ground, an uncommon angle from which to
+                contemplate Calvary; in the next, cross and saviour are hoisted upright. During Easter the cult of El
+                Gran Poder culminates in the small hours of Good Friday, when Jesus is taken from church and paraded
+                through the streets of San Lorenzo before being carried, in candlelit procession, to the city cathedral
+                and back again. A multitude throngs the plaza, the verandas of apartments on three of its sides packed
+                with people who toss flowers on to the passing float and sing saetas of devotion.
+            </p>
+        </section>
+        <section id="15" class="scene " data-scene-id="place10">
+            <p>
+                Impressive though this spectacle undoubtedly is, I prefer the plaza when it’s less solemn and crowded,
+                the locals going about their daily routines. A second coffee at El Sardinero is a perfect opportunity to
+                observe life either on the premises or off, seated at one of the tables set up on the plaza. Javier, a
+                waiter I’ve tracked from bar to bar, implores me to go watch Sevilla F.C. play soccer instead of
+                continuing to torture myself by being a fan of Real Betis Balompie, perpetually under threat of
+                relegation from the first tier of Spanish fútbol to the second. Romero and his wife Inmaculada wander
+                past with their toddler, Reyes, en route to visiting Romero’s mother, from whom he took over running the
+                family newspaper kiosk. Out walking his dog, Blackie, José Luis takes advantage of bumping into me to
+                practice his English. Juan Antonio, fresh-cut flowers in arms from Flores San Lorenzo, tells me of an
+                upcoming concert I shouldn’t miss. Elías, a professor of anthropology, explains some custom or other
+                that has baffled me, and invites me to eat with him and his wife Lucía at the weekend. “She’s making
+                cocido andaluz. You can’t miss that!” I won’t.
+            </p>
+        </section>
+        <section id="16" class="scene " data-scene-id="place11">
+            <p>
+                I stop to pick up my laundry at the Centro de Limpieza González. Inés is hard at it, ironing a red
+                polka-dot flamenco dress for someone to wear at the Feria.
+                “Sonia,” she hollers above a rush of steam. “That’s Jorge just walked in. Bring his bag of clothes out
+                front.” It’s Teresa, though, who appears from the back shop with my laundry. She assures me that, unlike
+                what occurred time and again when Eva worked there, that all my socks can be accounted for, and match
+                up.
+
+            </p>
+            <div class="figure contain" style="background-image:url(img/eslavasign.jpg);"></div>
+            <div class="figure" style="background-image:url(img/eslavatapasboard.jpg);"></div>
+            <div class="figure" style="background-image:url(img/annaeslava.jpg);"></div>
+
+            <p>
+                The journey ends, as it does often, at Bar Eslava. Boards at each end of the tunnel-like space have the
+                day’s tapas chalked, top to bottom, in mouth-watering script, written out daily by the lovely Ana.
+                Sixto, the proud owner, points to a framed award on the gantry, honoring Bar Eslava’s gold-medal finish
+                in a city-wide tapas competition. “But I want you to try something else today, George, and to enjoy it
+                the way my grandmother used to.” He disappears into the kitchen and comes out a few minutes later.
+            </p>
+            <p>
+                Placing a bowl of gazpacho on the counter along with a plate of sardines, Sixto leans toward me, an
+                impish grin on his face. “What you do,” he whispers, “is de-bone the sardines, put them in the gazpacho
+                one at a time, chop them up, and then eat.” He runs off to attend to another customer, leaving me, much
+                to the curiosity of the couple next to me, to follow his instructions. The outcome is delicious,
+                especially when accompanied by a glass of manzanilla sherry, chilled to perfection.
+            </p>
+            <div class="figure" style="background-image:url(img/eslava2.jpg);"></div>
+            <p>
+                Like its gourmet fare, Bar Eslava is something of a minimalist’s delight, a visual relief from its
+                competitors, whose interiors are gloomy if not forlorn, gaudy and oppressive, stuffed with religious or
+                bullfighting paraphernalia. A long horizontal mirror is all that hangs on one wall, on another an
+                antique clock with hands fixed at five minutes to twelve, high noon and midnight. Pause for reflection.
+            </p>
+            <p>
+                Time does not stand still, here or anywhere, but the feel of it in Seville is like no place else I know.
+            </p>
+        </section>
+    </div>
+</div>
+<div id="progress">
+    <div id="bar"></div>
+</div>
+<div id="bar-top"></div>
+<div id="bar-bottom"></div>
+<!-- inject:templates:html -->
+<!-- endinject -->
+<script src="../../../js/combined.js"></script>
+<script>
+
+    Focus.Map = Focus.Map || {};
+    Focus.Map.traceOptions = {
+        style: {
+            dashArray: [4, 4]
+        },
+        maxLength: 3
+    };
+    Focus.Map.defaultOptions = {
+        color: "rgba(187,0,0,1)",
+        fillColor: "rgba(187,0,0,1)",
+        radius: 6,
+        weight: 10,
+        opacity: 0.3
+    };
+
+    var scenes = {
+        "features": [
+            {
+                "id": "school", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "School"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997418, 37.393129
+                    ]
+                }
+            }
+            },
+            {
+                "id": "schoolfront", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "School",
+                    "heading": 351,
+                    "pitch": 111
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997429, 37.393010
+                    ]
+                }
+            }
+            },
+            {
+                "id": "callealfanso", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Calle Alfanso"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997459, 37.392861
+                    ]
+                }
+            }
+            },
+            {
+                "id": "callevincent", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Calle Vincent"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997684, 37.392903
+                    ]
+                }
+            }
+            },
+            {
+                "id": "eladio", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Eladio"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997718, 37.393211
+                    ]
+                }
+            }
+            },
+            {
+                "id": "barelpepe", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Bar el Pepe"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997610, 37.393670
+                    ]
+                }
+            }
+            },
+            {
+                "id": "losninos", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Los Ninos"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.99754273891449,
+                        37.39373787851603
+                    ]
+                }
+            }
+            },
+            {
+                "id": "barerpepe", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Bar Er Pepe"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997612, 37.393241
+                    ]
+                }
+            }
+            },
+            //37.393576, -5.997550
+            {
+                "id": "bargranado", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Bar Granado"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997585654258728,
+                        37.39355461537967
+                    ]
+                }
+            }
+            },
+            {
+                "id": "cefiro", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Bar Granado"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997510552406311,
+                        37.39384442664515
+                    ]
+                }
+            }
+            },
+            {
+                "id": "eslava", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Bar Eslava"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.996848, 37.397548
+                    ]
+                }
+            }
+            },
+            {
+                "id": "colegiosagrado", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Colegio Sagrado"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997489, 37.393921
+                    ]
+                }
+            }
+            },
+            {
+                "id": "policestation", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Police Station"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997442, 37.394150
+                    ]
+                }
+            }
+            },
+            {
+                "id": "plazadelagavidia", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Plaza de la Gavidia"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997286, 37.394732
+                    ]
+                }
+            }
+            },
+            {
+                "id": "vintage", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Vintage"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997258, 37.394839
+                    ]
+                }
+            }
+            },
+            {
+                "id": "dosdemayo", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Dos de Mayo"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997204780578613,
+                        37.395067588317936
+                    ]
+                }
+            }
+            },
+            {
+                "id": "santarosalia", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Santa Rosalia"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.997118949890137,
+                        37.395480986878844
+                    ]
+                }
+            }
+            },
+            {
+                "id": "barkingkong", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Bar King Kong"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.996984839439392,
+                        37.396111734928866
+                    ]
+                }
+            }
+            },
+
+            {
+                "id": "minaretview", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Plaza de San Lorenzo"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.9968990087509155,
+                        37.3965293895004
+                    ]
+                }
+            }
+            },
+            {
+                "id": "plazadesanlorenzo", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Plaza de San Lorenzo"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.996842, 37.396941
+                    ]
+                }
+            }
+            },
+            {
+                "id": "centro", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Centro de Limpieza González"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.996946, 37.397327 
+                    ]
+                }
+            }
+            },
+			//37.397521, -5.996882
+            {
+                "id": "bareslava", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Bar Eslava"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.996895, 37.397476
+                    ]
+                }
+            }
+            },
+			//37.396892, -5.996559
+            {
+                "id": "granpoderview", "type": "geojson", "data": {
+                "type": "Feature",
+                "properties": {
+                    "name": "Bar Eslava"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -5.996559, 37.396892
+                    ]
+                }
+            }
+            },
+			
+			//37.397327, -5.996946
+			
+            //37.396941, -5.996842
+            //37.396042, -5.996998
+            //37.395572, -5.997094
+            //37.395139, -5.997177
+            //37.394839, -5.997258
+            //37.394896, -5.997237
+            //37.394150, -5.997442
+            //
+
+        ],
+        "scenes": [
+            {
+                "id": "place0",
+                "zoom": 18,
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                pov: {
+                    heading: 15,
+                    pitch: 35
+                },
+                text: 'The School of Spanish-American Studies',
+                "layers": [{
+                    "idRef": "schoolfront",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place1",
+                "zoom": 18,
+                pov: {
+                    heading: 300,
+                    pitch: 20
+                },
+                text: 'Eladio\'s Peluquería',
+                path: [
+
+
+                    {
+                        position: [
+                            -5.997419357299805,
+                            37.39285991616643
+                        ], pov: {heading: 270, pitch: 20}, text: 'Walking to Eladio\'s Peluquería'
+                    },
+                    {
+                        position: [
+                            -5.997561514377594,
+                            37.39287696407695
+                        ], pov: {heading: 270, pitch: 20}
+                    },
+                    {
+                        position: [
+                            -5.997703671455383,
+                            37.39289401198357
+                        ], pov: {heading: 270, pitch: 20}
+                    },
+                    {
+                        position: [
+                            -5.997703671455383,
+                            37.39289401198357
+                        ], pov: {heading: 345, pitch: 20}
+                    },
+                    {
+                        position: [
+                            -5.997687578201294,
+                            37.39303891903346
+                        ], pov: {heading: 0, pitch: 20}
+                    },
+                    {
+                        position: [
+                            -5.997718, 37.393211
+                        ], pov: {heading: 0, pitch: 20}
+                    }
+                ],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "eladio",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place2",
+                "zoom": 18,
+                text: '',
+                path: [{
+                    position: [
+                        -5.997655391693115,
+                        37.393192349722106
+                    ]
+                },
+                    {
+                        position: [
+                            -5.997639298439026,
+                            37.39330742253248
+                        ], text: 'Walking down the '
+                    },
+                    {
+                        position: [
+                            -5.997617840766907,
+                            37.39341823321997
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997585654258728,
+                            37.39355461537967
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997553467750549,
+                            37.39370378308274
+                        ], pov: {heading: 90, pitch: 20}
+                    },
+                    {
+                        position: [
+                            -5.997553467750549,
+                            37.39370378308274
+                        ], pov: {heading: 230, pitch: 20}
+                    },
+                    {
+                        position: [
+                            -5.99753737449646,
+                            37.39376345008083
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.99754273891449,
+                            37.39373787851603
+                        ]
+                    }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                pov: {
+                    heading: 75,
+                    pitch: 20
+                },
+                "layers": [{
+                    "idRef": "losninos",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place3",
+                "zoom": 18,
+                path: [{
+                    position: [
+                        -5.99753201007843,
+                        37.39375918815397
+                    ]
+                },
+                    {
+                        position: [
+                            -5.997515916824341,
+                            37.393806069336115
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997510552406311,
+                            37.39384442664515
+                        ], pov: {
+                        heading: 300, pitch: 20
+                    }
+                    }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "cefiro",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+                pov: {
+                    heading: 200,
+                    pitch: 20
+                },
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place4",
+                "zoom": 18,
+                path: [{
+                    position: [
+                        -5.997510552406311,
+                        37.39384442664515
+                    ], pov: {heading: 300, pitch: 35}
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "cefiro",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place5",
+                "zoom": 18,
+                path: [{
+                    position: [
+                        -5.997510552406311,
+                        37.39384442664515
+                    ], pov: {heading: 70, pitch: 35}
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "cefiro",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place6",
+                "zoom": 18,
+                path: [{
+                    position: [
+                        -5.997505187988281,
+                        37.39384442664515
+                    ]
+                },
+                    {
+                        position: [
+                            -5.997478365898132,
+                            37.39398080802943
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997440814971924,
+                            37.39413423679011
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.9973978996276855,
+                            37.39432176040447
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997333526611328,
+                            37.394543378616575
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997306704521179,
+                            37.39466697310411
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.99727988243103,
+                            37.39475647243338
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997286, 37.394732
+                        ], pov: {
+                        heading: 70, pitch: 20
+                    }
+                    }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "plazadelagavidia",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+                pov: {
+                    heading: 300,
+                    pitch: 20
+                },
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            /*
+             {
+             "id": "place6",
+             "zoom": 11,
+             "bounds": {"nainokanoka": true, "ngorongorocrater": true},
+             "baseLayer": [{
+             "type": "esri-basemap",
+             "url": "Imagery",
+             "options": {
+             "detectRetina": true,
+             "imagerySet": "AerialWithLabels"
+             }
+             }],
+             "layers": [{
+             "idRef": "kenya",
+             "style": {
+             "color": "#fff",
+             "weight": 3,
+             "opacity": 1,
+             "fillOpacity": 0.1
+             }
+             }, {
+             "idRef": "tanzania",
+             "style": {
+             "color": "#fff",
+             "weight": 3,
+             "opacity": 1,
+             "fillOpacity": 0.1
+             }
+             }, {
+             "idRef": "ngorongoroarea",
+             "style": {
+             "fillOpacity": 0.1,
+             "weight": 2,
+             "opacity": 0.9
+             }
+             }, {
+             "idRef": "ngorongorocrater"
+             }, {
+             "idRef": "nainokanoka",
+             "style": {
+             "fillOpacity": 0.1,
+             "icon": {
+             "html": "<div class='place-image'><img src='img/village.svg'/><div style='width: 49px; text-align: center;'><span class='place-text'>Nainokanoka</span></div></div>",
+             "iconSize": [49, 35],
+             "iconAnchor": [24, 18]
+             }, "text": {
+             "text": "Nainokanoka"
+             }
+             }
+             }],
+             "style": {
+             "filter": "sepia(0%)",
+             "opacity": 0.95,
+             "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+             }
+             }, */
+            {
+                "id": "place7",
+                "zoom": 18,
+                path: [{
+                    position: [
+                        -5.997258424758911,
+                        37.3948374479249
+                    ]
+                },
+                    {
+                        position: [
+                            -5.997242331504822,
+                            37.39493120891107
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997204780578613,
+                            37.395067588317936
+                        ], pov: {heading: 0, pitch: 20}
+                    },
+                    {
+                        position: [
+                            -5.997204780578613,
+                            37.395067588317936
+                        ], pov: {heading: 30, pitch: 20}
+                    },
+                    {
+                        position: [
+                            -5.997204780578613,
+                            37.395067588317936
+                        ], pov: {heading: 300, pitch: 20}
+                    }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "dosdemayo",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place8",
+                "zoom": 18,
+                path: [{
+                    position: [
+                        -5.997204780578613,
+                        37.39507611202261
+                    ]
+                },
+                    {
+                        position: [
+                            -5.997172594070435,
+                            37.39520822932135
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997113585472107,
+                            37.395455415899995
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997092127799988,
+                            37.39553639063644
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997092127799988,
+                            37.39553639063644
+                        ], pov: {heading: 50, pitch: 30}
+                    },
+                    {
+                        position: [
+                            -5.99703311920166,
+                            37.39587307412879
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.996984839439392,
+                            37.396111734928866
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.996984839439392,
+                            37.396111734928866
+                        ], pov: {heading: 250, pitch: 20}
+                    },
+                    {
+                        position: [
+                            -5.996963381767273,
+                            37.396226803257385
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.9969258308410645,
+                            37.39636744208565
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.9968990087509155,
+                            37.3965293895004
+                        ]
+                    }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "minaretview",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+                pov: {
+                    heading: 0,
+                    pitch: 20,
+                    zoom: 2
+                },
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            /*
+             [
+             -5.996984839439392,
+             37.396111734928866
+             ],
+             [
+             -5.996963381767273,
+             37.396226803257385
+             ],
+             [
+             -5.9969258308410645,
+             37.39636744208565
+             ],
+             [
+             -5.9968990087509155,
+             37.3965293895004
+             ],
+             [
+             -5.996861457824707,
+             37.39696408872546
+             ],
+             [
+             -5.9967273473739615,
+             37.396938518252604
+             ],
+             [
+             -5.9966039657592765,
+             37.39692147126584
+             ],
+             [
+             -5.996485948562622,
+             37.39689163902973
+             ],
+             [
+             -5.996405482292175,
+             37.396878853782006
+             ]
+             */
+            {
+                "id": "place9",
+                "zoom": 18,
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                path: [
+                    /*{
+                        position: [
+                            -5.996984839439392,
+                            37.396111734928866
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.996963381767273,
+                            37.396226803257385
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.9969258308410645,
+                            37.39636744208565
+                        ]
+                    },*/
+                    {
+                        position: [
+                            -5.9968990087509155,
+                            37.3965293895004
+							
+                        ]
+                    },
+                    {
+                        position: [
+							-5.996860, 37.396922
+                            //-5.996861457824707,
+                            //37.39696408872546
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.9967273473739615,
+                            37.396938518252604
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.9966039657592765,
+                            37.39692147126584
+                        ]
+                    }
+                ],
+                "layers": [{
+                    "idRef": "granpoderview",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place10",
+                "zoom": 18,
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+				pov: {
+					heading: 45,
+					pitch: 20
+				},
+                "layers": [{
+                    "idRef": "granpoderview",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place11",
+                "zoom": 18,
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "bareslava",
+                    "style": {
+                        "color": "#fff",
+                        "weight": 3,
+                        "opacity": 1,
+                        "fillOpacity": 0.1
+                    }
+                }],
+				pov: {
+					heading: 300,
+					pitch: 15
+				},
+                path: [{
+                        position: [
+            -5.996384024620056,
+            37.39687459203228
+          ]},
+          {
+              position: [
+            -5.996636152267456,
+            37.39692147126584
+          ], pov: {
+			  heading: 270,
+			  pitch: 10
+          }},
+          {
+              position: [
+            //-5.996850728988647,
+            //37.39696408872546
+				  -5.996860, 37.396922
+          ], pov: {
+			  heading: 270,
+			  pitch: 10
+          }},
+          {
+              position: [
+            -5.996995568275452,
+            37.396998182675716
+          ], pov: {
+			  heading: 270,
+			  pitch: 10
+          }},
+          {
+              position: [
+            -5.996995568275452,
+            37.396998182675716
+          ]},
+		  /*
+          {
+              position: [
+            -5.997059941291809,
+            37.39701522964502
+          ]},
+		  */
+                    {
+                        position: [
+                            -5.997006297111511,
+                            37.39710046443337
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997021, 37.397211
+                        ]
+                    },
+                    {
+                        position: [
+                            -5.997021, 37.397211
+                        ],
+						pov: {
+							heading: 300,
+							pitch: 10
+						}
+                    },
+                    {
+                        position: [
+                            -5.996895, 37.397476
+                        ]
+                    }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }
+
+
+        ]
+    };
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-79613259-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwwps8stS0eDJ4xOcvngtQYuXtPjngwTk">
+</script>
+<script>
+    var API_KEY = 'AIzaSyDU6SiRn0YkLzgcOta-JCBBsdI9Z-KLOQA';
+
+    $(document).ready(function () {
+        $('#nav li.previous a').on('click', function (e) {
+            e.preventDefault();
+            var $prev = $('#nav').find('.sections li.active').prev();
+
+            if (!$prev.hasClass('previous')) {
+                $prev.find('a').click();
+            }
+        });
+
+        $('#nav li.next a').on('click', function (e) {
+            e.preventDefault();
+            var $next = $('#nav').find('.sections li.active').next();
+
+            if (!$next.hasClass('next')) {
+                $next.find('a').click();
+            }
+        });
+
+        var sceneManager = new Focus.Views.SceneManagerView({
+            el: $('body'),
+            initialScene: {
+                center: [24.9375, 60.170833],
+                zoom: 4
+            },
+            navigatorClass: Focus.Views.ScrollingSceneNavigator,
+            mapEngineClass: Focus.Views.StreeviewMapEngine //Focus.Views.OpenLayersMapEngine //LeafletMapEngine
+        });
+
+        var shareView = new Focus.Views.ShareView();
+        shareView.render();
+
+    });
+
+</script>
+</body>
+</html>
