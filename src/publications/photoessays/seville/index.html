@@ -7,7 +7,7 @@
     <meta name="description" content="FOCUS on Geography: A Stroll through Seville">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="geography,spain,seville,map">
-    <meta name="author" content="George Lovell">
+    <meta name="author" content="W. George Lovell">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -26,16 +26,31 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Place favicon.ico in the root directory -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css?family=Chela+One|Hammersmith+One|Montserrat:900|Righteous|Corben|EB+Garamond"
+        href="//fonts.googleapis.com/css?family=Chela+One|Hammersmith+One|Montserrat:900|Righteous|Corben|EB+Garamond"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
     <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
     <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
+		a {
+			border-bottom-color: white;
+		}
+		body {
+			overflow: hidden;
+		}
+		
+		ul.nav.sections {
+			display: none;
+		}
+		
+		#text {
+			overflow: hidden;
+		}
+		
         #map, #overview-map {
             position: fixed !important;
         }
@@ -44,6 +59,32 @@
             border-radius: 0px !important;
         }
 
+		p {
+		    line-height: 1.6;
+		    font-size: 22px;
+			margin-top: 20px;
+		}
+		
+		a.next-scene {
+			vertical-align: middle;
+		}
+		
+		a.next-scene::before {
+			content: url(img/walking1.svg);
+			width: 15px;
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		section {
+			height: calc(100vh);
+			width: calc(100% + 60px);
+			overflow-y: auto;
+			margin: 0px -30px;
+			padding: 0px 30px;
+		}
+		
         .dotstyle .sections li {
             position: relative;
             display: block;
@@ -94,10 +135,51 @@
             text-transform: none;
 
         }
+		
+		@media (max-width: 1024px) {
+		#text h2.title {
+		    font-size: 70px;
+		}
+		}
+		
+		@media (max-width: 1024px) {
+		#text {
+		    width: 50% !important;
+		}
+		}
+		
+		@media (max-width: 768px) {
+		#text {
+		    width: 100% !important;
+		    padding-right: 0;
+		    padding-top: 90px;
+		}
+		}
+		
+		@media (max-width: 1024px) {
+		#map {
+		    width: 50%;
+		}
+		}
+		
+		@media (max-width: 768px) {
+		#map {
+		    opacity: 1;
+		    height: calc(100vh - 0px);
+			width: 100%;
+		    margin: 0;
+		}
+		}
 
         .figure {
             pointer-events: none;
+			margin: 0px -30px;
         }
+		
+		div.caption {
+			margin-top: 0px;
+			margin-bottom: -20px;
+		}
 
         .figure .helper {
             display: none;
@@ -129,12 +211,15 @@
         }
 
         #text a, a.location, div.tooltip a {
-            color: rgba(255, 55, 55, 1) !important;
-            border-bottom-color: rgba(255, 55, 55, 1);
+            *color: rgba(255, 55, 55, 1) !important;
+            *border-bottom-color: rgba(255, 55, 55, 1);
+			color: rgba(184,22,38,1) !important;
+			border-bottom-color: rgba(184,22,38,1);
         }
 
         #text a:hover, a.location:hover, div.tooltip a {
-            background: rgba(255, 55, 55, 0.1);
+            *background: rgba(255, 55, 55, 0.1);
+			background: rgba(184, 22, 38,0.1);
             text-decoration: none;
         }
 
@@ -272,6 +357,14 @@
             transform: translate(-50%, -50%);
             width: 30px;
         }
+		
+		.highlight-letter {
+			float: left; font-size: 80px; line-height: 60px; color: rgba(184,22,38,1); padding-right: 10px; font-family: 'Corben';
+		}
+		
+		audio {
+			width: 100%;
+		}
     </style>
 </head>
 <body>
@@ -361,20 +454,15 @@
             </h2>
             <div
                 style="background: rgba(184,22,38,1); margin: -30px -30px 30px; padding: 30px; color: rgb(254, 245, 181); position: relative;">
-                <div class="author"><span class="name">George Lovell</span>, <span class="organization">Department of Geography, Queen's University</span>
+                <div class="author"><span class="name">W. George Lovell</span>, <span class="organization">Department of Geography, Queen's University</span>
                 </div>
                 <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2017.60.3p</div>
-                <img src="img/walking.svg" style="
-			    position: absolute;
-			    bottom: -5px;
-			    width: 40%;
-			    right: -10px;
-			    opacity: 0.3;
-			">
             </div>
+			<audio controls preload>
+			  <source src="media/seville1.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                <span
-                    style="float: left; font-size: 90px; line-height: 60px; color: rgba(184,22,38,1); padding-right: 15px; font-family: 'Corben';">I</span><span> walk through the twin-columned portico of the School of Spanish American Studies and down the steps into the garden. Beds of roses flower beneath tall, stately palms, swaying in the breeze. Rafael, a retired concierge, once showed me a photograph of himself when he started working there. He stands, more a boy than a man, alongside one of the palm trees, which rise above him, but not by much. Now they soar into the sky, towering higher than the building itself and the adjoining church. The school’s marble fence posts, a row of nine, used to be linked by thick iron chains, which children swung on before they were chased off. Word has it that those marble fence posts once were pillars lifted from the ruins of Itálica, the city that the Romans built not far away. I turn right as I exit on Alfonso XII, and right again at the corner where Santa Vicenta María begins, named after the founder of an order of nuns. My morning’s work in the Archive of the Indies fruitfully concluded, I’m heading off for lunch. Three narrow streets and the edge of a plaza take me in a near-straight line to the heart of San Lorenzo, the neighborhood in Seville where I spend the winter.</span>
+                <span class="highlight-letter">I</span><span> walk through the twin-columned portico of the School of Spanish American Studies and down the steps into the garden. Beds of roses flower beneath tall, stately palms, swaying in the breeze. Rafael, a retired concierge, once showed me a photograph of himself when he started working there. He stands, more a boy than a man, alongside one of the palm trees, which rise above him, but not by much. Now they soar into the sky, towering higher than the building itself and the adjoining church. The school’s marble fence posts, a row of nine, used to be linked by thick iron chains, which children swung on before they were chased off. Word has it that those marble fence posts once were pillars lifted from the ruins of Itálica, the city that the Romans built not far away. I turn right as I exit on Alfonso XII, and right again at the corner where Santa Vicenta María begins, named after the founder of an order of nuns. My morning’s work in the Archive of the Indies fruitfully concluded, I’m heading off for lunch. Three narrow streets and the edge of a plaza take me in a near-straight line to the heart of San Lorenzo, the neighborhood in Seville where I spend the winter.</span>
             </p>
             <p>Nothing in my Scottish roots -- I was born and raised in Glasgow -- would appear to connect the two
                 cities, separated by language and myriad expressions of culture. Yet the street I grew up on in Govan,
@@ -385,22 +473,31 @@
                 curious look, a fleeting observation or a passing thought. Spaniards know how to live in the mode of a
                 moment, none more so than the people of Seville.
             </p>
+			<a class="btn next-scene">Walk to Eladio's Peluqueria</a>
         </section>
         <section id="2" class="scene " data-scene-id="place1">
             <div class="figure" style="background-image:url(img/manolobarberofseville.jpg);"></div>
             <div class="caption">Manolo of Eladio's Peluqueria</div>
+			<audio controls preload>
+			  <source src="media/seville2.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                On the left as I begin my walk is Eladio’s Peluquería, a salon with a sign advertising its services in
+                <span class="highlight-letter">O</span><span>n the left as I begin my walk is Eladio’s Peluquería, a salon with a sign advertising its services in
                 English as “Heir Dresser.” Manolo, my barber in Seville, scribbles the appointment that I make with him,
                 one Saturday each month for the four I am usually there, on a scrap of paper, recording it as “Operación
                 Menos Feo.” He refers to me as “El Guiri,” the foreigner. “I can’t make you look handsome,” Manolo
-                declares, “but I can make you look less ugly.” No miracles, not even on this holy street.
+                declares, “but I can make you look less ugly.” No miracles, not even on this holy street.<span>
             </p>
+			<a class="btn next-scene">Walk down Calle Sta. Vincent Maria</a>
         </section>
         <section id="3" class="scene " data-scene-id="place2">
             <div class="figure" style="background-image:url(img/pepeerpepe.jpg);"></div>
+			<div class="caption">Pepe of Bar Er Pepe</div>
+			<audio controls preload>
+			  <source src="media/seville3.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                Bar Granado, which I hear being opened at 6am sharp, lies opposite. I greet Oscar whenever I see him
+                <span class="highlight-letter">B</span><span>ar Granado, which I hear being opened at 6am sharp, lies opposite. I greet Oscar whenever I see him
                 closing it down, eighteen hours later. Next in line is Bar Er Pepe, whose eponymous owner calls me
                 “Jordi.” His daughter, Paula, a growing girl, eats more jamón serrano, keenly sliced Iberian ham, than
                 her father sells. I catch the sound of a whistle, and turn to greet the man whose job it is to sharpen
@@ -409,37 +506,51 @@
                 an audience of inquisitive children. Other youngsters play in an alley while their parents and
                 grandparents sit in the sun, discussing family matters or reading the newspapers. Eugenio of Los Niños
                 de Flor has nicknamed me “Steven” -- on account, so he alleges, of my striking resemblance to Steven
-                Seagal, his hero of action-movie fame.
+                Seagal, his hero of action-movie fame.</span>
             </p>
+			<a class="btn next-scene">Walk to Céfiro</a>
         </section>
-        <!--My surname is what Eduardo, Julio, and Luis address me by. Their bookstore, Céfiro, has one display window on Santa Vicenta María and another (surely only in Seville) on a street named La Virgin de los Buenos Libros, “The Virgin of Good Books.” I’ve seen titles of mine featured on the Virgin side of Céfiro, but not on the Santa Vicenta María side. Eugenio, in whose droopy moustache birds could nest, keeps a watchful eye, and would alert me of any such sighting, a stone’s throw from where he waits on tables.-->
         <section id="4" class="scene " data-scene-id="place3">
             <div class="figure " style="background-image:url(img/bookstore.jpg);"></div>
+			<div class="caption">Eduardo, Julio, and Luis of Céfiro</div>
+			<audio controls preload>
+			  <source src="media/seville4.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                My surname is what Eduardo, Julio, and Luis address me by. Their bookstore, Céfiro, has one display
+                <span class="highlight-letter">M</span><span>y surname is what Eduardo, Julio, and Luis address me by. Their bookstore, Céfiro, has one display
                 window on Santa Vicenta María and another (surely only in Seville) on a street named La Virgin de los
                 Buenos Libros, “The Virgin of Good Books.” I’ve seen titles of mine featured on the Virgin side of
                 Céfiro, but not on the Santa Vicenta María side. Eugenio, in whose droopy moustache birds could nest,
                 keeps a watchful eye, and would alert me of any such sighting, a stone’s throw from where he waits on
-                tables.
+                tables.</span>
+			</p>
+			<a class="btn next-scene">Cross the Virgen de los Buenos Libros</a>
         </section>
         <section id="5" class="scene " data-scene-id="place4">
+			<audio controls preload>
+			  <source src="media/seville5.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                Crossing the Virgen de los Buenos Libros I enter the Calle San Juan de Ávila, home of the Colegio
+                <span class="highlight-letter">C</span><span>rossing the Virgen de los Buenos Libros I enter the Calle San Juan de Ávila, home of the Colegio
                 Sagrado Corazón. I notice Mónica at the stand where pupils hover to buy candy and soft drinks. She’s the
                 daughter of Marina, who runs the school residence where I stay. “Hola,” Mónica shouts, and skips up to
                 greet me with two of her friends, the braces on her teeth unable to clamp a glorious smile The classroom
                 windows of Sagrado Corazón are sometimes ajar, allowing me to eavesdrop on a lesson being taught. A
-                teacher asks a question; her charges chant a response in unison.
+                teacher asks a question; her charges chant a response in unison.</span>
             </p>
+			<a class="btn next-scene">View the Police Station</a>
         </section>
         <section id="6" class="scene " data-scene-id="place5">
+			<audio controls preload>
+			  <source src="media/seville6.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                On the right, looming above cars parked with tight precision and guarded by a street hound known as The
+                <span class="highlight-letter">O</span><span>n the right, looming above cars parked with tight precision and guarded by a street hound known as The
                 Angel, is the former police station, its crumbling edifice taking up more than half the block. The state
                 of ruin on the side facing the Plaza de la Concordia has been covered by a massive tarpaulin, printed
                 with lines by Manuel Chaves Nogales (1897-1944) that extol the virtues of a city as beautiful and
-                haunted as Seville:</p>
+                haunted as Seville:</span>
+			</p>
             <blockquote
                 style="color: rgba(184,22,38,1); font-family: 'Corben'; border-left: solid 4px rgba(184,22,38,1);">You
                 contemplate that plaza, that square, that house, and become aware of its essence. You surrender to what
@@ -454,14 +565,19 @@
                 Ávila is hosed down at night, the street cleaners avoid soaking the makeshift refuge. Its cardboard
                 boxes and plastic coverings are dismantled from time to time by municipal authority, but sooner or later
                 the occupants return.</p>
+			<a class="btn next-scene">Walk to Plaza de la Gavidia</a>
         </section>
         <section id="8" class="scene " data-scene-id="place6">
+			<audio controls preload>
+			  <source src="media/seville7.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                The Plaza de la Gavídia is a lively, welcoming square, wide and airy after the tight passage of San Juan
+                <span class="highlight-letter">T</span><span>he Plaza de la Gavídia is a lively, welcoming square, wide and airy after the tight passage of San Juan
                 de Ávila. There Susanna and Tomás run the Café Bar Vintage. For quieter moments, none too many, Susanna
-                always has a novel at hand. I observe her reading Mario Vargas Llosa’s The Bad Girl, and joke with her
+                always has a novel at hand. I observe her reading Mario Vargas Llosa’s <span style="font-style: italic;">The Bad Girl</span>, and joke with her
                 that the book’s racy title surely cannot apply to its reader, a very attractive redhead. “I don’t like
-                his politics one little bit,” I add.</p>
+                his politics one little bit,” I add.</span>
+			</p>
             <p>
                 “Nor do I,” she replies, “but he’s a good writer. That’s why he won the Nobel.”</p>
             <p>
@@ -474,21 +590,32 @@
                 protective sack to bear the weight, along with less stoutly built costaleros, of an Easter float laden
                 with images of Jesus, his Mother, Roman soldiers, or anguished disciples.
             </p>
-            </p>
+			<a class="btn next-scene">Walk to Amarillo Albero and Dos de Mayo</a>
         </section>
         <section id="10" class="scene " data-scene-id="place7">
             <div class="figure" style="background-image:url(img/manuel.jpg);"></div>
+			<div class="caption">Manuel of Amarillo Albero</div>
+			<audio controls preload>
+			  <source src="media/seville8.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                Kitty-corner to one another are the Amarillo Albero and the Dos de Mayo. Thursday in the former tapas
+                <span class="highlight-letter">K</span><span>itty-corner to one another are the Amarillo Albero and the Dos de Mayo. Thursday in the former tapas
                 bar is Antonio’s day off. A fellow waiter of his, Federico, maintains that a day off for Antonio is also
                 a day off for anyone else still working. The owner, Manuel, smiles and nods his agreement. Paco and the
                 staff at Dos de Mayo take turns bolting from its habitual mayhem to have a quick smoke and tipple in a
-                nearby establishment not nearly as packed as their own.
+                nearby establishment not nearly as packed as their own.</span>
             </p>
+			<p>
+				Sevilla Musical marks the beginning of the Calle Cardenal Spínola. Guitars of all sorts are its chief stock in trade, but the store also retails clarinets, trumpets, drums, and scores of other instruments, besides sophisticated sound systems. Music on this corner is always in the air. At Diseños en Piel, Manuel and Naima deal in leather goods, from bags and purses to jackets and coats. A veteran “rockero” from Valencia -- his beloved hand-made guitar, electric a la Hendrix, is the most striking feature about his office -- Manuel is a skilled tailor for whom invisible mending is precisely that, an accomplished but unnoticeable art.                      
+			</p>
+			<a class="btn next-scene">Walk down Calle Cardenal Spínola</a>
         </section>
         <section id="11" class="scene " data-scene-id="place8">
+			<audio controls preload>
+			  <source src="media/seville10.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                An accordionist plays for alms outside the gates of Santa Rosalía, a convent whose patron saint, a
+                <span class="highlight-letter">A</span><span>n accordionist plays for alms outside the gates of Santa Rosalía, a convent whose patron saint, a
                 plaque tells us, was “Abogada para los enfermos,” attendant to the sick and infirm. Confined inside,
                 Capuchin sisters elaborate sweets and pastas for take-away sale, inspired no doubt by the wondrous
                 smells of the bakery across the street. Their artisan ways are matched by the family of Francisco J.
@@ -499,24 +626,44 @@
                 it for you by first thing tomorrow morning. At this juncture in the thoroughfare, past the fishmonger
                 and greengrocer, a Moorish minaret long part of a Christian complex comes into view. The clock at the
                 top is visible until the arrival of spring, when plane trees burst in green splendor and floppy leaves
-                obscure the trace of time.
+                obscure the trace of time.</span>
             </p>
+			<a class="btn next-scene">Walk to Plaza de San Lorenzo</a>
         </section>
         <section id="12" class="scene " data-scene-id="place9">
-            <div class="figure" style="background-image:url(img/sculptorofgranpoder.jpg);"></div>
             <div class="figure" style="background-image:url(img/plazadesanlorenzo2.jpg);"></div>
-            <p>
-                The Plaza de San Lorenzo is the heart of the neighborhood, spiritually and socially. At the Church of El
+			<div class="caption">Church of El Gran Poder</div>
+			<p></p>
+            <div class="figure" style="background-image:url(img/elgranpoder2.jpg);"></div>
+			<div class="caption">Image of Jesus outside the Church</div>
+			<audio controls preload>
+			  <source src="media/seville11.mp3" type="audio/mpeg"/>
+			</audio>
+			<p>
+                <span class="highlight-letter">T</span><span>he Plaza de San Lorenzo is the heart of the neighborhood, spiritually and socially. At the Church of El
                 Gran Poder, entered from a corner, not a central location, the great power in question belongs to one of
-                Seville’s most revered Catholic icons, the almighty Jesus. Faithful by the thousands pay him homage all
+                Seville’s most revered Catholic icons, the almighty Jesus.
+			</p>
+            <div class="figure" style="height: 700px; background-image:url(img/granpoderentry.jpg);"></div>
+			<div class="caption">Gran Poder Entry</div>
+			<p></p>
+            <div class="figure" style="height: 700px; background-image:url(img/elgranpoder1.jpg);"></div>
+			<div class="caption">The altar of El Gran Poder</div>
+            <p>
+                Faithful by the thousands pay him homage all
                 year long, filing past to pray at the image that dominates the altar. Created by Juan de Mesa
                 (1583-1627), whose mastery is commemorated in a bust outside, El Gran Poder presides over a remarkable
-                circular space, the cupola of which looks like a flying saucer. The Stations of the Cross are rendered,
+                circular space, the cupola of which looks like a flying saucer. 
+			</p>
+            <div class="figure" style="height: 700px; background-image:url(img/sculptorofgranpoder.jpg);"></div>
+			<div class="caption">Statue of Juan de Mesa</div>
+			<p>
+				The Stations of the Cross are rendered,
                 counter clockwise from the Saviour’s perspective, in a series of paintings by Antonio Agudo, an artist
                 whose wife, Pilar, happens to be a colleague of mine. Antonio, whose curriculum vitae also includes a
                 portrait of former king Juan Carlos, was honored to receive the commission but especially excited by the
                 challenge of producing work that would satisfy a traditionalist bent yet not compromise his aesthetic
-                principles.
+                principles.</span>
             </p>
             <p>
                 His models, he decided, would be members of his own family. The sequence conforms, as needs must, to
@@ -530,10 +677,14 @@
                 and back again. A multitude throngs the plaza, the verandas of apartments on three of its sides packed
                 with people who toss flowers on to the passing float and sing saetas of devotion.
             </p>
+			<a class="btn next-scene">Get coffee at El Sardinero</a>
         </section>
         <section id="15" class="scene " data-scene-id="place10">
+			<audio controls preload>
+			  <source src="media/seville12.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                Impressive though this spectacle undoubtedly is, I prefer the plaza when it’s less solemn and crowded,
+                <span class="highlight-letter">I</span><span>mpressive though this spectacle undoubtedly is, I prefer the plaza when it’s less solemn and crowded,
                 the locals going about their daily routines. A second coffee at El Sardinero is a perfect opportunity to
                 observe life either on the premises or off, seated at one of the tables set up on the plaza. Javier, a
                 waiter I’ve tracked from bar to bar, implores me to go watch Sevilla F.C. play soccer instead of
@@ -544,29 +695,37 @@
                 practice his English. Juan Antonio, fresh-cut flowers in arms from Flores San Lorenzo, tells me of an
                 upcoming concert I shouldn’t miss. Elías, a professor of anthropology, explains some custom or other
                 that has baffled me, and invites me to eat with him and his wife Lucía at the weekend. “She’s making
-                cocido andaluz. You can’t miss that!” I won’t.
+                cocido andaluz. You can’t miss that!” I won’t.</span>
             </p>
+			<a class="btn next-scene">Pickup laundry and get tapas</a>
         </section>
         <section id="16" class="scene " data-scene-id="place11">
+			<audio controls preload>
+			  <source src="media/seville13.mp3" type="audio/mpeg"/>
+			</audio>
             <p>
-                I stop to pick up my laundry at the Centro de Limpieza González. Inés is hard at it, ironing a red
+                <span class="highlight-letter">I</span><span> stop to pick up my laundry at the Centro de Limpieza González. Inés is hard at it, ironing a red
                 polka-dot flamenco dress for someone to wear at the Feria.
                 “Sonia,” she hollers above a rush of steam. “That’s Jorge just walked in. Bring his bag of clothes out
                 front.” It’s Teresa, though, who appears from the back shop with my laundry. She assures me that, unlike
                 what occurred time and again when Eva worked there, that all my socks can be accounted for, and match
                 up.
-
+				</span>
             </p>
             <div class="figure contain" style="background-image:url(img/eslavasign.jpg);"></div>
+			<div class="caption">Eslava Sign</div>
+			<p></p>
             <div class="figure" style="background-image:url(img/eslavatapasboard.jpg);"></div>
+			<div class="caption">The Eslava Tapas Board</div>
+			<p></p>
             <div class="figure" style="background-image:url(img/annaeslava.jpg);"></div>
-
+			<div class="caption">Ana of Eslava</div>
             <p>
-                The journey ends, as it does often, at Bar Eslava. Boards at each end of the tunnel-like space have the
+               	The journey ends, as it does often, at Bar Eslava. Boards at each end of the tunnel-like space have the
                 day’s tapas chalked, top to bottom, in mouth-watering script, written out daily by the lovely Ana.
                 Sixto, the proud owner, points to a framed award on the gantry, honoring Bar Eslava’s gold-medal finish
                 in a city-wide tapas competition. “But I want you to try something else today, George, and to enjoy it
-                the way my grandmother used to.” He disappears into the kitchen and comes out a few minutes later.
+                the way my grandmother used to.” He disappears into the kitchen and comes out a few minutes later.</span>
             </p>
             <p>
                 Placing a bowl of gazpacho on the counter along with a plate of sardines, Sixto leans toward me, an
@@ -585,6 +744,7 @@
             <p>
                 Time does not stand still, here or anywhere, but the feel of it in Seville is like no place else I know.
             </p>
+			<a class="btn next-scene">Back to the School of Spanish American Studies</a>
         </section>
     </div>
 </div>
@@ -967,6 +1127,7 @@
             {
                 "id": "place0",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "NationalGeographic",
@@ -998,6 +1159,7 @@
             {
                 "id": "place1",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 pov: {
                     heading: 300,
                     pitch: 20
@@ -1069,6 +1231,7 @@
             {
                 "id": "place2",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 text: '',
                 path: [{
                     position: [
@@ -1080,7 +1243,7 @@
                         position: [
                             -5.997639298439026,
                             37.39330742253248
-                        ], text: 'Walking down the '
+                        ]
                     },
                     {
                         position: [
@@ -1096,8 +1259,8 @@
                     },
                     {
                         position: [
-                            -5.997553467750549,
-                            37.39370378308274
+                            -5.997585654258728,
+                            37.39355461537967
                         ], pov: {heading: 90, pitch: 20}
                     },
                     {
@@ -1108,16 +1271,11 @@
                     },
                     {
                         position: [
-                            -5.99753737449646,
-                            37.39376345008083
-                        ]
-                    },
-                    {
-                        position: [
-                            -5.99754273891449,
-                            37.39373787851603
-                        ]
-                    }],
+                            -5.997553467750549,
+                            37.39370378308274
+                        ], pov: {heading: 90, pitch: 20}
+                    }
+				],
                 "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "Imagery",
@@ -1148,6 +1306,7 @@
             {
                 "id": "place3",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 path: [{
                     position: [
                         -5.99753201007843,
@@ -1198,6 +1357,7 @@
             {
                 "id": "place4",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 path: [{
                     position: [
                         -5.997510552406311,
@@ -1230,6 +1390,7 @@
             {
                 "id": "place5",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 path: [{
                     position: [
                         -5.997510552406311,
@@ -1263,6 +1424,7 @@
             {
                 "id": "place6",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 path: [{
                     position: [
                         -5.997505187988281,
@@ -1339,66 +1501,10 @@
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
                 }
             },
-            /*
-             {
-             "id": "place6",
-             "zoom": 11,
-             "bounds": {"nainokanoka": true, "ngorongorocrater": true},
-             "baseLayer": [{
-             "type": "esri-basemap",
-             "url": "Imagery",
-             "options": {
-             "detectRetina": true,
-             "imagerySet": "AerialWithLabels"
-             }
-             }],
-             "layers": [{
-             "idRef": "kenya",
-             "style": {
-             "color": "#fff",
-             "weight": 3,
-             "opacity": 1,
-             "fillOpacity": 0.1
-             }
-             }, {
-             "idRef": "tanzania",
-             "style": {
-             "color": "#fff",
-             "weight": 3,
-             "opacity": 1,
-             "fillOpacity": 0.1
-             }
-             }, {
-             "idRef": "ngorongoroarea",
-             "style": {
-             "fillOpacity": 0.1,
-             "weight": 2,
-             "opacity": 0.9
-             }
-             }, {
-             "idRef": "ngorongorocrater"
-             }, {
-             "idRef": "nainokanoka",
-             "style": {
-             "fillOpacity": 0.1,
-             "icon": {
-             "html": "<div class='place-image'><img src='img/village.svg'/><div style='width: 49px; text-align: center;'><span class='place-text'>Nainokanoka</span></div></div>",
-             "iconSize": [49, 35],
-             "iconAnchor": [24, 18]
-             }, "text": {
-             "text": "Nainokanoka"
-             }
-             }
-             }],
-             "style": {
-             "filter": "sepia(0%)",
-             "opacity": 0.95,
-             "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-             }
-             }, */
             {
                 "id": "place7",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 path: [{
                     position: [
                         -5.997258424758911,
@@ -1455,6 +1561,7 @@
             {
                 "id": "place8",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 path: [{
                     position: [
                         -5.997204780578613,
@@ -1549,47 +1656,10 @@
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
                 }
             },
-            /*
-             [
-             -5.996984839439392,
-             37.396111734928866
-             ],
-             [
-             -5.996963381767273,
-             37.396226803257385
-             ],
-             [
-             -5.9969258308410645,
-             37.39636744208565
-             ],
-             [
-             -5.9968990087509155,
-             37.3965293895004
-             ],
-             [
-             -5.996861457824707,
-             37.39696408872546
-             ],
-             [
-             -5.9967273473739615,
-             37.396938518252604
-             ],
-             [
-             -5.9966039657592765,
-             37.39692147126584
-             ],
-             [
-             -5.996485948562622,
-             37.39689163902973
-             ],
-             [
-             -5.996405482292175,
-             37.396878853782006
-             ]
-             */
             {
                 "id": "place9",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "Imagery",
@@ -1599,24 +1669,6 @@
                     }
                 }],
                 path: [
-                    /*{
-                        position: [
-                            -5.996984839439392,
-                            37.396111734928866
-                        ]
-                    },
-                    {
-                        position: [
-                            -5.996963381767273,
-                            37.396226803257385
-                        ]
-                    },
-                    {
-                        position: [
-                            -5.9969258308410645,
-                            37.39636744208565
-                        ]
-                    },*/
                     {
                         position: [
                             -5.9968990087509155,
@@ -1662,6 +1714,7 @@
             {
                 "id": "place10",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "Imagery",
@@ -1692,6 +1745,7 @@
             {
                 "id": "place11",
                 "zoom": 18,
+				"icon": "img/walking2.svg",
                 "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "Imagery",
@@ -1728,8 +1782,6 @@
           }},
           {
               position: [
-            //-5.996850728988647,
-            //37.39696408872546
 				  -5.996860, 37.396922
           ], pov: {
 			  heading: 270,
@@ -1748,13 +1800,6 @@
             -5.996995568275452,
             37.396998182675716
           ]},
-		  /*
-          {
-              position: [
-            -5.997059941291809,
-            37.39701522964502
-          ]},
-		  */
                     {
                         position: [
                             -5.997006297111511,
@@ -1809,38 +1854,30 @@
     ga('send', 'pageview');
 
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwwps8stS0eDJ4xOcvngtQYuXtPjngwTk">
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCwwps8stS0eDJ4xOcvngtQYuXtPjngwTk">
 </script>
 <script>
     var API_KEY = 'AIzaSyDU6SiRn0YkLzgcOta-JCBBsdI9Z-KLOQA';
 
     $(document).ready(function () {
-        $('#nav li.previous a').on('click', function (e) {
-            e.preventDefault();
-            var $prev = $('#nav').find('.sections li.active').prev();
-
-            if (!$prev.hasClass('previous')) {
-                $prev.find('a').click();
-            }
-        });
-
-        $('#nav li.next a').on('click', function (e) {
-            e.preventDefault();
-            var $next = $('#nav').find('.sections li.active').next();
-
-            if (!$next.hasClass('next')) {
-                $next.find('a').click();
-            }
-        });
-
+		var buttonNav = new Focus.Views.ButtonSceneNavigator({
+			el: $('body'),
+			hideScene: function ($scene) {
+				$scene.velocity('slideUp', {display: 'none'});
+			},
+			showScene: function ($scene) {
+				$scene.velocity('slideUp', {display: 'block'});
+			}
+		});
         var sceneManager = new Focus.Views.SceneManagerView({
             el: $('body'),
             initialScene: {
                 center: [24.9375, 60.170833],
                 zoom: 4
             },
-            navigatorClass: Focus.Views.ScrollingSceneNavigator,
-            mapEngineClass: Focus.Views.StreeviewMapEngine //Focus.Views.OpenLayersMapEngine //LeafletMapEngine
+			preventLinkBind: true,
+            navigator: buttonNav,
+            mapEngineClass: Focus.Views.StreeviewMapEngine
         });
 
         var shareView = new Focus.Views.ShareView();

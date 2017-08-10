@@ -223,7 +223,7 @@ Focus.Views.StreeviewMapEngine = Focus.Views.MapEngine.extend({
         var key = 'AIzaSyCwwps8stS0eDJ4xOcvngtQYuXtPjngwTk';
         var center = this.model.get('center');
         var centerPoint = new L.LatLng(center[1], center[0]);
- 
+
 		var elId = L.Browser.mobile ? 'map' : 'overview-map';
 		this._panId = L.Browser.mobile ? 'overview-map' : 'map';
         this._map = new google.maps.Map(document.getElementById(elId), {
@@ -233,12 +233,13 @@ Focus.Views.StreeviewMapEngine = Focus.Views.MapEngine.extend({
             zoomControl: false,
             mapTypeControl: false,
             scaleControl: false,
-            streetViewControl: true,
+            streetViewControl: !L.Browser.mobile,
             rotateControl: false,
             fullscreenControl: false
         });
-		
-        var panorama = new google.maps.StreetViewPanorama(
+
+        if (!L.Browser.mobile) {
+            this._panorama = new google.maps.StreetViewPanorama(
             document.getElementById(this._panId), {
                 position: centerPoint,
                 pov: {
@@ -251,7 +252,18 @@ Focus.Views.StreeviewMapEngine = Focus.Views.MapEngine.extend({
                 enableCloseButton: false,
 				motionTracking: false
             });
-        this._map.setStreetView(panorama);
+        this._map.setStreetView(this._panorama);
+        }
+        else {
+            var marker = new google.maps.Marker({
+                position: centerPoint,
+                map: this._map,
+                icon: {
+                    url: this.model.get('icon'),
+                    scaledSize: new google.maps.Size(24,44)
+                }
+            });
+        }
     },
     _layerDefToLayer: function (layerDef) {
         var layer = {};
@@ -288,7 +300,7 @@ Focus.Views.StreeviewMapEngine = Focus.Views.MapEngine.extend({
         var latLng = new L.LatLng(coordinates[1], coordinates[0]);
         var path = sceneModel.get('path');
         var me = this;
-		
+
 		if (me._isNavigating) {
 			_.each(me._timeoutIds, function (id) {
 				clearTimeout(id);
@@ -297,22 +309,24 @@ Focus.Views.StreeviewMapEngine = Focus.Views.MapEngine.extend({
 
 		me._isNavigating = false;
 		me._timeoutIds = [];
-		
+
         var setPano = function (ll, pov) {
             return function () {
-                var pano = new google.maps.StreetViewPanorama(
-                    document.getElementById(me._panId), {
+                if (!L.Browser.mobile) {
+                    me._panorama.setPosition(ll);
+                    me._panorama.setPov(pov);
+                }
+                else {
+                    var marker = new google.maps.Marker({
                         position: ll,
-						pov: pov,
-                        linksControl: true,
-                        fullscreenControl: false,
-                        addressControl: false,
-                        enableCloseButton: false,
-						motionTracking: false
+                        map: me._map,
+                        icon: {
+                            url: sceneModel.get('icon'),
+                            scaledSize: new google.maps.Size(24,44)
+                        }
                     });
+                }
 
-				
-                me._map.setStreetView(pano);
 		        me._map.setCenter(ll);
 		        me._map.setZoom(zoom);
 				me._isNavigating = true;
@@ -323,34 +337,16 @@ Focus.Views.StreeviewMapEngine = Focus.Views.MapEngine.extend({
             _.each(path, function (point, index) {
 				var ll = point.position;
 				var pov = point.pov;
-                me._timeoutIds.push(setTimeout(setPano(new L.LatLng(ll[1], ll[0]), pov), index * 2000));
+                me._timeoutIds.push(setTimeout(setPano(new L.LatLng(ll[1], ll[0]), pov), index * 2250));
             });
 
-            me._timeoutIds.push(setTimeout(setPano(latLng, sceneModel.get('pov')), path.length * 2000));
+            me._timeoutIds.push(setTimeout(setPano(latLng, sceneModel.get('pov')), path.length * 2250));
         }
 		else {
 	        setPano(latLng, sceneModel.get('pov'))();
-			
+
 		}
 
-        if (this._lastLocation) {
-            // Get directions from last location to current location and animate it
-            /*
-            var request = {
-                origin: this._lastLocation,
-                destination: latLng,
-                travelMode: 'WALKING'
-            };
-            this._directionsService.route(request, function(result, status) {
-                if (status == 'OK') {
-                    _.each(result.overview_path, function (waypoint) {
-
-                    });
-                }
-            });
-            */
-        }
-        
         this._lastLocation = latLng;
 
     }
@@ -1476,7 +1472,8 @@ Focus.Views.SceneNavigator = Backbone.View.extend({
         this._sceneIndex = 0;
         this._sceneCount = this._$scenes.length;
 
-        $('#nav ul.sections').empty();
+        var $sections = $('#nav ul.sections');
+        $sections.empty();
         this._$scenes.each(function (index) {
            var $this = $(this);
 
@@ -1492,10 +1489,10 @@ Focus.Views.SceneNavigator = Backbone.View.extend({
                 container: 'body'
             });
 
-            $('#nav ul.sections').append($li);
+            $sections.append($li);
         });
 
-
+        this.options = options;
     },
     _sceneChange: function (sceneIndex) {
 
@@ -1508,8 +1505,8 @@ Focus.Views.SceneNavigator = Backbone.View.extend({
 
 Focus.Views.NavigationView = Backbone.View.extend({
     events: {
-        'click ul>li.previous>a': 'previous',
-        'click ul>li.next>a': 'next'
+        'click .previous a': 'previous',
+        'click .next a': 'next'
     },
     previous: function (e) {
         e.preventDefault();
@@ -1625,30 +1622,49 @@ Focus.Views.ScrollingSceneNavigator = Focus.Views.SceneNavigator.extend({
 
 Focus.Views.ButtonSceneNavigator = Focus.Views.SceneNavigator.extend({
     events: {
-        'click .previous': 'previous',
-        'click .next': 'next'
+        'click li.previous a': 'previous',
+        'click li.next a': 'next',
+        'click a.next-scene': 'next'
     },
     initialize: function (options) {
         Focus.Views.SceneNavigator.prototype.initialize.call(this, options);
         this._$scenes.hide();
         this._sceneChange(0);
     },
+    _hideScene: function ($scene) {
+        this.options.hideScene ? this.options.hideScene($scene) : $scene.hide();
+    },
+    _showScene: function ($scene) {
+        this.options.showScene ? this.options.showScene($scene) : $scene.show();
+    },
     _sceneChange: function (sceneIndex) {
         if (this._lastScene) {
-            this._lastScene.hide();
+            if (sceneIndex === 0) {
+                this._lastScene.hide();
+            }
+            else {
+                this._hideScene(this._lastScene);
+            }
         }
 
         this._lastScene = $(this._$scenes[sceneIndex]);
-        this._lastScene.show();
+        if (sceneIndex === 0) {
+            this._lastScene.show();
+        }
+        else {
+            this._showScene(this._lastScene);
+        }
     },
     previous: function (e) {
         e.preventDefault();
         this._sceneIndex -= 1;
+        this._sceneIndex = Math.max(0, this._sceneIndex);
         this.changeScene(this._sceneIndex);
     },
     next: function (e) {
         e.preventDefault();
         this._sceneIndex += 1;
+        this._sceneIndex = this._sceneIndex % this._$scenes.size();
         this.changeScene(this._sceneIndex);
     }
 });
@@ -1778,6 +1794,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
 
         this.loadScenes();
 
+        if (!options.preventLinkBind) {
         $(document).ready(function () {
             var $mainNav = $('#main-nav');
             // bind click event to all internal page anchors
@@ -1796,7 +1813,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                 });
             });
         });
-
+        }
         var me = this;
         this.$el.find('a.location').each(function () {
             var textClick = function () {
@@ -1920,11 +1937,14 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
     },
     _scenesLoaded: function (scenes) {
         this._scenes.add(scenes);
+
+        if (this._sceneNavigator || this._navigatorClass) {
         this._sceneNavigator = this._sceneNavigator || new this._navigatorClass({
             el: this.$el.find('.scenes')
         });
         this.listenTo(this._sceneNavigator, 'sceneChanged', this.changeScene);
         this.listenTo(this._sceneNavigator, 'progressChanged', this.changeProgress);
+        }
 
         this._mapView0.setBaseLayers(_.map(scenes, function (scene) {
             return scene.baseLayer;

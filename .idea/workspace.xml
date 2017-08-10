@@ -5,56 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db415e42-930a-421f-9360-1a36d1e5ce72" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/photoessays/seville/img/churchofgranpoder.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/agra.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/amazonriver.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/caspiansea.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/chiefjosephdam.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/coloradoriver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/congoriver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/croppriver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/danuberiver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/deadsea.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/eriecanal.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/gangesriver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/glencanyondam.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/grandcanal.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/grandcouleedam.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/greatsaltlake.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/hooverdam.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/kirkwoodaquifer.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/kolkata.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/lakebaikal.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/lakesuperior.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/laketanganyika.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/lakevan.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/lakevictoria.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/mahometaquifer.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/mawsynram.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/mississippiriver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/mountwaialeale.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/nigerriver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/nileriver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/ogallala.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/ogallalaaquifer.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/patna.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/rhineriver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/riogrande.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/sacramentoriver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/saginawaquifer.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/saimaacanal.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/snakeriver.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/suezcanal.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/tutendo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/varanasi.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/img/water.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/publications/quizzes/four/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/guidelines.html" afterPath="$PROJECT_DIR$/src/guidelines.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/combined.js" afterPath="$PROJECT_DIR$/src/js/combined.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mapview.js" afterPath="$PROJECT_DIR$/src/js/mapview.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/publications.js" afterPath="$PROJECT_DIR$/src/js/publications.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/publications/photoessays/seville/index.html" afterPath="$PROJECT_DIR$/src/publications/photoessays/seville/index.html" />
     </list>
     <ignored path="focus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,16 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="jewelry.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/kenya/img/jewelry.svg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="1939" selection-start-line="4" selection-start-column="1939" selection-end-line="4" selection-end-column="1939" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/publications/photoessays/finland/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/publications/photoessays/seville/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.5710723">
-              <caret line="1695" column="22" selection-start-line="1695" selection-start-column="22" selection-end-line="1695" selection-end-column="22" />
+            <state vertical-scroll-proportion="1.7307693">
+              <caret line="1799" column="22" selection-start-line="1799" selection-start-column="22" selection-end-line="1799" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -128,21 +73,33 @@
                 <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#section#2;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#blockquote#0;n#section#5;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#section#7;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#section#9;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#section#9;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plazadesanlorenzo3.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/seville/img/plazadesanlorenzo3.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="granpoderentry.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/seville/img/granpoderentry.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="elgranpoder1.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/seville/img/elgranpoder1.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -150,15 +107,13 @@
         <entry file="file://$PROJECT_DIR$/src/js/mapview.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="321" column="9" selection-start-line="321" selection-start-column="9" selection-end-line="321" selection-end-column="9" />
+              <caret line="328" column="9" selection-start-line="328" selection-start-column="9" selection-end-line="328" selection-end-column="9" />
               <folding>
-                <marker date="1501460412000" expanded="true" signature="0:49" placeholder="/** Created by scottfairgrieve on 3/26/16. ...*/" />
-                <marker date="1501460412000" expanded="true" signature="5914:6087" placeholder="{...}" />
-                <marker date="1501460412000" expanded="true" signature="9501:10131" placeholder="{...}" />
-                <marker date="1501460412000" expanded="true" signature="11132:11169" placeholder="..." />
-                <marker date="1501460412000" expanded="true" signature="11249:11263" placeholder="..." />
-                <marker date="1501460412000" expanded="true" signature="50359:50379" placeholder="..." />
-                <marker date="1501460412000" expanded="true" signature="74129:74176" placeholder="..." />
+                <marker date="1502151185000" expanded="true" signature="0:49" placeholder="/** Created by scottfairgrieve on 3/26/16. ...*/" />
+                <marker date="1502151185000" expanded="true" signature="5914:6086" placeholder="{...}" />
+                <marker date="1502151185000" expanded="true" signature="67250:67473" placeholder="{...}" />
+                <marker date="1502151185000" expanded="true" signature="67397:67465" placeholder="{&quot;sceneIndex&quot;: 0...}" />
+                <marker date="1502151185000" expanded="true" signature="75189:75236" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -185,39 +140,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-31.041666">
               <caret line="1910" column="32" selection-start-line="1910" selection-start-column="32" selection-end-line="1910" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/oaxaca/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="411" column="0" selection-start-line="411" selection-start-column="0" selection-end-line="412" selection-end-column="74" />
-              <folding>
-                <marker date="1490316509000" expanded="true" signature="67511:67549" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="68793:68830" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="70093:70132" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="71442:71479" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="72760:72796" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="74077:74115" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="75411:75448" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="77272:77310" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="78595:78632" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="79904:79941" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="81230:81267" placeholder="..." />
-                <marker date="1490316509000" expanded="true" signature="93349:93387" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/publications/photoessays/bolivia/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="135" column="149" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="149" />
               <folding />
             </state>
           </provider>
@@ -911,14 +833,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="977" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24970202" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22380953" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22380953" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -951,35 +873,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="270" column="119" selection-start-line="270" selection-start-column="114" selection-end-line="270" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/publications/articles/norway/img/figure1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="123" selection-start-line="19" selection-start-column="123" selection-end-line="19" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/articles/video-header/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1354,23 +1247,21 @@
     <entry file="file://$PROJECT_DIR$/src/js/mapview.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="321" column="9" selection-start-line="321" selection-start-column="9" selection-end-line="321" selection-end-column="9" />
+          <caret line="328" column="9" selection-start-line="328" selection-start-column="9" selection-end-line="328" selection-end-column="9" />
           <folding>
-            <marker date="1501460412000" expanded="true" signature="0:49" placeholder="/** Created by scottfairgrieve on 3/26/16. ...*/" />
-            <marker date="1501460412000" expanded="true" signature="5914:6087" placeholder="{...}" />
-            <marker date="1501460412000" expanded="true" signature="9501:10131" placeholder="{...}" />
-            <marker date="1501460412000" expanded="true" signature="11132:11169" placeholder="..." />
-            <marker date="1501460412000" expanded="true" signature="11249:11263" placeholder="..." />
-            <marker date="1501460412000" expanded="true" signature="50359:50379" placeholder="..." />
-            <marker date="1501460412000" expanded="true" signature="74129:74176" placeholder="..." />
+            <marker date="1502151185000" expanded="true" signature="0:49" placeholder="/** Created by scottfairgrieve on 3/26/16. ...*/" />
+            <marker date="1502151185000" expanded="true" signature="5914:6086" placeholder="{...}" />
+            <marker date="1502151185000" expanded="true" signature="67250:67473" placeholder="{...}" />
+            <marker date="1502151185000" expanded="true" signature="67397:67465" placeholder="{&quot;sceneIndex&quot;: 0...}" />
+            <marker date="1502151185000" expanded="true" signature="75189:75236" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/publications/photoessays/seville/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5710723">
-          <caret line="1695" column="22" selection-start-line="1695" selection-start-column="22" selection-end-line="1695" selection-end-column="22" />
+        <state vertical-scroll-proportion="1.7307693">
+          <caret line="1799" column="22" selection-start-line="1799" selection-start-column="22" selection-end-line="1799" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1379,21 +1270,32 @@
             <element signature="n#style#0;n#path#2;n#svg#0;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#section#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#1;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#2;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#3;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#blockquote#0;n#section#5;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#section#7;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#section#9;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#section#9;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#section#12;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/seville/img/elgranpoder2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/seville/img/granpoderentry.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/seville/img/elgranpoder1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/publications/photoessays/seville/img/plazadesanlorenzo3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

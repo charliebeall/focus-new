@@ -2,7 +2,7 @@ var Focus = Focus || {};
 Focus.Volumes = [
     {
         number: 60,
-        publications: [{
+        publications: [/*{
             type: 'Photo Essay',
             title: 'A Stroll through Seville',
             author: 'George Lovell',
@@ -11,7 +11,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/seville/img/escuelapalms.jpg',
             url: 'publications/photoessays/seville/index.html',
             location: []
-        }, {
+        },*/ {
             type: 'Geo Quiz',
             title: 'Quiz Four:  Water',
             author: 'Wesley Reisser',
