@@ -1778,6 +1778,61 @@ Focus.Views.ShareView = Backbone.View.extend({
     }
 });
 
+Focus.Views.AudioView = Backbone.View.extend({
+    events: {
+        'click .play-button': 'play'
+    },
+    initialize: function (options) {
+        var $wavesurfer = this.$el.find('.wavesurfer');
+        $wavesurfer.empty();
+        this._wavesurfer = WaveSurfer.create(_.extend({
+            container: $wavesurfer[0]
+        }, {
+            height: this.$el.height()
+        }, options.createOptions));
+        this._isPlaying = false;
+        this.setButton();
+        this._wavesurfer.load(options.audio);
+
+        var me = this;
+        var $playButton = me.$el.find('.play-button');
+        $playButton.attr('disabled', true);
+
+        this._wavesurfer.on('ready', function (e) {
+            $playButton.attr('disabled', false);
+        });
+
+
+    },
+    stop: function () {
+        this._wavesurfer.stop();
+        this._isPlaying = false;
+        this.setButton();
+    },
+    clear: function () {
+        this._wavesurfer.empty();
+    },
+    setButton: function () {
+        var removeClass, addClass;
+        if (this._isPlaying) {
+            removeClass = 'play';
+            addClass = 'pause';
+        }
+        else {
+            removeClass = 'pause';
+            addClass = 'play';
+        }
+
+        this.$el.find('span.fa').removeClass('fa-' + removeClass).addClass('fa-' + addClass);
+    },
+    play: function (e) {
+        e.preventDefault();
+        this._isPlaying ? this._wavesurfer.pause() : this._wavesurfer.play();
+        this._isPlaying = !this._isPlaying;
+        this.setButton();
+    }
+});
+
 Focus.Views.SceneManagerView = Backbone.View.extend({
     initialize: function (options) {
         this._scenes = new Focus.Collections.SceneCollection();

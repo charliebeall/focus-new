@@ -26,13 +26,9 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Place favicon.ico in the root directory -->
-    <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
     <link
-        href="//fonts.googleapis.com/css?family=Chela+One|Hammersmith+One|Montserrat:900|Righteous|Corben|EB+Garamond"
+        href="//fonts.googleapis.com/css?family=Corben|EB+Garamond"
         rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Domine" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
     <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
     <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
@@ -365,6 +361,21 @@
 		audio {
 			width: 100%;
 		}
+		
+		.audio-wavesurfer {
+			margin-top: 30px;
+		}
+		
+		.play-button {
+			vertical-align: middle;
+		}
+		.wavesurfer {
+			vertical-align: middle;
+			height: 60px;
+			width: calc(100% - 100px);
+			margin-left: 30px;
+			display: inline-block;
+		}
     </style>
 </head>
 <body>
@@ -458,9 +469,9 @@
                 </div>
                 <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2017.60.3p</div>
             </div>
-			<audio controls preload>
-			  <source src="media/seville1.mp3" type="audio/mpeg"/>
-			</audio>
+				<div class="audio-wavesurfer first" src="media/seville1a.mp3">
+					<a class="btn play-button" data-toggle="tooltip" title="Click to play narration by W. George Lovell"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+				</div>
             <p>
                 <span class="highlight-letter">I</span><span> walk through the twin-columned portico of the School of Spanish American Studies and down the steps into the garden. Beds of roses flower beneath tall, stately palms, swaying in the breeze. Rafael, a retired concierge, once showed me a photograph of himself when he started working there. He stands, more a boy than a man, alongside one of the palm trees, which rise above him, but not by much. Now they soar into the sky, towering higher than the building itself and the adjoining church. The school’s marble fence posts, a row of nine, used to be linked by thick iron chains, which children swung on before they were chased off. Word has it that those marble fence posts once were pillars lifted from the ruins of Itálica, the city that the Romans built not far away. I turn right as I exit on Alfonso XII, and right again at the corner where Santa Vicenta María begins, named after the founder of an order of nuns. My morning’s work in the Archive of the Indies fruitfully concluded, I’m heading off for lunch. Three narrow streets and the edge of a plaza take me in a near-straight line to the heart of San Lorenzo, the neighborhood in Seville where I spend the winter.</span>
             </p>
@@ -478,9 +489,9 @@
         <section id="2" class="scene " data-scene-id="place1">
             <div class="figure" style="background-image:url(img/manolobarberofseville.jpg);"></div>
             <div class="caption">Manolo of Eladio's Peluqueria</div>
-			<audio controls preload>
-			  <source src="media/seville2.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville2a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
             <p>
                 <span class="highlight-letter">O</span><span>n the left as I begin my walk is Eladio’s Peluquería, a salon with a sign advertising its services in
                 English as “Heir Dresser.” Manolo, my barber in Seville, scribbles the appointment that I make with him,
@@ -493,9 +504,9 @@
         <section id="3" class="scene " data-scene-id="place2">
             <div class="figure" style="background-image:url(img/pepeerpepe.jpg);"></div>
 			<div class="caption">Pepe of Bar Er Pepe</div>
-			<audio controls preload>
-			  <source src="media/seville3.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville3a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
             <p>
                 <span class="highlight-letter">B</span><span>ar Granado, which I hear being opened at 6am sharp, lies opposite. I greet Oscar whenever I see him
                 closing it down, eighteen hours later. Next in line is Bar Er Pepe, whose eponymous owner calls me
@@ -513,9 +524,9 @@
         <section id="4" class="scene " data-scene-id="place3">
             <div class="figure " style="background-image:url(img/bookstore.jpg);"></div>
 			<div class="caption">Eduardo, Julio, and Luis of Céfiro</div>
-			<audio controls preload>
-			  <source src="media/seville4.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville4a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
             <p>
                 <span class="highlight-letter">M</span><span>y surname is what Eduardo, Julio, and Luis address me by. Their bookstore, Céfiro, has one display
                 window on Santa Vicenta María and another (surely only in Seville) on a street named La Virgin de los
@@ -527,9 +538,9 @@
 			<a class="btn next-scene">Cross the Virgen de los Buenos Libros</a>
         </section>
         <section id="5" class="scene " data-scene-id="place4">
-			<audio controls preload>
-			  <source src="media/seville5.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville5a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
             <p>
                 <span class="highlight-letter">C</span><span>rossing the Virgen de los Buenos Libros I enter the Calle San Juan de Ávila, home of the Colegio
                 Sagrado Corazón. I notice Mónica at the stand where pupils hover to buy candy and soft drinks. She’s the
@@ -541,9 +552,9 @@
 			<a class="btn next-scene">View the Police Station</a>
         </section>
         <section id="6" class="scene " data-scene-id="place5">
-			<audio controls preload>
-			  <source src="media/seville6.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville6a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
             <p>
                 <span class="highlight-letter">O</span><span>n the right, looming above cars parked with tight precision and guarded by a street hound known as The
                 Angel, is the former police station, its crumbling edifice taking up more than half the block. The state
@@ -568,9 +579,9 @@
 			<a class="btn next-scene">Walk to Plaza de la Gavidia</a>
         </section>
         <section id="8" class="scene " data-scene-id="place6">
-			<audio controls preload>
-			  <source src="media/seville7.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville7a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
             <p>
                 <span class="highlight-letter">T</span><span>he Plaza de la Gavídia is a lively, welcoming square, wide and airy after the tight passage of San Juan
                 de Ávila. There Susanna and Tomás run the Café Bar Vintage. For quieter moments, none too many, Susanna
@@ -595,9 +606,9 @@
         <section id="10" class="scene " data-scene-id="place7">
             <div class="figure" style="background-image:url(img/manuel.jpg);"></div>
 			<div class="caption">Manuel of Amarillo Albero</div>
-			<audio controls preload>
-			  <source src="media/seville8.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville8a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
             <p>
                 <span class="highlight-letter">K</span><span>itty-corner to one another are the Amarillo Albero and the Dos de Mayo. Thursday in the former tapas
                 bar is Antonio’s day off. A fellow waiter of his, Federico, maintains that a day off for Antonio is also
@@ -611,9 +622,9 @@
 			<a class="btn next-scene">Walk down Calle Cardenal Spínola</a>
         </section>
         <section id="11" class="scene " data-scene-id="place8">
-			<audio controls preload>
-			  <source src="media/seville10.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville9a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
             <p>
                 <span class="highlight-letter">A</span><span>n accordionist plays for alms outside the gates of Santa Rosalía, a convent whose patron saint, a
                 plaque tells us, was “Abogada para los enfermos,” attendant to the sick and infirm. Confined inside,
@@ -636,9 +647,9 @@
 			<p></p>
             <div class="figure" style="background-image:url(img/elgranpoder2.jpg);"></div>
 			<div class="caption">Image of Jesus outside the Church</div>
-			<audio controls preload>
-			  <source src="media/seville11.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville10a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
 			<p>
                 <span class="highlight-letter">T</span><span>he Plaza de San Lorenzo is the heart of the neighborhood, spiritually and socially. At the Church of El
                 Gran Poder, entered from a corner, not a central location, the great power in question belongs to one of
@@ -680,9 +691,9 @@
 			<a class="btn next-scene">Get coffee at El Sardinero</a>
         </section>
         <section id="15" class="scene " data-scene-id="place10">
-			<audio controls preload>
-			  <source src="media/seville12.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville11a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
             <p>
                 <span class="highlight-letter">I</span><span>mpressive though this spectacle undoubtedly is, I prefer the plaza when it’s less solemn and crowded,
                 the locals going about their daily routines. A second coffee at El Sardinero is a perfect opportunity to
@@ -700,9 +711,9 @@
 			<a class="btn next-scene">Pickup laundry and get tapas</a>
         </section>
         <section id="16" class="scene " data-scene-id="place11">
-			<audio controls preload>
-			  <source src="media/seville13.mp3" type="audio/mpeg"/>
-			</audio>
+			<div class="audio-wavesurfer" src="media/seville12a.mp3">
+				<a class="btn play-button"><span class="fa fa-play"></span></a><div class="wavesurfer"></div>
+			</div>
             <p>
                 <span class="highlight-letter">I</span><span> stop to pick up my laundry at the Centro de Limpieza González. Inés is hard at it, ironing a red
                 polka-dot flamenco dress for someone to wear at the Feria.
@@ -1882,6 +1893,40 @@
 
         var shareView = new Focus.Views.ShareView();
         shareView.render();
+		
+		var audioViews = {};
+		var lastAudio;
+		var renderAudio = function (sceneId) {
+			return function () {
+				if (lastAudio) {
+					lastAudio.stop();
+					lastAudio.clear();
+					lastAudio = null;
+				}
+				
+				var $scene = $('section[data-scene-id=' + sceneId + ']').find('.audio-wavesurfer');
+				var audioView = new Focus.Views.AudioView({
+					el: $scene,
+					createOptions: {
+						backend: 'MediaElement'
+					},
+					audio: $scene.attr('src')
+				});
+				audioView.render();
+				lastAudio = audioView;
+			};
+		};
+		
+		renderAudio('place0')();
+		buttonNav.on('sceneChanged', function (e) {
+			setTimeout(renderAudio(e.sceneId), 1000);
+			$('.audio-wavesurfer.first .play-button').tooltip('destroy');
+		});
+		
+		$('.audio-wavesurfer.first .play-button').tooltip({
+			container: 'body',
+			placement: 'right'
+		}).tooltip('show');
 
     });
 

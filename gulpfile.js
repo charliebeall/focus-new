@@ -200,6 +200,7 @@ gulp.task('concat', function () {
             'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.js',
             'node_modules/leaflet-bing-layer/leaflet-bing-layer.min.js',
             'node_modules/clipboard/dist/clipboard.js',
+            'node_modules/wavesurfer.js/dist/wavesurfer.min.js',
             'src/js/vendor/*.js',
             'src/js/publications.js',
             'src/js/menu.js',
