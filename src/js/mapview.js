@@ -659,7 +659,11 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                     layer.on('click', function (e) {
                         me.trigger('layerClick', layerDef.id);
                     });
-
+					
+					if (record.style && layer.setStyle) {
+						layer.setStyle(record.style);
+					}
+					
                     if (layerDef.style && layerDef.style.animate) {
                         layer.eachLayer(function (subLayer) {
                             var updater = function (latlngs) {
@@ -719,6 +723,9 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
                             marker = new L.Marker(location, markerOptions);
                         }
+						else if (options.iconFunction) {
+							marker = options.iconFunction(location, options, record);
+						}
                         else {
                             marker = new L.RegularPolygonMarker(location, options);
                         }
