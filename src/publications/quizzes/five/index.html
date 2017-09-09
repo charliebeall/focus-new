@@ -927,7 +927,7 @@
             sceneId: '1a'
         }, {
             id: 'B',
-            text: 'Hartsfield-Jackson International Airport, Atlanta',
+            text: 'Hartsfield-Jackson International Airport',
             photo: 'img/Q1/HJI_airport.jpg',
             sceneId: '1b'
         }, {
@@ -949,13 +949,13 @@
     }, {
         choices: [{
             id: 'A',
-            text: 'Ted Stevens Anchorage International Airport ',
+            text: 'Ted Stevens International Airport ',
             photo: 'img/Q2/TedStevensI_airport.jpg',
             sceneId: '2a'
         }, {
             id: 'B',
             text: 'Miami International Airport',
-            photo: 'iimg/Q2/MiamiI_airport.jpg',
+            photo: 'img/Q2/MiamiI_airport.jpg',
             sceneId: '2b'
         }, {
             id: 'C',
@@ -977,15 +977,19 @@
         choices: [{
             id: 'A',
             text: 'Time-Space Convergence',
+            photo: 'img/Q3/time_space.jpg',
         }, {
             id: 'B',
             text: 'Law of Diminishing Time',
+            photo: 'img/Q3/curve_line.jpg',
         }, {
             id: 'C',
             text: 'Progressive Mobility Theory',
+            photo: 'img/Q3/progressive.png',
         }, {
             id: 'D',
             text: 'Converged Mobility',
+            photo: 'img/Q3/converge.jpg',
         }],
         prompt: 'Geographer David Harvey coined the term for a theory that as time and technology progress, distances shorten in terms of how long it takes to travel. This has led to the world feeling “smaller.” What is this theory called?',
         rightAnswer: {
@@ -1185,8 +1189,8 @@
         var navigator = new Focus.Views.QuizSceneNavigator({
             el: $('.scenes'),
             model: new Focus.Models.ModalModel({
-                title: 'Welcome to the first Geo Quiz!',
-                content: "Welcome to the Focus on Geography quarterly GeoQuiz! This time our theme is explorers, in honor of the American Geographical Society’s longtime efforts in exploration around the world, as evidenced by the Explorer’s Globe that the AGS holds with over 100 famous explorers signatures.",
+                title: 'Welcome to Geo Quiz!',
+                content: "Welcome to the Focus on Geography quarterly GeoQuiz! This edition of our Geoquiz focuses on transportation.  We hope you can join us for the upcoming AGS Symposium, Geography 2050: The Future of Mobility that will take place in New York City, November 16-17, 2017",
                 buttonText: 'Start Quiz'
             }),
             collection: questionCollection
