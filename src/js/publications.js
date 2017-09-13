@@ -3,6 +3,15 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+            type: 'Feature Article',
+            title: 'Shrinking Space and Expanding Population: Socioeconomic Impacts of Majuli\’s Changing Geography',
+            author: 'Avijit Sahay, Nikhil Roy',
+            description: '',
+            date: '09/07/17',
+            thumbnail: 'publications/articles/majuli/img/fig1.jpg',
+            url: 'publications/articles/majuli/index.html',
+            location: []
+        }, {
             type: 'Photo Essay',
             title: 'A Stroll through Seville',
             author: 'W. George Lovell',
