@@ -126,7 +126,7 @@
                     "data": {
                         "type": "Feature",
                         "geometry": {
-                            "coordinates": [40.0725000, 116.5975000],
+                            "coordinates": [116.5975, 40.0725], //40.0725000, 116.5975000
                             "type": "Point"
                         },
                         "properties": {
@@ -145,7 +145,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [33.6366667, -84.4280556] 
+                            "coordinates": [-84.4280556, 33.6366667], 
                         },
                         "properties": {
                             "name": "Hartsfield-Jackson International Airport, Atlanta",
@@ -163,7 +163,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [25.2527778, 55.3644444] 
+                            "coordinates": [55.3644444, 25.2527778], 
                         },
                         "properties": {
                             "name": "Dubai International Airport",
@@ -181,7 +181,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [33.9425000, -118.4080556] 
+                            "coordinates": [ -118.4080556, 33.9425000], 
                         },
                         "properties": {
                             "name": "Los Angeles International Airport",
@@ -190,7 +190,7 @@
                     }
                 }],
                 //"center": [-60, 48],
-                "zoom": 4,
+                // "zoom": 1,
                 "style": {
                     "filter": "sepia(80%) brightness(80%)",
                     "opacity": 0.7,
@@ -217,7 +217,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [61.1741667, -149.9983333] 
+                            "coordinates": [ -149.9983333, 61.1741667], 
                         },
                         "properties": {
                             "name": "Ted Stevens Anchorage International Airport",
@@ -235,7 +235,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [25.7933333, -80.2905556] 
+                            "coordinates": [ -80.2905556, 25.7933333], 
                         },
                         "properties": {
                             "name": "Miami International Airport",
@@ -253,7 +253,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [38.1741667, -85.7363889] 
+                            "coordinates": [ -85.7363889, 38.1741667], 
                         },
                         "properties": {
                             "name": "Louisville International Airport",
@@ -271,10 +271,102 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [35.0425000, -89.9766667] 
+                            "coordinates": [ -89.9766667, 35.0425000], 
                         },
                         "properties": {
                             "name": "Memphis International Airport",
+                            "style": {}
+                        }
+                    }
+                }],
+                //"center": [-60, 48],
+                "zoom": 3,
+                "style": {
+                    "filter": "sepia(80%) brightness(80%)",
+                    "opacity": 0.7,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
+                }
+            // 
+            },{
+                "id": "place3",
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+                    /*
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
+                    */
+                },
+                "layers": [{
+ 
+                    "id": "3a",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            // "coordinates": [ -99.1333333, 19.4333333],
+                            "coordinates": [19.4333333, -99.1333333], 
+                        },
+                        "properties": {
+                            "name": "Aztecs",
+                            "style": {}
+                        }
+                    }
+                }, {
+                    "id": "3b",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [ -107.9700000, 36.06000000], 
+                        },
+                        "properties": {
+                            "name": "Anasazi",
+                            "style": {}
+                        }
+                    }
+                }, {
+                    "id": "3c",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-72.5455556, -13.1633333], 
+                        },
+                        "properties": {
+                            "name": "Inca",
+                            "style": {}
+                        }
+                    }
+                }, {
+                    "id": "3d",
+                    "type": "geojson",
+                    "style": {
+                        "weight": 10,
+                        "opacity": 0.3
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-75.1333333, -14.716666], 
+                        },
+                        "properties": {
+                            "name": "Nazca",
                             "style": {}
                         }
                     }
@@ -286,8 +378,8 @@
                     "opacity": 0.7,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
                 }
-            },
-            {
+
+            },{
                 "id": "place4",
                 "baseLayer": {
                     "type": "tile",
@@ -308,7 +400,8 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [19.4333333, -99.1333333] 
+                            "coordinates": [ -99.1333333, 19.4333333],
+                            // "coordinates": [19.4333333, -99.1333333], 
                         },
                         "properties": {
                             "name": "Aztecs",
@@ -326,7 +419,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [36.06000000, -107.9700000] 
+                            "coordinates": [ -107.9700000, 36.06000000], 
                         },
                         "properties": {
                             "name": "Anasazi",
@@ -344,7 +437,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [-13.1633333, -72.5455556] 
+                            "coordinates": [-72.5455556, -13.1633333], 
                         },
                         "properties": {
                             "name": "Inca",
@@ -362,7 +455,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [-14.716666, -75.1333333] 
+                            "coordinates": [-75.1333333, -14.716666], 
                         },
                         "properties": {
                             "name": "Nazca",
@@ -371,7 +464,7 @@
                     }
                 }],
                 //"center": [-60, 48],
-                "zoom": 4,
+                "zoom": 2,
                 "style": {
                     "filter": "sepia(80%) brightness(80%)",
                     "opacity": 0.7,
@@ -399,7 +492,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [40.9222222, -98.3580556] 
+                            "coordinates": [ -98.3580556, 40.9222222], 
                         },
                         "properties": {
                             "name": "Grand Island",
@@ -417,7 +510,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [41.6177778, -112.5516667] 
+                            "coordinates": [ -112.5516667, 41.6177778], 
                         },
                         "properties": {
                             "name": "Promontory Summit",
@@ -435,7 +528,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [41.5141667, -109.4650000] 
+                            "coordinates": [ -109.4650000, 41.5141667], 
                         },
                         "properties": {
                             "name": "Green River",
@@ -453,7 +546,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [39.0058100, -114.2196900] 
+                            "coordinates": [ -114.2196900, 39.0058100], 
                         },
                         "properties": {
                             "name": "Baker",
@@ -489,7 +582,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [40.3833333, -3.7166667] 
+                            "coordinates": [ -3.7166667, 40.3833333], 
                         },
                         "properties": {
                             "name": "Spain",
@@ -507,7 +600,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [48.8566667, 2.3508333] 
+                            "coordinates": [ 2.3508333, 48.8566667], 
                         },
                         "properties": {
                             "name": "France",
@@ -525,7 +618,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [41.9000000, 12.5000000] 
+                            "coordinates": [ 12.5000000, 41.9000000], 
                         },
                         "properties": {
                             "name": "Italy",
@@ -543,7 +636,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [52.5072222, 13.1458333] 
+                            "coordinates": [ 13.1458333, 52.5072222], 
                         },
                         "properties": {
                             "name": "Germany",
@@ -580,7 +673,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [39.0560840, 117.0549490] 
+                            "coordinates": [ 117.0549490, 39.0560840], 
                         },
                         "properties": {
                             "name": "Tianjin Grand Brdige",
@@ -598,7 +691,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [29.9977778, -90.1775000] 
+                            "coordinates": [ -90.1775000, 29.9977778], 
                         },
                         "properties": {
                             "name": "Lake Ponchartrain Causeway",
@@ -616,7 +709,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [31.3000000, 120.6000000] 
+                            "coordinates": [ 120.6000000, 31.3000000], 
                         },
                         "properties": {
                             "name": "Danyang-Kunshan Grand Bridge",
@@ -634,7 +727,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [34.1666667, 133.3333333] 
+                            "coordinates": [ 133.3333333, 34.1666667], 
                         },
                         "properties": {
                             "name": "Great Seto Bridge",
@@ -671,7 +764,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [26.566667, 56.25] 
+                            "coordinates": [ 56.25, 26.566667], 
                         },
                         "properties": {
                             "name": "Straight of Hormuz",
@@ -689,7 +782,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [12.66, 43.42] 
+                            "coordinates": [ 43.42, 12.66], 
                         },
                         "properties": {
                             "name": "Bab el Mandeb",
@@ -707,7 +800,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [4, 100] 
+                            "coordinates": [100, 4], 
                         },
                         "properties": {
                             "name": "Straight of Malacca",
@@ -725,7 +818,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [10, 79.75] 
+                            "coordinates": [79.75, 10], 
                         },
                         "properties": {
                             "name": "Palk Straight",
@@ -762,7 +855,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [48.8566667, 2.3508333] 
+                            "coordinates": [2.3508333, 48.8566667], 
                         },
                         "properties": {
                             "name": "Paris",
@@ -780,7 +873,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [40.7127000, -74.0059000] 
+                            "coordinates": [ -74.0059000, 40.7127000], 
                         },
                         "properties": {
                             "name": "New York City",
@@ -798,7 +891,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [35.6833333, 139.6833333] 
+                            "coordinates": [ 139.6833333, 35.683333], 
                         },
                         "properties": {
                             "name": "Tokyo",
@@ -816,7 +909,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [47.4925000, 19.0513889] 
+                            "coordinates": [ 19.0513889, 47.4925000], 
                         },
                         "properties": {
                             "name": "Budapest",
@@ -947,18 +1040,22 @@
             id: 'A',
             text: 'Time-Space Convergence',
             photo: 'img/Q3/time_space.jpg',
+            sceneId: '3a'
         }, {
             id: 'B',
             text: 'Law of Diminishing Time',
             photo: 'img/Q3/curve_line.jpg',
+            sceneId: '3b'
         }, {
             id: 'C',
             text: 'Progressive Mobility Theory',
             photo: 'img/Q3/progressive.png',
+            sceneId: '3c'
         }, {
             id: 'D',
             text: 'Converged Mobility',
             photo: 'img/Q3/converge.jpg',
+            sceneId: '3d'
         }],
         prompt: 'Geographer David Harvey coined the term for a theory that as time and technology progress, distances shorten in terms of how long it takes to travel. This has led to the world feeling “smaller.” What is this theory called?',
         rightAnswer: {
