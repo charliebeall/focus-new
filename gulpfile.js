@@ -243,7 +243,8 @@ gulp.task('minify', function () {
 gulp.task('concatcss', function () {
    return gulp.src([
        'bower_components/fontawesome/css/font-awesome.min.css',
-       'bower_components/bootstrap/dist/css/bootstrap.min.css',
+       //'bower_components/bootstrap/dist/css/bootstrap.min.css',
+	   'src/css/bootstrap.min.css',
        //'node_modules/mapbox-gl/dist/mapbox-gl.css',
        'src/css/normalize.css',
        'bower_components/leaflet/dist/leaflet.css',
