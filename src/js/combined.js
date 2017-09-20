@@ -16868,6 +16868,8 @@ Focus.Views.QuestionView = Backbone.View.extend({
     selectChoice: function (id) {
         var selectedModel = this._choiceCollection.findWhere({
             sceneId: id
+        }) || this._choiceCollection.findWhere({
+        	layerId: id
         });
 
         if (selectedModel) {
@@ -16896,7 +16898,7 @@ Focus.Views.QuestionView = Backbone.View.extend({
             me._choiceCollection.each(function (choiceModel, index) {
                 Focus.Events.trigger('drawLine', {
                     $target: $($choices[index]).find('.id-row span'),
-                    layerId: choiceModel.get('sceneId'),
+                    layerId: choiceModel.get('sceneId') || choiceModel.get('layerId'),
                     drawStyle: 'c'
                 });
             });

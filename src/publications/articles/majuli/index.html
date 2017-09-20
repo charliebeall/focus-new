@@ -230,6 +230,36 @@
 			            }
 			        }
         </style>
+		<style media="print">
+			@media print {
+				#nav, #toggle-map {
+					display: none;
+				}
+				
+				a, a.location {
+					text-decoration: none;
+					border-bottom: none !important;
+				}
+				
+				span.helper-icon {
+					display: none;
+				}
+				
+				progress {
+					display: none;
+				}
+				
+				body, div.figure {
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				div.figure {
+					page-break-inside: avoid;
+				}
+				
+			}
+		</style>
     </head>
     <body class="scrolled">
     <progress></progress>
