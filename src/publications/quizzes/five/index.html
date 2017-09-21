@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Geo Quiz #1</title>
+    <title>Geo Quiz #5</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -110,11 +110,11 @@
             {
                 "id": "place1",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
-                    /*
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                    */
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
                 },
                 "layers": [{
                     "id": "1a",
@@ -200,8 +200,16 @@
             {
                 "id": "place2",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+
+                   "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+
+
+                    // "type": "tile",
+                    // "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
                     /*
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
                     */
@@ -308,8 +316,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            // "coordinates": [ -99.1333333, 19.4333333],
-                            "coordinates": [19.4333333, -99.1333333], 
+                            "coordinates": [0, 0], 
                         },
                         "properties": {
                             "name": "Aztecs",
@@ -327,7 +334,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [ -107.9700000, 36.06000000], 
+                            "coordinates": [0,0], 
                         },
                         "properties": {
                             "name": "Anasazi",
@@ -345,7 +352,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [-72.5455556, -13.1633333], 
+                            "coordinates": [0,0], 
                         },
                         "properties": {
                             "name": "Inca",
@@ -363,7 +370,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [-75.1333333, -14.716666], 
+                            "coordinates": [0,0], 
                         },
                         "properties": {
                             "name": "Nazca",
@@ -372,7 +379,7 @@
                     }
                 }],
                 //"center": [-60, 48],
-                "zoom": 4,
+                "zoom": 2,
                 "style": {
                     "filter": "sepia(80%) brightness(80%)",
                     "opacity": 0.7,
@@ -381,6 +388,7 @@
 
             },{
                 "id": "place4",
+                "zoom": 3,
                 "baseLayer": {
                     "type": "tile",
                     "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
@@ -475,7 +483,11 @@
                 "id": "place5",
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+                    "scheme": "xyz"
+
+                    // "type": "tile",
+                    // "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
                     /*
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
                     */
@@ -655,6 +667,7 @@
             {
                 "id": "place7",
                 "baseLayer": {
+                    
                     "type": "tile",
                     "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
                     /*
@@ -746,8 +759,14 @@
              {
                 "id": "place8",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+
+                    // "type": "tile",
+                    // "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
                     /*
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
                     */
@@ -1003,7 +1022,7 @@
             photo: 'img/Q1/LAX_airport.jpg',
             sceneId: '1d'
         }, ],
-        prompt: 'Airlines operate off of the hub-and-spoke system, meaning that travelers must often first fly to a major airline hub, and then onward to their final destination. What is the busiest hub airport as measured by passenger traffic, with over 104 million passengers last year (2016)?',
+        prompt: '1. Airlines operate off of the hub-and-spoke system, meaning that travelers must often first fly to a major airline hub, and then onward to their final destination. What is the busiest hub airport as measured by passenger traffic, with over 104 million passengers last year (2016)?',
         rightAnswer: {
             id: 'B',
             description: 'Hartsfield-Jackson International Airport'
@@ -1030,7 +1049,7 @@
             photo: 'img/Q2/MemphI_airport.jpg',
             sceneId: '2d'
         }],
-        prompt: 'Air freight also moves via the hub-and-spoke system, but the airports that handle its largest volume of freight differ from passenger ones. Which airport handled the most air cargo in the United States last year (hint: it also houses the headquarters for one of the world’s biggest private delivery companies)?',
+        prompt: '2. Air freight also moves via the hub-and-spoke system, but the airports that handle its largest volume of freight differ from passenger ones. Which airport handled the most air cargo in the United States last year (hint: it also houses the headquarters for one of the world’s biggest private delivery companies)?',
         rightAnswer: {
             id: 'D',
             description: 'Memphis International Airport'
@@ -1057,7 +1076,7 @@
             photo: 'img/Q3/converge.jpg',
             sceneId: '3d'
         }],
-        prompt: 'Geographer David Harvey coined the term for a theory that as time and technology progress, distances shorten in terms of how long it takes to travel. This has led to the world feeling “smaller.” What is this theory called?',
+        prompt: '3. Geographer David Harvey coined the term for a theory that as time and technology progress, distances shorten in terms of how long it takes to travel. This has led to the world feeling “smaller.” What is this theory called?',
         rightAnswer: {
             id: 'A',
             description: 'Time-Space Convergence'
@@ -1085,7 +1104,7 @@
             photo: 'img/Q4/Nazca.jpg',
             sceneId: '4d'
         }],
-        prompt: 'Road networks have served as the arteries of major civilizations throughout history. Although the roads of the Roman Empire are best known, which Western Hemisphere empire built almost 25,000 miles of roads through its territories?',
+        prompt: '4. Road networks have served as the arteries of major civilizations throughout history. Although the roads of the Roman Empire are best known, which Western Hemisphere empire built almost 25,000 miles of roads through its territories?',
         rightAnswer: {
             id: 'C',
             description: 'The Inca'
@@ -1112,7 +1131,7 @@
             photo: 'img/Q5/Baker.jpg',
             sceneId: '5d'
         }],
-        prompt: 'Changing transportation systems have dramatically impacted settlement. For example, the completion of the transcontinental railroad signaled the closing of the American West. At what site was the “Golden Spike” driven, bringing together the Union Pacific and Central Pacific railroads to link the U.S. East and West Coasts together?',
+        prompt: '5. Changing transportation systems have dramatically impacted settlement. For example, the completion of the transcontinental railroad signaled the closing of the American West. At what site was the “Golden Spike” driven, bringing together the Union Pacific and Central Pacific railroads to link the U.S. East and West Coasts together?',
         rightAnswer: {
             id: 'B',
             description: 'Promontory Summit, Utah'
@@ -1139,7 +1158,7 @@
             photo: 'img/Q6/Germany.jpg',
             sceneId: '6d'
         }],
-        prompt: 'Rail systems have changed dramatically over time, especially with the advent of high speed rail. China leads the way in high speed rail, with the four longest lines in the world. The fifth longest is located in this European country. ',
+        prompt: '6. Rail systems have changed dramatically over time, especially with the advent of high speed rail. China leads the way in high speed rail, with the four longest lines in the world. The fifth longest is located in this European country. ',
         rightAnswer: {
             id: 'A',
             description: 'Spain'
@@ -1166,7 +1185,7 @@
             photo: 'img/Q7/Seto_bridge.jpg',
             sceneId: '7d'
         }],
-        prompt: 'An important improvement to human mobility came from the construction of bridges. Today, the longest of these bridges all serve railroads. What is the longest bridge in the world, which happens to serve a high speed railroad, measuring 102 miles long?',
+        prompt: '7. An important improvement to human mobility came from the construction of bridges. Today, the longest of these bridges all serve railroads. What is the longest bridge in the world, which happens to serve a high speed railroad, measuring 102 miles long?',
         rightAnswer: {
             id: 'C',
             description: 'Danyang-Kunshan Grand Bridge'
@@ -1193,7 +1212,7 @@
             photo: 'img/Q8/Palk.jpg',
             sceneId: '8d'
         }],
-        prompt: 'Maritime transportation is impacted by chokepoints, areas where shipping traffic must go through a narrow sea lane on its journey. One of the world’s major chokepoints faces constant threats due to instability and even anarchic conditions in countries near the chokepoint, which has allowed piracy to thrive in the area. Name this location.',
+        prompt: '8. Maritime transportation is impacted by chokepoints, areas where shipping traffic must go through a narrow sea lane on its journey. One of the world’s major chokepoints faces constant threats due to instability and even anarchic conditions in countries near the chokepoint, which has allowed piracy to thrive in the area. Name this location.',
         rightAnswer: {
             id: 'B',
             description: 'Bab el Mandeb'
@@ -1220,7 +1239,7 @@
             photo: 'img/Q9/Budapest.jpg',
             sceneId: '9d'
         }],
-        prompt: 'The London Underground, or Tube, is perhaps the most famous underground metro system in the world, and also the oldest, opening in 1890. This city came second with its metro system in 1896, that now encompasses 52 stations and 23 miles of train tracks.',
+        prompt: '9. The London Underground, or Tube, is perhaps the most famous underground metro system in the world, and also the oldest, opening in 1890. This city came second with its metro system in 1896, that now encompasses 52 stations and 23 miles of train tracks.',
         rightAnswer: {
             id: 'D',
             description: 'Budapest'
@@ -1243,7 +1262,7 @@
             text: 'Cartogram',
             photo: 'img/Q10/cartogram.png',
         }],
-        prompt: 'Metro maps are now an object of fascination for many aficionados of maps and design. However, these maps use unique distortions and lack scale, so that they make sense to the rider in a train looking at what the next station is, while not corresponding well to the map of the city. What is the term for this special type of map? (Note to readers: All photos shown are of metro maps, so as to not give away the answer!)',
+        prompt: '10. Metro maps are now an object of fascination for many aficionados of maps and design. However, these maps use unique distortions and lack scale, so that they make sense to the rider in a train looking at what the next station is, while not corresponding well to the map of the city. What is the term for this special type of map? (Note to readers: All photos shown are of metro maps, so as to not give away the answer!)',
         rightAnswer: {
             id: 'A',
             description: 'Topological Map'
