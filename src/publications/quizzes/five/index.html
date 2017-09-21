@@ -201,18 +201,10 @@
                 "id": "place2",
                 "baseLayer": {
 
-                   "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
-                    }
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+                    "scheme": "xyz"
 
-
-                    // "type": "tile",
-                    // "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
-                    /*
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                    */
                 },
                 "layers": [{
                     "id": "2a",
@@ -667,12 +659,11 @@
             {
                 "id": "place7",
                 "baseLayer": {
-                    
-                    "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
-                    /*
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                    */
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
                 },
                 "layers": [{
                
@@ -1275,7 +1266,7 @@
             el: $('.scenes'),
             model: new Focus.Models.ModalModel({
                 title: 'Welcome to Geo Quiz!',
-                content: "Welcome to the Focus on Geography quarterly GeoQuiz! This edition of our Geoquiz focuses on transportation.  We hope you can join us for the upcoming AGS Symposium, Geography 2050: The Future of Mobility that will take place in New York City, November 16-17, 2017",
+                content: "<img src=\"img/transportation.png\" style='height:180px;float:left;'/>  Welcome to the Focus on Geography quarterly GeoQuiz! This edition of our Geoquiz focuses on transportation.  We hope you can join us for the upcoming AGS Symposium, Geography 2050: The Future of Mobility that will take place in New York City, November 16-17, 2017",
                 buttonText: 'Start Quiz'
             }),
             collection: questionCollection
