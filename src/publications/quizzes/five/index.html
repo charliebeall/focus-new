@@ -291,102 +291,29 @@
                 "id": "place3",
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+                    "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
                     /*
                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
                     */
                 },
-                "layers": [{
- 
-                    "id": "3a",
-                    "type": "geojson",
-                    "style": {
-                        "weight": 10,
-                        "opacity": 0.3
-                    },
-                    "data": {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [0, 0], 
-                        },
-                        "properties": {
-                            "name": "Aztecs",
-                            "style": {}
-                        }
-                    }
-                }, {
-                    "id": "3b",
-                    "type": "geojson",
-                    "style": {
-                        "weight": 10,
-                        "opacity": 0.3
-                    },
-                    "data": {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [0,0], 
-                        },
-                        "properties": {
-                            "name": "Anasazi",
-                            "style": {}
-                        }
-                    }
-                }, {
-                    "id": "3c",
-                    "type": "geojson",
-                    "style": {
-                        "weight": 10,
-                        "opacity": 0.3
-                    },
-                    "data": {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [0,0], 
-                        },
-                        "properties": {
-                            "name": "Inca",
-                            "style": {}
-                        }
-                    }
-                }, {
-                    "id": "3d",
-                    "type": "geojson",
-                    "style": {
-                        "weight": 10,
-                        "opacity": 0.3
-                    },
-                    "data": {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [0,0], 
-                        },
-                        "properties": {
-                            "name": "Nazca",
-                            "style": {}
-                        }
-                    }
-                }],
-                //"center": [-60, 48],
+                "layers": [],
+                "center": [0, 0],
                 "zoom": 2,
                 "style": {
-                    "filter": "sepia(80%) brightness(80%)",
-                    "opacity": 0.7,
-                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
+                    "opacity": 0,
+					"backgroundSize": "cover",
+                    "background": "url(https://images.unsplash.com/photo-1500741236341-1b7a0f91f1f6?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=)"
                 }
 
             },{
                 "id": "place4",
                 "zoom": 3,
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
-                    /*
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                    */
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+					"options": {
+						detectRetina: true
+					}
                 },
                 "layers": [{
  
@@ -463,8 +390,6 @@
                         }
                     }
                 }],
-                //"center": [-60, 48],
-                "zoom": 2,
                 "style": {
                     "filter": "sepia(80%) brightness(80%)",
                     "opacity": 0.7,
@@ -936,44 +861,19 @@
                 }
             }, {
                 "id": "place10",
-                "center": [142.5, 17.75],
+                "center": [2.347324, 48.858352],
                 "zoom": 6,
                 "baseLayer": {
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
-                    }
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 },
                 "style": {
                     "filter": "grayscale(0%)",
-                    "opacity": 0.8,
-                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                    "opacity": 0,
+                    "background": "url(https://images.unsplash.com/photo-1474606030380-107829a22fc6?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=)",
+						"backgroundSize": "cover"
                 },
-                "layers": [{
-                    "id": "mariana",
-                    "type": "geojson",
-                    "data": {
-                        "type": "Feature",
-                        "properties": {
-                            "name": "Mariana Trench"
-                        },
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                142.5,
-                                17.75
-                            ]
-                        }
-                    },
-                    "style": {
-                        "icon": {
-                            "html": "<img src='img/ship.svg' style='width: 100%;'/>",
-                            "iconSize": [80, 40],
-                            "iconAnchor": [40, 40]
-                        }
-                    }
-                }]
+                "layers": []
             }
         ]
     };
@@ -1049,23 +949,19 @@
         choices: [{
             id: 'A',
             text: 'Time-Space Convergence',
-            photo: 'img/Q3/time_space.jpg',
-            sceneId: '3a'
+            photo: 'img/Q3/time_space.jpg'
         }, {
             id: 'B',
             text: 'Law of Diminishing Time',
-            photo: 'img/Q3/curve_line.jpg',
-            sceneId: '3b'
+            photo: 'img/Q3/curve_line.jpg'
         }, {
             id: 'C',
             text: 'Progressive Mobility Theory',
-            photo: 'img/Q3/progressive.png',
-            sceneId: '3c'
+            photo: 'img/Q3/progressive.png'
         }, {
             id: 'D',
             text: 'Converged Mobility',
-            photo: 'img/Q3/converge.jpg',
-            sceneId: '3d'
+            photo: 'img/Q3/converge.jpg'
         }],
         prompt: '3. Geographer David Harvey coined the term for a theory that as time and technology progress, distances shorten in terms of how long it takes to travel. This has led to the world feeling “smaller.” What is this theory called?',
         rightAnswer: {
