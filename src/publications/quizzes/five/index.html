@@ -584,11 +584,8 @@
             {
                 "id": "place7",
                 "baseLayer": {
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
-                    }
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 },
                 "layers": [{
                
@@ -667,9 +664,9 @@
                 //"center": [-60, 48],
                 "zoom": 4,
                 "style": {
-                    "filter": "sepia(80%) brightness(80%)",
-                    "opacity": 0.7,
-                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
+                    "filter": "",
+                    "opacity": 1,
+                    "background": ""
                 }
             },
              {
