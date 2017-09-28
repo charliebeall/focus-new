@@ -117,7 +117,7 @@
                     }
                 },
                 "layers": [{
-                    "id": "1a",
+                    "id": "1d",
                     "type": 'geojson',
                     "style": {
                         "weight": 10,
@@ -171,7 +171,7 @@
                         }
                     }
                 }, {
-                    "id": "1d",
+                    "id": "1a",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -200,11 +200,8 @@
             {
                 "id": "place2",
                 "baseLayer": {
-
                     "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                    "scheme": "xyz"
-
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 },
                 "layers": [{
                     "id": "2a",
@@ -225,7 +222,7 @@
                         }
                     }
                 }, {
-                    "id": "2b",
+                    "id": "2c",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -243,7 +240,7 @@
                         }
                     }
                 }, {
-                    "id": "2c",
+                    "id": "2d",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -261,7 +258,7 @@
                         }
                     } 
                 }, {
-                    "id": "2d",
+                    "id": "2b",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -282,9 +279,9 @@
                 //"center": [-60, 48],
                 "zoom": 3,
                 "style": {
-                    "filter": "sepia(80%) brightness(80%)",
-                    "opacity": 0.7,
-                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
+                    "filter": "",
+                    "opacity": 1,
+                    "background": ""
                 }
             // 
             },{
@@ -302,22 +299,26 @@
                 "style": {
                     "opacity": 0,
 					"backgroundSize": "cover",
-                    "background": "url(https://images.unsplash.com/photo-1500741236341-1b7a0f91f1f6?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=)"
+                    "background": "url(https://upload.wikimedia.org/wikipedia/commons/4/48/Denmark_frigate_SLV_Green.jpg)", //old time ship
+                    "background": "url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Boeing_787_first_flight.jpg/1920px-Boeing_787_first_flight.jpg)", //Boeing 787
                 }
 
             },{
                 "id": "place4",
                 "zoom": 3,
                 "baseLayer": {
-                    "type": "esri-basemap",
-                    "url": "NationalGeographic",
-					"options": {
-						detectRetina: true
-					}
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+
+                    // "type": "wms",
+                    // "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    // "params": {
+                    //     "layers": "GEBCO_LATEST"
+                    // }
                 },
                 "layers": [{
  
-                    "id": "4a",
+                    "id": "4b",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -328,7 +329,6 @@
                         "geometry": {
                             "type": "Point",
                             "coordinates": [ -99.1333333, 19.4333333],
-                            // "coordinates": [19.4333333, -99.1333333], 
                         },
                         "properties": {
                             "name": "Aztecs",
@@ -336,7 +336,7 @@
                         }
                     }
                 }, {
-                    "id": "4b",
+                    "id": "4a",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -354,7 +354,7 @@
                         }
                     }
                 }, {
-                    "id": "4c",
+                    "id": "4d",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -372,7 +372,7 @@
                         }
                     }
                 }, {
-                    "id": "4d",
+                    "id": "4c",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -411,7 +411,7 @@
                 },
                 "layers": [{
 
-                    "id": "5a",
+                    "id": "5d",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -429,7 +429,7 @@
                         }
                     }
                 }, {
-                    "id": "5b",
+                    "id": "5a",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -465,7 +465,7 @@
                         }
                     }
                 }, {
-                    "id": "5d",
+                    "id": "5b",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -494,14 +494,15 @@
             {
                 "id": "place6",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
-                    /*
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                    */
+                    "type": "wms",
+                "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                "params": {
+                    "layers": "GEBCO_LATEST"
+                }
+
                 },
                 "layers": [{
-                    "id": "6a",
+                    "id": "6b",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -519,7 +520,7 @@
                         }
                     }
                 }, {
-                    "id": "6b",
+                    "id": "6a",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -589,7 +590,7 @@
                 },
                 "layers": [{
                
-                    "id": "7a",
+                    "id": "7b",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -607,7 +608,7 @@
                         }
                     }
                 }, {
-                    "id": "7b",
+                    "id": "7a",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -686,7 +687,7 @@
                 },
                 "layers": [{
 
-                    "id": "8a",
+                    "id": "8b",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -704,7 +705,7 @@
                         }
                     }    
                 }, {
-                    "id": "8b",
+                    "id": "8a",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -722,7 +723,7 @@
                         }
                     }
                 }, {
-                    "id": "8c",
+                    "id": "8d",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -740,7 +741,7 @@
                         }
                     } 
                 }, {
-                    "id": "8d",
+                    "id": "8c",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -770,14 +771,12 @@
                 "id": "place9",
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
-                    /*
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                    */
+                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+                    "scheme": "xyz"
                 },
                 "layers": [{
           
-                    "id": "9a",
+                    "id": "9b",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -795,7 +794,7 @@
                         }
                     }
                 }, {
-                    "id": "9b",
+                    "id": "9a",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -813,7 +812,7 @@
                         }
                     }
                 }, {
-                    "id": "9c",
+                    "id": "9d",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -831,7 +830,7 @@
                         }
                     }
                 }, {
-                    "id": "9d",
+                    "id": "9c",
                     "type": "geojson",
                     "style": {
                         "weight": 10,
@@ -891,8 +890,8 @@
     var questions = [{
         choices: [{
             id: 'A',
-            text: 'Beijing Capital International Airport',
-            photo: 'img/Q1/BCI_airport.jpg',
+            text: 'Los Angeles International Airport',
+            photo: 'img/Q1/LAX_airport.jpg',
             sceneId: '1a'
         }, {
             id: 'B',
@@ -906,8 +905,8 @@
             sceneId: '1c'
         }, {
             id: 'D',
-            text: 'Los Angeles International Airport',
-            photo: 'img/Q1/LAX_airport.jpg',
+            text: 'Beijing Capital International Airport',
+            photo: 'img/Q1/BCI_airport.jpg',
             sceneId: '1d'
         }, ],
         prompt: '1. Airlines operate off of the hub-and-spoke system, meaning that travelers must often first fly to a major airline hub, and then onward to their final destination. What is the busiest hub airport as measured by passenger traffic, with over 104 million passengers last year (2016)?',
@@ -923,23 +922,23 @@
             sceneId: '2a'
         }, {
             id: 'B',
-            text: 'Miami International Airport',
-            photo: 'img/Q2/MiamiI_airport.jpg',
+            text: 'Memphis International Airport',
+            photo: 'img/Q2/MemphI_airport.jpg',
             sceneId: '2b'
         }, {
             id: 'C',
-            text: 'Louisville International Airport',
-            photo: 'img/Q2/LVilleI_airport.jpg',
+            text: 'Miami International Airport',
+            photo: 'img/Q2/MiamiI_airport.jpg',
             sceneId: '2c'
         }, {
             id: 'D',
-            text: 'Memphis International Airport',
-            photo: 'img/Q2/MemphI_airport.jpg',
+            text: 'Louisville International Airport',
+            photo: 'img/Q2/LVilleI_airport.jpg',
             sceneId: '2d'
         }],
         prompt: '2. Air freight also moves via the hub-and-spoke system, but the airports that handle its largest volume of freight differ from passenger ones. Which airport handled the most air cargo in the United States last year (hint: it also houses the headquarters for one of the world’s biggest private delivery companies)?',
         rightAnswer: {
-            id: 'D',
+            id: 'B',
             description: 'Memphis International Airport'
         }
     }, {
@@ -969,40 +968,40 @@
     {
         choices: [{
             id: 'A',
-            text: 'The Aztecs',
-            photo: 'img/Q4/Aztecs.jpg',
+            text: 'The Anasazi',
+            photo: 'img/Q4/Anasazi.jpg',
             sceneId: '4a'
         }, {
             id: 'B',
-            text: 'The Anasazi',
-            photo: 'img/Q4/Anasazi.jpg',
+            text: 'The Aztecs',
+            photo: 'img/Q4/Aztecs.jpg',
             sceneId: '4b'
         }, {
             id: 'C',
-            text: 'The Inca ',
-            photo: 'img/Q4/Inca.jpg',
+            text: 'The Nazca',
+            photo: 'img/Q4/Nazca.jpg',
             sceneId: '4c'
         }, {
             id: 'D',
-            text: 'The Nazca',
-            photo: 'img/Q4/Nazca.jpg',
+            text: 'The Inca ',
+            photo: 'img/Q4/Inca.jpg',
             sceneId: '4d'
         }],
         prompt: '4. Road networks have served as the arteries of major civilizations throughout history. Although the roads of the Roman Empire are best known, which Western Hemisphere empire built almost 25,000 miles of roads through its territories?',
         rightAnswer: {
-            id: 'C',
+            id: 'D',
             description: 'The Inca'
         }
     }, {
         choices: [{
             id: 'A',
-            text: 'Grand Island, Nebraska ',
-            photo: 'img/Q5/GrandIsland.jpg',
+            text: 'Promontory Summit, Utah',
+            photo: 'img/Q5/PromontorySummit.jpg',
             sceneId: '5a'
         }, {
             id: 'B',
-            text: 'Promontory Summit, Utah',
-            photo: 'img/Q5/PromontorySummit.jpg',
+            text: 'Baker, Nevada',
+            photo: 'img/Q5/Baker.jpg',
             sceneId: '5b'
         }, {
             id: 'C',
@@ -1011,25 +1010,25 @@
             sceneId: '5c'
         }, {
             id: 'D',
-            text: 'Baker, Nevada',
-            photo: 'img/Q5/Baker.jpg',
+            text: 'Grand Island, Nebraska ',
+            photo: 'img/Q5/GrandIsland.jpg',
             sceneId: '5d'
         }],
         prompt: '5. Changing transportation systems have dramatically impacted settlement. For example, the completion of the transcontinental railroad signaled the closing of the American West. At what site was the “Golden Spike” driven, bringing together the Union Pacific and Central Pacific railroads to link the U.S. East and West Coasts together?',
         rightAnswer: {
-            id: 'B',
+            id: 'A',
             description: 'Promontory Summit, Utah'
         }
     }, {
         choices: [{
             id: 'A',
-            text: 'Spain',
-            photo: 'img/Q6/Spain.jpg',
+            text: 'France',
+            photo: 'img/Q6/France.jpg',
             sceneId: '6a'
         }, {
             id: 'B',
-            text: 'France',
-            photo: 'img/Q6/France.jpg',
+            text: 'Spain',
+            photo: 'img/Q6/Spain.jpg',
             sceneId: '6b'
         }, {
             id: 'C',
@@ -1044,19 +1043,19 @@
         }],
         prompt: '6. Rail systems have changed dramatically over time, especially with the advent of high speed rail. China leads the way in high speed rail, with the four longest lines in the world. The fifth longest is located in this European country. ',
         rightAnswer: {
-            id: 'A',
+            id: 'B',
             description: 'Spain'
         }
     }, {
         choices: [{
             id: 'A',
-            text: 'Tianjin Grand Bridge',
-            photo: 'img/Q7/Tianjin_bridge.jpg',
+            text: 'Lake Ponchartrain Causeway',
+            photo: 'img/Q7/LakePonchartrain.jpg',
             sceneId: '7a'
         }, {
             id: 'B',
-            text: 'Lake Ponchartrain Causeway',
-            photo: 'img/Q7/LakePonchartrain.jpg',
+            text: 'Tianjin Grand Bridge',
+            photo: 'img/Q7/Tianjin_bridge.jpg',
             sceneId: '7b'
         }, {
             id: 'C',
@@ -1077,55 +1076,55 @@
     }, {
         choices: [{
             id: 'A',
-            text: 'Straight of Hormuz',
-            photo: 'img/Q8/Hormuz.jpg',
+            text: 'Bab el Mandeb',
+            photo: 'img/Q8/Mandeb.jpg',
             sceneId: '8a'
         }, {
             id: 'B',
-            text: 'Bab el Mandeb',
-            photo: 'img/Q8/Mandeb.jpg',
+            text: 'Straight of Hormuz',
+            photo: 'img/Q8/Hormuz.jpg',
             sceneId: '8b'
         }, {
             id: 'C',
-            text: 'Straight of Malacca',
-            photo: 'img/Q8/Malacca.jpg',
+            text: 'Palk Straight',
+            photo: 'img/Q8/Palk.jpg',
             sceneId: '8c'
         }, {
             id: 'D',
-            text: 'Palk Straight',
-            photo: 'img/Q8/Palk.jpg',
+            text: 'Straight of Malacca',
+            photo: 'img/Q8/Malacca.jpg',
             sceneId: '8d'
         }],
         prompt: '8. Maritime transportation is impacted by chokepoints, areas where shipping traffic must go through a narrow sea lane on its journey. One of the world’s major chokepoints faces constant threats due to instability and even anarchic conditions in countries near the chokepoint, which has allowed piracy to thrive in the area. Name this location.',
         rightAnswer: {
-            id: 'B',
+            id: 'A',
             description: 'Bab el Mandeb'
         }
     }, {
         choices: [{
             id: 'A',
-            text: 'Paris',
-            photo: 'img/Q9/Paris.jpg',
+            text: 'New York City',
+            photo: 'img/Q9/NewYork.jpg',
             sceneId: '9a'
         }, {
             id: 'B',
-            text: 'New York City',
-            photo: 'img/Q9/NewYork.jpg',
+            text: 'Paris',
+            photo: 'img/Q9/Paris.jpg',
             sceneId: '9b'
         }, {
             id: 'C',
-            text: 'Tokyo',
-            photo: 'img/Q9/Tokyo.jpg',
+            text: 'Budapest',
+            photo: 'img/Q9/Budapest.jpg',
             sceneId: '9c'
         }, {
             id: 'D',
-            text: 'Budapest',
-            photo: 'img/Q9/Budapest.jpg',
+            text: 'Tokyo',
+            photo: 'img/Q9/Tokyo.jpg',
             sceneId: '9d'
         }],
         prompt: '9. The London Underground, or Tube, is perhaps the most famous underground metro system in the world, and also the oldest, opening in 1890. This city came second with its metro system in 1896, that now encompasses 52 stations and 23 miles of train tracks.',
         rightAnswer: {
-            id: 'D',
+            id: 'C',
             description: 'Budapest'
         }
     }, {
