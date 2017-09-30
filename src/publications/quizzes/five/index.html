@@ -192,7 +192,7 @@
                 //"center": [-60, 48],
                 // "zoom": 1,
                 "style": {
-                    "filter": "sepia(80%) brightness(80%)",
+                    "filter": "sepia(0%) brightness(80%)",
                     "opacity": 0.7,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
                 }
@@ -299,7 +299,7 @@
                 "style": {
                     "opacity": 0,
 					"backgroundSize": "cover",
-                    "background": "url(https://srv4.imgonline.com.ua/result_img/imgonline-com-ua-twotoone-Qh6Xiqs5C1.jpg)"
+                    "background": "url(img/Q3/img7.jpg) 50% 50%"
                 }
 
             },{
@@ -391,11 +391,20 @@
             },
             {
                 "id": "place5",
-                "baseLayer": {
+                "baseLayer": [{
+                	"type": "esri-basemap",
+					"url": "NationalGeographic",
+					"options": {
+						"detectRetina": true
+					}
+                },/*{
                     "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png"
+                },*/{
+                    "type": "tile",
+                    "url": "http://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png",
                     "scheme": "xyz"
-                },
+                }],
                 "layers": [{
 
                     "id": "5d",
@@ -481,12 +490,11 @@
             {
                 "id": "place6",
                 "baseLayer": {
-                    "type": "wms",
-                "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                "params": {
-                    "layers": "GEBCO_LATEST"
-                }
-
+                	"type": "esri-basemap",
+					"url": "Streets",
+					"options": {
+						"detectRetina": true
+					}
                 },
                 "layers": [{
                     "id": "6b",
@@ -564,8 +572,8 @@
                 //"center": [-60, 48],
                 "zoom": 4,
                 "style": {
-                    "filter": "sepia(80%) brightness(80%)",
-                    "opacity": 0.7,
+                    "filter": "sepia(0%) brightness(80%)",
+                    "opacity": 1,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
                 }
             },
@@ -659,14 +667,13 @@
             },
              {
                 "id": "place8",
-                "baseLayer": {
+                "baseLayer": [{
                     "type": "wms",
                     "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
                     "params": {
                         "layers": "GEBCO_LATEST"
                     }
-
-                },
+                }],
                 "layers": [{
 
                     "id": "8b",
@@ -744,8 +751,8 @@
                 //"center": [-60, 48],
                 "zoom": 4,
                 "style": {
-                    "filter": "sepia(80%) brightness(80%)",
-                    "opacity": 0.7,
+                    "filter": "brightness(90%)",
+                    "opacity": 1,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
                 }
             },
@@ -1139,8 +1146,8 @@
         var navigator = new Focus.Views.QuizSceneNavigator({
             el: $('.scenes'),
             model: new Focus.Models.ModalModel({
-                title: 'Welcome to Geo Quiz!',
-                content: "<img src=\"img/transportation.png\" style='height:135px;float:left;'/>  This edition of our Geoquiz focuses on transportation.  We hope you can join us for the upcoming AGS Symposium, Geography 2050: The Future of Mobility that will take place in New York City, November 16-17, 2017.",
+                title: 'Welcome to the fifth Geo Quiz!',
+                content: "<img src=\"img/transportation.png\" style='height:135px;float:left;'/>  This edition of our Geo Quiz focuses on transportation.  We hope you can join us for the upcoming AGS Symposium, Geography 2050: The Future of Mobility that will take place in New York City, November 16-17, 2017.",
                 buttonText: 'Start Quiz'
             }),
             collection: questionCollection
