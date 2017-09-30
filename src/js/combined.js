@@ -15312,7 +15312,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             var filter = style.filter;
             var opacity = style.opacity;
             var background = style.background;
-
+			var backgroundSize = style.backgroundSize;
+			
             var $tileContainer = this.$el.find('.leaflet-tile-pane');
             $tileContainer.css('opacity', opacity);
             $tileContainer.css('-webkit-filter', filter);
@@ -15321,6 +15322,10 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             $tileContainer.css('filter', filter);
 
             this.$el.css('background', background);
+			
+			if (backgroundSize) {
+				this.$el.css('background-size', backgroundSize);
+			}
         }
     },
     _removeFunc: function (layerIndex) {
@@ -15782,12 +15787,17 @@ Focus.Views.OpenLayersMapEngine = Focus.Views.MapEngine.extend({
             var filter = style.filter;
             var opacity = style.opacity;
             var background = style.background;
-
+			var backgroundSize = style.backgroundSize;
+			
             var $tileContainer = this.$el.find('.leaflet-tile-pane');
             $tileContainer.css('opacity', opacity);
             $tileContainer.css('-webkit-filter', filter);
 
             this.$el.css('background', background);
+			
+			if (backgroundSize) {
+				this.$el.css('background-size', backgroundSize);
+			}
         }
     },
     _setBaseLayer: function (layerDef) {
