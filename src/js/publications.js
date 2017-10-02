@@ -3,6 +3,15 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+            type: 'Geo Quiz',
+            title: 'Quiz Five: Transportation',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '09/30/17',
+            thumbnail: 'publications/quizzes/five/img/Q10/mental.png',
+            url: 'publications/quizzes/five/index.html',
+            location: []
+        }, {
             type: 'Feature Article',
             title: 'Shrinking Space and Expanding Population: Socioeconomic Impacts of Majuli\’s Changing Geography',
             author: 'Avijit Sahay, Nikhil Roy',
