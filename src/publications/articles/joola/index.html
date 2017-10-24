@@ -2638,31 +2638,14 @@
                 "scenes": [
                     {
                         "id": "place1",
-                        "baseLayer": [/*{
-                            "type": "tile",
-                            "url": 'http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png'
-                        },*/{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: '2015-10-31',//"2016-04-27",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                            //"type": "vector",
-                            //"url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk"
-                        }/*,{
-                            "type": "vector",
-                            "url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.mvt?api_key=vector-tiles-KGwcluk" //"http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                        }*/],
+                        "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true,
+                            "imagerySet": "AerialWithLabels",
+
+                        }}],
                         //27.63072, -113.77222
                         "layers": [
                             {"idRef": "southern_senegal"},
@@ -2678,7 +2661,7 @@
                             {"idRef": "souvenir"}
                         ],
                         //"center": [-113.081667,26.846944],
-                        "zoom": 7,
+                        "zoom": 5,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -2687,26 +2670,14 @@
                     },
                     {
                         "id": "place2",
-                        "baseLayer": [/*{
-                         "type": "tile",
-                         "url": 'http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png'
-                         },*/{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: '2015-10-31',//"2016-04-27",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
+                        "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true,
+                            "imagerySet": "AerialWithLabels",
+
+                        }}],
                         "layers": [
                             {"idRef": "southern_senegal"},
                             {"idRef": "casamance"},
@@ -2721,7 +2692,7 @@
                             {"idRef": "souvenir"}
                         ],
                         //"center": [-113.081667,26.846944],
-                        "zoom": 8,
+                        "zoom": 5,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -2731,7 +2702,7 @@
                     {
                         "id": "place3",
                         //"center": [-115.081667,27.846944],
-                        "zoom": 8,
+                        "zoom": 5,
                         "layers": [
                             {"idRef": "southern_senegal"},
                             {"idRef": "casamance"},
@@ -2746,27 +2717,13 @@
                             {"idRef": "souvenir"}
                         ],
                         "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-04-27",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                            //"type": "vector",
-                            //"url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk"
-                        }, /*{
-                            "type": "vector",
-                            "url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk" //"http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                        }*/],
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true,
+                            "imagerySet": "AerialWithLabels",
+
+                        }}],
                         "style": {
                             "filter": "sepia(0%)",
                             "opacity": 0.8,
@@ -2776,29 +2733,15 @@
                     {
                         "id": "place4",
                         //"center": [-114.8986353,27.6924942],
-                        "zoom": 7,
+                        "zoom": 5,
                         "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-04-27",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                            //"type": "vector",
-                            //"url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk"
-                        }, /*{
-                            "type": "vector",
-                            "url": "https://vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-KGwcluk" //"http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                        }*/],
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true,
+                            "imagerySet": "AerialWithLabels",
+
+                        }}],
                         "layers": [
                             {"idRef": "southern_senegal"},
                             {"idRef": "casamance"},
