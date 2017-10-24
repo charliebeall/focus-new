@@ -102,7 +102,7 @@
 
                 <section id="introduction" class="scene" data-scene-id="place1" title="Introduction">
 
-                    <h2 class="title title-photo" style="background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), url(img/figure20.jpg);">The Joola: The Geographical Dimensions of Africa's Greatest Shipwreck</h2>
+                    <h2 class="title title-photo" style="background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), url();">The Joola: The Geographical Dimensions of Africa's Greatest Shipwreck</h2>
 
                     <div class="author"><span class="name"> Karen Barton</span>, <span class="organization">Department of Geography & GIS, University of Northern Colorado</span></div>
                     <div class="citation"><span class="citation-label">DOI:</span> ENTER THE DOI HERE WHEN YOU GET IT.</div>
@@ -141,7 +141,8 @@
             For farmers and fishers wishing to get products to market in <a href="#" class="location" data-layer-id="dakar">Dakar</a>, the most direct road from the Casamance’s capital city of <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> is through The Gambia (<a href="#figure3">Figure 3</a>). Transporting products through this small nation requires crossing two international borders and the <a href="#" class="location" data-layer-id="gambia_river">River Gambia</a>, which makes the journey expensive and slow owing to frequent delays with the local ferry. The political unrest in small pockets of northern  <a href="#" class="location" data-layer-id="casamance">Casamance</a> and <b><u>The Gambia</u></b> may also render the trip via road dangerous. Bypassing The Gambia to reach Dakar by road can often take two days, yet plane flights from<a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> are costly, limited, and thus financially out of reach for most small-scale producers (<a href="#figure4">Figure 4</a>). In 1990, the <i>Joola</i> ferry thus began transporting passengers and vehicles between <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> and <a href="#" class="location" data-layer-id="dakar">Dakar</a> around The Gambian order to help combat these logistical challenges. When service on the ferry first commenced, it was perceived as a safe, inexpensive, and reliable transportation lifeline for communities residing in the region, and a direct link to the modern world of <a href="#" class="location" data-layer-id="dakar">Dakar</a>. Although most of the passengers onboard the <i>Joola</i> worked in Ziguinchor’s service sector, it was also common for students to utilize the ferry transport system on their way to and from the <a href="#" class="location" data-layer-id="diop_university">Cheik Anta Diop University</a> (Senegal’s national university in Dakar). Similarly, the ship was periodically employed to transport Senegalese troops and military supplies needed for the ongoing separatist conflict in <a href="#" class="location" data-layer-id="casamance">Casamance</a>. On one level, this new linkage between <a href="#" class="location" data-layer-id="dakar">Dakar</a> and <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> represented a symbolic national attempt to address the geographic marginalization of the southern Jola people.
                 </p>
 
-            <div id="figure4" class="figure contain" style="background-image:url(img/figure4.jpg);"></div>
+            <!-- FIX THIS TO FIGURE 4 WHEN WE GET IT -->
+            <div id="figure4" class="figure contain" style="background-image:url(img/figure3.jpg);"></div>
             <div class="caption">Figure 4: Transportation route around The Gambia (this map may also be modified for publication).</div>
 
                 <p>
@@ -782,7 +783,9 @@
                     "id": "truck_point_3",
                     "type": "geojson",
                     "data": {
-						"type": "Feature", "geometry": { "type": "Point", "coordinates": [ -17.4440586132948, 14.693699414143788 ] },
+						"type": "Feature", "geometry": { 
+                            "type": "Point", "coordinates": [ -17.4440586132948, 14.693699414143788 ] 
+                        },
                         "properties": {
                             "name": "Truck Point 3",
                         }
@@ -795,7 +798,6 @@
                         "dropShadow": true
                     }
                 },{
-                    {
                      "id": "senegal",
                      "type": "Feature",
                      "properties": {
@@ -996,7 +998,6 @@
                 }, {
                     "id": "gambia",
                     "type": "Polygon",
-                        {
                         geometry: {
                         type: "Polygon",
                         coordinates: [
