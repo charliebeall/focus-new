@@ -1044,7 +1044,7 @@
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [-16.43,12.32]
+                            "coordinates": [-16.7008, 12.5378]
                         },
                         "properties": {
                             "name": "Island of Carabane",
@@ -3233,19 +3233,21 @@
                     },{
                         "id": "place8",
                         //"center": [-115.081667,27.846944],
-                        "zoom": 5,
+                        "zoom": 6,
                         "layers": [
                             {"idRef": "dakar"},
                             {"idRef": "ziguinchor"},
                             {"ifRef": "carabane"}
                         ],
                         "baseLayer": [{
-                            "type": "esri-basemap",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "options": {
-                                "detectRetina": true
-                            },
-                        }],
+                        "type": "tile",
+                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+                        "scheme": "xyz",
+
+                        "options": {
+                            "detectRetina": true,
+                            "imagerySet": "AerialWithLabels",
+                        }}],
                         "style": {
                             "filter": "sepia(0%)",
                             "opacity": 0.8,
