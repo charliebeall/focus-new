@@ -281,7 +281,7 @@
                 </p>
 
                 <p>
-            In contrast, just a few kilometers from the <a href="#" class="location" data-layer-id="souvenir">Place du Souvenir</a> toward Yoff is the African Renaissance Monument, a 49-m bronze statue, built for $27 million in 2010 under President Abdoulaye Wade and constructed by Mansudae Overseas Project, a North Korean company (<a href="#figure12">Figure 12</a>). The tallest statue in Africa, it was unveiled in <a href="#" class="location" data-layer-id="dakar">Dakar</a> in front of nineteen heads of state on Senegal’s National Day and designed as a “prestige project” that would underscore Africa’s arrival into the twenty-first century. The ambitious monument---a first stop for visitors to Dakar---has been criticized for hoovering funds that could have been better used for infrastructure, education, and health care in an already struggling Senegal economy. The monument also includes a scantily clad, bare-breasted woman holding a child, which has been interpreted as being culturally insensitive to Senegal’s conservative Muslim majority. Thousands have protested the statue’s erection, and members of the ANFV-Joola coalition have questioned why some of those monies were not channeled into helping <i>Joola</i> victims or better memorializing the tragedy considering the overlapping time frame of Renaissance edifice and <i>Joola</i> disaster.
+            In contrast, just a few kilometers from the <a href="#" class="location" data-layer-id="souvenir">Place du Souvenir</a> toward Yoff is the African Renaissance Monument, a 49-m bronze statue, built for $27 million in 2010 under President Abdoulaye Wade and constructed by Mansudae Overseas Project, a North Korean company (<a href="#figure12">Figure 12</a>). The tallest statue in Africa, it was unveiled in Dakar in front of nineteen heads of state on Senegal’s National Day and designed as a “prestige project” that would underscore Africa’s arrival into the twenty-first century. The ambitious monument---a first stop for visitors to Dakar---has been criticized for hoovering funds that could have been better used for infrastructure, education, and health care in an already struggling Senegal economy. The monument also includes a scantily clad, bare-breasted woman holding a child, which has been interpreted as being culturally insensitive to Senegal’s conservative Muslim majority. Thousands have protested the statue’s erection, and members of the ANFV-Joola coalition have questioned why some of those monies were not channeled into helping <i>Joola</i> victims or better memorializing the tragedy considering the overlapping time frame of Renaissance edifice and <i>Joola</i> disaster.
                 </p>
             </section>
 
@@ -3166,17 +3166,32 @@
                             {"idRef": "casamance"},
                             {"idRef": "cap_skirring"},
                         ],
+                        // "baseLayer": [{
+                        // "type": "wms",
+                        //     "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                        //     "params": {
+                        //         "layers": "GEBCO_LATEST"
+                        //     }, 
+                        // "options": {
+                        //     "detectRetina": true,
+                        //     "imagerySet": "AerialWithLabels",
+                        // }}],
                         "baseLayer": [{
-                        "type": "wms",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                            "type": "wmts",
+                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
                             "params": {
-                                "layers": "GEBCO_LATEST"
-                            }, 
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-
-                        }}],
+                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
+                                maxNativeZoom: 9,
+                                tileMatrixSet: "GoogleMapsCompatible_Level9",
+                                time: '2015-10-31',
+                                detectRetina: true,
+                                subdomains: "abc",
+                                noWrap: true,
+                                continuousWorld: true,
+                                crs: L.CRS.EPSG3857,
+                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
+                            }
+                        }],
                         "style": {
                             "filter": "sepia(0%)",
                             "opacity": 0.8,
@@ -3208,11 +3223,11 @@
                     },{
                         "id": "place6",
                         //"center": [-115.081667,27.846944],
-                        "zoom": 7,
+                        "zoom": 8,
                         "layers": [
                             {"idRef": "casamance"},
                             // {"idRef": "ziguinchor"},
-                            // {"idRef": "dakar"},
+                            {"idRef": "joola_wreck"},
                             {"idRef": "dakar_port"},
                             {"idRef": "ziguinchor_port"},
                             {"idRef": "joola_route"}
@@ -3263,7 +3278,7 @@
                     },{
                         "id": "place8",
                         //"center": [-115.081667,27.846944],
-                        "zoom": 7,
+                        "zoom": 8,
                         "layers": [
                             {"idRef": "dakar"},
                             {"idRef": "ziguinchor"},
@@ -3290,7 +3305,7 @@
                         "layers": [
                             {"idRef": "casamance"},
                             {"idRef": "ziguinchor"},
-                            {"idRef": "dakar"},
+                            // {"idRef": "dakar"},
                             {"idRef": "gambia"},
                             {"idRef": "corniche_ouest"},
                             {"idRef": "souvenir"},
@@ -3323,7 +3338,7 @@
                     },{
                         "id": "place10",
                         //"center": [-115.081667,27.846944],
-                        "zoom": 7,
+                        "zoom": 8,
                         "layers": [
                             {"idRef": "casamance"},
                             {"idRef": "ziguinchor"},
@@ -3344,55 +3359,9 @@
                             "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
                         }
                     },{
-                        "id": "place12",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 8,
-                        "layers": [
-                            {"idRef": "ziguinchor"},
-                            {"idRef": "diop_university"},
-                            {"idRef": "senegal"},
-                            {"idRef": "joola_wreck"}
-
-                        ],
-                        "baseLayer": [{
-                            "type": "esri-basemap",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "options": {
-                                "detectRetina": true
-                            },
-                        }],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place13",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 8,
-                        "layers": [
-                            {"idRef": "casamance"},
-                            {"idRef": "ziguinchor"},
-                            {"idRef": "uni_zig"},
-                            {"idRef": "diop_university"},
-                        ],
-                        "baseLayer": [{
-                            "type": "esri-basemap",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "options": {
-                                "detectRetina": true
-                            },
-                        }],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "zoom": 3,
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
                         "id": "place11",
                         //"center": [-114.8986353,27.6924942],
-                        "zoom": 5,
+                        "zoom": 7,
                         "baseLayer": [{
                             "type": "esri-basemap",
                             "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
@@ -3411,6 +3380,57 @@
                         "style": {
                             "filter": "sepia(0%)",
                             "opacity": 0.9,
+                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                        }
+                    },{
+                        "id": "place12",
+                        //"center": [-115.081667,27.846944],
+                        "zoom": 7,
+                        "layers": [
+                            {"idRef": "ziguinchor"},
+                            {"idRef": "diop_university"},
+                            {"idRef": "senegal"},
+                            {"idRef": "casamance"},
+                            {"idRef": "uni_zig"},
+                        ],
+                        "baseLayer": [{
+                        "type": "tile",
+                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+                        "scheme": "xyz",
+
+                        "options": {
+                            "detectRetina": true,
+                            "imagerySet": "AerialWithLabels",
+                        }}],
+                        "style": {
+                            "filter": "sepia(0%)",
+                            "opacity": 0.8,
+                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                        }
+                    },{
+                        "id": "place13",
+                        //"center": [-115.081667,27.846944],
+                        "zoom": 7,
+                        "layers": [
+                            {"idRef": "casamance"},
+                            {"idRef": "dakar"},
+                            {"idRef": "gambia"},
+                            {"idRef": "senegal"},
+                            {"idRef": "ziguinchor"},
+                            {"idRef": "uni_zig"},
+                            {"idRef": "diop_university"},
+                        ],
+                        "baseLayer": [{
+                            "type": "esri-basemap",
+                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                            "options": {
+                                "detectRetina": true
+                            },
+                        }],
+                        "style": {
+                            "filter": "sepia(0%)",
+                            "zoom": 3,
+                            "opacity": 0.8,
                             "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
                         }
                     }
