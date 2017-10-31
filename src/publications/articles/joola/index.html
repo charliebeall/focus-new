@@ -32,8 +32,88 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Contrail+One" rel="stylesheet">
         <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
         <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+		<style>
+			
+	        progress::-webkit-progress-bar {
+	            background-color: transparent;
+	        }
+
+	        progress::-webkit-progress-value {
+	            background-color: rgb(225,181,74);
+	            -webkit-transition: width 0.5s ease-in-out;
+	        }
+
+	        progress::-moz-progress-bar {
+	            background-color: rgb(225,181,74);
+	            transition: width 0.5s ease-in-out;
+	            -moz-transition: width 0.5s ease-in-out;
+	        }
+
+	        progress::-ms-fill {
+	            background-color: rgb(225,181,74);
+	            -ms-transition: width 0.5s ease-in-out;
+	        }
+
+	        svg text {
+	            font-family: 'Contrail One', cursive;
+	            font-size: 16px;
+	            fill: #fff;
+                stroke: rgba(0,0,0,0.5);
+                stroke-width: 0.1;
+                text-shadow: 0px 2px 2px rgba(0,0,0,0.8);
+	        }
+			
+	        path.line {
+	            stroke: rgb(15,47,75) !important;
+	        }
+	        path.marker-path {
+	            stroke: rgb(15,47,75) !important;
+	            fill: rgb(15,47,75) !important;
+	        }
+			
+			#nav {
+				background: rgb(15,47,75);
+			}
+			
+			div.author, div.citation {
+				padding: 0px 30px;
+				color: white;
+			}
+			
+			#text h2, #text h3 {
+				font-family: 'Contrail One', cursive;
+			}
+			#text h2, #text h3, a, a:hover {
+				color: rgb(15,47,75);
+			}
+			
+			a {
+				border-bottom: solid 3px rgba(15,47,75,.7);
+			}
+			a.location {
+				border-bottom: dotted 1px rgb(15,47,75);
+			}
+			
+			a:hover {
+				background-color: rgba(225,181,74,0.2) !important;
+			}
+			
+			#text .video-title h2 {
+				font-family: 'Contrail One', cursive;
+				font-size: 60px;
+				color: rgb(225,181,74);
+			}
+			
+			div.video-title {
+				background: linear-gradient(to bottom, rgba(15,47,75,1) 10%, rgba(15,47,75,0));
+			}
+			
+			*rgb(15,47,75);
+			*rgb(225,181,74);
+		</style>
     </head>
     <body class="scrolled">
     <progress></progress>
@@ -72,7 +152,7 @@
         <div id="foreground"></div>
         <div id="photos" style=""><div id="photo-caption" class="title-hidden"></div></div>
         <div id="shadow"></div>
-        <div id="toggle-map" class="focus-green"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+        <div id="toggle-map" class="focus-green" style="background: rgb(225,181,74);"><span class="fa fa-map-o" style="color: rgb(15,47,75); margin: 8px;"></span></div>
         <div id="main-nav" class="light">
             <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
                 <svg width="1000px" height="1000px">
@@ -101,12 +181,19 @@
             <div class="content scenes">
 
                 <section id="introduction" class="scene" data-scene-id="place1" title="Introduction">
+				                    <div class="video-title" style="z-index: 10; position: absolute; top: 0px; margin: 0px -30px; height: 100vh;"><h2 class="title" style="z-index: 10; padding: 30px; margin: 0px 80px 0px 0px;">The Joola: The Geographical Dimensions of Africa's Greatest Shipwreck</h2>
 
-                    <h2 class="title title-photo" style="background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), url();">The Joola: The Geographical Dimensions of Africa's Greatest Shipwreck</h2>
+					                    <div class="author"><span class="name"> Karen Barton</span>, <span class="organization">Department of Geography & GIS, University of Northern Colorado</span></div>
+					                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2016.60.4f</div>
+				                    </div>
 
-                    <div class="author"><span class="name"> Karen Barton</span>, <span class="organization">Department of Geography & GIS, University of Northern Colorado</span></div>
-                    <div class="citation"><span class="citation-label">DOI:</span> ENTER THE DOI HERE WHEN YOU GET IT.</div>
-
+				                    <div style="position: relative; width: calc(100% + 60px); margin: 0px -30px; height: 100vh; overflow: hidden; "><video id="titlevideo" style="width: 100%;
+				    position: relative;" loop="true" autoplay="true" autostart="true" muted="true" poster="img/video.png">
+				                        <source src="media/intro.m4v" type="video/mp4">
+				                        Sorry, your browser doesn't support embedded videos,
+				                        but don't worry, you can <a href="media/intro.m4v">download it</a>
+				                        and watch it with your favorite video player!
+				                    </video><div class="cover" style="pointer-events: none; position: absolute; top: 0px; height: 100vh; width: 100%;"></div></div>
             <h3>Introduction</h3>
                 <p>
            In 2002, the <i>Joola</i>, a government-owned Senegalese ferry, capsized off the coast of <a href="#" class="location" data-layer-id="gambia">The Gambia</a>, killing an estimated 1,863 people and leaving 64 survivors (<a href="#figure1"> Figure 1</a> ). The <i>Joola</i> is recognized as the second-worst non-wartime maritime disaster in world history, yet few Americans are awareof this event, nor of the impacts it had on Senegambian society. Despite more casualties than the <i>Titanic</i>, to date there has ben no academic literature devoted to the <i>Joola</i> incident, nor a comprehensive scholarly investigation into how the agricultural and fishing communities of <a href="#" class="location" data-layer-id="southern_senegal">Southern Senegal</a> were disproportionately affected by the event. Among those lost were 450 youth, en route to the capital of <a href="#" class="location" data-layer-id="dakar">Dakar</a>, where many young people pursued postsecondary education not available in their home communities. The lack of attention to the <i>Joola</i> tragedy is not surprising, given how little the Western media covers the thousands of events each year that take place across Sub-Saharan Africa, both positive and negative.
@@ -406,15 +493,7 @@
                         "fill": false,
                         "stroke": false,
                         "text": {
-                            "text": "Southern Senegal",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            "text": "Southern Senegal"
                         }
                     },
                     "data": {
@@ -435,15 +514,7 @@
                         "fill": false,
                         "stroke": false,
                         "text": {
-                            "text": "Casamance",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            "text": "Casamance"
                         }
                     },
                     "data": {
@@ -474,14 +545,7 @@
                         "opacity": 0.3,
                         "radius": 4,
                         "text": {
-                            "text": "Dakar",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Dakar"
                         }
                     }
                 }, {
@@ -502,14 +566,7 @@
                         "radius": 13,
                         "opacity": 0.3,
                         "text": {
-                            "text": "The Gambia River",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "The Gambia River"
                         }
                     }
                 }, {
@@ -530,14 +587,7 @@
                         "opacity": 0.3,
                         "radius": 4,
                         "text": {
-                            "text": "Ziguinchor",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Ziguinchor"
                         }
                     }
                 },{
@@ -558,14 +608,7 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "Netherlands",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Netherlands",
                         }
                     }
                 },{
@@ -586,14 +629,7 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "France",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "France"
                         }
                     }
                 },{
@@ -614,14 +650,7 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "Switzerland",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Switzerland"
                         }
                     }
                 },{
@@ -642,14 +671,7 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "Spain",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Spain"
                         }
                     }
                 },
@@ -672,14 +694,7 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "Norway",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Norway"
                         }
                     }
                 },{
@@ -701,14 +716,7 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "Belgium",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Belgium"
                         }
                     }
                 },{
@@ -730,14 +738,7 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "Cameroon",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Cameroon"
                         }
                     }
                 },{
@@ -759,14 +760,7 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "Ghana",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Ghana"
                         }
                     }
                 },{
@@ -788,14 +782,8 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "Lebanon",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Lebanon"
+
                         }
                     }
                 },{
@@ -817,14 +805,7 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "Nigeria",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Nigeria"
                         }
                     }
                 },{
@@ -846,14 +827,7 @@
                         "radius": 7,
                         "opacity": 0.3,
                         "text": {
-                            // "text": "Guinea",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Guinea"
                         }
                     }
                 },{
@@ -875,14 +849,7 @@
                         "radius": 9,
                         "opacity": 0.3,
                         "text": {
-                            "text": "Mlomp",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Mlomp"
                         }
                     }
                 }, {
@@ -902,14 +869,7 @@
                         "weight": 10,
                         "opacity": 0.3,
                         "text": {
-                            "text": "Casamance River",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
-                                "font-weight": "bold"
-                            }
+                            "text": "Casamance River"
                         }
                     }
                 }, {
@@ -1073,7 +1033,20 @@
                         "radius": 8,
                         "color": "#333",
                         "opacity": 1,
-                        "dropShadow": true
+                        "dropShadow": true,
+										weight: 4,
+										//dropShadow: true,
+										opacity: 0.6,
+										markers: {
+											end: {
+												size: 2,
+												exaggeration: 1.5,
+												style: {
+													fillOpacity: 1
+												}
+											}
+										}
+
                     }
                 },{
                     "id": "dakar_port",
@@ -1137,7 +1110,22 @@
                         "radius": 8,
                         "color": "#333",
                         "opacity": 1,
-                        "dropShadow": true
+                        "dropShadow": true,
+						weight: 4,
+						//dropShadow: true,
+						opacity: 0.6,
+						markers: {
+							end: {
+								size: 2,
+								exaggeration: 1.5,
+								style: {
+									fillOpacity: 1
+								}
+							}
+						},
+						animate: {
+							duration: 5000
+						}
                     }
                 },{
                     "id": "g",
@@ -3102,7 +3090,8 @@
                         "layers": [
                             
                             // {"idRef": "casamance"},
-                            // {"idRef": "dakar"},
+                            // {"idRef": "dakar"},,
+							{"idRef": "truck_route"},
                             {"idRef": "gambia_river"},
                             {"idRef": "ziguinchor"},
                             {"idRef": "diop_university"}
@@ -3376,6 +3365,9 @@
         <script>
             $(document).ready(function () {
 
+				var player = document.getElementById("titlevideo");
+				player.playbackRate = 0.8;
+				
                 $('#nav li.previous a').on('click', function (e) {
                     e.preventDefault();
                     var $prev = $('#nav').find('.sections li.active').prev();
