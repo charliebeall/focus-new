@@ -98,7 +98,7 @@
 			#text a {
 				border-bottom: solid 3px rgba(15,47,75,.7);
 			}
-			a.location {
+			#text a.location {
 				border-bottom: dotted 1px rgb(15,47,75);
 			}
 			
@@ -233,7 +233,7 @@
                 
                 <section id="3" class="scene" data-scene-id="place3">
                 <p>
-            For farmers and fishers wishing to get products to market in Dakar, the most direct road from the Casamance’s capital city of <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> is through The Gambia (<a href="#figure3">Figure 3</a>). Transporting products through this small nation requires crossing two international borders and the <a href="#" class="location" data-layer-id="gambia_river">River Gambia</a>, which makes the journey expensive and slow owing to frequent delays with the local ferry. The political unrest in small pockets of northern  <a href="#" class="location" data-layer-id="casamance">Casamance</a> and The Gambia may also render the trip via road dangerous. <a href="#" class="location" data-layer-id="truck_point_2">Bypassing The Gambia to reach Dakar by road </a> can often take two days, yet plane flights from Ziguinchor are costly, limited, and thus financially out of reach for most small-scale producers. In 1990, the <i>Joola</i> ferry thus began transporting passengers and vehicles between <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> and <a href="#" class="location" data-layer-id="dakar">Dakar</a> around The Gambian order to help combat these logistical challenges. When service on the ferry first commenced, it was perceived as a safe, inexpensive, and reliable transportation lifeline for communities residing in the region, and a direct link to the modern world of Dakar. Although most of the passengers onboard the <i>Joola</i> worked in Ziguinchor’s service sector, it was also common for students to utilize the ferry transport system on their way to and from the <a href="#" class="location" data-layer-id="diop_university">Cheik Anta Diop University</a> (Senegal’s national university in Dakar). Similarly, the ship was periodically employed to transport Senegalese troops and military supplies needed for the ongoing separatist conflict in Casamance. On one level, this new linkage between <a href="#" class="location" data-layer-id="dakar">Dakar</a> and <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> represented a symbolic national attempt to address the geographic marginalization of the southern Jola people.
+            For farmers and fishers wishing to get products to market in Dakar, the most direct road from the Casamance’s capital city of <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> is through The Gambia (<a href="#figure3">Figure 3</a>). Transporting products through this small nation requires crossing two international borders and the <a href="#" class="location" data-layer-id="gambia_river">River Gambia</a>, which makes the journey expensive and slow owing to frequent delays with the local ferry. The political unrest in small pockets of northern  <a href="#" class="location" data-layer-id="casamance">Casamance</a> and The Gambia may also render the trip via road dangerous. <a href="#" class="location" data-layer-id="truck_route">Bypassing The Gambia to reach Dakar by road </a> can often take two days, yet plane flights from Ziguinchor are costly, limited, and thus financially out of reach for most small-scale producers. In 1990, the <i>Joola</i> ferry thus began transporting passengers and vehicles between <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> and <a href="#" class="location" data-layer-id="dakar">Dakar</a> around The Gambian order to help combat these logistical challenges. When service on the ferry first commenced, it was perceived as a safe, inexpensive, and reliable transportation lifeline for communities residing in the region, and a direct link to the modern world of Dakar. Although most of the passengers onboard the <i>Joola</i> worked in Ziguinchor’s service sector, it was also common for students to utilize the ferry transport system on their way to and from the <a href="#" class="location" data-layer-id="diop_university">Cheik Anta Diop University</a> (Senegal’s national university in Dakar). Similarly, the ship was periodically employed to transport Senegalese troops and military supplies needed for the ongoing separatist conflict in Casamance. On one level, this new linkage between <a href="#" class="location" data-layer-id="dakar">Dakar</a> and <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> represented a symbolic national attempt to address the geographic marginalization of the southern Jola people.
                 </p>
             </section>
 
@@ -493,6 +493,17 @@
         <!-- endinject -->
         <script src="../../../js/combined.js"></script>
         <script>
+			//rgb(225,181,74)
+			Focus.Map = Focus.Map || {};
+
+			Focus.Map.defaultOptions = {
+				color: "rgb(225,181,74)",
+				fillColor: "rgb(225,181,74)",
+			    radius: 6,
+			    weight: 10,
+			    opacity: 0.3,
+				lineCap: 'square'
+			};
             var scenes = {
                 "features": [{
                     "id": "southern_senegal",
@@ -571,9 +582,6 @@
                         }
                     },
                     "style": {
-                        "weight": 13,
-                        "radius": 13,
-                        "opacity": 0.3,
                         "text": {
                             "text": "The Gambia River"
                         }
@@ -591,10 +599,8 @@
                             "name": "Ziguinchor",
                         }
                     },
+					
                     "style": {
-                        "weight": 5,
-                        "opacity": 0.3,
-                        "radius": 4,
                         "text": {
                             "text": "Ziguinchor"
                         }
@@ -613,9 +619,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Netherlands"
                         }
@@ -634,9 +637,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "France"
                         }
@@ -655,9 +655,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Switzerland"
                         }
@@ -676,9 +673,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Spain"
                         }
@@ -699,9 +693,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Norway"
                         }
@@ -721,9 +712,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Belgium"
                         }
@@ -743,9 +731,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Cameroon"
                         }
@@ -765,9 +750,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Ghana"
                         }
@@ -787,9 +769,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Lebanon"
                         }
@@ -809,9 +788,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Nigeria"
                         }
@@ -831,9 +807,6 @@
                         }
                     },
                     "style": {
-                        "weight": 7,
-                        "radius": 7,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Guinea"
                         }
@@ -853,9 +826,6 @@
                         }
                     },
                     "style": {
-                        "weight": 9,
-                        "radius": 9,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Mlomp"
                         }
@@ -874,8 +844,6 @@
                         }
                     },
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Casamance River"
                         }
@@ -893,6 +861,7 @@
                             "name": "Route de la Corniche Ouest",
                         }
                     },
+					/*
                     "style": {
                         // "text": "Route de la Corniche Ouest",
                         "fillColor": "orange",
@@ -900,7 +869,7 @@
                         "radius": 8,
                         "opacity": 1,
                         "dropShadow": true
-                    }
+                    }*/
                 }, {
                     "id": "diop_university",
                     "type": "geojson",
@@ -914,6 +883,7 @@
                             "name": "Cheik Anta Diop University",
                         }
                     },
+					/*
                     "style": {
                         // "text": "Cheik Anta Diop University",
                         "fillColor": "orange",
@@ -922,6 +892,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 }, {
                     "id": "cap_skirring",
                     "type": "geojson",
@@ -935,6 +906,7 @@
                             "name": "Cap Skirring",
                         }
                     },
+					/*
                     "style": {
                         // "text": "Cap Skirring",
                         "fillColor": "orange",
@@ -943,6 +915,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 },{
                     "id": "souvenir",
                     "type": "geojson",
@@ -956,6 +929,7 @@
                             "name": "Place du Souvenir",
                         }
                     },
+					/*
                     "style": {
                         // "text": "Place du Souvenir",
                         "fillColor": "orange",
@@ -964,6 +938,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 },{
                     "id": "yoff",
                     "type": "geojson",
@@ -977,6 +952,7 @@
                             "name": "Yoff",
                         }
                     },
+					/*
                     "style": {
                         "fillColor": "orange",
                         "radius": 8,
@@ -984,6 +960,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 },{
                     "id": "uni_zig",
                     "type": "geojson",
@@ -997,6 +974,7 @@
                             "name": "University of Ziguinchor",
                         }
                     },
+					/*
                     "style": {
                         // "text": "University of Ziguinchor",
                         "fillColor": "orange",
@@ -1005,6 +983,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 },{
                     "id": "carabane",
                     "type": "geojson",
@@ -1018,6 +997,7 @@
                             "name": "Island of Carabane",
                         }
                     },
+					/*
                     "style": {
                         // "text": "Island of Carabane",
                         "fillColor": "orange",
@@ -1026,6 +1006,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                     // ---
                 },{
                     "id": "joola_route",
@@ -1083,6 +1064,7 @@
                             "name": "Port of Dakar",
                         }
                     },
+					/*
                     "style": {
                         // "text": "Port of Dakar",
                         "fillColor": "orange",
@@ -1091,6 +1073,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 },{
                     "id": "ziguinchor_port",
                     "type": "geojson",
@@ -1104,6 +1087,7 @@
                             "name": "Port of Ziguinchor",
                         }
                     },
+					/*
                     "style": {
                         // "text": "Port of Ziguinchor",
                         "fillColor": "orange",
@@ -1112,6 +1096,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 }, {
                     "id": "joola_wreck",
                     "type": "geojson",
@@ -1125,6 +1110,7 @@
                             "name": "Joola Ferry Wreck",
                         }
                     },
+					/*
                     "style": {
                         "fillColor": "orange",
                         "radius": 8,
@@ -1132,6 +1118,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 },{
                     "id": "truck_route",
                     "type": "geojson",
@@ -1142,9 +1129,9 @@
                         }
                     },
                     "style": {
-                        "fillColor": "orange",
+                        //"fillColor": "orange",
                         "radius": 8,
-                        "color": "#333",
+                        //"color": "#333",
                         "opacity": 1,
                         "dropShadow": true,
 						weight: 4,
@@ -1172,6 +1159,7 @@
                             "name": "Truck Point 1",
                         }
                     },
+					/*
                     "style": {
                         "fillColor": "orange",
                         "radius": 8,
@@ -1179,6 +1167,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 },{
                     "id": "truck_point_2",
                     "type": "geojson",
@@ -1188,6 +1177,7 @@
                             "name": "Truck Point 2",
                         }
                     },
+					/*
                     "style": {
                         "fillColor": "orange",
                         "radius": 8,
@@ -1195,6 +1185,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 },{
                     "id": "truck_point_3",
                     "type": "geojson",
@@ -1206,6 +1197,7 @@
                             "name": "Truck Point 3",
                         }
                     },
+					/*
                     "style": {
                         "fillColor": "orange",
                         "radius": 8,
@@ -1213,6 +1205,7 @@
                         "opacity": 1,
                         "dropShadow": true
                     }
+					*/
                 },{
                      "id": "senegal",
                      "type": "geojson",
@@ -2859,37 +2852,42 @@
                         ]
                         ]
                         }},
+						/*
                     "style": {
                         "fillColor": "orange",
                         "radius": 8,
                         "color": "orange",
                         "opacity": 1,
                         "dropShadow": true
-                    }
+                    }*/
                 } ],
                 "scenes": [
                     {
                         "id": "place1",
                         "baseLayer": [{
-                            "type": "wms",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "params": {
-                                "layers": "GEBCO_LATEST"
-                            },   
-                            // "type": "esri-basemap",
-                            // "url": "Imagery",
-                            "options": {
-                                "detectRetina": true,
-                                "imagerySet": "AerialWithLabels",
-
-                        }}],
+						                            "type": "wmts",
+						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
+						                            "params": {
+						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
+						                                maxNativeZoom: 9,
+						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
+						                                time: '2016-05-17',
+						                                detectRetina: true,
+						                                subdomains: "abc",
+						                                noWrap: true,
+						                                continuousWorld: true,
+						                                crs: L.CRS.EPSG3857,
+						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
+						                            }
+						                        }],
                         //27.63072, -113.77222
                         "layers": [
                             {"idRef": "senegal"},
                             // {"idRef": "southern_senegal"},
                             {"idRef": "casamance"},
                             {"idRef": "dakar"},
-							{"idRef": "gambia"}
+							{"idRef": "gambia"},
+							{"idRef": "gambia_river"}
 
                         ],
                         //"center": [-113.081667,26.846944],
@@ -2904,23 +2902,27 @@
                     {
                         "id": "place2",
                         "baseLayer": [{
-                            "type": "wms",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "params": {
-                                "layers": "GEBCO_LATEST"
-                            }, 
-                            // "type": "esri-basemap",
-                            // "url": "Imagery",
-                            "options": {
-                                "detectRetina": true,
-                                "imagerySet": "AerialWithLabels",
-
-                        }}],
+						                            "type": "wmts",
+						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
+						                            "params": {
+						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
+						                                maxNativeZoom: 9,
+						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
+						                                time: '2016-05-17',
+						                                detectRetina: true,
+						                                subdomains: "abc",
+						                                noWrap: true,
+						                                continuousWorld: true,
+						                                crs: L.CRS.EPSG3857,
+						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
+						                            }
+						                        }],
                         "layers": [
                             {"idRef": "senegal"}, //FIX ME: can take out for this scene
                             {"idRef": "casamance"},
                             {"idRef": "dakar"},
                             {"idRef": "gambia_river"},
+							{"idRef": "ziguinchor"}
                             // {"idRef": "gambia"}
 
                         ],
@@ -2937,25 +2939,21 @@
                         //"center": [-115.081667,27.846944],
                         "zoom": 8,
                         "layers": [
+                            {"idRef": "truck_route"},
                             {"idRef": "ziguinchor"},
                             {"idRef": "casamance"},
+							{"idRef": "diop_university"},
                             {"idRef": "dakar"},
                             {"idRef": "gambia_river"},
-                            {"idRef": "diop_university"},
-                            {"idRef": "truck_route"},
-                            {"idRef": "truck_point_1"},
-                            {"idRef": "truck_point_2"},
-                            {"idRef": "truck_point_3"}
+							{"idRef": "cap_skirring"}
                         ],
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+                        	"type": "esri-basemap",
+                        	"url": "DarkGray",
+                        	"options": {
+                            	"detectRetina": true
+                        	}
+						}],
                         "style": {
                             "filter": "sepia(0%)",
                             "opacity": 0.8,
@@ -2995,19 +2993,29 @@
                         //"center": [-115.081667,27.846944],
                         "zoom": 7,
                         "layers": [
+							{"idRef": "senegal"},
                             {"idRef": "casamance"},
                             {"idRef": "dakar"},
                             {"idRef": "ziguinchor"},
-                            {"idRef": "mlomp"},
-                            {"idRef": "senegal"}
+                            {"idRef": "mlomp"}
+                            
                         ],
                         "baseLayer": [{
-                            "type": "esri-basemap",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "options": {
-                                "detectRetina": true
-                            },
-                        }],
+						                            "type": "wmts",
+						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
+						                            "params": {
+						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
+						                                maxNativeZoom: 9,
+						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
+						                                time: '2016-05-17',
+						                                detectRetina: true,
+						                                subdomains: "abc",
+						                                noWrap: true,
+						                                continuousWorld: true,
+						                                crs: L.CRS.EPSG3857,
+						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
+						                            }
+						                        }],
                         "style": {
                             "filter": "sepia(0%)",
                             "opacity": 0.8,
@@ -3021,17 +3029,27 @@
                             {"idRef": "casamance"},
                             // {"idRef": "ziguinchor"},
                             {"idRef": "joola_wreck"},
+							{"idRef": "joola_route"},
                             {"idRef": "dakar_port"},
-                            {"idRef": "ziguinchor_port"},
-                            {"idRef": "joola_route"}
+                            {"idRef": "ziguinchor_port"}
+                            
                         ],
                         "baseLayer": [{
-                            "type": "esri-basemap",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "options": {
-                                "detectRetina": true
-                            },
-                        }],
+						                            "type": "wmts",
+						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
+						                            "params": {
+						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
+						                                maxNativeZoom: 9,
+						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
+						                                time: '2016-05-17',
+						                                detectRetina: true,
+						                                subdomains: "abc",
+						                                noWrap: true,
+						                                continuousWorld: true,
+						                                crs: L.CRS.EPSG3857,
+						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
+						                            }
+						                        }],
                         "style": {
                             "filter": "sepia(0%)",
                             "opacity": 0.8,
@@ -3058,7 +3076,7 @@
                         ],
                         "baseLayer": [{
                             "type": "esri-basemap",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                            "url": "DarkGray",
                             "options": {
                                 "detectRetina": true
                             },
@@ -3073,19 +3091,27 @@
                         //"center": [-115.081667,27.846944],
                         "zoom": 8,
                         "layers": [
+							{"idRef": "gambia"},
                             {"idRef": "dakar"},
                             {"idRef": "ziguinchor"},
                             {"idRef": "carabane"}
                         ],
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+						                            "type": "wmts",
+						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
+						                            "params": {
+						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
+						                                maxNativeZoom: 9,
+						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
+						                                time: '2016-05-17',
+						                                detectRetina: true,
+						                                subdomains: "abc",
+						                                noWrap: true,
+						                                continuousWorld: true,
+						                                crs: L.CRS.EPSG3857,
+						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
+						                            }
+						                        }],
                         "style": {
                             "filter": "sepia(0%)",
                             "opacity": 0.8,
@@ -3115,13 +3141,10 @@
 
                         // }}],
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
+                        "type": "esri-basemap",
+                        "url": "DarkGray",
                         "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
+                            "detectRetina": true
                         }}],
                         "style": {
                             "filter": "sepia(0%)",
@@ -3140,12 +3163,21 @@
                             // {"idRef": "casamance_river"}
                         ],
                         "baseLayer": [{
-                            "type": "esri-basemap",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "options": {
-                                "detectRetina": true
-                            },
-                        }],
+						                            "type": "wmts",
+						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
+						                            "params": {
+						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
+						                                maxNativeZoom: 9,
+						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
+						                                time: '2016-05-17',
+						                                detectRetina: true,
+						                                subdomains: "abc",
+						                                noWrap: true,
+						                                continuousWorld: true,
+						                                crs: L.CRS.EPSG3857,
+						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
+						                            }
+						                        }],
                         "style": {
                             "filter": "sepia(0%)",
                             "opacity": 0.8,
@@ -3156,19 +3188,28 @@
                         //"center": [-114.8986353,27.6924942],
                         "zoom": 7,
                         "baseLayer": [{
-                            "type": "esri-basemap",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "options": {
-                                "detectRetina": true
-                            },
-                        }],
+						                            "type": "wmts",
+						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
+						                            "params": {
+						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
+						                                maxNativeZoom: 9,
+						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
+						                                time: '2016-05-17',
+						                                detectRetina: true,
+						                                subdomains: "abc",
+						                                noWrap: true,
+						                                continuousWorld: true,
+						                                crs: L.CRS.EPSG3857,
+						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
+						                            }
+						                        }],
                         "layers": [
+							{"idRef": "senegal"},
+							{"idRef": "gambia"},
                             {"idRef": "ziguinchor"},
                             {"idRef": "dakar"},
-                            {"idRef": "gambia"},
-                            {"idRef": "casamance"},
-                            // {"idRef": "diop_university"},
-                            {"idRef": "senegal"},
+                            {"idRef": "casamance"}
+                            
                         ],
                         "style": {
                             "filter": "sepia(0%)",
@@ -3180,20 +3221,18 @@
                         //"center": [-115.081667,27.846944],
                         "zoom": 7,
                         "layers": [
-                            {"idRef": "ziguinchor"},
+							{"idRef": "senegal"},
+                            
                             {"idRef": "diop_university"},
-                            {"idRef": "senegal"},
                             {"idRef": "casamance"},
                             {"idRef": "uni_zig"},
+							{"idRef": "ziguinchor"}
                         ],
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
+                        "type": "esri-basemap",
+                        "url": "DarkGray",
                         "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
+                            "detectRetina": true
                         }}],
                         "style": {
                             "filter": "sepia(0%)",
@@ -3205,21 +3244,31 @@
                         //"center": [-115.081667,27.846944],
                         "zoom": 7,
                         "layers": [
+							{"idRef": "senegal"},
+							{"idRef": "gambia"},
                             {"idRef": "casamance"},
-                            {"idRef": "dakar"},
-                            {"idRef": "gambia"},
-                            {"idRef": "senegal"},
-                            {"idRef": "ziguinchor"},
+                            
                             {"idRef": "uni_zig"},
                             {"idRef": "diop_university"},
+							{"idRef": "dakar"},
+							{"idRef": "ziguinchor"}
                         ],
                         "baseLayer": [{
-                            "type": "esri-basemap",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "options": {
-                                "detectRetina": true
-                            },
-                        }],
+						                            "type": "wmts",
+						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
+						                            "params": {
+						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
+						                                maxNativeZoom: 9,
+						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
+						                                time: '2016-05-17',
+						                                detectRetina: true,
+						                                subdomains: "abc",
+						                                noWrap: true,
+						                                continuousWorld: true,
+						                                crs: L.CRS.EPSG3857,
+						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
+						                            }
+						                        }],
                         "style": {
                             "filter": "sepia(0%)",
                             "zoom": 3,
