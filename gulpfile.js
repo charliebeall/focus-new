@@ -271,7 +271,7 @@ gulp.task('copy2020', function() {
 gulp.task('html', function () {
     return gulp.src([
         'src/**/*.html',
-        'src/**/*.{png,jpg,jpeg,svg,ico,mp4,mp3,webm,ogg,csv,json}',
+        'src/**/*.{png,jpg,jpeg,svg,ico,mp4,m4v,mp3,webm,ogg,csv,json}',
         'src/**/combined.js',
         'src/**/combined.css',
         'src/**/*.js'

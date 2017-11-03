@@ -639,7 +639,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 tooltipOptions: {
                     iconSize: null,
                     iconAnchor: new L.Point(-5, 0)
-                }
+                },
+				getEdge: L.Graph.EDGESTYLE[layerDef.edgeStyle || 'STRAIGHT']
             });
         }
         else if (layerDef.type === 'geojson') {
