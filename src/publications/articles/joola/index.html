@@ -4,13 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>The Joola: The Geographical Dimensions of Africa's Greatest Shipwreck</title>
-        <meta name="description" content="FOCUS on Geography:  From Ranching to Fishing – The Cultural Landscape of the Northern Pacific Coast of Baja California, Mexico">
+        <meta name="description" content="FOCUS on Geography:  The Joola: The Geographical Dimensions of Africa's Greatest Shipwreck">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="geography,baja,mexico,map">
-        <meta name="author" content="Antoinette WinklerPrins">
-        <meta name="author" content="Pablo Alvarez">
-        <meta name="author" content="Gerardo Bocco">
-        <meta name="author" content="Ileana Espejel">
+        <meta name="keywords" content="geography,senegal,gambia,joola,map">
+        <meta name="author" content="Karen Barton">
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -83,9 +80,10 @@
 				background: rgb(15,47,75);
 			}
 			
-			div.author, div.citation {
+			#text div.author, #text div.citation {
 				padding: 0px 30px;
 				color: white;
+				width: calc(100% - 60px);
 			}
 			
 			#text h2, #text h3 {
@@ -116,8 +114,11 @@
 				background: linear-gradient(to bottom, rgba(15,47,75,1) 10%, rgba(15,47,75,0));
 			}
 			
-			*rgb(15,47,75);
-			*rgb(225,181,74);
+			@media (max-width:741px) {
+				div.start {
+					display: none !important;
+				}
+			}
 		</style>
     </head>
     <body class="scrolled">
@@ -190,6 +191,12 @@
 
 					                    <div class="author"><span class="name"> Karen Barton</span>, <span class="organization">Department of Geography & GIS, University of Northern Colorado</span></div>
 					                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2016.60.4f</div>
+										<div class="start" style="
+										    width: 100%;
+										    display: block;
+										    position: absolute;
+										    bottom: 20px;
+										"><a href="#introduction-text" style="color: rgba(225,181,74,1); border-bottom: none !important; width: 100%; text-align: center; font-family: 'Contrail One', cursive; font-size: 20px;"><div>Start Reading</div><div class="fa fa-chevron-down" style="display: block;"></div></a></div>
 				                    </div>
 
 				                    <div style="position: relative; width: calc(100% + 60px); margin: 0px -30px; height: 100vh; overflow: hidden; "><video id="titlevideo" style="width: 100%;
@@ -199,9 +206,11 @@
 				                        but don't worry, you can <a href="media/intro.m4v">download it</a>
 				                        and watch it with your favorite video player!
 				                    </video><div class="cover" style="pointer-events: none; position: absolute; top: 0px; height: 100vh; width: 100%;"></div></div>
-            <h3>Introduction</h3>
+            <h3 id="introduction-text">Introduction</h3>
+            <div id="figure1" class="figure " style="background-image:url(img/figure1.jpg);"></div>
+            <div class="caption">Figure 1: MV Joola in 1991. Source: Wikimedia Commons</div>
                 <p>
-           In 2002, the <i>Joola</i>, a government-owned Senegalese ferry, capsized off the coast of <a href="#" class="location" data-layer-id="gambia">The Gambia</a>, killing an estimated 1,863 people and leaving 64 survivors (<a href="#figure1"> Figure 1</a> ). The <i>Joola</i> is recognized as the second-worst non-wartime maritime disaster in world history, yet few Americans are awareof this event, nor of the impacts it had on Senegambian society. Despite more casualties than the <i>Titanic</i>, to date there has ben no academic literature devoted to the <i>Joola</i> incident, nor a comprehensive scholarly investigation into how the agricultural and fishing communities of Southern Senegal were disproportionately affected by the event. Among those lost were 450 youth, en route to the capital of <a href="#" class="location" data-layer-id="dakar">Dakar</a>, where many young people pursued postsecondary education not available in their home communities. The lack of attention to the <i>Joola</i> tragedy is not surprising, given how little the Western media covers the thousands of events each year that take place across Sub-Saharan Africa, both positive and negative.
+           In 2002, the <i>Joola</i>, a government-owned Senegalese ferry, capsized off the coast of <a href="#" class="location" data-layer-id="gambia">The Gambia</a>, killing an estimated 1,863 people and leaving 64 survivors (<a href="#figure1">Figure 1</a>). The <i>Joola</i> is recognized as the second-worst non-wartime maritime disaster in world history, yet few Americans are awareof this event, nor of the impacts it had on Senegambian society. Despite more casualties than the <i>Titanic</i>, to date there has ben no academic literature devoted to the <i>Joola</i> incident, nor a comprehensive scholarly investigation into how the agricultural and fishing communities of Southern Senegal were disproportionately affected by the event. Among those lost were 450 youth, en route to the capital of <a href="#" class="location" data-layer-id="dakar">Dakar</a>, where many young people pursued postsecondary education not available in their home communities. The lack of attention to the <i>Joola</i> tragedy is not surprising, given how little the Western media covers the thousands of events each year that take place across Sub-Saharan Africa, both positive and negative.
                 </p>
 
                  <p>
@@ -211,27 +220,27 @@
 
                 
 
-            <div id="figure1" class="figure " style="background-image:url(img/figure1.jpg);"></div>
-            <div class="caption">Figure 1: MV Joola in 1991. Source: Wiki Commons</div>
-            <div id="figure2" class="figure " style="background-image:url(img/figure2.jpg);"></div>
-            <div class="caption">Figure 2: The forest-savanna ecoregion of Casamance.</div>
+
 
             <section id="2" class="scene" data-scene-id="place2" title="Political and Resource History of Senegambia">
-
-                <h3> Political and Resource History of the Senegambi </h3>
+            
+            
+                <h3>Political and Resource History of the Senegambia</h3>
                 <p>
              In the wake of the Berlin Conference of 1855, the West African region known as Senegambia became another casualty of colonial cartography. England declared The <a href="#" class="location" data-layer-id="gambia_river">Gambia River</a> a British protectorate and the French, who maintained settlements along the Atlantic coast, were allocated the rest (De Jong and Gasser 2005). As a consequence, Senegal is one of the few modern states to have a political nation partially enclosed within its own territorial borders. These arbitrary colonial divisions split extended families in the region, challenge future transportation networks, and contribute to long-term disparities between north and south.
                 </p>
-
+            <div id="figure2" class="figure " style="background-image:url(img/figure2.jpg);"></div>
+            <div class="caption">Figure 2: The forest-savanna ecoregion of Casamance.</div>
                 <p>
              The Gambia bisects <a href="#" class="location" data-layer-id="senegal"> Senegal</a> along The <a href="#" class="location" data-layer-id="gambia_river">Gambia River</a> and penetrates 320 km easterly (and only 35 km in width) from the Atlantic Ocean. Historically, the southern arm of the country centered in <a href="#" class="location" data-layer-id="casamance">Casamance</a> has served as a rural resource base and a counterpoint to urban <a href="#" class="location" data-layer-id="dakar">Dakar</a>, the capital and the north at large. The Casamance region was once part of the Mandinka Empire of Kaabu(ca. 1537-1867), which was a province of the Mali Empire (ca. 1235-1600) before it became independent following the empire’s decline  (Ngom 2016). Now classified by the World Wildlife Fund as part of the forest-savanna ecoregion, the Casamance  has served as the nation’s breadbasket (<a href="#figure2">Figure 2</a>), where irrigation-fed rice, groundnuts, and mangoes are cultivated at a subsistence level (Evans 2005). In addition to agricultural resources, Senegal is also a nation of artisanal fisheries, a sector that employs more than 200,000 people operating lines, traps, and nets in traditional pirogues, and representing 22 percent of the state’s exports (Linares 1996; Evans 2005). Owing to these unique geographic conditions, the resource-rich Casamance is home to the majority of these artisanal fishermen and farmers (Cormier-Salem 1995).
                 </p>
             </section>
 
-            <div id="figure3" class="figure contain" style="background-image:url(img/figure3.jpg);"></div>
-            <div class="caption">Figure 3: Trucks at the Senegal-Gambia border. </div>
+            
                 
                 <section id="3" class="scene" data-scene-id="place3">
+		            <div id="figure3" class="figure contain" style="background-image:url(img/figure3.jpg);"></div>
+		            <div class="caption">Figure 3: Trucks at the Senegal-Gambia border. </div>
                 <p>
             For farmers and fishers wishing to get products to market in Dakar, the most direct road from the Casamance’s capital city of <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> is through The Gambia (<a href="#figure3">Figure 3</a>). Transporting products through this small nation requires crossing two international borders and the <a href="#" class="location" data-layer-id="gambia_river">River Gambia</a>, which makes the journey expensive and slow owing to frequent delays with the local ferry. The political unrest in small pockets of northern  <a href="#" class="location" data-layer-id="casamance">Casamance</a> and The Gambia may also render the trip via road dangerous. <a href="#" class="location" data-layer-id="truck_route">Bypassing The Gambia to reach Dakar by road </a> can often take two days, yet plane flights from Ziguinchor are costly, limited, and thus financially out of reach for most small-scale producers. In 1990, the <i>Joola</i> ferry thus began transporting passengers and vehicles between <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> and <a href="#" class="location" data-layer-id="dakar">Dakar</a> around The Gambian order to help combat these logistical challenges. When service on the ferry first commenced, it was perceived as a safe, inexpensive, and reliable transportation lifeline for communities residing in the region, and a direct link to the modern world of Dakar. Although most of the passengers onboard the <i>Joola</i> worked in Ziguinchor’s service sector, it was also common for students to utilize the ferry transport system on their way to and from the <a href="#" class="location" data-layer-id="diop_university">Cheik Anta Diop University</a> (Senegal’s national university in Dakar). Similarly, the ship was periodically employed to transport Senegalese troops and military supplies needed for the ongoing separatist conflict in Casamance. On one level, this new linkage between <a href="#" class="location" data-layer-id="dakar">Dakar</a> and <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> represented a symbolic national attempt to address the geographic marginalization of the southern Jola people.
                 </p>
@@ -242,14 +251,20 @@
                 <p>
             The Jola (or Diola) people, for which the ship was named, are the main ethnic group in the Casamance, but comprise only a small percentage (4 percent) of the state’s total population.The Wolof are the dominant ethnic group, comprising 43 percent of Senegal (Mahling Clark 2011). Colonial attempts to subjugate the Jola had little success, since they were known as fierce resisters, and over time, one of the few groups to have kept their culture intact. The Jola were also the last community to accept Islam or Christianity, and today they still maintain animistic traditions that center around a supreme being called Emit, or Ata Emit, the one who resides in the sky. Senegalese oral history shows us that like many indigenous religions in Africa, nature and the role of sacred forests and wetlands of the <a href="#" class="location" data-layer-id="casamance">Casamance</a> have great importance in their cosmology.
                 </p>
-
+	            <div id="figure4" class="figure" style="background-image:url(img/figure4.jpg);"></div>
+	            <div class="caption">Figure 4: Protecting property with the presence of the supernatural in Casamance. </div>
+	            <div id="figure5" class="figure " style="background-image:url(img/figure5.jpg);"></div>
+	            <div class="caption">Figure 5: Cows on the beach in Cap Skirring</div>
                 <p>
             Even everyday subsistence activities such as the rice harvest---a staple food in the region---are ritualized and perceived as spiritual events by local farmers and fishers <a href="#figure4">Figure 4</a>; Evans 2005). The Jola’s southern lowland base of the  <a href="#" class="location" data-layer-id="casamance">Casamance</a> is also known as one of the most beautiful geographic areas of Senegal. Seasonal rainfall is greater than in the northern Sahelian region, and the nutrient rich soils are fertile and well suited for subsistence agriculture. The natural aesthetic endowment of beaches and wetlands such as <a href="#" class="location" data-layer-id="cap_skirring">Cap Skirring</a> have made the region a good candidate for nature tourism (<a href="#figure5">Figure 5</a>), which was launched in the 1980s, but then hindered by the separatist war. By and large, the Casamance’s fertile soils and unique coastal location have helped facilitate the more long-term, sustainable economies of fishing and agriculture (Cormier-Salem 1994; <a href="#figure6">Figure 6</a> and <a href="#figure7"> 7 </a>).  
                 </p>
+            	<div id="figure6" class="figure " style="background-image:url(img/figure6.jpg);"></div>
+            	<div class="caption">Figure 6: Pirogues in Casamance</div>
+            	<div id="figure7" class="figure " style="background-image:url(img/figure7.jpg);"></div>
+            	<div class="caption">Figure 7: Mango sellers in southern Senegal</div>
             </section>
 
-            <div id="figure4" class="figure" style="background-image:url(img/figure4.jpg);"></div>
-            <div class="caption">Figure 4: Protecting property with the presence of the supernatural in Casamance. </div>
+            
 
             <section id="5" class="scene" data-scene-id="place5">
 
@@ -259,16 +274,15 @@
             The south’s---and by virtue, the Jola’s---economic and geographic marginalization within the larger state apparatus contributed to the founding of the Movement of Democratic Forces of Casamance (MFDC) in 1982 (Deets 2016). Then, beginning in the 1990s, this insurgency became characterized by sporadic violence, a development that exacerbated existing transportation challenges for those seeking to circumvent the conflict and continue their livelihoods. The war also directly affected subsistence economies, since conflicts with rebels altered the Jola’s summer harvesting activities. For example, the presence of landmines meant that farmers could not work in the fields in northern <a href="#" class="location" data-layer-id="casamance">Casamance</a> safely nor easily move their produce to markets.
                 </p>
 
-            <div id="figure5" class="figure " style="background-image:url(img/figure5.jpg);"></div>
-            <div class="caption">Figure 5: Cows on the beach in Cap Skirring</div>
 
-            
+
+            	<div id="figure8" class="figure " style="background-image:url(img/figure8.jpg);"></div>
+            	<div class="caption">Figure 8:  Elementary school classroom in the Tilene neighborhood of Ziguinchor (photo taken through the cement wall).</div>
                <p>
-            The state also retarded the south’s regional development by postponing establishing postsecondary institution in <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> until 2007. In Senegal, education is highly valued, and while UNESCO indicates that 38 percent of African adults (52 percent for Senegal) are illiterate,research by Ngom shows that current estimates do not reflect the actual literacy rate in predominantly Muslim countries like Senegal (UNESCO 2009). Undercounting results from omitting alternative forms of literacy. For example, in parts of Africa, literacy may take the form of Ajami, a localized Arabic script for use in commerce and everyday life, and learned in Quranic schools rather than state institutions (Ngom 2016). Despite Ajami’s widespread use inmarketing, political campaigns, and everyday life, the local language is not calculated as part of national statistics, and therefore the importance of literacy to local communities is often underestimated (<a href="#figure8">Figure 8</a>). 
+            The state also retarded the south’s regional development by postponing establishing a postsecondary institution in <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> until 2007. In Senegal, education is highly valued, and while UNESCO indicates that 38 percent of African adults (52 percent for Senegal) are illiterate,research by Ngom shows that current estimates do not reflect the actual literacy rate in predominantly Muslim countries like Senegal (UNESCO 2009). Undercounting results from omitting alternative forms of literacy. For example, in parts of Africa, literacy may take the form of Ajami, a localized Arabic script for use in commerce and everyday life, and learned in Quranic schools rather than state institutions (Ngom 2016). Despite Ajami’s widespread use in marketing, political campaigns, and everyday life, the local language is not calculated as part of national statistics, and therefore the importance of literacy to local communities is often underestimated (<a href="#figure8">Figure 8</a>). 
                 </p>
 
-            <div id="figure6" class="figure " style="background-image:url(img/figure6.jpg);"></div>
-            <div class="caption">Figure 6: Pirogues in Casamance</div>
+            
 
             
                         
@@ -277,27 +291,26 @@
                 </p>
             </section>
 
-            <div id="figure7" class="figure " style="background-image:url(img/figure7.jpg);"></div>
-            <div class="caption">Figure 7: Mango sellers in southern Senegal</div>
+
 
              <section id="6" class="scene" data-scene-id="place6">
-
+            
                 <h3> The <i>Joola</i> Ferry Disaster </h3>
 
                 <p>
-           Built in Germany for the Republic of Senegal, the MV <i>Joola</i> was employed on the Dakar <a href="#" class="location" data-layer-id="dakar_port">[port]</a> to Ziguinchor <a href="#" class="location" data-layer-id="ziguinchor_port">[port]</a> coastal <a href="#" class="location" data-layer-id="joola_route">route</a> and operated by the armed forces beginning in 1990. The <i>Joola</i> was a 2087 ton roll-on roll-off ferry (length: 79.5 m; beam: 12 m; draft: 3.1 m) with a carrying capacity of approximately 44 crew members, 536 passengers, and 35 cars. The ship was built to Senegalese specifications with the intent of transporting passengers and vehicles in both rivers and Atlantic coastal areas. The ferry had to be capable of navigating the shallow waters of the  <a href="#" class="location" data-layer-id="casamance">Casamance</a> and the deep-sea passage of 150 miles between ports (<a href="#figure9">Figure 9</a>). 
+           Built in Germany for the Republic of Senegal, the MV <i>Joola</i> was employed on the <a href="#" class="location" data-layer-id="dakar_port">Dakar</a> to <a href="#" class="location" data-layer-id="ziguinchor_port">Ziguinchor</a> coastal <a href="#" class="location" data-layer-id="joola_route">route</a> and operated by the armed forces beginning in 1990. The <i>Joola</i> was a 2087 ton roll-on roll-off ferry (length: 79.5 m; beam: 12 m; draft: 3.1 m) with a carrying capacity of approximately 44 crew members, 536 passengers, and 35 cars. The ship was built to Senegalese specifications with the intent of transporting passengers and vehicles in both rivers and Atlantic coastal areas. The ferry had to be capable of navigating the shallow waters of the  <a href="#" class="location" data-layer-id="casamance">Casamance</a> and the deep-sea passage of 150 miles between ports (<a href="#figure9">Figure 9</a>). 
                 </p>
-
+            <div id="figure9" class="figure " style="background-image:url(img/figure9.jpg);"></div>
+            <div class="caption">Figure 9: The Casamance River at Bignona, the main waterway of Ziguinchor.</div>
                 <p>
             Her seagoing stability was dependent on internal ballast of fuel and water, but its flat bottom hull and shallow-draft design did not facilitate them (Wiley 2012). The shipbuilder Neue Germersheimer Schiffswerft would later claim that the boat was designed solely as a coastal vessel, meaning she should sail no more than six hours (roughly fifty nautical miles) from shore. Others contended that the Joola was only intended for river waterways such as the Rhine or the Casamance River, though the Senegalese public was never made aware of these spatial restrictions. In fact, the boat was operated by the Senegalese military and not subject to conventional regulations of international maritime agencies.
                 </p>
             </section>
 
-            <div id="figure8" class="figure " style="background-image:url(img/figure8.jpg);"></div>
-            <div class="caption">Figure 8:  Elementary school classroom in the Tilene neighborhood of Ziguinchor (photo taken through the cement wall).</div>
+            
 
             <section id="7" class="scene" data-scene-id="place7">
-
+            
                 <p>
             Between September 13, 2001, and September 10, 2002, the <i>Joola</i> was out of operation, as it had undergone mechanical damage repair and replacement of the portside engine. Thus the ferry had only resumed operation for two weeks when it sank off the coast of The Gambia. People from fifteen countries, including the 
             <a href="#" class="location" data-layer-id="netherlands"> Netherlands, </a>
@@ -317,16 +330,15 @@
                 <p>
              Responsibility for the ferry wreck---while not the central focus of this narrative---has been widely debated at the regional and state level. As noted earlier, the <i>Joola</i>’s seagoing capabilities were frequently questioned, as was her service record. Simon Boissy, who managed the Joola Company for five years, reported that the disaster was the result of poor maintenance. A native of Casamance who lost family members in the event, Boissy stated that the ship was designed to last thirty to forty years, yet by 2002, after only twelve years in operation, she was found to be in “poor condition.”
                 </p>
-
+            <div id="figure10" class="figure " style="background-image:url(img/figure10.jpg);"></div>
+            <div class="caption">Figure 10: ndnuts (peanuts), mangoes, and numerous other products are prepared for shipment north.</div>
                 <p>
             Others argued with more specificity that the ship resumed service prematurely after insufficient engine repairs in the wake of its one-year hiatus. Critics suggest that her early return to sea was motivated by the Senegalese government’s wish to appease separatist rebel forces in Casamance, who were heavily dependent (like all those from the Casamance region)  upon shipping agricultural products---whether mangoes or palm oil---north to Dakar (<a href="#figure10">Figure 10</a>). This act of goodwill on the part of the government was also complicated by the fact that in the months before the accident, Senegalese truck drivers had been forced to pay higher fares in order to cross Gambia River. In addition to these increased tariffs, President Jammeh’s decades-long dictatorship made safety a concern for those crossing <a href="#" class="location" data-layer-id="gambia">The Gambia</a>. It was clear that the Senegalese government needed the <i>Joola</i> back in operation in order to smooth over and distract from the complicated geopolitics and economic realities of the South.
                 </p>
 
-            <div id="figure9" class="figure " style="background-image:url(img/figure9.jpg);"></div>
-            <div class="caption">Figure 9: The Casamance River at Bignona, the main waterway of Ziguinchor.</div>
+            
 
-            <div id="figure10" class="figure " style="background-image:url(img/figure10.jpg);"></div>
-            <div class="caption">Figure 10: ndnuts (peanuts), mangoes, and numerous other products are prepared for shipment north.</div>
+            
 
             </section>
 
@@ -343,11 +355,9 @@
             Some did not see overcrowding as the central cause in the <i>Joola</i> disaster, citing rather the impacts of a storm that had moved rapidly onto the coast of Senegambia. Indeed, the majority of tropical storms affecting Africa occur in September, the month of the shipwreck, and there are three existing tropical cyclone recording stations in West Africa---one in <a href="#" class="location" data-layer-id="dakar">Dakar</a>---designed to monitor such events. However, since easterly winds carry storms away from land, as in the case of Senegambia, these storms tend to be weak compared to those in the western Atlantic. Former Navy Commander Ousenou Combo said in remarks quoted by AP news agency that “there was no problem of weight or overloading of a nature that would cause this situation.” Rather, he implicated bad weather---or a “fierce, brief gale that had blown into the eastern Atlantic” (Associated Press 2002). While survivors of the shipwreck agree that the captain sailed into a storm at 11:00 pm, it is difficult to debunk the overcrowding hypothesis as a root cause. The 1,000 additional passengers on the <i>Joola</i> were well beyond the ship’s specified capacity, and while this may not have caused the sinking, it contributed to the overall death toll.
                 </p>
 
-            <div id="figure11" class="figure " style="background-image:url(img/figure11.jpg);"></div>
-            <div class="caption">Figure 11: African Renaissance Monument in Dakar, Sengal. Photo by Olivia Jackson</div>
+            
 
-            <div id="figure12" class="figure " style="background-image:url(img/figure12.jpg);"></div>
-            <div class="caption">Figure 12: Ziguinchor memorial near the Casamance River</div>            
+                   
                
                 <p>
             In the days following the event, officials would blame the storm in lieu of citing mechanical flaws. President Wade declared that the ship had been overloaded and accepted the resignations of two officials tied to the disaster: Transportation Minister Youssouph Sakho and Armed Forces Minister Youba Sambo. In 2003, President Wade announced the case was closed and blamed the incident on the <i>Joola</i>’s Captain, Issa Diarra, who ultimately died in the shipwreck. Survivors in Casamance and elsewhere were not satisfied with handling of the disaster nor of the concessions made to victims’ families and the French temporarily launched their own formal investigation into the disaster.
@@ -358,26 +368,31 @@
                 </p>
             </section>
 
-             <div id="figure13" class="figure " style="background-image:url(img/figure13.jpg);"></div>
-            <div class="caption">Figure 13: The forty-two numbered graves at Cimetiere Kantene des Victimes du Bateau le Joola in 2017</div>
+             
 
             <section id="9" class="scene" data-scene-id="place9">
-
-            <h3> Reparations and Rememberances of the <i>Joola</i> Shipwreck</h3>
+            
+            <h3>Reparations and Remembrances of the <i>Joola</i> Shipwreck</h3>
 
                 <p>
             Not all of the bodies from the shipwreck were recovered, which has been a source of frustration for victims’ families and survivors even to this day. In the cemetery of Mbao, a suburb of Dakar, over 100 of the <i>Joola</i>’s unidentified victims have been laid to rest---their graves numbered rather than named---while others were buried in coastal sites and villages southward toward <a href="#" class="location" data-layer-id="gambia">The Gambia</a> and <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a>. The National Association of Families of the Victims of the Joola (ANFV-Joola) was formed in response to the community’s frustration over the state’s management of the crisis. The ANFV-Joola demanded state reparations for victims’ families as well as a clear plan to recognize and memorialize this national tragedy. In Dakar, the Place du Souvenir is the central memorial space for the <i>Joola</i> tragedy in the Senegalese north, yet despite being on the <a href="#" class="location" data-layer-id="corniche_ouest">Route de la Corniche Ouest</a>---the main road of Dakar---), the site receives few visitors. 
                 </p>
-
+            <div id="figure11" class="figure " style="background-image:url(img/figure11.jpg);"></div>
+            <div class="caption">Figure 11: African Renaissance Monument in Dakar, Sengal. Photo by Olivia Jackson</div>
                 <p>
             In contrast, just a few kilometers from the <a href="#" class="location" data-layer-id="souvenir">Place du Souvenir</a> toward Yoff is the African Renaissance Monument, a 49-m bronze statue, built for $27 million in 2010 under President Abdoulaye Wade and constructed by Mansudae Overseas Project, a North Korean company (<a href="#figure11">Figure 11</a>). The tallest statue in Africa, it was unveiled in Dakar in front of nineteen heads of state on Senegal’s National Day and designed as a “prestige project” that would underscore Africa’s arrival into the twenty-first century. The ambitious monument---a first stop for visitors to Dakar---has been criticized for hoovering funds that could have been better used for infrastructure, education, and health care in an already struggling Senegal economy. The monument also includes a scantily clad, bare-breasted woman holding a child, which has been interpreted as being culturally insensitive to Senegal’s conservative Muslim majority. Thousands have protested the statue’s erection, and members of the ANFV-Joola coalition have questioned why some of those monies were not channeled into helping <i>Joola</i> victims or better memorializing the tragedy considering the overlapping time frame of Renaissance edifice and <i>Joola</i> disaster.
                 </p>
             </section>
 
             <section id="10" class="scene" data-scene-id="place10">
-
+            	  
+            	
+            	<div id="figure12" class="figure " style="background-image:url(img/figure12.jpg);"></div>
+            	<div class="caption">Figure 12: Ziguinchor memorial near the Casamance River</div>
+            	<div id="figure13" class="figure " style="background-image:url(img/figure13.jpg);"></div>
+            	<div class="caption">Figure 13: The forty-two numbered graves at Cimetiere Kantene des Victimes du Bateau le Joola in 2017</div>
                 <p>
-            In the South, the only existing remembrance to the <i>Joola</i> is a monument in a small Ziguinchor riverine park along with the nearby Cimitiere de Kantene, where many victims have been buried (<a href="#figure12">Figure 12</a>). In 2015, the Ministry of Culture and Communication proposed the creation of a larger and grander memorial called Bateau le Joola, which would recognize individuals in  <a href="#" class="location" data-layer-id="casamance">Casamance</a> disproportionately affected by the shipwreck. The edifice will be erected on the edge of the <a href="#" class="location" data-layer-id="casamance_river">Casamance River</a> with land made available by the city of <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a>. Built on an 1800 square meter site to honor the approximate number of victims lost in the tragedy, Bateau le Joola will take the form of a boat and include spaces for reflection and remembrance (<a href="#figure14">Figure 14</a>). As of this writing, there is no targeted date for the project or a clear indication of how the project will be funded. 
+            In the South, the only existing remembrance to the <i>Joola</i> is a monument in a small Ziguinchor riverine park along with the nearby Cimitiere de Kantene, where many victims have been buried (Figures  <a href="#figure12">12</a> & <a href="#figure13">13</a>). In 2015, the Ministry of Culture and Communication proposed the creation of a larger and grander memorial called Bateau le Joola, which would recognize individuals in  <a href="#" class="location" data-layer-id="casamance">Casamance</a> disproportionately affected by the shipwreck. The edifice will be erected on the edge of the <a href="#" class="location" data-layer-id="casamance_river">Casamance River</a> with land made available by the city of <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a>. Built on an 1800 square meter site to honor the approximate number of victims lost in the tragedy, Bateau le Joola will take the form of a boat and include spaces for reflection and remembrance (<a href="#figure14">Figure 14</a>). As of this writing, there is no targeted date for the project or a clear indication of how the project will be funded. 
                 </p>
 
             <div id="figure14" class="figure " style="background-image:url(img/figure14.jpg);"></div>
@@ -399,13 +414,13 @@
                 </p>
                 </section>
 
-            <div id="figure15" class="figure " style="background-image:url(img/figure15.jpg);"></div>
-            <div class="caption">Figure 15: The Aline Sitoe Diatta at the Port of Ziguinchor in 2017, which replaced the Joola.</div>
+            
 
             
             
             <section id="11" class="scene" data-scene-id="place11">
-
+            <div id="figure14" class="figure " style="background-image:url(img/figure15.jpg);"></div>
+            <div class="caption">Figure 15: The Aline Sitoe Diatta at the Port of Ziguinchor in 2017, which replaced the Joola.</div>
                 <p>
             In the city of <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a> today communities continue to remember and honor the <i>Joola</i> victims despite the state’s failure to properly make due on promises for reparations orrecognition. A new ferry, the Aline Sitoe Diatta---named after the Jola heroine who is often called the Joan of Arc of Senegal---replaced the <i>Joola</i> in 2008 and runs two voyages per week between <a href="#" class="location" data-layer-id="dakar">Dakar</a> and <a href="#" class="location" data-layer-id="ziguinchor">Ziguinchor</a>. Communities have moved on but not forgotten the human impacts of this unprecedented event (<a href="#figure15">Figure 15</a>). While the south’s geographic isolation from the north will continue given that <a href="#" class="location" data-layer-id="gambia">The Gambia</a> still bisects the country’s midsection, new land transportation routes may be freed up in the wake of Jammeh's departure from power in The Gambia.
                 </p>
@@ -421,10 +436,10 @@
                 </p>
 
             <div id="figure16" class="figure " style="background-image:url(img/figure16.jpg);"></div>
-            <div class="caption">Figure 16: University of Ziguinchor classrooms. PhotoBy Olivia Jackson.</div>
+            <div class="caption">Figure 16: University of Ziguinchor classrooms. Photo by Olivia Jackson.</div>
 
                 <p>
-            One question is whether or not the isolation, the tragedy, and the forces of globalization will cause Casamance residents to migrate---as is in the case in the African Sahel---or instead to dig deeper family roots in the southern wetlands and stay put. Those from Casamance have a strong sense of place and identity grounded in a local pride any visitor to the region can easily observe. Furthermore, the construction of the <a href="#" class="location" data-layer-id="uni_zig">University of Ziguinchor</a> in 2007 (<a href="#figure13">Figure 13</a>) has provided a motivation for Ziguinchor youth to remain and thus reduce the former effects of brain drain wherein young people traveled to Dakar for higher education.
+            One question is whether or not the isolation, the tragedy, and the forces of globalization will cause Casamance residents to migrate---as is in the case in the African Sahel---or instead to dig deeper family roots in the southern wetlands and stay put. Those from Casamance have a strong sense of place and identity grounded in a local pride any visitor to the region can easily observe. Furthermore, the construction of the <a href="#" class="location" data-layer-id="uni_zig">University of Ziguinchor</a> in 2007 (<a href="#figure16">Figure 16</a>) has provided a motivation for Ziguinchor youth to remain and thus reduce the former effects of brain drain wherein young people traveled to Dakar for higher education.
                 </p>
             </section>
 
@@ -472,7 +487,8 @@
             <li>Nigel, E. ed. 2013. <i>Framing Africa: Portrayals of a Continent in Contemporary Mainstream Cinema.</i> New York: Berghahn Books.</li>
             <li>Ngom, F. 2016. <i>Muslims Beyond the Arab World: the Odyssey of Ajami and the Muriddya.</i> New York: Oxford University Press</li>   
             <li>Ngom, F. 2010. <i>Ajami Scripts in the Senegalese Speech Community. Journal of Arabic & Islamic Studies</i> 10 (1): 1--23.</li>      
-            <li>Ngom, F. 2010. Ajami Scripts in the Senegalese Speech Community. Journal of Arabic & Islamic Studies 10 (1): 1--23. Oguh, C. 2015. The Representation of Africa in Western Media: Still a 21st Century Problem.: Masters thesis, Edinburgh Napier University.</li>
+            <li>Ngom, F. 2010. Ajami Scripts in the Senegalese Speech Community. Journal of Arabic & Islamic Studies 10 (1): 1--23.</li>
+			<li>Oguh, C. 2015. The Representation of Africa in Western Media: Still a 21st Century Problem.: Masters thesis, Edinburgh Napier University.</li>
             <li>Osunde, S. 1996. The Politics and Social Influence of News-making: American Media Coverage of Africa. PhD dissertation, Howard University, Washington, D.C. </li>
             <li>Rothe, D., Muzzatti, S., and C. Mullins. 2006. Crime on the High Seas: Crimes of Globalization and the Sinking of the Senegalese Ferry Le Joola. <i>Critical Criminology</i> 14: 159--180</li>              
             <li>Senghor, D. 2004. <i>The Joola Shipwreck: Media and Civil Society Facing the Drama. </i>(Published in French.) Dakar: Institut Panos Afrique de l’Ouest</li>
@@ -1223,6 +1239,9 @@
                     "type": "geojson",
                     "data": {
                         "type": "Feature",
+						"properties": {
+							"name": "Gambia"
+						},
                         "geometry": {
                             "type": "Polygon",
                             "coordinates": [
@@ -2896,7 +2915,7 @@
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
                             // "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                            "background": "url(http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv)"
+                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
                         }
                     },
                     {
@@ -3072,6 +3091,86 @@
                             {"idRef": "nigeria"},
                             {"idRef": "guinea"},
                             {"idRef": "joola_wreck"},
+							{"id": "netherlands2j", "type": "link", "from": "netherlands", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
+								mode: 'Q',
+				                markers: {
+				                    end: true
+				                },
+								weight: 1,
+								dashArray: [1,2]
+							}},
+							{"id": "france2j", "type": "link", "from": "france", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
+								mode: 'Q',
+				                markers: {
+				                    end: true
+				                },
+								weight: 1,
+								dashArray: [1,2]
+							}},
+							{"id": "spain2j", "type": "link", "from": "spain", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
+								mode: 'Q',
+				                markers: {
+				                    end: true
+				                },
+								weight: 1,
+								dashArray: [1,2]
+							}},
+							{"id": "norway2j", "type": "link", "from": "norway", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
+								mode: 'Q',
+				                markers: {
+				                    end: true
+				                },
+								weight: 1,
+								dashArray: [1,2]
+							}},
+							{"id": "belgium2j", "type": "link", "from": "belgium", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
+								mode: 'Q',
+				                markers: {
+				                    end: true
+				                },
+								weight: 1,
+								dashArray: [1,2]
+							}},
+							{"id": "cameroon2j", "type": "link", "from": "cameroon", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
+								mode: 'Q',
+				                markers: {
+				                    end: true
+				                },
+								weight: 1,
+								dashArray: [1,2]
+							}},
+							{"id": "ghana2j", "type": "link", "from": "ghana", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
+								mode: 'Q',
+				                markers: {
+				                    end: true
+				                },
+								weight: 1,
+								dashArray: [1,2]
+							}},
+							{"id": "lebanon2j", "type": "link", "from": "lebanon", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
+								mode: 'Q',
+				                markers: {
+				                    end: true
+				                },
+								weight: 1,
+								dashArray: [1,2]
+							}},
+							{"id": "nigeria2j", "type": "link", "from": "nigeria", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
+								mode: 'Q',
+				                markers: {
+				                    end: true
+				                },
+								weight: 1,
+								dashArray: [1,2]
+							}},
+							{"id": "guinea2j", "type": "link", "from": "guinea", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
+								mode: 'Q',
+				                markers: {
+				                    end: true
+				                },
+								weight: 1,
+								dashArray: [1,2]
+							}}
 
                         ],
                         "baseLayer": [{

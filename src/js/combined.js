@@ -14081,6 +14081,15 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+            type: 'Feature Article',
+            title: 'The Joola: The Geographical Dimensions of Africa\'s Greatest Shipwreck',
+            author: 'Karen Barton',
+            description: '',
+            date: '11/02/17',
+            thumbnail: 'publications/articles/joola/img/figure1.jpg',
+            url: 'publications/articles/joola/index.html',
+            location: []
+        },{
             type: 'Geo Quiz',
             title: 'Quiz Five: Transportation',
             author: 'Wesley Reisser',
@@ -15107,7 +15116,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 tooltipOptions: {
                     iconSize: null,
                     iconAnchor: new L.Point(-5, 0)
-                }
+                },
+				getEdge: L.Graph.EDGESTYLE[layerDef.edgeStyle || 'STRAIGHT']
             });
         }
         else if (layerDef.type === 'geojson') {
