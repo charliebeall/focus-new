@@ -329,8 +329,9 @@
             "id": "sikkim",
             "type": "geojson",
             "style": {
-                "weight": 10,
-                "opacity": 0.3,
+                "fill": false,
+				"weight": 3,
+				"color": "orange",
                 "text": {
                     "text": "Sikkim",
                     "style": {
@@ -358,7 +359,7 @@
             "style": {
                 "fill": false,
                 "stroke": true,
-                "weight": 2,
+                "weight": 3,
                 "opacity": 1,
                 "color": "orange",
                 "text": {
@@ -14785,12 +14786,10 @@
             "id": "arunachal-pradesh",
             "type": "geojson",
             "style": {
-                "radius": 0,
                 "fill": false,
-                "stroke": false,
-                "color": "#000",
+                "weight": 3,
+                "color": "orange",
                 "fillColor": "#333",
-                "dropShadow": true,
                 "text": {
                     "text": "Arunachal Pradesh",
                     "style": {
@@ -14818,7 +14817,8 @@
             "style": {
                 "radius": 0,
                 "fill": false,
-                "stroke": false,
+				"weight": 3,
+                "color": "orange",
                 "text": {
                     "text": "Meghalaya",
                     "style": {
@@ -14849,10 +14849,8 @@
             "style": {
                 "radius": 0,
                 "fill": false,
-                "stroke": false,
-                "color": "#000",
-                "fillColor": "#333",
-                "dropShadow": true,
+				"weight": 3,
+                "color": "orange",
                 "text": {
                     "text": "Nagaland",
                     "style": {
@@ -14881,12 +14879,10 @@
         "style": {
         "radius": 0,
             "fill": false,
-            "stroke": false,
-            "color": "#000",
-            "fillColor": "#333",
-            "dropShadow": true,
+			"weight": 3,
+            "color": "orange",
             "text": {
-            "text": "Mizoram",
+            	"text": "Mizoram",
                 "style": {
                 'stroke': 'none',
                     'fill': '#fff',
@@ -16527,7 +16523,7 @@
                 initialScene: new Focus.Models.SceneModel({
                     baseLayer: {
                         type: 'tile',
-                        url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', //'//{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
+                        url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00', //'//{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
                         params: {
                             attribution: 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
                         }
