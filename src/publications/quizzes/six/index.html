@@ -1,0 +1,1075 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Geo Quiz 4</title>
+    <meta name="description" content="FOCUS on Geography:  Geo Quiz #4">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .modal-content {
+            background-image: linear-gradient(0deg, rgba(242, 121, 33, 0.7), rgba(242, 121, 33, 0.7)), url(img/water.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- Add your site or application content here -->
+<div id="background"></div>
+<div id="map" class="fill"></div>
+<div id="foreground"></div>
+<div id="photos"></div>
+<div id="shadow"></div>
+<div id="score-view"><h3>0</h3></div>
+<svg id="score-text" width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="position: absolute;bottom: 50px;z-index: 10;right: calc(50% - 100px);text-align: center;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(0.748233,-0.663437,0.663437,0.748233,-71.4993,95.3792)">
+        <g transform="matrix(0.974148,0.22591,-0.22591,0.974148,14.9332,-26.5052)">
+            <text x="123.276px" y="51.996px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">S</text>
+        </g>
+        <g transform="matrix(0.889935,0.456088,-0.456088,0.889935,41.1167,-58.1446)">
+            <text x="141.028px" y="56.117px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">C</text>
+        </g>
+        <g transform="matrix(0.741486,0.670968,-0.670968,0.741486,84.934,-89.7957)">
+            <text x="158.999px" y="65.324px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">O</text>
+        </g>
+        <g transform="matrix(0.533523,0.845785,-0.845785,0.533523,149.897,-110.802)">
+            <text x="175.398px" y="80.49px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">R</text>
+        </g>
+        <g transform="matrix(0.322984,0.946405,-0.946405,0.322984,217.645,-110.12)">
+            <text x="185.791px" y="97.063px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">E</text>
+        </g>
+    </g>
+</svg>
+<div id="main-nav" class="light">
+    <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+        <svg width="1000px" height="1000px">
+            <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800" style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+            <path id="pathE" d="M 300 500 L 700 500" style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+            <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200" style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+        </svg>
+
+        <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+    </div>
+    <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <div id="menu"></div>
+</div>
+<div id="questions">
+    <div class="content scenes">
+    </div>
+</div>
+<div id="progress">
+    <div id="bar"></div>
+</div>
+<div id="bar-top"></div>
+<div id="bar-bottom" class="large"></div>
+<!-- inject:templates:html -->
+<!-- endinject -->
+<script src="../../../js/combined.js"></script>
+<script>
+    var scenes = {
+        "scenes": [
+            {
+                "id": "place1",
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "USATopo",
+                    "options": {
+                        "detectRetina": true,
+                        //"imagerySet": "AerialWithLabels"
+                    }
+                }, /*{
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+                },*/
+                "layers": [{"id": "laketanganyika", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Lake Tanganyika"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            29.833333333333332,
+                            -6.5
+                        ]
+                    }
+                }},
+                    {"id": "lakevictoria", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Lake Victoria"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                33,
+                                -1
+                            ]
+                        }
+                    }},
+                    {"id": "lakesuperior", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Lake Superior"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -87.08333333333333,
+                                47.11666666666667
+                            ]
+                        }
+                    }},
+                    {"id": "lakebaikal", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Lake Baikal"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               108,  53.5
+                            ]
+                        }
+                    }}],
+                //"center": [-60, 48],
+                "zoom": 3,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.75,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            },
+            {
+                "id": "place2",
+                "zoom": 3,
+                "layers": [
+                    {"id": "deadsea", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Dead Sea"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.5, 31.5
+                            ]
+                        }
+                    }},
+                    {"id": "caspiansea", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Caspian Sea"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                50.666667, 41.666667
+                            ]
+                        }
+                    }},
+                    {"id": "greatsaltlake", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Great Salt Lake"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -112.583333, 41.166667
+                            ]
+                        }
+                    }},
+                    {"id": "lakevan", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Lake Van"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                42.816667, 38.633333
+                            ]
+                        }
+                    }}
+                ],
+                "baseLayer": {
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                    "scheme": "xyz"
+
+                },
+                "style": {
+                    "filter": "sepia(50%)",
+                    "opacity": 0.7,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            },
+            {
+                "id": "place3",
+                //"center": [0, 0],
+                "zoom": 5, //3
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "USATopo",
+                    "options": {
+                        "detectRetina": true,
+                        //"imagerySet": "AerialWithLabels"
+                    }
+                },
+                layers: [
+                    {"id": "hooverdam", "type": "geojson", "data": {
+                    "type": "Feature",
+                        "properties": {
+                            "name": "Hoover Dam"
+                        },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -114.737778, 36.015556
+                        ]
+                    }
+                }},
+                    {"id": "glencanyondam", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Glen Canyon Dam"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -111.484444, 36.9375
+                            ]
+                        }
+                    }},
+                    {"id": "grandcouleedam", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Grand Coulee Dam"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -118.981667, 47.955833
+                            ]
+                        }
+                    }},
+                    {"id": "chiefjosephdam", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Chief Joseph Dam"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -119.633333, 47.995278
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.9,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            },
+            {
+                "id": "place4",
+                //"center": [-79.541015625, -10.811724143275514],
+                "zoom": 5,
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },
+                //44.130278, -110.219444
+                "layers": [
+                    {"id": "snakeriver", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Snake River"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -119.028611, 46.186111
+                            ]
+                        }
+                    }},
+                    {"id": "riogrande", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Rio Grande"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -107.538333, 37.797778
+                            ]
+                        }
+                    }},
+                    {"id": "coloradoriver", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Colorado River"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -105.826111, 40.472222
+                            ]
+                        }
+                    }},
+                    {"id": "sacramentoriver", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Sacramento River"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -122.401389, 41.273333
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "grayscale(0%)",
+                    "opacity": 0.8,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            },
+            {
+                "id": "place5",
+                //"center": [-107.0068359375, 27.353636941500987],
+                "zoom": 6,
+                "fly": false,
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },
+                "layers": [
+                    {"id": "varanasi", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Varanasi"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                82.96, 25.28
+                            ]
+                        }
+                    }},
+                    {"id": "agra", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Agra"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                78.02, 27.18
+                            ]
+                        }
+                    }},
+                    {"id": "kolkata", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Kolkata"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                88.366667, 22.566667
+                            ]
+                        }
+                    }},
+                    {"id": "patna", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Patna"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                85.1, 25.6
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.9,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            }, {
+                "id": "place6",
+                //"center": [-40, 38],
+                "zoom": 4,
+                "baseLayer": {
+                    /*
+                    "type": "tile",
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },
+                "layers": [
+                    {"id": "croppriver", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Cropp River"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                171.016667, -43.066667
+                            ]
+                        }
+                    }},
+                    {"id": "mawsynram", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Mawsynram"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                91.35, 25.28
+                            ]
+                        }
+                    }},
+                    {"id": "mountwaialeala", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Mount Waialeale"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -159.498611, 22.073889
+                            ]
+                        }
+                    }},
+                    {"id": "tutendo", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Tutendo"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -76.538333, 5.743056
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            }, {
+                "id": "place7",
+                "zoom": 3,
+                "baseLayer": {
+                    /*
+                     "type": "tile",
+                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                     */
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.7,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                },
+                "layers": [{"id": "danuberiver", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Danube River"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            29.761389, 45.2175
+                        ]
+                    }
+                }},
+                    {"id": "nileriver", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Nile River"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                31.1, 30.166667
+                            ]
+                        }
+                    }},
+                    {"id": "rhineriver", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Rhine River"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                4.080556, 51.981667
+                            ]
+                        }
+                    }},
+                    {"id": "nigerriver", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Niger River"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -3.33328, 13.86014
+                            ]
+                        }
+                    }}]
+            },
+            {
+                "id": "place8",
+                "zoom": 2,
+                "baseLayer": {
+                    /*
+                     "type": "tile",
+                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                     */
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                },
+                "layers": [{"id": "suezcanal", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Suez Canal"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            32.344167, 30.705
+                        ]
+                    }
+                }},
+                    {"id": "saimaacanal", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Saimaa Canal"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                28.273333, 61.078611
+                            ]
+                        }
+                    }},
+                    {"id": "eriecanal", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Erie Canal"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -73.6767, 42.7834
+                            ]
+                        }
+                    }},
+                    {"id": "grandcanal", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Grand Canal"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                120.223889, 30.261389
+                            ]
+                        }
+                    }}]
+            },
+            {
+                "id": "place9",
+                //"center": [0, 0],
+                "zoom": 5,
+                "baseLayer": [{
+                    /*
+                    "type": "tile",
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.6,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                },
+                "layers": [{"id": "point", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "???"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -101.447778, 36.990556
+                        ]
+                    }
+                }}]
+            }, {
+                "id": "place10",
+                "zoom": 3,
+                "baseLayer": {
+                    /*
+                     "type": "tile",
+                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                     */
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },
+                "style": {
+                    "filter": "grayscale(0%)",
+                    "opacity": 0.8,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                },
+                "layers": [{"id": "mississippi", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Mississippi River"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.253333, 29.151111
+                        ]
+                    }
+                }},
+                    {"id": "congo", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Congo River"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                12.45, -6.079167
+                            ]
+                        }
+                    }},
+                    {"id": "amazon", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Amazon River"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -50.089444, 0.707778
+                            ]
+                        }
+                    }},
+                    {"id": "ganges", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Ganges River"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                83.012269, 25.304319
+                            ]
+                        }
+                    }}]
+            }
+        ]
+    };
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79613259-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    var questions = [{
+        choices: [{
+            id: 'A',
+            text: 'Lake Superior',
+            photo: 'img/lakesuperior.jpg',
+            sceneId: 'lakesuperior'
+        }, {
+            id: 'B',
+            text: 'Lake Tanganyika',
+            photo: 'img/laketanganyika.jpg',
+            sceneId: 'laketanganyika'
+        }, {
+            id: 'C',
+            text: 'Lake Victoria',
+            photo: 'img/lakevictoria.jpg',
+            sceneId: 'lakevictoria'
+        }, {
+            id: 'D',
+            text: 'Lake Baikal',
+            photo: 'img/lakebaikal.jpg',
+            sceneId: 'lakebaikal'
+        }],
+        prompt: 'Almost 20% of the world’s fresh water not locked into ice is in this one lake, the world’s deepest.',
+        rightAnswer: {
+            id: 'D',
+            description: 'Lake Baikal'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'The Great Salt Lake',
+            photo: 'img/greatsaltlake.jpg',
+            sceneId: 'greatsaltlake'
+        }, {
+            id: 'B',
+            text: 'The Dead Sea',
+            photo: 'img/deadsea.jpg',
+            sceneId: 'deadsea'
+        }, {
+            id: 'C',
+            text: 'Lake Van',
+            photo: 'img/lakevan.jpg',
+            sceneId: 'lakevan'
+        }, {
+            id: 'D',
+            text: 'The Caspian Sea',
+            photo: 'img/caspiansea.jpg',
+            sceneId: 'caspiansea'
+        }, ],
+        prompt: 'Not all salt water is in the open ocean, as there are salty lakes located mainly in arid locations. Which lake is the saltiest body of water in the world?',
+        rightAnswer: {
+            id: 'B',
+            description: 'The Dead Sea'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Chief Joseph Dam',
+            photo: 'img/chiefjosephdam.jpg',
+            sceneId: 'chiefjosephdam'
+        }, {
+            id: 'B',
+            text: 'Hoover Dam',
+            photo: 'img/hooverdam.jpg',
+            sceneId: 'hooverdam'
+        }, {
+            id: 'C',
+            text: 'Glen Canyon Dam',
+            photo: 'img/glencanyondam.jpg',
+            sceneId: 'glencanyondam'
+        }, {
+            id: 'D',
+            text: 'Grand Coulee Dam',
+            photo: 'img/grandcouleedam.png',
+            sceneId: 'grandcouleedam'
+        }],
+        prompt: 'Water can be harnessed for the production of electricity, including through the use of large hydroelectric dams. Which dam produces more electricity than any other in the United States?',
+        rightAnswer: {
+            id: 'D',
+            description: 'Grand Coulee Dam'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Snake River',
+            photo: 'img/snakeriver.jpg',
+            sceneId: 'snakeriver'
+        }, {
+            id: 'B',
+            text: 'Sacramento River',
+            photo: 'img/sacramentoriver.jpg',
+            sceneId: 'sacramentoriver'
+        }, {
+            id: 'C',
+            text: 'Rio Grande',
+            photo: 'img/riogrande.jpg',
+            sceneId: 'riogrande'
+        }, {
+            id: 'D',
+            text: 'Colorado River',
+            photo: 'img/coloradoriver.jpg',
+            sceneId: 'coloradoriver'
+        }],
+        prompt: 'Water is essential for agriculture and human consumption. Sometimes, this leads to a river being used before it can reach the sea. Which American river often doesn’t flow to the sea, as all the water is used up before it gets there?',
+        rightAnswer: {
+            id: 'D',
+            description: 'Colorado River'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Agra',
+            photo: 'img/agra.jpg',
+            sceneId: 'agra'
+        }, {
+            id: 'B',
+            text: 'Varanasi',
+            photo: 'img/varanasi.jpg',
+            sceneId: 'varanasi'
+        }, {
+            id: 'C',
+            text: 'Patna',
+            photo: 'img/patna.jpg',
+            sceneId: 'patna'
+        }, {
+            id: 'D',
+            text: 'Kolkata',
+            photo: 'img/kolkata.jpg',
+            sceneId: 'kolkata'
+        }],
+        prompt: 'Because water is necessary for human life, it is also revered in many religious practices. Which city in India is revered by Hindus as the most important holy site on the sacred Ganges River, a place where people go to bathe in the sacred waters and where cremated remains are placed into the river?',
+        rightAnswer: {
+            id: 'B',
+            description: 'Varanasi'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Mount Waialeale, Hawaii, USA',
+            photo: 'img/mountwaialeale.jpg',
+            sceneId: 'mountwaialeala'
+        }, {
+            id: 'B',
+            text: 'Tutendo, Colombia',
+            photo: 'img/tutendo.jpg',
+            sceneId: 'tutendo'
+        }, {
+            id: 'C',
+            text: 'Mawsynram, India',
+            photo: 'img/mawsynram.jpg',
+            sceneId: 'mawsynram'
+        }, {
+            id: 'D',
+            text: 'Cropp River, New Zealand',
+            photo: 'img/croppriver.jpg',
+            sceneId: 'croppriver'
+        }],
+        prompt: 'Rainfall is anything but consistent across the globe. Which location is on average the rainiest place in the world?',
+        rightAnswer: {
+            id: 'C',
+            description: 'Mawsynram, India'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Rhine River',
+            photo: 'img/rhineriver.jpg',
+            sceneId: 'rhineriver'
+        }, {
+            id: 'B',
+            text: 'Niger River',
+            photo: 'img/nigerriver.jpg',
+            sceneId: 'nigerriver'
+        }, {
+            id: 'C',
+            text: 'Nile River',
+            photo: 'img/nileriver.jpg',
+            sceneId: 'nileriver'
+        }, {
+            id: 'D',
+            text: 'Danube River',
+            photo: 'img/danuberiver.jpg',
+            sceneId: 'danuberiver'
+        }],
+        prompt: 'One geopolitical challenge related to water involves rivers flowing through multiple countries. Only one river flows through 10 countries along its longest course. Name this river (note: do not count rivers where you must follow multiple tributaries to get the full list of countries).',
+        rightAnswer: {
+            id: 'D',
+            description: 'Danube River'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Erie Canal, USA',
+            photo: 'img/eriecanal.jpg',
+            sceneId: 'eriecanal'
+        }, {
+            id: 'B',
+            text: 'Saimaa Canal, Finland',
+            photo: 'img/saimaacanal.jpg',
+            sceneId: 'saimaacanal'
+        }, {
+            id: 'C',
+            text: 'Suez Canal, Egypt',
+            photo: 'img/suezcanal.jpg',
+            sceneId: 'suezcanal'
+        }, {
+            id: 'D',
+            text: 'Grand Canal, China',
+            photo: 'img/grandcanal.jpg',
+            sceneId: 'grandcanal'
+        }],
+        prompt: 'Not all watercourses are natural, as canals are manmade watercourses used to help with shipping or the transfer of water resources from one area to another. What is the longest canal in the world?',
+        rightAnswer: {
+            id: 'D',
+            description: 'Grand Canal, China'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Ogallala Aquifer',
+            photo: 'img/ogallalaaquifer.jpg',
+            sceneId: 'point'
+        }, {
+            id: 'B',
+            text: 'Saginaw Aquifer',
+            photo: 'img/saginawaquifer.jpg',
+            sceneId: 'point'
+        }, {
+            id: 'C',
+            text: 'Kirkwood Aquifer',
+            photo: 'img/kirkwoodaquifer.jpg',
+            sceneId: 'point'
+        }, {
+            id: 'D',
+            text: 'Mahomet Aquifer',
+            photo: 'img/mahometaquifer.jpg',
+            sceneId: 'point'
+        }],
+        prompt: 'Large amounts of the water we use exists as groundwater, rather than in surface water formations. What is the name of the large aquifer under the western Great Plains that is being used faster than it can recharge through the intrusion of new rainwater into the aquifer?',
+        rightAnswer: {
+            id: 'A',
+            description: 'Ogallala Aquifer'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Mississippi River',
+            photo: 'img/mississippiriver.jpg',
+            sceneId: 'mississippi'
+        }, {
+            id: 'B',
+            text: 'Amazon River',
+            photo: 'img/amazonriver.png',
+            sceneId: 'amazon'
+        }, {
+            id: 'C',
+            text: 'Congo River',
+            photo: 'img/congoriver.jpg',
+            sceneId: 'congo'
+        }, {
+            id: 'D',
+            text: 'Ganges-Brahmaputra River',
+            photo: 'img/gangesriver.jpg',
+            sceneId: 'ganges'
+        }],
+        prompt: 'Although the Nile River is the world’s longest, this river is the world’s largest by volume.',
+        rightAnswer: {
+            id: 'B',
+            description: 'Amazon River'
+        }
+    }];
+
+        Focus.Map.defaultOptions = {
+            weight: 10,
+            radius: 8,
+            opacity: 0.3,
+            color: 'rgba(39, 171, 226, 1)',
+            fillColor: 'rgba(39, 171, 226, 1)'
+        };
+        var questionCollection = new Focus.Collections.QuestionCollection(questions);
+
+        var navigator = new Focus.Views.QuizSceneNavigator({
+            el: $('.scenes'),
+            model: new Focus.Models.ModalModel({
+                title: 'Welcome to the fourth Geo Quiz!',
+                content: "This edition of our Geo Quiz focuses on water",
+                buttonText: 'Start Quiz'
+            }),
+            collection: questionCollection
+        });
+        navigator.render();
+
+        var sceneManager = new Focus.Views.SceneManagerView({
+            el: $('body'),
+            navigator: navigator,
+            mapEngineClass: Focus.Views.LeafletMapEngine
+        });
+
+        var shareView = new Focus.Views.ShareView();
+        shareView.render();
+
+    });
+</script>
+</body>
+</html>

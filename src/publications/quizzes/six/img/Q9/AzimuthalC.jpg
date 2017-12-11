@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Azimuthal equidistant projection - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Azimuthal_equidistant_projection","wgTitle":"Azimuthal equidistant projection","wgCurRevisionId":800090335,"wgRevisionId":800090335,"wgArticleId":1094867,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from October 2016","Map projections","Equidistant projections"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Azimuthal_equidistant_projection","wgRelevantArticleId":1094867,"wgRequestId":"Wi5OFwpAAEIAAC@N1DMAAACB","wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsShouldSendModuleToUser":true,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFExpandAllSectionsUserOption":false,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1753196","wgCentralAuthMobileDomain":false,"wgCodeMirrorEnabled":false,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.gadget.charinsert-styles":"ready","ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["ext.cite.a11y","ext.math.scripts","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.charinsert-styles&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.31.0-wmf.11"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Azimuthal_equidistant_projection_SW.jpg/1200px-Azimuthal_equidistant_projection_SW.jpg"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Azimuthal_equidistant_projection"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Azimuthal_equidistant_projection"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Azimuthal_equidistant_projection rootpage-Azimuthal_equidistant_projection skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div><div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">Azimuthal equidistant projection</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Azimuthal_equidistant_projection_SW.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Azimuthal_equidistant_projection_SW.jpg/300px-Azimuthal_equidistant_projection_SW.jpg" width="300" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Azimuthal_equidistant_projection_SW.jpg/450px-Azimuthal_equidistant_projection_SW.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Azimuthal_equidistant_projection_SW.jpg/600px-Azimuthal_equidistant_projection_SW.jpg 2x" data-file-width="2058" data-file-height="2058" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Azimuthal_equidistant_projection_SW.jpg" class="internal" title="Enlarge"></a></div>
+<a href="/wiki/Geographical_pole" title="Geographical pole">Polar</a> azimuthal equidistant projection</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Emblem_of_the_United_Nations.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/52/Emblem_of_the_United_Nations.svg/300px-Emblem_of_the_United_Nations.svg.png" width="300" height="255" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/52/Emblem_of_the_United_Nations.svg/450px-Emblem_of_the_United_Nations.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/52/Emblem_of_the_United_Nations.svg/600px-Emblem_of_the_United_Nations.svg.png 2x" data-file-width="512" data-file-height="436" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Emblem_of_the_United_Nations.svg" class="internal" title="Enlarge"></a></div>
+Emblem of the <a href="/wiki/United_Nations" title="United Nations">United Nations</a> containing a polar azimuthal equidistant projection.</div>
+</div>
+</div>
+<p>The <b>azimuthal equidistant projection</b> is an <a href="/wiki/Azimuthal_projection#Azimuthal_.28projections_onto_a_plane.29" class="mw-redirect" title="Azimuthal projection">azimuthal map projection</a>. It has the useful properties that all points on the map are at proportionately correct distances from the center point, and that all points on the map are at the correct azimuth (direction) from the center point. A useful application for this type of projection is a polar projection which shows all meridians (lines of longitude) as straight, with distances from the pole represented correctly. The <a href="/wiki/United_Nations_flag" class="mw-redirect" title="United Nations flag">flag of the United Nations</a> contains an example of a polar azimuthal equidistant projection.</p>
+<p></p>
+<div id="toc" class="toc">
+<div class="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Mathematical_definition"><span class="tocnumber">2</span> <span class="toctext">Mathematical definition</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Applications"><span class="tocnumber">3</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>While it may have been used by <a href="/wiki/Ancient_Egypt" title="Ancient Egypt">ancient Egyptians</a> for star maps in some holy books,<sup id="cite_ref-Snyder_1-0" class="reference"><a href="#cite_note-Snyder-1">[1]</a></sup> the earliest text describing the azimuthal equidistant projection is an 11th-century work by <a href="/wiki/Abu_Rayhan_Biruni" class="mw-redirect" title="Abu Rayhan Biruni">al-Biruni</a>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></p>
+<p>The projection appears in many Renaissance maps, and <a href="/wiki/Gerardus_Mercator" title="Gerardus Mercator">Gerardus Mercator</a> used it for an inset of the north polar regions in sheet 13 and legend 6 of his well-known <a href="/wiki/Mercator_1569_world_map" title="Mercator 1569 world map">1569 map</a>. In France and Russia this projection is named "Postel projection" after <a href="/wiki/Guillaume_Postel" title="Guillaume Postel">Guillaume Postel</a>, who used it for a map in 1581.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup> Many modern star chart <a href="/wiki/Planisphere" title="Planisphere">planispheres</a> use the polar azimuthal equidistant projection.</p>
+<div class="thumb tnone" style="margin-left: auto; margin-right:auto; overflow:hidden; width:auto; max-width:776px;">
+<div class="thumbinner" style="">
+<div class="overflowbugx" style="overflow:auto;"><a href="/wiki/File:Comparison_azimuthal_projections.svg" class="image" title="Comparison of the Azimuthal equidistant projection and some azimuthal projections centred on 90°&#160;N at the same scale, ordered by projection altitude in Earth radii. (click&#160;for&#160;detail)"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Comparison_azimuthal_projections.svg/768px-Comparison_azimuthal_projections.svg.png" width="768" height="257" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Comparison_azimuthal_projections.svg/1152px-Comparison_azimuthal_projections.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Comparison_azimuthal_projections.svg/1536px-Comparison_azimuthal_projections.svg.png 2x" data-file-width="512" data-file-height="171" /></a></div>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Comparison_azimuthal_projections.svg" title="File:Comparison azimuthal projections.svg"></a></div>
+Comparison of the <i>Azimuthal equidistant projection</i> and some azimuthal projections centred on 90°&#160;N at the same scale, ordered by projection altitude in Earth radii. <a class="external text" href="http://upload.wikimedia.org/wikipedia/commons/b/ba/Comparison_azimuthal_projections.svg">(click&#160;for&#160;detail)</a></div>
+</div>
+</div>
+<h2><span class="mw-headline" id="Mathematical_definition">Mathematical definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=edit&amp;section=2" title="Edit section: Mathematical definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A point on the globe is chosen to be special in the sense that mapped distances and <a href="/wiki/Azimuth" title="Azimuth">azimuths</a> from that point to any other point will be correct. That point, (<i>φ</i><sub>1</sub>, <i>λ</i><sub>0</sub>), will project to the center of a circular projection, with <i>φ</i> referring to latitude and <i>λ</i> referring to longitude. All points along a given azimuth will project along a straight line from the center, and the angle <i>θ</i> that line subtends from the vertical is the azimuth angle. The distance from the center point to another projected point is given as <i>ρ</i>. By this description, then, the point on the globe specified by (<i>θ</i>,<i>ρ</i>) will be projected to Cartesian coordinates:</p>
+<dl>
+<dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo>=</mo>
+        <mi>&#x03C1;<!-- ρ --></mi>
+        <mi>sin</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>&#x03B8;<!-- θ --></mi>
+        <mo>,</mo>
+        <mspace width="2em" />
+        <mi>y</mi>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>&#x03C1;<!-- ρ --></mi>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>&#x03B8;<!-- θ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x=\rho \sin \theta ,\qquad y=-\rho \cos \theta }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/66d6dae2afbae1245eccd4a8fc324ecfa3d512a2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:28.436ex; height:2.676ex;" alt="{\displaystyle x=\rho \sin \theta ,\qquad y=-\rho \cos \theta }" /></span></dd>
+</dl>
+<p>The relationship between the coordinates (<i>θ</i>,<i>ρ</i>) of the point on the globe, and its latitude and longitude coordinates (<i>φ</i>, <i>λ</i>) is found as follows. The great circle distance <i>ρ</i> between two points (<i>φ</i><sub>1</sub>, <i>λ</i><sub>0</sub>) and (<i>φ</i>, <i>λ</i>) on the sphere is given by:<sup id="cite_ref-Album_4-0" class="reference"><a href="#cite_note-Album-4">[4]</a></sup></p>
+<dl>
+<dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>&#x03C1;<!-- ρ --></mi>
+        <mo>=</mo>
+        <mi>sin</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <msub>
+          <mi>&#x03C6;<!-- φ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mi>sin</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>&#x03C6;<!-- φ --></mi>
+        <mo>+</mo>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <msub>
+          <mi>&#x03C6;<!-- φ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>&#x03C6;<!-- φ --></mi>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mrow>
+          <mo>(</mo>
+          <mi>&#x03BB;<!-- λ --></mi>
+          <mo>&#x2212;<!-- − --></mo>
+          <msub>
+            <mi>&#x03BB;<!-- λ --></mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \cos \rho =\sin \varphi _{1}\sin \varphi +\cos \varphi _{1}\cos \varphi \cos \left(\lambda -\lambda _{0}\right)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/02a049e6eabdefaa9e94cb963e8c795a6a4a5247" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:45.332ex; height:2.843ex;" alt="\cos \rho =\sin \varphi _{1}\sin \varphi +\cos \varphi _{1}\cos \varphi \cos \left(\lambda -\lambda _{0}\right)" /></span></dd>
+</dl>
+<p>The azimuth from the first to the second point is given by:</p>
+<dl>
+<dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>tan</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>&#x03B8;<!-- θ --></mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mi>cos</mi>
+              <mo>&#x2061;<!-- ⁡ --></mo>
+              <mi>&#x03C6;<!-- φ --></mi>
+              <mi>sin</mi>
+              <mo>&#x2061;<!-- ⁡ --></mo>
+              <mrow>
+                <mo>(</mo>
+                <mi>&#x03BB;<!-- λ --></mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <msub>
+                  <mi>&#x03BB;<!-- λ --></mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>0</mn>
+                  </mrow>
+                </msub>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mrow>
+              <mi>cos</mi>
+              <mo>&#x2061;<!-- ⁡ --></mo>
+              <msub>
+                <mi>&#x03C6;<!-- φ --></mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mn>1</mn>
+                </mrow>
+              </msub>
+              <mi>sin</mi>
+              <mo>&#x2061;<!-- ⁡ --></mo>
+              <mi>&#x03C6;<!-- φ --></mi>
+              <mo>&#x2212;<!-- − --></mo>
+              <mi>sin</mi>
+              <mo>&#x2061;<!-- ⁡ --></mo>
+              <msub>
+                <mi>&#x03C6;<!-- φ --></mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mn>1</mn>
+                </mrow>
+              </msub>
+              <mi>cos</mi>
+              <mo>&#x2061;<!-- ⁡ --></mo>
+              <mi>&#x03C6;<!-- φ --></mi>
+              <mi>cos</mi>
+              <mo>&#x2061;<!-- ⁡ --></mo>
+              <mrow>
+                <mo>(</mo>
+                <mi>&#x03BB;<!-- λ --></mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <msub>
+                  <mi>&#x03BB;<!-- λ --></mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>0</mn>
+                  </mrow>
+                </msub>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \tan \theta ={\frac {\cos \varphi \sin \left(\lambda -\lambda _{0}\right)}{\cos \varphi _{1}\sin \varphi -\sin \varphi _{1}\cos \varphi \cos \left(\lambda -\lambda _{0}\right)}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e537fe0f19cadb9b7000f2390434d5335e5ae1a2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:46.306ex; height:6.509ex;" alt="\tan \theta ={\frac {\cos \varphi \sin \left(\lambda -\lambda _{0}\right)}{\cos \varphi _{1}\sin \varphi -\sin \varphi _{1}\cos \varphi \cos \left(\lambda -\lambda _{0}\right)}}" /></span></dd>
+</dl>
+<p>When the center point is the north pole, these formulas greatly simplify to:</p>
+<dl>
+<dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C1;<!-- ρ --></mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>&#x03C0;<!-- π --></mi>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>&#x03C6;<!-- φ --></mi>
+        <mo>,</mo>
+        <mspace width="2em" />
+        <mi>&#x03B8;<!-- θ --></mi>
+        <mo>=</mo>
+        <mi>&#x03BB;<!-- λ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \rho ={\frac {\pi }{2}}-\varphi ,\qquad \theta =\lambda }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f7fdf672670b2a6e3a6e10edf70d56784d8bfaa1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:22.146ex; height:4.676ex;" alt="{\displaystyle \rho ={\frac {\pi }{2}}-\varphi ,\qquad \theta =\lambda }" /></span></dd>
+</dl>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=edit&amp;section=3" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the case of radio, this projection allows for <a href="/wiki/Directional_antenna" title="Directional antenna">directional antenna</a> aiming, especially in the case of <a href="/wiki/High_frequency" title="High frequency">HF</a> communications. An operator can point the antenna, usually by an <a href="/wiki/Antenna_rotator" title="Antenna rotator">electric rotator</a>, simply locating the target in the map and rotating the antenna to the angle indicated by the map. The map should be centered as nearly as possible to the actual antenna location.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (October 2016)">citation needed</span></a></i>]</sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="navigation" aria-label="Portals" class="noprint portal plainlist tright" style="margin:0.5em 0 0.5em 1em;border:solid #aaa 1px">
+<ul style="display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold">
+<li style="display:table-row"><span style="display:table-cell;padding:0.2em;vertical-align:middle;text-align:center"><a href="/wiki/File:World_map_green.png" class="image"><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/95/World_map_green.png/32px-World_map_green.png" width="32" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/95/World_map_green.png/48px-World_map_green.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/95/World_map_green.png/64px-World_map_green.png 2x" data-file-width="4312" data-file-height="2128" /></a></span><span style="display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle"><a href="/wiki/Portal:Atlas" title="Portal:Atlas">Atlas portal</a></span></li>
+</ul>
+</div>
+<ul>
+<li><a href="/wiki/List_of_map_projections" title="List of map projections">List of map projections</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap">
+<ol class="references">
+<li id="cite_note-Snyder-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-Snyder_1-0">^</a></b></span> <span class="reference-text"><cite class="citation book">SNYDER, John P. (1997). <i>Flattening the earth: two thousand years of map projections</i>. University of Chicago Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-226-76747-7" title="Special:BookSources/0-226-76747-7">0-226-76747-7</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Flattening+the+earth%3A+two+thousand+years+of+map+projections&amp;rft.pub=University+of+Chicago+Press&amp;rft.date=1997&amp;rft.isbn=0-226-76747-7&amp;rft.aulast=SNYDER&amp;rft.aufirst=John+P.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAzimuthal+equidistant+projection" class="Z3988"><span style="display:none;">&#160;</span></span>, p.29</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">David A. KING (1996), "Astronomy and Islamic society: Qibla, gnomics and timekeeping", in Roshdi Rashed, ed., <i><a href="/wiki/Encyclopedia_of_the_History_of_Arabic_Science" title="Encyclopedia of the History of Arabic Science">Encyclopedia of the History of Arabic Science</a></i>, Vol. 1, p. 128–184 [153]. <a href="/wiki/Routledge" title="Routledge">Routledge</a>, London and New York.</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Snyder 1997, p. 29</span></li>
+<li id="cite_note-Album-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-Album_4-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Snyder, John P. (1989). <a class="external text" href="http://upload.wikimedia.org/wikipedia/commons/d/d8/AnAlbumOfMapProjections.pdf"><i>An Album of Map Projections</i></a> <span style="font-size:85%;">(PDF)</span>. p.&#160;228.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=An+Album+of+Map+Projections&amp;rft.pages=228&amp;rft.date=1989&amp;rft.aulast=Snyder&amp;rft.aufirst=John+P.&amp;rft_id=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fd%2Fd8%2FAnAlbumOfMapProjections.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAzimuthal+equidistant+projection" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.radicalcartography.net/?projectionref">Table of examples and properties of all common projections</a>, from radicalcartography.net</li>
+<li><a rel="nofollow" class="external text" href="http://www.wm7d.net/azproj.shtml">Online Azimuthal Equidistant Map Generator</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.uff.br/mapprojections/AzimuthalEquidistant_en.html">An interactive Java Applet to study the metric deformations of the Azimuthal Equidistant Projection</a>.</li>
+<li><a rel="nofollow" class="external text" href="http://geographiclib.sourceforge.net">GeographicLib</a> provides a class for performing azimuthal equidistant projections centered at any point on the ellipsoid.</li>
+<li><a rel="nofollow" class="external text" href="http://earth.nullschool.net/#current/wind/isobaric/500hPa/azimuthal_equidistant=24.64,98.15,169">Animated US National Weather Service Wind Data for Azimuthal equidistant projection</a>.</li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Map_projection" style="padding:3px">
+<table class="nowraplinks hlist collapsible collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Map_projection" title="Template:Map projection"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Map_projection" title="Template talk:Map projection"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Map_projection&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Map_projection" style="font-size:114%;margin:0 4em"><a href="/wiki/Map_projection" title="Map projection">Map projection</a></div>
+</th>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="/wiki/History_of_cartography" title="History of cartography">History</a></li>
+<li><a href="/wiki/List_of_map_projections" title="List of map projections">List</a></li>
+<li><a href="/wiki/Portal:Atlas" title="Portal:Atlas">Portal</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";">
+<div id="By_surface" style="font-size:114%;margin:0 4em"><a href="/wiki/Map_projection#Projections_by_surface" title="Map projection">By surface</a></div>
+</th>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Cylindrical" title="Map projection">Cylindrical</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:1%;font-weight: normal;"><a href="/wiki/Mercator_projection" title="Mercator projection">Mercator</a>-conformal</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Gauss%E2%80%93Kr%C3%BCger_coordinate_system" title="Gauss–Krüger coordinate system">Gauss–Krüger</a></li>
+<li><a href="/wiki/Transverse_Mercator_projection" title="Transverse Mercator projection">Transverse Mercator</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%;font-weight: normal;"><a href="/wiki/Cylindrical_equal-area_projection" title="Cylindrical equal-area projection">Equal-area</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Cylindrical_equal-area_projection#Discussion" title="Cylindrical equal-area projection">Balthasart</a></li>
+<li><a href="/wiki/Behrmann_projection" title="Behrmann projection">Behrmann</a></li>
+<li><a href="/wiki/Gall%E2%80%93Peters_projection" title="Gall–Peters projection">Gall–Peters</a></li>
+<li><a href="/wiki/Hobo%E2%80%93Dyer_projection" title="Hobo–Dyer projection">Hobo–Dyer</a></li>
+<li><a href="/wiki/Lambert_cylindrical_equal-area_projection" title="Lambert cylindrical equal-area projection">Lambert</a></li>
+<li><a href="/wiki/Cylindrical_equal-area_projection#Discussion" title="Cylindrical equal-area projection">Smyth equal-surface</a></li>
+<li><a href="/wiki/Cylindrical_equal-area_projection#Discussion" title="Cylindrical equal-area projection">Trystan Edwards</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Cassini_projection" title="Cassini projection">Cassini</a></li>
+<li><a href="/wiki/Central_cylindrical_projection" title="Central cylindrical projection">Central</a></li>
+<li><a href="/wiki/Equirectangular_projection" title="Equirectangular projection">Equirectangular</a></li>
+<li><a href="/wiki/Gall_stereographic_projection" title="Gall stereographic projection">Gall stereographic</a></li>
+<li><a href="/wiki/Miller_cylindrical_projection" title="Miller cylindrical projection">Miller</a></li>
+<li><a href="/wiki/Space-oblique_Mercator_projection" title="Space-oblique Mercator projection">Space-oblique Mercator</a></li>
+<li><a href="/wiki/Web_Mercator" title="Web Mercator">Web Mercator</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Pseudocylindrical" title="Map projection">Pseudocylindrical</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Eckert_II_projection" title="Eckert II projection">Eckert II</a></li>
+<li><a href="/wiki/Eckert_IV_projection" title="Eckert IV projection">Eckert IV</a></li>
+<li><a href="/wiki/Eckert_VI_projection" title="Eckert VI projection">Eckert VI</a></li>
+<li><a href="/wiki/Goode_homolosine_projection" title="Goode homolosine projection">Goode homolosine</a></li>
+<li><a href="/wiki/Kavrayskiy_VII_projection" title="Kavrayskiy VII projection">Kavrayskiy VII</a></li>
+<li><a href="/wiki/Mollweide_projection" title="Mollweide projection">Mollweide</a></li>
+<li><a href="/wiki/Sinusoidal_projection" title="Sinusoidal projection">Sinusoidal</a></li>
+<li><a href="/wiki/Tobler_hyperelliptical_projection" title="Tobler hyperelliptical projection">Tobler hyperelliptical</a></li>
+<li><a href="/wiki/Wagner_VI_projection" title="Wagner VI projection">Wagner VI</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Conical" title="Map projection">Conical</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Albers_projection" title="Albers projection">Albers</a></li>
+<li><a href="/wiki/Equidistant_conic_projection" title="Equidistant conic projection">Equidistant</a></li>
+<li><a href="/wiki/Lambert_conformal_conic_projection" title="Lambert conformal conic projection">Lambert conformal</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Pseudoconical" title="Map projection">Pseudoconical</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Bonne_projection" title="Bonne projection">Bonne</a></li>
+<li><a href="/wiki/Bottomley_projection" title="Bottomley projection">Bottomley</a></li>
+<li><a href="/wiki/Polyconic_projection" title="Polyconic projection">Polyconic</a></li>
+<li><a href="/wiki/Werner_projection" title="Werner projection">Werner</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Azimuthal" title="Map projection">Azimuthal<br />
+<span style="font-weight:normal;">(planar)</span></a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:1%;font-weight: normal;"><a href="/wiki/General_Perspective_projection" title="General Perspective projection">General perspective</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Gnomonic_projection" title="Gnomonic projection">Gnomonic</a></li>
+<li><a href="/wiki/Orthographic_projection_in_cartography" title="Orthographic projection in cartography">Orthographic</a></li>
+<li><a href="/wiki/Stereographic_projection" title="Stereographic projection">Stereographic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a class="mw-selflink selflink">Equidistant</a></li>
+<li><a href="/wiki/Lambert_azimuthal_equal-area_projection" title="Lambert azimuthal equal-area projection">Lambert equal-area</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Pseudoazimuthal" title="Map projection">Pseudoazimuthal</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Aitoff_projection" title="Aitoff projection">Aitoff</a></li>
+<li><a href="/wiki/Hammer_projection" title="Hammer projection">Hammer</a></li>
+<li><a href="/wiki/Wiechel_projection" title="Wiechel projection">Wiechel</a></li>
+<li><a href="/wiki/Winkel_tripel_projection" title="Winkel tripel projection">Winkel tripel</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";">
+<div id="By_metric" style="font-size:114%;margin:0 4em"><a href="/wiki/Map_projection#Projections_by_preservation_of_a_metric_property" title="Map projection">By metric</a></div>
+</th>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Conformal" title="Map projection">Conformal</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Adams_hemisphere-in-a-square_projection" title="Adams hemisphere-in-a-square projection">Adams hemisphere-in-a-square</a></li>
+<li><a href="/wiki/Gauss%E2%80%93Kr%C3%BCger_coordinate_system" title="Gauss–Krüger coordinate system">Gauss–Krüger</a></li>
+<li><a href="/wiki/Guyou_hemisphere-in-a-square_projection" title="Guyou hemisphere-in-a-square projection">Guyou hemisphere-in-a-square</a></li>
+<li><a href="/wiki/Lambert_conformal_conic_projection" title="Lambert conformal conic projection">Lambert conformal conic</a></li>
+<li><a href="/wiki/Mercator_projection" title="Mercator projection">Mercator</a></li>
+<li><a href="/wiki/Peirce_quincuncial_projection" title="Peirce quincuncial projection">Peirce quincuncial</a></li>
+<li><a href="/wiki/Stereographic_projection" title="Stereographic projection">Stereographic</a></li>
+<li><a href="/wiki/Transverse_Mercator_projection" title="Transverse Mercator projection">Transverse Mercator</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Equal-area" title="Map projection">Equal-area</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:1%;font-weight: normal;"><a href="/wiki/Bonne_projection" title="Bonne projection">Bonne</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Sinusoidal_projection" title="Sinusoidal projection">Sinusoidal</a></li>
+<li><a href="/wiki/Werner_projection" title="Werner projection">Werner</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%;font-weight: normal;"><a href="/wiki/Bottomley_projection" title="Bottomley projection">Bottomley</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Sinusoidal_projection" title="Sinusoidal projection">Sinusoidal</a></li>
+<li><a href="/wiki/Werner_projection" title="Werner projection">Werner</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%;font-weight: normal;"><a href="/wiki/Cylindrical_equal-area_projection" title="Cylindrical equal-area projection">Cylindrical</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Cylindrical_equal-area_projection#Discussion" title="Cylindrical equal-area projection">Balthasart</a></li>
+<li><a href="/wiki/Behrmann_projection" title="Behrmann projection">Behrmann</a></li>
+<li><a href="/wiki/Gall%E2%80%93Peters_projection" title="Gall–Peters projection">Gall–Peters</a></li>
+<li><a href="/wiki/Hobo%E2%80%93Dyer_projection" title="Hobo–Dyer projection">Hobo–Dyer</a></li>
+<li><a href="/wiki/Lambert_cylindrical_equal-area_projection" title="Lambert cylindrical equal-area projection">Lambert cylindrical equal-area</a></li>
+<li><a href="/wiki/Cylindrical_equal-area_projection#Discussion" title="Cylindrical equal-area projection">Smyth equal-surface</a></li>
+<li><a href="/wiki/Cylindrical_equal-area_projection#Discussion" title="Cylindrical equal-area projection">Trystan Edwards</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%;font-weight: normal;"><a href="/wiki/Tobler_hyperelliptical_projection" title="Tobler hyperelliptical projection">Tobler hyperelliptical</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Collignon_projection" title="Collignon projection">Collignon</a></li>
+<li><a href="/wiki/Mollweide_projection" title="Mollweide projection">Mollweide</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Albers_projection" title="Albers projection">Albers</a></li>
+<li><a href="/wiki/Hammer_projection#Briesemeister" title="Hammer projection">Briesemeister</a></li>
+<li><a href="/wiki/Eckert_II_projection" title="Eckert II projection">Eckert II</a></li>
+<li><a href="/wiki/Eckert_IV_projection" title="Eckert IV projection">Eckert IV</a></li>
+<li><a href="/wiki/Eckert_VI_projection" title="Eckert VI projection">Eckert VI</a></li>
+<li><a href="/wiki/Hammer_projection" title="Hammer projection">Hammer</a></li>
+<li><a href="/wiki/Lambert_azimuthal_equal-area_projection" title="Lambert azimuthal equal-area projection">Lambert azimuthal equal-area</a></li>
+<li><a href="/wiki/Quadrilateralized_spherical_cube" title="Quadrilateralized spherical cube">Quadrilateralized spherical cube</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Equidistant" title="Map projection">Equidistant in<br />
+some aspect</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Equidistant_conic_projection" title="Equidistant conic projection">Conic</a></li>
+<li><a href="/wiki/Equirectangular_projection" title="Equirectangular projection">Equirectangular</a></li>
+<li><a href="/wiki/Sinusoidal_projection" title="Sinusoidal projection">Sinusoidal</a></li>
+<li><a href="/wiki/Two-point_equidistant_projection" title="Two-point equidistant projection">Two-point</a></li>
+<li><a href="/wiki/Werner_projection" title="Werner projection">Werner</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Gnomonic" title="Map projection">Gnomonic</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Gnomonic_projection" title="Gnomonic projection">Gnomonic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Rhumb_line" title="Map projection">Loxodromic</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Loximuthal_projection" title="Loximuthal projection">Loximuthal</a></li>
+<li><a href="/wiki/Mercator_projection" title="Mercator projection">Mercator</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Retroazimuthal" title="Map projection">Retroazimuthal</a><br />
+<span style="font-weight:normal;">(Mecca or Qibla)</span></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Craig_retroazimuthal_projection" title="Craig retroazimuthal projection">Craig</a></li>
+<li><a href="/wiki/Hammer_retroazimuthal_projection" title="Hammer retroazimuthal projection">Hammer</a></li>
+<li><a href="/wiki/Littrow_projection" title="Littrow projection">Littrow</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";">
+<div id="By_construction" style="font-size:114%;margin:0 4em"><a href="/wiki/Map_projection#Classification" title="Map projection">By construction</a></div>
+</th>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Compromise_projections" title="Map projection">Compromise</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Chamberlin_trimetric_projection" title="Chamberlin trimetric projection">Chamberlin trimetric</a></li>
+<li><a href="/wiki/Kavrayskiy_VII_projection" title="Kavrayskiy VII projection">Kavrayskiy VII</a></li>
+<li><a href="/wiki/Miller_cylindrical_projection" title="Miller cylindrical projection">Miller cylindrical</a></li>
+<li><a href="/wiki/Robinson_projection" title="Robinson projection">Robinson</a></li>
+<li><a href="/wiki/Van_der_Grinten_projection" title="Van der Grinten projection">Van der Grinten</a></li>
+<li><a href="/wiki/Wagner_VI_projection" title="Wagner VI projection">Wagner VI</a></li>
+<li><a href="/wiki/Winkel_tripel_projection" title="Winkel tripel projection">Winkel tripel</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Hybrid" title="Map projection">Hybrid</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Goode_homolosine_projection" title="Goode homolosine projection">Goode homolosine</a></li>
+<li><a href="/wiki/HEALPix" title="HEALPix">HEALPix</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Perspective_projections" title="Map projection">Perspective</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:1%;font-weight: normal;"><a href="/wiki/General_Perspective_projection" title="General Perspective projection">Planar</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Gnomonic_projection" title="Gnomonic projection">Gnomonic</a></li>
+<li><a href="/wiki/Orthographic_projection_in_cartography" title="Orthographic projection in cartography">Orthographic</a></li>
+<li><a href="/wiki/Stereographic_projection" title="Stereographic projection">Stereographic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Central_cylindrical_projection" title="Central cylindrical projection">Central cylindrical</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Map_projection#Polyhedral" title="Map projection">Polyhedral</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Bernard_J._S._Cahill" title="Bernard J. S. Cahill">Cahill Butterfly</a></li>
+<li><a href="/wiki/Dymaxion_map" title="Dymaxion map">Dymaxion</a></li>
+<li><a href="/wiki/Quadrilateralized_spherical_cube" title="Quadrilateralized spherical cube">Quadrilateralized spherical cube</a></li>
+<li><a href="/wiki/Waterman_butterfly_projection" title="Waterman butterfly projection">Waterman butterfly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";">
+<div id="See_also" style="font-size:114%;margin:0 4em">See also</div>
+</th>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Latitude" title="Latitude">Latitude</a></li>
+<li><a href="/wiki/Longitude" title="Longitude">Longitude</a></li>
+<li><a href="/wiki/Tissot%27s_indicatrix" title="Tissot's indicatrix">Tissot's indicatrix</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1309
+Cached time: 20171208171215
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.216 seconds
+Real time usage: 1.383 seconds
+Preprocessor visited node count: 1243/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 125933/2097152 bytes
+Template argument size: 15864/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 1/500
+Lua time usage: 0.086/10.000 seconds
+Lua memory usage: 3.33 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  224.229      1 -total
+ 29.89%   67.028      1 Template:Map_Projections
+ 26.68%   59.819      1 Template:Navbox_with_collapsible_groups
+ 25.49%   57.160      1 Template:Reflist
+ 21.94%   49.193      1 Template:Citation_needed
+ 18.03%   40.438      1 Template:Fix
+ 17.64%   39.560      2 Template:Cite_book
+ 16.77%   37.600      1 Template:Comparison_azimuthal_projections.svg
+ 16.00%   35.881      1 Template:Wide_image
+ 13.41%   30.078      7 Template:Navbox
+-->
+</div>
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1094867-0!canonical!math=5 and timestamp 20171208171213 and revision id 800090335
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Azimuthal_equidistant_projection&amp;oldid=800090335">https://en.wikipedia.org/w/index.php?title=Azimuthal_equidistant_projection&amp;oldid=800090335</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Map_projections" title="Category:Map projections">Map projections</a></li><li><a href="/wiki/Category:Equidistant_projections" title="Category:Equidistant projections">Equidistant projections</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_October_2016" title="Category:Articles with unsourced statements from October 2016">Articles with unsourced statements from October 2016</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Azimuthal+equidistant+projection" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Azimuthal+equidistant+projection" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/wiki/Azimuthal_equidistant_projection" title="View the content page [c]" accesskey="c">Article</a></span></li><li id="ca-talk"><span><a href="/wiki/Talk:Azimuthal_equidistant_projection" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/wiki/Azimuthal_equidistant_projection">Read</a></span></li><li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></span></li><li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+			<div class="body">
+								<ul>
+					<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Azimuthal_equidistant_projection" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Azimuthal_equidistant_projection" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;oldid=800090335" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1753196" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Azimuthal_equidistant_projection&amp;id=800090335" title="Information on how to cite this page">Cite this page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+			<div class="body">
+								<ul>
+					<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Azimuthal+equidistant+projection">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Azimuthal+equidistant+projection&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Azimuthal_equidistant_projection&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+			<div class="body">
+								<ul>
+					<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Azimuthal_equidistant_projection" hreflang="en">Wikimedia Commons</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Projecci%C3%B3_azimutal_equidistant" title="Projecció azimutal equidistant – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Mittabstandstreue_Azimutalprojektion" title="Mittabstandstreue Azimutalprojektion – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Proyecci%C3%B3n_acimutal_equidistante" title="Proyección acimutal equidistante – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Projection_de_Postel" title="Projection de Postel – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Proiezione_azimutale_equidistante" title="Proiezione azimutale equidistante – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Afstandsgetrouwe_azimutale_projectie" title="Afstandsgetrouwe azimutale projectie – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E6%AD%A3%E8%B7%9D%E6%96%B9%E4%BD%8D%E5%9B%B3%E6%B3%95" title="正距方位図法 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Odwzorowanie_azymutalne_r%C3%B3wnoodleg%C5%82o%C5%9Bciowe" title="Odwzorowanie azymutalne równoodległościowe – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Proje%C3%A7%C3%A3o_azimutal" title="Projeção azimutal – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%B7%D0%B8%D0%BC%D1%83%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%86%D0%B8%D1%8F" title="Азимутальная проекция – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Oikeakeskipituinen_tasoprojektio" title="Oikeakeskipituinen tasoprojektio – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%90%D0%B7%D0%B8%D0%BC%D1%83%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%86%D1%96%D1%8F" title="Азимутальна проекція – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li>				</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1753196#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 11 September 2017, at 13:16.</li>
+								<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://wikimediafoundation.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+								<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+								<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+								<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Cookie statement</a></li>
+								<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Azimuthal_equidistant_projection&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.216","walltime":"1.383","ppvisitednodes":{"value":1243,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":125933,"limit":2097152},"templateargumentsize":{"value":15864,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  224.229      1 -total"," 29.89%   67.028      1 Template:Map_Projections"," 26.68%   59.819      1 Template:Navbox_with_collapsible_groups"," 25.49%   57.160      1 Template:Reflist"," 21.94%   49.193      1 Template:Citation_needed"," 18.03%   40.438      1 Template:Fix"," 17.64%   39.560      2 Template:Cite_book"," 16.77%   37.600      1 Template:Comparison_azimuthal_projections.svg"," 16.00%   35.881      1 Template:Wide_image"," 13.41%   30.078      7 Template:Navbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.086","limit":"10.000"},"limitreport-memusage":{"value":3494275,"limit":52428800}},"cachereport":{"origin":"mw1309","timestamp":"20171208171215","ttl":1900800,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":66,"wgHostname":"mw1271"});});</script>
+	</body>
+</html>
