@@ -14081,6 +14081,15 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+            type: 'Photo Essay',
+            title: 'Organic Agriculture, Scale, and the Production of a Region in Northeast, India',
+            author: 'David Meek',
+            description: '',
+            date: '12/08/17',
+            thumbnail: 'publications/photoessays/india/img/fig18.jpg',
+            url: 'publications/photoessays/india/index.html',
+            location: []
+        },{
             type: 'Feature Article',
             title: 'The Joola: The Geographical Dimensions of Africa\'s Greatest Shipwreck',
             author: 'Karen Barton',
