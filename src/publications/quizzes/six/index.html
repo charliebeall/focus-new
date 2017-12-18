@@ -179,7 +179,7 @@
             },
             {
                 "id": "place2",
-                "zoom": 4,
+                "zoom": 5,
                 "layers": [
                     {"id": "northern ireland", "type": "geojson", "data": {
                         "type": "Feature",
@@ -189,7 +189,8 @@
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                                6.4923, 54.7877
+                                -6.4923, 
+                                54.798565
                             ]
                         }
                     }},
@@ -201,7 +202,7 @@
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                                3.7837, 52.1307
+                                -3.7837, 52.1307
                             ]
                         }
                     }},
@@ -213,7 +214,7 @@
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                                4.2026, 56.4907
+                                -4.2026, 56.4907
                             ]
                         }
                     }},
@@ -225,17 +226,14 @@
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                                1.1743, 52.3555
+                                -1.1743, 52.3555
                             ]
                         }
                     }}
                 ],
                 "baseLayer": {
                     "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
-                    "scheme": "xyz"
-
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 },
                 "style": {
                     "filter": "sepia(50%)",
@@ -247,13 +245,13 @@
                 "id": "place3",
                 //"center": [0, 0],
                 "zoom": 5, //3
-               "baseLayer": {
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
-                    "scheme": "xyz"
-
-                },
+               "baseLayer": [{
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+                }],
                 layers: [
                     {"id": "Mt. Elbrus", "type": "geojson", "data": {
                     "type": "Feature",
@@ -373,21 +371,13 @@
                 "style": {
                     "filter": "grayscale(0%)",
                     "opacity": 0.8,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
-                }
+                    "background": "url(img/Q4/background.png) 50% 50%"                }
             },
             {
                 "id": "place5",
                 //"center": [-107.0068359375, 27.353636941500987],
                 "zoom": 6,
                 "fly": false,
-                "baseLayer": {
-                    "type": "esri-basemap",
-                    "url": "Imagery",
-                    "options": {
-                        "detectRetina": true
-                    }
-                },
                 "layers": [
                     {"id": "bluebird", "type": "geojson", "data": {
                         "type": "Feature",
@@ -440,23 +430,12 @@
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.9,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "url(img/Q5/maryland.png) 50% 50%"
                 }
             }, {
                 "id": "place6",
                 //"center": [-40, 38],
                 "zoom": 4,
-                "baseLayer": {
-                    /*
-                    "type": "tile",
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    */
-                    "type": "esri-basemap",
-                    "url": "Imagery",
-                    "options": {
-                        "detectRetina": true
-                    }
-                },
                 "layers": [
                     {"id": "stegosaurus", "type": "geojson", "data": {
                         "type": "Feature",
@@ -509,19 +488,18 @@
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.8,
-
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "url(img/Q6/dinoprints.jpg) 50% 50%"
                 }
             }, {
                 "id": "place7",
                 "zoom": 3,
-                "baseLayer": {
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
-                    "scheme": "xyz"
-
-                },
+                 "baseLayer": [{
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+                }],
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.7,
@@ -644,21 +622,10 @@
                 "id": "place9",
                 //"center": [0, 0],
                 "zoom": 5,
-                "baseLayer": [{
-                    /*
-                    "type": "tile",
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    */
-                    "type": "esri-basemap",
-                    "url": "Imagery",
-                    "options": {
-                        "detectRetina": true
-                    }
-                }],
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.6,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "url(img/Q9/united-nations.jpg) 50% 50%"
                 },
                 "layers": [{"id": "grinten", "type": "geojson", "data": {
                     "type": "Feature",
@@ -708,22 +675,10 @@
             }, {
                 "id": "place10",
                 "zoom": 3,
-                "baseLayer": {
-                    /*
-                     "type": "tile",
-                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                     */
-                    "type": "esri-basemap",
-                    "url": "NationalGeographic",
-                    "options": {
-                        "detectRetina": true
-                    }
-                },
                 "style": {
                     "filter": "grayscale(0%)",
                     "opacity": 0.8,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
-                },
+                    "background": "url(img/Q10/old_map.jpg) 50% 50%"                },
                 "layers": [{"id": "terrarum nova", "type": "geojson", "data": {
                     "type": "Feature",
                     "properties": {
@@ -827,20 +782,20 @@
             text: 'Wales',
             photo: 'img/Q2/Wales_flag.png',
             sceneId: 'wales'
-        }, {
+        },{
             id: 'C',
-            text: 'Scotland',
-            photo: 'img/Q2/Scotland_flag.png',
-            sceneId: 'scotland'
-        }, {
-            id: 'D',
             text: 'England',
             photo: 'img/Q2/England_flag.png',
             sceneId: 'england'
+        },{
+            id: 'D',
+            text: 'Scotland',
+            photo: 'img/Q2/Scotland_flag.png',
+            sceneId: 'scotland'
         }, ],
         prompt: 'Animals often also serve as symbols of countries. The most popular such symbols are lions and eagles. However, some countries or states use mythological animals, including two components of the United Kingdom. Which part of the UK is symbolized by a unicorn?',
         rightAnswer: {
-            id: 'C',
+            id: 'D',
             description: 'Scotland'
         }
     }, {
