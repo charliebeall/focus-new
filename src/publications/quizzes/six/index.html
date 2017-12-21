@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Geo Quiz 6</title>
-    <meta name="description" content="FOCUS on Geography:  Geo Quiz #4">
+    <meta name="description" content="FOCUS on Geography:  Geo Quiz #6">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -105,6 +105,7 @@
 <!-- inject:templates:html -->
 <!-- endinject -->
 <script src="../../../js/combined.js"></script>
+<script src="js/stateData.min.js"></script>
 <script>
     var scenes = {
         "scenes": [
@@ -172,7 +173,7 @@
                 //"center": [-60, 48],
                 "zoom": 3,
                 "style": {
-                    "filter": "sepia(0%)",
+                    "filter": "sepia(80%)",
                     "opacity": 0.75,
                     "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
                 }
@@ -313,13 +314,27 @@
                     "type": "tile",
                     "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
                 },
-                "layers": [],
-                "center": [0, 0],
-                "zoom": 2,
+                "layers": [{
+                	"id": "texas",
+					"type": "state",
+					"data": "TX",
+					"style": {noClip: true, color: '#000', weight: 1, fillOpacity: 1, fillPattern: {
+					                        url: 'img/Q4/flowers.jpg',
+					                        pattern: {
+					                            width: '1368px',
+					                            height: '912px',
+					                            patternUnits: 'userSpaceOnUse'
+					                        },
+					                        image: {
+					                            width: '1368px',
+					                            height: '912px'
+					                        }
+					                    }}
+                }],
+                "zoom": 6,
                 "style": {
-                    "opacity": 0,
-                    "backgroundSize": "cover",
-                    "background": "url(img/Q4/background.png) 50% 50%"
+                    "opacity": 0.5,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
                 }
             },
             {
@@ -328,13 +343,15 @@
                     "type": "tile",
                     "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
                 },
-                "layers": [],
-                "center": [0, 0],
-                "zoom": 2,
+                "layers": [{
+                	"id": "maryland",
+					"type": "state",
+					"data": "MD"
+                }],
+                "zoom": 7,
                 "style": {
-                    "opacity": 0,
-                    "backgroundSize": "cover",
-                    "background": "url(img/Q5/maryland.png) 50% 50%"
+                    "opacity": 0.5,
+                    "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
                 }
             }, {
                 "id": "place6",
@@ -342,13 +359,27 @@
                     "type": "tile",
                     "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
                 },
-                "layers": [],
-                "center": [0, 0],
-                "zoom": 2,
+                "layers": [{
+                	"id": "colorado",
+					"type": "state",
+					"data": "CO",
+					"style": {noClip: true, color: '#000', weight: 1, fillOpacity: 1, fillPattern: {
+					                        url: 'img/Q6/dinosaurtracks.jpg',
+					                        pattern: {
+					                            width: '1280px',
+					                            height: '960px',
+					                            patternUnits: 'userSpaceOnUse'
+					                        },
+					                        image: {
+					                            width: '1280px',
+					                            height: '960px'
+					                        }
+					                    }}
+                }],
+                "zoom": 6,
                 "style": {
-                    "opacity": 0,
-                    "backgroundSize": "cover",
-                    "background": "url(img/Q6/dinoprints.jpg) 50% 50%"
+                    "opacity": 0.5,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
                 }
             }, {
                 "id": "place7",
@@ -425,9 +456,9 @@
 
                 },
                 "style": {
-                    "filter": "sepia(0%)",
+                    "filter": "grayscale(100%)",
                     "opacity": 0.8,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
                 },
                 "layers": [{"id": "crescent city", "type": "geojson", "data": {
                     "type": "Feature",
@@ -504,7 +535,7 @@
                 "style": {
                     "opacity": 0,
                     "backgroundSize": "cover",
-                    "background": "url(img/Q10/old_map.jpg) 50% 50%"                
+                    "background": "url(img/Q10/worldmap.jpg) 50% 50%"                
                 }
                 
             }
@@ -610,22 +641,22 @@
             id: 'A',
             text: 'Bluebonnet',
             photo: 'img/Q4/Bluebonnet.jpg',
-            sceneId: 'bluebonnet'
+            sceneId: 'texas'
         }, {
             id: 'B',
             text: 'Indian Paintbrush',
             photo: 'img/Q4/Castilleja.jpg',
-            sceneId: 'indian paintbrush'
+            sceneId: 'texas'
         }, {
             id: 'C',
             text: 'Sunflower',
             photo: 'img/Q4/Sunflower.jpg',
-            sceneId: 'sunflower'
+            sceneId: 'texas'
         }, {
             id: 'D',
             text: 'Rose',
             photo: 'img/Q4/Rose.jpg',
-            sceneId: 'rose'
+            sceneId: 'texas'
         }],
         prompt: 'Every U.S. state has adopted symbols, including both a state flower and a state bird, that in many cases have become identifiable with that specific location. Which flower is the state flower of Texas, a state that has become famous for the wildflowers along its highway system that were championed by Lady Bird Johnson, wife of the 36th president, Lyndon Johnson?',
         rightAnswer: {
@@ -637,22 +668,22 @@
             id: 'A',
             text: 'Bluebird',
             photo: 'img/Q5/Bluebird.jpg',
-            sceneId: 'bluebird'
+            sceneId: 'maryland'
         }, {
             id: 'B',
             text: 'Oriole',
             photo: 'img/Q5/Icterus.jpg',
-            sceneId: 'oriole'
+            sceneId: 'maryland'
         }, {
             id: 'C',
             text: 'Pelican',
             photo: 'img/Q5/Brown_pelican.jpg',
-            sceneId: 'pelican'
+            sceneId: 'maryland'
         }, {
             id: 'D',
             text: 'Roadrunner',
             photo: 'img/Q5/Roadrunner.jpg',
-            sceneId: 'roadrunner'
+            sceneId: 'maryland'
         }],
         prompt: 'Several U.S. states share a state bird, with the Northern Cardinal being the state bird of seven states, while the Northern Mockingbird, Wild Turkey, Western Meadowlark, American Robin, and various Goldfinches are also adopted by multiple states. A few states have unique state birds, including Maryland, whose bird also serves as a major league baseball mascot. What is this state bird?',
         rightAnswer: {
@@ -664,22 +695,22 @@
             id: 'A',
             text: 'Stegosaurus',
             photo: 'img/Q6/Stegosaurus.jpg',
-            sceneId: 'stegosaurus'
+            sceneId: 'colorado'
         }, {
             id: 'B',
             text: 'Tyranosaurus Rex',
             photo: 'img/Q6/Tyrannosaurus.jpg',
-            sceneId: 'tyranosaurus rex'
+            sceneId: 'colorado'
         }, {
             id: 'C',
             text: 'Triceratops',
             photo: 'img/Q6/Triceratops.jpg',
-            sceneId: 'triceratops'
+            sceneId: 'colorado'
         }, {
             id: 'D',
             text: 'Hadrosaurus',
             photo: 'img/Q6/Hadrosaurus.jpg',
-            sceneId: 'hadrosaurus'
+            sceneId: 'colorado'
         }],
         prompt: 'In 1982, Colorado added an even more unusual state symbol distantly related to a state bird, the state dinosaur, in honor of a cache of fossils found in the state. Since then, 10 other states and the District of Columbia adopted a state dinosaur based on similar fossil remains found in their territory. Which creature did Colorado adopt as its dino-symbol?',
         rightAnswer: {

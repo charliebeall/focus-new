@@ -511,6 +511,22 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 
             layer._bounds = layer.getBounds();
         }
+        else if (layerDef.type === 'state') {
+            layer = new L.ChoroplethDataLayer(_.map([layerDef.data], function (value) {
+                return {code: value};
+            }), {
+                recordsField: null,
+                locationMode: L.LocationModes.STATE,
+                codeField: 'code',
+                tooltipOptions: {
+                    iconSize: null,
+                    iconAnchor: new L.Point(-5, 0)
+                },
+                layerOptions: layerDef.style || {}
+            });
+
+            layer._bounds = layer.getBounds();
+        }
         else if (layerDef.type === 'csv') {
             var me = this;
             var resultFunc = function (layerDef) {
