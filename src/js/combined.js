@@ -14081,6 +14081,15 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+            type: 'Geo Quiz',
+            title: 'Quiz Six: Symbols',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '12/22/17',
+            thumbnail: 'publications/quizzes/six/img/Q10/Erdapfel.jpg',
+            url: 'publications/quizzes/six/index.html',
+            location: []
+        },{
             type: 'Photo Essay',
             title: 'Organic Agriculture, Scale, and the Production of a Region in Northeast, India',
             author: 'David Meek',
@@ -14220,7 +14229,7 @@ Focus.Volumes = [
             description: '',
             date: '10/27/16',
             doi: '',
-            thumbnail: 'publications/photoessays/oaxaca/img/1a.jpg',
+            thumbnail: 'publications/photoessays/oaxaca/img/1b.jpg',
             url: 'publications/photoessays/oaxaca/index.html',
             location: []
         }, {
@@ -14987,6 +14996,22 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             }), {
                 recordsField: null,
                 locationMode: L.LocationModes.COUNTRY,
+                codeField: 'code',
+                tooltipOptions: {
+                    iconSize: null,
+                    iconAnchor: new L.Point(-5, 0)
+                },
+                layerOptions: layerDef.style || {}
+            });
+
+            layer._bounds = layer.getBounds();
+        }
+        else if (layerDef.type === 'state') {
+            layer = new L.ChoroplethDataLayer(_.map([layerDef.data], function (value) {
+                return {code: value};
+            }), {
+                recordsField: null,
+                locationMode: L.LocationModes.STATE,
                 codeField: 'code',
                 tooltipOptions: {
                     iconSize: null,
