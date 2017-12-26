@@ -14081,6 +14081,24 @@ Focus.Volumes = [
     {
         number: 60,
         publications: [{
+            type: 'Geo Quiz',
+            title: 'Quiz Six: Symbols',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '12/22/17',
+            thumbnail: 'publications/quizzes/six/img/Q10/Erdapfel.jpg',
+            url: 'publications/quizzes/six/index.html',
+            location: []
+        },{
+            type: 'Photo Essay',
+            title: 'Organic Agriculture, Scale, and the Production of a Region in Northeast, India',
+            author: 'David Meek',
+            description: '',
+            date: '12/08/17',
+            thumbnail: 'publications/photoessays/india/img/fig18.jpg',
+            url: 'publications/photoessays/india/index.html',
+            location: []
+        },{
             type: 'Feature Article',
             title: 'The Joola: The Geographical Dimensions of Africa\'s Greatest Shipwreck',
             author: 'Karen Barton',
@@ -14211,7 +14229,7 @@ Focus.Volumes = [
             description: '',
             date: '10/27/16',
             doi: '',
-            thumbnail: 'publications/photoessays/oaxaca/img/1a.jpg',
+            thumbnail: 'publications/photoessays/oaxaca/img/1b.jpg',
             url: 'publications/photoessays/oaxaca/index.html',
             location: []
         }, {
