@@ -127,13 +127,13 @@
 
                 <h3>Agave landscapes of cultivation and conservation</h3>
                 <p>
-                    ​In Mexico, agave landscapes can be divided into two broad categories: landscapes of cultivation and landscapes of conservation. In cultivation, the obvious goal is to produce crops, and as noted, agaves are important crops. But agaves also support the structure and function of entire agro-ecosystems. On hill slopes agave root systems stabilize soils and assist farmers with developing land for agriculture, creating protected habitat for less-competitive plant species including most other crop plants. They serve as anchor points for landforms like agricultural terraces and as living barriers between fields. When intercropped with corn, beans, and squash, they are key components of polyculture agriculture across Mexico.
+                    ​In Mexico, agave landscapes can be divided into two broad categories: landscapes of cultivation and landscapes of conservation. In cultivation, the obvious goal is to produce crops, and as noted, agaves are important crops. But agaves also support the structure and function of entire agro-ecosystems. On hill slopes agave root systems stabilize soils and assist farmers with developing land for agriculture, creating protected habitat for less-competitive plant species including most other crop plants. They serve as anchor points for landforms like agricultural terraces and as living barriers between fields. When intercropped with corn, beans, and squash, they are key components of polyculture agriculture across <a href="#" class="location" data-layer-id="mexico">Mexico</a>.
                 </p>
                 <div id="figure3" class="figure " style="background-image:url(img/fig3.jpg);"></div>
-                        <div class="caption">Figure 3: Chain of agave lined terraces. Near Altzayanca, Tlaxcala, México.</div>
+                        <div class="caption">Figure 3: Chain of agave lined terraces. Near <a href="#" class="location" data-layer-id="altzayanca">Altzayanca</a>, Tlaxcala, México.</div>
 
                 <div id="figure4" class="figure " style="background-image:url(img/fig4.jpg);"></div>
-                        <div class="caption">Figure 4: Reproductive shoots (hijos or hijuelos) sprout at the base of an agave. Near Tzautla, Tlaxcala, México.</div>
+                        <div class="caption">Figure 4: Reproductive shoots (hijos or hijuelos) sprout at the base of an agave. Near <a href="#" class="location" data-layer-id="tzautla">Tzautla</a>, Tlaxcala, México.</div>
 
                 <p>
                     ​But while the primary goal of agriculture is to produce crops, an ideal corresponding goal is to protect natural resources. When farmers are able to produce crops in perpetuity—while protecting natural resources and minimizing degradation—we can say that agriculture is more sustainable. Sustainable agriculture is conservative in the sense that it minimizes resource consumption and waste by protecting resources for future use. In this context, sustainable, conservation-minded farming relates more to the microeconomics of soil and water management than it does to a farming ethos or ethic. This perspective on conservation differs from contemporary understandings of the term, which more often relate to environmental policies and institutions. We refer to agave landscapes of conservation in the latter context; namely, as focused efforts to protect the environment and its resources, rather than efforts to produce food. They typically occur at scales larger than the household level and serve a variety of conservation goals—from the provision of specific ecosystem services (e.g., water, soils, biodiversity) to comprehensive environmental repair (e.g., restoration, reclamation, rehabilitation).
@@ -356,17 +356,17 @@
                     "id": "atotonilco",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "weight": 13,
+                        "radius": 13,
+                        "opacity": 0.3,
                         "text": {
                             "text": "Atotonilco, Tlaxcala",
                             "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
+                                "stroke": "rgba(0,0,0,0.5)",
+                                "fill": "#fff",
+                                "stroke-width": 0.1,
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-weight": "bold"
                             }
                         }
                     },
@@ -377,7 +377,7 @@
                             "coordinates": [ -98.057057, 19.596722]
                         },
                         "properties": {
-                            "name": "Baja California Sur"
+                            "name": "Atotonilco, Tlaxcala"
                         }
                     }
                 }, {
@@ -405,7 +405,7 @@
                             "coordinates": [ -98.238308,19.582058]
                         },
                         "properties": {
-                            "name": "El Vicaíno Desert"
+                            "name": "Santigo Villaalta"
                         }
                     }
                 }, {
@@ -660,8 +660,8 @@
                         },
 
                         "layers": [
-                            {"idRef": "atotonilco"},
                             {"idRef": "mexico"},
+                            {"idRef": "atotonilco"},
                             {"idRef": "santigo-villaalta"},
                         ],
                         "zoom": 5,
@@ -678,10 +678,11 @@
                             "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
                         },
                         "layers": [
-                            {"idRef": "atotonilco"},
+                            {"idRef": "altzayanca"},
+                            {"idRef": "tzautla"},
 
                         ],
-                        "zoom": 8,
+                        "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
