@@ -370,31 +370,27 @@
     var scenes = {
         "features": [
        {
-            "id": "itanagar",
+            "id": "skopje", //img1
             "type": "geojson",
             "style": {
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Itanagar"
+                    "text": "skopje"
                 }
             }, 
             "data": {
               "type": "Feature",
               "geometry": {
                 "type": "Point",
-                "coordinates": [
-                  93.6052117,
-                  27.084407,
-                  0
-                ]
+                "coordinates": [ – 21.42, 41.99]                ]
               },
               "properties": {
-                "name": "Itanagar"
+                "name": "Skopje"
               }
             }
         }, {
-            "id": "ziro-valley",
+            "id": "stone-bridge", //img2
             "type": "geojson",
             "style": {
                 "fillOpacity": 0.2,
@@ -403,42 +399,40 @@
                 "opacity": 0.7,
                 "dashArray": [2, 2],
                 "text": {
-                   "text": "Ziro Valley"
+                   "text": "The Stone Bridge"
                 }
             },
             "data": {
                 "type": "Feature",
                 "properties": {
-                    "name": "Ziro Valley"
+                    "name": "The Stone Bridge"
                 },
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [93.822281,27.547124]
+                    "coordinates": [21.433127, 41.997046]
                 }
             }
         }, {
-        //-17.583494, -66.008273
-        "id": "mokokchung",
+        "id": "church", //img3
             "type": "geojson",
             "style": {
             "radius": 0,
                 "text": {
-                "text": "Mokokchung"
+                "text": "Orthodox Church"
             }
         },
         "data": {
             "type": "Feature",
                 "geometry": {
                 "type": "Point",
-                    "coordinates": [94.5135, 26.3220]
+                    "coordinates": [21.434397, 41.998468]
             },
             "properties": {
-                "name": "Mokokchung"
+                "name": "Orthodox Church"
             }
         }
     },{
-        //-17.583494, -66.008273
-        "id": "singtam",
+        "id": "old-bazaar-pasha-mosque", //img4 & img5
             "type": "geojson",
             "style": {
             "radius": 0,
@@ -448,23 +442,21 @@
                 "fillColor": "#333",
                 "dropShadow": true,
                 "text": {
-                "text": "Singtam"
+                "text": "Old Bazaar and the Mustafa Pasha Mosque"
             }
         },
         "data": {
             "type": "Feature",
                 "geometry": {
                 "type": "Point",
-                    //"coordinates": [ 88.4961, 27.2331]
-					"coordinates": [88.38, 27.15]
+					"coordinates": [21.438496, 42.001003]
             },
             "properties": {
-                "name": "Singtam"
+                "name": "Old Bazaar and the Mustafa Pasha Mosque"
             }
         }
     },{
-        //-17.583494, -66.008273
-        "id": "gangtok",
+        "id": "monuments", //img6 and img7
             "type": "geojson",
             "style": {
             "radius": 0,
@@ -474,22 +466,21 @@
                 "fillColor": "#333",
                 "dropShadow": true,
                 "text": {
-                "text": "Gangtok"
+                "text": "Monuments of Yugoslavia"
             }
         },
         "data": {
             "type": "Feature",
                 "geometry": {
                 "type": "Point",
-                    "coordinates": [ 88.606506, 27.338936]
+                    "coordinates": [21.434316, 42.000034]
             },
             "properties": {
-                "name": "Gangtok"
+                "name": "Monuments of Yugoslavia"
             }
         }
     },{
-        //-17.583494, -66.008273
-        "id": "peni",
+        "id": "skopje2014", //img8
             "type": "geojson",
             "style": {
             "radius": 0,
@@ -499,20 +490,189 @@
                 "fillColor": "#333",
                 "dropShadow": true,
                 "text": {
-                "text": "Peni"
+                "text": "Skopje 2014"
             }
         },
         "data": {
             "type": "Feature",
                 "geometry": {
                 "type": "Point",
-                    "coordinates": [83.5238, 22.80727]
+                    "coordinates": [23.431250, 42.000583]
             },
             "properties": {
-                "name": "Peni"
+                "name": "Skopje 2014"
             }
         }
-    }],
+    },{
+        "id": "skopje2014", //img9 and img10 and img11
+            "type": "geojson",
+            "style": {
+            "radius": 0,
+                "fill": false,
+                "stroke": false,
+                "color": "#000",
+                "fillColor": "#333",
+                "dropShadow": true,
+                "text": {
+                "text": "Macedonia Square"
+            }
+        },
+        "data": {
+            "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                    "coordinates": [21.4317, 41.996031]
+            },
+            "properties": {
+                "name": "Macedonia Square"
+            }
+        }
+    },{
+        "id": "warrior-monument", //img12
+            "type": "geojson",
+            "style": {
+            "radius": 0,
+                "fill": false,
+                "stroke": false,
+                "color": "#000",
+                "fillColor": "#333",
+                "dropShadow": true,
+                "text": {
+                "text": "Warrior Monument"
+            }
+        },
+        "data": {
+            "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                    "coordinates": [21.434991, 41.998448]
+            },
+            "properties": {
+                "name": "Warrior Monument"
+            }
+        }
+    },{
+        "id": "porta-macedonia", //img13 and img14
+            "type": "geojson",
+            "style": {
+            "radius": 0,
+                "fill": false,
+                "stroke": false,
+                "color": "#000",
+                "fillColor": "#333",
+                "dropShadow": true,
+                "text": {
+                "text": "Porta Macedonia arch & the Fallen Heroes of Macedonia"
+            }
+        },
+        "data": {
+            "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                    "coordinates": [21.432663, 41.994253]
+            },
+            "properties": {
+                "name": "Porta Macedonia arch & the Fallen Heroes of Macedonia"
+            }
+        }
+    },{
+        "id": "vardar-bridges", //img15 and img16
+            "type": "geojson",
+            "style": {
+            "radius": 0,
+                "fill": false,
+                "stroke": false,
+                "color": "#000",
+                "fillColor": "#333",
+                "dropShadow": true,
+                "text": {
+                "text": "Bridges of Vardar River "
+            }
+        },
+        "data": {
+            "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                    "coordinates": [21.433964, 41.996368]
+            },
+            "properties": {
+                "name": "Bridges of Vardar River "
+            }
+        }
+    },{
+        "id": "museum", //img17
+            "type": "geojson",
+            "style": {
+            "radius": 0,
+                "fill": false,
+                "stroke": false,
+                "color": "#000",
+                "fillColor": "#333",
+                "dropShadow": true,
+                "text": {
+                "text": "National Museum of Archeology"
+            }
+        },
+        "data": {
+            "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                    "coordinates": [21.434454, 41.996768]
+            },
+            "properties": {
+                "name": "National Museum of Archeology"
+            }
+        }
+    },{
+        "id": "christians-macedonia", //img18 and img19
+            "type": "geojson",
+            "style": {
+            "radius": 0,
+                "fill": false,
+                "stroke": false,
+                "color": "#000",
+                "fillColor": "#333",
+                "dropShadow": true,
+                "text": {
+                "text": "Christians of Macedonia"
+            }
+        },
+        "data": {
+            "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                    "coordinates": [21.433315, 41.997417]
+            },
+            "properties": {
+                "name": "Christians of Macedonia"
+            }
+        }
+    },{
+        "id": "mother-theresa", //img20
+            "type": "geojson",
+            "style": {
+            "radius": 0,
+                "fill": false,
+                "stroke": false,
+                "color": "#000",
+                "fillColor": "#333",
+                "dropShadow": true,
+                "text": {
+                "text": "Memorial House of Mother Theresa"
+            }
+        },
+        "data": {
+            "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                    "coordinates": [21.430785, 41.993828]
+            },
+            "properties": {
+                "name": "Memorial House of Mother Theresa"
+            }
+        }
+    }
+    ],
 
     /*********** Scenes Start Here **********/
 
