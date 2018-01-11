@@ -383,7 +383,7 @@
               "type": "Feature",
               "geometry": {
                 "type": "Point",
-                "coordinates": [21.42, 41.99]                ]
+                "coordinates": [21.42, 41.99]
               },
               "properties": {
                 "name": "Skopje"
@@ -449,7 +449,7 @@
             "type": "Feature",
                 "geometry": {
                 "type": "Point",
-					"coordinates": [21.438496, 42.001003]
+				"coordinates": [21.438496, 42.001003]
             },
             "properties": {
                 "name": "Old Bazaar and the Mustafa Pasha Mosque"
@@ -504,7 +504,7 @@
             }
         }
     },{
-        "id": "skopje2014", //img9 and img10 and img11
+        "id": "macedonia-square", //img9 and img10 and img11
             "type": "geojson",
             "style": {
             "radius": 0,
@@ -737,7 +737,7 @@
             "type": "Feature",
                 "geometry": {
                 "type": "Point",
-                    "coordinates": [21.42, 41.99]
+                "coordinates": [21.42, 41.99]
             },
             "properties": {
                 "name": "Skopje 2014"
@@ -750,66 +750,14 @@
         "scenes": [
             {
                 "id": "place0",
-                "zoom": 4,
-				"bounds": {"india": true, "sikkim": true, "bhutan": true, "anunachal-pradesh": true, "mizoram": true},
-                "baseLayer": [{
-                        "type": "esri-basemap",
-                        "url": "Imagery",
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-
-                        }}],
-                "layers": [{
-                	"idRef": "india",
-					"style": {
-						"fill": true,
-						"fillColor": "#333",
-						"fillOpacity": 0.8
-					}
-                },{
-                    "idRef": "sikkim",
-					"style": {
-						"text": null,
-						"fill": true,
-						"weight": 1
-					}
-                },{
-                    "idRef": "meghalaya",
-					"style": {
-						"text": null,
-						"fill": true,
-						"weight": 1
-					}
-                },{
-                    "idRef": "nagaland",
-					"style": {
-						"text": null,
-						"fill": true,
-						"weight": 1
-					}
-                }, {
-                    "idRef": "mizoram",
-					"style": {
-						"text": null,
-						"fill": true,
-						"weight": 1
-					}
-                },{
-                    "idRef": "arunachal-pradesh",
-					"style": {
-						"text": null,
-						"fill": true,
-						"weight": 1
-					}
-                },{
-                    "idRef": "assam",
-					"style": {
-						"text": null,
-						"fill": true,
-						"weight": 1
-					}
-                }],
+                "zoom": 6,
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "skopje"}
+				],
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.8,
@@ -818,591 +766,173 @@
             }, {
                 "id": "place1",
                 "zoom": 10,
-                "bounds": {"itan-to-ziro": true}, //old ziro
-                "baseLayer": [{
-                        "type": "esri-basemap",
-                        "url": "Imagery",
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-
-                        }}],
-                "layers": [{
-                	"idRef": "india",
-					"style": {
-						"fill": true,
-						"fillColor": "#333",
-						"fillOpacity": 0.5
-					}
-                },{
-                    "idRef": "arunachal-pradesh",
-                    "style": {
-						"fill": false,
-                        "text": {
-                            "text": "Arunachal Pradesh"
-                        }
-                    }
-                },{
-                    "idRef": "itan-to-ziro",
-                    "style": {
-                        "weight": 3,
-                        "opacity": 1
-                    }
-                 },{
-                    "idRef": "ziro-valley",
-                    "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
-                        "text": {
-                            "text": "Ziro Valley"
-                        }
-                    }
-                },{
-                    "idRef": "itanagar",
-                    "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
-                        "text": {
-                            "text": "Itanagar"
-                        }
-                    }
-                }]
+               "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "stone-bridge"}
+                ]
             },{
                 "id": "place2",
                 "zoom": 7,
-				"bounds": {"arunachal-pradesh": true, "ziro-valley": true},
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "arunachal-pradesh",
-                    "style": {
-                        "text": {
-                            "text": "Arunachal Pradesh"
-                        }
-                    }
-                }, {
-                    "idRef": "ziro-valley",
-                    "style": {
-                        "text": {
-                            "text": "Ziro Valley"
-                        }
-                    }
-                }]
+				"baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                    {"idRef": "church"}
+                ]
             }, {
                 "id": "place3",
                 "zoom": 7,
-				"bounds": {"nagaland": true, "mokokchung": true},
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "nagaland",
-                    "style": {
-                        "text": {
-                            "text": "Nagaland"
-                        }
-                    }
-                }, {
-                    "idRef": "mokokchung",
-                    "style": {
-                        "text": {
-                            "text": "Mokokchung"
-                        }
-                    }
-                }]
+				"baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                    {"idRef": "old-bazaar-pasha-mosque"}
+                ]
             }, {
                 "id": "place4",
                 "zoom": 7,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "arunachal-pradesh",
-                    "style": {
-                        "text": {
-                            "text": "Arunachal Pradesh"
-                        }
-                    }
-                }, {
-                    "idRef": "ziro-valley",
-                    "style": {
-                        "text": {
-                            "text": "Ziro Valley"
-                        }
-                    }
-                }]
+               "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                    {"idRef": "monuments"}
+                ]
             },  {
                 "id": "place5",
                 "zoom": 8,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "sikkim",
-                    "style": {
-                        "text": {
-                            "text": "Sikkim"
-                        }
-                    }
-                }, {
-                    "idRef": "gangtok",
-                    "style": {
-                        "text": {
-                            "text": "Gangtok"
-                        }
-                    }
-                }]
+               "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                    {"idRef": "skopje2014"}
+                ]
             },{
                 "id": "place6",
                 "zoom": 8,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "sikkim",
-                    "style": {
-                        "text": {
-                            "text": "Sikkim"
-                        }
-                    }
-                }, {
-                    "idRef": "gangtok",
-                    "style": {
-                        "text": {
-                            "text": "Gangtok"
-                        }
-                    }
-                }]
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                    {"idRef": "macedonia-square"}
+                ]
             }, {
                 "id": "place7",
                 "zoom": 8,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "sikkim",
-                    "style": {
-                        "text": {
-                            "text": "Sikkim"
-                        }
-                    }
-                }, {
-                    "idRef": "singtam",
-                    "style": {
-                        "text": {
-                            "text": "Singtam"
-                        }
-                    }
-                }]
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                    {"idRef": "warrior-monument"}
+                ]
             }, {
                 "id": "place8",
                 "zoom": 8,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "sikkim",
-                    "style": {
-                        "text": {
-                            "text": "Sikkim"
-                        }
-                    }
-                }, {
-                    "idRef": "singtam",
-                    "style": {
-                        "text": {
-                            "text": "Singtam"
-                        }
-                    }
-                }]
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                    {"idRef": "porta-macedonia"}
+                ]
             }, {
                 "id": "place9",
                 "zoom": 8,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "sikkim",
-                    "style": {
-                        "text": {
-                            "text": "Sikkim"
-                        }
-                    }
-                }, {
-                    "idRef": "singtam",
-                    "style": {
-                        "text": {
-                            "text": "Singtam"
-                        }
-                    }
-                }]
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "vardar-bridges"}
+                ]
             }, {
                 "id": "place10",
                 "zoom": 8,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-               "layers": [{
-                    "idRef": "sikkim",
-                    "style": {
-
-                        "text": {
-                            "text": "Sikkim"
-                        }
-                    }
-                }, {
-                    "idRef": "singtam",
-                    "style": {
-                        "text": {
-                            "text": "Singtam"
-                        }
-                    }
-                }]
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "museum"}
+                ]
             }, {
                 "id": "place11",
                 "zoom": 8,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "sikkim",
-                    "style": {
-                        "text": {
-                            "text": "Sikkim"
-                        }
-                    }
-                }, {
-                    "idRef": "singtam",
-                    "style": {
-                        "text": {
-                            "text": "Singtam"
-                        }
-                    }
-                }]
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "christians-macedonia"}
+                ]
             }, {
                 "id": "place12",
                 "zoom": 7,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "nagaland",
-                    "style": {
-                        "text": {
-                            "text": "Nagaland"
-                        }
-                    }
-                }, {
-                    "idRef": "mokokchung",
-                    "style": {
-                        "text": {
-                            "text": "Mokokchung"
-                        }
-                    }
-                }]
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "mother-theresa"}
+                ]
             }, {
                 "id": "place13",
                 "zoom": 7,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "nagaland",
-                    "style": {
-
-                        "text": {
-                            "text": "Nagaland"
-                        }
-                    }
-                }, {
-                    "idRef": "mokokchung",
-                    "style": {
-
-                        "text": {
-                            "text": "Mokokchung"
-                        }
-                    }
-                }]
+               "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "holocaust-memorial"}
+                ]
             }, {
                 "id": "place14",
                 "zoom": 7,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "nagaland",
-                    "style": {
-
-                        "text": {
-                            "text": "Nagaland"
-                        }
-                    }
-                }, {
-                    "idRef": "mokokchung",
-                    "style": {
-
-                        "text": {
-                            "text": "Mokokchung"
-                        }
-                    }
-                }]
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "ministry-foreign"}
+                ]
             }, {
                 "id": "place15",
                 "zoom": 7,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-               "layers": [{
-                    "idRef": "nagaland",
-                    "style": {
-
-                        "text": {
-                            "text": "Nagaland"
-                        }
-                    }
-                }, {
-                    "idRef": "mokokchung",
-                    "style": {
-
-                        "text": {
-                            "text": "Mokokchung"
-                        }
-                    }
-                }]
+               "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "horse-fountain"}
+                ]
             }, {
                 "id": "place16",
                 "zoom": 7,
-                "baseLayer": [{
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }],
-                "layers": [{
-                    "idRef": "nagaland",
-                    "style": {
-
-                        "text": {
-                            "text": "Nagaland"
-                        }
-                    }
-                }, {
-                    "idRef": "mokokchung",
-                    "style": {
-
-                        "text": {
-                            "text": "Mokokchung"
-                        }
-                    }
-                }]
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "stone-bridge"}
+                ]
+            } , {
+                "id": "place17",
+                "zoom": 7,
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "layers": [
+                {"idRef": "stone-bridge"}
+                ]
             } 
         ]
     };
