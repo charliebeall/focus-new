@@ -383,7 +383,7 @@
               "type": "Feature",
               "geometry": {
                 "type": "Point",
-                "coordinates": [ – 21.42, 41.99]                ]
+                "coordinates": [21.42, 41.99]                ]
               },
               "properties": {
                 "name": "Skopje"
@@ -671,8 +671,79 @@
                 "name": "Memorial House of Mother Theresa"
             }
         }
-    }
-    ],
+    },{
+        "id": "holocaust-memorial", //img21
+            "type": "geojson",
+            "style": {
+            "radius": 0,
+                "fill": false,
+                "stroke": false,
+                "color": "#000",
+                "fillColor": "#333",
+                "dropShadow": true,
+                "text": {
+                "text": "Holocaust Memorial Museum"
+            }
+        },
+        "data": {
+            "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                    "coordinates": [21.433789, 41.998250]
+            },
+            "properties": {
+                "name": "Holocaust Memorial Museum"
+            }
+        }
+    },{
+        "id": "ministry-foreign", //img22 and img23
+            "type": "geojson",
+            "style": {
+            "radius": 0,
+                "fill": false,
+                "stroke": false,
+                "color": "#000",
+                "fillColor": "#333",
+                "dropShadow": true,
+                "text": {
+                "text": "Ministry of Foreign Affairs"
+            }
+        },
+        "data": {
+            "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                    "coordinates": [21.437022, 41.995898]
+            },
+            "properties": {
+                "name": "Ministry of Foreign Affairs"
+            }
+        }
+    },{
+        "id": "horse-fountain", //img24
+            "type": "geojson",
+            "style": {
+            "radius": 0,
+                "fill": false,
+                "stroke": false,
+                "color": "#000",
+                "fillColor": "#333",
+                "dropShadow": true,
+                "text": {
+                "text": "Skopje 2014"
+            }
+        },
+        "data": {
+            "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                    "coordinates": [21.42, 41.99]
+            },
+            "properties": {
+                "name": "Skopje 2014"
+            }
+        }
+    }],
 
     /*********** Scenes Start Here **********/
 
@@ -688,23 +759,7 @@
                             "detectRetina": true,
                             "imagerySet": "AerialWithLabels",
 
-                        }}/*, {
-                            "type": "wmts",
-                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-                            "params": {
-                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-                                maxNativeZoom: 9,
-                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-                                time: "2016-12-10",
-                                //tileSize: 256,
-                                detectRetina: true,
-                                subdomains: "abc",
-                                noWrap: true,
-                                continuousWorld: true,
-                                crs: L.CRS.EPSG3857,
-                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-                            }
-                        }*/],
+                        }}],
                 "layers": [{
                 	"idRef": "india",
 					"style": {
@@ -755,7 +810,6 @@
 						"weight": 1
 					}
                 }],
-                //"center": [ 93.2473, 25.5736],
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.8,
@@ -812,24 +866,7 @@
                             "text": "Itanagar"
                         }
                     }
-                }/*{
-                //     "idRef": "peni",
-                //     "style": {
-                //         "weight": 10,
-                //         "opacity": 0.3,
-                //         "text": {
-                //             "text": "Peni",
-                //             "style": {
-                //                 "stroke": "rgba(0,0,0,0.5)",
-                //                 "fill": "#fff",
-                //                 "font-weight": "bold",
-                //                 "stroke-width": 0.1,
-                //                 "font-family": "Raleway", "font-weight": "bold",
-                //                 "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                //             }
-                //         }
-                //     }
-                }*/]
+                }]
             },{
                 "id": "place2",
                 "zoom": 7,
@@ -869,14 +906,6 @@
             }, {
                 "id": "place3",
                 "zoom": 7,
-                // "baseLayer": [{
-                //     "type": "tile",
-                //     //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                //     "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png",
-                //     "params": {
-                //         "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                //     }
-                // }],
 				"bounds": {"nagaland": true, "mokokchung": true},
                 "baseLayer": [{
                             "type": "wmts",
@@ -948,14 +977,6 @@
             },  {
                 "id": "place5",
                 "zoom": 8,
-                // "baseLayer": [{
-                //     "type": "tile",
-                //     //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                //     "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png",
-                //     "params": {
-                //         "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                //     }
-                // }],
                 "baseLayer": [{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
@@ -974,7 +995,6 @@
                             }
                         }],
                 "layers": [{
-                    //-17.583494, -66.008273
                     "idRef": "sikkim",
                     "style": {
                         "text": {
@@ -982,7 +1002,6 @@
                         }
                     }
                 }, {
-                    //-17.583494, -66.008273
                     "idRef": "gangtok",
                     "style": {
                         "text": {
@@ -993,14 +1012,6 @@
             },{
                 "id": "place6",
                 "zoom": 8,
-                // "baseLayer": [{
-                //     "type": "tile",
-                //     //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                //     "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png",
-                //     "params": {
-                //         "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                //     }
-                // }],
                 "baseLayer": [{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
@@ -1019,7 +1030,6 @@
                             }
                         }],
                 "layers": [{
-                    //-17.583494, -66.008273
                     "idRef": "sikkim",
                     "style": {
                         "text": {
@@ -1027,7 +1037,6 @@
                         }
                     }
                 }, {
-                    //-17.583494, -66.008273
                     "idRef": "gangtok",
                     "style": {
                         "text": {
@@ -1038,14 +1047,6 @@
             }, {
                 "id": "place7",
                 "zoom": 8,
-                // "baseLayer": [{
-                //     "type": "tile",
-                //     //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                //     "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png",
-                //     "params": {
-                //         "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                //     }
-                // }],
                 "baseLayer": [{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
@@ -1064,7 +1065,6 @@
                             }
                         }],
                 "layers": [{
-                    //-17.583494, -66.008273
                     "idRef": "sikkim",
                     "style": {
                         "text": {
@@ -1072,7 +1072,6 @@
                         }
                     }
                 }, {
-                    //-17.583494, -66.008273
                     "idRef": "singtam",
                     "style": {
                         "text": {
@@ -1101,7 +1100,6 @@
                             }
                         }],
                 "layers": [{
-                    //-17.583494, -66.008273
                     "idRef": "sikkim",
                     "style": {
                         "text": {
@@ -1109,7 +1107,6 @@
                         }
                     }
                 }, {
-                    //-17.583494, -66.008273
                     "idRef": "singtam",
                     "style": {
                         "text": {
@@ -1138,7 +1135,6 @@
                             }
                         }],
                 "layers": [{
-                    //-17.583494, -66.008273
                     "idRef": "sikkim",
                     "style": {
                         "text": {
@@ -1146,7 +1142,6 @@
                         }
                     }
                 }, {
-                    //-17.583494, -66.008273
                     "idRef": "singtam",
                     "style": {
                         "text": {
@@ -1175,7 +1170,6 @@
                             }
                         }],
                "layers": [{
-                    //-17.583494, -66.008273
                     "idRef": "sikkim",
                     "style": {
 
@@ -1184,7 +1178,6 @@
                         }
                     }
                 }, {
-                    //-17.583494, -66.008273
                     "idRef": "singtam",
                     "style": {
                         "text": {
@@ -1213,7 +1206,6 @@
                             }
                         }],
                 "layers": [{
-                    //-17.583494, -66.008273
                     "idRef": "sikkim",
                     "style": {
                         "text": {
@@ -1221,7 +1213,6 @@
                         }
                     }
                 }, {
-                    //-17.583494, -66.008273
                     "idRef": "singtam",
                     "style": {
                         "text": {
@@ -1232,14 +1223,6 @@
             }, {
                 "id": "place12",
                 "zoom": 7,
-                // "baseLayer": [{
-                //     "type": "tile",
-                //     //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                //     "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png",
-                //     "params": {
-                //         "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                //     }
-                // }],
                 "baseLayer": [{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
@@ -1275,14 +1258,6 @@
             }, {
                 "id": "place13",
                 "zoom": 7,
-                // "baseLayer": [{
-                //     "type": "tile",
-                //     //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                //     "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png",
-                //     "params": {
-                //         "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                //     }
-                // }],
                 "baseLayer": [{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
@@ -1320,14 +1295,6 @@
             }, {
                 "id": "place14",
                 "zoom": 7,
-                // "baseLayer": [{
-                //     "type": "tile",
-                //     //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                //     "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png",
-                //     "params": {
-                //         "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                //     }
-                // }],
                 "baseLayer": [{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
@@ -1365,14 +1332,6 @@
             }, {
                 "id": "place15",
                 "zoom": 7,
-                // "baseLayer": [{
-                //     "type": "tile",
-                //     //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                //     "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png",
-                //     "params": {
-                //         "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                //     }
-                // }],
                 "baseLayer": [{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
@@ -1410,14 +1369,6 @@
             }, {
                 "id": "place16",
                 "zoom": 7,
-                // "baseLayer": [{
-                //     "type": "tile",
-                //     //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                //     "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png",
-                //     "params": {
-                //         "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                //     }
-                // }],
                 "baseLayer": [{
                             "type": "wmts",
                             "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
