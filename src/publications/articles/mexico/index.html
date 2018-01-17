@@ -29,8 +29,65 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
         <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
         <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+		<style>
+			
+			.title-photo {
+				min-height: 600px;
+				
+			}
+			
+			#nav, #toggle-map {
+				background: rgba(87,119,78,1);
+			}
+			
+			#text {
+				background: linear-gradient(90deg,rgba(237,251,225,1),rgba(237,251,225,1) 50%);
+			}
+			
+			#text h2 {
+				font-size: 50px;
+				font-weight: bold;
+				
+			}
+			
+			#text h2, #text h3 {
+				color: black;
+				font-family: 'Special Elite', sans-serif;
+				text-transform: none;
+			}
+			.place-image {
+				background: rgba(87,119,78,1);
+				width: 50px;
+				height: 50px;
+				padding: 5px;
+				border-radius: 50%;
+				position: relative;
+				box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+			}
+		
+			.place-image img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 40px;
+			}
+			
+			svg text {
+				font-size: 20px;
+				font-weight: 400;
+				font-family: 'Special Elite', sans-serif !important;
+				text-shadow: 0px 0px 50px rgba(255,255,255,01);
+			}
+			
+			@media (max-width: 768px)
+			#text h2.title {
+				font-size: 40px !important;
+			}
+		</style>
     </head>
     <body class="scrolled">
     <progress></progress>
@@ -97,7 +154,7 @@
         <div id="text" class="title-hidden">
             <div class="content scenes">
                 <section id="introduction" class="scene" data-scene-id="place1" title="Introduction">
-                    <h2 class="title title-photo" style="background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), url(img/bajaauthors2.jpg);">From Agave Cultivation, Terracing, and Conservation in Mexico</h2>
+                    <h2 class="title title-photo" style="background-image: linear-gradient(0deg, rgba(237,251,225, 1), rgba(237,251,225, 0.4)), url(img/agaveintro.jpg);">From Agave Cultivation, Terracing, and Conservation in Mexico</h2>
                     <div class="author"><span class="name">Matthew LaFevor</span>, <span class="organization">Department of Geography, University of Alabama</span></div>
                     <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2017.61.1f</div>
 
@@ -175,7 +232,7 @@
                 <div id="figure8" class="figure " style="background-image:url(img/fig8.jpg);"></div>
                         <div class="caption">Figure 8. Pattern of agave succession on two adjacent berms (bordos) of metepantle terrace in <a href="#" class="location" data-layer-id="las-mesas">Las Mesas</a>, Tlaxcala, Mexcio.</div>
                 <p>
-                    Stone or rock-wall impediments usually accompany flat, step-like terraces commonly referred to as bench terraces. In contrast, ditches and berms usually accompany terraces that may change the natural slope gradient little or none at all. Geographers refer to these as sloping-field terraces (West 1970). But for reasons not completely understood by geographers or archaeologists, bench terraces are rare in <a href="#" class="location" data-layer-id="mexico">Mexico</a> while sloping-field terraces abound.
+                    Stone or rock-wall impediments usually accompany flat, step-like terraces commonly referred to as bench terraces. In contrast, ditches and berms usually accompany terraces that may change the natural slope gradient little or none at all. Geographers refer to these as sloping-field terraces (West 1970). But for reasons not completely understood by geographers or archaeologists, bench terraces are rare in Mexico while sloping-field terraces abound.
                 </p>
                 <p>
                     There are advantages and disadvantages of each form. Instead of abruptly flattening the slope into a bench-like form, sloping-field terraces work with the natural gradient and require less initial investment in labor and capital to build. But since much of the original gradient remains, runoff and erosion is more likely to occur. Therefore, maintenance of the ditches and support for the earthen berms of sloping-field terraces are critical. To provide this support, Mexican farmers strategically cultivate agaves.
@@ -347,6 +404,15 @@
         <!-- endinject -->
         <script src="../../../js/combined.js"></script>
         <script>
+		    Focus.Map = Focus.Map || {};
+		    Focus.Map.defaultOptions = {
+				color: "rgba(255,255,255,1)",
+				fillColor: "rgba(255,255,255,1)",
+		        radius: 6,
+		        weight: 10,
+		        opacity: 0.3
+		    };
+			
             var scenes = {
                 "features": [{
                     "id": "atotonilco",
@@ -359,9 +425,9 @@
                             "text": "Atotonilco",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
+                                "fill": "#000",
                                 "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(255,255,255,0.8)",
                                 "font-weight": "bold"
                             }
                         }
@@ -387,7 +453,7 @@
                             "text": " ",//deliberately blank
                             "style": {
                                 'stroke': '#333',
-                                'fill': 'orange',
+                                'fill': 'rgba(237,251,225,1)',
                                 'stroke-width': '0.1px',
                                 'font-size': '12px',
                                 'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
@@ -417,6 +483,7 @@
                             "name": "Altzayanca",
                         }
                     },
+					
                     "style": {
                         "weight": 13,
                         "opacity": 0.3,
@@ -425,9 +492,9 @@
                             "text": "Altzayanca",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
+                                "fill": "#000",
                                 "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(255,255,255,0.8)",
                                 "font-weight": "bold"
                             }
                         }
@@ -453,9 +520,9 @@
                             "text": "Tzautla",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
+                                "fill": "#000",
                                 "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(255,255,255,0.8)",
                                 "font-weight": "bold"
                             }
                         }
@@ -481,9 +548,9 @@
                             "text": "Teacalco",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
+                                "fill": "#000",
                                 "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(255,255,255,0.8)",
                                 "font-weight": "bold"
                             }
                         }
@@ -509,9 +576,9 @@
                             "text": "Emiliano Zapata",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
+                                "fill": "#000",
                                 "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(255,255,255,0.8)",
                                 "font-weight": "bold"
                             }
                         }
@@ -536,9 +603,9 @@
                             "text": "Yanhuitlán",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
+                                "fill": "#000",
                                 "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(255,255,255,0.8)",
                                 "font-weight": "bold"
                             }
                         }
@@ -563,9 +630,9 @@
                             "text": "Las Mesas",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
+                                "fill": "#000",
                                 "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(255,255,255,0.8)",
                                 "font-weight": "bold"
                             }
                         }
@@ -590,9 +657,9 @@
                             "text": "Ahuashuatepec",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
+                                "fill": "#000",
                                 "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(255,255,255,0.8)",
                                 "font-weight": "bold"
                             }
                         }
@@ -617,9 +684,9 @@
                             "text": "Xalostoc",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
+                                "fill": "#000",
                                 "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(255,255,255,0.8)",
                                 "font-weight": "bold"
                             }
                         }
@@ -644,9 +711,9 @@
                             "text": "Atlautla",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
+                                "fill": "#000",
                                 "stroke-width": 0.1,
-                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)",
+                                "font-family": "Raleway", "text-shadow": "0px 2px 2px rgba(255,255,255,0.8)",
                                 "font-weight": "bold"
                             }
                         }
@@ -661,13 +728,17 @@
                             "coordinates": [-98.063695, 19.282610]
                         },
                     },
-                    "style": {
-                        "fillColor": "blue",
-                        "radius": 8,
-                        "color": "#333",
-                        "opacity": 1,
-                        "dropShadow": true
-                    }
+					"style": {
+						"color": "rgba(0,180,0,1)",
+						"fillColor": "rgba(0,180,0,1)",
+						"icon": {
+						                            "html": "<div class='place-image'><img src='img/excavator.svg'/></div>",
+						                            "iconSize": [50, 50],
+						                            "iconAnchor": [25, 25]
+						                        }, "text": {
+						                        	"text": "Altzayanca"
+						                        }
+					}
                 },{
                     "id": "f18",
                     "type": "geojson",
@@ -678,13 +749,17 @@
                             "coordinates": [-98.115692, 19.214758]
                         },
                     },
-                    "style": {
-                        "fillColor": "blue",
-                        "radius": 8,
-                        "color": "#333",
-                        "opacity": 1,
-                        "dropShadow": true
-                    }
+					"style": {
+						"color": "rgba(0,180,0,1)",
+						"fillColor": "rgba(0,180,0,1)",
+						"icon": {
+						                            "html": "<div class='place-image'><img src='img/agave.svg'/></div>",
+						                            "iconSize": [50, 50],
+						                            "iconAnchor": [25, 25]
+						                        }, "text": {
+						                        	"text": "Altzayanca"
+						                        }
+					}
                 },{
                     "id": "f19",
                     "type": "geojson",
@@ -695,35 +770,28 @@
                             "coordinates": [-98.115186, 19.213610]
                         },
                     },
-                    "style": {
-                        "fillColor": "blue",
-                        "radius": 8,
-                        "color": "#333",
-                        "opacity": 1,
-                        "dropShadow": true
-                    }
+					"style": {
+						"color": "rgba(0,180,0,1)",
+						"fillColor": "rgba(0,180,0,1)",
+						"icon": {
+						                            "html": "<div class='place-image'><img src='img/agave.svg'/></div>",
+						                            "iconSize": [50, 50],
+						                            "iconAnchor": [25, 25]
+						                        }, "text": {
+						                        	"text": "Altzayanca"
+						                        }
+					}
                 },{
                     "id": "mexico",
                     "type": "geojson",
-                    "data": {
-                        "type":"Feature",
-                        "geometry":{
-                            "type":"MultiPolygon",
-                            "coordinates":[
-                                [
-                                    [[-113.05,31.97],[-111.05,31.33],[-106.4,31.75],[-103.38,29.02],[-102.31,29.89],[-101.41,29.77],[-99.51,27.57],[-99.1,26.43],[-97.14,25.97],[-97.89,22.6],[-95.91,18.83],[-94.48,18.15],[-92,18.73],[-91.48,18.44],[-90.45,19.98],[-90.33,21.03],[-87.03,21.59],[-86.77,21.15],[-87.74,19.67],[-87.41,19.58],[-87.85,18.19],[-88.04,18.87],[-88.3,18.48],[-88.38,18.48],[-89.14,17.82],[-90.98,17.82],[-90.98,17.26],[-91.44,17.24],[-90.44,16.09],[-91.73,16.07],[-92.25,14.55],[-92.77,15.17],[-93.93,16.09],[-94.37,16.29],[-94.06,16.04],[-94.72,16.2],[-94.58,16.32],[-94.79,16.26],[-94.86,16.43],[-96.48,15.64],[-97.79,15.97],[-104.98,19.34],[-105.68,20.39],[-105.24,20.57],[-105.54,20.79],[-105.19,21.44],[-105.82,22.66],[-108.04,25.07],[-109.11,25.53],[-108.83,25.8],[-109.39,25.76],[-109.1,26.28],[-110.53,27.37],[-110.51,27.87],[-112.16,28.97],[-113.09,31.23],[-115.03,31.97],[-114.55,30],[-111.56,26.72],[-110.66,24.34],[-109.41,23.47],[-110,22.89],[-112.09,24.76],[-112.4,26.27],[-114.99,27.72],[-113.98,27.7],[-114.31,27.87],[-114.06,28.53],[-115.69,29.77],[-117.12,32.54],[-114.72,32.72],[-113.05,31.97]]
-                                ]
-                            ]
-                        },"properties" : {
-                            "name" : "Mexico",
-                        }
-                    },
+                    "data": { "type": "Feature", "properties": { "scalerank": 1, "featurecla": "Admin-0 country", "LABELRANK": 2.000000, "SOVEREIGNT": "Mexico", "SOV_A3": "MEX", "ADM0_DIF": 0.000000, "LEVEL": 2.000000, "TYPE": "Sovereign country", "name": "Mexico", "ADM0_A3": "MEX", "GEOU_DIF": 0.000000, "GEOUNIT": "Mexico", "GU_A3": "MEX", "SU_DIF": 0.000000, "SUBUNIT": "Mexico", "SU_A3": "MEX", "BRK_DIFF": 0.000000, "NAME": "Mexico", "NAME_LONG": "Mexico", "BRK_A3": "MEX", "BRK_NAME": "Mexico", "BRK_GROUP": null, "ABBREV": "Mex.", "POSTAL": "MX", "FORMAL_EN": "United Mexican States", "FORMAL_FR": null, "NAME_CIAWF": "Mexico", "NOTE_ADM0": null, "NOTE_BRK": null, "NAME_SORT": "Mexico", "NAME_ALT": null, "MAPCOLOR7": 6.000000, "MAPCOLOR8": 1.000000, "MAPCOLOR9": 7.000000, "MAPCOLOR13": 3.000000, "POP_EST": 124574795.000000, "POP_RANK": 17.000000, "GDP_MD_EST": 2307000.000000, "POP_YEAR": 2017.000000, "LASTCENSUS": 2010.000000, "GDP_YEAR": 2016.000000, "ECONOMY": "4. Emerging region: MIKT", "INCOME_GRP": "3. Upper middle income", "WIKIPEDIA": -99.000000, "FIPS_10_": "MX", "ISO_A2": "MX", "ISO_A3": "MEX", "ISO_A3_EH": "MEX", "ISO_N3": "484", "UN_A3": "484", "WB_A2": "MX", "WB_A3": "MEX", "WOE_ID": 23424900.000000, "WOE_ID_EH": 23424900.000000, "WOE_NOTE": "Exact WOE match as country", "ADM0_A3_IS": "MEX", "ADM0_A3_US": "MEX", "ADM0_A3_UN": -99.000000, "ADM0_A3_WB": -99.000000, "CONTINENT": "North America", "REGION_UN": "Americas", "SUBREGION": "Central America", "REGION_WB": "Latin America & Caribbean", "NAME_LEN": 6.000000, "LONG_LEN": 6.000000, "ABBREV_LEN": 4.000000, "TINY": -99.000000, "HOMEPART": 1.000000, "MIN_ZOOM": 0.000000, "MIN_LABEL": 2.000000, "MAX_LABEL": 6.700000 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -88.300031094093697, 18.499982204659901 ], [ -88.490122850279349, 18.486830552641607 ], [ -88.848343878926613, 17.883198147040233 ], [ -89.029857347351822, 18.001511338772488 ], [ -89.150909389995533, 17.955467637600421 ], [ -89.14308041050333, 17.808318996649405 ], [ -90.067933519230976, 17.819326076727478 ], [ -91.001519945015957, 17.817594916245696 ], [ -91.002269253284211, 17.25465770107418 ], [ -91.453921271515156, 17.252177232324172 ], [ -91.081670091500655, 16.918476670799407 ], [ -90.711821865587723, 16.687483018454728 ], [ -90.600846727240935, 16.47077789963879 ], [ -90.438866950222035, 16.410109768128095 ], [ -90.464472622422662, 16.069562079324655 ], [ -91.747960171255954, 16.066564846251765 ], [ -92.229248623406306, 15.251446641495875 ], [ -92.087215949252069, 15.064584662328441 ], [ -92.203229539747326, 14.830102850804069 ], [ -92.227750006869826, 14.538828640190928 ], [ -93.35946387406176, 15.615429592343673 ], [ -93.875168830118525, 15.940164292865916 ], [ -94.691656460330137, 16.200975246642884 ], [ -95.250227016973042, 16.128318182840644 ], [ -96.053382127653322, 15.752087917539598 ], [ -96.557434048228288, 15.653515122942792 ], [ -97.263592495496653, 15.917064927631316 ], [ -98.01302995480961, 16.107311713113916 ], [ -98.947675747456515, 16.566043402568766 ], [ -99.697397427147052, 16.706164048728169 ], [ -100.829498867581322, 17.17107107184205 ], [ -101.666088629954459, 17.649026394109626 ], [ -101.918528001700224, 17.916090196193977 ], [ -102.478132086988921, 17.975750637275098 ], [ -103.500989549558085, 18.292294623278849 ], [ -103.917527432046825, 18.748571682200009 ], [ -104.992009650475495, 19.316133938061682 ], [ -105.49303849976144, 19.946767279535436 ], [ -105.731396043707662, 20.434101874264115 ], [ -105.39777299683135, 20.531718654863425 ], [ -105.50066077352443, 20.816895046466129 ], [ -105.270752326257934, 21.076284898355141 ], [ -105.265817226974036, 21.422103583252351 ], [ -105.603160976975403, 21.871145941652571 ], [ -105.693413865973127, 22.269080308516152 ], [ -106.028716396898972, 22.773752346278627 ], [ -106.90998043498837, 23.767774359628902 ], [ -107.915448778091388, 24.54891531015295 ], [ -108.401904873470983, 25.172313951105934 ], [ -109.260198737406654, 25.580609442644061 ], [ -109.444089321717343, 25.82488393808768 ], [ -109.291643846456282, 26.442934068298428 ], [ -109.801457689231825, 26.676175645447927 ], [ -110.391731737085706, 27.16211497650454 ], [ -110.641018846461634, 27.859876003525528 ], [ -111.178918830187854, 27.94124054616907 ], [ -111.759606899851633, 28.467952582303951 ], [ -112.228234626090398, 28.954408677683489 ], [ -112.271823696728688, 29.266844387320077 ], [ -112.809594489373978, 30.021113593052348 ], [ -113.163810594518679, 30.786880804969428 ], [ -113.14866939985717, 31.170965887978923 ], [ -113.871881069781864, 31.567608344035193 ], [ -114.20573666060352, 31.524045111613134 ], [ -114.776451178835032, 31.79953217216115 ], [ -114.936699795372135, 31.393484605427602 ], [ -114.771231859173497, 30.913617255165263 ], [ -114.673899298951767, 30.162681179315996 ], [ -114.330974494262932, 29.750432440707414 ], [ -113.588875088335442, 29.061611436473015 ], [ -113.424053107540544, 28.82617361095123 ], [ -113.27196936730553, 28.754782619739899 ], [ -113.140039435664391, 28.411289374295961 ], [ -112.962298346796501, 28.42519033458251 ], [ -112.761587083774884, 27.780216783147523 ], [ -112.457910529411663, 27.525813706974759 ], [ -112.244951951936798, 27.171726792910761 ], [ -111.616489020619213, 26.662817287700477 ], [ -111.284674648873022, 25.732589830014433 ], [ -110.987819383572401, 25.294606228124564 ], [ -110.710006883571339, 24.826004340101861 ], [ -110.655048997828885, 24.298594672131117 ], [ -110.172856208113444, 24.265547593680424 ], [ -109.77184709352855, 23.811182562754198 ], [ -109.409104377055712, 23.364672349536249 ], [ -109.433392300232924, 23.185587673428699 ], [ -109.854219326601708, 22.818271592698068 ], [ -110.031391974714438, 22.823077500901206 ], [ -110.295070970483664, 23.430973212166691 ], [ -110.949501309028051, 24.000964260345995 ], [ -111.670568407012695, 24.484423122652515 ], [ -112.182035895621482, 24.738412787367167 ], [ -112.148988817170846, 25.470125230404051 ], [ -112.300710822379699, 26.012004299416617 ], [ -112.777296719191554, 26.321959540303169 ], [ -113.464670783321935, 26.768185533143424 ], [ -113.596729906043834, 26.639459540304472 ], [ -113.848936733844255, 26.90006378835244 ], [ -114.465746629680041, 27.142090358991368 ], [ -115.055142178185008, 27.722726752222911 ], [ -114.982252570437424, 27.798200181585116 ], [ -114.570365566854946, 27.741485297144891 ], [ -114.19932878299926, 28.115002549750557 ], [ -114.162018398884641, 28.566111965442303 ], [ -114.931842210736647, 29.27947927501549 ], [ -115.518653937626993, 29.556361599235402 ], [ -115.887365282029577, 30.180793768834178 ], [ -116.258350389452914, 30.836464341753583 ], [ -116.721526252084971, 31.635743720012044 ], [ -117.127759999999867, 32.53534 ], [ -115.99135, 32.61239 ], [ -114.72139, 32.720829999999893 ], [ -114.815, 32.52528 ], [ -113.30498, 32.039140000000117 ], [ -111.02361, 31.33472 ], [ -109.035, 31.341940000000136 ], [ -108.24194, 31.34222 ], [ -108.24, 31.754853718166373 ], [ -106.507589999999894, 31.75452 ], [ -106.1429, 31.39995 ], [ -105.63159, 31.08383 ], [ -105.03737, 30.64402 ], [ -104.70575, 30.12173 ], [ -104.45697, 29.57196 ], [ -103.94, 29.27 ], [ -103.11, 28.97 ], [ -102.48, 29.76 ], [ -101.6624, 29.7793 ], [ -100.9576, 29.380710000000164 ], [ -100.45584, 28.696120000000121 ], [ -100.11, 28.110000000000156 ], [ -99.52, 27.54 ], [ -99.3, 26.84 ], [ -99.02, 26.37 ], [ -98.24, 26.06 ], [ -97.53, 25.84 ], [ -97.140008307670712, 25.869997463478398 ], [ -97.528072475966553, 24.9921440699203 ], [ -97.702945522842242, 24.272343044526735 ], [ -97.776041836319052, 22.93257986092766 ], [ -97.872366706111109, 22.44421173755336 ], [ -97.699043952204192, 21.898689480064263 ], [ -97.388959520236767, 21.411018988525825 ], [ -97.189333462293291, 20.635433254473128 ], [ -96.525575527720321, 19.890930894444068 ], [ -96.292127244841765, 19.320371405509547 ], [ -95.900884975959968, 18.82802419684873 ], [ -94.839063483442715, 18.562717393462208 ], [ -94.425729539756219, 18.144370835843347 ], [ -93.548651292682393, 18.423836981677937 ], [ -92.786113857783505, 18.524838568592259 ], [ -92.037348192090406, 18.704569200103435 ], [ -91.407903408559264, 18.87608327888023 ], [ -90.771869879910867, 19.284120388256781 ], [ -90.533589850613055, 19.867418117751299 ], [ -90.451475999701245, 20.707521877520435 ], [ -90.278618333684904, 20.999855454995554 ], [ -89.601321173851488, 21.261725775634488 ], [ -88.543866339862859, 21.49367544197662 ], [ -87.658416510757718, 21.458845526611981 ], [ -87.051890224948067, 21.543543199138298 ], [ -86.811982388032959, 21.331514797444754 ], [ -86.845907965832623, 20.849864610268355 ], [ -87.383291185235862, 20.25540477139873 ], [ -87.62105445021075, 19.646553046135921 ], [ -87.436750454441778, 19.472403469312269 ], [ -87.586560431655926, 19.040130113190742 ], [ -87.837191128271513, 18.25981598558343 ], [ -88.090664028663184, 18.516647854074051 ], [ -88.300031094093697, 18.499982204659901 ] ] ] } },
                     "style": {
                         "fillColor": "none",
-                        "weight": 4,
-                        "color": "orange",
-                        "opacity": 0.8,
-                        "dropShadow": true
+                        "weight": 6,
+                        "color": "rgba(237,251,225,1)",
+						"fillColor": "rgba(237,251,225,1)",
+						"fillOpacity": 0.1,
+                        "opacity": 0.8
                     }
                 },{
                     "id": "veracruz",
@@ -739,10 +807,9 @@
                     },
                     "style": {
                         "fillColor": "none",
-                        "weight": 2,
-                        "color": "orange",
-                        "opacity": 0.8,
-                        "dropShadow": true
+                        "weight": 6,
+                        "color": "rgba(87,119,78,1)",
+                        "opacity": 0.8
                     }
                 },{
                     "id": "tabasco",
@@ -758,10 +825,9 @@
                     },
                     "style": {
                         "fillColor": "none",
-                        "weight": 2,
-                        "color": "orange",
-                        "opacity": 0.8,
-                        "dropShadow": true
+                        "weight": 6,
+                        "color": "rgba(87,119,78,1)",
+                        "opacity": 0.8
                     }
                 },{
                     "id": "tlaxcala",
@@ -777,10 +843,9 @@
                     },
                     "style": {
                         "fillColor": "none",
-                        "weight": 2,
-                        "color": "orange",
-                        "opacity": 0.8,
-                        "dropShadow": true
+                        "weight": 6,
+                        "color": "rgba(87,119,78,1)",
+                        "opacity": 0.8
                     }
                 },{
                     "id": "hidalgo",
@@ -796,10 +861,9 @@
                     },
                     "style": {
                         "fillColor": "none",
-                        "weight": 2,
-                        "color": "orange",
-                        "opacity": 0.8,
-                        "dropShadow": true
+                        "weight": 6,
+                        "color": "rgba(87,119,78,1)",
+                        "opacity": 0.8
                     }
                 },{
                     "id": "puebla",
@@ -815,22 +879,22 @@
                     },
                     "style": {
                         "fillColor": "none",
-                        "weight": 2,
-                        "color": "orange",
-                        "opacity": 0.8,
-                        "dropShadow": true
+                        "weight": 6,
+                        "color": "rgba(87,119,78,1)",
+                        "opacity": 0.8
                     }
                 }],
                 "scenes": [
                     {
                         "id": "place1",
                         "baseLayer": [{
-                            "type": "wms",
-                            "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                            "params": {
-                                "layers": "GEBCO_LATEST"
-                            }
-                        }],
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true,
+                            "imagerySet": "AerialWithLabels",
+
+                        }}],
 
                         "layers": [
                             {"idRef": "mexico"},
@@ -840,16 +904,20 @@
                         "zoom": 6,
                         "style": {
                             "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1.0,
+                            "background": "black"
                         }
                     },
                     {
                         "id": "place2",
-                        "baseLayer": {
-                            "type": "tile",
-                            "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            },
+                        "baseLayer": [{
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                    "params": {
+                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                    }
+                }],
 
                         "layers": [
                             // {"idRef": "mexico"},
@@ -861,52 +929,64 @@
                         "zoom": 9,
                         "style": {
                             "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1.0,
+                            "background": "black"
                         }
                     },
                     {
                         "id": "place3",
-                        "baseLayer": {
-                            "type": "tile",
-                            "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        },
+                        "baseLayer": [{
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                    "params": {
+                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                    }
+                }],
                         "zoom": 8,
                         "layers": [                            
                             {"idRef": "teacalco"},
                             {"idRef": "emiliano-zapata"},
                         ],
                         "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "filter": "sepia(40%)",
+                            "opacity": 1.0,
+                            "background": "black"
                         }
                     },
                     {
                         "id": "place4",
                         "zoom": 8,
-                       "baseLayer": {
-                            "type": "tile",
-                            "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        },
+                       "baseLayer": [{
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                    "params": {
+                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                    }
+                }],
 
                         "layers": [
-                            {"idRef": "mexico"},
+                            //{"idRef": "mexico"},
                             {"idRef": "yanhuitlán"},
                             {"idRef": "las-mesas"},
                         ],
                         "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "filter": "sepia(40%)",
+                            "opacity": 1.0,
+                            "background": "black"
                         }
                     },
                     {
                         "id": "place5",
-                        "baseLayer": {
-                            "type": "tile",
-                            "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        },
+                        "baseLayer": [{
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                    "params": {
+                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                    }
+                }],
                         "layers": [
                             // {"idRef": "mexico"},
                             {"idRef": "atotonilco"},
@@ -916,16 +996,20 @@
                         "zoom": 10,
                         "style": {
                             "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1.0,
+                            "background": "black"
                         }
                     },
                     {
                         "id": "place6",
-                        "baseLayer": {
-                            "type": "tile",
-                            "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        },
+                        "baseLayer": [{
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                    "params": {
+                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                    }
+                }],
                         "layers": [
                             // {"idRef": "mexico"},
                             {"idRef": "ahuashuatepec"},
@@ -935,16 +1019,20 @@
                         "zoom": 9,
                         "style": {
                             "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1.0,
+                            "background": "black"
                         }
                     },
                     {
                         "id": "place7",
-                         "baseLayer": {
-                            "type": "tile",
-                            "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        },
+                         "baseLayer": [{
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                    "params": {
+                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                    }
+                }],
                         "layers": [
                             {"idRef": "xalostoc"},
 
@@ -952,16 +1040,20 @@
                         "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1.0,
+                            "background": "black"
                         }
                     },
                     {
                         "id": "place8",
-                        "baseLayer": {
-                            "type": "tile",
-                            "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
-                        },
+                        "baseLayer": [{
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                    "params": {
+                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                    }
+                }],
                         "layers": [
                             // {"idRef": "mexico"},
                             {"idRef": "veracruz"},
@@ -973,16 +1065,20 @@
                         "zoom": 8,
                         "style": {
                             "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1.0,
+                            "background": "black"
                         }
                     },
                     {
                         "id": "place9",
-                        "baseLayer": {
-                            "type": "tile",
-                            "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
-                        },
+                        "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true,
+                            "imagerySet": "AerialWithLabels",
+
+                        }}],
                         "layers": [
                             {"idRef": "atlautla"},
                             {"idRef": "teacalco"},
@@ -991,19 +1087,23 @@
                             {"idRef": "f19"},
 
                         ],
-                        "zoom": 9,
+                        "zoom": 10,
                         "style": {
                             "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1.0,
+                            "background": "black"
                         }
                     },
                     {
                         "id": "place10",
-                        "baseLayer": {
-                            "type": "tile",
-                            "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
-                        },
+                        "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true,
+                            "imagerySet": "AerialWithLabels",
+
+                        }}],
                         "layers": [
                             {"idRef": "mexico"},
                             {"idRef": "atotonilco"},
@@ -1013,8 +1113,8 @@
                         "zoom": 6,
                         "style": {
                             "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1.0,
+                            "background": "black"
                         }
                     }
                 ]
@@ -1057,7 +1157,7 @@
                         initialScene: new Focus.Models.SceneModel({
                             baseLayer: {
                                 type: 'tile',
-                                url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png'
+                                url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00'
                             },
                             center: [0,0],
                             zoom: 12,
