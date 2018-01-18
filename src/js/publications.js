@@ -1,6 +1,19 @@
 var Focus = Focus || {};
 Focus.Volumes = [
     {
+        number: 61,
+        publications: [{
+            type: 'Feature Article',
+            title: 'Agave Cultivation, Terracing, and Conservation in Mexico',
+            author: 'Matthew LaFevor, Jordan Cissell, James Misfeldt',
+            description: '',
+            date: '01/17/17',
+            thumbnail: 'publications/articles/mexico/img/agaveintro.jpg',
+            url: 'publications/articles/mexico/index.html',
+            location: []
+        }]
+	},
+    {
         number: 60,
         publications: [{
             type: 'Geo Quiz',
