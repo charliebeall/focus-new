@@ -1,8 +1,30 @@
 var Focus = Focus || {};
 Focus.Volumes = [
     {
+        number: 61,
+        publications: [{
+            type: 'Feature Article',
+            title: 'Agave Cultivation, Terracing, and Conservation in Mexico',
+            author: 'Matthew LaFevor, Jordan Cissell, James Misfeldt',
+            description: '',
+            date: '01/17/17',
+            thumbnail: 'publications/articles/mexico/img/agaveintro.jpg',
+            url: 'publications/articles/mexico/index.html',
+            location: []
+        }]
+	},
+    {
         number: 60,
         publications: [{
+            type: 'Geo Quiz',
+            title: 'Quiz Six: Symbols',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '12/22/17',
+            thumbnail: 'publications/quizzes/six/img/Q10/Erdapfel.jpg',
+            url: 'publications/quizzes/six/index.html',
+            location: []
+        },{
             type: 'Photo Essay',
             title: 'Organic Agriculture, Scale, and the Production of a Region in Northeast, India',
             author: 'David Meek',
