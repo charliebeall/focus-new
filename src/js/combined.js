@@ -14085,7 +14085,7 @@ Focus.Volumes = [
             title: 'Agave Cultivation, Terracing, and Conservation in Mexico',
             author: 'Matthew LaFevor, Jordan Cissell, James Misfeldt',
             description: '',
-            date: '01/17/17',
+            date: '01/17/18',
             thumbnail: 'publications/articles/mexico/img/agaveintro.jpg',
             url: 'publications/articles/mexico/index.html',
             location: []
