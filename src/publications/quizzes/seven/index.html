@@ -1,0 +1,1116 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Geo Quiz 7 - The Built Environment</title>
+    <meta name="description" content="FOCUS on Geography:  Geo Quiz #6">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apwple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .modal-content {
+            background-image: linear-gradient(0deg, rgba(242, 121, 33, 0.7), rgba(242, 121, 33, 0.7)), url(img/water.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- Add your site or application content here -->
+<div id="background"></div>
+<div id="map" class="fill"></div>
+<div id="foreground"></div>
+<div id="photos"></div>
+<div id="shadow"></div>
+<div id="score-view"><h3>0</h3></div>
+<svg id="score-text" width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="position: absolute;bottom: 50px;z-index: 10;right: calc(50% - 100px);text-align: center;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(0.748233,-0.663437,0.663437,0.748233,-71.4993,95.3792)">
+        <g transform="matrix(0.974148,0.22591,-0.22591,0.974148,14.9332,-26.5052)">
+            <text x="123.276px" y="51.996px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">S</text>
+        </g>
+        <g transform="matrix(0.889935,0.456088,-0.456088,0.889935,41.1167,-58.1446)">
+            <text x="141.028px" y="56.117px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">C</text>
+        </g>
+        <g transform="matrix(0.741486,0.670968,-0.670968,0.741486,84.934,-89.7957)">
+            <text x="158.999px" y="65.324px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">O</text>
+        </g>
+        <g transform="matrix(0.533523,0.845785,-0.845785,0.533523,149.897,-110.802)">
+            <text x="175.398px" y="80.49px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">R</text>
+        </g>
+        <g transform="matrix(0.322984,0.946405,-0.946405,0.322984,217.645,-110.12)">
+            <text x="185.791px" y="97.063px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">E</text>
+        </g>
+    </g>
+</svg>
+<div id="main-nav" class="light">
+    <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+        <svg width="1000px" height="1000px">
+            <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800" style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+            <path id="pathE" d="M 300 500 L 700 500" style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+            <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200" style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+        </svg>
+
+        <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+    </div>
+    <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <div id="menu"></div>
+</div>
+<div id="questions">
+    <div class="content scenes">
+    </div>
+</div>
+<div id="progress">
+    <div id="bar"></div>
+</div>
+<div id="bar-top"></div>
+<div id="bar-bottom" class="large"></div>
+<!-- inject:templates:html -->
+<!-- endinject -->
+<script src="../../../js/combined.js"></script>
+<script src="js/stateData.min.js"></script>
+<script>
+    var scenes = {
+        "scenes": [
+            {
+                "id": "place1",
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                    "scheme": "xyz"
+
+                },
+                "layers": [{"id": "brazil", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Brazil"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -14.2350, 
+                            -51.9253
+                        ]
+                    }
+                }},
+                    {"id": "zimbabwe", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Zimbabwe"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -19.0154381, 
+                                29.1548576
+                            ]
+                        }
+                    }},
+                    {"id": "madagascar", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Madagascar"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               -18.7669468, 
+                               46.8691063
+                            ]
+                        }
+                    }},
+                    {"id": "india", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "India"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+								20.5936832, 
+                                78.962883
+                            ]
+                        }
+                    }}],
+                //"center": [-60, 48],
+                "zoom": 3,
+                "style": {
+                    "filter": "sepia(80%)",
+                    "opacity": 0.75,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            },
+            {
+                "id": "place2",
+                "zoom": 5,
+                "layers": [
+                    {"id": "argentina", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Argentina"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -38.4160957, 
+                                -63.6166725
+                            ]
+                        }
+                    }},
+                    {"id": "russian_siberia", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Russian Siberia"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                54.9924393, 
+                                73.3685913
+                            ]
+                        }
+                    }},
+                    {"id": "mongolia", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Mongolia"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                46.8624954, 
+                                103.8466568
+                            ]
+                        }
+                    }},
+                    {"id": "australian_outback", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Australian Outback"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -12.4611301, 
+                                130.8418427
+                            ]
+                        }
+                    }}
+                ],
+                "baseLayer": {
+                    "type": "tile",
+                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                },
+                "style": {
+                    "filter": "sepia(50%)",
+                    "opacity": 0.7,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            },
+            {
+                "id": "place3",
+                "zoom": 5, //3
+                "baseLayer": [{
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+                }],
+                layers: [
+                    {"id": "arizona", "type": "geojson", "data": {
+                    "type": "Feature",
+                        "properties": {
+                            "name": "Arizona"
+                        },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                           33.4483795, 
+                           -112.0740433
+                        ]
+                    }
+                }},
+                    {"id": "colorado", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Colorado"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                39.739151, 
+                                -104.9847031
+                            ]
+                        }
+                    }},
+                    {"id": "iowa", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Iowa"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               -14.2350, 
+                               -73.989308
+                            ]
+                        }
+                    }},
+                    {"id": "louisiana", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Louisiana"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                              29.9546509, 
+                              -90.0750732
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.9,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            },
+            {
+                "id": "place4",
+                "zoom": 5, //3
+                "baseLayer": [{
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+                }],
+                layers: [
+                    {"id": "mexico", "type": "geojson", "data": {
+                    "type": "Feature",
+                        "properties": {
+                            "name": "Mexico"
+                        },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                          23.634501,
+                          -102.55278399999997
+                        ]
+                    }
+                }},
+                    {"id": "greece", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Greece"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                39.074208,
+                                21.824311999999964
+                            ]
+                        }
+                    }},
+                    {"id": "egypt", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Egypt"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               26.820553,
+                               30.802498000000014
+                            ]
+                        }
+                    }},
+                    {"id": "china", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "China"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               35.86166000000001,
+                               104.19539699999996
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.9,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            },
+            {
+                "id": "place5",
+                 "zoom": 5, //3
+                "baseLayer": [{
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+                }],
+                layers: [
+                    {"id": "san_francisco", "type": "geojson", "data": {
+                    "type": "Feature",
+                        "properties": {
+                            "name": "San Francisco"
+                        },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                          37.774929, 
+                          -122.4194183
+                        ]
+                    }
+                }},
+                    {"id": "minneapolis", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Minneapolis"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                40.741895,
+                                -73.989308
+                            ]
+                        }
+                    }},
+                    {"id": "chicago", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Chicago"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                              41.850029, 
+                              -87.6500473
+                            ]
+                        }
+                    }},
+                    {"id": "miami_beach", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Miami Beach"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               25.790654,
+                               -80.1300455
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.9,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            }, 
+            {
+                "id": "place6",
+                "zoom": 5, //3
+                "baseLayer": [{
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+                }],
+                layers: [
+                    {"id": "chicago", "type": "geojson", "data": {
+                    "type": "Feature",
+                        "properties": {
+                            "name": "Chicago"
+                        },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                          41.8781136,
+                          -87.62979819999998
+                        ]
+                    }
+                }},
+                    {"id": "new_york", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "New York"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                40.7127753,
+                                -74.0059728
+                            ]
+                        }
+                    }},
+                    {"id": "london", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "London"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                              51.5073509,
+                              -0.12775829999998223
+                            ]
+                        }
+                    }},
+                    {"id": "paris", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Paris"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                48.85661400000001,
+                                2.3522219000000177
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.9,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            }, {
+                "id": "place7",
+                "zoom": 3,
+                 "baseLayer": [{
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.7,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                },
+                "layers": [{"id": "peru", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Peru"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -9.189967,
+                            -75.015152
+                        ]
+                    }
+                }},
+                    {"id": "italy", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Italy"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               41.87194,
+                               12.567379999999957
+                            ]
+                        }
+                    }},
+                    {"id": "pakistan", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Pakistan"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                30.375321,
+                                69.34511599999996
+                            ]
+                        }
+                    }},
+                    {"id": "japan", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Japan"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               36.204824,
+                               138.252924
+                            ]
+                        }
+                    }}]
+            },
+            {
+                "id": "place8",
+                "zoom": 2,
+                "baseLayer": {
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                    "scheme": "xyz"
+
+                },
+                "style": {
+                    "filter": "grayscale(100%)",
+                    "opacity": 0.6,
+                    "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
+                },
+                "layers": [{"id": "brazil", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Brazil"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                           -14.2350, 
+                           -51.9253 
+                        ]
+                    }
+                }},
+                    {"id": "spain", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Spain"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               40.46366700000001,
+                               -3.7492200000000366
+                            ]
+                        }
+                    }},
+                    {"id": "france", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "France"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                 46.227638,
+                                 2.213749000000007
+                            ]
+                        }
+                    }},
+                    {"id": "turkey", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Turkey"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                 38.963745,
+                                 35.243322000000035
+                            ]
+                        }
+                    }}]
+            },
+            {
+                "id": "place9",
+                "zoom": 2,
+                "baseLayer": {
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                    "scheme": "xyz"
+
+                },
+                "style": {
+                    "filter": "grayscale(100%)",
+                    "opacity": 0.6,
+                    "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
+                },
+                "layers": [{"id": "california", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "California"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                           36.778261,
+                           -119.41793239999998
+                        ]
+                    }
+                }},
+                    {"id": "north_dakota", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "North Dakota"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               47.55149259999999,
+                               -101.00201190000001
+                            ]
+                        }
+                    }},
+                    {"id": "georgia", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Georgia"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                32.1656221,
+                                -82.9000750999999
+                            ]
+                        }
+                    }},
+                    {"id": "massachusetts", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Massachusetts"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                 42.4072107,
+                                 -71.38243740000001
+                            ]
+                        }
+                    }}]
+            }, {
+                "id": "place10",
+               "zoom": 5, //3
+                "baseLayer": [{
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+                }],
+                "layers": [
+                    {"id": "mexico", "type": "geojson", "data": {
+                    "type": "Feature",
+                        "properties": {
+                            "name": "Mexico"
+                        },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                          23.634501,
+                          -102.55278399999997
+                        ]
+                    }
+                }},
+                {"id": "egypt", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Egypt"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               26.820553,
+                               30.802498000000014
+                            ]
+                        }
+                    }},
+                    {"id": "india", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "India"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                20.593684,
+                                78.96288000000004
+                            ]
+                        }
+                    }},
+                    
+                    {"id": "china", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "China"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               35.86166000000001,
+                               104.19539699999996
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.9,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+                
+            }
+        ]
+    };
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79613259-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    var questions = [{
+        choices: [{
+            id: 'A',
+            text: 'Brazil',
+            photo: '',
+            sceneId: 'brazil'
+        }, {
+            id: 'B',
+            text: 'Zimbabwe',
+            photo: '',
+            sceneId: 'zimbabwe'
+        }, {
+            id: 'C',
+            text: 'Madagascar',
+            photo: '',
+            sceneId: 'madagascar'
+        }, {
+            id: 'D',
+            text: 'India',
+            photo: '',
+            sceneId: 'india'
+        }],
+        prompt: 'The word bungalow came into common use in association with colonial housing. Its low-pitched roof and a wide veranda or porch gave it the ability to shed water and catch breezes. With which country was the name originally associated?',
+        rightAnswer: {
+            id: 'D',
+            description: 'India'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: ' Northern Ireland',
+            photo: 'img/Q2/Ireland_flag.png',
+            sceneId: 'northern ireland'
+        }, {
+            id: 'B',
+            text: 'Wales',
+            photo: 'img/Q2/Wales_flag.png',
+            sceneId: 'wales'
+        },{
+            id: 'C',
+            text: 'England',
+            photo: 'img/Q2/England_flag.png',
+            sceneId: 'england'
+        },{
+            id: 'D',
+            text: 'Scotland',
+            photo: 'img/Q2/Scotland_flag.png',
+            sceneId: 'scotland'
+        }, ],
+        prompt: 'Animals often also serve as symbols of countries. The most popular such symbols are lions and eagles. However, some countries or states use mythological animals, including two components of the United Kingdom. Which part of the UK is symbolized by a unicorn?',
+        rightAnswer: {
+            id: 'D',
+            description: 'Scotland'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Mt. Elbrus, Russia',
+            photo: 'img/Q3/Mount_elbrus.jpg',
+            sceneId: 'Mt. Elbrus'
+        }, {
+            id: 'B',
+            text: 'Mt. Artos, Turkey',
+            photo: 'img/Q3/Ammenian_highlands.jpg',
+            sceneId: 'Mt. Artos'
+        }, {
+            id: 'C',
+            text: 'Mt. Ararat, Turkey',
+            photo: 'img/Q3/Mount_Ararat.jpg',
+            sceneId: 'Mt. Ararat'
+        }, {
+            id: 'D',
+            text: 'Gamish Mountain, Azerbaijan',
+            photo: 'img/Q3/Murovdag.jpg',
+            sceneId: 'Gamish Mountain'
+        }],
+        prompt: 'A geographic place often serves as an important cultural touchstone or identifier for a nation, including its diaspora. What mountain serves this purpose for Armenia and Armenians, despite its location in a neighboring country to the Republic of Armenia?',
+        rightAnswer: {
+            id: 'C',
+            description: 'Mt. Ararat, Turkey'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Bluebonnet',
+            photo: 'img/Q4/Bluebonnet.jpg',
+            sceneId: 'texas'
+        }, {
+            id: 'B',
+            text: 'Indian Paintbrush',
+            photo: 'img/Q4/Castilleja.jpg',
+            sceneId: 'texas'
+        }, {
+            id: 'C',
+            text: 'Sunflower',
+            photo: 'img/Q4/Sunflower.jpg',
+            sceneId: 'texas'
+        }, {
+            id: 'D',
+            text: 'Rose',
+            photo: 'img/Q4/Rose.jpg',
+            sceneId: 'texas'
+        }],
+        prompt: 'Every U.S. state has adopted symbols, including both a state flower and a state bird, that in many cases have become identifiable with that specific location. Which flower is the state flower of Texas, a state that has become famous for the wildflowers along its highway system that were championed by Lady Bird Johnson, wife of the 36th president, Lyndon Johnson?',
+        rightAnswer: {
+            id: 'A',
+            description: 'Bluebonnet'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Bluebird',
+            photo: 'img/Q5/Bluebird.jpg',
+            sceneId: 'maryland'
+        }, {
+            id: 'B',
+            text: 'Oriole',
+            photo: 'img/Q5/Icterus.jpg',
+            sceneId: 'maryland'
+        }, {
+            id: 'C',
+            text: 'Pelican',
+            photo: 'img/Q5/Brown_pelican.jpg',
+            sceneId: 'maryland'
+        }, {
+            id: 'D',
+            text: 'Roadrunner',
+            photo: 'img/Q5/Roadrunner.jpg',
+            sceneId: 'maryland'
+        }],
+        prompt: 'Several U.S. states share a state bird, with the Northern Cardinal being the state bird of seven states, while the Northern Mockingbird, Wild Turkey, Western Meadowlark, American Robin, and various Goldfinches are also adopted by multiple states. A few states have unique state birds, including Maryland, whose bird also serves as a major league baseball mascot. What is this state bird?',
+        rightAnswer: {
+            id: 'B',
+            description: 'Oriole'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Stegosaurus',
+            photo: 'img/Q6/Stegosaurus.jpg',
+            sceneId: 'colorado'
+        }, {
+            id: 'B',
+            text: 'Tyranosaurus Rex',
+            photo: 'img/Q6/Tyrannosaurus.jpg',
+            sceneId: 'colorado'
+        }, {
+            id: 'C',
+            text: 'Triceratops',
+            photo: 'img/Q6/Triceratops.jpg',
+            sceneId: 'colorado'
+        }, {
+            id: 'D',
+            text: 'Hadrosaurus',
+            photo: 'img/Q6/Hadrosaurus.jpg',
+            sceneId: 'colorado'
+        }],
+        prompt: 'In 1982, Colorado added an even more unusual state symbol distantly related to a state bird, the state dinosaur, in honor of a cache of fossils found in the state. Since then, 10 other states and the District of Columbia adopted a state dinosaur based on similar fossil remains found in their territory. Which creature did Colorado adopt as its dino-symbol?',
+        rightAnswer: {
+            id: 'A',
+            description: 'Stegosaurus'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Senegal',
+            photo: 'img/Q7/West_African_male_lion.jpg',
+            sceneId: 'senegal'
+        }, {
+            id: 'B',
+            text: 'Mali',
+            photo: 'img/Q7/Bleyenberghi.jpg',
+            sceneId: 'mali'
+        }, {
+            id: 'C',
+            text: 'Botswana',
+            photo: 'img/Q7/stretching.jpg',
+            sceneId: 'botswana'
+        }, {
+            id: 'D',
+            text: 'Ethiopia',
+            photo: 'img/Q7/Lion4.jpg',
+            sceneId: 'ethiopia'
+        }],
+        prompt: 'The lion is the most popular mammalian national animal because it is associated with royalty, but the African lion only serves as the national animal for one country in which it actually resides. Which African country uses the lion as its national animal, and has since the time it was a kingdom?',
+        rightAnswer: {
+            id: 'D',
+            description: 'Ethiopia'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'The Crescent City – New Orleans',
+            photo: 'img/Q8/NewOrleans.jpg',
+            sceneId: 'crescent city'
+        }, {
+            id: 'B',
+            text: 'The Eternal City – Rome',
+            photo: 'img/Q8/Rome.jpg',
+            sceneId: 'eternal city'
+        }, {
+            id: 'C',
+            text: 'The City of Dreams – Mumbai',
+            photo: 'img/Q8/Mumbai.jpg',
+            sceneId: 'city of dreams'
+        }, {
+            id: 'D',
+            text: 'The Pearl of the Orient – Shanghai',
+            photo: 'img/Q8/Shanghai.jpg',
+            sceneId: 'pearl of orient'
+        }],
+        prompt: 'Nicknames often serve as another potent symbols of places, from national nicknames like “Land of the Rising Sun” for Japan to state nicknames like “The Empire State” for New York. However, it is for cities that we best know these. Which of the below pairs of city name and nickname is NOT an accurate pair?',
+        rightAnswer: {
+            id: 'D',
+            description: 'The Pearl of the Orient – Shanghai'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Van der Grinten Projection',
+            photo: 'img/Q9/Grinten.jpg',
+            sceneId: 'grinten'
+        }, {
+            id: 'B',
+            text: 'Azimuthal Equal Area Projection',
+            photo: 'img/Q9/AzimuthalB.jpg',
+            sceneId: 'azimuthal equal'
+        }, {
+            id: 'C',
+            text: 'Azimuthal Equidistant Projection',
+            photo: 'img/Q9/C.jpg',
+            sceneId: 'azimuthal equidistant'
+        }, {
+            id: 'D',
+            text: 'Gall-Peters Equal Area Projection',
+            photo: 'img/Q9/Gall_Peters.jpg',
+            sceneId: 'gall-peters'
+        }],
+        prompt: 'One of the most recognized international symbols is not for a specific place, but for the United Nations. The UN seal uses a map projection to show the world body’s scope. Which map projection does the UN logo use?',
+        rightAnswer: {
+            id: 'C',
+            description: 'Azimuthal Equidistant Projection'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Terrarum Nova',
+            photo: 'img/Q10/Terrarum_Nova.jpg',
+            sceneId: 'terrarum nova'
+        }, {
+            id: 'B',
+            text: 'Terra Incognita',
+            photo: 'img/Q10/Terrarum_Incognito.jpg',
+            sceneId: 'terra incognita'
+        }, {
+            id: 'C',
+            text: 'Mappa Mundi',
+            photo: 'img/Q10/Mappa.jpg',
+            sceneId: 'mappa mundi'
+        }, {
+            id: 'D',
+            text: 'Erdapfel',
+            photo: 'img/Q10/Erdapfel.jpg',
+            sceneId: 'erdapfel'
+        }],
+        prompt: 'Pre-modern maps include many symbols we no longer find on maps today, including land and sea monsters that filled in the empty spaces on the map. In addition to all kinds of fantastic beasts to symbolize the great unknown, what Latin term was used on these early maps to refer to unknown lands, including on much of what is now the modern United States?',
+        rightAnswer: {
+            id: 'B',
+            description: 'Terra Incognita'
+        }
+    }];
+
+        Focus.Map.defaultOptions = {
+            weight: 10,
+            radius: 8,
+            opacity: 0.3,
+            color: 'rgba(39, 171, 226, 1)',
+            fillColor: 'rgba(39, 171, 226, 1)'
+        };
+        var questionCollection = new Focus.Collections.QuestionCollection(questions);
+
+        var navigator = new Focus.Views.QuizSceneNavigator({
+            el: $('.scenes'),
+            model: new Focus.Models.ModalModel({
+                title: 'Welcome to the seventh Geo Quiz!',
+                content: "Imagine yourself plopped down somewhere with no one to tell you where you landed. Looking around at the buildings might give you a clue as to where you were. Once people built to fit into their environments, drawing on local materials, orienting to or away from sun, and attending to bits of culture like how taxes were assessed or how different family members can interact with outsiders.  See if you can identify the geographical origins and locations of these different structures.",
+                buttonText: 'Start Quiz'
+            }),
+            collection: questionCollection
+        });
+        navigator.render();
+
+        var sceneManager = new Focus.Views.SceneManagerView({
+            el: $('body'),
+            navigator: navigator,
+            mapEngineClass: Focus.Views.LeafletMapEngine
+        });
+
+        var shareView = new Focus.Views.ShareView();
+        shareView.render();
+
+    });
+</script>
+</body>
+</html>
