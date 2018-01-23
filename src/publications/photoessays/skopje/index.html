@@ -29,18 +29,42 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Khand:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Halant" rel="stylesheet">
     <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
     <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
 	<style type="text/css">
+		#nav, #toggle-map {
+			background: #9F8A42;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to bottom, rgb(187,155,95), #9F8A42);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to bottom, rgb(187,155,95), #9F8A42); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			
+			
+		}
+		/*187,155,95 #D3CBB8*/
+		#text.photo-essay {
+			background: url("https://www.toptal.com/designers/subtlepatterns/patterns/rockywall.png");
+		}
+		
+		.photo-scene p {
+		    font-size: 18px;
+		    line-height: 24px;
+		    margin: 0 -30px;
+		    bottom: 0;
+		    color: rgb(38,40,58);
+		    background: linear-gradient(0deg,rgba(255,255,255,.9) 60%,rgba(255,255,255,0));
+		}
+		/*
+		#nav, #toggle-map {
+			background: rgba(237,46,56,1);
+		}*/
 		#text p {
 			font-family: 'Halant', serif;
 		}
 		
 
 		#text h2 {
-			font-size: 60px;
+			font-size: 40px;
 			background: none;
 		}
 		
@@ -73,8 +97,8 @@
 		}
 		
 		#text.photo-essay h2, #text.photo-essay h3 {
-			font-family: 'Khand', sans-serif;
-			color: rgba(255,151,53,1);
+			font-family: 'Russo One', sans-serif;
+			color: rgb(187,155,95);
 		}
 		
 		#text.photo-essay h3 {
@@ -115,10 +139,10 @@
 		}
 		
 		svg text {
-			fill: #fff;
-			font-family: 'Khand', san-serif;
+			fill: rgb(38,40,58);
+			font-family: 'Russo One', san-serif;
 			text-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-			font-size: 20px;
+			font-size: 16px;
 		}
 	</style>
 </head>
@@ -188,18 +212,28 @@
     <div class="content scenes">
         <section id="introduction" class="scene photo-scene" data-scene-id="place0">
 
-            <div class="figure" style="overflow: hidden; background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('img/fig1.jpg');">
+            <div class="figure" style="overflow: hidden; background-image: linear-gradient(0deg, rgba(38,40,58,0.2), rgba(38,40,58,0.5)), url('img/fig1.jpg');">
             </div>
 
             <div class="intro">
-            <h2 class="title">Constructing Nationalism Through the Cityscape: The Skopje 2014 Project</h2>
-            <div class="author">
+			<div class="title">
+				<div class="row" style="margin: 30px;">
+                    <div class="col-12 col-xs-3 col-sm-3 col-md-3 col-lg-2">
+                        <img style="width: 100%" src="img/skopjecoat.svg"/>
+                    </div>
+					<div class="col-12 col-xs-9 col-sm-9 col-md-9 col-lg-10">
+						<h2 class="title" style="padding: 0px;">Constructing Nationalism Through the Cityscape: The Skopje 2014 Project</h2>
+					</div>
+				</div>
+			</div>
+            
+            <div class="author" style="background: rgb(187,155,95)">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                        <div class="col-12 col-xs-3 col-sm-3 col-md-2 col-lg-2">
                             <img class="author-photo" src="img/portrait.jpg"/>
                         </div>
-                        <div class="col-12 col-xs-9 col-sm-10 col-md-10 col-lg-10">
+                        <div class="col-12 col-xs-9 col-sm-9 col-md-10 col-lg-10">
                             <div class="row">
                                 <div class="col-12 col-xs-12 name">
                                     Wesley J. Reisser, Ph.D
@@ -218,7 +252,7 @@
                 </div>
             </div>
             </div>
-            <p>                
+            <p style="color: #fff; background: linear-gradient(to top, rgba(38,40,58,0.8) 90%, rgba(38,40,58,0));">                
                 In 1991, the city of <a href="#" class="location" data-layer-id="skopje">Skopje</a> emerged from being a secondary city within Yugoslavia to being capital of the newly independent Republic of <a href="#" class="location" data-layer-id="macedonia">Macedonia</a>. Unlike neighboring Bulgaria, Serbia, Albania, or Greece, Macedonia had never existed as an independent state in the modern era. The last country of that name was the kingdom ruled by Alexander the Great in the 300s BCE. After its establishment, Macedonia’s independence, and very name came under fire. Greece refuses to recognize the country by its name (as a result, at the UN, it is known as the Former Yugoslav Republic of Macedonia), as it also has a province called Macedonia just to the south of the republic, and it claims Macedonia’s most famous king, Alexander the Great, as one of its own. Bulgaria, despite having recognized the country, also has longstanding historical ties and claims to much of the republic.
                 <br>
                 As a Slavic-speaking country (they speak their own language: Macedonian) trying to differentiate itself from Greece and Bulgaria, the modern Macedonian state has turned to the city plan to promote a narrative of what Macedonia is and where it comes from. The city and national government launched an ambitious project, Skopje 2014, as a means to rebuild the city in an image that conveys the state’s view of Macedonian nationality and history that will inform and persuade the Macedonian people and those outside its borders. Geographic literature has looked extensively at the use of monuments, names, and the built environment as means to commemorate and reinforce identities. Few places present the use of these three tools quite as starkly as Skopje, where the urban fabric has become a canvas upon which the Macedonian government portrays what it believes Macedonia is and always has been.
@@ -231,14 +265,14 @@
             </p>
         </section>
         <section id="2" class="scene photo-scene" data-scene-id="place2">
-            <div class="figure" style="background-image:url(img/fig3.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig3.jpg);"></div>
             <p>
                 During the Middle Ages, Macedonia became a center for Eastern Orthodox Christianity, which today serves as one of the primary distinctions, along with language, between Macedonia’s Slavic/Christian majority and its Albanian/Muslim minority. Skopje even served as the capital of Bulgaria during parts of the Middle Ages, and  <a href="#" class="location" data-layer-id="church">Orthodox churches</a> dot the city.
             </p>
         </section>
         <section id="3" class="scene photo-scene" data-scene-id="place3">
             <div class="row">
-                <div class="figure col-12 col-sm-6" style="background-image:url(img/fig4.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig5.jpg);"></div>
+                <div class="figure contain col-12 col-sm-8" style="background-image:url(img/fig4.jpg);"></div><div class="figure contain col-12 col-sm-4" style="background-image:url(img/fig5.jpg);"></div>
             </div>
             <p>
                 Skopje has many reminders in its urban landscape of the history of various outsiders that ruled the city, none more so than the symbols of Ottoman Turkish domination over Macedonia, such as the winding streets of the <a href="#" class="location" data-layer-id="old-bazaar-pasha-mosque">Old Bazaar</a> (or Turkish Bazaar) and the Mustafa Pasha Mosque, whose minaret dominates the cityscape above the bazaar.
@@ -246,7 +280,7 @@
         </section>
          <section id="4" class="scene photo-scene" data-scene-id="place4">
             <div class="row">
-                <div class="figure col-12 col-sm-6" style="background-image:url(img/fig6.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig7.jpg);"></div>
+                <div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig6.jpg);"></div><div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig7.jpg);"></div>
             </div>
             <p>
                The final outsiders to rule over Skopje came with Macedonia’s integration into communist Yugoslavia. In 1963, much of the city was destroyed in a major earthquake, allowing the communists to rebuild the city with brutalist concrete architecture. While many of those remain, <a href="#" class="location" data-layer-id="monuments">monuments</a> of the Yugoslav era are mostly gone or overgrown.
@@ -266,21 +300,21 @@
         </section>
         <section id="7" class="scene photo-scene" data-scene-id="place7">
             <div class="row">
-                <div class="figure col-12 col-sm-6" style="background-image:url(img/fig10.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig11.jpg);"></div>
+                <div class="figure contain col-12 col-sm-4" style="background-image:url(img/fig10.jpg);"></div><div class="figure contain col-12 col-sm-8" style="background-image:url(img/fig11.jpg);"></div>
             </div>
             <p>
                 The <a href="#" class="location" data-layer-id="macedonia-square">Alexander monument</a>, officially called the Warrior on a Horse, includes statues of various ancient Macedonian foot soldiers around the fountain base, lions which were the symbol of Alexander the Great, and a water and light show set to classical music that plays each night. The show has become a popular attraction for locals and visitors alike, presenting Macedonia as the heir to one of the great empires of ancient history.
             </p>
         </section>
         <section id="8" class="scene photo-scene" data-scene-id="place8">
-            <div class="figure " style="background-image:url(img/fig12.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig12.jpg);"></div>
             <p>
                 Directly across the stone bridge stands another massive monument, the <a href="#" class="location" data-layer-id="warrior-monument">Warrior Monument</a>, likely of Philip of Macedon, the father of Alexander the Great. This monument further establishes the Republic of Macedonia’s claim to be the heir of Alexander’s empire. 
             </p>
         </section>
         <section id="9" class="scene photo-scene" data-scene-id="place9">
             <div class="row">
-                <div class="figure col-12 col-sm-6" style="background-image:url(img/fig13.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig14.jpg);"></div>
+                <div class="figure contain col-12 col-sm-8" style="background-image:url(img/fig13.jpg);"></div><div class="figure contain col-12 col-sm-4" style="background-image:url(img/fig14.jpg);"></div>
             </div>
             <p>
                 Along with statues of antiquity, the Skopje 2014 project has built Greco-Roman style monuments, such as the <a href="#" class="location" data-layer-id="porta-macedonia">Porta Macedonia arch</a> and the Fallen Heroes of Macedonia monument, both in the Roman-triumphal style. Modern Macedonia hasn’t fought a single war for the arch to commemorate, but it does recall the city’s Roman past.
@@ -288,7 +322,7 @@
         </section>
         <section id="10" class="scene photo-scene" data-scene-id="place10">
             <div class="row">
-                <div class="figure col-12 col-sm-6" style="background-image:url(img/fig15.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig16.jpg);"></div>
+                <div class="figure contain col-12 col-sm-8" style="background-image:url(img/fig15.jpg);"></div><div class="figure contain col-12 col-sm-4" style="background-image:url(img/fig16.jpg);"></div>
             </div>
             <p>
                The monumental cityscape also includes hybrid structures such as bridges over the <a href="#" class="location" data-layer-id="vardar-bridges">Vardar River</a> that have numerous statues of historical figures that demonstrate a history of Macedonia from the Alexandrian period to the present. Local passersby told the author that they had no idea who most of the figures were. 
@@ -302,7 +336,7 @@
         </section>
         <section id="12" class="scene photo-scene" data-scene-id="place12">
             <div class="row">
-                <div class="figure col-12 col-sm-6" style="background-image:url(img/fig18.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig19.jpg);"></div>
+                <div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig18.jpg);"></div><div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig19.jpg);"></div>
             </div>
             <p>
                 In an effort to tell Macedonia’s Christian past, monuments of famous <a href="#" class="location" data-layer-id="christians-macedonia">Christians of Macedonia</a> have also been erected. Justinian I, an important Byzantine Emperor from the 500s AD, was born in Tauresium, just outside Skopje. Saints Cyril and Methodius are believed to have invented the Cyrillic script used to write Macedonian, Russian, and other Slavic languages, while in Macedonia. No similar monuments have been erected for any famous Muslims who have left a mark on the region’s history.
@@ -322,7 +356,7 @@
         </section>
         <section id="15" class="scene photo-scene" data-scene-id="place15">
             <div class="row">
-                <div class="figure col-12 col-sm-6" style="background-image:url(img/fig22.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig23.jpg);"></div>
+                <div class="figure contain col-12 col-sm-4" style="background-image:url(img/fig22.jpg);"></div><div class="figure contain col-12 col-sm-8" style="background-image:url(img/fig23.jpg);"></div>
             </div>
             <p>
                 While most of the new urban landscape of Skopje celebrates ties to ancient times or modern struggles, there are also monuments that promote Macedonian folk culture. Macedonia is famous for its unique music, costume, and dance styles that are some of the best preserved in the Balkans. Statues of dancers adorn some city streets, and the newly built <a href="#" class="location" data-layer-id="ministry-foreign">Ministry of Foreign Affairs building</a> has statues of the various regional costumes of Macedonia surrounding the building along higher floors. Despite only a few reminders in the landscape, folk culture is broadly reproduced in television and radio programs in Macedonia
@@ -356,11 +390,12 @@
     Focus.Map.defaultOptions = {
         //color: 'rgba(140, 207, 150,1)',
         //fillColor: 'rgba(140, 207, 150,1)'
-        color: "rgba(255,151,53,1)",
-        fillColor: "rgba(255,151,53,1)",
-        radius: 6,
-        weight: 10,
-        opacity: 0.3
+        color: "rgb(187,155,95)",
+        fillColor: "rgb(187,155,95)",
+        radius: 12,
+        weight: 20,
+        opacity: 0.3,
+		gradient: true
     };
 
     Focus.Map.options = {};
@@ -372,11 +407,7 @@
             "id": "skopje", //img1
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Skopje"
                 }
@@ -414,7 +445,7 @@
                 "fillColor": "none",
                 "weight": 2,
                 "color": "orange",
-                "opacity": 0.8,
+                "opacity": 1,
                 "dropShadow": true
               }
             }
@@ -441,7 +472,7 @@
                 "fillColor": "none",
                 "weight": 2,
                 "color": "orange",
-                "opacity": 0.8,
+                "opacity": 1,
                 "dropShadow": true
                 }
             }
@@ -449,14 +480,14 @@
             "id": "macedonia", //img1
             "type": "geojson",
             "style": {
-                "weight": 10,
-                "opacity": 0.3,
+				"fillOpacity": 0.1,
+				"opacity": 1,
+				"weight": 2,
                 "text": {
                     "text": "Macedonia",
-                    "style": {
-                        "fill": "white",
-                        "font-size": '23px',
-                    }
+					"style": {
+						"fill": "rgb(187,155,95)"
+					}
                 }
             }, 
             "data": {
@@ -467,24 +498,13 @@
               },
               "properties": {
                 "name": "Macedonia"
-              },
-            "style": {
-                "fillColor": "none",
-                "weight": 2,
-                "color": "orange",
-                "opacity": 0.8,
-                "dropShadow": true
-            }
+              }
             }
         },{
             "id": "stone-bridge", //img2
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "The Stone Bridge"
                 }
@@ -503,11 +523,7 @@
         "id": "church", //img3
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Orthodox Church"
                 }
@@ -526,11 +542,7 @@
         "id": "old-bazaar-pasha-mosque", //img4 & img5
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Old Bazaar and the Mustafa Pasha Mosque"
             }
@@ -549,11 +561,7 @@
         "id": "monuments", //img6 and img7
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Monuments of Yugoslavia"
             }
@@ -572,11 +580,7 @@
         "id": "skopje2014", //img8
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Skopje 2014"
             }
@@ -585,7 +589,7 @@
             "type": "Feature",
                 "geometry": {
                 "type": "Point",
-                    "coordinates": [23.431250, 42.000583] 
+                    "coordinates": [21.431250, 42.000583] 
             },
             "properties": {
                 "name": "Skopje 2014"
@@ -595,11 +599,7 @@
         "id": "macedonia-square", //img9 and img10 and img11
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Macedonia Square"
             }
@@ -618,11 +618,7 @@
         "id": "warrior-monument", //img12
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Warrior Monument"
             }
@@ -641,11 +637,7 @@
         "id": "porta-macedonia", //img13 and img14
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Porta Macedonia Arch"
             }
@@ -664,11 +656,7 @@
         "id": "vardar-bridges", //img15 and img16
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Bridges of Vardar River "
             }
@@ -687,11 +675,7 @@
         "id": "museum", //img17
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "National Museum of Archeology"
             }
@@ -710,11 +694,7 @@
         "id": "christians-macedonia", //img18 and img19
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Christians of Macedonia"
             }
@@ -733,11 +713,7 @@
         "id": "mother-theresa", //img20
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Memorial House of Mother Theresa"
             }
@@ -756,11 +732,7 @@
         "id": "holocaust-memorial", //img21
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text": "Holocaust Memorial Museum"
             }
@@ -779,11 +751,7 @@
         "id": "ministry-foreign", //img22 and img23
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text":  "Ministry of Foreign Affairs"
             }
@@ -802,11 +770,7 @@
         "id": "horse-fountain", //img24
             "type": "geojson",
             "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "rgba(255,151,53,1)",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
+
                 "text": {
                    "text":  "Skopje 2014"
             }
@@ -831,7 +795,7 @@
                 "zoom": 8,
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "macedonia"},
@@ -840,157 +804,172 @@
 				],
                 "style": {
                     "filter": "sepia(0%)",
-                    "opacity": 0.8,
+                    "opacity": 1,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
                 }
             }, {
                 "id": "place1",
-                "zoom": 15,
+                "zoom": 16,
                "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                 {"idRef": "stone-bridge"}
                 ]
             },{
                 "id": "place2",
-                "zoom": 15,
+                "zoom": 16,
 				"baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "church"}
                 ]
             }, {
                 "id": "place3",
-                "zoom": 15,
+                "zoom": 16,
 				"baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "old-bazaar-pasha-mosque"}
                 ]
             }, {
                 "id": "place4",
-                "zoom": 15,
+                "zoom": 16,
                "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "monuments"}
                 ]
             },  {
                 "id": "place5",
-                "zoom": 15,
+                "zoom": 16,
                "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "skopje2014"}
                 ]
             },{
                 "id": "place6",
-                "zoom": 15,
+                "zoom": 16,
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "macedonia-square"}
                 ]
             }, {
                 "id": "place7",
-                "zoom": 15,
+                "zoom": 16,
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "macedonia-square"}
                 ]
             }, {
                 "id": "place8",
-                "zoom": 15,
+                "zoom": 16,
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "warrior-monument"}
                 ]
             }, {
                 "id": "place9",
-                "zoom": 15,
+                "zoom": 16,
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "porta-macedonia"}
                 ]
             }, {
                 "id": "place10",
-                "zoom": 15,
+                "zoom": 16,
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "vardar-bridges"}
                 ]
             }, {
                 "id": "place11",
-                "zoom": 15,
+                "zoom": 16,
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "museum"}
                 ]
             }, {
                 "id": "place12",
-                "zoom": 15,
+                "zoom": 16,
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "christians-macedonia"}
                 ]
             }, {
                 "id": "place13",
-                "zoom": 15,
+                "zoom": 16,
                "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                      {"idRef": "mother-theresa"}
                 ]
             }, {
                 "id": "place14",
-                "zoom": 15,
+                "zoom": 16,
                 "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                      {"idRef": "holocaust-memorial"}
                 ]
             }, {
                 "id": "place15",
-                "zoom": 15,
+                "zoom": 16,
                
 
                "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "ministry-foreign"}
@@ -1009,7 +988,8 @@
                 // }],
                "baseLayer": {
                     "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    //"url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					"url": "//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png"
                 },
                 "layers": [
                     {"idRef": "macedonia"},
@@ -1066,10 +1046,7 @@
                 initialScene: new Focus.Models.SceneModel({
                     baseLayer: {
                         type: 'tile',
-                        url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00', //'//{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
-                        params: {
-                            attribution: 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                        }
+                        url: '//{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png'
                     },
                     center: [0,0],
                     zoom: 12,
