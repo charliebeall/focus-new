@@ -111,11 +111,18 @@
         "scenes": [
             {
                 "id": "place1",
-                "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
-                    "scheme": "xyz"
+                // "baseLayer": {
+                //     "type": "tile",
+                //     "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                //     "scheme": "xyz"
 
+                // },
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "USATopo",
+                    "options": {
+                        "detectRetina": true,
+                    }
                 },
                 "layers": [{"id": "brazil", "type": "geojson", "data": {
                     "type": "Feature",
@@ -251,13 +258,22 @@
             {
                 "id": "place3",
                 "zoom": 5, //3
-                "baseLayer": [{
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                // "baseLayer": [{
+                //     "type": "wms",
+                //     "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                //     "params": {
+                //         "layers": "GEBCO_LATEST"
+                //     }
+                // }],
+              "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true
                     }
-                }],
+                },
+
+
                 layers: [
                     {"id": "arizona", "type": "geojson", "data": {
                     "type": "Feature",
@@ -322,13 +338,24 @@
             {
                 "id": "place4",
                 "zoom": 3, //3
-                "baseLayer": [{
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                // "baseLayer": [{
+                //     "type": "wms",
+                //     "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                //     "params": {
+                //         "layers": "GEBCO_LATEST"
+                //     }
+                // }],
+                "baseLayer": {
+                    /*
+                     "type": "tile",
+                     "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                     */
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
-                }],
+                },
                 layers: [
                     {"id": "mexico", "type": "geojson", "data": {
                     "type": "Feature",
@@ -391,13 +418,20 @@
             {
                 "id": "place5",
                  "zoom": 4, //3
-                "baseLayer": [{
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                // "baseLayer": [{
+                //     "type": "wms",
+                //     "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                //     "params": {
+                //         "layers": "GEBCO_LATEST"
+                //     }
+                // }],
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true
                     }
-                }],
+                },
                 layers: [
                     {"id": "san_francisco", "type": "geojson", "data": {
                     "type": "Feature",
@@ -596,13 +630,13 @@
             {
                 "id": "place8",
                 "zoom": 3,
-                "baseLayer": {
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
-                    "scheme": "xyz"
-
-                },
+                "baseLayer": [{
+                    "type": "wms",
+                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
+                    "params": {
+                        "layers": "GEBCO_LATEST"
+                    }
+                }],
                 "style": {
                     "filter": "grayscale(100%)",
                     "opacity": 0.6,
