@@ -14078,6 +14078,28 @@ do{if(s<=r.y&&s>=r.next.y){var a=r.x+(s-r.y)*(r.next.x-r.x)/(r.next.y-r.y);if(i>
 
 var Focus = Focus || {};
 Focus.Volumes = [
+	{
+	        number: 61,
+	        publications: [{
+	            type: 'Photo Essay',
+	            title: 'Constructing Nationalism Through the Cityscape: The Skopje 2014 Project',
+	            author: 'Wesley Reisser',
+	            description: '',
+	            date: '01/24/18',
+	            thumbnail: 'publications/photoessays/skopje/img/fig14.jpg',
+	            url: 'publications/photoessays/skopje/index.html',
+	            location: []
+	        },{
+	            type: 'Feature Article',
+	            title: 'Agave Cultivation, Terracing, and Conservation in Mexico',
+	            author: 'Matthew LaFevor, Jordan Cissell, James Misfeldt',
+	            description: '',
+	            date: '01/17/18',
+	            thumbnail: 'publications/articles/mexico/img/agaveintro.jpg',
+	            url: 'publications/articles/mexico/index.html',
+	            location: []
+	        }]
+	},
     {
         number: 60,
         publications: [{
