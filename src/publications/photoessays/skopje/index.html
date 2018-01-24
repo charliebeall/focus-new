@@ -30,10 +30,30 @@
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Halant" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
     <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
 	<style type="text/css">
+        progress::-webkit-progress-bar {
+            background-color: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: rgb(38,40,58);
+            -webkit-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgb(38,40,58);
+            transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-ms-fill {
+            background-color: rgb(38,40,58);
+            -ms-transition: width 0.5s ease-in-out;
+        }
+		
 		#nav, #toggle-map {
 			background: #9F8A42;  /* fallback for old browsers */
 			background: -webkit-linear-gradient(to bottom, rgb(187,155,95), #9F8A42);  /* Chrome 10-25, Safari 5.1-6 */
@@ -59,7 +79,7 @@
 			background: rgba(237,46,56,1);
 		}*/
 		#text p {
-			font-family: 'Halant', serif;
+			font-family: 'Open Sans', sans-serif;
 		}
 		
 
@@ -140,10 +160,28 @@
 		
 		svg text {
 			fill: rgb(38,40,58);
-			font-family: 'Russo One', san-serif;
+			font-family: 'Russo One', sans-serif;
 			text-shadow: 0px 1px 3px rgba(0,0,0,0.4);
 			font-size: 16px;
 		}
+		
+		.photo-scene a, .photo-scene a.location, a.location {
+			color: #9F8A42;
+			border-bottom: none;
+			border-bottom: dotted 1px rgba(187,155,95, 0.7);
+		}
+		
+		.photo-scene a:hover, .photo-scene a.location:hover, a.location:hover {
+			background: rgba(187,155,95, 0.2);
+		}
+		
+		path.line {
+			stroke: #9F8A42 !important;
+		}
+			        path.marker-path {
+			            stroke: #9F8A42 !important;
+			            fill: #9F8A42 !important;
+			        }
 	</style>
 </head>
 <body>
