@@ -37,6 +37,24 @@
             background-repeat: no-repeat;
             background-position: 50% 50%;
         }
+		
+		.question-text {
+			text-align: justify;
+		}
+		
+		h3 span img {
+			box-shadow: 0 1px 3px rgba(0,0,0,.25);
+			max-height: 300px;
+			max-width: 100%;
+			border-radius: 10px;
+		}
+		
+		h3 span.row {
+			display: inline-block;
+			padding: 30px;
+			background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+			border-radius: 10px;
+		}
     </style>
 </head>
 <body>
@@ -184,7 +202,7 @@
                 "style": {
                     "filter": "sepia(80%)",
                     "opacity": 0.75,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "black"
                 }
             },
             {
@@ -252,7 +270,7 @@
                 "style": {
                     "filter": "sepia(50%)",
                     "opacity": 0.7,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "black"
                 }
             },
             {
@@ -332,7 +350,7 @@
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.9,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "black"
                 }
             },
             {
@@ -412,7 +430,7 @@
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.9,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "black"
                 }
             },
             {
@@ -488,7 +506,7 @@
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.9,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "black"
                 }
             }, 
             {
@@ -557,7 +575,7 @@
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.9,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "black"
                 }
             }, {
                 "id": "place7",
@@ -572,7 +590,7 @@
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.7,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "background": "black"
                 },
                 "layers": [{"id": "peru", "type": "geojson", "data": {
                     "type": "Feature",
@@ -828,9 +846,9 @@
                         }
                     }}],
                 "style": {
-                    "filter": "sepia(0%)",
-                    "opacity": 0.9,
-                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    "filter": "sepia(100%)",
+                    "opacity": 0.7,
+                    "background": "black"
                 }
                 
             }
@@ -872,7 +890,7 @@
             photo: '//upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg',
             sceneId: 'india'
         }],
-        prompt: 'The word bungalow came into common use in association with colonial housing. Its low-pitched roof and a wide veranda or porch gave it the ability to shed water and catch breezes. With which country was the name originally associated?',
+        prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q1.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">The word bungalow came into common use in association with colonial housing. Its low-pitched roof and a wide veranda or porch gave it the ability to shed water and catch breezes. With which country was the name originally associated?</span></span>',
         rightAnswer: {
             id: 'D',
             description: 'India'
@@ -899,7 +917,7 @@
             photo: 'img/Q2/outback1.jpg',
             sceneId: 'australian_outback'
         }, ],
-        prompt: 'A yurt is a round tent covered with skins, easily moved from place to place. If someone invited you into their yurt, where are you likely to be?',
+        prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q2.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">A yurt is a round tent covered with skins, easily moved from place to place. If someone invited you into their yurt, where are you likely to be?</span></span>',
         rightAnswer: {
             id: 'C',
             description: 'Mongolia'
@@ -926,7 +944,7 @@
             photo: '//upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Iowa.svg',
             sceneId: 'iowa'
         }],
-        prompt: '<img src="img/Q3.jpg" style="width: 20%;"/><div>American Shotgun house, with its one room deep floor plan, is likely to be found in which state? An easy way to remember what it’s like is to think of a house where when you open the front door and pointed you could shoot right out the back.</div>',
+        prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q3.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">American Shotgun house, with its one room deep floor plan, is likely to be found in which state? An easy way to remember what it’s like is to think of a house where when you open the front door and pointed you could shoot right out the back.</span></span>',
         rightAnswer: {
             id: 'C',
             description: 'Louisiana'
@@ -953,7 +971,7 @@
             photo: '//upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg',
             sceneId: 'china'
         }],
-        prompt: 'Communities have always recognized the need for spaces for art, including for theater. Amphitheaters, open-air theaters with banked seating are associated with the classical civilization that originated in this country.',
+        prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q4.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">Communities have always recognized the need for spaces for art, including for theater. Amphitheaters, open-air theaters with banked seating are associated with the classical civilization that originated in this country.</span></span>',
         rightAnswer: {
             id: 'B',
             description: 'Greece'
@@ -980,7 +998,7 @@
             photo: 'img/Q5/minneapolis.jpg',
             sceneId: 'minneapolis'
         }],
-        prompt: ' Art deco is a style of architecture that emerged in the 1920s and 1930s. The form was intended as a break with older building types, emphasizing clean lines, new materials, and distinctive, often geometric ornamentation. The American city best known for being the first to preserve its Art Deco district, which now serves as a major tourist site is:',
+        prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q5.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">Art deco is a style of architecture that emerged in the 1920s and 1930s. The form was intended as a break with older building types, emphasizing clean lines, new materials, and distinctive, often geometric ornamentation. The American city best known for being the first to preserve its Art Deco district, which now serves as a major tourist site is:</span></span>',
         rightAnswer: {
             id: 'C',
             description: 'Miami Beach'
@@ -1007,7 +1025,7 @@
             photo: 'img/Q6/paris1.jpg',
             sceneId: 'paris'
         }],
-        prompt: 'The end of the 19th century witnessed numerous construction innovations that allowed buildings to rise higher and higher. A key change was in the use of steel as the frame. Which city got the first steel-frame skyscraper and went on to showcase many more skyscrapers built by innovative architects?',
+        prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q6.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">The end of the 19th century witnessed numerous construction innovations that allowed buildings to rise higher and higher. A key change was in the use of steel as the frame. Which city got the first steel-frame skyscraper and went on to showcase many more skyscrapers built by innovative architects?</span></span>',
         rightAnswer: {
             id: 'A',
             description: 'Chicago'
@@ -1034,7 +1052,7 @@
             photo: '//upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg',
             sceneId: 'japan'
         }],
-        prompt: 'Before modern plumbing people relied on public baths. Public baths were a feature of many of the earliest civilizations. The classical civilization located in this area is credited with the first public baths.',
+        prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q7.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">Before modern plumbing people relied on public baths. Public baths were a feature of many of the earliest civilizations. The classical civilization located in this area is credited with the first public baths.</span></span>',
         rightAnswer: {
             id: 'C',
             description: 'Pakistan'
@@ -1061,9 +1079,9 @@
             photo: '//upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg',
             sceneId: 'turkey'
         }],
-        prompt: 'The Patio is found in many places as a courtyard, a place for relaxation and fresh air. While many countries have some form of outdoor space, which country gave us this term?',
+        prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q8.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">The Patio is found in many places as a courtyard, a place for relaxation and fresh air. While many countries have some form of outdoor space, which country gave us this term?</span></span>',
         rightAnswer: {
-            id: 'B',
+            id: 'A',
             description: 'Spain'
         }
     }, {
@@ -1088,7 +1106,7 @@
             photo: '//upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Massachusetts.svg',
             sceneId: 'massachusetts'
         }],
-        prompt: 'The sod house or soddie is named for its construction material, strips of sod for frame and walls. Settlers put these up when they found little wood for building. In which of the following states would you be likely to have found a lot of them?',
+        prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q9.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">The sod house or soddie is named for its construction material, strips of sod for frame and walls. Settlers put these up when they found little wood for building. In which of the following states would you be likely to have found a lot of them?</span></span>',
         rightAnswer: {
             id: 'B',
             description: 'North Dakota'
@@ -1115,7 +1133,7 @@
             photo: '//upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg',
             sceneId: 'china'
         }],
-        prompt: '<span class="row"><span class="col-12 col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/Q10.jpg" style="width: 100%;"/></span><span class="col-12 col-lg-10 col-md-10 col-sm-9 col-xs-8">Which country would you visit to see the famed Lighthouse of Pharos, one of the Seven Wonders of the Ancient World?</span></span>',
+        prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q10.png" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">Which country would you visit to see the famed Lighthouse of Pharos, one of the Seven Wonders of the Ancient World?</span></span>',
         rightAnswer: {
             id: 'B',
             description: 'Egypt'
