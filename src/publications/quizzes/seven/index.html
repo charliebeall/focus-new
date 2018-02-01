@@ -446,20 +446,19 @@
                         ]
                     }
                 }},
-                    
-                    {"id": "chicago", "type": "geojson", "data": {
+                {"id": "minneapolis", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {
-                            "name": "Chicago"
+                            "name": "Minneapolis"
                         },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                              -87.6500473,
-                              41.850029
+                                -93.2650,
+                                44.9778
                             ]
                         }
-                    }},
+                    }}, 
                     {"id": "miami_beach", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {
@@ -472,19 +471,19 @@
                                25.790654
                             ]
                         }
-                    }}, {"id": "minneapolis", "type": "geojson", "data": {
+                    }}, {"id": "chicago", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {
-                            "name": "Minneapolis"
+                            "name": "Chicago"
                         },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                                -73.989308,
-                                40.741895
+                              -87.6500473,
+                              41.850029
                             ]
                         }
-                    }},],
+                    }}],
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.9,
@@ -638,7 +637,7 @@
                     }
                 }],
                 "style": {
-                    "filter": "grayscale(100%)",
+                    "filter": "grayscale(10%)",
                     "opacity": 0.6,
                     "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
                 },
@@ -707,7 +706,7 @@
 
                 },
                 "style": {
-                    "filter": "grayscale(100%)",
+                    "filter": "grayscale(10%)",
                     "opacity": 0.6,
                     "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
                 },
@@ -966,9 +965,9 @@
             sceneId: 'san_francisco'
         },  {
             id: 'B',
-            text: 'Chicago',
+            text: 'Minneapolis',
             photo: '',
-            sceneId: 'chicago'
+            sceneId: 'minneapolis'
         }, {
             id: 'C',
             text: 'Miami Beach',
@@ -976,9 +975,9 @@
             sceneId: 'miami_beach'
         }, {
             id: 'D',
-            text: 'Minneapolis',
+            text: 'Chicago',
             photo: '',
-            sceneId: 'minneapolis'
+            sceneId: 'chicago'
         }],
         prompt: ' Art deco is a style of architecture that emerged in the 1920s and 1930s. The form was intended as a break with older building types, emphasizing clean lines, new materials, and distinctive, often geometric ornamentation. The American city best known for being the first to preserve its Art Deco district, which now serves as a major tourist site is:',
         rightAnswer: {
