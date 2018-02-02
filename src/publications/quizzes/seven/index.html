@@ -207,7 +207,7 @@
             },
             {
                 "id": "place2",
-                "zoom": 2,
+                "zoom": 1,
                 "layers": [
                     {"id": "argentina", "type": "geojson", "data": {
                         "type": "Feature",
@@ -275,7 +275,7 @@
             },
             {
                 "id": "place3",
-                "zoom": 5, //3
+                "zoom": 4, //3
                 // "baseLayer": [{
                 //     "type": "wms",
                 //     "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
@@ -435,7 +435,7 @@
             },
             {
                 "id": "place5",
-                 "zoom": 4, //3
+                 "zoom": 3, //3
                 // "baseLayer": [{
                 //     "type": "wms",
                 //     "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
@@ -464,20 +464,19 @@
                         ]
                     }
                 }},
-                    
-                    {"id": "chicago", "type": "geojson", "data": {
+                {"id": "minneapolis", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {
-                            "name": "Chicago"
+                            "name": "Minneapolis"
                         },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                              -87.6500473,
-                              41.850029
+                                -93.2650,
+                                44.9778
                             ]
                         }
-                    }},
+                    }}, 
                     {"id": "miami_beach", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {
@@ -490,19 +489,19 @@
                                25.790654
                             ]
                         }
-                    }}, {"id": "minneapolis", "type": "geojson", "data": {
+                    }}, {"id": "chicago", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {
-                            "name": "Minneapolis"
+                            "name": "Chicago"
                         },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                                -73.989308,
-                                40.741895
+                              -87.6500473,
+                              41.850029
                             ]
                         }
-                    }},],
+                    }}],
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.9,
@@ -579,7 +578,7 @@
                 }
             }, {
                 "id": "place7",
-                "zoom": 4,
+                "zoom": 2,
                  "baseLayer": [{
                     "type": "wms",
                     "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
@@ -647,7 +646,7 @@
             },
             {
                 "id": "place8",
-                "zoom": 3,
+                "zoom": 2,
                 "baseLayer": [{
                     "type": "wms",
                     "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
@@ -656,7 +655,7 @@
                     }
                 }],
                 "style": {
-                    "filter": "grayscale(100%)",
+                    "filter": "grayscale(10%)",
                     "opacity": 0.6,
                     "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
                 },
@@ -725,7 +724,7 @@
 
                 },
                 "style": {
-                    "filter": "grayscale(100%)",
+                    "filter": "grayscale(10%)",
                     "opacity": 0.6,
                     "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
                 },
@@ -846,7 +845,7 @@
                         }
                     }}],
                 "style": {
-                    "filter": "sepia(100%)",
+                    "filter": "sepia(0%)",
                     "opacity": 0.7,
                     "background": "black"
                 }
@@ -908,18 +907,18 @@
             sceneId: 'russian_siberia'
         },{
             id: 'C',
-            text: 'Mongolia',
-            photo: 'img/Q2/mongolia1.jpg',
-            sceneId: 'mongolia'
-        },{
-            id: 'D',
             text: 'Australian Outback',
             photo: 'img/Q2/outback1.jpg',
             sceneId: 'australian_outback'
-        }, ],
+        },{
+            id: 'D',
+            text: 'Mongolia',
+            photo: 'img/Q2/mongolia1.jpg',
+            sceneId: 'mongolia'
+        }],
         prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q2.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">A yurt is a round tent covered with skins, easily moved from place to place. If someone invited you into their yurt, where are you likely to be?</span></span>',
         rightAnswer: {
-            id: 'C',
+            id: 'D',
             description: 'Mongolia'
         }
     }, {
@@ -984,9 +983,9 @@
             sceneId: 'san_francisco'
         },  {
             id: 'B',
-            text: 'Chicago',
-            photo: 'img/Q5/chicago.jpg',
-            sceneId: 'chicago'
+            text: 'Minneapolis',
+            photo: 'img/Q5/minneapolis.jpg',
+            sceneId: 'minneapolis'
         }, {
             id: 'C',
             text: 'Miami Beach',
@@ -994,9 +993,9 @@
             sceneId: 'miami_beach'
         }, {
             id: 'D',
-            text: 'Minneapolis',
-            photo: 'img/Q5/minneapolis.jpg',
-            sceneId: 'minneapolis'
+            text: 'Chicago',
+            photo: 'img/Q5/chicago.jpg',
+            sceneId: 'chicago'
         }],
         prompt: '<span class="row"><span class="col-12 col-lg-3 col-md-3 col-sm-4 col-xs-4"><img src="img/Q5.jpg" /></span><span class="col-12 col-lg-9 col-md-9 col-sm-8 col-xs-8 question-text">Art deco is a style of architecture that emerged in the 1920s and 1930s. The form was intended as a break with older building types, emphasizing clean lines, new materials, and distinctive, often geometric ornamentation. The American city best known for being the first to preserve its Art Deco district, which now serves as a major tourist site is:</span></span>',
         rightAnswer: {
