@@ -14096,6 +14096,15 @@ Focus.Volumes = [
 	{
         number: 61,
         publications: [{
+            type: 'Geo Quiz',
+            title: 'Quiz Seven: The Built Environment',
+            author: 'Deborah Popper',
+            description: '',
+            date: '02/05/18',
+            thumbnail: 'publications/quizzes/seven/img/Q2.jpg',
+            url: 'publications/quizzes/seven/index.html',
+            location: []
+        },{
             type: 'Photo Essay',
             title: 'Constructing Nationalism Through the Cityscape: The Skopje 2014 Project',
             author: 'Wesley Reisser',
