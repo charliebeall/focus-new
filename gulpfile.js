@@ -191,6 +191,7 @@ var srcFiles = [
     'bower_components/bootstrap/dist/js/bootstrap.min.js',
     'bower_components/jquery.scrollex/jquery.scrollex.min.js',
     'node_modules/esri-leaflet/dist/esri-leaflet.js',
+	'node_modules/esri-leaflet-vector/dist/esri-leaflet-vector.js',
     'node_modules/proj4/dist/proj4.js',
     'node_modules/proj4leaflet/src/proj4leaflet.js',
     'bower_components/leaflet-dvf/dist/leaflet-dvf.js',

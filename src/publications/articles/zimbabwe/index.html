@@ -29,8 +29,91 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Sancreek" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
         <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
         <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+		<style>
+			progress::-webkit-progress-bar {
+	            background-color: transparent;
+	        }
+
+	        progress::-webkit-progress-value {
+	            background-color: rgb(111,169,209);
+	            -webkit-transition: width 0.5s ease-in-out;
+	        }
+
+	        progress::-moz-progress-bar {
+	            background-color: rgb(111,169,209);
+	            transition: width 0.5s ease-in-out;
+	            -moz-transition: width 0.5s ease-in-out;
+	        }
+
+	        progress::-ms-fill {
+	            background-color: rgb(111,169,209);
+	            -ms-transition: width 0.5s ease-in-out;
+	        }
+					
+			#nav, #toggle-map {
+				background: rgba(111,169,209,1);
+			}
+
+	        #text a, a.location, div.tooltip a {
+	            color: rgb(111,169,209);
+	            border-bottom-color: rgb(111,169,209);
+	        }
+
+	        #text a:hover, a.location:hover, div.tooltip a {
+	            background: rgba(111,169,209,0.2);
+	            text-decoration: none;
+	        }
+
+	        path.line {
+	            stroke: rgb(111,169,209) !important;
+	        }
+	        path.marker-path {
+	            stroke: rgb(111,169,209) !important;
+	            fill: rgb(111,169,209) !important;
+	        }
+			
+			
+			svg text {
+				fill: black;
+				font-size: 14px;
+				font-weight: bold;
+				font-family: 'Montserrat';
+				text-shadow: 2px 2px 0px rgba(255,255,255,1);
+				
+			}
+			
+			text.leaflet-svg-text {
+				text-anchor: start;
+			    alignment-baseline: baseline;
+			    dominant-baseline: text-before-edge;
+			}
+			
+			#text {
+				*background: rgb(250,249,247);
+				background: rgb(255,255,255);
+			}
+			
+			#text h2, #text h3 {
+				font-family: 'Rye';
+				color: rgb(227,11,23);
+				text-transform: none;
+			}
+			
+			#text h2 {
+				text-shadow: 2px 2px 0px rgba(111,169,209,1);
+				font-size: 60px;
+			}
+			
+			p {
+				font-family: 'PT Serif', 'Times New Roman', serif;
+			}
+			
+		</style>
     </head>
     <body class="scrolled">
     <progress></progress>
@@ -98,9 +181,9 @@
             <div class="content scenes">
 
                 <section id="introduction" class="scene" data-scene-id="place1" title="Introduction">
-                    <h2 class="title title-photo" style="background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), url(img/bajaauthors2.jpg);">Reimagining Zimbabwe’s Cape-to-Cairo Railroad</h2>
+                    <h2 class="title title-photo" style="background-image: linear-gradient(0deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0.3)), linear-gradient(0deg, rgba(255,255,255,0.3) 70%, rgba(255,255,255,1) 100%), url(img/fig1.jpg); height: 650px; background-position: 50% 150px; background-size: 120%;">Reimagining Zimbabwe’s Cape-to-Cairo Railroad</h2>
                     <div class="author"><span class="name">Thomas A. Wikle</span>, <span class="organization">Professor of Geography, Oklahoma State University</span></div>
-                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2016.61.1f</div>
+                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2018.61.2f</div>
                 <h3>Introduction</h3>
                     <p>
                         The late 19th century was a tumultuous period in Africa history as European nations sought to consolidate or expand control over new lands.  Hoping to advance Great Britain’s influence, a charismatic politician and entrepreneur named Cecil Rhodes organized private investors in financing a railroad stretching the length of the continent, from Britain’s southern holdings to the Mediterranean Sea.  Known as the Cape-to-Cairo Railroad, the project was intended to open lands to mining and white settlement, forming a continuous “red line” of British territories across Africa (Paice 2001).  Despite challenges, Rhodes and his investors were successful in building segments of the railroad, reaching the <a href="#" class="location" data-layer-id="zambezi_river">Zambezi River</a> and <a href="#" class="location" data-layer-id="victoria_falls">Victoria Falls</a> in 1904 and eventually copper fields in the Belgian Congo (presently the <a href="#" class="location" data-layer-id="congo">Democratic Republic of the Congo</a>). Facing formidable terrain, local opposition, and financial problems, the Cape-to-Cairo Railroad was never completed.  Today, Rhodes is best known for the prestigious Oxford University scholarship established in his name.  In this article we explore the origin and evolution of colonial-era railroads in <a href="#" class="location" data-layer-id="zimbabwe">Zimbabwe</a>.  Along with a look back at the railroads’ impacts, we describe a journey along one segment of the Cape-to-Cairo between <a href="#" class="location" data-layer-id="bulawayo">Bulawayo</a> and <a href="#" class="location" data-layer-id="victoria_falls">Victoria Falls</a> in modern Zimbabwe.
@@ -113,7 +196,7 @@
                         With a diverse landscape featuring hyper-arid deserts, snow-capped mountains, grassy savannas, scrublands, and tropical forests, Africa is best described as a continent of superlatives.  Its enormous land area could accommodate India, China, Japan, and the continental U.S. with room for much of Europe.  European occupation of southern Africa began with the Dutch in 1652 and subsequently Great Britain in 1795 (Muiu 2008).  By 1872, Britain’s Cape Colony had become a self-governing province with its own parliament and prime minister. With abundant natural resources including diamonds, the Colony became a magnet for newcomers, among them eighteen year-old Cecil Rhodes who arrived in 1871, the same year journalist Henry Morton Stanley made contact with explorer David Livingston near Lake Tanganyika (White 2014).  Over the next two decades Rhodes established a lucrative diamond enterprise, purchasing mines around Kimberley before returning to Great Britain in 1873 to study at Oxford University.  While at Oxford, Rhodes was exposed to the views of John Ruskin who lectured on the superiority of the Englishman and benefits that Imperialism would bring for “uncivilized” peoples (Dearden 1999).
                     </p>
                     <p>
-                         In the mid-1800s, Africa was a disputed continent with <a href="#" class="location" data-layer-id="france">France</a>, Great Britain, <a href="#" class="location" data-layer-id="portugal">Portugal</a>, <a href="#" class="location" data-layer-id="belgium">Belgium</a>, and <a href="#" class="location" data-layer-id="germany">Germany</a> seeking to establish control over larger areas.  Hoping for a resolution that would facilitate the peaceful partitioning of the continent, 13 European nations met at the 1884 Berlin Conference to establish principles for territorial claims to African lands (Louis 2006).  The so-called “Scramble for Africa” was underway.  At the same time, the continent’s lack of infrastructure and rugged terrain made it a difficult place for long-distance travel.  Pack animals, head-loading, and wagons pulled by oxen remained the principal methods for moving goods.  With the poor condition of roads and bridges, it could take weeks for wagons to travel between major population centers.  Henry Stanley recognized the importance of improved transportation for Africa’s economic development.  In a letter to the <i>Daily Telegraph</i> he wrote,
+                         In the mid-1800s, Africa was a disputed continent with <a href="#" class="location" data-layer-id="france">France</a>, <a href="#" class="location" data-layer-id="gb">Great Britain</a>, <a href="#" class="location" data-layer-id="portugal">Portugal</a>, <a href="#" class="location" data-layer-id="belgium">Belgium</a>, and <a href="#" class="location" data-layer-id="germany">Germany</a> seeking to establish control over larger areas.  Hoping for a resolution that would facilitate the peaceful partitioning of the continent, 13 European nations met at the 1884 Berlin Conference to establish principles for territorial claims to African lands (Louis 2006).  The so-called “Scramble for Africa” was underway.  At the same time, the continent’s lack of infrastructure and rugged terrain made it a difficult place for long-distance travel.  Pack animals, head-loading, and wagons pulled by oxen remained the principal methods for moving goods.  With the poor condition of roads and bridges, it could take weeks for wagons to travel between major population centers.  Henry Stanley recognized the importance of improved transportation for Africa’s economic development.  In a letter to the <i>Daily Telegraph</i> he wrote,
                     </p>
                     <p>
                         <i>The railroad is the answer to Africa’s pressing problems.  It is the only answer to the wagon trails, decimated by rinderpest and the tsetse fly; and the only way to defeat slavery by opening up the continent to commerce and communication</i> (Tabor 2003, p. 118).
@@ -134,7 +217,7 @@
                 </section>
 
                 <section id="4" class="scene" data-scene-id="place4">
-                    <div id="figure1" class="figure " style="background-image:url(img/fig1.jpg);"></div>
+                    <div id="figure1" class="figure contain" style="height: 600px; background-image:url(img/fig1.jpg), linear-gradient(0deg, white, white);"></div>
                     <div class="caption">Figure 1: "The Rhode Colossus" drawn by Edward Linley Sambourne and published in <i>Punch Magazine</i> after Rhodes annouced plans for a telegraph line from <a href="#" class="location" data-layer-id="cape_colony">Cape Town</a> to <a href="#" class="location" data-layer-id="cairo">Cairo</a> in 1892. Images is in the Public Domain.</div>
 
                     <p>
@@ -144,8 +227,8 @@
                         Extending from <a href="#" class="location" data-layer-id="cape_colony">Cape Town</a> to <a href="#" class="location" data-layer-id="kimberly">Kimberly</a>, the first segment of the Cape-to-Cairo was completed in 1884 (<a href="#figure2">Figure 2</a>).  Overall supervision of the project was provided by George Pauling, a British engineer who famously promised Rhodes he could build 400 miles of rail line in as many days.  To save time, Pauling’s crews built temporary wooden bridges over the Tati, Shashi, and Mahalapye Rivers that were later replaced with more durable steel bridges supported by masonry footings (Croxton 1982).  Pauling and his construction workers faced significant challenges such as a rinderpest infestation (an infectious viral disease spread through direct contact or consuming contaminated water) that devastated the local cattle population and a rebellion by Matabele tribesmen.  When the railroad reached the Rhodesian City of <a href="#" class="location" data-layer-id="bulawayo">Bulawayo</a> in 1897, Pauling hung a banner that read, “Our two roads to progress: Railroads and Cecil Rhodes” (Wolmar 2014, p. 41).
                     </p>
 
-                    <div id="figure2" class="figure " style="background-image:url(img/fig2.jpg);"></div>
-                    <div class="caption">Figure 2: The proposed Capt-Cairo Route and <a href="#" class="location" data-layer-id="bulawayo">completed sections</a> in Rhodesia and the Belgian-Congo.</div>
+                    <div id="figure2" class="figure contain" style="background-image:url(img/fig2.jpg);"></div>
+                    <div class="caption">Figure 2: The proposed Cape-to-Cairo Route and <a href="#" class="location" data-layer-id="bulawayo">completed sections</a> in Rhodesia and the Belgian-Congo.</div>
                 </section>
 
                 <section id="5" class="scene" data-scene-id="place5">
@@ -167,7 +250,7 @@
                         In selecting where to position a bridge across the Zambezi, planners chose an area just downstream from a narrow gorge known as “Shongwe” meaning “boiling pot” (<a href="#figure4">Figure 4</a>). The Victoria Falls Bridge was designed by George Hobson and fabricated in the United Kingdom by the Cleveland Bridge and Engineering Company (Tabor 2003). Bridge sections were subsequently transported by ship to the Port of Beria in present-day <a href="#" class="location" data-layer-id="mozambique">Mozambique</a> before being moved by rail to the construction site.  With a length of 650 feet, the bridge’s main arch supported a level surface for track 400 feet above the river (<a href="#figure5">Figure 5</a>).  Constructed out of steel and supported by masonry piers, the bridge was assembled simultaneously from each side of the gorge.  To ensure that rust wouldn’t be a problem, the structure was designed for visual inspection with all parts accessible to a painter’s brush.  When completed in 1905, the bridge held the distinction of being tallest in the world.  
                     </p>
                     <div id="figure4" class="figure " style="background-image:url(img/fig4.jpg);"></div>
-                    <div class="caption">Figure 4: Shongew (bioling pot), a narrow portion of the <a href="#" class="location" data-layer-id="zambezi_river">Zambezi River</a> just downstream from the falls. Photo by Thomas Wikle.</div>
+                    <div class="caption">Figure 4: Shongew (boiling pot), a narrow portion of the <a href="#" class="location" data-layer-id="zambezi_river">Zambezi River</a> just downstream from the falls. Photo by Thomas Wikle.</div>
                     <p>
                         Prior to opening the rail line between Bulawayo and Victoria Falls, the Cape-to-Cairo Project experienced a significant setback.  Throughout his life Rhodes suffered from health issues including heart problems that became more severe after he turned 40.  In 1902 at the age of 48, Rhodes died in the Cape Colony City of Muizenberg (Flynn 2007).  A short time later his body was transported by train to his burial place at World’s View, a hilltop located 22 miles south of Bulawayo.  Despite losing its principal advocate, progress continued with track constructed from Livingstone on the north side of the Zambezi into northern Rhodesia (present-day <a href="#" class="location" data-layer-id="zambia">Zambia</a>), reaching Broken Hill in 1906.  An issue for railways constructed without government subsidies was the need to cover construction costs through freight revenue.  Railroad financers had been assured by the BSAC that northern Rhodesia’s lead and zinc production would provide ample traffic and revenue.  However, the promised income never materialized as a result of technical problems within the mines (Duignan and Gann 1975).  
                     </p>
@@ -346,25 +429,62 @@
         <!-- inject:templates:html -->
         <!-- endinject -->
         <script src="../../../js/combined.js"></script>
+		<script src="js/countryData.min.js"></script>
+		<!--><script type="text/javascript" src="https://www.nextzen.org/tangram/0.14/tangram.min.js"></script>-->
         <script>
+			
+			var canvas = document.createElement("canvas");
+			    // Get WebGLRenderingContext from canvas element.
+			var gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+		    var baseScene = {"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}};
+			
+			if (gl) {
+				var tangramScene = {
+		            scene: {
+		                import: [
+		                    'https://www.nextzen.org/carto/refill-style/11/refill-style.zip',
+							'https://www.nextzen.org/carto/refill-style/11/themes/color-gray.zip',
+		                    'https://www.nextzen.org/carto/bubble-wrap-style/8/themes/label-10.zip'
+		                ],
+		                sources: {
+		                    mapzen: {
+		                        url: 'https://{s}.tile.nextzen.org/tilezen/vector/v1/512/all/{z}/{x}/{y}.mvt',
+		                        url_subdomains: ['a', 'b', 'c', 'd'],
+		                        url_params: {
+		                            api_key: 'ZVKjQi5pS1-afO-ziytQ8g'
+		                        },
+		                        tile_size: 512,
+		                        max_zoom: 15
+		                    }
+		                }
+		            },
+		            attribution: '<a href="https://mapzen.com/tangram" target="_blank">Tangram</a> | <a href="http://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> | <a href="https://mapzen.com/" target="_blank">Mapzen</a>'
+		        };
+				//baseScene = {"type": "tangram", "options": tangramScene};
+				baseScene = {"type": "esri-vector", "url": "Newspaper"};
+			}
+			
+		    Focus.Map = {};
+		    Focus.Map.defaultOptions = {
+		        color: "rgb(227,11,23)",
+		        fillColor: "rgb(227,11,23)",
+		        radius: 6,
+		        weight: 10,
+		        opacity: 0.3
+		    };
+
+		    Focus.Map.options = {};
+		    Focus.Map.options.panes = [];
+			
             var scenes = {
                 "features": [{
                     "id": "med_sea",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Mediterranean Sea",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            
                         }
                     },
                     "data": {
@@ -381,19 +501,13 @@
                     "id": "victoria_falls",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Victoria Falls",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+							"style": {
+								"text-anchor": "end"
+							}
+                            
                         }
                     },
                     "data": {
@@ -411,19 +525,10 @@
                     "id": "zambezi_river",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Zambezi River",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            
                         }
                     },
                     "data": {
@@ -440,19 +545,10 @@
                     "id": "bulawayo",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Bulawayo",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            
                         }
                     },
                     "data": {
@@ -469,19 +565,10 @@
                     "id": "cape_colony",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Cape Colony",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            
                         }
                     },
                     "data": {
@@ -498,26 +585,17 @@
                     "id": "cairo",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Cairo",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            
                         }
                     },
                     "data": {
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": [30.0444, 31.2357]
+                            "coordinates": [30.044444, 31.235833]
                         },
                         "properties": {
                             "name": "Cairo"
@@ -527,19 +605,10 @@
                     "id": "kimberly",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Kimberly",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            
                         }
                     },
                     "data": {
@@ -556,10 +625,10 @@
                     "id": "railway_route",
                     "type": 'geojson',
                     "style": {
-                        "color": "orange",
+                        "color": "rgb(217,11,23)",
                         "fill": false,
                         "weight": 2,
-                        "opacity": 0.7
+                        "opacity": 0.5
                     },
                     "data": {
 "type": "FeatureCollection",
@@ -607,150 +676,132 @@
 
                 },{
                     "id": "zimbabwe",
-                    "type": 'geojson',
-                    "style": {
-                        "color": "orange",
-                        "fill": false,
-                        "weight": 2,
-                        "opacity": 0.7
-                    },
-                    "data": {
-                        "type":"Polygon",
-                        "coordinates":[[[31.191409,-22.25151],[30.659865,-22.151567],[30.322883,-22.271612],[29.839037,-22.102216],[29.432188,-22.091313],[28.794656,-21.639454],[28.02137,-21.485975],[27.727228,-20.851802],[27.724747,-20.499059],[27.296505,-20.39152],[26.164791,-19.293086],[25.850391,-18.714413],[25.649163,-18.536026],[25.264226,-17.73654],[26.381935,-17.846042],[26.706773,-17.961229],[27.044427,-17.938026],[27.598243,-17.290831],[28.467906,-16.4684],[28.825869,-16.389749],[28.947463,-16.043051],[29.516834,-15.644678],[30.274256,-15.507787],[30.338955,-15.880839],[31.173064,-15.860944],[31.636498,-16.07199],[31.852041,-16.319417],[32.328239,-16.392074],[32.847639,-16.713398],[32.849861,-17.979057],[32.654886,-18.67209],[32.611994,-19.419383],[32.772708,-19.715592],[32.659743,-20.30429],[32.508693,-20.395292],[32.244988,-21.116489],[31.191409,-22.25151]]]
-                    }
+                    "type": 'country',
+                    "data": "ZW",
+					"style": {
+				        color: "rgb(218,195,195)",
+				        fillColor: "rgb(227,11,23)",
+				        radius: 6,
+				        weight: 10,
+				        opacity: 0.5,
+						fillOpacity: 0.2
+				    }
                 },{
                     "id": "france",
-                    "type": 'geojson',
-                    "style": {
-                        "color": "orange",
-                        "fill": false,
-                        "weight": 2,
-                        "opacity": 0.7
-                    },
-                    "data": {
-                        "type":"MultiPolygon",
-                        "coordinates":[[[[9.560016,42.152492],[9.229752,41.380007],[8.775723,41.583612],[8.544213,42.256517],[8.746009,42.628122],[9.390001,43.009985],[9.560016,42.152492]]],[[[3.588184,50.378992],[4.286023,49.907497],[4.799222,49.985373],[5.674052,49.529484],[5.897759,49.442667],[6.18632,49.463803],[6.65823,49.201958],[8.099279,49.017784],[7.593676,48.333019],[7.466759,47.620582],[7.192202,47.449766],[6.736571,47.541801],[6.768714,47.287708],[6.037389,46.725779],[6.022609,46.27299],[6.5001,46.429673],[6.843593,45.991147],[6.802355,45.70858],[7.096652,45.333099],[6.749955,45.028518],[7.007562,44.254767],[7.549596,44.127901],[7.435185,43.693845],[6.529245,43.128892],[4.556963,43.399651],[3.100411,43.075201],[2.985999,42.473015],[1.826793,42.343385],[0.701591,42.795734],[0.338047,42.579546],[-1.502771,43.034014],[-1.901351,43.422802],[-1.384225,44.02261],[-1.193798,46.014918],[-2.225724,47.064363],[-2.963276,47.570327],[-4.491555,47.954954],[-4.59235,48.68416],[-3.295814,48.901692],[-1.616511,48.644421],[-1.933494,49.776342],[-0.989469,49.347376],[1.338761,50.127173],[1.639001,50.946606],[2.513573,51.148506],[2.658422,50.796848],[3.123252,50.780363],[3.588184,50.378992]]]]
-                    }
+                    "type": 'country',
+                    "data": "FR",
+					"style": {
+				        color: "rgb(218,195,195)",
+				        fillColor: "rgb(227,11,23)",
+				        radius: 6,
+				        weight: 10,
+				        opacity: 0.5,
+						fillOpacity: 0.2
+				    }
                 },{
                     "id": "portugal",
-                    "type": 'geojson',
-                    "style": {
-                        "color": "orange",
-                        "fill": false,
-                        "weight": 2,
-                        "opacity": 0.7
-                    },
-                    "data": {
-                        "type":"Polygon",
-                        "coordinates":[[[-9.034818,41.880571],[-8.671946,42.134689],[-8.263857,42.280469],[-8.013175,41.790886],[-7.422513,41.792075],[-7.251309,41.918346],[-6.668606,41.883387],[-6.389088,41.381815],[-6.851127,41.111083],[-6.86402,40.330872],[-7.026413,40.184524],[-7.066592,39.711892],[-7.498632,39.629571],[-7.098037,39.030073],[-7.374092,38.373059],[-7.029281,38.075764],[-7.166508,37.803894],[-7.537105,37.428904],[-7.453726,37.097788],[-7.855613,36.838269],[-8.382816,36.97888],[-8.898857,36.868809],[-8.746101,37.651346],[-8.839998,38.266243],[-9.287464,38.358486],[-9.526571,38.737429],[-9.446989,39.392066],[-9.048305,39.755093],[-8.977353,40.159306],[-8.768684,40.760639],[-8.790853,41.184334],[-8.990789,41.543459],[-9.034818,41.880571]]]
-                    }
+                    "type": 'country',
+                    "data": "PT",
+					"style": {
+				        color: "rgb(218,195,195)",
+				        fillColor: "rgb(227,11,23)",
+				        radius: 6,
+				        weight: 10,
+				        opacity: 0.5,
+						fillOpacity: 0.2
+				    }
                 },{
                     "id": "belgium",
-                    "type": 'geojson',
-                    "style": {
-                        "color": "orange",
-                        "fill": false,
-                        "weight": 2,
-                        "opacity": 0.7
-                    },
-                    "data": {
-                       "type":"Polygon",
-                       "coordinates":[[[3.314971,51.345781],[4.047071,51.267259],[4.973991,51.475024],[5.606976,51.037298],[6.156658,50.803721],[6.043073,50.128052],[5.782417,50.090328],[5.674052,49.529484],[4.799222,49.985373],[4.286023,49.907497],[3.588184,50.378992],[3.123252,50.780363],[2.658422,50.796848],[2.513573,51.148506],[3.314971,51.345781]]]
-                    }
+                    "type": 'country',
+                    "data": "BE",
+					"style": {
+				        color: "rgb(218,195,195)",
+				        fillColor: "rgb(227,11,23)",
+				        radius: 6,
+				        weight: 10,
+				        opacity: 0.5,
+						fillOpacity: 0.2
+				    }
                 },{
                     "id": "germany",
-                    "type": 'geojson',
-                    "style": {
-                        "color": "orange",
-                        "fill": false,
-                        "weight": 2,
-                        "opacity": 0.7
-                    },
-                    "data": {
-                       "type":"Polygon",
-                       "coordinates":[[[9.921906,54.983104],[9.93958,54.596642],[10.950112,54.363607],[10.939467,54.008693],[11.956252,54.196486],[12.51844,54.470371],[13.647467,54.075511],[14.119686,53.757029],[14.353315,53.248171],[14.074521,52.981263],[14.4376,52.62485],[14.685026,52.089947],[14.607098,51.745188],[15.016996,51.106674],[14.570718,51.002339],[14.307013,51.117268],[14.056228,50.926918],[13.338132,50.733234],[12.966837,50.484076],[12.240111,50.266338],[12.415191,49.969121],[12.521024,49.547415],[13.031329,49.307068],[13.595946,48.877172],[13.243357,48.416115],[12.884103,48.289146],[13.025851,47.637584],[12.932627,47.467646],[12.62076,47.672388],[12.141357,47.703083],[11.426414,47.523766],[10.544504,47.566399],[10.402084,47.302488],[9.896068,47.580197],[9.594226,47.525058],[8.522612,47.830828],[8.317301,47.61358],[7.466759,47.620582],[7.593676,48.333019],[8.099279,49.017784],[6.65823,49.201958],[6.18632,49.463803],[6.242751,49.902226],[6.043073,50.128052],[6.156658,50.803721],[5.988658,51.851616],[6.589397,51.852029],[6.84287,52.22844],[7.092053,53.144043],[6.90514,53.482162],[7.100425,53.693932],[7.936239,53.748296],[8.121706,53.527792],[8.800734,54.020786],[8.572118,54.395646],[8.526229,54.962744],[9.282049,54.830865],[9.921906,54.983104]]]
-                   }
+                    "type": 'country',
+                    "data": "DE",
+					"style": {
+				        color: "rgb(218,195,195)",
+				        fillColor: "rgb(227,11,23)",
+				        radius: 6,
+				        weight: 10,
+				        opacity: 0.5,
+						fillOpacity: 0.2
+				    }			
                }, {
                     "id": "mozambique",
-                    "type": 'geojson',
-                    "style": {
-                        "color": "orange",
-                        "fill": false,
-                        "weight": 2,
-                        "opacity": 0.7
-                    },
-                    "data": {
-                       "type":"Polygon","coordinates":[[[34.559989,-11.52002],[35.312398,-11.439146],[36.514082,-11.720938],[36.775151,-11.594537],[37.471284,-11.568751],[37.827645,-11.268769],[38.427557,-11.285202],[39.52103,-10.896854],[40.316589,-10.317096],[40.478387,-10.765441],[40.437253,-11.761711],[40.560811,-12.639177],[40.59962,-14.201975],[40.775475,-14.691764],[40.477251,-15.406294],[40.089264,-16.100774],[39.452559,-16.720891],[38.538351,-17.101023],[37.411133,-17.586368],[36.281279,-18.659688],[35.896497,-18.84226],[35.1984,-19.552811],[34.786383,-19.784012],[34.701893,-20.497043],[35.176127,-21.254361],[35.373428,-21.840837],[35.385848,-22.14],[35.562546,-22.09],[35.533935,-23.070788],[35.371774,-23.535359],[35.60747,-23.706563],[35.458746,-24.12261],[35.040735,-24.478351],[34.215824,-24.816314],[33.01321,-25.357573],[32.574632,-25.727318],[32.660363,-26.148584],[32.915955,-26.215867],[32.83012,-26.742192],[32.071665,-26.73382],[31.985779,-26.29178],[31.837778,-25.843332],[31.752408,-25.484284],[31.930589,-24.369417],[31.670398,-23.658969],[31.191409,-22.25151],[32.244988,-21.116489],[32.508693,-20.395292],[32.659743,-20.30429],[32.772708,-19.715592],[32.611994,-19.419383],[32.654886,-18.67209],[32.849861,-17.979057],[32.847639,-16.713398],[32.328239,-16.392074],[31.852041,-16.319417],[31.636498,-16.07199],[31.173064,-15.860944],[30.338955,-15.880839],[30.274256,-15.507787],[30.179481,-14.796099],[33.214025,-13.97186],[33.7897,-14.451831],[34.064825,-14.35995],[34.459633,-14.61301],[34.517666,-15.013709],[34.307291,-15.478641],[34.381292,-16.18356],[35.03381,-16.8013],[35.339063,-16.10744],[35.771905,-15.896859],[35.686845,-14.611046],[35.267956,-13.887834],[34.907151,-13.565425],[34.559989,-13.579998],[34.280006,-12.280025],[34.559989,-11.52002]]]
-                   }
-               }, {
-                    "id": "mozambique",
-                    "type": 'geojson',
-                    "style": {
-                        "color": "orange",
-                        "fill": false,
-                        "weight": 2,
-                        "opacity": 0.7
-                    },
-                    "data": {
-                       "type":"Polygon",
-                       "coordinates":[[[34.559989,-11.52002],[35.312398,-11.439146],[36.514082,-11.720938],[36.775151,-11.594537],[37.471284,-11.568751],[37.827645,-11.268769],[38.427557,-11.285202],[39.52103,-10.896854],[40.316589,-10.317096],[40.478387,-10.765441],[40.437253,-11.761711],[40.560811,-12.639177],[40.59962,-14.201975],[40.775475,-14.691764],[40.477251,-15.406294],[40.089264,-16.100774],[39.452559,-16.720891],[38.538351,-17.101023],[37.411133,-17.586368],[36.281279,-18.659688],[35.896497,-18.84226],[35.1984,-19.552811],[34.786383,-19.784012],[34.701893,-20.497043],[35.176127,-21.254361],[35.373428,-21.840837],[35.385848,-22.14],[35.562546,-22.09],[35.533935,-23.070788],[35.371774,-23.535359],[35.60747,-23.706563],[35.458746,-24.12261],[35.040735, -24.478351],[34.215824,-24.816314],[33.01321,-25.357573],[32.574632,-25.727318],[32.660363,-26.148584],[32.915955,-26.215867],[32.83012,-26.742192],[32.071665,-26.73382],[31.985779,-26.29178],[31.837778,-25.843332],[31.752408,-25.484284],[31.930589,-24.369417],[31.670398,-23.658969],[31.191409,-22.25151],[32.244988,-21.116489],[32.508693,-20.395292],[32.659743,-20.30429],[32.772708,-19.715592],[32.611994,-19.419383],[32.654886,-18.67209],[32.849861,-17.979057],[32.847639,-16.713398],[32.328239,-16.392074],[31.852041,-16.319417],[31.636498,-16.07199],[31.173064,-15.860944],[30.338955,-15.880839],[30.274256,-15.507787],[30.179481,-14.796099],[33.214025,-13.97186],[33.7897,-14.451831],[34.064825,-14.35995],[34.459633,-14.61301],[34.517666,-15.013709],[34.307291,-15.478641],[34.381292,-16.18356],[35.03381,-16.8013],[35.339063,-16.10744],[35.771905,-15.896859],[35.686845,-14.611046],[35.267956,-13.887834],[34.907151,-13.565425],[34.559989,-13.579998],[34.280006,-12.280025],[34.559989,-11.52002]]]
-                   }
+                    "type": 'country',
+                    "data": "MZ",
+					"style": {
+				        color: "rgb(218,195,195)",
+				        fillColor: "rgb(227,11,23)",
+				        radius: 6,
+				        weight: 10,
+				        opacity: 0.5,
+						fillOpacity: 0.2
+				    }
                }, {
                     "id": "zambia",
-                    "type": 'geojson',
-                    "style": {
-                        "color": "orange",
-                        "fill": false,
-                        "weight": 2,
-                        "opacity": 0.7
-                    },
-                    "data": {
-                       "type":"Polygon",
-                       "coordinates":[[[32.759375,-9.230599],[33.231388,-9.676722],[33.485688,-10.525559],[33.31531,-10.79655],[33.114289,-11.607198],[33.306422,-12.435778],[32.991764,-12.783871],[32.688165,-13.712858],[33.214025,-13.97186],[30.179481,-14.796099],[30.274256,-15.507787],[29.516834,-15.644678],[28.947463,-16.043051],[28.825869,-16.389749],[28.467906,-16.4684],[27.598243,-17.290831],[27.044427,-17.938026],[26.706773,-17.961229],[26.381935,-17.846042],[25.264226,-17.73654],[25.084443,-17.661816],[25.07695,-17.578823],[24.682349,-17.353411],[24.033862,-17.295843],[23.215048,-17.523116],[22.562478,-16.898451],[21.887843,-16.08031],[21.933886,-12.898437],[24.016137,-12.911046],[23.930922,-12.565848],[24.079905,-12.191297],[23.904154,-11.722282],[24.017894,-11.237298],[23.912215,-10.926826],[24.257155,-10.951993],[24.314516,-11.262826],[24.78317,-11.238694],[25.418118,-11.330936],[25.75231,-11.784965],[26.553088,-11.92444],[27.16442,-11.608748],[27.388799,-12.132747],[28.155109,-12.272481],[28.523562,-12.698604],[28.934286,-13.248958],[29.699614,-13.257227],[29.616001,-12.178895],[29.341548,-12.360744],[28.642417,-11.971569],[28.372253,-11.793647],[28.49607,-10.789884],[28.673682,-9.605925],[28.449871,-9.164918],[28.734867,-8.526559],[29.002912,-8.407032],[30.346086,-8.238257],[30.740015,-8.340007],[31.157751,-8.594579],[31.556348,-8.762049],[32.191865,-8.930359],[32.759375,-9.230599]]]
-                   }
+                    "type": 'country',
+                    "data": "ZM",
+					"style": {
+				        color: "rgb(218,195,195)",
+				        fillColor: "rgb(227,11,23)",
+				        radius: 6,
+				        weight: 10,
+				        opacity: 0.5,
+						fillOpacity: 0.2
+				    }
                }, {
                     "id": "tanzania",
-                    "type": 'geojson',
-                    "style": {
-                        "color": "orange",
-                        "fill": false,
-                        "weight": 2,
-                        "opacity": 0.7
-                    },
-                    "data": {
-                       "type":"Polygon",
-                       "coordinates":[[[33.903711,-0.95],[34.07262,-1.05982],[37.69869,-3.09699],[37.7669,-3.67712],[39.20222,-4.67677],[38.74054,-5.90895],[38.79977,-6.47566],[39.44,-6.84],[39.47,-7.1],[39.19469,-7.7039],[39.25203,-8.00781],[39.18652,-8.48551],[39.53574,-9.11237],[39.9496,-10.0984],[40.31659,-10.3171],[39.521,-10.89688],[38.427557,-11.285202],[37.82764,-11.26879],[37.47129,-11.56876],[36.775151,-11.594537],[36.514082,-11.720938],[35.312398,-11.439146],[34.559989,-11.52002],[34.28,-10.16],[33.940838,-9.693674],[33.73972,-9.41715],[32.759375,-9.230599],[32.191865,-8.930359],[31.556348,-8.762049],[31.157751,-8.594579],[30.74,-8.34],[30.2,-7.08],[29.62,-6.52],[29.419993,-5.939999],[29.519987,-5.419979],[29.339998,-4.499983],[29.753512,-4.452389],[30.11632,-4.09012],[30.50554,-3.56858],[30.75224,-3.35931],[30.74301,-3.03431],[30.52766,-2.80762],[30.46967,-2.41383],[30.758309,-2.28725],[30.816135,-1.698914],[30.419105,-1.134659],[30.76986,-1.01455],[31.86617,-1.02736],[33.903711,-0.95]]]
-                   }
+                    "type": 'country',
+                    "data": "TZ",
+					"style": {
+				        color: "rgb(218,195,195)",
+				        fillColor: "rgb(227,11,23)",
+				        radius: 6,
+				        weight: 10,
+				        opacity: 0.5,
+						fillOpacity: 0.2
+				    }
                }, {
                     "id": "congo",
-                    "type": 'geojson',
-                    "style": {
-                        "color": "orange",
-                        "fill": false,
-                        "weight": 2,
-                        "opacity": 0.7
-                    },
-                    "data": {
-                       "type":"Polygon",
-                       "coordinates":[[[30.83386,3.509166],[30.773347,2.339883],[31.174149,2.204465],[30.85267,1.849396],[30.468508,1.583805],[30.086154,1.062313],[29.875779,0.59738],[29.819503,-0.20531],[29.587838,-0.587406],[29.579466,-1.341313],[29.291887,-1.620056],[29.254835,-2.21511],[29.117479,-2.292211],[29.024926,-2.839258],[29.276384,-3.293907],[29.339998,-4.499983],[29.519987,-5.419979],[29.419993,-5.939999],[29.620032,-6.520015],[30.199997,-7.079981],[30.740015,-8.340007],[30.346086,-8.238257],[29.002912,-8.407032],[28.734867,-8.526559],[28.449871,-9.164918],[28.673682,-9.605925],[28.49607,-10.789884],[28.372253,-11.793647],[28.642417,-11.971569],[29.341548,-12.360744],[29.616001,-12.178895],[29.699614,-13.257227],[28.934286,-13.248958],[28.523562,-12.698604],[28.155109,-12.272481],[27.388799,-12.132747],[27.16442,-11.608748],[26.553088,-11.92444],[25.75231,-11.784965],[25.418118,-11.330936],[24.78317,-11.238694],[24.314516,-11.262826],[24.257155,-10.951993],[23.912215,-10.926826],[23.456791,-10.867863],[22.837345,-11.017622],[22.402798,-10.993075],[22.155268,-11.084801],[22.208753,-9.894796],[21.875182,-9.523708],[21.801801,-8.908707],[21.949131,-8.305901],[21.746456,-7.920085],[21.728111,-7.290872],[20.514748,-7.299606],[20.601823,-6.939318],[20.091622,-6.94309],[20.037723,-7.116361],[19.417502,-7.155429],[19.166613,-7.738184],[19.016752,-7.988246],[18.464176,-7.847014],[18.134222,-7.987678],[17.47297,-8.068551],[17.089996,-7.545689],[16.860191,-7.222298],[16.57318,-6.622645],[16.326528,-5.87747],[13.375597,-5.864241],[13.024869,-5.984389],[12.735171,-5.965682],[12.322432,-6.100092],[12.182337,-5.789931],[12.436688,-5.684304],[12.468004,-5.248362],[12.631612,-4.991271],[12.995517,-4.781103],[13.25824,-4.882957],[13.600235,-4.500138],[14.144956,-4.510009],[14.209035,-4.793092],[14.582604,-4.970239],[15.170992,-4.343507],[15.75354,-3.855165],[16.00629,-3.535133],[15.972803,-2.712392],[16.407092,-1.740927],[16.865307,-1.225816],[17.523716,-0.74383],[17.638645,-0.424832],[17.663553,-0.058084],[17.82654,0.288923],[17.774192,0.855659],[17.898835,1.741832],[18.094276,2.365722],[18.393792,2.900443],[18.453065,3.504386],[18.542982,4.201785],[18.932312,4.709506],[19.467784,5.031528],[20.290679,4.691678],[20.927591,4.322786],[21.659123,4.224342],[22.405124,4.02916],[22.704124,4.633051],[22.84148,4.710126],[23.297214,4.609693],[24.410531,5.108784],[24.805029,4.897247],[25.128833,4.927245],[25.278798,5.170408],[25.650455,5.256088],[26.402761,5.150875],[27.044065,5.127853],[27.374226,5.233944],[27.979977,4.408413],[28.428994,4.287155],[28.696678,4.455077],[29.159078,4.389267],[29.715995,4.600805],[29.9535,4.173699],[30.83386,3.509166]]]
-                   }
+                    "type": 'country',
+                    "data": "CD",
+					"style": {
+				        color: "rgb(218,195,195)",
+				        fillColor: "rgb(227,11,23)",
+				        radius: 6,
+				        weight: 10,
+				        opacity: 0.5,
+						fillOpacity: 0.2
+				    }
                }, {
-                    "id": "beira",
+                    "id": "gb",
+                    "type": 'country',
+                    "data": "GB",
+					"style": {
+				        color: "rgb(218,195,195)",
+				        fillColor: "rgb(227,11,23)",
+				        radius: 6,
+				        weight: 10,
+				        opacity: 0.5,
+						fillOpacity: 0.2
+				    }
+               },{
+                    "id": "beria",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Port of Beria",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            
                         }
                     },
                     "data": {
@@ -768,19 +819,10 @@
                     "id": "hwange",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Hwange",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            
                         }
                     },
                     "data": {
@@ -797,19 +839,10 @@
                     "id": "dete",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Dete",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            
                         }
                     },
                     "data": {
@@ -826,19 +859,10 @@
                     "id": "harare",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+
                         "text": {
                             "text": "Harare",
-                            "style": {
-                                'stroke': '#333',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'font-size': '15px',
-                                'text-shadow': '0px 2px 2px rgba(0,0,0,0.8)'
-                            }
+                            
                         }
                     },
                     "data": {
@@ -857,15 +881,7 @@
                 "scenes": [
                     {
                         "id": "place1",
-                        "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+                        "baseLayer": [/*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene],
                         "layers": [
                             {"idRef": "zimbabwe"},
                             {"idRef": "congo"},
@@ -876,35 +892,28 @@
                         ],
                         "zoom": 4,
                         "style": {
-                            "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "filter": "sepia(0%)",
+                            "opacity": 1,
+                            "background": "rgb(111,169,209)"
                         }
                     },
                     {
                         "id": "place2",
-                        "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+                        "baseLayer": [/*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene],
                         "layers": [
                             {"idRef": "france"},
                             {"idRef": "portugal"},
                             {"idRef": "belgium"},
                             {"idRef": "germany"},
+							{"idRef": "gb"}
                             
                         ],
                         //"center": [-113.081667,26.846944],
                         "zoom": 5,
                         "style": {
-                            "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "filter": "sepia(0%)",
+                            "opacity": 1,
+                            "background": "rgb(111,169,209)"
                         }
                     },
                     {
@@ -916,35 +925,21 @@
                             {"idRef": "cairo"},
                             
                         ],
-                        "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+                        "baseLayer": [/*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1,
+                            "background": "rgb(111,169,209)"
                         }
                     },
                     {
                         "id": "place4",
                         //"center": [-114.8986353,27.6924942],
                         "zoom": 4,
-                        "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+                        "baseLayer": [/*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene],
                         "layers": [
+							{"idRef": "zimbabwe", "style": {"dashArray": [5,7], "fill": false, "opacity": 1, "weight": 2, "color": "gray"}},
+							{"idRef": "zambia", "style": {"dashArray": [5,7], "fill": false, "opacity": 1, "weight": 2, "color": "gray"}},
                             {"idRef": "railway_route"},
                             {"idRef": "cape_colony"},
                             {"idRef": "cairo"},
@@ -953,23 +948,15 @@
                         ],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1,
+                            "background": "rgb(111,169,209)"
                         }
                     },
                     {
                         "id": "place5",
                         //"center": [-114.8986353,27.6924942],
                         "zoom": 5,
-                        "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+                        "baseLayer": [/*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene],
                         "layers": [
                             {"idRef": "cape_colony"},
                             {"idRef": "bulawayo"},
@@ -978,8 +965,8 @@
                         ],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1,
+                            "background": "rgb(111,169,209)"
                         }
                     },
 
@@ -989,95 +976,66 @@
                         "id": "place6",
                         //"center": [-114.8986353,27.6924942],
                         "zoom": 5,
-                        "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+                        "baseLayer": [/*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene],
                         "layers": [
                             {"idRef": "mozambique"},
-                            {"idRef": "zambezi_river"},
                             {"idRef": "zambia"},
                             {"idRef": "tanzania"},
+							{"idRef": "zimbabwe"},
                             {"idRef": "congo"},
+							{"idRef": "zambezi_river"},
                             {"idRef": "victoria_falls"},
                            
                         ],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1,
+                            "background": "rgb(111,169,209)"
                         }
                     },
                     {
                         "id": "place7",
                         "zoom": 5,
-                        "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+                        "baseLayer": [/*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene],
                         "layers": [
-                            {"idRef": "beira"},
+							{"idRef": "zimbabwe"},
+                            {"idRef": "beria"},
                             {"idRef": "railway_route"},
-                            {"idRef": "victoria_falls"},
-                            {"idRef": "zimbabwe"},
+                            {"idRef": "victoria_falls"}
+                            
                         ],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1,
+                            "background": "rgb(111,169,209)"
                         }
                     },
                     {
                         "id": "place8",
                         //"center": [-114.8986353,27.6924942],
                         "zoom": 3,
-                        "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+                        "baseLayer": [/*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene],
                         "layers": [
+							{"idRef": "railway_route"},
                             {"idRef": "cape_colony"},
                             {"idRef": "cairo"},
                             {"idRef": "bulawayo"},
                             {"idRef": "victoria_falls"},
-                            {"idRef": "railway_route"},
                         ],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1,
+                            "background": "rgb(111,169,209)"
                         }
                     },{
                         "id": "place9",
                         //"center": [-114.8986353,27.6924942],
                         "zoom": 7,
-                        "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+						"bounds": {"victoria_falls": true, "hwange": true, "dete": true, "bulwayo": true, "harare": true},
+                        "baseLayer": [/*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene],
                         "layers": [
+							{"idRef": "railway_route"},
                             {"idRef": "victoria_falls"},
-                            {"idRef": "railway_route"},
                             {"idRef": "hwange"},
                             {"idRef": "dete"},
                             {"idRef": "bulawayo"},
@@ -1085,22 +1043,14 @@
                         ],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1,
+                            "background": "rgb(111,169,209)"
                         }
                     },{
                         "id": "place10",
                         //"center": [-114.8986353,27.6924942],
                         "zoom": 4,
-                        "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-                        }}],
+                        "baseLayer": [/*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene],
                         "layers": [
                             {"idRef": "cape_colony"},
                             {"idRef": "cairo"},
@@ -1108,8 +1058,8 @@
                         ],
                         "style": {
                             "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                            "opacity": 1,
+                            "background": "rgb(111,169,209)"
                         }
                     }
                 ]
@@ -1150,16 +1100,13 @@
                 var overviewMap = new Focus.Views.OverviewMapView({
                     model: new Backbone.Model({
                         initialScene: new Focus.Models.SceneModel({
-                            baseLayer: {
-                                type: 'tile',
-                                url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png'
-                            },
+                            baseLayer: /*{"type": "esri-basemap", "url": "Topographic", "options": {"detectRetina": true}}*/ baseScene,
                             center: [0,0],
                             zoom: 12,
                             showAttribution: false
                         })
                     }),
-                    showCenterPoint: true
+                    showCenterPoint: false
                 });
                 var sceneManager = new Focus.Views.SceneManagerView({
                     el: $('body'),
