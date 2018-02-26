@@ -3,6 +3,15 @@ Focus.Volumes = [
 	{
         number: 61,
         publications: [{
+            type: 'Feature Article',
+            title: 'Reimagining Zimbabwe’s Cape-to-Cairo Railroad',
+            author: 'Thomas Wikle',
+            description: '',
+            date: '02/21/18',
+            thumbnail: 'publications/articles/zimbabwe/img/fig2.jpg',
+            url: 'publications/articles/zimbabwe/index.html',
+            location: []
+        },{
             type: 'Geo Quiz',
             title: 'Quiz Seven: The Built Environment',
             author: 'Deborah Popper',
