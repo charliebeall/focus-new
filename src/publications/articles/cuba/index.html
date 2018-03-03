@@ -101,7 +101,7 @@
                     Cuba's Precarious Population Pyramid
                     </h2>
                     <div class="author"><span class="name">Charles O. Collins</span>, <span class="organization">Department of Geography and GIS, University of Northern Colorado</span></div>
-                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2016.61.3f</div>
+                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2018.61.3f</div>
 
                     <p>
                         "<a class="location" data-layer-id="cuba">Cuba</a> is the largest country in the world,” announced our government-assigned guide.  “Did you know that?”  He continued with a sardonic grin, “Yes, the capitol is in Moscow, the army is in Africa, the doctors are all in Venezuela, and the population is all in Florida!”  His joke was one of a series reflecting the oft-wielded sarcastic wit of Cubans as they cope with the challenges of daily life. But the Cuban diaspora is no laughing matter.  Multiple trips and countless conversations consistently reveal fragmented families;  daughters and sons, fathers and mothers reside and work in Spain or Canada, Italy and Mexico and especially the United States, an estimated 1.7 million (Duany 2017). Two days later, I lunched with a professor of geography from the University of Havana.  His mood was far from jesting as he observed, “Cuba may have to begin importing laborers from India or China.”  Imagining a Cuba-cum-Qatar is not a concept easily processed; nor is tracking Cuba’s journey from the halcyon years of the 1970s to the demographic dilemma of 2017.
@@ -906,10 +906,8 @@
                     {
                         "id": "place1",
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
+                        "type": "esri-basemap",
+                        "url": "Imagery",
                         "options": {
                             "detectRetina": true,
                             "imagerySet": "AerialWithLabels",
@@ -921,7 +919,7 @@
                             // {"idRef": "punta_abreojos"},
 
                         ],
-                        "zoom": 4,
+                        "zoom": 5,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -930,15 +928,13 @@
                     },{
                         "id": "place2",
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
+                            "type": "tile",
+                            "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                            "params": {
+                                "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                            }
+                        }],
 
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-
-                        }}],
                       
                         "layers": [
                             // {"idRef": "cienfuegos"},
@@ -953,7 +949,7 @@
                             // {"idRef": "cuba"},
 
                         ],
-                        "zoom": 6,
+                        "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -994,15 +990,13 @@
                     },{
                         "id": "place4",
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
+                            "type": "tile",
+                            "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                            "params": {
+                                "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                            }
+                        }],
 
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-
-                        }}],
                       
                         "layers": [
                             // {"idRef": "cienfuegos"},
@@ -1016,7 +1010,7 @@
                             // {"idRef": "camaguey"},
                             // {"idRef": "cuba"},
 5                        ],
-                        "zoom": 6,
+                        "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -1024,6 +1018,7 @@
                         }
                     }, {
                         "id": "place5",
+
                         "baseLayer": [{
                         "type": "tile",
                         "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
@@ -1048,7 +1043,7 @@
                             // {"idRef": "cuba"},
 
                         ],
-                        "zoom": 6,
+                        "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -1089,10 +1084,8 @@
                     }, {
                         "id": "place7",
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
+                        "type": "esri-basemap",
+                        "url": "Imagery",
                         "options": {
                             "detectRetina": true,
                             "imagerySet": "AerialWithLabels",
@@ -1115,7 +1108,7 @@
                             {"idRef": "nicaragua"},
 
                         ],
-                        "zoom": 5,
+                        "zoom": 6,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -1124,15 +1117,12 @@
                     }, {
                         "id": "place8",
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-
-                        }}],
+                            "type": "tile",
+                            "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                            "params": {
+                                "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                            }
+                        }],
                       
                         "layers": [
                             // {"idRef": "cienfuegos"},
@@ -1147,7 +1137,7 @@
                             // {"idRef": "cuba" },
 
                         ],
-                        "zoom": 6,
+                        "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -1156,16 +1146,12 @@
                     }, {
                         "id": "place9",
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
-
-                        }}],
-                      
+                            "type": "tile",
+                            "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
+                            "params": {
+                                "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                            }
+                        }],
                         "layers": [
                             {"idRef": "cuba"},
                             // {"idRef": "cienfuegos"},
@@ -1180,7 +1166,7 @@
                             
 
                         ],
-                        "zoom": 6,
+                        "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -1213,7 +1199,7 @@
                             
 
                         ],
-                        "zoom": 6,
+                        "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -1222,10 +1208,8 @@
                     }, {
                         "id": "place11",
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
+                        "type": "esri-basemap",
+                        "url": "Imagery",
                         "options": {
                             "detectRetina": true,
                             "imagerySet": "AerialWithLabels",
@@ -1245,7 +1229,7 @@
                             // {"idRef": "cuba"},
 
                         ],
-                        "zoom": 6,
+                        "zoom": 8,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -1254,13 +1238,13 @@
                     }, {
                         "id": "place12",
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
+                            "type": "tile",
+                            "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+                            "scheme": "xyz",
 
-                        "options": {
-                            "detectRetina": true,
-                            "imagerySet": "AerialWithLabels",
+                            "options": {
+                                "detectRetina": true,
+                                "imagerySet": "AerialWithLabels",
 
                         }}],
                       
@@ -1277,7 +1261,7 @@
                             // {"idRef": "cuba"},
 
                         ],
-                        "zoom": 6,
+                        "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -1313,7 +1297,7 @@
                             
 
                         ],
-                        "zoom": 5,
+                        "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
@@ -1322,10 +1306,8 @@
                     }, {
                         "id": "place14",
                         "baseLayer": [{
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz",
-
+                        "type": "esri-basemap",
+                        "url": "Imagery",
                         "options": {
                             "detectRetina": true,
                             "imagerySet": "AerialWithLabels",
@@ -1346,7 +1328,7 @@
                             
 
                         ],
-                        "zoom": 6,
+                        "zoom": 7,
                         "style": {
                             "filter": "sepia(40%)",
                             "opacity": 0.8,
