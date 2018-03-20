@@ -13962,6 +13962,15 @@ Focus.Volumes = [
         number: 61,
         publications: [{
             type: 'Feature Article',
+            title: 'Cuba\'s Precarious Population Pyramid',
+            author: 'Charles O. Collins',
+            description: '',
+            date: '03/19/18',
+            thumbnail: 'publications/articles/cuba/img/coverphoto.jpg',
+            url: 'publications/articles/cuba/index.html',
+            location: []
+        },{
+            type: 'Feature Article',
             title: 'Reimagining Zimbabwe’s Cape-to-Cairo Railroad',
             author: 'Thomas Wikle',
             description: '',
@@ -16751,7 +16760,6 @@ $(document).ready(function () {
             $(this).tooltip('destroy');
         }).tooltip('show');
 });
-
 Focus.Models.ChoiceModel = Backbone.Model.extend({
     defaults: function () {
         return {
