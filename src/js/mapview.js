@@ -81,6 +81,9 @@ Focus.Views.MapView = Backbone.View.extend({
         this._engine.setZoom(zoom);
         return this;
     },
+	getBounds: function () {
+		return this._engine.getBounds();
+	},
     setFeatures: function (featureLookup) {
         this._engine.setFeatures(featureLookup);
     },
@@ -148,6 +151,9 @@ Focus.Views.MapEngine = Backbone.View.extend({
     },
     setZoom: function (zoom) {
     },
+	getBounds: function () {
+		
+	},
     resize: function (e) {
 
     },
@@ -490,6 +496,12 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         else if (layerDef.type === 'esri-dynamicmaplayer') {
             layer = L.esri.dynamicMapLayer(layerDef.params);
         }
+		else if (layerDef.type === 'esri-vector') {
+			layer = L.esri.Vector.basemap(layerDef.url, layerDef.options);
+		}
+		else if (layerDef.type === 'tangram') {
+			layer = Tangram.leafletLayer(layerDef.options);
+		}
         else if (layerDef.type === 'bing') {
             layer = L.tileLayer.bing($.extend(true, {
                 bingMapsKey: BING_MAPS_KEY
@@ -1123,6 +1135,9 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             console.log(ex);
         }
     },
+	getBounds: function () {
+		return this._map.getBounds();
+	},
     _addLayer: function (layer, id) {
         var me = this;
 
