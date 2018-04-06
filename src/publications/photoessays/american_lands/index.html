@@ -34,6 +34,45 @@
     <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
     <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
 	<style type="text/css">
+        ul.grid {
+            top: 100px;
+            position: relative;
+            z-index: 100;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            justify-content: center;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 0 6em;
+            list-style: none;
+        }
+        li.grid-item {
+            display: block;
+            -webkit-flex: none;
+            flex: none;
+            width: 35%;
+            min-width: 180px;
+            padding: 10px;
+        }
+
+        .grid-item a {
+            border-bottom: none;
+        }
+
+        .grid-img {
+            display: block;
+            width: 100%;
+        }
+
+        .grid-link {
+            display: block;
+            padding: 13px 13px;
+            background: #fff;
+        }
+		
 		#text p {
 			font-family: 'Halant', serif;
 		}
@@ -74,7 +113,7 @@
 		
 		#text.photo-essay h2, #text.photo-essay h3 {
 			font-family: 'Khand', sans-serif;
-			color: rgba(255,151,53,1);
+			color: #C56C39;
 		}
 		
 		#text.photo-essay h3 {
@@ -87,8 +126,15 @@
 			#text.photo-essay h3 {
 				font-size: 20px;
 			}
+			
+			.photo-scene div.figure {
+			    height: 400px;
+			}
 		}
 		
+		#nav, #toggle-map {
+			background: #C56C39;
+		}
 		.dotstyle .sections li {
 		    position: relative;
 		    display: block;
@@ -119,6 +165,15 @@
 			font-family: 'Khand', san-serif;
 			text-shadow: 0px 1px 3px rgba(0,0,0,0.4);
 			font-size: 20px;
+		}
+		
+		#text h2.title {
+			background: linear-gradient(180deg, rgba(0,0,0,1), rgba(0,0,0,0));
+		}
+		
+		.photo-scene div.author {
+			background: none;
+			opacity: 1;
 		}
 	</style>
 </head>
@@ -188,50 +243,44 @@
     <div class="content scenes">
         <section id="introduction" class="scene photo-scene" data-scene-id="place0">
 
-            <div class="figure" style="overflow: hidden; background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('img/fig4a.jpg');">
+            <div class="figure" style="overflow: hidden; background-image: linear-gradient(0deg, rgba(0,0,0,0) 40%, rgba(0,0,0,1)), url('img/fig1.jpg');">
             </div>
 
             <div class="intro">
-            <h2 class="title">America's Public Lands: What They Are and Why They're Important</h2>
-            <div class="author">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                            <img class="author-photo" src="img/author.jpg"/>
-                        </div>
-                        <div class="col-12 col-xs-9 col-sm-10 col-md-10 col-lg-10">
-                            <div class="row">
-                                <div class="col-12 col-xs-12 name">
-                                    David J. Rutherford
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-xs-12 organization">
-                                   Department of Public Policy Leadership, University of Mississippi
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2018.61.2p</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            	<h2 class="title">America's Public Lands: What They Are and Why They're Important</h2>
+	            <div class="author">
+	                <div class="container-fluid">
+	                    <div class="row">
+	                        <div class="col-12 col-xs-3 col-sm-2 col-md-2 col-lg-2">
+	                            <img class="author-photo" src="img/author.jpg"/>
+	                        </div>
+	                        <div class="col-12 col-xs-9 col-sm-10 col-md-10 col-lg-10">
+	                            <div class="row">
+	                                <div class="col-12 col-xs-12 name">
+	                                    David J. Rutherford
+	                                </div>
+	                            </div>
+	                            <div class="row">
+	                                <div class="col-12 col-xs-12 organization">
+	                                   Department of Public Policy Leadership, University of Mississippi
+	                                </div>
+	                            </div>
+	                            <div class="row">
+	                                <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2018.61.2p</div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
             </div>
             <p>
                 Upon hearing the term “America’s public lands,” what comes to mind for many people is the National Park System, and for good reason. The national parks form the crown jewel of the system of public lands in the United States, as illustrated by this photograph of the <a href="#" class="location" data-layer-id="grand_canyon">Grand Canyon</a>. When President Theodore Roosevelt first saw the canyon in 1903, he stated: "Let this great wonder of nature remain as it now is. Do nothing to mar its grandeur, sublimity and loveliness. You cannot improve on it. But what you can do is to keep it for your children, your children’s children, and all who come after you, as the one great sight which every American should see.” The Grand Canyon was not a national park when Roosevelt made that statement, but he used the power of his office to initiate a process by which it became one of the earliest national parks in the country. In the face of opposition by development interests, Roosevelt acted to ensure that this “great sight” would be preserved for future generations, and the National Park Service has been doing that very thing for over 100 years. 
-            </p>
-        </section>
-        <section id="1" class="scene photo-scene" data-scene-id="place1">
-            <div class="figure " style="background-image:url(img/fig1.jpg);"></div>  
-            <p>
+
                 But public lands in the United States do much more that preserve awe-inspiring natural environments for posterity. The system of public lands serves a range of conservation as well as preservation purposes, and it is important to distinguish two points. First is that America’s public lands exist as a system of separate but interrelated components. While development of such a system was not generally intended historically, what emerged and exists today is an arrangement for managing public lands to meet a variety of purposes. The second point is to make distinction between preservation and conservation. Preservationentails maintaining natural environments in their present condition and as untouched by humans as possible while conservation involves the sustainable use and management of natural environments and their resources to meet the needs and interests of people. 
                 </p>
         </section>
         <section id="2" class="scene photo-scene" data-scene-id="place2">
-            <div class="figure" style="background-image:url(img/fig2.jpg);"></div>
-            <br>
-            <hr>
+            <div class="figure contain" style="background-image:url(img/fig2.jpg);"></div>
             <p>
                 While public lands exist at state and local levels as well as federal, the focus in this essay is upon federal public lands. Four agencies carry primary responsibility for managing these lands that stretch across the United States, and each pursues a unique mission within the public lands system. The NPS focuses on preserving natural environments and cultural heritage and upon fostering public visitation and appreciation of these places. The USFWS works mainly to preserve habitat for wildlife conservation and maintenance of biological diversity, and it manages the National Wildlife Refuge System. The USFS has primarily a conservation mission that advances multiple, sustainable use of the environment for forestry, grazing, mining, watershed regulation, recreation, and some ecological preservation functions, along with others. The BLM has historically managed land for extractive resource development, and while this remains a priority, the agency is increasing its emphasis on multiple use with particular emphasis on identification of special areas for conservation and restoration. Toward this latter end, the agency manages the National Landscape Conservation System (now known as the National Conservation Lands).
             </p>
@@ -243,26 +292,43 @@
             </p>
         </section>
          <section id="4" class="scene photo-scene" data-scene-id="place4">
-            <div class="figure " style="background-image:url(img/fig4a.jpg);"></div>
-            <h2> Collage Photo Here </h2>
+			 <div class="figure" style="overflow: hidden;">
+                <ul class="grid">
+                    <li class="grid-item" style="opacity: 1; transform: translateX(19.738px) translateY(-100.1781px) scaleX(1.3) scaleY(1.3) scaleZ(1.3) rotateZ(-20deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig4a.jpg" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(89.0125px) translateY(-82.278px) scaleX(1.2) scaleY(1.2) scaleZ(1.2) rotateZ(1deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig4b.jpg" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(-265.812px) translateY(-301.578px) scaleX(1.3) scaleY(1.3) scaleZ(1.3) rotateZ(15deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig4c.jpg" alt="Some image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <p>
                 Looking first at NPS lands, <a href="#" class="location" data-layer-id="yosemite">Yosemite National Park</a> was established in 1890 as the country’s second national park. The top photo above shows the granite cliffs of Yosemite Valley that were carved by glaciers and rise over 3,600 feet above 6 the valley floor. The photo on the right shows the vertical granite walls of the valley, while the bottom photo shows the Tenaya Lake area in the Yosemite high country with the lake surrounded by granite domes, forests of lodgepole pine, and Yosemite’s vast wilderness.
             </p>
         </section>
         <section id="5" class="scene photo-scene" data-scene-id="place5">
-            <div class="figure " style="background-image:url(img/fig5.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig5.jpg);"></div>
             <p>
                 This park is certainly one of the crown jewels of America’s public lands, and it borders another one, Yellowstone National Park. Both parks are surrounded by USFS lands that taken all together form the <a href="#" class="location" data-layer-id="grand_teton">Greater Yellowstone Ecosystem</a>, one of the largest nearly intact temperate zone ecosystems on Earth that contains the largest concentration of wildlife in the lower 48 states.
             </p>
         </section>
         <section id="6" class="scene photo-scene" data-scene-id="place6">
-            <div class="figure " style="background-image:url(img/fig6.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig6.jpg);"></div>
             <p>
                This view from the south at sunset shows <a href="#" class="location" data-layer-id="bedlands">this</a> strikingly beautiful geologic formation that comprises one of the world’s richest fossil beds. The park also protects one of the largest, undisturbed, mixed-grass prairie in the United States along with considerable numbers of wildlife species.       
             </p>
         </section>
         <section id="7" class="scene photo-scene" data-scene-id="place7">
-            <div class="figure " style="background-image:url(img/fig7.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig7.jpg);"></div>
             <p>
                 <a href="#" class="location" data-layer-id="sand_dunes">This park</a> includes the highest dunes in North America and it extends to the crest of the Sangre de Christo Range which lies behind. It encompasses a wide range of ecosystems, from the grasslands, shrublands, and dunes at over 7,500 feet at the base of the mountains and up through the riparian, montane forests/woodlands, subalpine forest/meadows, and alpine tundra that emerge as elevation rises along the slopes of the mountains to over 13,000 feet.
             </p>
@@ -275,13 +341,13 @@
             </p>
         </section>
         <section id="9" class="scene photo-scene" data-scene-id="place9">
-            <div class="figure " style="background-image:url(img/fig9.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig9.jpg);"></div>
             <p>
                 While part of the National Park System, this is a “monument” and not a “park.” National parks result from legislation passed by Congress and signed into law by a president while national monuments are established by presidential proclamation under authority of the Antiquities Act of 1906. Parks are as close to permanent as possible in the U.S. system of government, but the status of monuments is more uncertain. Some monuments, such as <a href="#" class="location" data-layer-id="organ_pipe">Organ Pipe</a> pictured here with silhouettes of organ pipe and saguaro cacti at sunset in the Sonoran Desert, are managed by NPS and have very secure status. But national monuments can be managed by any of the federal public lands agencies, and in recent days, the status of some of them is being disputed.
             </p>
         </section>
         <section id="10" class="scene photo-scene" data-scene-id="place10">
-            <div class="figure " style="background-image:url(img/fig10.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig10.jpg);"></div>
             <p>
                Lands managed by the U.S. Fish and Wildlife Service include the 560 National Wildlife Refuges, many of which lie along one of the north-south “flyways” for migratory birds. The <a href="#" class="location" data-layer-id="bosque_del_apache">Bosque del Apache</a> NWR lies on the Rio Grande River and serves as wintering ground for various bird species including the Snow Geese and Sandhill Cranes shown here. Because the Rio Grande has been dammed extensively and the water diverted for irrigation of farms, the natural cycles of alternating floods and slack water periods no longer provide the habitats in which these birds and other wildlife can flourish. Consequently, this refuge is managed to mimic those natural cycles by use of small canals, gates, and dams that flood and drain areas on seasonal schedules. In addition to management of the National Wildlife Refuge system, the USFWS performs a wide range of additional services: working with private landowners to establish easements that help to conserve and restore wildlife habitat; determining species that are endangered or threatened and developing plans for their protection; protecting and restoring fisheries and operating fish hatcheries; and enforcing federal wildlife laws. 
             </p>
@@ -293,19 +359,19 @@
             </p>
         </section>
         <section id="12" class="scene photo-scene" data-scene-id="place12">
-            <div class="figure" style="background-image:url(img/fig12.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig12.jpg);"></div>
             <p>
                 The USFS was created in 1905 when previously established forest reserves were consolidated into one agency with a clear conservation mandate. As the name implies, a primary mission of the USFS is to manage the nation’s forests, protecting them from wastefulness and ensuring sustainable timber yields. This mission considers forests to be a form of agriculture that provides an important reason for housing this agency in the Department of Agriculture. Livestock grazing and hunting are also considered agricultural pursuits and form part of the “multiple use” mission well-expressed in the motto, “Land of Many Uses.” Recognizing the conflicting interests that would arise through this “multiple use” mission, Gifford Pinchot, the first Chief of the USFS, stated, “[W]here conflicting interests must be reconciled, the question shall always be decided from the standpoint of the greatest good of the greatest number in the long run,” another motto of the USFS.
             </p>
         </section>
         <section id="13" class="scene photo-scene" data-scene-id="place13">
-            <div class="figure" style="background-image:url(img/fig13.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig13.jpg);"></div>
             <p>
                 One of the main functions of national forests is to secure watersheds in the forested mountains so as to mitigate flooding in the rainy season and ensure a steady supply of water to the valleys throughout the year. This photo shows the <a href="#" class="location" data-layer-id="gunnison">Taylor River</a>.
             </p>
         </section>
         <section id="14" class="scene photo-scene" data-scene-id="place14">
-            <div class="figure" style="background-image:url(img/fig14.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig14.jpg);"></div>
             <p>
                 The agricultural lands of the <a href="#" class="location" data-layer-id="surprise_valley">Surprise Valley</a> lie below the forested slopes of the Warner Range that are managed by the USFS to, in part, ensure stable water flows to the valley. The national forest lands provide this public good to the private sector agricultural interests and this emphasizes another reason why the USFS finds its home in the Department of Agriculture.
             </p>
@@ -321,7 +387,7 @@
             </p>
         </section>
         <section id="16" class="scene photo-scene" data-scene-id="place16">
-            <div class="figure" style="background-image:url(img/fig17.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig17.jpg);"></div>
             <p>
                 Recreation is an important part of the “multiple use” mission of the national forests. Recreation encompasses many uses and includes exploring by four-wheel drive vehicles, bicycles, river rafts, horseback, and by backpacking on foot.
 
@@ -329,19 +395,19 @@
             </p>
         </section>
         <section id="17" class="scene photo-scene" data-scene-id="place17">
-            <div class="figure " style="background-image:url(img/fig18.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig18.jpg);"></div>
             <p>
                This photo is the view toward the southwest from the eastern shoulder of the <a href="#" class="location" data-layer-id="dixie">Aquarius Plateau</a>. Much of the plateau lies above 11,000 feet elevation and the forested slopes are managed by the USFS. The BLM manages the land in the background. 
             </p>
         </section>
         <section id="18" class="scene photo-scene" data-scene-id="place18">
-            <div class="figure " style="background-image:url(img/fig19.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig19.jpg);"></div>
             <p>
                This view from the Kaibab Plateau in Arizona is looking north toward the <a href="#" class="location" data-layer-id="grand_staircase">Grand Staircase</a> of Western Geology with its sequence of brightly colored cliffs that rise 5,500 feet and display 275 million years of geologic history. Most of it is preserved as federal public land with much of it in Grand Staircase Escalante National Monument (GSENM). The monument was established in 1996 on BLM land by presidential proclamation under the Antiquities Act which states that monuments be established to protect, in part, objects of “scientific interest” and that monument size must be the “smallest area compatible with proper care and management of the objects to be protected.” Debate swirls around the size of GSENM, but a key question remains, what is the smallest size needed to protect this landscape that is the “object of scientific interest?
             </p>
         </section>
         <section id="19" class="scene photo-scene" data-scene-id="place19">
-            <div class="figure " style="background-image:url(img/fig20.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig20.jpg);"></div>
             <p>
               The BLM was created rather recently, in 1946, through a merging of existing federal agencies that centered on grazing and mining, and that focus persisted with the new agency. The logo created for the agency in 1952 shows a surveyor, logger, engineer, rancher, and miner standing shoulder to shoulder, and it symbolizes the agency’s emphasis at that time on resource extraction and development. Behind the men is a wagon train on the open prairie suggesting the past while in front of them lies a landscape symbolic of the imagined, developed future of railroad tracks, buildings, and other infrastructure. But a few years later, when the so-named “Environmental Decade” of the 1960s saw the rise of considerable efforts to address environmental issues, some governmental efforts impacted federal land management agencies, including the BLM. Even though the logo changed in 1964 to reflect the new priorities. it wasn’t until 1976 that the agency received a legislated mission from Congress to incorporate sustainable yield principles and multiple use values that included “scientific, scenic, historical, ecological, environmental, air and atmospheric, water resource and archeological” considerations.
             </p>
@@ -354,7 +420,7 @@
             </p>
         </section>
         <section id="21" class="scene photo-scene" data-scene-id="place21">
-            <div class="figure " style="background-image:url(img/fig22.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig22.jpg);"></div>
             <p>
                Federal public lands have been an inseparable part of American life since the country began. They played an essential role in establishment of the Articles of Confederation following the Revolutionary War when the former colonies agreed to cede to the nascent federal government much of their claims to land extending from the Atlantic Ocean to the Mississippi River. Federal authority over public lands was reinforced a few years later in the Constitution, and moreover, Article 4 of the Constitution stipulated a primary goal of Congress to “dispose” of the public lands to private interests for development of the country and its economy. This goal persisted throughout the 19th century and into the 20th in forms such as the Homestead Act, federal railroad grants, and other actions. 
             <!-- </p>
@@ -827,10 +893,10 @@
             {
                 "id": "place0",
                 "baseLayer": {
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
                 },
 
@@ -855,7 +921,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -864,8 +930,11 @@
             },{
                 "id": "place1",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                     {"idRef": "grand_canyon"},
@@ -888,7 +957,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -897,11 +966,11 @@
             },{
                 "id": "place2",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
-                    /*
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                    */
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
 
                 "layers": [
@@ -935,9 +1004,11 @@
             }, {
                 "id": "place3",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                    
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
 
                 "layers": [
@@ -971,8 +1042,11 @@
             }, {
                 "id": "place4",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
 
                 "layers": [
@@ -996,7 +1070,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1037,7 +1111,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1047,7 +1121,7 @@
                 "id": "place6",
                 "baseLayer": {
                     "type": "esri-basemap",
-                    "url": "Streets",
+                    "url": "NationalGeographic",
                     "options": {
                         "detectRetina": true
                     }
@@ -1074,7 +1148,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1083,8 +1157,11 @@
             },{
                 "id": "place7",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                     // {"idRef": "grand_canyon"},
@@ -1107,7 +1184,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1115,13 +1192,13 @@
                 }
             }, {
                 "id": "place8",
-                "baseLayer": [{
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
-                }],
+                },
 
                 "layers": [
                     // {"idRef": "grand_canyon"},
@@ -1144,7 +1221,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1153,8 +1230,11 @@
             }, {
                 "id": "place9",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
 
                 "layers": [
@@ -1178,7 +1258,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1187,8 +1267,11 @@
             }, {
                 "id": "place10",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                     // {"idRef": "grand_canyon"},
@@ -1211,7 +1294,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1220,8 +1303,11 @@
             }, {
                 "id": "place11",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                     // {"idRef": "grand_canyon"},
@@ -1244,7 +1330,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1277,7 +1363,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1286,8 +1372,11 @@
             }, {
                 "id": "place13",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                     // {"idRef": "grand_canyon"},
@@ -1310,7 +1399,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1343,7 +1432,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1352,8 +1441,11 @@
             }, {
                 "id": "place15",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                     // {"idRef": "grand_canyon"},
@@ -1376,7 +1468,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1385,8 +1477,11 @@
             }, {
                 "id": "place16",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                     // {"idRef": "grand_canyon"},
@@ -1409,7 +1504,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1418,8 +1513,11 @@
             }, {
                 "id": "place17",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                     // {"idRef": "grand_canyon"},
@@ -1442,7 +1540,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1451,8 +1549,11 @@
             }, {
                 "id": "place18",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                     // {"idRef": "grand_canyon"},
@@ -1475,7 +1576,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1484,8 +1585,11 @@
             }, {
                 "id": "place19",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                 //     {"idRef": "grand_canyon"},
@@ -1508,7 +1612,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1517,8 +1621,11 @@
             },{
                 "id": "place20",
                 "baseLayer": {
-                    "type": "tile",
-                    "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
                 },
                 "layers": [
                     // {"idRef": "grand_canyon"},
@@ -1541,7 +1648,7 @@
                     // {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1551,7 +1658,7 @@
                 "id": "place21",
                 "baseLayer": {
                     "type": "esri-basemap",
-                    "url": "Streets",
+                    "url": "NationalGeographic",
                     "options": {
                         "detectRetina": true
                     }
@@ -1577,7 +1684,7 @@
                     {"idRef": "rio_grande"},
 
                 ],
-                "zoom": 5,
+                "zoom": 8,
                 "style": {
                     "filter": "sepia(40%)",
                     "opacity": 0.8,
@@ -1633,12 +1740,12 @@
             model: new Backbone.Model({
                 initialScene: new Focus.Models.SceneModel({
                     baseLayer: {
-                        type: 'tile',
-                        url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00', //'//{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
-                        params: {
-                            attribution: 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                        }
-                    },
+	                    "type": "esri-basemap",
+	                    "url": "NationalGeographic",
+	                    "options": {
+	                        "detectRetina": true
+	                    }
+	                },
                     center: [0,0],
                     zoom: 12,
                     showAttribution: false
