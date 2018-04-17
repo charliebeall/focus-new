@@ -15552,7 +15552,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         try {
             if (center) {
                 var centerPoint = new L.LatLng(center[1], center[0]);
-                this._map.setView(centerPoint);
+                this._map.panTo(centerPoint);
             }
         }
         catch (ex) {
@@ -16612,7 +16612,7 @@ Focus.Views.OverviewMapView = Focus.Views.MapView.extend({
     viewChanged: function (view) {
         if (view.center) {
             this.setCenter(view.center);
-            this.setZoom(3);
+            this.setZoom(~~(view.zoom/3));
 
             if (this._centerPoint) {
                 this._centerPoint.setLatLng(new L.LatLng(view.center[1], view.center[0]));
