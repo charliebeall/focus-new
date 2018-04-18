@@ -183,24 +183,26 @@
 		}
 		
 		div.park-title {
-		     background: rgb(55,38,44);
-		     position: absolute;
-		     width: calc(100% + 60px);
+		     width: 100%;
 		     *padding: 10px;
 			 z-index: 2002;
 			 vertical-align: middle;
-			 height: 80px;
-			 box-shadow: 0 0 10px rgba(0,0,0,.5);;
+			 *height: 80px;
+			 margin: 0px;
+		}
+		
+		div.park-title .col-sm-2 {
+			padding: 10px;
 		}
 		
 		div.park-title .title-value {
-			color: #FAE5E4;
+			color: rgb(55,38,44);
 			font-size: 26px;
 			text-transform: uppercase;
-			height: 80px;
-			vertical-align: middle;
+			*height: 80px;
+			*vertical-align: middle;
 			margin: 0px auto;
-			padding: 22px;
+			padding: 15px;
 			font-family: 'Roboto Condensed', sans-serif;
 		}
 		
@@ -218,7 +220,7 @@
 			margin: 0px -10px;
 		}
 		
-		. .author {
+		.author {
 			font-family: 'Roboto Condensed', sans-serif;
 		}
 	</style>
@@ -291,217 +293,229 @@
 								                    <h2 class="title title-photo" style="background-size: cover;
 									background-repeat: no-repeat;
 								    background-position: 50% 100%;
-								    background-image: linear-gradient(0deg, rgba(65, 128, 163, 0.6) 0%, rgba(65, 128, 163, 1) 50%), url(img/fig3.jpg);
+								    background-image: linear-gradient(0deg, rgba(55,38,44,0.6) 0%, rgba(55,38,44,1) 50%), url(img/fig3.jpg);
 								    font-size: 40px;
 								    opacity: 1;
-								    min-height: 400px;">America's Public Lands: What, Where, Why, and What Next?</h2>
+								    min-height: 400px; color: #FAE5E4;">America's Public Lands: What, Where, Why, and What Next?</h2>
 
 					                    <div class="author"><span class="name">David J. Rutherford</span>, <span class="organization">Department of Public Policy Leadership, University of Mississippi</span></div>
 					                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2018.60.3f</div>
-			<div class="figure" style="background-image:url(img/fig1.jpg);"></div>
+			<div class="figure contain" id="fig1" style="background-image:url(img/fig1.jpg);"></div>
 			<div class="caption">Figure 1. Grand Canyon view from Grand Canyon Lodge, North Rim</div>
             <p>
-                Upon hearing the term “America’s public lands,” what comes to mind for many people is the National Park System, and for good reason. The national parks form the crown jewel of the system of public lands in the United States, as illustrated by this photograph of the <a href="#" class="location" data-layer-id="grand_canyon">Grand Canyon</a>. When President Theodore Roosevelt first saw the canyon in 1903, he stated: "Let this great wonder of nature remain as it now is. Do nothing to mar its grandeur, sublimity and loveliness. You cannot improve on it. But what you can do is to keep it for your children, your children’s children, and all who come after you, as the one great sight which every American should see.” The Grand Canyon was not a national park when Roosevelt made that statement, but he used the power of his office to initiate a process by which it became one of the earliest national parks in the country. In the face of opposition by development interests, Roosevelt acted to ensure that this “great sight” would be preserved for future generations, and the National Park Service has been doing that very thing for over 100 years. 
-<br/><br/>
-                But public lands in the United States do much more that preserve awe-inspiring natural environments for posterity. The system of public lands serves a range of conservation as well as preservation purposes, and it is important to distinguish two points. First is that America’s public lands exist as a system of separate but interrelated components. While development of such a system was not generally intended historically, what emerged and exists today is an arrangement for managing public lands to meet a variety of purposes. The second point is to make distinction between preservation and conservation. Preservationentails maintaining natural environments in their present condition and as untouched by humans as possible while conservation involves the sustainable use and management of natural environments and their resources to meet the needs and interests of people. 
+				For many people, upon hearing the term “America’s public lands,” the national parks come immediately to mind, and for good reason. The national parks form the crown jewel of the system of public lands in the United States, as illustrated in <a href="#fig1">Figure 1</a> of the Grand Canyon. When President Theodore Roosevelt first saw the canyon in 1903, he stated: “Let this great wonder of nature remain as it now is. Do nothing to mar its grandeur, sublimity and loveliness. You cannot improve on it. But what you can do is to keep it for your children, your children’s children, and all who come after you, as the one great sight which every American should see” (History.com Staff 2009, 1). The Grand Canyon was not a national park when Roosevelt made that statement, but he used the power of his office to initiate a process by which it became one of the earliest national parks in the country. Roosevelt acted to ensure that this “great sight” would be preserved for future generations despite opposition from powerful development interests, and the National Park Service (NPS) has continued that very thing for over 100 years. But public lands in the United States do much more that preserve awe-inspiring natural environments for posterity, and the system of public lands serves a range of conservation as well as preservation purposes. 
+			</p><p>
+				Yet federal ownership and management of the lands has met considerable resistance both in the past and today. Campaigns have attempted to turn the federals lands over to the states or even to privatize them. In 1946--1947, the first so-called “sagebrush rebellion” attempted to do just that. But writing in Harpers, historian and essayist Bernard DeVoto rallied opposition: "The plan is to get rid of public lands altogether, turning them over to the states, which can be coerced as the federal government cannot be, and eventually to private ownership. . . Nothing in history suggests that the states are adequate to protect their own resources, or even want to, or suggests that cattlemen and sheepmen are capable of regulating themselves even for their own benefit, still less the public’s" (DeVoto 1947, 9). With the public’s support, the federal lands remained intact at that time. But the debate rages and continues to the present. The focus of this article is to help inform the debate with a brief overview of what the public lands are, where they are located, why they exist, and what they face in the future. 
+                
                 </p>
         </section>
         <section id="2" class="scene " data-scene-id="place2">
-            <div class="figure contain" style="background-image:url(img/fig2.jpg);"></div>
+			<div class="row park-title"><div class="col-12 col-sm-12 col-xs-12 title-value">Public Lands: What and Why?</div></div>
+            <div class="figure contain" id="fig2" style="background-image:url(img/fig2.jpg);"></div>
+			<div class="caption">Figure 2. Federal public lands management agencies.</div>
             <p>
-                While public lands exist at state and local levels as well as federal, the focus in this essay is upon federal public lands. Four agencies carry primary responsibility for managing these lands that stretch across the United States, and each pursues a unique mission within the public lands system. The NPS focuses on preserving natural environments and cultural heritage and upon fostering public visitation and appreciation of these places. The USFWS works mainly to preserve habitat for wildlife conservation and maintenance of biological diversity, and it manages the National Wildlife Refuge System. The USFS has primarily a conservation mission that advances multiple, sustainable use of the environment for forestry, grazing, mining, watershed regulation, recreation, and some ecological preservation functions, along with others. The BLM has historically managed land for extractive resource development, and while this remains a priority, the agency is increasing its emphasis on multiple use with particular emphasis on identification of special areas for conservation and restoration. Toward this latter end, the agency manages the National Landscape Conservation System (now known as the National Conservation Lands).
+				While public lands exist at state and local levels as well as federal, the focus in this article is on federal public lands. Four agencies carry primary responsibility for managing these lands that stretch across the United States, each with its own unique mission within the larger public-lands system (<a href="#fig2">Figure 2</a>). It is important to understand America’s public lands as a system of separate but interrelated components. While development of such a system was not generally intended historically, what emerged and persists today is an arrangement for managing public lands to meet a variety of purposes (Wilson 2014). Within the system there are two distinct purposes: preservation and conservation. Preservation entails maintaining natural environments in their present condition and as untouched by humans as possible, while conservation involves the sustainable use and management of natural environments and their resources to meet the needs and interests of people now and into the future (Wilson 2014). 
+			</p><p>The NPS focuses on preservation of natural environments and cultural heritage, and upon fostering public visitation and appreciation of these places. The United States Fish and Wildlife Service (USFWS) works to preserve habitat for wildlife, conservation of the resources, and maintenance of biological diversity. It also manages the National Wildlife Refuge System. The United States Forest Service (USFS) has primarily a conservation mission that advances multiple, sustainable uses of the environment for activities including forestry, grazing, mining, watershed regulation, and recreation, along with some ecological preservation. The Bureau of Land Management (BLM) has historically managed land for extractive resource development, and while this remains a priority, the agency is increasing its emphasis on multiple use, with particular emphasis on identification of special areas for conservation and restoration. Toward this latter end, the agency manages the National Landscape Conservation System (now known as the National Conservation Lands) (Wilson 2014).
+                
             </p>
         </section>
         <section id="3" class="scene " data-scene-id="place3">
-            <div class="figure contain" style="background-image:url(img/fig3.jpg);"></div>
+			<div class="row park-title"><div class="col-12 col-sm-12 col-xs-12 title-value">Public Lands: Where and Why?</div></div>
+            <div class="figure contain" id="fig3" style="background-image:url(img/fig3.jpg);"></div>
+			<div class="caption">Figure 3. Map of federal lands and Indian reservations (USGS 2007)</div>
             <p>
-                This map from the Congressional Research Service shows the distribution of federal lands across the coterminous United States. The four main land management agencies are displayed along with Department of Defense (DOD) lands which consist of military bases, training ranges, and other functions not principally managed for either preservation or conservation. Federal land ownership is concentrated in the West, in part reflecting the settlement history of the country. States in the East were settled early in the country’s history when the priority of the federal government was to “dispose” of the lands, that is, to transfer ownership of the lands to private persons and interests for settlement and use by the country’s growing population and expanding economy. Lands in the West were settled later when federal emphasis on “disposal” decreased and conservation and preservation increased in priority. 
+                The map in <a href="#fig3">Figure 3</a> from the National Atlas shows the distribution of federal lands across the United States. The four main land-management agencies are displayed, along with various other agencies that do not principally manage land for either preservation or conservation purposes. Federal land ownership is concentrated in the West, in part reflecting the settlement history of the country. The Eastern states were established at the country’s founding. Away from the coast, the federal government’s priority was to “dispose” of the lands, that is, to form new states where settlement and use by the country’s growing population and expanding economy could occur. Most lands in the West were acquired later in U.S. history through purchase or conquest. While the federal government still formed states in the West as part of its mandate to “dispose” of the lands, much of the land was not suitable for the agriculture that made so much of the more Midwestern lands attractive to private interests, and so it remained in public hands. The U.S. Constitution specifically states that such unowned lands did not automatically transfer to the states, but rather, the federal government retained authority over them (Wilson 2014).
             </p>
         </section>
          <section id="4" class="scene " data-scene-id="place4">
-			 <div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-NationalParkService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Yosemite</div></div>
-        <div class="row" style="overflow: hidden;">
+			 <div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-NationalParkService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">National Parks: What, Why, and What Next?</div></div>
+        <div class="row" style="overflow: hidden; margin: 30px -15px;">
             <div class="col-sm-6">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="figure" style="margin: 0px; height: calc(50vh); max-height: calc(50vh); background-image:url(img/fig4a.jpg); background-position: 50% 100%;"></div>
+                        <div class="figure" style="margin: 0px; height: 250px; background-image:url(img/fig4a.jpg); background-position: 50% 100%;"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="figure" style="margin: 0px; height: calc(50vh); max-height: calc(50vh); background-image:url(img/fig4c.jpg)"></div>
+                        <div class="figure" style="margin: 0px; height: 250px; background-image:url(img/fig4c.jpg)"></div>
                     </div>
                 </div>
             </div>
 			<div class="col-sm-6">
-                <div class="figure" style="margin: 0px; height: calc(100vh); max-height: calc(100vh); background-image:url(img/fig4b.jpg)"></div>
+                <div class="figure" style="margin: 0px; height: 500px; background-image:url(img/fig4b.jpg)"></div>
             </div>
 
         </div>
+		<div class="caption">Figure 4. Views of Yosemite Valley and the Tenaya Lake area.</div>
             <p>
-                Looking first at NPS lands, <a href="#" class="location" data-layer-id="yosemite">Yosemite National Park</a> was established in 1890 as the country’s second national park. The top photo above shows the granite cliffs of Yosemite Valley that were carved by glaciers and rise over 3,600 feet above 6 the valley floor. The photo on the right shows the vertical granite walls of the valley, while the bottom photo shows the Tenaya Lake area in the Yosemite high country with the lake surrounded by granite domes, forests of lodgepole pine, and Yosemite’s vast wilderness.
+                The mission of the National Park Service to preserve awe-inspiring natural landscapes is well illustrated by <a class="location" data-layer-id="yosemite">Yosemite National Park</a>, which was established in 1890 as the country’s second national park. The top photo in Figure 4 shows the granite cliffs of Yosemite Valley that were carved by glaciers and rise over 3,600 feet above the floor of Yosemite Valley (NPS 2017A). The photo on the right shows the vertical granite walls of the valley, while the bottom photo shows the Tenaya Lake area in the Yosemite high country, with the lake surrounded by granite domes, forests of lodgepole pine, and Yosemite’s vast wilderness (NPS 2015; Yosemite Mariposa County 2018). 
             </p>
         </section>
         <section id="5" class="scene " data-scene-id="place5">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-NationalParkService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Grand Teton</div></div>
-            <div class="figure" style="background-image:url(img/fig5.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig5.jpg);"></div>
+			<div class="figure contain" style="">Insert Here</div>
+			<div class="caption">Figure 5. Grand Teton National Park and Yellowstone National Park.</div>
             <p>
-                This park is certainly one of the crown jewels of America’s public lands, and it borders another one, Yellowstone National Park. Both parks are surrounded by USFS lands that taken all together form the <a href="#" class="location" data-layer-id="grand_teton">Greater Yellowstone Ecosystem</a>, one of the largest nearly intact temperate zone ecosystems on Earth that contains the largest concentration of wildlife in the lower 48 states.
+                Grand Teton National Park (NPS 2017B) is preserved by the NPS as one of the crown jewels of America’s public lands, and it borders another one, Yellowstone National Park (NPS 2018A). Both parks are surrounded by USFS lands, and taken all together, these lands form the Greater Yellowstone Ecosystem, one of the largest, nearly intact temperate-zone ecosystems on earth that contains the largest concentration of wildlife in the lower forty-eight states. In the top photo in Figure 5, the Snake River runs along the eastern side of the Teton Range. The bottom photos show the landscapes, geysers, hot pools, and wildlife of Yellowstone.
             </p>
         </section>
         <section id="6" class="scene " data-scene-id="place6">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-NationalParkService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Badlands</div></div>
-            <div class="figure" style="background-image:url(img/fig6.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig6.jpg);"></div>
+			<div class="caption">Figure 6. Badlands National Park</div>
             <p>
-               This view from the south at sunset shows <a href="#" class="location" data-layer-id="bedlands">this</a> strikingly beautiful geologic formation that comprises one of the world’s richest fossil beds. The park also protects one of the largest, undisturbed, mixed-grass prairie in the United States along with considerable numbers of wildlife species.       
+               Figure 6 is a view of Badlands National Park from the south at sunset, and it shows the strikingly beautiful geologic formation that is preserved as a national park and that also comprises one of the world’s richest fossil beds (NPS 2018B). The park also preserves one of the largest undisturbed, mixed-grass prairie ecosystems in the United States along with considerable numbers of wildlife species.  
             </p>
         </section>
         <section id="7" class="scene " data-scene-id="place7">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-NationalParkService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Great Sand Dunes National Park</div></div>
-            <div class="figure" style="background-image:url(img/fig7.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig7.jpg);"></div>
+			<div class="caption">Figure 7. Great Sand Dunes National Park and Preserve</div>
             <p>
-                <a href="#" class="location" data-layer-id="sand_dunes">This park</a> includes the highest dunes in North America and it extends to the crest of the Sangre de Christo Range which lies behind. It encompasses a wide range of ecosystems, from the grasslands, shrublands, and dunes at over 7,500 feet at the base of the mountains and up through the riparian, montane forests/woodlands, subalpine forest/meadows, and alpine tundra that emerge as elevation rises along the slopes of the mountains to over 13,000 feet.
+                Great Sand Dunes (Figure 7) preserves the highest dunes in North America and it extends to the crest of Colorado’s Sangre de Christo Range, which lies behind. These boundaries preserve a wide range of ecosystems, beginning with the grasslands, shrublands, and dunes with an elevation of over 7,500 feet at the base of the mountains and rising up through the riparian, montane forests/woodlands, subalpine forest/meadows, and alpine tundra that emerge with the increasing elevation along the slopes of the mountains to over 13,000 feet NPS 2016).
             </p>
         </section>
         <section id="8" class="scene " data-scene-id="place8">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-NationalParkService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Olympic National Park</div></div>
-        <div class="row" style="overflow: hidden;">
+			<div class="row" style="overflow: hidden; margin: 30px -15px;">
             <div class="col-sm-6">
-                <div class="figure" style="margin: 0px; height: calc(100vh); max-height: calc(100vh); background-image:url(img/fig8c.jpg)"></div>
+                <div class="figure" style="margin: 0px; height: 500px; max-height: 500px; background-image:url(img/fig8c.jpg)"></div>
             </div>
             <div class="col-sm-6">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="figure" style="margin: 0px; height: calc(50vh); max-height: calc(50vh); background-image:url(img/fig8b.jpg); background-position: 50% 100%;"></div>
+                        <div class="figure" style="margin: 0px; height: 250px; max-height: 250px; background-image:url(img/fig8b.jpg); background-position: 50% 100%;"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="figure" style="margin: 0px; height: calc(50vh); max-height: calc(50vh); background-image:url(img/fig8d.jpg)"></div>
+                        <div class="figure" style="margin: 0px; height: 250px; max-height: 250px; background-image:url(img/fig8d.jpg)"></div>
                     </div>
                 </div>
             </div>
         </div>
+		<div class="caption">Figure 8. Olympic National Park.</div>
             <p>
-                <a href="#" class="location" data-layer-id="olympic">This park</a> contains ecosystems in pristine condition such as the rugged, cliffed Pacific shore and a temperate rainforest. The top photo shows the huge logs that float down the raging rivers in this high rainfall zone and are deposited along the beach. The bottom photo shows Tatoosh Island which lies offshore from Cape Flattery, the westernmost point in the 48 contiguous states. The park has been recognized internationally by UNESCO as an International Biosphere Reserve and World Heritage Site, and as such, is legally protected by international treaties as well as by the U.S. government.
+                Olympic National Park (Figure 8) preserves ecosystems in pristine condition, such as the rugged, cliffed Pacific shore and a temperate rainforest (NPS 2017C). The top photo shows the huge logs that are deposited along the beach after floating down the raging rivers in this high rainfall zone. The bottom photo shows Tatoosh Island, which lies offshore from Cape Flattery, the westernmost point in the forty-eight contiguous states. The park has been recognized internationally by UNESCO as an International Biosphere Reserve and World Heritage Site, and as such, is legally protected by international treaties as well as by the U.S. government (UNESCO 2018). 
             </p>
         </section>
         <section id="9" class="scene " data-scene-id="place9">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-NationalParkService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Organ Pipe National Monument</div></div>
-            <div class="figure" style="background-image:url(img/fig9.jpg); background-position: 50% -20px;"></div>
+            <div class="figure contain" style="background-image:url(img/fig9.jpg);"></div>
+			<div class="caption">Figure 9. Organ Pipe National Monument.</div>
             <p>
-                While part of the National Park System, this is a “monument” and not a “park.” National parks result from legislation passed by Congress and signed into law by a president while national monuments are established by presidential proclamation under authority of the Antiquities Act of 1906. Parks are as close to permanent as possible in the U.S. system of government, but the status of monuments is more uncertain. Some monuments, such as <a href="#" class="location" data-layer-id="organ_pipe">Organ Pipe</a> pictured here with silhouettes of organ pipe and saguaro cacti at sunset in the Sonoran Desert, are managed by NPS and have very secure status. But national monuments can be managed by any of the federal public lands agencies, and in recent days, the status of some of them is being disputed.
+				Organ Pipe is a “monument,” not a “park” even though it is a unit of the NPS and fulfills a preservation mission (NPS 2017D). National parks result from legislation passed by Congress and signed into law by a president while national monuments are established by presidential proclamation under authority of the Antiquities Act of 1906 (Wilson 2014). Parks are as close to permanent as possible in the U.S. system of government, but the status of monuments is more uncertain. Some monuments, such as Organ Pipe pictured in Figure 9 at sunset with silhouettes of the organ pipe and saguaro cacti of the Sonoran Desert ecosystem, are managed by the NPS and have very secure status. But national monuments can be managed by any of the federal public-lands agencies, and recently the status of some of them is being disputed. 
+			</p><p>While the national parks receive permanent legislative designation, funding for them, as for all public lands, comes from the domestic, discretionary portion of the federal budget, and as such, is subject to the annual appropriations process in which Congress and the president allocate specific amounts of funding. As the most well-known and visible public lands, the funding level for national parks (and the monuments within the NPS) will likely be adequate to retain the preservation and public awareness mission, but some modification may occur. For example, recent efforts by the secretary of the interior have called for allowing drilling for natural gas in national parks, something never before allowed or seen as part of their mission.
+                
             </p>
         </section>
         <section id="10" class="scene " data-scene-id="place10">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-FishAndWildlifeService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Bosque del Apache National Wildlife Refuge</div></div>
-            <div class="figure contain" style="background-image:url(img/fig10.jpg);"></div>
+			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-FishAndWildlifeService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Fish and Wildlife Lands: What, Why, and What Next?</div></div>
+			<div class="figure" style="background-image:url(img/fig10d.jpg);"></div>
+            <div class="figure" style="background-image:url(img/fig10b.jpg);"></div>
+			<div class="figure" style="background-image:url(img/fig10c.jpg);"></div>
+			<div class="caption">Figure 10. Bosque del Apache National Wildlife Reserve.</div>
             <p>
-               Lands managed by the U.S. Fish and Wildlife Service include the 560 National Wildlife Refuges, many of which lie along one of the north-south “flyways” for migratory birds. The <a href="#" class="location" data-layer-id="bosque_del_apache">Bosque del Apache</a> NWR lies on the Rio Grande River and serves as wintering ground for various bird species including the Snow Geese and Sandhill Cranes shown here. Because the Rio Grande has been dammed extensively and the water diverted for irrigation of farms, the natural cycles of alternating floods and slack water periods no longer provide the habitats in which these birds and other wildlife can flourish. Consequently, this refuge is managed to mimic those natural cycles by use of small canals, gates, and dams that flood and drain areas on seasonal schedules. In addition to management of the National Wildlife Refuge system, the USFWS performs a wide range of additional services: working with private landowners to establish easements that help to conserve and restore wildlife habitat; determining species that are endangered or threatened and developing plans for their protection; protecting and restoring fisheries and operating fish hatcheries; and enforcing federal wildlife laws. 
+               Lands managed by the USFWS include those of the 560 units within the National Wildlife Refuge (NWR) system, many of which lie along one of the north-south “flyways” for migratory birds. The Bosque del Apache NWR (Figure 10) lies on the Rio Grande River and serves as wintering ground for various bird species including the snow geese and sandhill cranes shown here. Because the Rio Grande has been dammed extensively and the water diverted for irrigation of farms, the natural cycles of alternating floods and slack-water periods no longer provide the habitats in which these birds and other wildlife can flourish (USFWS 2017). Consequently, this refuge is managed to mimic those natural cycles by use of small canals, gates, and dams that flood and drain areas on seasonal schedules. In addition to management of the NWR system, the USFWS performs a wide range of additional, primarily conservation services: working with private landowners to establish easements that help to conserve and restore wildlife habitat, determining species that are endangered or threatened and developing plans for their protection, protecting and restoring fisheries and operating fish hatcheries, determining appropriate levels of hunting and fishing to allow and overseeing such use, and enforcing federal wildlife laws (Wilson 2014).
             </p>
         </section>
         <section id="11" class="scene " data-scene-id="place11">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-FishAndWildlifeService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Tallahatchie National Wildlife Refuge</div></div>
-            <img style="z-index: 10; width: 30%; margin-top: 110px; min-width: 150px;" class="img-thumbnail pull-right" src="img/fig11b.jpg">
+            <img style="z-index: 10; width: 30%; margin-top: 30px; min-width: 150px;" class="img-thumbnail pull-right" src="img/fig11b.jpg">
 			<div class="figure" style="background-image:url(img/fig11c.jpg);"></div>
+			<div class="caption">Figure 11. Tallahatchie National Wildlife Refuge.</div>
             <p>
-               This refuge is part of a complex that consists of bottomland hardwoods, early successional reforestation areas, various fields, and moist soil units that are located in the low lying lands of the Mississippi Delta region. Bisected by the meandering Tippo Bayou, the <a href="#" class="location" data-layer-id="tallahatchie">Tallahatchie NWR</a> is managed to conserve and restore the historically extensive forested wetlands of this region that has been largely deforested and drained for commercial agricultural production. This kind of habitat conservation and restoration is a primary goal of the USFWS. 
+			   The Tallahatchie NWR (Figure 11) is part of a complex that consists of bottomland hardwood trees, early successional reforestation areas, various fields, and moist soil units that are located in the low-lying lands of the Mississippi Delta region. Bisected by the meandering Tippo Bayou, the Tallahatchie NWR is managed to conserve and restore the historically extensive forested wetlands of this region, which has been largely deforested and drained for commercial agricultural production (USFWS 2014). This kind of habitat conservation and restoration is a primary goal of the USFWS.
+			   	</p><p>As with all public lands, the USFWS is funded through annual appropriations in the domestic, discretionary portion of the federal budget, and consequently, the agency competes continually against other domestic priorities for funding to advance its mission. In addition to the overall funding level, however, Congressional and presidential priorities can change with different political makeups and result in different emphases among the components of the agency’s mission. For example, emphasis could shift between maintenance of habitat for endangered species and use of the resource for hunting, fishing, and increased public access.
+               
             </p>
         </section>
         <section id="12" class="scene " data-scene-id="place12">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/ForestServiceLogoOfficial.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Stanislaus National Forest</div></div>
-            <div class="figure" style="background-image:url(img/fig12.jpg);"></div>
+			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/ForestServiceLogoOfficial.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">National Forests: What, Why, and What Next?</div></div>
+            <div class="figure contain" style="background-image:url(img/fig12.jpg);"></div>
+			<div class="caption">Figure 12. The Stanislaus National Forest.</div>
             <p>
-                The USFS was created in 1905 when previously established forest reserves were consolidated into one agency with a clear conservation mandate. As the name implies, a primary mission of the USFS is to manage the nation’s forests, protecting them from wastefulness and ensuring sustainable timber yields. This mission considers forests to be a form of agriculture that provides an important reason for housing this agency in the Department of Agriculture. Livestock grazing and hunting are also considered agricultural pursuits and form part of the “multiple use” mission well-expressed in the motto, “Land of Many Uses.” Recognizing the conflicting interests that would arise through this “multiple use” mission, Gifford Pinchot, the first Chief of the USFS, stated, “[W]here conflicting interests must be reconciled, the question shall always be decided from the standpoint of the greatest good of the greatest number in the long run,” another motto of the USFS.
+                The USFS was created in 1905 when previously established forest reserves were consolidated into one agency with a clear conservation mandate. As the name implies, a primary mission of the USFS is to manage the nation’s forests (Figure 12), protecting them from wastefulness and ensuring sustainable timber yields. This mission considers forests to be a form of agriculture, and consequently, that is one important reason for housing this agency in the Department of Agriculture. Livestock grazing and hunting are also considered agricultural pursuits and form part of the “multiple use,” conservation mission well expressed in the USFS motto, “Land of Many Uses.” Recognizing the conflicting interests that would arise through this “multiple use” mission, Gifford Pinchot, the first chief of the USFS, stated, “[W]here conflicting interests must be reconciled, the question shall always be decided from the standpoint of the greatest good of the greatest number in the long run,” another motto of the USFS (Lewis 2005).
             </p>
         </section>
         <section id="13" class="scene " data-scene-id="place13">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/ForestServiceLogoOfficial.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Gunnison National Forest</div></div>
-            <div class="figure" style="background-image:url(img/fig13.jpg);"></div>
+			<div class="figure contain" style="background-image:url(img/fig13.jpg);"></div>
+			<div class="figure contain" style="background-image:url(img/fig14.jpg);"></div>
+			<div class="caption">Figure 13. Images that highlight the watershed conservation mission of the national forests.</div>
             <p>
-                One of the main functions of national forests is to secure watersheds in the forested mountains so as to mitigate flooding in the rainy season and ensure a steady supply of water to the valleys throughout the year. This photo shows the <a href="#" class="location" data-layer-id="gunnison">Taylor River</a>.
+                One of the main functions of national forests is to conserve watersheds in the forested mountains so as to mitigate flooding in the rainy season and ensure a steady supply of water to the valleys throughout the year. The top photo in Figure 13 shows the Taylor River as it flows through the Gunnison NF while the bottom photo shows the Surprise Valley in California that lies below the forested slopes of the Warner Range in Modoc NF. Agricultural lands lie downstream from many of the USFS lands and those agricultural lands benefit substantially from the forest and watershed management practiced by the USFS. The national forest lands provide this public good to the private-sector, agricultural interests and this highlights the important public/private relationships that exist in conservation efforts. This also emphasizes another reason why the USFS finds its home in the Department of Agriculture.
             </p>
         </section>
         <section id="14" class="scene " data-scene-id="place14">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/ForestServiceLogoOfficial.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Surprise Valley National Forest</div></div>
-            <div class="figure" style="background-image:url(img/fig14.jpg);"></div>
+			<div class="row">
+            <div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig15b.jpg);"></div>
+			<div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig16b.jpg);"></div>
+            </div>
+			<div class="caption">Figure 14. Examples of restoration and preservation efforts in the national forests.</div>
             <p>
-                The agricultural lands of the <a href="#" class="location" data-layer-id="surprise_valley">Surprise Valley</a> lie below the forested slopes of the Warner Range that are managed by the USFS to, in part, ensure stable water flows to the valley. The national forest lands provide this public good to the private sector agricultural interests and this emphasizes another reason why the USFS finds its home in the Department of Agriculture.
+                Important parts of the “multiple use” mission of the USFS include restoration and preservation. The photo on the left in Figure 14 shows restoration of the endangered black-footed ferret, while the photo on the right shows a trailhead into a wilderness area. Signed into law in 1964, the Wilderness Act recognized wilderness as “an area where the earth and its community of life are untrammeled by man, where man himself is a visitor who does not remain” (Public Law 88-577 1964, 891). While wilderness areas have been established in all four of the public lands agencies, most wilderness areas are managed by the USFS (USFS 2013).
             </p>
         </section>
         <section id="15" class="scene " data-scene-id="place15">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/ForestServiceLogoOfficial.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Buffalo Gap National Forest</div></div>
-			<div class="row">
-            <div class="figure col-12 col-sm-6" style="background-image:url(img/fig15b.jpg);"></div>
-			<div class="figure col-12 col-sm-6" style="background-image:url(img/fig16b.jpg);"></div>
-            </div>
+			<div class="figure contain" style="background-image:url(img/fig17.jpg);"></div>
+			<div class="caption">Figure 15. Recreation opportunities in the national forests include travel on the many forest service roads, this one through an aspen forest.</div>
             <p>
-                Important parts of the “multiple use” mission of the USFS are restoration and preservation. The photo on the <a href="#" class="location" data-layer-id="buffalo_gap">left</a> shows restoration of the endangered black-footed ferret while the photo on the right shows a trailhead into a wilderness area. Signed into law in 1964, The Wilderness Act recognized wilderness as “an area where the earth and its community of life are untrammeled by man, where man himself is a visitor who does not remain.” While wilderness areas have been established in all four of the public lands agencies, most wilderness areas are managed by the USFS.  
+                Recreation is an important part of the “multiple use” mission of the national forests. Recreation encompasses many uses and includes exploring by four-wheel-drive vehicles, bicycles, river rafts, horseback, and backpacking on foot (Figure 15). Similar to NPS and the USFWS, the USFS continually vies for funding in the domestic, discretionary portion of the federal budget, and it could see changes in its land-management priorities, resulting from changing political orientations in the federal government. For example, how might the balance between grazing, logging, mining, recreation, and wilderness preservation in the USFS multiple-use mission change?
             </p>
         </section>
         <section id="16" class="scene " data-scene-id="place16">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/ForestServiceLogoOfficial.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Manti La Sal National Forest</div></div>
-            <div class="figure" style="background-image:url(img/fig17.jpg);"></div>
+			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-DOI-BureauOfLandManagement-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Bureau of Land Management: What, Why, and What Next?</div></div>
+            <div class="figure contain" style="background-image:url(img/fig18.jpg);"></div>
+			<div class="caption">Figure 16. View toward the southwest from the eastern shoulder of the Aquarius Plateau.</div>
             <p>
-                Recreation is an important part of the “multiple use” mission of the national forests. Recreation encompasses many uses and includes exploring by four-wheel drive vehicles, bicycles, river rafts, horseback, and by backpacking on foot.
+                Much of the Aquarius Plateau shown in the foreground of Figure 16 lies on USFS land above 11,000 feet elevation. The USFS manages this forested land for the full range of multiple use purposes. The BLM manages the land in the background of the photo as the Grand Staircase Escalante National Monument.
             </p>
         </section>
         <section id="17" class="scene " data-scene-id="place17">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/ForestServiceLogoOfficial.svg"></div><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-DOI-BureauOfLandManagement-Logo.svg"/></div><div class="col-12 col-sm-8 col-xs-8 title-value">Dixie National Forest and Grande Staircase Escalante</div></div>
-            <div class="figure" style="background-image:url(img/fig18.jpg); background-position: 50% -100px;"></div>
+            <div class="figure contain" style="background-image:url(img/fig19.jpg);"></div>
+			<div class="caption">Figure 17. The Grand Staircase of Western Geology</div>
             <p>
-               This photo is the view toward the southwest from the eastern shoulder of the <a href="#" class="location" data-layer-id="dixie">Aquarius Plateau</a>. Much of the plateau lies above 11,000 feet elevation and the forested slopes are managed by the USFS. The BLM manages the land in the background. 
+               This view in Figure 17 is from the Kaibab Plateau in Arizona looking north toward the Grand Staircase with its distinctive brightly colored cliffs that rise 5,500 feet and display 275 million years of geologic history. Most of the area is preserved as federal public land, with much of it in Grand Staircase Escalante National Monument (GSENM). The monument was established in 1996 on BLM land by presidential proclamation under the Antiquities Act, which states that monuments be established to protect, in part, objects of “scientific interest” and that monument size must be the “smallest area compatible with proper care and management of the objects to be protected” (Public Law 59-209 1906, 464). Debate swirls around the size of GSENM. On December 4, 2017, President Trump signed a proclamation reducing the boundaries of this monument, but lawsuits were filed immediately challenging the action. The lawsuits maintain that the Antiquities Act gives presidents authority to create a national monument, but only Congress can revoke or reduce one. Whatever the outcome of this legal battle, a key question remains: what is the smallest size needed to protect this landscape of the Grand Staircase of Western Geology as an “object of scientific interest?”
             </p>
         </section>
         <section id="18" class="scene " data-scene-id="place18">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-DOI-BureauOfLandManagement-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Grand Staircase Escalante</div></div>
-            <div class="figure" style="background-image:url(img/fig19.jpg); background-position: 50% -100px;"></div>
+            <div class="figure contain" style="background-image:url(img/fig20.jpg);"></div>
+			<div class="caption">Figure 18, Logos of the BLM: (A) 1952-1964 (PLF No Date); (B) 1964-present (Munn and Stuart 1988)</div>
             <p>
-               This view from the Kaibab Plateau in Arizona is looking north toward the <a href="#" class="location" data-layer-id="grand_staircase">Grand Staircase</a> of Western Geology with its sequence of brightly colored cliffs that rise 5,500 feet and display 275 million years of geologic history. Most of it is preserved as federal public land with much of it in Grand Staircase Escalante National Monument (GSENM). The monument was established in 1996 on BLM land by presidential proclamation under the Antiquities Act which states that monuments be established to protect, in part, objects of “scientific interest” and that monument size must be the “smallest area compatible with proper care and management of the objects to be protected.” Debate swirls around the size of GSENM, but a key question remains, what is the smallest size needed to protect this landscape that is the “object of scientific interest?
+              The BLM was created comparatively recently, in 1946, from a merger of existing federal agencies that centered on grazing and mining (Wilson 2014). As can be seen in Figure 18A, the agency’s early logo showed a surveyor, logger, engineer, rancher, and miner standing shoulder to shoulder and symbolizing how the BLM retained an emphasis on resource extraction and development. Behind the men is a wagon train on the open prairie, suggesting the past while in front of them lies a landscape symbolic of the imagined, developed future of railroad tracks, buildings, and other infrastructure. But a few years later, the so-named “environmental decade” of the 1960s saw the rise of considerable efforts to address environmental issues. In response, the federal government changed and expanded its priorities, with specific impacts on federal land-management agencies, including the BLM. While the logo changed in 1964 to reflect the new priorities (Figure 18B), it was only in 1976 that the agency received a legislated mission from Congress to incorporate sustainable-yield principles and multiple-use values based on “scientific, scenic, historical, ecological, environmental, air and atmospheric, water resource and archeological” considerations (BLM 2001, 1).
             </p>
         </section>
         <section id="19" class="scene " data-scene-id="place19">
-            <div class="figure contain" style="background-image:url(img/fig20.jpg);"></div>
-            <p>
-              The BLM was created rather recently, in 1946, through a merging of existing federal agencies that centered on grazing and mining, and that focus persisted with the new agency. The logo created for the agency in 1952 shows a surveyor, logger, engineer, rancher, and miner standing shoulder to shoulder, and it symbolizes the agency’s emphasis at that time on resource extraction and development. Behind the men is a wagon train on the open prairie suggesting the past while in front of them lies a landscape symbolic of the imagined, developed future of railroad tracks, buildings, and other infrastructure. But a few years later, when the so-named “Environmental Decade” of the 1960s saw the rise of considerable efforts to address environmental issues, some governmental efforts impacted federal land management agencies, including the BLM. Even though the logo changed in 1964 to reflect the new priorities. it wasn’t until 1976 that the agency received a legislated mission from Congress to incorporate sustainable yield principles and multiple use values that included “scientific, scenic, historical, ecological, environmental, air and atmospheric, water resource and archeological” considerations.
-            </p>
-        </section>
-        <section id="20" class="scene " data-scene-id="place20">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-DOI-BureauOfLandManagement-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Rio Grande del Norte</div></div>
-	        <div class="row" style="overflow: hidden;">
+	        <div class="row" style="overflow: hidden; margin: 30px -15px;">
 	            <div class="col-sm-12">
 					<div class="row">
 						<div class="col-sm-6">
-							<div class="figure" style="margin: 0px; height: calc(50vh); max-height: calc(50vh); background-image:url(img/fig21b.jpg); background-position: 50% 100%;"></div>
+							<div class="figure" style="margin: 0px; height: 250px; max-height: 250px; background-image:url(img/fig21b.jpg); background-position: 50% 100%;"></div>
 						</div>
 						<div class="col-sm-6">
-							<div class="figure" style="margin: 0px; height: calc(50vh); max-height: calc(50vh); background-image:url(img/fig21c.jpg); background-position: 50% 100%;"></div>
+							<div class="figure" style="margin: 0px; height: 250px; max-height: 250px; background-image:url(img/fig21c.jpg); background-position: 50% 100%;"></div>
 						</div>
 					</div>
 	                <div class="row">
 						<div class="col-sm-12">
-							<div class="figure" style="margin: 0px; height: calc(50vh); max-height: calc(50vh); background-image:url(img/fig21d.jpg)"></div>
+							<div class="figure" style="margin: 0px; height: 250px; max-height: 250px; background-image:url(img/fig21d.jpg)"></div>
 						</div>
 					</div>
 	            </div>
 	        </div>
+			<div class="caption">Figure 19. Photos of the Rio Grande del Norte National Monument.</div>
             <p>
-               The BLM manages the <a href="#" class="location" data-layer-id="rio_grande_norte">National Conservation Lands</a> that are areas identified as ecologically rich and culturally significant. Ten designations exist and include National Monuments, National Conservation Areas, Wilderness and Wilderness Study Areas, Wild and Scenic Rivers, and National Scenic and Historic Trails. Established originally by the Department of Interior in 2000 and then legislated by Congress in 2009, this system recognizes that genuine conservation of natural and cultural resources entails protecting large areas that cover entire ecosystems and archaeological communities.
+			  The BLM manages the National Conservation Lands that are areas identified as ecologically rich and culturally significant. Ten designations exist and include National Monuments, National Conservation Areas, Wilderness and Wilderness Study Areas, Wild and Scenic Rivers, and National Scenic and Historic Trails. Established originally by the Department of Interior in 2000 and then legislated by Congress in 2009, this system recognizes that genuine conservation of natural and cultural resources entails protecting large areas that cover entire ecosystems and archaeological communities (BLM 2018; Conservation Lands Foundation 2018). Figure 19 shows one of these units.
+			  	</p><p>But public lands managed by the BLM, including the National Conservation Lands, are perhaps the most vulnerable to changing political orientations that may shift efforts increasingly from conservation and toward resource extraction, especially given the agency’s heritage as focused on development, its considerable acreage, and its many national monuments. And as with the other parts of the system, the BLM is also subject to annual appropriations that could squeeze its efforts. 
+              
             </p>
         </section>
         <section id="21" class="scene " data-scene-id="place21">
-			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-DOI-BureauOfLandManagement-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Rio Grande National Forest</div></div>
-            <div class="figure" style="background-image:url(img/fig22.jpg);"></div>
+			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-DOI-BureauOfLandManagement-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Why and What Next for the Public Lands?</div></div>
+            <div class="figure contain" style="background-image:url(img/fig22.jpg);"></div>
+			<div class="caption">Figure 20. The headwaters of the Rio Grande River.</div>
             <p>
-               Federal public lands have been an inseparable part of American life since the country began. They played an essential role in establishment of the Articles of Confederation following the Revolutionary War when the former colonies agreed to cede to the nascent federal government much of their claims to land extending from the Atlantic Ocean to the Mississippi River. Federal authority over public lands was reinforced a few years later in the Constitution, and moreover, Article 4 of the Constitution stipulated a primary goal of Congress to “dispose” of the public lands to private interests for development of the country and its economy. This goal persisted throughout the 19th century and into the 20th in forms such as the Homestead Act, federal railroad grants, and other actions. 
-            <!-- </p>
-        </section>
-        <section id="conclusion" class="scene " data-scene-id="place22">
-            <div class="figure" style="background-image:url(img/fig4a.jpg)"></div>
-            <p> -->
-                But the change in the purpose of public lands began to emerge even in the early 20th century, as illustrated by President Theodore Roosevelt’s words in 1903 that the <a href="#" class="location" data-layer-id="grand_canyon">Grand Canyon</a> was a “great wonder of nature [that should] remain as it now is.” The ideas of conservation and preservation of public lands grew with establishment of the USFS in 1905 and the NPS in 1916, agencies that advanced those goals throughout the 20th century. Then the “Environmental Decade” of the 1960s amplified recognition that public lands could play a crucial role in retaining a natural world that was diminishing in the face of the dominant development paradigm of resource extraction and use to fuel economic expansion. In 1976, the Federal Land Policy and Management Act (FLPMA) established law that formally reversed the policy of land “disposal” by recognizing the value of public lands and declaring that they should remain in public ownership.
-            
-                 Today in the United States, that dominant development paradigm seems to be producing diminishing marginal returns as it becomes increasingly questionable that continuous growth is a sustainable trajectory. And yet, human striving to maintain that paradigm is resulting in increased pressure to limit preservation of public lands and to push use of them to levels that could exceed sustainable conservation. Public lands have always been important in the velocity of development occurring in the United States, but it appears that now they have become central to the trajectory of that development as well. 
+			   Federal public lands have been an inseparable part of American life since the country began. They played an essential role in establishment of the Articles of Confederation following the Revolutionary War when the former colonies only agreed to form a republic by ceding to the nascent federal government much of their claims to land extending from the Appalachian Mountains to the Mississippi River. Federal authority over public lands was strongly reinforced a few years later in the Constitution which also stipulated that a primary goal of Congress was to “dispose” of the public lands to private interests for development of the country and its economy. This goal persisted throughout the nineteenth century and into the twentieth in forms such as the Homestead Act, federal railroad grants, and other actions. 
+			   But change in the purpose of public lands began to emerge even in the early twentieth century, as illustrated by President Roosevelt’s words in 1903 that the Grand Canyon was a “great wonder of nature [that should] remain as it now is.” The ideas of conservation and preservation of public lands grew with establishment of the USFS in 1905 and the NPS in 1916, agencies that advanced conservation and preservation goals throughout the twentieth century. Figure 20 helps illustrate both these goals, with forest and watershed conservation shown in the foreground while preservation of high mountain wilderness areas is visible in the background. </p><p>
+			   The “environmental decade” of the 1960s amplified recognition that public lands could play a crucial role in retaining a natural world that was diminishing in the face of the dominant economic expansionist development paradigm that depended on resource extraction and use. In 1976, the Federal Land Policy and Management Act (FLPMA) established law that formally reversed the policy of land “disposal” by recognizing the value of public lands and declaring that they should remain in public ownership (Public Law 94-579 1976).
+			   	</p><p>Today in the United States, public lands are torn between paradigms of preservation, conservation, and development. The development paradigm did much to improve the country during the nineteenth and much of the twentieth centuries, but in recent decades, it seems to be producing diminishing marginal returns. Yet human striving to maintain that development paradigm is resulting in increased pressure to curtail preservation efforts and to exceed levels of sustainable conservation. America faces questions about the kinds of improvements that are best suited to conditions in contemporary times and public lands are integral to the answers that develop. The balance between continued or amplified extractive development and attention to preservation and conservation will continue to be played out on the public lands.
+               
              <span class="row footer-row"></span>
             </p>
         </section>
