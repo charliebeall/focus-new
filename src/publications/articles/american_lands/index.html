@@ -1,384 +1,687 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>America's Public Lands: What They Are and Why They're Important</title>
-        <meta name="description" content="FOCUS on Geography: America's Public Lands: What They Are and Why They're Important">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="geography,United States,national parks,national forests,BLM,public lands,map">
-        <meta name="author" content="David J. Rutherford">
-        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        <!-- Place favicon.ico in the root directory -->
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-		<link href="https://fonts.googleapis.com/css?family=Contrail+One" rel="stylesheet">
-        <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
-        <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
-		<style>
-			
-			div.tooltip a {
-			    color: rgb(225,181,74) !important;
-			    border-bottom-color: rgb(225,181,74);
-			}
-			
-	        progress::-webkit-progress-bar {
-	            background-color: transparent;
-	        }
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>America's Public Lands: What, Where, Why, and What Next?</title>
+    <meta name="description" content="FOCUS on Geography: America's Public Lands: What, Where, Why, and What Next?">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,United States,national parks,national forests,BLM,public lands,map">
+    <meta name="author" content="David J. Rutherford">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Halant" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+	<style type="text/css">
+        ul.grid {
+            top: 100px;
+            position: relative;
+            z-index: 100;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            justify-content: center;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 0 6em;
+            list-style: none;
+        }
+        li.grid-item {
+            display: block;
+            -webkit-flex: none;
+            flex: none;
+            width: 35%;
+            min-width: 180px;
+            padding: 10px;
+        }
 
-	        progress::-webkit-progress-value {
-	            background-color: rgb(225,181,74);
-	            -webkit-transition: width 0.5s ease-in-out;
-	        }
+        .grid-item a {
+            border-bottom: none;
+        }
 
-	        progress::-moz-progress-bar {
-	            background-color: rgb(225,181,74);
-	            transition: width 0.5s ease-in-out;
-	            -moz-transition: width 0.5s ease-in-out;
-	        }
+        .grid-img {
+            display: block;
+            width: 100%;
+        }
 
-	        progress::-ms-fill {
-	            background-color: rgb(225,181,74);
-	            -ms-transition: width 0.5s ease-in-out;
-	        }
+        .grid-link {
+            display: block;
+            padding: 13px 13px;
+            background: #fff;
+        }
+		
+		#text p {
+			font-family: 'Roboto Condensed', sans-serif;
+		}
+		
 
-	        svg text {
-	            font-family: 'Contrail One', cursive;
-	            font-size: 16px;
-	            fill: #fff;
-                stroke: rgba(0,0,0,0.5);
-                stroke-width: 0.1;
-                text-shadow: 0px 2px 2px rgba(0,0,0,0.8);
-	        }
-			
-	        path.line {
-	            stroke: rgb(15,47,75) !important;
-	        }
-	        path.marker-path {
-	            stroke: rgb(15,47,75) !important;
-	            fill: rgb(15,47,75) !important;
-	        }
-			
-			#nav {
-				background: rgb(15,47,75);
+		#text h2 {
+			font-size: 50px;
+			background: none;
+		}
+		
+		@media (max-width: 1440px) {
+			#text p {
+				*font-size: 14px;
+			}
+			#text h2 {
+				*font-size: 50px;
+			}
+		}
+		
+		@media (max-width: 1366px) {
+			#text p {
+				*font-size: 14px;
+			}
+			#text h2 {
+				*font-size: 40px;
+			}
+		}
+		
+		@media (max-height: 640px) {
+			#text p {
+				*font-size: 10px;
 			}
 			
-			#text div.author, #text div.citation {
-				padding: 0px 30px;
-				color: white;
-				width: calc(100% - 60px);
+			.dotstyle .sections li {
+				height: 12px !important;
+			}
+		}
+		
+		#text{
+			background: #fff;
+		}
+			
+		#text h2, #text h3 {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-weight: 400;
+			color: #FAE5E4;
+		}
+		
+		#text h3 {
+			color: rgb(55,38,44);
+			font-size: 40px;
+			    font-size: 26px;
+			    text-transform: uppercase;
+			    *margin: 0px auto;
+			    *padding: 15px;
+			    font-family: 'Roboto Condensed', sans-serif;
+		}
+		
+		@media (max-width: 768px) {
+			#text h3 {
+				font-size: 20px;
 			}
 			
-			#text h2, #text h3 {
-				font-family: 'Contrail One', cursive;
+			div.figure {
+			    height: 400px;
 			}
-			#text h2, #text h3, a, a:hover {
-				color: rgb(15,47,75);
-			}
-			
-			#text a {
-				border-bottom: solid 3px rgba(15,47,75,.7);
-			}
-			#text a.location {
-				border-bottom: dotted 1px rgb(15,47,75);
-			}
-			
-			#text a:hover, #nav a:hover {
-				background-color: rgba(225,181,74,1) !important;
-			}
-			
-			#text .video-title h2 {
-				font-family: 'Contrail One', cursive;
-				font-size: 60px;
-				color: rgb(225,181,74);
-			}
-			
-			div.video-title {
-				background: linear-gradient(to bottom, rgba(15,47,75,1) 10%, rgba(15,47,75,0));
-			}
-			
-			@media (max-width:741px) {
-				div.start {
-					display: none !important;
-				}
-			}
-		</style>
-    </head>
-    <body class="scrolled">
-    <progress></progress>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div id="nav" class="title-hidden dotstyle dotstyle-scaleup">
-            <ul class="nav share">
-                <li>
-                    <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
-                </li>
-                <li>
-                    <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
-                </li>
-                <li>
-                    <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
-                </li>
-            </ul>
-            <ul class="nav previous">
-                <li class="previous">
-                    <a href="#"><span class="fa fa-chevron-up"></span></a>
-                </li>
-            </ul>
-            <ul class="nav sections">
-            </ul>
-            <ul class="nav next">
-                <li class="next">
-                    <a href="#"><span class="fa fa-chevron-down"></span></a>
-                </li>
-            </ul>
-        </div>
-        <!-- Add your site or application content here -->
-        <div id="background"></div>
-        <div id="map" class="title-hidden feature-article"></div>
-        <div id="overview-map" class="title-hidden transparent"></div>
-        <div id="foreground"></div>
-        <div id="photos" style=""><div id="photo-caption" class="title-hidden"></div></div>
-        <div id="shadow"></div>
-        <div id="toggle-map" class="focus-green" style="background: rgb(225,181,74);"><span class="fa fa-map-o" style="color: rgb(15,47,75); margin: 8px;"></span></div>
-        <div id="main-nav" class="light">
-            <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
-                <svg width="1000px" height="1000px">
-                    <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800" style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
-                    <path id="pathE" d="M 300 500 L 700 500" style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
-                    <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200" style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
-                </svg>
+		}
+		
+		#nav, #toggle-map {
+			background: rgb(55,38,44);
+		}
+		.dotstyle .sections li {
+		    position: relative;
+		    display: block;
+		    float: left;
+		    margin: 2px 17px;
+		    width: 16px;
+		    height: 16px;
+		    cursor: pointer;
+		}
+		
+		.dotstyle .sections li a {
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 8px;
+		    outline: 0;
+		    border-radius: 0px;
+		    background-color: #fff;
+		    background-color: rgba(255,255,255,.3);
+		    text-indent: -999em;
+		    cursor: pointer;
+		    position: absolute;
+		    padding: 0;
+		}
+		
+		svg text {
+			fill: rgb(55,38,44);
+			font-family: 'Roboto Condensed', san-serif;
+			text-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+			font-size: 20px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		
+		#text h2.title {
+			background: linear-gradient(180deg, rgba(55,38,44,1), rgba(55,38,44,0));
+		}
+		
+		div.author {
+			background: none;
+			opacity: 1;
+		}
+		div.figure {
+			background-position: 50% 0%;
+		}
+		
+		div.park-title {
+		     width: 100%;
+		     *padding: 10px;
+			 z-index: 2002;
+			 vertical-align: middle;
+			 *height: 80px;
+			 margin: 0px;
+		}
+		
+		div.park-title .col-sm-2 {
+			padding: 10px;
+		}
+		
+		div.park-title .title-value {
+			color: rgb(55,38,44);
+			font-size: 26px;
+			text-transform: uppercase;
+			*height: 80px;
+			*vertical-align: middle;
+			margin: 0px auto;
+			padding: 15px;
+			font-family: 'Roboto Condensed', sans-serif;
+		}
+		
+		div.park-title img {
+			*max-height: 80px;
+			width: 100%;
+			height: auto;
+			margin: 0px -10px;
+		}
+		
+		.author, div.citation {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-size: 18px;
+		}
+		
+		img.figure {
+			width: calc(100% + 60px);
+			height: auto !important;
+		}
+		
+		div.img-wrapper {
+			position: relative;
+		}
+		
+		div.img-wrapper .helper {
+			position: absolute;
+			top: 30px;
+			right: -30px;
+		}
+		
+		.col-12 div.img-wrapper .helper {
+			top: 0px;
+			right: 0px;
+		}
+	</style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<progress></progress>
+<div id="nav" class="dotstyle dotstyle-scaleup">
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <ul class="nav previous">
+        <li class="previous">
+            <a href="#"><span class="fa fa-chevron-up"></span></a>
+        </li>
+    </ul>
+    <ul class="nav sections">
+    </ul>
+    <ul class="nav next">
+        <li class="next">
+            <a href="#"><span class="fa fa-chevron-down"></span></a>
+        </li>
+    </ul>
+</div>
+<!-- Add your site or application content here -->
+<div id="background"></div>
+<div id="map"></div>
+<div id="overview-map" class="title-hidden transparent"></div>
+<div id="foreground"></div>
+<div id="photos"><div id="photo-caption"></div></div>
+<div id="shadow"></div>
+<div id="toggle-map" class="focus-black"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+<div id="main-nav" class="light">
+    <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+        <svg width="1000px" height="1000px">
+            <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800" style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+            <path id="pathE" d="M 300 500 L 700 500" style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+            <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200" style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+        </svg>
 
-                <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
-            </div>
-            <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
-            <ul class="nav share">
-                <li>
-                    <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
-                </li>
-                <li>
-                    <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
-                </li>
-                <li>
-                    <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
-                </li>
-            </ul>
-            <div id="menu" class="container-fluid"></div>
-        </div>
-        <div id="text" class="title-hidden">
-            <div class="content scenes">
-
+        <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+    </div>
+    <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <div id="menu"></div>
+</div>
+<div id="text">
+    <div class="content scenes">
                 <section id="introduction" class="scene" data-scene-id="place1" title="Introduction">
-								                    <h2 class="title title-photo" style="background-size: contain;
+								                    <h2 class="title title-photo" style="background-size: cover;
+									background-repeat: no-repeat;
 								    background-position: 50% 100%;
-								    background-image: linear-gradient(0deg, rgba(65, 128, 163, 0.6) 0%, rgba(65, 128, 163, 1) 50%), url(img/fig3.jpg);
+								    background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(55,38,44,0.3) 50%, rgba(55,38,44,0.9) 90%), url(img/fig4b.jpg);
 								    font-size: 40px;
 								    opacity: 1;
-								    min-height: 400px;">America's Public Lands: What They Are and Why They're Important</h2>
+								    min-height: 700px; color: #FAE5E4;">America's Public Lands: What, Where, Why, and What Next?</h2>
 
 					                    <div class="author"><span class="name">David J. Rutherford</span>, <span class="organization">Department of Public Policy Leadership, University of Mississippi</span></div>
-					                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2018.60.3f</div>
-
-            <div id="figure1" class="figure " style="background-image:url(img/fig1.jpg);"></div>
-            <div class="caption">Figure 1: Grand Canyon National Park (photo by author)</div>
-                <p>
-           Upon hearing the term “America’s public lands,” what comes to mind for many people is the National Park System, and for good reason. The national parks form the crown jewel of the system of public lands in the United States, as illustrated by this photograph of the Grand Canyon. When President Theodore Roosevelt first saw the canyon in 1903, he stated: “Let this great wonder of nature remain as it now is. Do nothing to mar its grandeur, sublimity and loveliness. You cannot improve on it. But what you can do is to keep it for your children, your children’s children, and all who come after you, as the one great sight which every American should see.” The Grand Canyon was not a national park when Roosevelt made that statement, but he used the power of his office to initiate a process by which it became one of the earliest national parks in the country. In the face of opposition by development interests, Roosevelt acted to ensure that this “great sight” would be preserved for future generations, and the National Park Service has been doing that very thing for over 100 years.
-                </p>
-
-                 <p>
-But public lands in the United States do much more that preserve awe-inspiring natural environments for posterity. The system of public lands serves a range of conservation as well as preservation purposes, and it is important to distinguish two points. First is that America’s public lands exist as a system of separate but interrelated components. While development of such a system was not generally intended historically, what emerged and exists today is an arrangement for managing public lands to meet a variety of purposes. The second point is to make distinction between preservation and conservation. Preservation entails maintaining natural environments in their present condition and as untouched by humans as possible while conservation involves the sustainable use and management of natural environments and their resources to meet the needs and interests of people. 
-                </p>
-				
-            </section>
-            <section id="2" class="scene" data-scene-id="place2">
-	            <div id="figure2" class="figure contain" style="background-image:url(img/fig2.jpg);"></div>
-	            <div class="caption">Figure 2: Insert Here</div>
-                <p>
-             While public lands exist at state and local levels as well as federal, the focus in this essay is upon federal public lands. Four agencies carry primary responsibility for managing these lands that stretch across the United States, and each pursues a unique mission within the public lands system. The NPS focuses on preserving natural environments and cultural heritage and upon fostering public visitation and appreciation of these places. The USFWS works mainly to preserve habitat for wildlife conservation and maintenance of biological diversity, and it manages the National Wildlife Refuge System. The USFS has primarily a conservation mission that advances multiple, sustainable use of the environment for forestry, grazing, mining, watershed regulation, recreation, and some ecological preservation functions, along with others. The BLM has historically managed land for extractive resource development, and while this remains a priority, the agency is increasing its emphasis on multiple use with particular emphasis on identification of special areas for conservation and restoration. Toward this latter end, the agency manages the National Landscape Conservation System (now known as the National Conservation Lands).
-                </p>
-            	<div id="figure3" class="figure contain" style="background-image:url(img/fig3.jpg);"></div>
-            	<div class="caption">Figure 3: National Parks (photo by author)</div>
-                <p>
-             This map from the Congressional Research Service shows the distribution of federal lands across the coterminous United States. The four main land management agencies are displayed along with Department of Defense (DOD) lands which consist of military bases, training ranges, and other functions not principally managed for either preservation or conservation. Federal land ownership is concentrated in the West, in part reflecting the settlement history of the country. States in the East were settled early in the country’s history when the priority of the federal government was to “dispose” of the lands, that is, to transfer ownership of the lands to private persons and interests for settlement and use by the country’s growing population and expanding economy. Lands in the West were settled later when federal emphasis on “disposal” decreased and conservation and preservation increased in priority.
-                </p>
-            </section>
-            <section id="3" class="scene" data-scene-id="place3">
-		            <div id="figure4" class="figure" style="background-image:url(img/fig4.jpg);"></div>
-		            <div class="caption">Figure 4: Yosemite National Park (photos by author)</div>
-                <p>
-            Looking first at NPS lands, Yosemite National Park was established in 1890 as the country’s second national park. The top photo above shows the granite cliffs of Yosemite Valley that were carved by glaciers and rise over 3,600 feet above the valley floor. The photo on the right shows the vertical granite walls of the valley, while the bottom photo shows the Tenaya Lake area in the Yosemite high country with the lake surrounded by granite domes, forests of lodgepole pine, and Yosemite’s vast wilderness.
-				</p>
-	            <div id="figure5" class="figure" style="background-image:url(img/figu5.jpg);"></div>
-	            <div class="caption">Figure 5: Yosemite National Park (photos by author)</div>
-				<p>This park is certainly one of the crown jewels of America’s public lands, and it borders another one, Yellowstone National Park. Both parks are surrounded by USFS lands that taken all together form the Greater Yellowstone Ecosystem, one of the largest nearly intact temperate zone ecosystems on Earth that contains the largest concentration of wildlife in the lower 48 states.
-                </p>
-            </section>
-
-            <section id="4" class="scene" data-scene-id="place4">
-
-                <p>
-            This view from the south at sunset shows this strikingly beautiful geologic formation that comprises one of the world’s richest fossil beds. The park also protects one of the largest, undisturbed, mixed-grass prairie in the United States along with considerable numbers of wildlife species.
-                </p>
-	            <div id="figure4" class="figure" style="background-image:url(img/figure4.jpg);"></div>
-	            <div class="caption">Figure 4: Protecting property with the presence of the supernatural in Casamance. </div>
-	            <div id="figure5" class="figure " style="background-image:url(img/figure5.jpg);"></div>
-	            <div class="caption">Figure 5: Cows on the beach in Cap Skirring</div>
-                <p>
-            While part of the National Park System, this is a “monument” and not a “park.” National parks result from legislation passed by Congress and signed into law by a president while national monuments are established by presidential proclamation under authority of the Antiquities Act of 1906. Parks are as close to permanent as possible in the U.S. system of government, but the status of monuments is more uncertain. Some monuments, such as Organ Pipe pictured here with silhouettes of organ pipe and saguaro cacti at sunset in the Sonoran Desert, are managed by NPS and have very secure status. But national monuments can be managed by any of the federal public lands agencies, and in recent days, the status of some of them is being disputed. 
-                </p>
-            	<div id="figure6" class="figure " style="background-image:url(img/figure6.jpg);"></div>
-            	<div class="caption">Figure 6: Pirogues in Casamance</div>
-            	<div id="figure7" class="figure " style="background-image:url(img/figure7.jpg);"></div>
-            	<div class="caption">Figure 7: Mango sellers in southern Senegal</div>
-            </section>
-
-            
-
-            <section id="5" class="scene" data-scene-id="place5">
-                <p>
-            This park contains ecosystems in pristine condition such as the rugged, cliffed Pacific shore and a temperate rainforest. The top photo shows the huge logs that float down the raging rivers in this high rainfall zone and are deposited along the beach. The bottom photo shows Tatoosh Island which lies offshore from Cape Flattery, the westernmost point in the 48 contiguous states. The park has been recognized internationally by UNESCO as an International Biosphere Reserve and World Heritage Site, and as such, is legally protected by international treaties as well as by the U.S. government. 
-                </p>
-
-
-
-            	<div id="figure8" class="figure " style="background-image:url(img/figure8.jpg);"></div>
-            	<div class="caption">Figure 8:  Elementary school classroom in the Tilene neighborhood of Ziguinchor (photo taken through the cement wall).</div>
-               <p>
-            Lands managed by the U.S. Fish and Wildlife Service include the 560 National Wildlife Refuges, many of which lie along one of the north-south “flyways” for migratory birds. The Bosque del Apache NWR lies on the Rio Grande River and serves as wintering ground for various bird species including the Snow Geese and Sandhill Cranes shown here. Because the Rio Grande has been dammed extensively and the water diverted for irrigation of farms, the natural cycles of alternating floods and slack water periods no longer provide the habitats in which these birds and other wildlife can flourish. Consequently, this refuge is managed to mimic those natural cycles by use of small canals, gates, and dams that flood and drain areas on seasonal schedules. In addition to management of the National Wildlife Refuge system, the USFWS performs a wide range of additional services: working with private landowners to establish easements that help to conserve and restore wildlife habitat; determining species that are endangered or threatened and developing plans for their protection; protecting and restoring fisheries and operating fish hatcheries; and enforcing federal wildlife laws.
-                </p>
-
-            
-
-            
-                        
-                <p>
-            This refuge is part of a complex that consists of bottomland hardwoods, early successional reforestation areas, various fields, and moist soil units that are located in the low lying lands of the Mississippi Delta region. Bisected by the meandering Tippo Bayou, the Tallahatchie NWR is managed to conserve and restore the historically extensive forested wetlands of this region that has been largely deforested and drained for commercial agricultural production. This kind of habitat conservation and restoration is a primary goal of the USFWS.
-                </p>
-            </section>
-
-
-
-             <section id="6" class="scene" data-scene-id="place6">
-            
-                <h3> The <i>Joola</i> Ferry Disaster </h3>
-
-                <p>
-           The USFS was created in 1905 when previously established forest reserves were consolidated into one agency with a clear conservation mandate. As the name implies, a primary mission of the USFS is to manage the nation’s forests, protecting them from wastefulness and ensuring sustainable timber yields. This mission considers forests to be a form of agriculture that provides an important reason for housing this agency in the Department of Agriculture. Livestock grazing and hunting are also considered agricultural pursuits and form part of the “multiple use” mission well-expressed in the motto, “Land of Many Uses.” Recognizing the conflicting interests that would arise through this “multiple use” mission, Gifford Pinchot, the first Chief of the USFS, stated, “[W]here conflicting interests must be reconciled, the question shall always be decided from the standpoint of the greatest good of the greatest number in the long run,” another motto of the USFS.
-                </p>
-            <div id="figure9" class="figure " style="background-image:url(img/figure9.jpg);"></div>
-            <div class="caption">Figure 9: The Casamance River at Bignona, the main waterway of Ziguinchor.</div>
-                <p>
-            One of the main functions of national forests is to secure watersheds in the forested mountains so as to mitigate flooding in the rainy season and ensure a steady supply of water to the valleys throughout the year. This photo shows the Taylor River.
-                </p>
-            </section>
-
-            
-
-            <section id="7" class="scene" data-scene-id="place7">
-            
-                <p>
-            The agricultural lands of the Surprise Valley lie below the forested slopes of the Warner Range that are managed by the USFS to, in part, ensure stable water flows to the valley. The national forest lands provide this public good to the private sector agricultural interests and this emphasizes another reason why the USFS finds its home in the Department of Agriculture.
-                </p>
-
-                <p>
-            Important parts of the “multiple use” mission of the USFS are restoration and preservation. The photo on the left shows restoration of the endangered black-footed ferret while the photo on the right shows a trailhead into a wilderness area. Signed into law in 1964, The Wilderness Act recognized wilderness as “an area where the earth and its community of life are untrammeled by man, where man himself is a visitor who does not remain.” While wilderness areas have been established in all four of the public lands agencies, most wilderness areas are managed by the USFS.
-                </p>
-            <div id="figure10" class="figure " style="background-image:url(img/figure10.jpg);"></div>
-            <div class="caption">Figure 10: groundnuts (peanuts), mangoes, and numerous other products are prepared for shipment north.</div>
-                <p>
-            Recreation is an important part of the “multiple use” mission of the national forests. Recreation encompasses many uses and includes exploring by four-wheel drive vehicles, bicycles, river rafts, horseback, and by backpacking on foot.
-                </p>
-
-            </section>
-
-            <section id="8" class="scene" data-scene-id="place8">
-                <p>
-            This photo is the view toward the southwest from the eastern shoulder of the Aquarius Plateau. Much of the plateau lies above 11,000 feet elevation and the forested slopes are managed by the USFS. The BLM manages the land in the background.
-                </p>
+					                    <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2018.61.4f</div>
+			<!--<div class="figure contain" id="fig1" style="background-image:url(img/fig1.jpg);"></div>-->
+			<img src="img/fig1.jpg" class="figure"/>
+			<div class="caption">Figure 1. Grand Canyon view from Grand Canyon Lodge, North Rim</div>
+            <p>
+				For many people, upon hearing the term “America’s public lands,” the national parks come immediately to mind, and for good reason. The national parks form the crown jewel of the system of public lands in the United States, as illustrated in Figure 1 of the Grand Canyon. When President Theodore Roosevelt first saw the canyon in 1903, he stated: “Let this great wonder of nature remain as it now is. Do nothing to mar its grandeur, sublimity and loveliness. You cannot improve on it. But what you can do is to keep it for your children, your children’s children, and all who come after you, as the one great sight which every American should see” (History.com Staff 2009, 1). The Grand Canyon was not a national park when Roosevelt made that statement, but he used the power of his office to initiate a process by which it became one of the earliest national parks in the country. Roosevelt acted to ensure that this “great sight” would be preserved for future generations despite opposition from powerful development interests, and the National Park Service (NPS) has continued that very thing for over 100 years. But public lands in the United States do much more that preserve awe-inspiring natural environments for posterity, and the system of public lands serves a range of conservation as well as preservation purposes. 
+			</p><p>
+				Yet federal ownership and management of the lands has met considerable resistance both in the past and today. Campaigns have attempted to turn the federals lands over to the states or even to privatize them. In 1946--1947, the first so-called “sagebrush rebellion” attempted to do just that. But writing in Harpers, historian and essayist Bernard DeVoto rallied opposition: "The plan is to get rid of public lands altogether, turning them over to the states, which can be coerced as the federal government cannot be, and eventually to private ownership. . . Nothing in history suggests that the states are adequate to protect their own resources, or even want to, or suggests that cattlemen and sheepmen are capable of regulating themselves even for their own benefit, still less the public’s" (DeVoto 1947, 9). With the public’s support, the federal lands remained intact at that time. But the debate rages and continues to the present. The focus of this article is to help inform the debate with a brief overview of what the public lands are, where they are located, why they exist, and what they face in the future. 
                 
-                <p>
-            This view from the Kaibab Plateau in Arizona is looking north toward the Grand Staircase of Western Geology with its sequence of brightly colored cliffs that rise 5,500 feet and display 275 million years of geologic history. Most of it is preserved as federal public land with much of it in Grand Staircase Escalante National Monument (GSENM). The monument was established in 1996 on BLM land by presidential proclamation under the Antiquities Act which states that monuments be established to protect, in part, objects of “scientific interest” and that monument size must be the “smallest area compatible with proper care and management of the objects to be protected.” Debate swirls around the size of GSENM, but a key question remains, what is the smallest size needed to protect this landscape that is the “object of scientific interest?”
                 </p>
-
-                <p>
-            The BLM was created rather recently, in 1946, through a merging of existing federal agencies that centered on grazing and mining, and that focus persisted with the new agency. The logo created for the agency in 1952 shows a surveyor, logger, engineer, rancher, and miner standing shoulder to shoulder, and it symbolizes the agency’s emphasis at that time on resource extraction and development. Behind the men is a wagon train on the open prairie suggesting the past while in front of them lies a landscape symbolic of the imagined, developed future of railroad tracks, buildings, and other infrastructure. But a few years later, when the so-named “Environmental Decade” of the 1960s saw the rise of considerable efforts to address environmental issues, some governmental efforts impacted federal land management agencies, including the BLM. Even though the logo changed in 1964 to reflect the new priorities. it wasn’t until 1976 that the agency received a legislated mission from Congress to incorporate sustainable yield principles and multiple use values that included “scientific, scenic, historical, ecological, environmental, air and atmospheric, water resource and archeological” considerations.
-                </p>
-
-            
-
-                   
-               
-                <p>
-            The BLM manages the National Conservation Lands that are areas identified as ecologically rich and culturally significant. Ten designations exist and include National Monuments, National Conservation Areas, Wilderness and Wilderness Study Areas, Wild and Scenic Rivers, and National Scenic and Historic Trails. Established originally by the Department of Interior in 2000 and then legislated by Congress in 2009, this system recognizes that genuine conservation of natural and cultural resources entails protecting large areas that cover entire ecosystems and archaeological communities.
-                </p>
-
-                <p>
-			Federal public lands have been an inseparable part of American life since the country began. They played an essential role in establishment of the Articles of Confederation following the Revolutionary War when the former colonies agreed to cede to the nascent federal government much of their claims to land extending from the Atlantic Ocean to the Mississippi River. Federal authority over public lands was reinforced a few years later in the Constitution, and moreover, Article 4 of the Constitution stipulated a primary goal of Congress to “dispose” of the public lands to private interests for development of the country and its economy. This goal persisted throughout the 19th century and into the 20th in forms such as the Homestead Act, federal railroad grants, and other actions.                </p>
-
-                <p>
-				But change in the purpose of public lands began to emerge even in the early 20th century, as illustrated by President Theodore Roosevelt’s words in 1903 that the Grand Canyon was a “great wonder of nature [that should] remain as it now is.” The ideas of conservation and preservation of public lands grew with establishment of the USFS in 1905 and the NPS in 1916, agencies that advanced those goals throughout the 20th century. Then the “Environmental Decade” of the 1960s amplified recognition that public lands could play a crucial role in retaining a natural world that was diminishing in the face of the dominant development paradigm of resource extraction and use to fuel economic expansion. In 1976, the Federal Land Policy and Management Act (FLPMA) established law that formally reversed the policy of land “disposal” by recognizing the value of public lands and declaring that they should remain in public ownership.                </p>
-
-                <p>
-				Today in the United States, that dominant development paradigm seems to be producing diminishing marginal returns as it becomes increasingly questionable that continuous growth is a sustainable trajectory. And yet, human striving to maintain that paradigm is resulting in increased pressure to limit preservation of public lands and to push use of them to levels that could exceed sustainable conservation. Public lands have always been important in the velocity of development occurring in the United States, but it appears that now they have become central to the trajectory of that development as well. 
-            
-                </p>
-            </section>
-			<section>
-                <h3>Acknowledgements</h3>
-
-                <h3>References</h3>
-                <ul class="references">
-                </ul>
-             </section>
-            <div class="row footer-row"></div>
+        </section>
+        <section id="2" class="scene " data-scene-id="place2">
+			<h3>Public Lands: What and Why?</h3>
+			<img src="img/fig2.jpg" class="figure"/>
+			<div class="caption">Figure 2. Federal public lands management agencies.</div>
+            <p>
+				While public lands exist at state and local levels as well as federal, the focus in this article is on federal public lands. Four agencies carry primary responsibility for managing these lands that stretch across the United States, each with its own unique mission within the larger public-lands system (Figure 2). It is important to understand America’s public lands as a system of separate but interrelated components. While development of such a system was not generally intended historically, what emerged and persists today is an arrangement for managing public lands to meet a variety of purposes (Wilson 2014). Within the system there are two distinct purposes: preservation and conservation. Preservation entails maintaining natural environments in their present condition and as untouched by humans as possible, while conservation involves the sustainable use and management of natural environments and their resources to meet the needs and interests of people now and into the future (Wilson 2014). 
+			</p><p>The NPS focuses on preservation of natural environments and cultural heritage, and upon fostering public visitation and appreciation of these places. The United States Fish and Wildlife Service (USFWS) works to preserve habitat for wildlife, conservation of the resources, and maintenance of biological diversity. It also manages the National Wildlife Refuge System. The United States Forest Service (USFS) has primarily a conservation mission that advances multiple, sustainable uses of the environment for activities including forestry, grazing, mining, watershed regulation, and recreation, along with some ecological preservation. The Bureau of Land Management (BLM) has historically managed land for extractive resource development, and while this remains a priority, the agency is increasing its emphasis on multiple use, with particular emphasis on identification of special areas for conservation and restoration. Toward this latter end, the agency manages the National Landscape Conservation System (now known as the National Conservation Lands) (Wilson 2014).
+                
+            </p>
+        </section>
+        <section id="3" class="scene " data-scene-id="place3">
+			<h3>Public Lands: Where and Why?</h3>
+            <img src="img/fig3.jpg" class="figure"/>
+			<div class="caption">Figure 3. Map of federal lands and Indian reservations (USGS 2007)</div>
+            <p>
+                The map in Figure 3 from the National Atlas shows the distribution of federal lands across the United States. The four main land-management agencies are displayed, along with various other agencies that do not principally manage land for either preservation or conservation purposes. Federal land ownership is concentrated in the West, in part reflecting the settlement history of the country. The Eastern states were established at the country’s founding. Away from the coast, the federal government’s priority was to “dispose” of the lands, that is, to form new states where settlement and use by the country’s growing population and expanding economy could occur. Most lands in the West were acquired later in U.S. history through purchase or conquest. While the federal government still formed states in the West as part of its mandate to “dispose” of the lands, much of the land was not suitable for the agriculture that made so much of the more Midwestern lands attractive to private interests, and so it remained in public hands. The U.S. Constitution specifically states that such unowned lands did not automatically transfer to the states, but rather, the federal government retained authority over them (Wilson 2014).
+            </p>
+        </section>
+         <section id="4" class="scene " data-scene-id="place4">
+			 <div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-NationalParkService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">National Parks: What, Why, and What Next?</div></div>
+        <div class="row" style="overflow: hidden; margin: 30px -45px;">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <!--<div class="figure" style="margin: 0px; height: 250px; background-image:url(img/fig4a.jpg); background-position: 50% 100%;"></div>-->
+						<img src="img/fig4a.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <!--<div class="figure" style="margin: 0px; height: 250px; background-image:url(img/fig4c.jpg)"></div>-->
+						<img src="img/fig4c.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div id="progress">
-            <div id="bar"></div>
-        </div>
-        <div id="bar-top"></div>
-        <div id="bar-bottom"></div>
-        <!-- inject:templates:html -->
-        <!-- endinject -->
-        <script src="../../../js/combined.js"></script>
-        <script>
-			//rgb(225,181,74)
-			Focus.Map = Focus.Map || {};
+			<div class="col-12 col-sm-6">
+                <!--<div class="figure" style="margin: 0px; height: 500px; background-image:url(img/fig4b.jpg)"></div>-->
+				<img src="img/fig4b.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+            </div>
 
-			Focus.Map.defaultOptions = {
-				color: "rgb(225,181,74)",
-				fillColor: "rgb(225,181,74)",
-			    radius: 6,
-			    weight: 10,
-			    opacity: 0.3,
-				lineCap: 'square'
-			};
-            var scenes = {
-                "features": [{
+        </div>
+		<div class="caption">Figure 4. Views of Yosemite Valley and the Tenaya Lake area.</div>
+            <p>
+                The mission of the National Park Service to preserve awe-inspiring natural landscapes is well illustrated by Yosemite National Park, which was established in 1890 as the country’s second national park. The top photo in Figure 4 shows the granite cliffs of Yosemite Valley that were carved by glaciers and rise over 3,600 feet above the floor of Yosemite Valley (NPS 2017A). The photo on the right shows the vertical granite walls of the valley, while the bottom photo shows the Tenaya Lake area in the Yosemite high country, with the lake surrounded by granite domes, forests of lodgepole pine, and Yosemite’s vast wilderness (NPS 2015; Yosemite Mariposa County 2018). 
+            </p>
+        </section>
+        <section id="5" class="scene " data-scene-id="place5">
+            <img src="img/fig5.jpg" class="figure"/>
+	        <div class="row" style="overflow: hidden; margin: 30px -45px;">
+	            <div class="col-12 col-sm-6">
+					<!--<div class="figure" style="margin: 0px; height: 500px; background-image:url(img/fig5a.jpg)"></div>-->
+					<img src="img/fig5a.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+	            </div>
+				<div class="col-12 col-sm-6">
+	                <!--<div class="figure" style="margin: 0px; height: 500px; background-image:url(img/fig5c.jpg)"></div>-->
+					<img src="img/fig5c.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+	            </div>
+
+	        </div>
+			<img src="img/fig5b.jpg" class="figure"/>
+			<img src="img/fig5d.jpg" class="figure"/>
+			<img src="img/fig5e.jpg" class="figure"/>
+			<div class="caption">Figure 5. Grand Teton National Park and Yellowstone National Park.</div>
+            <p>
+                Grand Teton National Park (NPS 2017B) is preserved by the NPS as one of the crown jewels of America’s public lands, and it borders another one, Yellowstone National Park (NPS 2018A). Both parks are surrounded by USFS lands, and taken all together, these lands form the Greater Yellowstone Ecosystem, one of the largest, nearly intact temperate-zone ecosystems on earth that contains the largest concentration of wildlife in the lower forty-eight states. In the top photo in Figure 5, the Snake River runs along the eastern side of the Teton Range. The bottom photos show the landscapes, geysers, hot pools, and wildlife of Yellowstone.
+            </p>
+        </section>
+        <section id="6" class="scene " data-scene-id="place6">
+            <img src="img/fig6.jpg" class="figure"/>
+			<div class="caption">Figure 6. Badlands National Park</div>
+            <p>
+               Figure 6 is a view of Badlands National Park from the south at sunset, and it shows the strikingly beautiful geologic formation that is preserved as a national park and that also comprises one of the world’s richest fossil beds (NPS 2018B). The park also preserves one of the largest undisturbed, mixed-grass prairie ecosystems in the United States along with considerable numbers of wildlife species.  
+            </p>
+        </section>
+        <section id="7" class="scene " data-scene-id="place7">
+            <img src="img/fig7.jpg" class="figure"/>
+			<div class="caption">Figure 7. Great Sand Dunes National Park and Preserve</div>
+            <p>
+                Great Sand Dunes (Figure 7) preserves the highest dunes in North America and it extends to the crest of Colorado’s Sangre de Christo Range, which lies behind. These boundaries preserve a wide range of ecosystems, beginning with the grasslands, shrublands, and dunes with an elevation of over 7,500 feet at the base of the mountains and rising up through the riparian, montane forests/woodlands, subalpine forest/meadows, and alpine tundra that emerge with the increasing elevation along the slopes of the mountains to over 13,000 feet NPS 2016).
+            </p>
+        </section>
+        <section id="8" class="scene " data-scene-id="place8">
+			<div class="row" style="overflow: hidden; margin: 30px -45px;">
+            <div class="col-12 col-sm-6">
+                <!--<div class="figure" style="margin: 0px; height: 500px; max-height: 500px; background-image:url(img/fig8c.jpg)"></div>-->
+				<img src="img/fig8c.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <!--<div class="figure" style="margin: 0px; height: 250px; max-height: 250px; background-image:url(img/fig8b.jpg); background-position: 50% 100%;"></div>-->
+						<img src="img/fig8b.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <!--<div class="figure" style="margin: 0px; height: 250px; max-height: 250px; background-image:url(img/fig8d.jpg)"></div>-->
+						<img src="img/fig8d.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+                    </div>
+                </div>
+            </div>
+        	</div>
+			<div class="caption">Figure 8. Olympic National Park.</div>
+            <p>
+                Olympic National Park (Figure 8) preserves ecosystems in pristine condition, such as the rugged, cliffed Pacific shore and a temperate rainforest (NPS 2017C). The top photo shows the huge logs that are deposited along the beach after floating down the raging rivers in this high rainfall zone. The bottom photo shows Tatoosh Island, which lies offshore from Cape Flattery, the westernmost point in the forty-eight contiguous states. The park has been recognized internationally by UNESCO as an International Biosphere Reserve and World Heritage Site, and as such, is legally protected by international treaties as well as by the U.S. government (UNESCO 2018). 
+            </p>
+        </section>
+        <section id="9" class="scene " data-scene-id="place9">
+            <img src="img/fig9.jpg" class="figure"/>
+			<div class="caption">Figure 9. Organ Pipe National Monument.</div>
+            <p>
+				Organ Pipe is a “monument,” not a “park” even though it is a unit of the NPS and fulfills a preservation mission (NPS 2017D). National parks result from legislation passed by Congress and signed into law by a president while national monuments are established by presidential proclamation under authority of the Antiquities Act of 1906 (Wilson 2014). Parks are as close to permanent as possible in the U.S. system of government, but the status of monuments is more uncertain. Some monuments, such as Organ Pipe pictured in Figure 9 at sunset with silhouettes of the organ pipe and saguaro cacti of the Sonoran Desert ecosystem, are managed by the NPS and have very secure status. But national monuments can be managed by any of the federal public-lands agencies, and recently the status of some of them is being disputed. 
+			</p><p>While the national parks receive permanent legislative designation, funding for them, as for all public lands, comes from the domestic, discretionary portion of the federal budget, and as such, is subject to the annual appropriations process in which Congress and the president allocate specific amounts of funding. As the most well-known and visible public lands, the funding level for national parks (and the monuments within the NPS) will likely be adequate to retain the preservation and public awareness mission, but some modification may occur. For example, recent efforts by the secretary of the interior have called for allowing drilling for natural gas in national parks, something never before allowed or seen as part of their mission.
+                
+            </p>
+        </section>
+        <section id="10" class="scene " data-scene-id="place10">
+			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-FishAndWildlifeService-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Fish and Wildlife Lands: What, Why, and What Next?</div></div>
+			<img src="img/fig10d.jpg" class="figure"/>
+            <img src="img/fig10b.jpg" class="figure"/>
+			<img src="img/fig10c.jpg" class="figure"/>
+			<div class="caption">Figure 10. Bosque del Apache National Wildlife Reserve.</div>
+            <p>
+               Lands managed by the USFWS include those of the 560 units within the National Wildlife Refuge (NWR) system, many of which lie along one of the north-south “flyways” for migratory birds. The Bosque del Apache NWR (Figure 10) lies on the Rio Grande River and serves as wintering ground for various bird species including the snow geese and sandhill cranes shown here. Because the Rio Grande has been dammed extensively and the water diverted for irrigation of farms, the natural cycles of alternating floods and slack-water periods no longer provide the habitats in which these birds and other wildlife can flourish (USFWS 2017). Consequently, this refuge is managed to mimic those natural cycles by use of small canals, gates, and dams that flood and drain areas on seasonal schedules. In addition to management of the NWR system, the USFWS performs a wide range of additional, primarily conservation services: working with private landowners to establish easements that help to conserve and restore wildlife habitat, determining species that are endangered or threatened and developing plans for their protection, protecting and restoring fisheries and operating fish hatcheries, determining appropriate levels of hunting and fishing to allow and overseeing such use, and enforcing federal wildlife laws (Wilson 2014).
+            </p>
+        </section>
+        <section id="11" class="scene " data-scene-id="place11">
+            <img style="z-index: 10; width: 30%; margin-top: 30px; min-width: 150px;" class="img-thumbnail pull-right" src="img/fig11b.jpg">
+			<div class="figure" style="background-image:url(img/fig11c.jpg);"></div>
+			<div class="caption">Figure 11. Tallahatchie National Wildlife Refuge.</div>
+            <p>
+			   The Tallahatchie NWR (Figure 11) is part of a complex that consists of bottomland hardwood trees, early successional reforestation areas, various fields, and moist soil units that are located in the low-lying lands of the Mississippi Delta region. Bisected by the meandering Tippo Bayou, the Tallahatchie NWR is managed to conserve and restore the historically extensive forested wetlands of this region, which has been largely deforested and drained for commercial agricultural production (USFWS 2014). This kind of habitat conservation and restoration is a primary goal of the USFWS.
+			   	</p><p>As with all public lands, the USFWS is funded through annual appropriations in the domestic, discretionary portion of the federal budget, and consequently, the agency competes continually against other domestic priorities for funding to advance its mission. In addition to the overall funding level, however, Congressional and presidential priorities can change with different political makeups and result in different emphases among the components of the agency’s mission. For example, emphasis could shift between maintenance of habitat for endangered species and use of the resource for hunting, fishing, and increased public access.
+               
+            </p>
+        </section>
+        <section id="12" class="scene " data-scene-id="place12">
+			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/ForestServiceLogoOfficial.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">National Forests: What, Why, and What Next?</div></div>
+            <img src="img/fig12.jpg" class="figure"/>
+			<div class="caption">Figure 12. The Stanislaus National Forest.</div>
+            <p>
+                The USFS was created in 1905 when previously established forest reserves were consolidated into one agency with a clear conservation mandate. As the name implies, a primary mission of the USFS is to manage the nation’s forests (Figure 12), protecting them from wastefulness and ensuring sustainable timber yields. This mission considers forests to be a form of agriculture, and consequently, that is one important reason for housing this agency in the Department of Agriculture. Livestock grazing and hunting are also considered agricultural pursuits and form part of the “multiple use,” conservation mission well expressed in the USFS motto, “Land of Many Uses.” Recognizing the conflicting interests that would arise through this “multiple use” mission, Gifford Pinchot, the first chief of the USFS, stated, “[W]here conflicting interests must be reconciled, the question shall always be decided from the standpoint of the greatest good of the greatest number in the long run,” another motto of the USFS (Lewis 2005).
+            </p>
+        </section>
+        <section id="13" class="scene " data-scene-id="place13">
+			<img src="img/fig13.jpg" class="figure"/>
+			<img src="img/fig14.jpg" class="figure"/>
+			<div class="caption">Figure 13. Images that highlight the watershed conservation mission of the national forests.</div>
+            <p>
+                One of the main functions of national forests is to conserve watersheds in the forested mountains so as to mitigate flooding in the rainy season and ensure a steady supply of water to the valleys throughout the year. The top photo in Figure 13 shows the Taylor River as it flows through the Gunnison NF while the bottom photo shows the Surprise Valley in California that lies below the forested slopes of the Warner Range in Modoc NF. Agricultural lands lie downstream from many of the USFS lands and those agricultural lands benefit substantially from the forest and watershed management practiced by the USFS. The national forest lands provide this public good to the private-sector, agricultural interests and this highlights the important public/private relationships that exist in conservation efforts. This also emphasizes another reason why the USFS finds its home in the Department of Agriculture.
+            </p>
+        </section>
+        <section id="14" class="scene " data-scene-id="place14">
+			<div class="row" style="overflow: hidden; margin: 30px -45px;">
+            <div class="col-12 col-sm-6">
+            	<img src="img/fig15b.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+            </div>
+			<div class="col-12 col-sm-6">
+				<img src="img/fig16b.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+			</div>
+            </div>
+			<div class="caption">Figure 14. Examples of restoration and preservation efforts in the national forests.</div>
+            <p>
+                Important parts of the “multiple use” mission of the USFS include restoration and preservation. The photo on the left in Figure 14 shows restoration of the endangered black-footed ferret, while the photo on the right shows a trailhead into a wilderness area. Signed into law in 1964, the Wilderness Act recognized wilderness as “an area where the earth and its community of life are untrammeled by man, where man himself is a visitor who does not remain” (Public Law 88-577 1964, 891). While wilderness areas have been established in all four of the public lands agencies, most wilderness areas are managed by the USFS (USFS 2013).
+            </p>
+        </section>
+        <section id="15" class="scene " data-scene-id="place15">
+			<img src="img/fig17.jpg" class="figure"/>
+			<div class="caption">Figure 15. Recreation opportunities in the national forests include travel on the many forest service roads, this one through an aspen forest.</div>
+            <p>
+                Recreation is an important part of the “multiple use” mission of the national forests. Recreation encompasses many uses and includes exploring by four-wheel-drive vehicles, bicycles, river rafts, horseback, and backpacking on foot (Figure 15). Similar to NPS and the USFWS, the USFS continually vies for funding in the domestic, discretionary portion of the federal budget, and it could see changes in its land-management priorities, resulting from changing political orientations in the federal government. For example, how might the balance between grazing, logging, mining, recreation, and wilderness preservation in the USFS multiple-use mission change?
+            </p>
+        </section>
+        <section id="16" class="scene " data-scene-id="place16">
+			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-DOI-BureauOfLandManagement-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Bureau of Land Management: What, Why, and What Next?</div></div>
+            <img src="img/fig18.jpg" class="figure"/>
+			<div class="caption">Figure 16. View toward the southwest from the eastern shoulder of the Aquarius Plateau.</div>
+            <p>
+                Much of the Aquarius Plateau shown in the foreground of Figure 16 lies on USFS land above 11,000 feet elevation. The USFS manages this forested land for the full range of multiple use purposes. The BLM manages the land in the background of the photo as the Grand Staircase Escalante National Monument.
+            </p>
+        </section>
+        <section id="17" class="scene " data-scene-id="place17">
+            <img src="img/fig19.jpg" class="figure"/>
+			<div class="caption">Figure 17. The Grand Staircase of Western Geology</div>
+            <p>
+               This view in Figure 17 is from the Kaibab Plateau in Arizona looking north toward the Grand Staircase with its distinctive brightly colored cliffs that rise 5,500 feet and display 275 million years of geologic history. Most of the area is preserved as federal public land, with much of it in Grand Staircase Escalante National Monument (GSENM). The monument was established in 1996 on BLM land by presidential proclamation under the Antiquities Act, which states that monuments be established to protect, in part, objects of “scientific interest” and that monument size must be the “smallest area compatible with proper care and management of the objects to be protected” (Public Law 59-209 1906, 464). Debate swirls around the size of GSENM. On December 4, 2017, President Trump signed a proclamation reducing the boundaries of this monument, but lawsuits were filed immediately challenging the action. The lawsuits maintain that the Antiquities Act gives presidents authority to create a national monument, but only Congress can revoke or reduce one. Whatever the outcome of this legal battle, a key question remains: what is the smallest size needed to protect this landscape of the Grand Staircase of Western Geology as an “object of scientific interest?”
+            </p>
+        </section>
+        <section id="18" class="scene " data-scene-id="place18">
+			<img src="img/fig20.jpg" class="figure" />
+			<div class="caption">Figure 18, Logos of the BLM: (A) 1952-1964 (PLF No Date); (B) 1964-present (Munn and Stuart 1988)</div>
+            <p>
+              The BLM was created comparatively recently, in 1946, from a merger of existing federal agencies that centered on grazing and mining (Wilson 2014). As can be seen in Figure 18A, the agency’s early logo showed a surveyor, logger, engineer, rancher, and miner standing shoulder to shoulder and symbolizing how the BLM retained an emphasis on resource extraction and development. Behind the men is a wagon train on the open prairie, suggesting the past while in front of them lies a landscape symbolic of the imagined, developed future of railroad tracks, buildings, and other infrastructure. But a few years later, the so-named “environmental decade” of the 1960s saw the rise of considerable efforts to address environmental issues. In response, the federal government changed and expanded its priorities, with specific impacts on federal land-management agencies, including the BLM. While the logo changed in 1964 to reflect the new priorities (Figure 18B), it was only in 1976 that the agency received a legislated mission from Congress to incorporate sustainable-yield principles and multiple-use values based on “scientific, scenic, historical, ecological, environmental, air and atmospheric, water resource and archeological” considerations (BLM 2001, 1).
+            </p>
+        </section>
+        <section id="19" class="scene " data-scene-id="place19">
+	        <div class="row" style="overflow: hidden; margin: 30px -45px;">
+	            <div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-6">
+							<!--<div class="figure" style="margin: 0px; height: 250px; max-height: 250px; background-image:url(img/fig21b.jpg); background-position: 50% 100%;"></div>-->
+							<img src="img/fig21b.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+						</div>
+						<div class="col-sm-6">
+							<!--<div class="figure" style="margin: 0px; height: 250px; max-height: 250px; background-image:url(img/fig21c.jpg); background-position: 50% 100%;"></div>-->
+							<img src="img/fig21c.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+						</div>
+					</div>
+	                <div class="row">
+						<div class="col-sm-12">
+							<!--<div class="figure" style="margin: 0px; height: 250px; max-height: 250px; background-image:url(img/fig21d.jpg)"></div>-->
+							<img src="img/fig21d.jpg" class="figure" style="width: 100%; margin: 0px;"/>
+						</div>
+					</div>
+	            </div>
+	        </div>
+			<div class="caption">Figure 19. Photos of the Rio Grande del Norte National Monument.</div>
+            <p>
+			  The BLM manages the National Conservation Lands that are areas identified as ecologically rich and culturally significant. Ten designations exist and include National Monuments, National Conservation Areas, Wilderness and Wilderness Study Areas, Wild and Scenic Rivers, and National Scenic and Historic Trails. Established originally by the Department of Interior in 2000 and then legislated by Congress in 2009, this system recognizes that genuine conservation of natural and cultural resources entails protecting large areas that cover entire ecosystems and archaeological communities (BLM 2018; Conservation Lands Foundation 2018). Figure 19 shows one of these units.
+			  	</p><p>But public lands managed by the BLM, including the National Conservation Lands, are perhaps the most vulnerable to changing political orientations that may shift efforts increasingly from conservation and toward resource extraction, especially given the agency’s heritage as focused on development, its considerable acreage, and its many national monuments. And as with the other parts of the system, the BLM is also subject to annual appropriations that could squeeze its efforts. 
+              
+            </p>
+        </section>
+        <section id="21" class="scene " data-scene-id="place21">
+			<div class="row park-title"><div class="col-12 col-sm-2 col-xs-2"><img src="img/US-DOI-BureauOfLandManagement-Logo.svg"></div><div class="col-12 col-sm-10 col-xs-10 title-value">Why and What Next for the Public Lands?</div></div>
+           	<img src="img/fig22.jpg" class="figure"/>
+			<div class="caption">Figure 20. The headwaters of the Rio Grande River.</div>
+            <p>
+			   Federal public lands have been an inseparable part of American life since the country began. They played an essential role in establishment of the Articles of Confederation following the Revolutionary War when the former colonies only agreed to form a republic by ceding to the nascent federal government much of their claims to land extending from the Appalachian Mountains to the Mississippi River. Federal authority over public lands was strongly reinforced a few years later in the Constitution which also stipulated that a primary goal of Congress was to “dispose” of the public lands to private interests for development of the country and its economy. This goal persisted throughout the nineteenth century and into the twentieth in forms such as the Homestead Act, federal railroad grants, and other actions. 
+			   But change in the purpose of public lands began to emerge even in the early twentieth century, as illustrated by President Roosevelt’s words in 1903 that the Grand Canyon was a “great wonder of nature [that should] remain as it now is.” The ideas of conservation and preservation of public lands grew with establishment of the USFS in 1905 and the NPS in 1916, agencies that advanced conservation and preservation goals throughout the twentieth century. Figure 20 helps illustrate both these goals, with forest and watershed conservation shown in the foreground while preservation of high mountain wilderness areas is visible in the background. </p><p>
+			   The “environmental decade” of the 1960s amplified recognition that public lands could play a crucial role in retaining a natural world that was diminishing in the face of the dominant economic expansionist development paradigm that depended on resource extraction and use. In 1976, the Federal Land Policy and Management Act (FLPMA) established law that formally reversed the policy of land “disposal” by recognizing the value of public lands and declaring that they should remain in public ownership (Public Law 94-579 1976).
+			   	</p><p>Today in the United States, public lands are torn between paradigms of preservation, conservation, and development. The development paradigm did much to improve the country during the nineteenth and much of the twentieth centuries, but in recent decades, it seems to be producing diminishing marginal returns. Yet human striving to maintain that development paradigm is resulting in increased pressure to curtail preservation efforts and to exceed levels of sustainable conservation. America faces questions about the kinds of improvements that are best suited to conditions in contemporary times and public lands are integral to the answers that develop. The balance between continued or amplified extractive development and attention to preservation and conservation will continue to be played out on the public lands.
+				</p>
+				<h3>References</h3>
+               <ul class="references">
+               	
+				<li>BLM (Bureau of Land Management). 2001, Federal Land Policy and Management Act of 1976 As Amended. Denver CO: Bureau of Land Management. [https://www.blm.gov/or/regulations/files/FLPMA.pdf].</li>
+				<li>________ 2018. National Conservation Lands. Washington DC: Bureau of Land Management. [https://www.blm.gov/programs/national-conservation-lands].</li>
+				<li>
+				Conservation Lands Foundation. 2018, About the National Conservation Lands. Durango CO: Conservation Lands Foundation. [https://conservationlands.org/conservationlands/about-the-national-conservation-lands]</li>
+				<li>
+				DeVoto, B. A. 1947. The West Against Itself. The Harpers Monthly, January: 1-13. [http://mdevotomusic.org/?p=94].</li>
+				<li>
+				History.com Staff. 2009. Roosevelt Dedicates the Grand Canyon as a National Monument. New York: A+E Networks. [http://www.history.com/this-day-in-history/roosevelt-dedicates-the-grand-canyon-as-a-national-monument].</li>
+				<li>
+				Lewis, J. G. 2005, The Forest Service and the Greatest Good: A Centennial History. Durham NC: The Forest History Society.</li>
+				<li>
+				Munn, J. and H. R, Stuart. 1988. Opportunity and Challenge: The Story of BLM. Washington DC: Department of the Interior Bureau of Land Management. [https://www.nps.gov/parkhistory/online_books/blm/history/chap3.htm] </li>
+				<li>
+				NPS (National Park Service) 2015. Tenaya Lake Area Plan. Yosemite National Park CA: Yosemite National Park. [https://www.nps.gov/yose/learn/management/tenaya.htm]</li>
+				<li>
+				________ 2016. Natural Features and Ecosystems. Mosco CO: Great Sand Dunes National Park & Preserve. [https://www.nps.gov/grsa/learn/nature/naturalfeaturesandecosystems.htm].</li>
+				<li>
+				________ 2017A. Yosemite. Yosemite National Park CA: Yosemite National Park. [https://www.nps.gov/yose/index.htm].</li>
+				<li>
+				________ 2017B. Mountains of the Imagination. Moose WY: Grand Teton National Park. [https://www.nps.gov/grte/index.htm].</li>
+				<li>
+				________ 2017C. Discover Olympic’s Diverse Wilderness. Port Angeles WA: Olympic National Park. [https://www.nps.gov/olym/index.htm].</li>
+				<li>
+				________ 2017D. Life Abounds in the Sonoran Desert. Ajo AZ: Organ Pipe National Monument. [https://www.nps.gov/orpi/index.htm].</li>
+				<li>
+				________ 2018A. Marvel. Explore. Discover. Yellowstone National Park WY: Yellowstone National Park. [https://www.nps.gov/yell/index.htm].</li>
+				<li>
+				________ 2018B. Good Times in the Badlands. Interior SD: Badlands National Park. [https://www.nps.gov/badl/index.htm].</li>
+				<li>
+				Public Law 59-209 (16 USC 431-433). 1906. American Antiquities Act of 1906. [https://www.gpo.gov/fdsys/pkg/USCODE-2011-title16/pdf/USCODE-2011-title16-chap1-subchapLXI-sec431.pdf]</li>
+				<li>
+				Public Law 88-577 (16 U.S.C. 1131-1136). 1964. The Wilderness Act. [https://www.gpo.gov/fdsys/pkg/STATUTE-78/pdf/STATUTE-78-Pg890.pdf].</li>
+				<li>
+				Public Law 94-579 (43 U.S.C. 1701-1787). 1976. Federal Land Policy and Management Act of 1976, [https://www.gpo.gov/fdsys/pkg/STATUTE-90/pdf/STATUTE-90-Pg2743.pdf]</li>
+				<li>
+				PLF (Public Lands Foundation). No Date. Bureau of Land Management - Official Shield / Logo of the DOI / BLM old design. Washington DC: Public Lands Foundation. [https://publicland.org/plf-archives/35_archives/photos/0001-9000/1295.jpg]</li>
+				<li>
+				UNESCO (United Nations Educational, Scientific, and Cultural Organization). 2018. Olympic National Park. Paris: UNESCO. [http://whc.unesco.org/en/list/151;].</li>
+				<li>
+				USFS (United States Forest Service). 2013, Wilderness. Washington DC: USDA Forest Service [https://www.fs.fed.us/managing-land/wilderness]</li>
+				<li>
+				USFWS (United States Fish and Wildlife Service). 2014. About the Complex. Grenada MS: Tallahatchie National Wildlife Refuge. [https://www.fws.gov/refuge/Tallahatchie/About_the_Complex.html]</li>
+				<li>
+				________ 2017. Resource Management. Socorro NM: Bosque del Apache National Wildlife Refuge. [https://www.fws.gov/refuge/Bosque_del_Apache/what_we_do/resource_management.html]</li>
+				<li>
+				USGS (United States Geological Survey). 2007. The National Map. Reston VA: USGS. [https://nationalmap.gov/small_scale/printable/fedlands.html#list].</li>
+				<li>
+				Wilson, R. K. 2014. America’s Public Lands: From Yellowstone to Smokey Bear and Beyond. London: Rowman & Littlefield.</li>
+				<li>
+				Yosemite Mariposa County. 2018. Tenya Lake. Mariposa CA: Yosemite Mariposa County Tourist Bureau. [https://www.yosemite.com/what-to-do/tenaya-lake/].</li>
+               </ul>
+			   <div class="row footer-row"></div>
+        </section>
+    </div>
+</div>
+<div id="progress">
+    <div id="bar"></div>
+</div>
+<div id="bar-top"></div>
+<div id="bar-bottom"></div>
+<!-- inject:templates:html -->
+<!-- endinject -->
+<script src="../../../js/combined.js"></script>
+<script>
+    Focus.Map = {};
+	/*
+                "radius": 6,
+                "fill": true,
+				"weight": 3,
+                "color": "rgba(255,151,53,1)",
+	*/
+    Focus.Map.defaultOptions = {
+        //color: 'rgba(140, 207, 150,1)',
+        //fillColor: 'rgba(140, 207, 150,1)'
+        color: "#FAE5E4",
+        fillColor: "#FAE5E4",
+        radius: 10,
+        weight: 14,
+        opacity: 0.3
+    };
+
+    Focus.Map.options = {};
+    Focus.Map.options.panes = [];
+	
+    var scenes = {
+        /*********** Features (within each scene) here ***********/
+            "features": [
+            {
+                "id": "united_states",
+                "type": "geojson",
+                "style": {
+                    "text": {
+                        "text": "United States",
+                        "style": {
+                            "fill": "rgba(0,0,0,0.1)",
+                            "font-size": '15px'
+                        }
+                    }
+                },
+                "data": { 
+                    "type": "Feature", 
+                    "properties":{ 
+                        "name":"United States of America"
+                    },
+                    "geometry":{ 
+                        "type":"MultiPolygon",
+                        "coordinates":[[[[-155.54211,19.08348],[-155.68817,18.91619],[-155.93665,19.05939],[-155.90806,19.33888],[-156.07347,19.70294],[-156.02368,19.81422],[-155.85008,19.97729],[-155.91907,20.17395],[-155.86108,20.26721],[-155.78505,20.2487],[-155.40214,20.07975],[-155.22452,19.99302],[-155.06226,19.8591],[-154.80741,19.50871],[-154.83147,19.45328],[-155.22217,19.23972],[-155.54211,19.08348]]],[[[-156.07926,20.64397],[-156.41445,20.57241],[-156.58673,20.783],[-156.70167,20.8643],[-156.71055,20.92676],[-156.61258,21.01249],[-156.25711,20.91745],[-155.99566,20.76404],[-156.07926,20.64397]]],[[[-156.75824,21.17684],[-156.78933,21.06873],[-157.32521,21.09777],[-157.25027,21.21958],[-156.75824,21.17684]]],[[[-157.65283,21.32217],[-157.70703,21.26442],[-157.7786,21.27729],[-158.12667,21.31244],[-158.2538,21.53919],[-158.29265,21.57912],[-158.0252,21.71696],[-157.94161,21.65272],[-157.65283,21.32217]]],[[[-159.34512,21.982],[-159.46372,21.88299],[-159.80051,22.06533],[-159.74877,22.1382],[-159.5962,22.23618],[-159.36569,22.21494],[-159.34512,21.982]]],[[[-94.81758,49.38905],[-94.64,48.84],[-94.32914,48.67074],[-93.63087,48.60926],[-92.61,48.45],[-91.64,48.14],[-90.83,48.27],[-89.6,48.01],[-89.272917,48.019808],[-88.378114,48.302918],[-87.439793,47.94],[-86.461991,47.553338],[-85.652363,47.220219],[-84.87608,46.900083],[-84.779238,46.637102],[-84.543749,46.538684],[-84.6049,46.4396],[-84.3367,46.40877],[-84.14212,46.512226],[-84.091851,46.275419],[-83.890765,46.116927],[-83.616131,46.116927],[-83.469551,45.994686],[-83.592851,45.816894],[-82.550925,45.347517],[-82.337763,44.44],[-82.137642,43.571088],[-82.43,42.98],[-82.9,42.43],[-83.12,42.08],[-83.142,41.975681],[-83.02981,41.832796],[-82.690089,41.675105],[-82.439278,41.675105],[-81.277747,42.209026],[-80.247448,42.3662],[-78.939362,42.863611],[-78.92,42.965],[-79.01,43.27],[-79.171674,43.466339],[-78.72028,43.625089],[-77.737885,43.629056],[-76.820034,43.628784],[-76.5,44.018459],[-76.375,44.09631],[-75.31821,44.81645],[-74.867,45.00048],[-73.34783,45.00738],[-71.50506,45.0082],[-71.405,45.255],[-71.08482,45.30524],[-70.66,45.46],[-70.305,45.915],[-69.99997,46.69307],[-69.237216,47.447781],[-68.905,47.185],[-68.23444,47.35486],[-67.79046,47.06636],[-67.79134,45.70281],[-67.13741,45.13753],[-66.96466,44.8097],[-68.03252,44.3252],[-69.06,43.98],[-70.11617,43.68405],[-70.645476,43.090238],[-70.81489,42.8653],[-70.825,42.335],[-70.495,41.805],[-70.08,41.78],[-70.185,42.145],[-69.88497,41.92283],[-69.96503,41.63717],[-70.64,41.475],[-71.12039,41.49445],[-71.86,41.32],[-72.295,41.27],[-72.87643,41.22065],[-73.71,40.931102],[-72.24126,41.11948],[-71.945,40.93],[-73.345,40.63],[-73.982,40.628],[-73.952325,40.75075],[-74.25671,40.47351],[-73.96244,40.42763],[-74.17838,39.70926],[-74.90604,38.93954],[-74.98041,39.1964],[-75.20002,39.24845],[-75.52805,39.4985],[-75.32,38.96],[-75.071835,38.782032],[-75.05673,38.40412],[-75.37747,38.01551],[-75.94023,37.21689],[-76.03127,37.2566],[-75.72205,37.93705],[-76.23287,38.319215],[-76.35,39.15],[-76.542725,38.717615],[-76.32933,38.08326],[-76.989998,38.239992],[-76.30162,37.917945],[-76.25874,36.9664],[-75.9718,36.89726],[-75.86804,36.55125],[-75.72749,35.55074],[-76.36318,34.80854],[-77.397635,34.51201],[-78.05496,33.92547],[-78.55435,33.86133],[-79.06067,33.49395],[-79.20357,33.15839],[-80.301325,32.509355],[-80.86498,32.0333],[-81.33629,31.44049],[-81.49042,30.72999],[-81.31371,30.03552],[-80.98,29.18],[-80.535585,28.47213],[-80.53,28.04],[-80.056539,26.88],[-80.088015,26.205765],[-80.13156,25.816775],[-80.38103,25.20616],[-80.68,25.08],[-81.17213,25.20126],[-81.33,25.64],[-81.71,25.87],[-82.24,26.73],[-82.70515,27.49504],[-82.85526,27.88624],[-82.65,28.55],[-82.93,29.1],[-83.70959,29.93656],[-84.1,30.09],[-85.10882,29.63615],[-85.28784,29.68612],[-85.7731,30.15261],[-86.4,30.4],[-87.53036,30.27433],[-88.41782,30.3849],[-89.18049,30.31598],[-89.593831,30.159994],[-89.413735,29.89419],[-89.43,29.48864],[-89.21767,29.29108],[-89.40823,29.15961],[-89.77928,29.30714],[-90.15463,29.11743],[-90.880225,29.148535],[-91.626785,29.677],[-92.49906,29.5523],[-93.22637,29.78375],[-93.84842,29.71363],[-94.69,29.48],[-95.60026,28.73863],[-96.59404,28.30748],[-97.14,27.83],[-97.37,27.38],[-97.38,26.69],[-97.33,26.21],[-97.14,25.87],[-97.53,25.84],[-98.24,26.06],[-99.02,26.37],[-99.3,26.84],[-99.52,27.54],[-100.11,28.11],[-100.45584,28.69612],[-100.9576,29.38071],[-101.6624,29.7793],[-102.48,29.76],[-103.11,28.97],[-103.94,29.27],[-104.45697,29.57196],[-104.70575,30.12173],[-105.03737,30.64402],[-105.63159,31.08383],[-106.1429,31.39995],[-106.50759,31.75452],[-108.24,31.754854],[-108.24194,31.34222],[-109.035,31.34194],[-111.02361,31.33472],[-113.30498,32.03914],[-114.815,32.52528],[-114.72139,32.72083],[-115.99135,32.61239],[-117.12776,32.53534],[-117.295938,33.046225],[-117.944,33.621236],[-118.410602,33.740909],[-118.519895,34.027782],[-119.081,34.078],[-119.438841,34.348477],[-120.36778,34.44711],[-120.62286,34.60855],[-120.74433,35.15686],[-121.71457,36.16153],[-122.54747,37.55176],[-122.51201,37.78339],[-122.95319,38.11371],[-123.7272,38.95166],[-123.86517,39.76699],[-124.39807,40.3132],[-124.17886,41.14202],[-124.2137,41.99964],[-124.53284,42.76599],[-124.14214,43.70838],[-124.020535,44.615895],[-123.89893,45.52341],[-124.079635,46.86475],[-124.39567,47.72017],[-124.68721,48.184433],[-124.566101,48.379715],[-123.12,48.04],[-122.58736,47.096],[-122.34,47.36],[-122.5,48.18],[-122.84,49],[-120,49],[-117.03121,49],[-116.04818,49],[-113,49],[-110.05,49],[-107.05,49],[-104.04826,48.99986],[-100.65,49],[-97.22872,49.0007],[-95.15907,49],[-95.15609,49.38425],[-94.81758,49.38905]]],[[[-153.006314,57.115842],[-154.00509,56.734677],[-154.516403,56.992749],[-154.670993,57.461196],[-153.76278,57.816575],[-153.228729,57.968968],[-152.564791,57.901427],[-152.141147,57.591059],[-153.006314,57.115842]]],[[[-165.579164,59.909987],[-166.19277,59.754441],[-166.848337,59.941406],[-167.455277,60.213069],[-166.467792,60.38417],[-165.67443,60.293607],[-165.579164,59.909987]]],[[[-171.731657,63.782515],[-171.114434,63.592191],[-170.491112,63.694975],[-169.682505,63.431116],[-168.689439,63.297506],[-168.771941,63.188598],[-169.52944,62.976931],[-170.290556,63.194438],[-170.671386,63.375822],[-171.553063,63.317789],[-171.791111,63.405846],[-171.731657,63.782515]]],[[[-155.06779,71.147776],[-154.344165,70.696409],[-153.900006,70.889989],[-152.210006,70.829992],[-152.270002,70.600006],[-150.739992,70.430017],[-149.720003,70.53001],[-147.613362,70.214035],[-145.68999,70.12001],[-144.920011,69.989992],[-143.589446,70.152514],[-142.07251,69.851938],[-140.985988,69.711998],[-140.992499,66.000029],[-140.99777,60.306397],[-140.012998,60.276838],[-139.039,60.000007],[-138.34089,59.56211],[-137.4525,58.905],[-136.47972,59.46389],[-135.47583,59.78778],[-134.945,59.27056],[-134.27111,58.86111],[-133.355549,58.410285],[-132.73042,57.69289],[-131.70781,56.55212],[-130.00778,55.91583],[-129.979994,55.284998],[-130.53611,54.802753],[-131.085818,55.178906],[-131.967211,55.497776],[-132.250011,56.369996],[-133.539181,57.178887],[-134.078063,58.123068],[-135.038211,58.187715],[-136.628062,58.212209],[-137.800006,58.499995],[-139.867787,59.537762],[-140.825274,59.727517],[-142.574444,60.084447],[-143.958881,59.99918],[-145.925557,60.45861],[-147.114374,60.884656],[-148.224306,60.672989],[-148.018066,59.978329],[-148.570823,59.914173],[-149.727858,59.705658],[-150.608243,59.368211],[-151.716393,59.155821],[-151.859433,59.744984],[-151.409719,60.725803],[-150.346941,61.033588],[-150.621111,61.284425],[-151.895839,60.727198],[-152.57833,60.061657],[-154.019172,59.350279],[-153.287511,58.864728],[-154.232492,58.146374],[-155.307491,57.727795],[-156.308335,57.422774],[-156.556097,56.979985],[-158.117217,56.463608],[-158.433321,55.994154],[-159.603327,55.566686],[-160.28972,55.643581],[-161.223048,55.364735],[-162.237766,55.024187],[-163.069447,54.689737],[-164.785569,54.404173],[-164.942226,54.572225],[-163.84834,55.039431],[-162.870001,55.348043],[-161.804175,55.894986],[-160.563605,56.008055],[-160.07056,56.418055],[-158.684443,57.016675],[-158.461097,57.216921],[-157.72277,57.570001],[-157.550274,58.328326],[-157.041675,58.918885],[-158.194731,58.615802],[-158.517218,58.787781],[-159.058606,58.424186],[-159.711667,58.93139],[-159.981289,58.572549],[-160.355271,59.071123],[-161.355003,58.670838],[-161.968894,58.671665],[-162.054987,59.266925],[-161.874171,59.633621],[-162.518059,59.989724],[-163.818341,59.798056],[-164.662218,60.267484],[-165.346388,60.507496],[-165.350832,61.073895],[-166.121379,61.500019],[-165.734452,62.074997],[-164.919179,62.633076],[-164.562508,63.146378],[-163.753332,63.219449],[-163.067224,63.059459],[-162.260555,63.541936],[-161.53445,63.455817],[-160.772507,63.766108],[-160.958335,64.222799],[-161.518068,64.402788],[-160.777778,64.788604],[-161.391926,64.777235],[-162.45305,64.559445],[-162.757786,64.338605],[-163.546394,64.55916],[-164.96083,64.446945],[-166.425288,64.686672],[-166.845004,65.088896],[-168.11056,65.669997],[-166.705271,66.088318],[-164.47471,66.57666],[-163.652512,66.57666],[-163.788602,66.077207],[-161.677774,66.11612],[-162.489715,66.735565],[-163.719717,67.116395],[-164.430991,67.616338],[-165.390287,68.042772],[-166.764441,68.358877],[-166.204707,68.883031],[-164.430811,68.915535],[-163.168614,69.371115],[-162.930566,69.858062],[-161.908897,70.33333],[-160.934797,70.44769],[-159.039176,70.891642],[-158.119723,70.824721],[-156.580825,71.357764],[-155.06779,71.147776]]]]}}
+            },{
                     "id": "grand_canyon",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Grand Canyon"
                         }
@@ -397,9 +700,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "yosemite",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Yosemite"
                         }
@@ -415,12 +718,34 @@ But public lands in the United States do much more that preserve awe-inspiring n
                         }
                     }
                 },{
+                    "id": "yellowstone",
+                    "type": "geojson",
+                    "style": {
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
+                        "text": {
+                            "text": "Yellowstone"
+                        }
+                    },
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-110.588455, 44.42793]
+                        },
+                        "properties": {
+                            "name": "Yellowstone"
+                        }
+                    }
+                },//44.42793 x -110.588455
+				{
                     "id": "grand_teton",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Grand Teton"
                         }
@@ -439,9 +764,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "badlands",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Badlands"
                         }
@@ -460,9 +785,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "sand_dunes",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Great Sand Dunes"
                         }
@@ -481,9 +806,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "olympic",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Olympic"
                         }
@@ -502,9 +827,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "organ_pipe",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Organ Pipe"
                         }
@@ -523,9 +848,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "bosque_del_apache",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Bosque Del Apache"
                         }
@@ -544,9 +869,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "tallahatchie",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Tallahatchie"
                         }
@@ -565,9 +890,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "stanislaus",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Stanislaus"
                         }
@@ -586,9 +911,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "gunnison",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Gunnison"
                         }
@@ -607,9 +932,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "surprise_valley",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Surprise Valley"
                         }
@@ -628,9 +953,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "buffalo_gap",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Buffalo Gap"
                         }
@@ -649,9 +974,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "modoc",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Modoc"
                         }
@@ -670,9 +995,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "manti",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Manti La Sal"
                         }
@@ -691,9 +1016,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "dixie",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Dixie"
                         }
@@ -712,9 +1037,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "grand_staircase",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Grand Staircase Escalante"
                         }
@@ -733,9 +1058,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "rio_grande_norte",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Rio Grande del Norte"
                         }
@@ -754,9 +1079,9 @@ But public lands in the United States do much more that preserve awe-inspiring n
                     "id": "rio_grande",
                     "type": "geojson",
                     "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
+                        "radius": 6,
+                        "fill": true,
+                        "stroke": true,
                         "text": {
                             "text": "Rio Grande"
                         }
@@ -772,560 +1097,1035 @@ But public lands in the United States do much more that preserve awe-inspiring n
                         }
                     }
                 }  ],
-                "scenes": [
-                    {
-                        "id": "place1",
-                        "baseLayer": {
-                            "type": "tile",
-                            "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        },
-                        "layers": [
-                            {"idRef": "grand_canyon"},
-                            {"idRef": "yosemite"},
-                            {"idRef": "grand_teton"},
-                            {"idRef": "badlands"},
-                            {"idRef": "sand_dunes"},
-                            {"idRef": "olympic"},
-                            {"idRef": "organ_pipe"},
-                            {"idRef": "bosque_del_apache"},
-                            {"idRef": "tallahatchie"},
-                            {"idRef": "stanislaus"},
-                            {"idRef": "gunnison"},
-                            {"idRef": "surprise_valley"},
-                            {"idRef": "buffalo_gap"},
-                            {"idRef": "manti"},
-                            {"idRef": "dixie"},
-                            {"idRef": "grand_staircase"},
-                            {"idRef": "rio_grande_norte"},
-                            {"idRef": "rio_grande"},
-
-                        ],
-                        "zoom": 4,
-                        "style": {
-                            "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            // "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },
-                    {
-                        "id": "place2",
-                        "baseLayer": [{
-						                            "type": "wmts",
-						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-						                            "params": {
-						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-						                                maxNativeZoom: 9,
-						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-						                                time: '2016-05-17',
-						                                detectRetina: true,
-						                                subdomains: "abc",
-						                                noWrap: true,
-						                                continuousWorld: true,
-						                                crs: L.CRS.EPSG3857,
-						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-						                            }
-						                        }],
-                        "layers": [
-                            {"idRef": "senegal"}, //FIX ME: can take out for this scene
-                            {"idRef": "casamance"},
-                            {"idRef": "dakar"},
-                            {"idRef": "gambia_river"},
-							{"idRef": "ziguinchor"}
-                            // {"idRef": "gambia"}
-
-                        ],
-                        //"center": [-113.081667,26.846944],
-                        "zoom": 7,
-                        "style": {
-                            "filter": "sepia(40%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },
-                    {
-                        "id": "place3",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 8,
-                        "layers": [
-                            {"idRef": "truck_route"},
-                            {"idRef": "ziguinchor"},
-                            {"idRef": "casamance"},
-							{"idRef": "diop_university"},
-                            {"idRef": "dakar"},
-                            {"idRef": "gambia_river"},
-							{"idRef": "cap_skirring"}
-                        ],
-                        "baseLayer": [{
-                        	"type": "esri-basemap",
-                        	"url": "DarkGray",
-                        	"options": {
-                            	"detectRetina": true
-                        	}
-						}],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place4",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 8,
-                        "layers": [
-                            {"idRef": "casamance"},
-                            {"idRef": "cap_skirring"},
-                        ],
-						"baseLayer": [{
-						                            "type": "wmts",
-						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-						                            "params": {
-						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-						                                maxNativeZoom: 9,
-						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-						                                time: '2016-05-17',
-						                                detectRetina: true,
-						                                subdomains: "abc",
-						                                noWrap: true,
-						                                continuousWorld: true,
-						                                crs: L.CRS.EPSG3857,
-						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-						                            }
-						                        }],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place5",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 7,
-                        "layers": [
-							{"idRef": "senegal"},
-                            {"idRef": "casamance"},
-                            {"idRef": "dakar"},
-                            {"idRef": "ziguinchor"},
-                            {"idRef": "mlomp"}
-                            
-                        ],
-                        "baseLayer": [{
-						                            "type": "wmts",
-						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-						                            "params": {
-						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-						                                maxNativeZoom: 9,
-						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-						                                time: '2016-05-17',
-						                                detectRetina: true,
-						                                subdomains: "abc",
-						                                noWrap: true,
-						                                continuousWorld: true,
-						                                crs: L.CRS.EPSG3857,
-						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-						                            }
-						                        }],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place6",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 8,
-                        "layers": [
-                            {"idRef": "casamance"},
-                            // {"idRef": "ziguinchor"},
-                            {"idRef": "joola_wreck"},
-							{"idRef": "joola_route"},
-                            {"idRef": "dakar_port"},
-                            {"idRef": "ziguinchor_port"}
-                            
-                        ],
-                        "baseLayer": [{
-						                            "type": "wmts",
-						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-						                            "params": {
-						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-						                                maxNativeZoom: 9,
-						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-						                                time: '2016-05-17',
-						                                detectRetina: true,
-						                                subdomains: "abc",
-						                                noWrap: true,
-						                                continuousWorld: true,
-						                                crs: L.CRS.EPSG3857,
-						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-						                            }
-						                        }],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place7",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 3,
-                        "layers": [
-                            {"idRef": "gambia"},
-                            {"idRef": "netherlands"},
-                            {"idRef": "france"},
-                            {"idRef": "spain"},
-                            {"idRef": "norway"},
-                            {"idRef": "belgium"},
-                            {"idRef": "cameroon"},
-                            {"idRef": "ghana"},
-                            {"idRef": "lebanon"},
-                            {"idRef": "nigeria"},
-                            {"idRef": "guinea"},
-                            {"idRef": "joola_wreck"},
-							{"id": "netherlands2j", "type": "link", "from": "netherlands", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
-								mode: 'Q',
-				                markers: {
-				                    end: true
-				                },
-								weight: 1,
-								dashArray: [1,2]
-							}},
-							{"id": "france2j", "type": "link", "from": "france", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
-								mode: 'Q',
-				                markers: {
-				                    end: true
-				                },
-								weight: 1,
-								dashArray: [1,2]
-							}},
-							{"id": "spain2j", "type": "link", "from": "spain", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
-								mode: 'Q',
-				                markers: {
-				                    end: true
-				                },
-								weight: 1,
-								dashArray: [1,2]
-							}},
-							{"id": "norway2j", "type": "link", "from": "norway", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
-								mode: 'Q',
-				                markers: {
-				                    end: true
-				                },
-								weight: 1,
-								dashArray: [1,2]
-							}},
-							{"id": "belgium2j", "type": "link", "from": "belgium", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
-								mode: 'Q',
-				                markers: {
-				                    end: true
-				                },
-								weight: 1,
-								dashArray: [1,2]
-							}},
-							{"id": "cameroon2j", "type": "link", "from": "cameroon", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
-								mode: 'Q',
-				                markers: {
-				                    end: true
-				                },
-								weight: 1,
-								dashArray: [1,2]
-							}},
-							{"id": "ghana2j", "type": "link", "from": "ghana", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
-								mode: 'Q',
-				                markers: {
-				                    end: true
-				                },
-								weight: 1,
-								dashArray: [1,2]
-							}},
-							{"id": "lebanon2j", "type": "link", "from": "lebanon", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
-								mode: 'Q',
-				                markers: {
-				                    end: true
-				                },
-								weight: 1,
-								dashArray: [1,2]
-							}},
-							{"id": "nigeria2j", "type": "link", "from": "nigeria", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
-								mode: 'Q',
-				                markers: {
-				                    end: true
-				                },
-								weight: 1,
-								dashArray: [1,2]
-							}},
-							{"id": "guinea2j", "type": "link", "from": "guinea", "to": "joola_wreck", "edgeStyle": "ARC", "style": {
-								mode: 'Q',
-				                markers: {
-				                    end: true
-				                },
-								weight: 1,
-								dashArray: [1,2]
-							}}
-
-                        ],
-                        "baseLayer": [{
-                            "type": "esri-basemap",
-                            "url": "DarkGray",
-                            "options": {
-                                "detectRetina": true
-                            },
-                        }],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place8",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 8,
-                        "layers": [
-							{"idRef": "gambia"},
-                            {"idRef": "dakar"},
-                            {"idRef": "ziguinchor"},
-                            {"idRef": "carabane"}
-                        ],
-                        "baseLayer": [{
-						                            "type": "wmts",
-						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-						                            "params": {
-						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-						                                maxNativeZoom: 9,
-						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-						                                time: '2016-05-17',
-						                                detectRetina: true,
-						                                subdomains: "abc",
-						                                noWrap: true,
-						                                continuousWorld: true,
-						                                crs: L.CRS.EPSG3857,
-						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-						                            }
-						                        }],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place9",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 8,
-                        "layers": [
-                            {"idRef": "casamance"},
-                            {"idRef": "ziguinchor"},
-                            // {"idRef": "dakar"},
-                            {"idRef": "gambia"},
-                            {"idRef": "corniche_ouest"},
-                            {"idRef": "souvenir"},
-                            {"idRef": "casamance_river"}
-                        ],
-                        // "baseLayer": [{
-                        // "type": "tile",
-                        // "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        // "scheme": "xyz",
-
-                        // "options": {
-                        //     "detectRetina": true,
-                        //     "imagerySet": "AerialWithLabels",
-
-                        // }}],
-                        "baseLayer": [{
-                        "type": "esri-basemap",
-                        "url": "DarkGray",
-                        "options": {
-                            "detectRetina": true
-                        }}],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place10",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 8,
-                        "layers": [
-                            {"idRef": "casamance"},
-                            {"idRef": "ziguinchor"},
-                            {"idRef": "dakar"},
-                            {"idRef": "gambia"},
-                            // {"idRef": "casamance_river"}
-                        ],
-                        "baseLayer": [{
-						                            "type": "wmts",
-						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-						                            "params": {
-						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-						                                maxNativeZoom: 9,
-						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-						                                time: '2016-05-17',
-						                                detectRetina: true,
-						                                subdomains: "abc",
-						                                noWrap: true,
-						                                continuousWorld: true,
-						                                crs: L.CRS.EPSG3857,
-						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-						                            }
-						                        }],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place11",
-                        //"center": [-114.8986353,27.6924942],
-                        "zoom": 7,
-                        "baseLayer": [{
-						                            "type": "wmts",
-						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-						                            "params": {
-						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-						                                maxNativeZoom: 9,
-						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-						                                time: '2016-05-17',
-						                                detectRetina: true,
-						                                subdomains: "abc",
-						                                noWrap: true,
-						                                continuousWorld: true,
-						                                crs: L.CRS.EPSG3857,
-						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-						                            }
-						                        }],
-                        "layers": [
-							{"idRef": "senegal"},
-							{"idRef": "gambia"},
-                            {"idRef": "ziguinchor"},
-                            {"idRef": "dakar"},
-                            {"idRef": "casamance"}
-                            
-                        ],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.9,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place12",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 7,
-                        "layers": [
-							{"idRef": "senegal"},
-                            
-                            {"idRef": "diop_university"},
-                            {"idRef": "casamance"},
-                            {"idRef": "uni_zig"},
-							{"idRef": "ziguinchor"}
-                        ],
-                        "baseLayer": [{
-                        "type": "esri-basemap",
-                        "url": "DarkGray",
-                        "options": {
-                            "detectRetina": true
-                        }}],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
-                    },{
-                        "id": "place13",
-                        //"center": [-115.081667,27.846944],
-                        "zoom": 7,
-                        "layers": [
-							{"idRef": "senegal"},
-							{"idRef": "gambia"},
-                            {"idRef": "casamance"},
-                            
-                            {"idRef": "uni_zig"},
-                            {"idRef": "diop_university"},
-							{"idRef": "dakar"},
-							{"idRef": "ziguinchor"}
-                        ],
-                        "baseLayer": [{
-						                            "type": "wmts",
-						                            "url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/{layer}/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.jpg",
-						                            "params": {
-						                                layer: "MODIS_Terra_CorrectedReflectance_TrueColor",
-						                                maxNativeZoom: 9,
-						                                tileMatrixSet: "GoogleMapsCompatible_Level9",
-						                                time: '2016-05-17',
-						                                detectRetina: true,
-						                                subdomains: "abc",
-						                                noWrap: true,
-						                                continuousWorld: true,
-						                                crs: L.CRS.EPSG3857,
-						                                attribution: 'We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, https://earthdata.nasa.gov) with funding provided by NASA/HQ.'
-						                            }
-						                        }],
-                        "style": {
-                            "filter": "sepia(0%)",
-                            "zoom": 3,
-                            "opacity": 0.8,
-                            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                        }
+    /*********** Scenes Start Here **********/
+        "scenes": [{
+                "id": "place1",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
-                ]
-            };
-        </script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
 
-            ga('create', 'UA-79613259-1', 'auto');
-            ga('send', 'pageview');
-
-        </script>
-        <script>
-            $(document).ready(function () {
-
-                $('#nav li.previous a').on('click', function (e) {
-                    e.preventDefault();
-                    var $prev = $('#nav').find('.sections li.active').prev();
-
-                    if (!$prev.hasClass('previous')) {
-                        $prev.find('a').click();
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place2",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
-                });
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 1
+					}
+                }],
 
-                $('#nav li.next a').on('click', function (e) {
-                    e.preventDefault();
-                    var $next = $('#nav').find('.sections li.active').next();
+                "layers": [
+                    {"idRef": "united_states", "style": {fill:false}},
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
 
-                    if (!$next.hasClass('next')) {
-                        $next.find('a').click();
+                ],
+                "zoom": 3,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place3",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
-                });
+                },/*{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://mapservices.nps.gov/arcgis/rest/services/LandResourcesDivisionTractAndBoundaryService/MapServer",
+					"params": {
+						"url": "https://mapservices.nps.gov/arcgis/rest/services/LandResourcesDivisionTractAndBoundaryService/MapServer",
+						"layers": ['2']
+					}
+					
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis.blm.gov/arcgis/rest/services/Cadastral/BLM_Natl_PLSS_CadNSDI/MapServer",
+					"params": {
+						"url": "https://gis.blm.gov/arcgis/rest/services/Cadastral/BLM_Natl_PLSS_CadNSDI/MapServer",
+						"layers": ['0']
+					}
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://www.fws.gov/wetlands/arcgis/rest/services/Wetlands/MapServer",
+					"params": {
+						"url": "https://www.fws.gov/wetlands/arcgis/rest/services/Wetlands/MapServer",
+						"layers": ['0']
+					}
+                },*/{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer"
+					}
+                }],
 
-                var overviewMap = new Focus.Views.OverviewMapView({
-                    model: new Backbone.Model({
-                        initialScene: new Focus.Models.SceneModel({
-                            baseLayer: {
-                                type: 'tile',
-                                url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00'
-                            },
-                            center: [0,0],
-                            zoom: 12,
-                            showAttribution: false
-                        })
-                    }),
-                    showCenterPoint: true
-                });
-                var sceneManager = new Focus.Views.SceneManagerView({
-                    el: $('body'),
-                    navigatorClass: Focus.Views.ScrollingSceneNavigator,
-                    mapEngineClass: Focus.Views.LeafletMapEngine //Focus.Views.OpenLayersMapEngine //LeafletMapEngine
-                });
+                "layers": [
+                    {"idRef": "united_states", "style": {fill: false}},
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
 
-                var shareView = new Focus.Views.ShareView();
-                shareView.render();
+                ],
+                "zoom": 4,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place4",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
 
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
 
-            });
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place5",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
 
-        </script>
-    </body>
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    {"idRef": "grand_teton"},
+					{"idRef": "yellowstone"}
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place6",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place7",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place8",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place9",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place10",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place11",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place12",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place13",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    {"idRef": "gunnison"},
+                    {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 5,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place14",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    //{"idRef": "surprise_valley"},
+                     {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place15",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    //{"idRef": "buffalo_gap"},
+                     {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place16",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    //{"idRef": "manti"},
+                     {"idRef": "dixie"},
+                    {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place17",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    {"idRef": "dixie"},
+                    {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place18",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    //{"idRef": "grand_staircase"},
+                     {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, {
+                "id": "place19",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                //     {"idRef": "grand_canyon"},
+                //     {"idRef": "yosemite"},
+                //     {"idRef": "grand_teton"},
+                //     {"idRef": "badlands"},
+                //     {"idRef": "sand_dunes"},
+                //     {"idRef": "olympic"},
+                //     {"idRef": "organ_pipe"},
+                //     {"idRef": "bosque_del_apache"},
+                //     {"idRef": "tallahatchie"},
+                //     {"idRef": "stanislaus"},
+                //     {"idRef": "gunnison"},
+                //     {"idRef": "surprise_valley"},
+                //     {"idRef": "buffalo_gap"},
+                //     {"idRef": "manti"},
+                  //  {"idRef": "dixie"},
+                  //  {"idRef": "grand_staircase"},
+                     {"idRef": "rio_grande_norte"},
+                    // {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place20",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    // {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    //{"idRef": "rio_grande_norte"},
+                     {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 8,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place21",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                },{
+                	"type": "esri-dynamicmaplayer",
+					"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer/0",
+					"params": {
+						//"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/Fine_Agency_Level/MapServer"
+						"url": "https://gis1.usgs.gov/arcgis/rest/services/PADUS1_4/FederalManagers/MapServer",
+						"opacity": 0.3
+					}
+                }],
+                "layers": [
+                    {"idRef": "grand_canyon"},
+                    // {"idRef": "yosemite"},
+                    // {"idRef": "grand_teton"},
+                    // {"idRef": "badlands"},
+                    // {"idRef": "sand_dunes"},
+                    // {"idRef": "olympic"},
+                    // {"idRef": "organ_pipe"},
+                    // {"idRef": "bosque_del_apache"},
+                    // {"idRef": "tallahatchie"},
+                    // {"idRef": "stanislaus"},
+                    // {"idRef": "gunnison"},
+                    // {"idRef": "surprise_valley"},
+                    // {"idRef": "buffalo_gap"},
+                    // {"idRef": "manti"},
+                    // {"idRef": "dixie"},
+                    // {"idRef": "grand_staircase"},
+                    // {"idRef": "rio_grande_norte"},
+                    {"idRef": "rio_grande"},
+
+                ],
+                "zoom": 7,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }, 
+        ]
+    };
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79613259-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav li.previous a').on('click', function (e) {
+            e.preventDefault();
+            var $prev = $('#nav').find('.sections li.active').prev();
+
+            if (!$prev.hasClass('previous')) {
+                $prev.find('a').click();
+            }
+        });
+
+        $('#nav li.next a').on('click', function (e) {
+            e.preventDefault();
+            var $next = $('#nav').find('.sections li.active').next();
+
+            if (!$next.hasClass('next')) {
+                $next.find('a').click();
+            }
+        });
+
+        document.onkeydown = function (e) {
+            if (e.keyCode == '38') {
+                // up arrow
+                $('#nav li.previous a').click();
+            }
+            else if (e.keyCode == '40') {
+                // down arrow
+                $('#nav li.next a').click();
+            }
+        };
+
+        var overviewMap = new Focus.Views.OverviewMapView({
+            model: new Backbone.Model({
+                initialScene: new Focus.Models.SceneModel({
+                    baseLayer: {
+	                    "type": "esri-basemap",
+	                    "url": "NationalGeographic",
+	                    "options": {
+	                        "detectRetina": true
+	                    }
+	                },
+                    center: [0,0],
+					zoom: 3,
+                    showAttribution: false
+                })
+            }),
+            showCenterPoint: true
+        });
+        var sceneManager = new Focus.Views.SceneManagerView({
+            el: $('body'),
+            navigatorClass: Focus.Views.ScrollingSceneNavigator,
+            mapEngineClass: Focus.Views.LeafletMapEngine //Focus.Views.OpenLayersMapEngine //LeafletMapEngine
+        });
+
+        var shareView = new Focus.Views.ShareView();
+        shareView.render();
+    });
+
+</script>
+</body>
 </html>

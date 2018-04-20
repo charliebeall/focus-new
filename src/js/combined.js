@@ -16020,11 +16020,15 @@ Focus.Views.ScrollingSceneNavigator = Focus.Views.SceneNavigator.extend({
 
         this.$el.find('.figure').each(function (index) {
             var $this = $(this);
-            $this.append('<div class="helper"><span class="fa fa-hand-pointer-o helper-icon element-animation"></span><span class="helper-text">Hover to view larger</span></div>');
-            $this.on('mouseenter', function (e) {
+			var $tmp = $this;
+			if ($this.is('img')) {
+				$tmp = $this.wrap('<div class="img-wrapper"/>').parent();
+			}
+            $tmp.prepend('<div class="helper"><span class="fa fa-hand-pointer-o helper-icon element-animation"></span><span class="helper-text">Hover to view larger</span></div>');
+            $tmp.on('mouseenter', function (e) {
                 $(this).removeClass('help');
             });
-            $this.scrollex({
+            $tmp.scrollex({
                 mode: 'middle',
                 enter: function () {
                     $(this).addClass('help');
@@ -16335,8 +16339,8 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
                 // scroll to each target
                 $(target).velocity('scroll', {
                     duration: 500,
-                    //offset: 40,
-                    offset: L.Browser.mobile ? -1 * $mainNav.outerHeight() : 0,
+                    //offset: -40,
+                    offset: L.Browser.mobile ? -1 * $mainNav.outerHeight() : 1,
                     easing: 'ease-in-out'
                 });
             });
@@ -16534,7 +16538,9 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
             }
 
             $(this).on('mouseover touchstart', function (e) {
-                $photos.css('background-image',$(this).css('background-image'));
+				var $this = $(this);
+				var url = $this.is('img') ? 'url(' + $this.attr('src') + ')' : $this.css('background-image');
+                $photos.css('background-image', url);
                 if ($(this).hasClass('contain')) {
                     $photos.addClass('contain');
                 }
