@@ -120,52 +120,49 @@
                     "type": "tile",
                     "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
                 },*/
-                "layers": [{"id": "yosemite", "type": "geojson", "data": {
+                "layers": [
+                    {"id": "southeast_usa", "type": "geojson", "data": {
                     "type": "Feature",
                     "properties": {},
                     "geometry": {
                         "type": "Point",
                         "coordinates": [
-                            -119.53125,
-                            37.83148014503288
+                            -83.5, 33
                         ]
                     }
                 }},
-                    {"id": "mountrainier", "type": "geojson", "data": {
+                    {"id": "western_south_american", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {},
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                                -121.7120361328125,
-                                46.86113003765812
+                                -65.5, -23.75
                             ]
                         }
                     }},
-                    {"id": "yellowstone", "type": "geojson", "data": {
+                    {"id": "west_africa", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {},
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                                -110.58837890625,
-                                44.59829048984011
+                                -1.05, 7.81
                             ]
                         }
                     }},
-                    {"id": "sequoia", "type": "geojson", "data": {
+                    {"id": "caucuses", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {},
                         "geometry": {
                             "type": "Point",
                             "coordinates": [
-                                -118.56719970703125,
-                                36.50522086338427
+                                43.5, 42
                             ]
                         }
                     }}],
                 //"center": [-60, 48],
-                "zoom": 4,
+                "zoom": 1,
                 "style": {
                     "filter": "sepia(70%) brightness(110%)",
                     "opacity": 0.75,
@@ -1489,18 +1486,18 @@
         }, {
             id: 'B',
             text: 'Western South America',
-            photo: 'img/yosemite.jpg',
-            sceneId: 'yosemite'
+            photo: 'img/1b.jpg',
+            sceneId: 'western_south_american'
         }, {
             id: 'C',
             text: 'Sequoia National Park',
-            photo: 'img/sequoia.jpg',
-            sceneId: 'sequoia'
+            photo: 'img/1c.jpg',
+            sceneId: 'west_africa'
         }, {
             id: 'D',
             text: 'Yellowstone National Park',
-            photo: 'img/yellowstone.jpg',
-            sceneId: 'yellowstone'
+            photo: 'img/1d.jpg',
+            sceneId: 'caucuses'
         }],
         prompt: 'Peanuts (<i>Arachis hypogaea</i>) are central to the cuisines of South-East Asia (think satay sauce) yet this crop did not originate in that part of the world. Where is the center of origin for peanuts?',
         rightAnswer: {
@@ -1510,245 +1507,245 @@
     }, {
         choices: [{
             id: 'A',
-            text: 'Rio de Janeiro, Brazil ',
-            photo: 'img/rio.jpg',
-            sceneId: 'rio'
+            text: 'Hawaii',
+            photo: 'img/2a.jpg',
+            sceneId: 'hawaii'
         }, {
             id: 'B',
-            text: 'London, United Kingdom',
-            photo: 'img/london.jpg',
-            sceneId: 'london'
+            text: 'Northeast of Brazil',
+            photo: 'img/2b.jpg',
+            sceneId: 'northeast_brazil'
         }, {
             id: 'C',
-            text: 'Paris, France',
-            photo: 'img/paris.jpg',
-            sceneId: 'paris'
+            text: 'Southwestern Africa',
+            photo: 'img/2c.jpg',
+            sceneId: 'southwester_africa'
         }, {
             id: 'D',
-            text: 'Kyoto, Japan',
-            photo: 'img/kyoto.jpg',
-            sceneId: 'kyoto'
+            text: 'Borneo',
+            photo: 'img/2d.jpg',
+            sceneId: 'borneo'
         }],
-        prompt: 'The concept of sustainable development was first endorsed in “Our Common Future,” better known as the Brundtland Report. This led to the Earth Summit in 1992 in which city, which again hosted a major international event recently?',
+        prompt: 'Palm oil is used in a myriad of food and industrial products and its increasing cultivation in tropical lowlands is causing extensive deforestation. But where did the palm (<i>Elaeis guineensis</i>) that produces palm oil originate?',
         rightAnswer: {
-            id: 'A',
-            description: 'Rio de Janiero, Brazil'
+            id: 'C',
+            description: 'The exact region is not known, but Western-Southwestern Africa is generally accepted as the origin of the African Oil Palm.'
         }
     }, {
         choices: [{
             id: 'A',
-            text: 'Papahonaumokuakea National Monument, USA ',
-            photo: 'img/pnm.jpg',
-            sceneId: 'pnm'
+            text: 'Meso-America',
+            photo: 'img/3a.jpg',
+            sceneId: 'meso_america'
         }, {
             id: 'B',
-            text: 'Phoenix Islands Protected Area, Kiribati ',
-            photo: 'img/pipa.jpg',
-            sceneId: 'pipa'
+            text: 'Central Africa',
+            photo: 'img/3b.jpg',
+            sceneId: 'cental_africa'
         }, {
             id: 'C',
-            text: 'The Chagos Archipelago, United Kingdom',
-            photo: 'img/ca.jpg',
-            sceneId: 'ca'
+            text: 'The Fertile-Crescent',
+            photo: 'img/3c.jpg',
+            sceneId: 'fertile_crescent'
         }, {
             id: 'D',
-            text: 'The Great Barrier Reef, Australia',
-            photo: 'img/gbr.jpg',
-            sceneId: 'gbr'
+            text: 'South-East Asia',
+            photo: 'img/3d.jpg',
+            sceneId: 'southeast_asia'
         }],
-        prompt: 'Not only is conservation of land important for biodiversity and ecosystem protection, but so is protection of the water. What is the world’s largest marine protected area?',
+        prompt: 'The meat and eggs of varieties of the domesticated chicken (<i>Gallus gallus domesticus</i>) are a key source of protein around world, in rural as well as urban places. Where does this bird originally come from?',
         rightAnswer: {
-            id: 'A',
-            description: 'Papahonaumokuakea National Monument, USA '
+            id: 'D',
+            description: 'The domesticated chicken is related to jungle-fowl found in the lowland forests of this world region.'
         }
     }, {
         choices: [{
             id: 'A',
-            text: 'Teddy Roosevelt',
-            photo: 'img/roosevelt.jpg',
-            sceneId: 'savedarea'
+            text: 'Chile',
+            photo: 'img/4a.jpg',
+            sceneId: 'chile'
         }, {
             id: 'B',
-            text: 'Rachel Carson',
-            photo: 'img/carson.jpg',
-            sceneId: 'savedarea'
+            text: 'Italy',
+            photo: 'img/4b.jpg',
+            sceneId: 'italy'
         }, {
             id: 'C',
-            text: 'John D. Rockefeller ',
-            photo: 'img/rockefeller.jpg',
-            sceneId: 'savedarea'
+            text: 'China',
+            photo: 'img/4c.jpg',
+            sceneId: 'china'
         }, {
             id: 'D',
-            text: 'John Muir',
-            photo: 'img/muir.jpg',
-            sceneId: 'savedarea'
+            text: 'New Zealand',
+            photo: 'img/4d.jpg',
+            sceneId: 'new_zealand'
         }],
-        prompt: 'Many individuals contributed greatly to conservation and preservation over the years. One person is especially responsible for saving large tracts of the American West like Yosemite and California’s giant trees.  His famous writings on conservation continue to inspire future generations. Who is this person?',
+        prompt: 'The kiwi-fruit (<i>Actinidia deliciosahas</i>) has its origins in:',
         rightAnswer: {
-            id: 'D',
-            description: 'John Muir'
+            id: 'C',
+            description: 'It was known as the Chinese Gooseberry before ingenious marketing decided kiwi-fruit would be much easier to sell.'
         }
     }, {
         choices: [{
             id: 'A',
-            text: 'Nuclear Power',
-            photo: 'img/nuclearpower.jpg',
-            sceneId: 'power'
+            text: 'Costa Rica',
+            photo: 'img/5a.jpg',
+            sceneId: 'costa_rica'
         }, {
             id: 'B',
-            text: 'Hydroelectric Power ',
-            photo: 'img/hydropower.jpg',
-            sceneId: 'power'
+            text: 'Peru',
+            photo: 'img/5b.jpg',
+            sceneId: 'peru'
         }, {
             id: 'C',
-            text: 'Wind Power',
-            photo: 'img/windpower.jpg',
-            sceneId: 'power'
+            text: 'Paraguay',
+            photo: 'img/5c.jpg',
+            sceneId: 'paraguay'
         }, {
             id: 'D',
-            text: 'Solar Power',
-            photo: 'img/solarpower.jpg',
-            sceneId: 'power'
+            text: 'Brazil',
+            photo: 'img/5d.jpg',
+            sceneId: 'brazil'
         }],
-        prompt: 'An important component of a more sustainable world includes the use of more renewable energy resources. Recent headlines have lauded Costa Rica for achieving 100% renewable electricity in recent months, primarily achieved by their harvesting of which energy resource?',
+        prompt: 'Açaí juice has become a ‘hot’ antioxidant and is being added to many juices and smoothies. Where does this fruit originally come from?',
         rightAnswer: {
-            id: 'B',
-            description: 'Hydroelectric Power '
+            id: 'D',
+            description: 'This fruit is from the <i>Euterpe oleracea</i> palm which graces the banks of the floodplain of the Amazon River.'
         }
     }, {
         choices: [{
             id: 'A',
-            text: 'Bald Eagles',
-            photo: 'img/baldeagle.jpg',
-            sceneId: 'be'
+            text: 'Fort Collins, USA',
+            photo: 'img/6a.jpg',
+            sceneId: 'fort_collins'
         }, {
             id: 'B',
-            text: 'Polar Bears',
-            photo: 'img/polarbear.jpg',
-            sceneId: 'pb'
+            text: 'Wageningen, The Netherlands',
+            photo: 'img/6b.jpg',
+            sceneId: 'wageningen'
         }, {
             id: 'C',
-            text: 'Giant Pandas',
-            photo: 'img/giantpanda.jpg',
-            sceneId: 'gp'
+            text: 'Spitsbergen, Norway',
+            photo: 'img/6c.jpg',
+            sceneId: 'spitsbergen'
         }, {
             id: 'D',
-            text: 'Siberian Tigers',
-            photo: 'img/siberiantiger.jpg',
-            sceneId: 'st'
+            text: 'St. Petersburg, Russia',
+            photo: 'img/6d.jpg',
+            sceneId: 'st.petersburg'
         }],
-        prompt: 'Iconic species are one way in which conservation organizations have been able to galvanize public support for environmental causes. Changes in laws on pesticides and extensive habitat protections have led to a substantial rebound of this iconic species, which is no longer endangered.',
+        prompt: 'In order to prepare for possible crop disasters, scientists believe that seeds should be preserved both where they are cultivated, especially in centers of diversity and domestication (<i>in-situ</i> conservation), while also preserving seeds in climate-controlled vaults (<i>ex-situ</i> conservation). Where is the most famous of these seeds vaults located?',
         rightAnswer: {
-            id: 'A',
-            description: 'Bald Eagles'
+            id: 'C',
+            description: 'Known as the <a href="https://www.croptrust.org/our-work/svalbard-global-seed-vault/">Svalbard Global Seed Vault</a>'
         }
     }, {
         choices: [{
             id: 'A',
-            text: 'Guadalajara, Mexico (Bosque de la Primavera) ',
-            photo: 'img/guadalajara.jpg',
-            sceneId: 'bosquedelaprimavera'
+            text: 'Southeast US',
+            photo: 'img/7a.jpg',
+            sceneId: 'southeast_usa'
         }, {
             id: 'B',
-            text: 'Washington, DC, USA (Rock Creek Park) ',
-            photo: 'img/rockcreekpark.jpg',
-            sceneId: 'rockcreekpark'
+            text: 'Coastal Brazil',
+            photo: 'img/7b.jpg',
+            sceneId: 'coastal_brazil'
         }, {
             id: 'C',
-            text: 'New York City, USA (Central Park) ',
-            photo: 'img/centralpark.jpg',
-            sceneId: 'centralpark'
+            text: 'West Africa',
+            photo: 'img/7c.jpg',
+            sceneId: 'west_africa'
         }, {
             id: 'D',
-            text: 'Cape Town, South Africa (Table Mountain) ',
-            photo: 'img/tablemountain.jpg',
-            sceneId: 'tablemountain'
+            text: 'Mediterranean Coast',
+            photo: 'img/7d.jpg',
+            sceneId: 'mediterranean_coast'
         }],
-        prompt: 'Land conservation not only happens in the wilds beyond human settlement, but also in the middle of cities. The largest urban parks cover thousands of acres. What city is home to the world’s largest urban park?',
+        prompt: 'General popular understanding is that most rice was domesticated in Asia (<i>Oryza sativa</i>) and that it travelled the world from there. However, recent scholarship clearly demonstrates a separate, parallel center of origin for rice (<i>Oryza glaberrima</i>). Where is this other center of rice domestication?',
         rightAnswer: {
-            id: 'A',
-            description: 'Guadalajara, Mexico (Bosque de la Primavera) '
+            id: 'C',
+            description: 'West Africa'
         }
     }, {
         choices: [{
             id: 'A',
-            text: 'The Alaska Current',
-            photo: 'img/garbagepatch.png',
-            sceneId: 'alaskacurrent'
+            text: 'Guatemala',
+            photo: 'img/8a.png',
+            sceneId: 'guatemala'
         }, {
             id: 'B',
-            text: 'The North Pacific Gyre',
-            photo: 'img/northpacificgyre.jpg',
-            sceneId: 'northpacificcurrent'
+            text: 'Jamaica',
+            photo: 'img/8b.jpg',
+            sceneId: 'jamaica'
         }, {
             id: 'C',
-            text: 'The Pacific Equatorial Counter',
-            photo: 'img/seaturtle.jpg',
-            sceneId: 'equitorialcountercurrent'
+            text: 'Ethiopia',
+            photo: 'img/8c.jpg',
+            sceneId: 'ethiopia'
         }, {
             id: 'D',
-            text: 'The South Pacific Gyre',
-            photo: 'img/southpacificgyre.png',
-            sceneId: 'southpacificcurrent'
+            text: 'Java',
+            photo: 'img/8d.png',
+            sceneId: 'java'
         }],
-        prompt: 'Few discoveries proved as consequential for pressing for ocean conservation as the discovery of the “Great Pacific Garbage Patch” discovered in the late 1980s. This concentration of floating trash is located in the midst of what oceanic current phenomenon?',
+        prompt: 'Coffee (<i>Coffea arabica</i>) has become a ubiquitous beverage around the world. The hills of which of the following present-day countries is this crop said to have its origins?',
         rightAnswer: {
+            id: 'C',
+            description: 'Ethiopia'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'The Maldives',
+            photo: 'img/9a.jpg',
+            sceneId: 'maldives'
+        }, {
             id: 'B',
-            description: 'The North Pacific Gyre'
+            text: 'The Andaman and Nicobar Islands',
+            photo: 'img/9b.jpg',
+            sceneId: 'andaman_nicobar'
+        }, {
+            id: 'C',
+            text: 'The Philippines',
+            photo: 'img/9c.jpg',
+            sceneId: 'philippines'
+        }, {
+            id: 'D',
+            text: 'The Moluccas',
+            photo: 'img/9d.jpg',
+            sceneId: 'moluccas'
+        }],
+        prompt: 'The quest for the ‘spice islands’ set-in motion extensive exploration of the world by people from the Iberian Peninsula. Which island group are the famed ‘spice islands’?',
+        rightAnswer: {
+            id: 'D',
+            description: 'The Moluccas'
         }
     }, {
         choices: [{
             id: 'A',
             text: 'Peru',
-            photo: 'img/peru.jpg',
+            photo: 'img/10a.jpg',
             sceneId: 'peru'
         }, {
             id: 'B',
-            text: 'Brazil',
-            photo: 'img/brazil.jpg',
-            sceneId: 'brazil'
+            text: 'Guinea',
+            photo: 'img/10b.jpg',
+            sceneId: 'guinea'
         }, {
             id: 'C',
-            text: 'Democratic Republic of the Congo',
-            photo: 'img/congo.jpg',
-            sceneId: 'drcongo'
+            text: 'Okinawa',
+            photo: 'img/10c.jpg',
+            sceneId: 'okinawa'
         }, {
             id: 'D',
-            text: 'Indonesia',
-            photo: 'img/indonesia.jpg',
-            sceneId: 'indonesia'
+            text: 'New Caledonia',
+            photo: 'img/10d.jpg',
+            sceneId: 'new_caledonia'
         }],
-        prompt: 'Combatting deforestation will be essential to future land conservation. Which country faces the greatest rate of tropical deforestation, caused primarily by the boom in production of palm oil?',
+        prompt: 'Yams (Dioscerea spp.) and sweet potatoes (<i>Ipomoea batatas</i>) are often confused and interchanged for each other. The mix-up is an amalgam of cultural conflation and marketing confusion. To add to it, in some places the crop known as taro (<i>Colocasia esculenta</i>) is referred to as ‘yam.’ They are however, all different crops, with different places of origin. Where does the sweet potato have its origins?',
         rightAnswer: {
-            id: 'D',
-            description: 'Indonesia'
-        }
-    }, {
-        choices: [{
             id: 'A',
-            text: 'National Forest',
-            photo: 'img/nationalforest.jpg',
-            sceneId: 'nf'
-        }, {
-            id: 'B',
-            text: 'National Park',
-            photo: 'img/nationalpark.jpg',
-            sceneId: 'np'
-        }, {
-            id: 'C',
-            text: 'National Monument',
-            photo: 'img/nationalmonument.jpg',
-            sceneId: 'nm'
-        }, {
-            id: 'D',
-            text: 'National Wildlife Refuge',
-            photo: 'img/nationalwildliferefuge.jpg',
-            sceneId: 'nwr'
-        }],
-        prompt: 'Much of the land in the United States has been set aside by Congress, but one law allows the U.S. President to conserve land without Congressional approval, the Antiquities Act, which creates what type of preserve?',
-        rightAnswer: {
-            id: 'C',
-            description: 'National Monument'
+            description: 'Peru'
         }
     }];
 
