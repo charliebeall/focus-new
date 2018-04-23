@@ -2173,18 +2173,18 @@ Focus.Views.OverviewMapView = Focus.Views.MapView.extend({
         options.engineClass = options.engineClass || Focus.Views.LeafletMapEngine;
         Focus.Views.MapView.prototype.initialize.call(this, options);
         this.listenTo(Focus.Events, 'viewChanged', this.viewChanged);
-
+		this.style = {
+            radius: 30,
+            color: '#333',
+            numberOfSides: 4,
+            rotation: 45,
+            fill: false,
+            gradient: false,
+            weight: 1,
+            opacity: 1
+        };
         if (options.showCenterPoint) {
-            this._centerPoint = new L.RegularPolygonMarker(new L.LatLng(0, 0), {
-                radius: 30,
-                color: '#333',
-                numberOfSides: 4,
-                rotation: 45,
-                fill: false,
-                gradient: false,
-                weight: 1,
-                opacity: 1
-            });
+            this._centerPoint = new L.RegularPolygonMarker(new L.LatLng(0, 0), this.style);
             this._engine._map.addLayer(this._centerPoint);
         }
     },
@@ -2198,6 +2198,13 @@ Focus.Views.OverviewMapView = Focus.Views.MapView.extend({
 
             if (this._centerPoint) {
                 this._centerPoint.setLatLng(new L.LatLng(view.center[1], view.center[0]));
+				
+				if (view.hideCenterPoint) {
+					this._centerPoint.setStyle({opacity: 0});
+				}
+				else {
+					this._centerPoint.setStyle({opacity: 1});
+				}
             }
         }
     }
