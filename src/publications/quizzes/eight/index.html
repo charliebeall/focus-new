@@ -346,15 +346,26 @@
             {
                 "id": "place5",
                 //"center": [-79.541015625, -10.811724143275514],
-                "zoom": 2, //3
+                "zoom": 3, //3
                 "baseLayer": {
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
+
                 },
                 layers: [
+                    {"id": "costa_rica", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -84, 10
+                            ]
+                        }
+                    }},
                     {"id": "peru", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {},
@@ -384,17 +395,7 @@
                                 -52, -10
                             ]
                         }
-                    }},
-                    {"id": "costa_rica", "type": "geojson", "data": {
-                    "type": "Feature",
-                    "properties": {},
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            -84, 10
-                        ]
-                    }
-                }}],
+                    }}],
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.6,
@@ -404,13 +405,22 @@
             {
                 "id": "place6",
                 //"center": [-40, 38],
-                "zoom": 2, //3
+                "zoom": 1, //3
                 "baseLayer": {
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                    /*
+                    "type": "tile",
+                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
+                    */
+                    /*
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png"
+                    */
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
+
                 },
                 layers: [
                     {"id": "fort_collins", "type": "geojson", "data": {
@@ -433,16 +443,6 @@
                             ]
                         }
                     }},
-                    {"id": "spitsbergen", "type": "geojson", "data": {
-                        "type": "Feature",
-                        "properties": {},
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                16, 78.75
-                            ]
-                        }
-                    }},
                     {"id": "st.petersburg", "type": "geojson", "data": {
                         "type": "Feature",
                         "properties": {},
@@ -450,6 +450,15 @@
                             "type": "Point",
                             "coordinates": [
                                 30.31, 59.93
+                            ]
+                        }
+                    }},{"id": "spitsbergen", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                16, 78.75
                             ]
                         }
                     }}],
@@ -522,12 +531,13 @@
                 //"center": [-79.541015625, -10.811724143275514],
                 "zoom": 2, //3
                 "baseLayer": {
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                    "type": "esri-basemap",
+                    "url": "USATopo",
+                    "options": {
+                        "detectRetina": true,
+                        //"imagerySet": "AerialWithLabels"
                     }
-                },
+                }, 
                 layers: [
                     {"id": "guatemala", "type": "geojson", "data": {
                     "type": "Feature",
@@ -817,26 +827,25 @@
     }, {
         choices: [{
             id: 'A',
+
+            text: 'Costa Rica',
+            photo: 'img/5a.jpg',
+            sceneId: 'costa_rica' 
+        }, {
+            id: 'B',
             text: 'Peru',
             photo: 'img/5b.jpg',
             sceneId: 'peru'
         }, {
-            id: 'B',
+            id: 'C',
             text: 'Paraguay',
             photo: 'img/5c.jpg',
             sceneId: 'paraguay'
-            
         }, {
-            id: 'C',
+            id: 'D',
             text: 'Brazil',
             photo: 'img/5d.jpg',
             sceneId: 'brazil'
-            
-        }, {
-            id: 'D',
-            text: 'Costa Rica',
-            photo: 'img/5a.jpg',
-            sceneId: 'costa_rica'            
         }],
         prompt: 'Açaí juice has become a ‘hot’ antioxidant and is being added to many juices and smoothies. Where does this fruit originally come from?',
         rightAnswer: {
@@ -856,14 +865,14 @@
             sceneId: 'wageningen'
         }, {
             id: 'C',
-            text: 'Spitsbergen, Norway',
-            photo: 'img/6c.jpg',
-            sceneId: 'spitsbergen'
-        }, {
-            id: 'D',
             text: 'St. Petersburg, Russia',
             photo: 'img/6d.jpg',
             sceneId: 'st.petersburg'
+        }, {
+            id: 'D',
+            text: 'Spitsbergen, Norway',
+            photo: 'img/6c.jpg',
+            sceneId: 'spitsbergen'
         }],
         prompt: 'In order to prepare for possible crop disasters, scientists believe that seeds should be preserved both where they are cultivated, especially in centers of diversity and domestication (<i>in-situ</i> conservation), while also preserving seeds in climate-controlled vaults (<i>ex-situ</i> conservation). Where is the most famous of these seeds vaults located?',
         rightAnswer: {
@@ -992,8 +1001,8 @@
         var navigator = new Focus.Views.QuizSceneNavigator({
             el: $('.scenes'),
             model: new Focus.Models.ModalModel({
-                title: 'Welcome to the eighth Geo Quiz!',
-                content: "The Geography of Food Origins. <br> By Antoinette M.G.A. WinklerPrins",
+                title: 'Welcome to the Eighth Geo Quiz!',
+                content: "The Geography of Food Origins. By Antoinette M.G.A. WinklerPrins",
                 buttonText: 'Start Quiz'
             }),
             collection: questionCollection
