@@ -440,7 +440,35 @@
 <script src="../../../js/combined.js"></script>
 <script>
     var scenes = {
-        "features": [{
+        "features": [
+        {
+            "id": "south_korea",
+            "type": "geojson",
+            "style": {
+                "fill": false,
+                "stroke": true,
+                "weight": 2,
+                "opacity": 1,
+                "color": "orange",
+                "text": {
+                    "text": "South Korea",
+                    "style": {
+                        "stroke": "rgba(0,0,0,0.5)",
+                        "fill": "#fff",
+                        "stroke-width": 0.1,
+                        "font-family": "Raleway", "font-weight": "bold",
+                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                    }
+                }
+            },
+            "data": {
+                "type": "Feature",
+                "geometry":{"type":"Polygon","coordinates":[[[128.349716,38.612243],[129.21292,37.432392],[129.46045,36.784189],[129.468304,35.632141],[129.091377,35.082484],[128.18585,34.890377],[127.386519,34.475674],[126.485748,34.390046],[126.37392,34.93456],[126.559231,35.684541],[126.117398,36.725485],[126.860143,36.893924],[126.174759,37.749686],[126.237339,37.840378],[126.68372,37.804773],[127.073309,38.256115],[127.780035,38.304536],[128.205746,38.370397],[128.349716,38.612243]]]}},
+                "properties": {
+                    "name": "South Korea"
+                }
+        },
+        {
             //-17.583494, -66.008273
             "id": "sanyang-eup",
             "type": "geojson",
@@ -462,31 +490,20 @@
                 "type": "Feature",
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [128.358441,34.826537]
+                    "coordinates": [128.358441, 34.826537]
                 },
                 "properties": {
                     "name": "Sanyang-eup"
                 }
             }
         },{
-            "id": "cochabamba-outline",
-            "type": "geojson",
-            "style": {
-                "fill": false,
-                "stroke": true,
-                "weight": 2,
-                "opacity": 1,
-                "color": "orange"
-            },
-            "data": { "type": "Feature", "properties": { "adm1_code": "BOL-1291", "OBJECTID_1": 1008, "diss_me": 1291, "adm1_cod_1": "BOL-1291", "iso_3166_2": "BO-", "wikipedia": null, "iso_a2": "BO", "adm0_sr": 1, "name": "Cochabamba Department", "name_alt": null, "name_local": null, "type": "Departamento", "type_en": "Department", "code_local": null, "code_hasc": "BO.CB", "note": null, "hasc_maybe": null, "region": null, "region_cod": null, "provnum_ne": 5, "gadm_level": 1, "check_me": 0, "scalerank": 4, "datarank": 6, "abbrev": null, "postal": "CB", "area_sqkm": 0.000000, "sameascity": 6, "labelrank": 6, "featurecla": "Admin-1 scale rank", "name_len": 10, "mapcolor9": 2, "mapcolor13": 3, "fips": "BL02", "fips_alt": null, "woe_id": 2344802, "woe_label": "Cochabamba, BO, Bolivia", "woe_name": "Cochabamba", "latitude": -17.288400, "longitude": -65.613700, "sov_a3": "BOL", "adm0_a3": "BOL", "adm0_label": 2, "admin": "Bolivia", "geonunit": "Bolivia", "gu_a3": "BOL", "gn_id": 3919966, "gn_name": "Departamento de Cochabamba", "gns_id": -685054, "gns_name": "Cochabamba, Departamento de", "gn_level": 1, "gn_region": null, "gn_a1_code": "BO.02", "region_sub": null, "sub_code": null, "gns_level": 1, "gns_lang": "kor", "gns_adm1": "BL02", "gns_region": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -65.836518520912961, -16.468555189570296 ] ] ] } }
-        }, {
-            "id": "cochabamba",
+            "id": "sanyang_elementary",
             "type": "geojson",
             "style": {
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Cochabamba",
+                    "text": "Sangyang Elementary",
                     "style": {
                         "stroke": "rgba(0,0,0,0.5)",
                         "fill": "#fff",
@@ -500,202 +517,94 @@
                 "type": "Feature",
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [-66.166667, -17.383333]
+                    "coordinates": [128.358632, 34.827267]
                 },
                 "properties": {
-                    "name": "Cochabamba"
-                }
-            }
-        }, {
-            "id": "vallealto-outline",
-            "type": "geojson",
-            "style": {
-                "fillOpacity": 0.2,
-                "fillColor": "red",
-                "color": "#333",
-                "opacity": 0.7,
-                "dashArray": [2, 2],
-                //"text": {
-                //    "text": "Valle Alto"
-                //}
-            },
-            "data": {
-                "type": "Feature",
-                "properties": {
-                    "name": "Valle Alto"
-                },
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [
-                        [
-                            [
-                                -66.03401184082031,
-                                -17.539296556236692
-                            ],
-                            [
-                                -66.03401184082031,
-                                -17.539296556236692
-                            ]
-                        ]
-                    ]
-                }
-            }
-        }, {
-            //-17.583494, -66.008273
-            "id": "laloma",
-            "type": "geojson",
-            "style": {
-                "radius": 0,
-                "fill": false,
-                "stroke": false,
-                "color": "#000",
-                "fillColor": "#333",
-                "dropShadow": true,
-                "text": {
-                    "text": "La Loma",
-                    "style": {
-                        'stroke': 'none',
-                        'fill': '#000',
-                        'stroke-width': '0.1px',
-                        'font-weight': 'bold',
-                        'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)'
-                    }
-                }
-            },
-            "data": {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-66.032424, -17.562961]
-                },
-                "properties": {
-                    "name": "La Loma"
-                }
-            }
-        }, {
-            //-17.583494, -66.008273
-            "id": "tiataco",
-            "type": "geojson",
-            "style": {
-                "radius": 0,
-                "fill": false,
-                "stroke": false,
-                "text": {
-                    "text": "Tiataco",
-                    "style": {
-                        'stroke': 'none',
-                        'fill': '#000',
-                        'stroke-width': '0.1px',
-                        'font-weight': 'bold',
-                        'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)'
-                    }
-                }
-            },
-            "data": {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-66.001852, -17.586895]
-                },
-                "properties": {
-                    "name": "Tiataco"
-                }
-            }
-        }, {
-            //-17.583494, -66.008273
-            "id": "arbieto",
-            "type": "geojson",
-            "style": {
-                "radius": 0,
-                "fill": false,
-                "stroke": false,
-                "color": "#000",
-                "fillColor": "#333",
-                "dropShadow": true,
-                "text": {
-                    "text": "Arbieto",
-                    "style": {
-                        'stroke': 'none',
-                        'fill': '#000',
-                        'stroke-width': '0.1px',
-                        'font-weight': 'bold',
-                        'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                        'text-anchor': 'start'
-                    }
-                }
-            },
-            "data": {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-66.014748, -17.583561]
-                },
-                "properties": {
-                    "name": "Arbieto"
+                    "name": "Sangyang Elementary",
                 }
             }
         },{
-            "id": "achamoco",
-        "type": "geojson",
-        "style": {
-        "radius": 0,
-            "fill": false,
-            "stroke": false,
-            "color": "#000",
-            "fillColor": "#333",
-            "dropShadow": true,
-            "text": {
-            "text": "Achamoco",
-                "style": {
-                'stroke': 'none',
-                    'fill': '#000',
-                    'stroke-width': '0.1px',
-                    'font-weight': 'bold',
-                    'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)'
-            }
-        }
-    },
-    "data": {
-        "type": "Feature",
-            "geometry": {
-            "type": "Point",
-                "coordinates": [-66.009684, -17.563197]
-        },
-        "properties": {
-            "name": "Achamoco"
-        }
-    }
-    }, {
-        //-17.583494, -66.008273
-        "id": "mamanaca",
+            "id": "fig12",
             "type": "geojson",
             "style": {
-            "radius": 0,
-                "fill": false,
-                "stroke": false,
-                "color": "#000",
-                "fillColor": "#333",
-                "dropShadow": true,
+                "weight": 10,
+                "opacity": 0.3,
                 "text": {
-                "text": "Mamanaca",
+                    "text": " ",
                     "style": {
-                    'fill': '#000',
-                        'font-weight': 'bold',
-                        'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)'
+                        "stroke": "rgba(0,0,0,0.5)",
+                        "fill": "#fff",
+                        "stroke-width": 0.1,
+                        "font-family": "Raleway", "font-weight": "bold",
+                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                    }
+                }
+            },
+            "data": {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [128.358542, 34.827768]
+                },
+                "properties": {
+                    "name": " ",
                 }
             }
-        },
-        "data": {
-            "type": "Feature",
-                "geometry": {
-                "type": "Point",
-                    "coordinates": [-66.054287, -17.585122]
+        },{
+            "id": "daehak_elementary",
+            "type": "geojson",
+            "style": {
+                "weight": 10,
+                "opacity": 0.3,
+                "text": {
+                    "text": "Daehak Elementary School",
+                    "style": {
+                        "stroke": "rgba(0,0,0,0.5)",
+                        "fill": "#fff",
+                        "stroke-width": 0.1,
+                        "font-family": "Raleway", "font-weight": "bold",
+                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                    }
+                }
             },
-            "properties": {
-                "name": "Mamanaca"
+            "data": {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [128.453024, 35.531789]
+                },
+                "properties": {
+                    "name": "Daehak Elementary School",
+                }
             }
-        }
-    }],
+        },{
+            "id": "daehak_elementary_road",
+            "type": "geojson",
+            "style": {
+                "weight": 10,
+                "opacity": 0.3,
+                "text": {
+                    "text": "Road to Daehak Elementary",
+                    "style": {
+                        "stroke": "rgba(0,0,0,0.5)",
+                        "fill": "#fff",
+                        "stroke-width": 0.1,
+                        "font-family": "Raleway", "font-weight": "bold",
+                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                    }
+                }
+            },
+            "data": {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [128.454381, 35.532178]
+                },
+                "properties": {
+                    "name": "Road to Daehak Elementary",
+                }
+            }
+        }],
         "scenes": [
             {
                 "id": "place1",
@@ -708,9 +617,37 @@
                     }
                 }],
                 "layers": [{
-                    "idRef": "sanyang-eup"
-                }],
-                "zoom": 9,
+                    "idRef": "south_korea",
+                        //-17.583494, -66.008273
+                        // "id": "sanyang-eup",
+                        // "type": "geojson",
+                        // "style": {
+                        //     "weight": 10,
+                        //     "opacity": 0.3,
+                        //     "text": {
+                        //         "text": "Sanyang-eup",
+                        //         "style": {
+                        //             "stroke": "rgba(0,0,0,0.5)",
+                        //             "fill": "#fff",
+                        //             "stroke-width": 0.1,
+                        //             "font-family": "Raleway", "font-weight": "bold",
+                        //             "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                        //         }
+                        //     }
+                        // },
+                        // "data": {
+                        //     "type": "Feature",
+                        //     "geometry": {
+                        //         "type": "Point",
+                        //         "coordinates": [128.358441, 34.826537]
+                        //     },
+                        //     "properties": {
+                        //         "name": "Sanyang-eup"
+                        //     }
+                        // }
+                    }
+                ],
+                "zoom": 5,
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.8,
@@ -719,91 +656,18 @@
             },
             {
                 "id": "place2",
-                //"center": [-65.092255, -17.537959],
-                "zoom": 7,
-                "layers": [{
-                    "idRef": "cochabamba-outline"
-                }, {
-                    "id": "santacruz",
-                    "type": "geojson",
-                    "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
-                        "text": {
-                            "text": "Santa Cruz",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "font-weight": "bold",
-                                "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                            }
-                        }
-                    },
-                    "data": {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [-63.183333, -17.8]
-                        },
-                        "properties": {
-                            "name": "Santa Cruz"
-                        }
-                    }
-                }, {
-                    "idRef": "vallealto-outline",
-                    "style": {
-                        "fillOpacity": 0.2,
-                        "fillColor": "red",
-                        "color": "#333",
-                        "opacity": 0.7,
-                        "dashArray": [2, 2],
-                        "text": {
-                            "text": "Valle Alto",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "font-weight": "bold",
-                                "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                            }
-                        }
-                    }
-                }, {
-                    "id": "chapare",
-                    "type": "geojson",
-                    "style": {
-                        "fill": true,
-                        "weight": 2,
-                        "color": "orange",
-                        "fillColor": "orange",
-                        "fillOpacity": 0.2,
-                        "text": {
-                            "text": "Chapare",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)'
-                            }
-                        }
-                    },
-                    "data": { "type": "Feature", "properties": { "name": "Chapare", "ID_0": 28, "ISO": "BOL", "NAME_0": "Bolivia", "ID_1": 2, "NAME_1": "Cochabamba", "ID_2": 17, "NAME_2": "Chapare", "HASC_2": "BO.CB.CH", "CCN_2": 0, "CCA_2": null, "TYPE_2": "Provincia", "ENGTYPE_2": "Province", "NL_NAME_2": null, "VARNAME_2": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [-64.954376220703068, -15.793942451476937 ], [ -64.945388793945312, -15.794198989867994 ] ] ] } }
-
-                }, {
-                    "idRef": "cochabamba"
-                }],
                 "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "Imagery",
                     "options": {
-                        "detectRetina": true
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
-                }/*{
-                    "type": "tile",
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                }*/],
+                }],
+                "layers": [{
+                    "idRef": "sanyang-eup"
+                }],
+                "zoom": 11,
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.8,
@@ -812,629 +676,268 @@
             },
             {
                 "id": "place3",
-                "center": [-66.025529, -17.608925], // Tarata,
-                "zoom": 10,
                 "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "Imagery",
                     "options": {
-                        "detectRetina": true
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
-                }/*{
-                    "type": "tile",
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                }*/],
+                }],
                 "layers": [{
-                    "idRef": "cochabamba"
-                },{
-                    "idRef": "tarata",
-                    "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
-                        "text": {
-                            "text": "Tarata",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "font-weight": "bold",
-                                "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                            }
-                        }
-                    }
-                }]
+                    "idRef": "sanyang-eup"
+                }],
+                "zoom": 11,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
             },{
                 "id": "place4",
-                //"center": [-66.008273, -17.583494], // Arbieto,
-                "zoom": 13,
-                "baseLayer": [{
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                    }
-                }],
-                "layers": [{
-                    //-17.583494, -66.008273
-                    "idRef": "laloma"
-                }, {
-                    "idRef": "tarata",
-                    "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "color": "#000",
-                        "fillColor": "#333",
-                        "dropShadow": true,
-                        "text": {
-                            "text": "Tarata",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                                'text-anchor': 'start'
-                            }
-                        }
-                    }
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tiataco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "arbieto"
-                }]
-            }, {
-                "id": "place5",
-                "zoom": 13,
-                "baseLayer": [{
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                    }
-                }],
-                "layers": [{
-                    //-17.583494, -66.008273
-                    "idRef": "laloma"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tarata",
-                    "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "color": "#000",
-                        "fillColor": "#333",
-                        "dropShadow": true,
-                        "text": {
-                            "text": "Tarata",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                                'text-anchor': 'start'
-                            }
-                        }
-                    }
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tiataco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "arbieto"
-                }]
-            }, {
-                "id": "place5",
-                "zoom": 13,
-                "baseLayer": [{
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                    }
-                }],
-                "layers": [{
-                    //-17.583494, -66.008273
-                    "idRef": "laloma"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tarata",
-                    "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "color": "#000",
-                        "fillColor": "#333",
-                        "dropShadow": true,
-                        "text": {
-                            "text": "Tarata",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                                'text-anchor': 'start'
-                            }
-                        }
-                    }
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tiataco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "arbieto"
-                }]
-            }, {
-                "id": "place6",
-                "zoom": 13,
-                "baseLayer": [{
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                    }
-                }],
-                "layers": [{
-                    //-17.583494, -66.008273
-                    "idRef": "laloma"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tarata",
-                    "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "color": "#000",
-                        "fillColor": "#333",
-                        "dropShadow": true,
-                        "text": {
-                            "text": "Tarata",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                                'text-anchor': 'start'
-                            }
-                        }
-                    }
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tiataco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "arbieto"
-                }]
-            }, {
-                "id": "place7",
-                "zoom": 13,
-                "baseLayer": [{
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                    }
-                }],
-                "layers": [{
-                    //-17.583494, -66.008273
-                    "idRef": "laloma"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tiataco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "arbieto"
-                }, {
-                    "idRef": "achamoco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "mamanaca"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tarata",
-                    "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "color": "#000",
-                        "fillColor": "#333",
-                        "dropShadow": true,
-                        "text": {
-                            "text": "Tarata",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                                'text-anchor': 'start'
-                            }
-                        }
-                    }
-                }]
-            }, {
-                "id": "place8",
-                "zoom": 13,
-                "baseLayer": [{
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                    }
-                }],
-                "layers": [{
-                    //-17.583494, -66.008273
-                    "idRef": "laloma"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tiataco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "arbieto"
-                }, {
-                    "idRef": "achamoco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "mamanaca"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tarata",
-                    "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "color": "#000",
-                        "fillColor": "#333",
-                        "dropShadow": true,
-                        "text": {
-                            "text": "Tarata",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                                'text-anchor': 'start'
-                            }
-                        }
-                    }
-                }]
-            }, {
-                "id": "place9",
-                "zoom": 13,
-                "baseLayer": [{
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                    }
-                }],
-                "layers": [{
-                    //-17.583494, -66.008273
-                    "idRef": "laloma"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tiataco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "arbieto"
-                }, {
-                    "idRef": "achamoco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "mamanaca"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tarata",
-                    "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "color": "#000",
-                        "fillColor": "#333",
-                        "dropShadow": true,
-                        "text": {
-                            "text": "Tarata",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                                'text-anchor': 'start'
-                            }
-                        }
-                    }
-                }]
-            }, {
-                "id": "place10",
-                "zoom": 16,
                 "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "Imagery",
                     "options": {
-                        "detectRetina": true
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
-                }/*{
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-                    }
-                }*/],
+                }],
                 "layers": [{
-                    //-17.583494, -66.008273
-                    "id": "soccerstadium",
-                    "type": "geojson",
-                    "style": {
-                        "fill": true,
-                        "fillColor": "orange",
-                        "fillOpacity": 0.2,
-                        "opacity": 1,
-                        "weight": 2,
-                        "color": "orange",
-                        "text": {
-                            "text": "Soccer Stadium",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': 'orange',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)'
-                            }
-                        }
-                    },
-                    "data": /*{
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [-66.011422, -17.587058]
-                        },
-                        "properties": {
-                            "name": "Soccer Stadium"
-                        }
-                    }*/
-                    {
-                        "type": "Feature",
-                        "properties": {
-                            "name": "Soccer Stadium"
-                        },
-                        "geometry": {
-                            "type": "Polygon",
-                            "coordinates": [
-                                [
-                                    [
-                                        -66.01155638694763,
-                                        -17.58644075568157
-                                    ],
-                                    [
-                                        -66.01195335388184,
-                                        -17.587596447491524
-                                    ],
-                                    [
-                                        -66.01108431816101,
-                                        -17.5878419032078
-                                    ],
-                                    [
-                                        -66.01071953773499,
-                                        -17.586686212967155
-                                    ],
-                                    [
-                                        -66.01155638694763,
-                                        -17.58644075568157
-                                    ]
-                                ]
-                            ]
-                        }
+                    "idRef": "sanyang-eup"
+                }],
+                "zoom": 11,
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place5",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
-                }, {
-                    //-17.583494, -66.008273
-                    "id": "arbieto",
-                    "type": "geojson",
-                    "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
-                        "text": {
-                            "text": "Arbieto",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "font-weight": "bold",
-                                "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                            }
-                        }
-                    },
-                    "data": {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [-66.014748, -17.583561]
-                        },
-                        "properties": {
-                            "name": "Arbieto"
-                        }
+                }],
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "sanyang_elementary"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place6",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
-                }]
-            }, {
+                }],
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "sanyang_elementary"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place7",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "sanyang_elementary"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place8",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "sanyang_elementary"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place9",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "sanyang_elementary"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place10",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "sanyang_elementary"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
                 "id": "place11",
-                "zoom": 13,
+                //"center": [-65.092255, -17.537959],
                 "baseLayer": [{
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
                 }],
+                "zoom": 11,
                 "layers": [{
-                    //-17.583494, -66.008273
-                    "idRef": "laloma"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tiataco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "arbieto"
-                }, {
-                    "idRef": "achamoco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "mamanaca"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tarata",
-                    "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "color": "#000",
-                        "fillColor": "#333",
-                        "dropShadow": true,
-                        "text": {
-                            "text": "Tarata",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                                'text-anchor': 'start'
-                            }
-                        }
-                    }
-                }]
-            }, {
+                    "idRef": "sanyang_elementary"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
                 "id": "place12",
-                "fly": false,
+                //"center": [-65.092255, -17.537959],
                 "baseLayer": [{
-                    "type": "tile",
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
                 }],
+                "zoom": 11,
                 "layers": [{
-                    "id": "manassas",
-                    "type": "geojson",
-                    "style": {
-                        "fill": false,
-                        "stroke": false,
-                        "text": {
-                            "text": "Manassas, VA",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#000",
-                                "stroke-width": 0.1,
-                                "font-weight": "bold",
-                                "font-family": "Raleway", "font-weight": "bold"
-                            }
-                        }
-                    },
-                    "data": {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [-77.4753, 38.7509]
-                        },
-                        "properties": {
-                            "name": "Manassas, VA"
-                        }
-                    }
-                },{
-                    //-17.583494, -66.008273
-                    "id": "arlington",
-                    "type": "geojson",
-                    "style": {
-                        "fill": false,
-                        "stroke": false,
-                        "text": {
-                            "text": "Arlington, VA",
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#000",
-                                "stroke-width": 0.1,
-                                "font-weight": "bold",
-                                "font-family": "Raleway", "font-weight": "bold"
-                            }
-                        }
-                    },
-                    "data": {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [-77.0910, 38.8816]
-                        },
-                        "properties": {
-                            "name": "Arlington, VA"
-                        }
-                    }
-                }]
-            }, {
+                    "idRef": "fig12"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
                 "id": "place13",
-                "fly": false,
-                "zoom": 13,
+                //"center": [-65.092255, -17.537959],
                 "baseLayer": [{
-                    "type": "tile",
-                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    "url": "//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00",
-                    "params": {
-                        "attribution": 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
                 }],
+                "zoom": 11,
                 "layers": [{
-                    //-17.583494, -66.008273
-                    "idRef": "laloma"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tiataco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "arbieto"
-                }, {
-                    "idRef": "achamoco"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "mamanaca"
-                }, {
-                    //-17.583494, -66.008273
-                    "idRef": "tarata",
-                    "style": {
-                        "radius": 0,
-                        "fill": false,
-                        "stroke": false,
-                        "color": "#000",
-                        "fillColor": "#333",
-                        "dropShadow": true,
-                        "text": {
-                            "text": "Tarata",
-                            "style": {
-                                'stroke': 'none',
-                                'fill': '#000',
-                                'stroke-width': '0.1px',
-                                'font-weight': 'bold',
-                                'text-shadow': '0px 1px 3px rgba(0,0,0,0.2)',
-                                'text-anchor': 'start'
-                            }
-                        }
-                    }
-                }]
-            }, {
+                    "idRef": "sanyang-eup"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
                 "id": "place14",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "daehak_elementary"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place15",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "daehak_elementary_road"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place24",
                 "zoom": 6,
                 "baseLayer": [{
                     "type": "esri-basemap",
