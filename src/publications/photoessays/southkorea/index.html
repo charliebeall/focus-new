@@ -35,11 +35,16 @@
         #text p {
             font-family: 'Halant', serif;
         }
-        
 
         #text h2 {
             font-size: 60px;
             background: none;
+        }
+
+        @media (max-width: 768px){
+            #text h2.title {
+                font-size: 24px;
+            }
         }
         
         @media (max-width: 1440px) {
@@ -47,7 +52,7 @@
                 font-size: 14px;
             }
             #text h2 {
-                font-size: 50px;
+                font-size: 40px;
             }
         }
         
@@ -354,7 +359,7 @@
             <div class="figure" id="figure17" style="background-image:url(img/fig17.jpg);"></div>
             <p>
                 <i>Car Camping at the former Daehak Elementary School (now closed and known as Gurek-Gumnenzip</i><br><br>
-                As I was walking out of the school, I could see a car and a tent in front of the school. The school grounds have been multi-purposed for car camping (<a href="#figure17">Figure 17</a>)). Looking on the bright side, at least the former school is still−for the moment−being used by the community. It would have been worse had it been completely abandoned.
+                As I was walking out of the school, I could see a car and a tent in front of the school. The school grounds have been multi-purposed for car camping (<a href="#figure17">Figure 17</a>). Looking on the bright side, at least the former school is still−for the moment−being used by the community. It would have been worse had it been completely abandoned.
                 <br>
                 Leaving the rural areas of southern South Korea, we headed back to the urban jungle which is Seoul. As mentioned earlier, it is to the cities that the youth of the villages are moving in hopes of better opportunities. The problem with schools losing students is not only a rural Korean problem, however. There are very real associated problems in the urban areas as well. The younger generation is under great economic pressure when they move to the cities where the cost of living is so much higher. More often than not, they are choosing a career first and marriage later, if at all; obviously delaying or not considering childbirth. 
                 <br>
@@ -602,6 +607,114 @@
                 },
                 "properties": {
                     "name": "Road to Daehak Elementary",
+                }
+            }
+        },{
+            "id": "fig16_17",
+            "type": "geojson",
+            "style": {
+                "weight": 10,
+                "opacity": 0.3,
+                "text": {
+                    "text": "Gurek-Gumnenzip",
+                    "style": {
+                        "stroke": "rgba(0,0,0,0.5)",
+                        "fill": "#fff",
+                        "stroke-width": 0.1,
+                        "font-family": "Raleway", "font-weight": "bold",
+                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                    }
+                }
+            },
+            "data": {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [128.453237, 35.531797]
+                },
+                "properties": {
+                    "name": "Gurek-Gumnenzip",
+                }
+            }
+        },{
+            "id": "yongmoon_hs",
+            "type": "geojson",
+            "style": {
+                "weight": 10,
+                "opacity": 0.3,
+                "text": {
+                    "text": "Yongmoon High School",
+                    "style": {
+                        "stroke": "rgba(0,0,0,0.5)",
+                        "fill": "#fff",
+                        "stroke-width": 0.1,
+                        "font-family": "Raleway", "font-weight": "bold",
+                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                    }
+                }
+            },
+            "data": {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [127.024072, 37.587953]
+                },
+                "properties": {
+                    "name": "Yongmoon High School",
+                }
+            }
+        },{
+            "id": "seoul",
+            "type": "geojson",
+            "style": {
+                "weight": 10,
+                "opacity": 0.3,
+                "text": {
+                    "text": "Seoul",
+                    "style": {
+                        "stroke": "rgba(0,0,0,0.5)",
+                        "fill": "#fff",
+                        "stroke-width": 0.1,
+                        "font-family": "Raleway", "font-weight": "bold",
+                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                    }
+                }
+            },
+            "data": {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [126.9780, 37.5665]
+                },
+                "properties": {
+                    "name": "Seoul",
+                }
+            }
+        },{
+            "id": "geoje_island",
+            "type": "geojson",
+            "style": {
+                "weight": 10,
+                "opacity": 0.3,
+                "text": {
+                    "text": "Geoje Island",
+                    "style": {
+                        "stroke": "rgba(0,0,0,0.5)",
+                        "fill": "#fff",
+                        "stroke-width": 0.1,
+                        "font-family": "Raleway", "font-weight": "bold",
+                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                    }
+                }
+            },
+            "data": {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [128.639289, 34.773241]
+                },
+                "properties": {
+                    "name": "Geoje Island",
                 }
             }
         }],
@@ -926,7 +1039,7 @@
                         "imagerySet": "AerialWithLabels"
                     }
                 }],
-                "zoom": 11,
+                "zoom": 10,
                 "layers": [{
                     "idRef": "daehak_elementary_road"
                 }], 
@@ -937,38 +1050,186 @@
                 }
             },
             {
-                "id": "place24",
-                "zoom": 6,
+                "id": "place16",
+                //"center": [-65.092255, -17.537959],
                 "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "Imagery",
                     "options": {
-                        "detectRetina": true
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
                 }],
+                "zoom": 10,
                 "layers": [{
-                    "idRef": "vallealto-outline",
-                    "style": {
-                        "fillOpacity": 0.2,
-                        "fillColor": "red",
-                        "color": "#333",
-                        "opacity": 0.7,
-                        "dashArray": [2, 2],
-                        "text": {
-                            "text": "Valle Alto",
-                            "style": {
-                                "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                            },
-                            "style": {
-                                "stroke": "rgba(0,0,0,0.5)",
-                                "fill": "#fff",
-                                "stroke-width": 0.1,
-                                "font-family": "Raleway", "font-weight": "bold",
-                                "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                            }
-                        }
+                    "idRef": "fig16_17"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place17",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
                     }
-                }]
+                }],
+                "zoom": 10,
+                "layers": [{
+                    "idRef": "fig16_17"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place18",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 10,
+                "layers": [{
+                    "idRef": "yongmoon_hs"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place19",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 10,
+                "layers": [{
+                    "idRef": "yongmoon_hs"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place20",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 10,
+                "layers": [{
+                    "idRef": "yongmoon_hs"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place21",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 10,
+                "layers": [{
+                    "idRef": "yongmoon_hs"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place22",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 10,
+                "layers": [{
+                    "idRef": "seoul"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place23",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 10,
+                "layers": [{
+                    "idRef": "seoul"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },{
+                "id": "place24",
+                //"center": [-65.092255, -17.537959],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "zoom": 10,
+                "layers": [{
+                    "idRef": "geoje_island"
+                }], 
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
             }
         ]
     };
