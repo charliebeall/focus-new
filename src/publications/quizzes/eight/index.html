@@ -102,6 +102,78 @@
 <div id="bar-top"></div>
 <div id="bar-bottom" class="large"></div>
 <!-- inject:templates:html -->
+<script id="modal-template" type="text/template">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><%= title %></h4>
+            </div>
+            <div class="modal-body">
+                <p><%= content %></p>
+            </div>
+            <div class="modal-footer" style="display:<% print(showFooter ? 'block' : 'none') %>;">
+                <button type="button" class="btn btn-success">Start Quiz</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</script>
+<script id="quiz-score-template" type="text/template">
+    <div class="quiz-score">
+        <h3><%= score %></h3>
+    </div>
+</script>
+<script id="choice-template" type="text/template">
+    <div class="choice-body <% print(selected ? 'selected' : '') %> <%=result%>" style="background-image:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5)), url(<%= photo %>), linear-gradient(180deg, rgba(31,31,31,0.9), rgba(51,51,51,0.9))">
+        <div class="row id-row">
+            <span><%= id %></span>
+        </div>
+        <div class="row photo-row">
+            <% if (result === 'right') { %>
+            <span class="col-12 col-sm-12 fa fa-check right result pull-right"></span>
+            <% } else if (result === 'wrong') { %>
+            <span class="col-12 col-sm-12 fa fa-ban wrong result pull-right"></span>
+            <% } %>
+        </div>
+        <div class="row text-row">
+            <%= text %>
+        </div>
+    </div>
+</script>
+<script id="question-template" type="text/template" >
+    <div class="prompt">
+        <h3><%= prompt %></h3>
+        <div class="row button-row">
+            <button class="btn btn-success check-answer">Check Answer</button>
+            <button class="btn btn-success next">Next</button>
+        </div>
+    </div>
+    <div class="row choice-row">
+
+    </div>
+</script>
+<script id="menu-items-template" type="text/template">
+    <div class="items"></div>
+</script>
+<script id="menu-item-template" type="text/template">
+    <div class="publication col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <div class="publication-wrapper">
+            <span class="image" style="background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(<%=thumbnail%>); background-size:cover; background-position: 50% 50%;"></span>
+            <a href="<%= url %>" class="<%= type.replace(' ', '').toLowerCase() %>">
+                <h2><%= type %></h2>
+                <div class="content">
+                    <p><%= title %></p>
+                </div>
+                <div class="author">
+                    <p><%= author %></p>
+                </div>
+                <div class="date">
+                    <p><%= date %></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</script>
+
 <!-- endinject -->
 <script src="../../../js/combined.js"></script>
 <script>
@@ -230,13 +302,14 @@
             {
                 "id": "place3",
                 //"center": [0, 0],
-                "zoom": 2, //3
+                "zoom": 3, //3
                 "baseLayer": {
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
+
                 },
                 layers: [
                     {"id": "meso_america", "type": "geojson", "data": {
@@ -281,20 +354,21 @@
                     }}],
                 "style": {
                     "filter": "sepia(0%)",
-                    "opacity": 0.6,
+                    "opacity": 0.8,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/congruent_pentagon.png)"
                 }
             },
             {
                 "id": "place4",
                 //"center": [-79.541015625, -10.811724143275514],
-                "zoom": 1, //3
+                "zoom": 2, //3
                 "baseLayer": {
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
                     }
+
                 },
                 layers: [
                     {"id": "chile", "type": "geojson", "data": {
@@ -339,8 +413,8 @@
                     }}],
                 "style": {
                     "filter": "sepia(0%)",
-                    "opacity": 0.6,
-                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/congruent_pentagon.png)"
+                    "opacity": 0.8,
+                    "background": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='44' viewBox='0 0 34 44'%3E%3Cg fill='%238e8e64' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M1 6.2C.72 5.55.38 4.94 0 4.36v13.28c.38-.58.72-1.2 1-1.84A12.04 12.04 0 0 0 7.2 22 12.04 12.04 0 0 0 1 28.2c-.28-.65-.62-1.26-1-1.84v13.28c.38-.58.72-1.2 1-1.84A12.04 12.04 0 0 0 7.2 44h21.6a12.05 12.05 0 0 0 5.2-4.36V26.36A12.05 12.05 0 0 0 28.8 22a12.05 12.05 0 0 0 5.2-4.36V4.36A12.05 12.05 0 0 0 28.8 0H7.2A12.04 12.04 0 0 0 1 6.2zM17.36 23H12a10 10 0 1 0 0 20h5.36a11.99 11.99 0 0 1 0-20zm1.28-2H24a10 10 0 1 0 0-20h-5.36a11.99 11.99 0 0 1 0 20zM12 1a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 14a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3.46-2a2 2 0 1 0-3.47 2 2 2 0 0 0 3.47-2zm0-4a2 2 0 1 0-3.47-2 2 2 0 0 0 3.47 2zM12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.46 2a2 2 0 1 0 3.47-2 2 2 0 0 0-3.47 2zm0 4a2 2 0 1 0 3.47 2 2 2 0 0 0-3.47-2zM24 43a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm0-14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.46 2a2 2 0 1 0 3.47-2 2 2 0 0 0-3.47 2zm0 4a2 2 0 1 0 3.47 2 2 2 0 0 0-3.47-2zM24 37a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3.46-2a2 2 0 1 0-3.47 2 2 2 0 0 0 3.47-2zm0-4a2 2 0 1 0-3.47-2 2 2 0 0 0 3.47 2z'/%3E%3C/g%3E%3C/svg%3E\"), linear-gradient(0deg, #c2f0a2, #c2f0a2)"
                 }
             },
             {
@@ -405,16 +479,8 @@
             {
                 "id": "place6",
                 //"center": [-40, 38],
-                "zoom": 1, //3
+                "zoom": 2, //3
                 "baseLayer": {
-                    /*
-                    "type": "tile",
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                    */
-                    /*
-                    "type": "tile",
-                    "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png"
-                    */
                     "type": "esri-basemap",
                     "url": "NationalGeographic",
                     "options": {
@@ -464,8 +530,8 @@
                     }}],
                 "style": {
                     "filter": "sepia(0%)",
-                    "opacity": 0.6,
-                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/congruent_pentagon.png)"
+                    "opacity": 1,
+                    "background": "linear-gradient(0deg, #000, #000)"
                 }
             }, 
             {
@@ -473,10 +539,11 @@
                 //"center": [-79.541015625, -10.811724143275514],
                 "zoom": 2, //3
                 "baseLayer": {
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                    "type": "esri-basemap",
+                    "url": "USATopo",
+                    "options": {
+                        "detectRetina": true,
+                        //"imagerySet": "AerialWithLabels"
                     }
                 },
                 layers: [
@@ -588,12 +655,8 @@
             {
                 "id": "place9",
                 //"center": [0, 0],
-                "zoom": 5,
+                "zoom": 4,
                 "baseLayer": [{
-                    /*
-                    "type": "tile",
-                    "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                    */
                     "type": "esri-basemap",
                     "url": "Imagery",
                     "options": {
@@ -602,7 +665,7 @@
                 }],
                 "style": {
                     "filter": "sepia(0%)",
-                    "opacity": 0.6,
+                    "opacity": 0.9,
                     "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
                 },
                 "layers": [{"id": "maldives", "type": "geojson", "data": {
@@ -647,13 +710,13 @@
             }, {
                 "id": "place10",
                 "zoom": 3,
-                "baseLayer": {
-                    "type": "wms",
-                    "url": "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-                    "params": {
-                        "layers": "GEBCO_LATEST"
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
                     }
-                },
+                }],
                 "style": {
                     "filter": "grayscale(0%)",
                     "opacity": 0.8,
@@ -729,12 +792,12 @@
             sceneId: 'western_south_american'
         }, {
             id: 'C',
-            text: 'Sequoia National Park',
+            text: 'West Africa',
             photo: 'img/1c.jpg',
             sceneId: 'west_africa'
         }, {
             id: 'D',
-            text: 'Yellowstone National Park',
+            text: 'Caucuses',
             photo: 'img/1d.jpg',
             sceneId: 'caucuses'
         }],
@@ -876,7 +939,7 @@
         }],
         prompt: 'In order to prepare for possible crop disasters, scientists believe that seeds should be preserved both where they are cultivated, especially in centers of diversity and domestication (<i>in-situ</i> conservation), while also preserving seeds in climate-controlled vaults (<i>ex-situ</i> conservation). Where is the most famous of these seeds vaults located?',
         rightAnswer: {
-            id: 'C',
+            id: 'D',
             description: 'Known as the <a href="https://www.croptrust.org/our-work/svalbard-global-seed-vault/">Svalbard Global Seed Vault</a>'
         }
     }, {
@@ -1001,8 +1064,8 @@
         var navigator = new Focus.Views.QuizSceneNavigator({
             el: $('.scenes'),
             model: new Focus.Models.ModalModel({
-                title: 'Welcome to the Eighth Geo Quiz!',
-                content: "The Geography of Food Origins. By Antoinette M.G.A. WinklerPrins",
+                title: 'Welcome to the Eighth Geo Quiz, the Geography of Food Origins by Antoinette WinklerPrins',
+                content: "This quiz focuses on the history and geographic origins of some of our favorite foods.  How well do you know your food?",
                 buttonText: 'Start Quiz'
             }),
             collection: questionCollection

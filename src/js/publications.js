@@ -3,6 +3,15 @@ Focus.Volumes = [
 	{
         number: 61,
         publications: [{
+            type: 'Geo Quiz',
+            title: 'The Geography of Food Origins',
+            author: 'Antoinette WinklerPrins',
+            description: '',
+            date: '05/10/18',
+            thumbnail: 'publications/quizzes/eight/img/1b.jpg',
+            url: 'publications/quizzes/eight/index.html',
+            location: []
+        },{
             type: 'Feature Article',
             title: 'America\'s Public Lands: What, Where, Why, and What Next?',
             author: 'David J. Rutherford',
