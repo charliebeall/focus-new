@@ -4,6 +4,15 @@ Focus.Volumes = [
         number: 61,
         publications: [{
             type: 'Feature Article',
+            title: 'America\'s Public Lands: What, Where, Why, and What Next?',
+            author: 'David J. Rutherford',
+            description: '',
+            date: '04/22/18',
+            thumbnail: 'publications/articles/american_lands/img/fig4b.jpg',
+            url: 'publications/articles/american_lands/index.html',
+            location: []
+        },{
+            type: 'Feature Article',
             title: 'Cuba\'s Precarious Population Pyramid',
             author: 'Charles O. Collins',
             description: '',
