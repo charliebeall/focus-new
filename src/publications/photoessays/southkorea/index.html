@@ -29,12 +29,15 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin+Sketch|East+Sea+Dokdo|Faster+One|Gaegu|Love+Ya+Like+A+Sister|Yeon+Sung" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin+Sketch|East+Sea+Dokdo|Faster+One|Gaegu|Love+Ya+Like+A+Sister|Yeon+Sung|Slabo|Bevan|Carter+One" rel="stylesheet">
     <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
     <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
     <style type="text/css">
         #text p {
-            font-family: 'Halant', serif;
+            font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+			color: #000;
+			text-shadow: none;
         }
 
         #text h2 {
@@ -76,19 +79,20 @@
             }
         }
         
-        #text. h2, #text. h3 {
-            font-family: 'Khand', sans-serif;
-            color: rgba(255,151,53,1);
+        #text h2, #text h3 {
+            font-family: 'Carter One', sans-serif;
+            color: rgba(255,255,255,1);
+			text-transform: none;
         }
         
-        #text. h3 {
+        #text h3 {
             font-size: 40px;
             position: absolute;
             text-shadow: 0 1px 1px rgba(0,0,0,.5);
         }
         
         @media (max-width: 768px) {
-            #text. h3 {
+            #text h3 {
                 font-size: 20px;
             }
         }
@@ -120,10 +124,81 @@
         
         svg text {
             fill: #fff;
-            font-family: 'Khand', san-serif;
+            font-family: 'Carter One', sans-serif;
             text-shadow: 0px 1px 3px rgba(0,0,0,0.4);
             font-size: 20px;
+			font-weight: bold;
         }
+		
+		#text.photo-essay {
+			background: #fff;
+		}
+		
+		#nav, #toggle-map {
+			background: rgb(0,71,160);
+		}
+		
+		.nav.share {
+			background: rgb(205, 46, 58);
+		}
+		
+		#text.photo-essay h2 {
+			color: #fff;
+		}
+		
+		.photo-scene .author {
+			background: #fff;
+			color: #000;
+		}
+		
+		.photo-scene p {
+			background: linear-gradient(0deg,rgba(255,255,255,1) 60%,rgba(255,255,255,0.7));
+		}
+		
+		.author {
+			opacity: 1;
+		}
+		
+		.photo-scene .row.footer-row {
+			color: #000;
+		}
+		
+		.photo-scene a, .photo-scene a.location {
+			color: rgb(0,71,160);
+			background-color: rgba(0,71,160,0.1);
+			border-bottom: solid 3px rgba(0,71,160,0.7);
+		}
+		
+		#text.photo-essay a:visited {
+			color: rgb(0,71,160);
+		}
+		
+		progress::-webkit-progress-bar {
+            background-color: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: rgba(205, 46, 58, 0.7);
+            -webkit-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgba(205, 46, 58, 0.7);
+            transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-ms-fill {
+            background-color: rgba(205, 46, 58, 0.7);
+            -ms-transition: width 0.5s ease-in-out;
+        }
+		
+		#text.photo-essay h3 {
+			color: #000;
+		    font-size: 30px;
+		    position: absolute;
+		    text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		}
     </style>
 </head>
 <body>
@@ -190,17 +265,17 @@
 </div>
 <div id="text" class="photo-essay">
     <div class="content scenes">
-        <section id="introduction" class="scene photo-scene" data-scene-id="place1">
-			<div class="figure" id="figure1" style="background-image:linear-gradient(180deg, #000, rgba(0,0,0,0)), url(img/fig6.jpg); filter: grayscale(100%);"></div>
+        <section id="introduction" class="scene photo-scene" data-scene-id="place1" title="Introduction">
+			<div class="figure" id="figure1" style="background-image:linear-gradient(0deg, rgba(0,71,160,0.7) 60%, rgba(205, 46, 58, 1) 100%), url(img/fig6.jpg);"></div>
             <div class="intro">
             <h2 class="title">Schools in South Korea: Where have all the children gone?</h2>
             <div class="author">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-xs-3 col-sm-2 col-md-1 col-lg-1">
-                            <!--<div class="author-photo" style="background-image:url(img/marieprice.jpg);"></div>-->
+                        <div class="col-12 col-xs-3 col-sm-3 col-md-2 col-lg-2">
+                            <img class="author-photo" src="img/Flag_of_South_Korea.svg" />
                         </div>
-                        <div class="col-12 col-xs-9 col-sm-10 col-md-11 col-lg-11">
+                        <div class="col-12 col-xs-9 col-sm-9 col-md-10 col-lg-10">
                             <div class="row">
                                 <div class="col-12 col-xs-12 name">
                                     Michael Robinson
@@ -220,36 +295,36 @@
             </div>
             </div>
 		</section>
-		<section class="scene" data-scene-id="place1">
+		<section id="1" class="scene" data-scene-id="place1">
             <div class="figure" id="figure1" style="background-image:url(img/fig1.jpg);"></div>
-            <div class="caption" style="font-size: 14px; color: #fff"><i>View from a bay-side fishing village on Punghwailju-ro (ro is street), <a href="#" class="location" data-layer-id="sanyang-eup">Sanyang-eup</a> (eup is district), Tongyeong-si (si is city), Gyeongsangnam-do (do is province), South Korea.</i></div>
+            <div class="caption"><i>View from a bay-side fishing village on Punghwailju-ro (ro is street), Sanyang-eup (eup is district), Tongyeong-si (si is city), Gyeongsangnam-do (do is province), South Korea.</i></div>
                 
-                <p style="color: #fff">
+                <p>
                 During the summer of 2017, I was traveling around South Korea as a part of a delegation of U.S. educators whose job was to prepare lesson plans for the new National Atlas of Korea Volumes II and III. I am a high school geography teacher in Tennessee and my main focus for the two-week trip was on getting a better understanding of education and population in South Korea. For the previous National Atlas of Korea Volume I, I developed a lesson plan on South Korea’s aging population and declining birth rate. All three volumes of The National Atlas of Korea, my lesson plan, and three other lesson plans from three other high school geography teachers can be freely downloaded (in public domain) from: http://nationalatlas.ngii.go.kr/pages/page_1.php. Six more lesson plans are currently being developed and shall also be posted on the same website when completed. Volume IV, titled The National Atlas of Korea: Comprehensive Edition, is written specifically for use for secondary education in geography and social studies. It is expected to be published to the same website in Spring 2018. All volumes are written in both Korean and English languages. U.S. and all English-speaking geography and social studies teachers, especially Advanced Placement Human Geography teachers, are encouraged to download the public domain atlases and adopt these lesson plans for use in their classrooms. 
-                <br>
+				</p><p>
                 During the trip to South Korea, we were able to visit some of the rural areas of the country to see firsthand the impact that a severely declining birth rate and an increasing elderly population can have on such vulnerable communities, and especially on their schools.
-                <br>
+                </p><p>
                 The sad reality is that many of South Korea’s rural communities are dying, or at the very least on life-support. The opportunities for a better living, better jobs, better housing, and more conveniences can be found in more populated urban areas of South Korea. Many young people who grow up in rural areas move to the cities and suburbs seeking these opportunities. 
-                <br>
+                </p><p>
                 The following excerpt by Choe Sang-Hun in her <i>New York Times</i> article, <i>As South Korean Villages Empty, More Primary Schools Face Closings</i>,” details the reality for many of the small towns and villages across South Korea:
-                <br>
+                </p><p>
                 <i style="text-indent: 0"><small>“Villages around here have no more children to send,” the school’s only teacher, Lee Sung-kyun, said recently, looking over an empty, weed-filled playground surrounded by old cherry trees. “Young people have all gone to cities to find work and get married there.”
                 <br>
                 Most South Koreans now live in the tall apartment buildings that are spread out like dominoes across South Korean cities, but many still bemoan the shrinking of rural communities.
                 </small></i>
-            </p><p style="color: #fff">
+            	</p><p>
                 The same can be said for many of the rural communities in Tennessee where I grew up. I did what so many South Koreans did; I moved to a bigger city because of a better job opportunity. Unfortunately for my small town, many of my classmates did the same, and the town’s growth has stagnated. So when we traveled to some of these rural South Korean communities, I could see a lot of similarities with my own hometown in southern middle Tennessee.
-            </p><p style="color: #fff">
+            	</p><p>
                 A good example of this is that the high school that I attended has, in the last several years, continually dropped in enrollment to the point that it is currently in the small-school classification in the state of Tennessee. The same is happening to many of the schools across South Korea. With their enrollment dropping, their future and the future of the community of which they are a part of are uncertain. This article will provide a snapshot of three different schools in South Korea: 1) A small elementary school in a rural fishing village, 2) a closed elementary school in an inland agricultural community, and 3) a high school in the urban area of Seoul. Together, these paint an interesting picture of the impact of demographic changes that have been occurring throughout South Korea.
             </p>
         </section>
         <section id="2" class="scene photo-scene" data-scene-id="place2">
-            <div id="figure2" class="figure contain" style="background-size: auto 60%; background-position: 50% 0%; background-image:url(img/fig2.jpg);"></div>
+			<h3>Sanyang Elementary School</h3>
+            <div id="figure2" class="figure contain" style="background-size: 120% auto; background-position: 0% 0%; background-image:url(img/fig2.jpg);"></div>
             <p>
                 <i>Street address sign of the school and the Google Map location of the school at two different scales.</i>
                 <br><br>
-                <b>Sanyang Elementary School</b><br>
-                The first elementary school I want to discuss is the Sanyang Elementary School. A picture of a street sign (<a href="#figure2">Figure 2</a>) that indicated “388 Punghwailju-ro” led me to find and understand the Korean description of an address location.            
+                The first elementary school I want to discuss is the Sanyang Elementary School. A picture of a street sign that indicated “388 Punghwailju-ro” led me to find and understand the Korean description of an address location.            
                 <br>
                 As with many projects, it was easy to get distracted from the main topic. I didn’t know exactly what Punjhwailju-ro was, and when I finally located the school on Google Maps I was even more confused, or maybe intrigued, in trying to read the address. As someone who spends much of my time teaching and learning geography, I had found a list of places that I wanted—or even needed—to understand. 
                 <br>
@@ -257,39 +332,34 @@
             </p>
         </section>
         <section id="3" class="scene photo-scene" data-scene-id="place3">
-            <div class="figure" id="figure3" style="background-image:url(img/fig3.jpg);"></div>
+            <div class="figure contain" id="figure3" style="background-image:url(img/fig3.jpg); background-position: 50% 0%;"></div>
             <p>
                 <i>The four levels of Korean administrative divisions: do (province), si (city), eup (district), and ro (street) on Google Map.</i>
-                <br><br>
             </p>
-        </section>
-        <section id="4" class="scene" data-scene-id="place4">
-            <!-- <div class="figure" id="figure4" style="background-image:url(img/fig4.jpg);"></div> -->
-            <div class="caption" style="font-size: 14px; color: #fff"><i> Aerial view of the <a href="#" class="location" data-layer-id="sanyang_elementary">school</a> facing the bay and with its playground in front.</i></div>
         </section>
         <section id="5" class="scene photo-scene" data-scene-id="place5">
             <div class="figure" id="figure5" style="background-image:url(img/fig5.jpg);"></div>
-            <div class="caption" style="font-size: 14px; color: #fff">Photograph of Sanyang Elementary School.</div>
+            <p>Photograph of Sanyang Elementary School.</p>
         </section>
         <section id="6" class="scene photo-scene" data-scene-id="place6">
             <div class="figure" id="figure6" style="background-image:url(img/fig6.jpg);"></div>
-            <div class="caption" style="font-size: 14px; color: #fff">Classroom Photo #1. Notice the number of student desks.</div>    
+            <p>Classroom Photo #1. Notice the number of student desks.</p>    
         </section>
         <section id="7" class="scene photo-scene" data-scene-id="place7">
             <div class="figure" id="figure7" style="background-image:url(img/fig7.jpg);"></div>
-            <div class="caption" style="font-size: 14px; color: #fff">Classroom Photo #2. </div>
+            <p>Classroom Photo #2. </p>
         </section>
         <section id="8" class="scene photo-scene" data-scene-id="place8">
             <div class="figure" id="figure8" style="background-image:url(img/fig8.jpg);"></div>
-            <div class="caption" style="font-size: 14px; color: #fff">Classroom Photo #3.</div>
+            <p>Classroom Photo #3.</p>
 
         </section>
         <section id="9" class="scene photo-scene" data-scene-id="place9">
             <div class="figure" id="figure9" style="background-image:url(img/fig9.jpg);"></div>
-            <div class="caption" style="font-size: 14px; color: #fff">Classroom Photo #4, dedicated to golf instruction.</div>
+            <p>Classroom Photo #4, dedicated to golf instruction.</p>
         </section>
         <section id="10" class="scene photo-scene" data-scene-id="place10">
-            <div class="figure" id="figure10" style="background-image:url(img/fig10.jpg);"></div>
+            <div class="figure contain" id="figure10" style="background-image:url(img/fig10.jpg); background-position: 50% 0%;"></div>
             <p>
                 <i>The school sign as you enter the school; on the sign you can see a photo of all four teachers and nine students.</i>
             <br><br>
@@ -312,19 +382,14 @@
             <div class="figure" id="figure12" style="background-image:url(img/fig12.jpg);"></div>
             <div class="caption">The houses behind the elementary school.</div>
             <p>
-                Part of the immigrant experience is the struggle to maintain connections over great distances. Folkloric dancing is one important way in which children born of Bolivian parents and now living in the United States are exposed to Bolivian culture. In this picture, Bolivia children are participating in a Bolivia festival held each August in northern Virginia. Events such as these draw thousands of immigrants and their children who desire to maintain their connections to a far away home. Another strategy is to have beauty pageants, crowning a Miss Bolivia in the United States.
+                It remains to be seen how long the small elementary school with only nine students can survive and stay open, but when you look at this small fishing village there are few offerings for the nine young students when they finally graduate from school. There are limited jobs and few people their own age. For many people, there is little appealing about a quiet life in an isolated village populated by a majority of elderly people. 
             </p>
         </section>
         <section id="13" class="scene photo-scene" data-scene-id="place13">
+			<h3>The Former Daehak Elementary School</h3>
             <div class="figure" id="figure13" style="background-image:url(img/fig13.jpg);"></div>
-            <p><b>The Former Daehak Elementary School</b><br>
+            <p>
                 In some communities of Korea, there are already too few students for a school to be in operation. While driving through the rice fields in southern South Korea, we drove up to a place called Gurek-Gumnenzip. In Korean that means “house of making pottery.” When we went inside we could see that, in what was previously elementary classrooms, there were now classes set up to teach people how to make pottery.    
-            </p>
-        </section>
-        <section id="14" class="scene" data-scene-id="place14">
-            <!-- <div class="figure" id="figure14" style="background-image:url(img/fig14.jpg);"></div> -->
-            <p style="color: #fff">
-                <i>The location of the former <a href="#" class="location" data-layer-id="daehak_elementary">Daehak Elementary School</a> (Address: 276 Boncho-ri, Daeji-myeon, Changyeong, Gyeongsangnam-do, S. Korea). It is very obvious that the former school is in the middle of an agricultural region with lots of rice fields.</i>
             </p>
         </section>
         <section id="15" class="scene photo-scene" data-scene-id="place15">
@@ -345,10 +410,10 @@
                 The former Daehak Elementary looked no better than my old elementary school. There were weeds and overgrown shrubs surrounding the school. It had definitely seen better days. Although there were the pottery classes in some of the old classrooms of the former school, upon walking inside one was struck with a sense of loss. It is sad when a community loses its school, because the school is the one place that bonds all of the people of the town. It is the one place they all have in common. 
             </p>
         </section>
-        <section id="17" class="scene" data-scene-id="place17">
-            <div class="figure" id="figure17" style="background-image:url(img/fig17.jpg);"></div>
-            <div class="caption" style="font-size: 14px; color: #fff"><i>Car Camping at the former Daehak Elementary School (now closed and known as Gurek-Gumnenzip</i></div>
-            <p style="color: #fff">
+        <section id="17" class="scene photo-scene" data-scene-id="place17">
+            <div class="figure contain" id="figure17" style="background-image:url(img/fig17.jpg); background-position: 50% 0%;"></div>
+            <div class="caption"><i>Car Camping at the former Daehak Elementary School (now closed and known as Gurek-Gumnenzip</i></div>
+            <p>
                 As I was walking out of the school, I could see a car and a tent in front of the school. The school grounds have been multi-purposed for car camping. Looking on the bright side, at least the former school is still−for the moment−being used by the community. It would have been worse had it been completely abandoned.
                 <br>
                 Leaving the rural areas of southern South Korea, we headed back to the urban jungle which is Seoul. As mentioned earlier, it is to the cities that the youth of the villages are moving in hopes of better opportunities. The problem with schools losing students is not only a rural Korean problem, however. There are very real associated problems in the urban areas as well. The younger generation is under great economic pressure when they move to the cities where the cost of living is so much higher. More often than not, they are choosing a career first and marriage later, if at all; obviously delaying or not considering childbirth. 
@@ -357,18 +422,17 @@
             </p>
         </section>
         <section id="18" class="scene photo-scene" data-scene-id="place18">
+			<h3>Yongmoon High School, Seoul, South Korea</h3>
             <div class="figure" id="figure18" style="background-image:url(img/fig18.jpg);"></div>
             <p>
-                <i>Yongmoon High School, Seoul, South Korea.</i>
-            <br><br>
                 At the third and final school we visited during our trip, it does not seem to have increasing number of students. In the Vice-Principal’s office at Yongmoon High School in Seoul, there was a chalk- board with the number of classes offered for each year. In grade 3 (the oldest students of the three classes shown on the board), there are thirteen total classes, and in grade 2 there are twelve total classes. In grade 1, the youngest students in the school, there are only eleven total classes. Each year there are fewer and fewer students. Unlike the previous elementary schools discussed, Yongmoon High School is not in danger of closing anytime soon, but the alarm bells should still be sounding, because the demographic issues plaguing rural South Korea are alive and well in the urban areas also.
             </p>
         </section>
-        <section id="19" class="scene" data-scene-id="place19">
-            <div class="figure" id="figure19" style="background-image:url(img/fig19.jpg);"></div>
+        <section id="19" class="scene photo-scene" data-scene-id="place19">
+            <div class="figure contain" id="figure19" style="background-image:url(img/fig19.jpg); background-position: 50% 0%;"></div>
             <div class="caption" style="font-size: 14px; color: #fff"><i>Vice-Principal’s Office at Yongmoon High School, Seoul, South Korea – Number of classes by year.</i></div>
 
-            <p style="color: #fff">
+            <p>
                 There is no golf classroom at Yongmoon High School, because high school in South Korea is all work and more work. I had a student a few years ago in my class who had just moved to the United States from Seoul. I asked him what it was like to be a teenager in Seoul. His response was a bit startling. “Being a student in South Korea is no fun. Life is no fun. All you do is study.” To be fair, this student was extremely motivated and ambitious, so I am sure for him this was very true.
                 <br>
                 In her BBC article, South Korea’s Schools: Long Days, High Results, journalist Reeta Chakrabarti documents the day in the life of a teenager in one of Seoul’s affluent neighborhoods of Gangnam:<br><br>
@@ -410,10 +474,10 @@
         </section>
         <section id="23" class="scene photo-scene" data-scene-id="place23">
             <div class="figure" id="figure23" style="background-image:url(img/fig23.jpg);"></div>
-            <div class="caption" style="font-size: 14px; color: #fff">Subway seats reserved for pregnant women. (Seoul, South Korea).</div>
+            <p>Subway seats reserved for pregnant women. (Seoul, South Korea).</p>
         </section>
         <section id="24" class="scene photo-scene" data-scene-id="place24">
-            <div class="figure" id="figure24" style="background-image:url(img/fig24.jpg);"></div>
+            <div class="figure contain" id="figure24" style="background-image:url(img/fig24.jpg); background-position: 50% 0%;"></div>
             <p>
                 <i>Parking space for expecting mothers. (Geoje Island, South Korea)</i>
             <br><br>
@@ -432,26 +496,32 @@
 <!-- endinject -->
 <script src="../../../js/combined.js"></script>
 <script>
+	//rgb(205, 46, 58)
+	Focus.Map = {};
+    Focus.Map.defaultOptions = {
+        color: 'rgb(205, 46, 58)', //'rgba(0, 42, 143, 1)', //'#B0BDCE', //'#D30F23', //'rgba(39, 171, 226, 1)',
+        fillColor: 'rgb(205, 46, 58)', //'rgba(0, 42, 143, 1)', //'rgba(39, 171, 226, 1)',
+        radius: 8,
+        weight: 16,
+		fillOpacity: 1,
+        opacity: 0.2
+    };
+
+    Focus.Map.options = {};
+    Focus.Map.options.panes = [];
+				
     var scenes = {
         "features": [
         {
             "id": "south_korea",
             "type": "geojson",
             "style": {
-                "fill": false,
-                "stroke": true,
+                "stroke": false,
                 "weight": 2,
                 "opacity": 1,
-                "color": "orange",
+				"fillOpacity": 0.5,
                 "text": {
-                    "text": "South Korea",
-                    "style": {
-                        "stroke": "rgba(0,0,0,0.5)",
-                        "fill": "#fff",
-                        "stroke-width": 0.1,
-                        "font-family": "Raleway", "font-weight": "bold",
-                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                    }
+                    "text": "South Korea"
                 }
             },
             "data": {
@@ -469,14 +539,7 @@
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Sanyang-eup",
-                    "style": {
-                        "stroke": "rgba(0,0,0,0.5)",
-                        "fill": "#fff",
-                        "stroke-width": 0.1,
-                        "font-family": "Raleway", "font-weight": "bold",
-                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                    }
+                    "text": "Sanyang-eup"
                 }
             },
             "data": {
@@ -496,14 +559,7 @@
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Sangyang Elementary",
-                    "style": {
-                        "stroke": "rgba(0,0,0,0.5)",
-                        "fill": "#fff",
-                        "stroke-width": 0.1,
-                        "font-family": "Raleway", "font-weight": "bold",
-                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                    }
+                    "text": "Sangyang Elementary"
                 }
             },
             "data": {
@@ -523,14 +579,7 @@
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": " ",
-                    "style": {
-                        "stroke": "rgba(0,0,0,0.5)",
-                        "fill": "#fff",
-                        "stroke-width": 0.1,
-                        "font-family": "Raleway", "font-weight": "bold",
-                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                    }
+                    "text": " "
                 }
             },
             "data": {
@@ -550,14 +599,7 @@
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Daehak Elementary School",
-                    "style": {
-                        "stroke": "rgba(0,0,0,0.5)",
-                        "fill": "#fff",
-                        "stroke-width": 0.1,
-                        "font-family": "Raleway", "font-weight": "bold",
-                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                    }
+                    "text": "Daehak Elementary School"
                 }
             },
             "data": {
@@ -577,14 +619,7 @@
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Road to Daehak Elementary",
-                    "style": {
-                        "stroke": "rgba(0,0,0,0.5)",
-                        "fill": "#fff",
-                        "stroke-width": 0.1,
-                        "font-family": "Raleway", "font-weight": "bold",
-                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                    }
+                    "text": "Road to Daehak Elementary"
                 }
             },
             "data": {
@@ -604,14 +639,7 @@
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Gurek-Gumnenzip",
-                    "style": {
-                        "stroke": "rgba(0,0,0,0.5)",
-                        "fill": "#fff",
-                        "stroke-width": 0.1,
-                        "font-family": "Raleway", "font-weight": "bold",
-                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                    }
+                    "text": "Gurek-Gumnenzip"
                 }
             },
             "data": {
@@ -631,14 +659,7 @@
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Yongmoon High School",
-                    "style": {
-                        "stroke": "rgba(0,0,0,0.5)",
-                        "fill": "#fff",
-                        "stroke-width": 0.1,
-                        "font-family": "Raleway", "font-weight": "bold",
-                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                    }
+                    "text": "Yongmoon High School"
                 }
             },
             "data": {
@@ -658,14 +679,7 @@
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Seoul",
-                    "style": {
-                        "stroke": "rgba(0,0,0,0.5)",
-                        "fill": "#fff",
-                        "stroke-width": 0.1,
-                        "font-family": "Raleway", "font-weight": "bold",
-                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                    }
+                    "text": "Seoul"
                 }
             },
             "data": {
@@ -685,14 +699,7 @@
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Geoje Island",
-                    "style": {
-                        "stroke": "rgba(0,0,0,0.5)",
-                        "fill": "#fff",
-                        "stroke-width": 0.1,
-                        "font-family": "Raleway", "font-weight": "bold",
-                        "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                    }
+                    "text": "Geoje Island"
                 }
             },
             "data": {
@@ -718,36 +725,8 @@
                     }
                 }],
                 "layers": [{
-                    "idRef": "south_korea",
-                        //-17.583494, -66.008273
-                        // "id": "sanyang-eup",
-                        // "type": "geojson",
-                        // "style": {
-                        //     "weight": 10,
-                        //     "opacity": 0.3,
-                        //     "text": {
-                        //         "text": "Sanyang-eup",
-                        //         "style": {
-                        //             "stroke": "rgba(0,0,0,0.5)",
-                        //             "fill": "#fff",
-                        //             "stroke-width": 0.1,
-                        //             "font-family": "Raleway", "font-weight": "bold",
-                        //             "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                        //         }
-                        //     }
-                        // },
-                        // "data": {
-                        //     "type": "Feature",
-                        //     "geometry": {
-                        //         "type": "Point",
-                        //         "coordinates": [128.358441, 34.826537]
-                        //     },
-                        //     "properties": {
-                        //         "name": "Sanyang-eup"
-                        //     }
-                        // }
-                    }
-                ],
+                    "idRef": "south_korea"
+                }],
                 "zoom": 5,
                 "style": {
                     "filter": "sepia(0%)",
@@ -777,25 +756,6 @@
             },
             {
                 "id": "place3",
-                "baseLayer": [{
-                    "type": "esri-basemap",
-                    "url": "Imagery",
-                    "options": {
-                        "detectRetina": true,
-                        "imagerySet": "AerialWithLabels"
-                    }
-                }],
-                "layers": [{
-                    "idRef": "sanyang-eup"
-                }],
-                "zoom": 16,
-                "style": {
-                    "filter": "sepia(0%)",
-                    "opacity": 0.95,
-                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
-                }
-            },{
-                "id": "place4",
                 "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "Imagery",
