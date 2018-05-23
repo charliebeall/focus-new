@@ -91,10 +91,23 @@
             text-shadow: 0 1px 1px rgba(0,0,0,.5);
         }
         
-        @media (max-width: 768px) {
-            #text h3 {
-                font-size: 20px;
-            }
+		#text.photo-essay h3 {
+			color: #000;
+		    font-size: 30px;
+		    position: absolute;
+		    text-shadow: 0 1px 1px rgba(0,0,0,.5);
+			background: rgba(205, 46, 58, 1);
+			padding: 10px;
+		}
+		
+        @media (max-width: 768px) {			
+			#text.photo-essay h2.title {
+				color: #000;
+			}
+			
+			#text.photo-essay h3 {
+				font-size: 20px;
+			}
         }
         
         .dotstyle .sections li {
@@ -163,7 +176,7 @@
 			color: #000;
 		}
 		
-		.photo-scene a, .photo-scene a.location {
+		.scene a, .scene a.location {
 			color: rgb(0,71,160);
 			background-color: rgba(0,71,160,0.1);
 			border-bottom: solid 3px rgba(0,71,160,0.7);
@@ -192,15 +205,6 @@
             background-color: rgba(205, 46, 58, 0.7);
             -ms-transition: width 0.5s ease-in-out;
         }
-		
-		#text.photo-essay h3 {
-			color: #000;
-		    font-size: 30px;
-		    position: absolute;
-		    text-shadow: 0 1px 1px rgba(0,0,0,.5);
-			background: rgba(205, 46, 58, 1);
-			padding: 10px;
-		}
     </style>
 </head>
 <body>
@@ -268,7 +272,7 @@
 <div id="text" class="photo-essay">
     <div class="content scenes">
         <section id="introduction" class="scene photo-scene" data-scene-id="place1" title="Introduction">
-			<div class="figure" id="figure1" style="background-image:linear-gradient(0deg, rgba(0,71,160,0.7) 60%, rgba(205, 46, 58, 1) 100%), url(img/fig6.jpg);"></div>
+			<div class="figure" id="figure1" style="background-position: 0% 100%; background-image:linear-gradient(0deg, rgba(0,71,160,0.7) 60%, rgba(205, 46, 58, 1) 100%), url(img/fig6.jpg);"></div>
             <div class="intro">
             <h2 class="title">Schools in South Korea: Where have all the children gone?</h2>
             <div class="author">
@@ -302,7 +306,7 @@
             <div class="caption"><i>View from a bay-side fishing village on Punghwailju-ro (ro is street), Sanyang-eup (eup is district), Tongyeong-si (si is city), Gyeongsangnam-do (do is province), South Korea.</i></div>
                 
                 <p>
-                During the summer of 2017, I was traveling around South Korea as a part of a delegation of U.S. educators whose job was to prepare lesson plans for the new National Atlas of Korea Volumes II and III. I am a high school geography teacher in Tennessee and my main focus for the two-week trip was on getting a better understanding of education and population in South Korea. For the previous National Atlas of Korea Volume I, I developed a lesson plan on South Korea’s aging population and declining birth rate. All three volumes of The National Atlas of Korea, my lesson plan, and three other lesson plans from three other high school geography teachers can be freely downloaded (in public domain) from: http://nationalatlas.ngii.go.kr/pages/page_1.php. Six more lesson plans are currently being developed and shall also be posted on the same website when completed. Volume IV, titled The National Atlas of Korea: Comprehensive Edition, is written specifically for use for secondary education in geography and social studies. It is expected to be published to the same website in Spring 2018. All volumes are written in both Korean and English languages. U.S. and all English-speaking geography and social studies teachers, especially Advanced Placement Human Geography teachers, are encouraged to download the public domain atlases and adopt these lesson plans for use in their classrooms. 
+                During the summer of 2017, I was traveling around South Korea as a part of a delegation of U.S. educators whose job was to prepare lesson plans for the new National Atlas of Korea Volumes II and III. I am a high school geography teacher in Tennessee and my main focus for the two-week trip was on getting a better understanding of education and population in South Korea. For the previous National Atlas of Korea Volume I, I developed a lesson plan on South Korea’s aging population and declining birth rate. All three volumes of The National Atlas of Korea, my lesson plan, and three other lesson plans from three other high school geography teachers can be freely downloaded (in public domain) from: <a href="http://nationalatlas.ngii.go.kr/pages/page_1.php" target="_blank">http://nationalatlas.ngii.go.kr/pages/page_1.php</a>. Six more lesson plans are currently being developed and shall also be posted on the same website when completed. Volume IV, titled The National Atlas of Korea: Comprehensive Edition, is written specifically for use for secondary education in geography and social studies. It is expected to be published to the same website in Spring 2018. All volumes are written in both Korean and English languages. U.S. and all English-speaking geography and social studies teachers, especially Advanced Placement Human Geography teachers, are encouraged to download the public domain atlases and adopt these lesson plans for use in their classrooms. 
 				</p><p>
                 During the trip to South Korea, we were able to visit some of the rural areas of the country to see firsthand the impact that a severely declining birth rate and an increasing elderly population can have on such vulnerable communities, and especially on their schools.
                 </p><p>
@@ -322,15 +326,15 @@
         </section>
         <section id="2" class="scene photo-scene" data-scene-id="place2">
 			<h3>Sanyang Elementary School</h3>
-            <div id="figure2" class="figure contain" style="background-size: 120% auto; background-position: 0% 0%; background-image:url(img/fig2.jpg);"></div>
+            <div id="figure2" class="figure contain" style="background-position: 20% 100px; background-image:url(img/fig2.jpg);"></div>
             <p>
-                <i>Street address sign of the school and the Google Map location of the school at two different scales.</i>
+                <i>Street address sign of the school and the Google Maps location of the school at two different scales.</i>
                 <br><br>
                 The first elementary school I want to discuss is the Sanyang Elementary School. A picture of a street sign that indicated “388 Punghwailju-ro” led me to find and understand the Korean description of an address location.            
                 <br>
                 As with many projects, it was easy to get distracted from the main topic. I didn’t know exactly what Punjhwailju-ro was, and when I finally located the school on Google Maps I was even more confused, or maybe intrigued, in trying to read the address. As someone who spends much of my time teaching and learning geography, I had found a list of places that I wanted—or even needed—to understand. 
                 <br>
-                When I located the school I just didn’t understand how to read the address, but fortunately in the age of the Internet the answer was just a few clicks away. I found the website “South Korea Postal Code” (https://kor.youbianku.com), and it broke down the address so that I could actually make sense of it.  The complete locational description of the school is: 388 Punghwailju-ro (ro is street), Sanyang-eup (eup is district), Tongyeong-si (si is city), Gyeongsangnam-do (do is province), South Korea. Now that I understood that South Korean addresses were broken down from street, to district, to city, to province, and finally to country, I understood exactly where the school was located by address. Other administrative subdivisions include gun (county) and three different subdivisions of eup, namely myeon, gu, and dong.
+                When I located the school I just didn’t understand how to read the address, but fortunately in the age of the Internet the answer was just a few clicks away. I found the website “South Korea Postal Code” (<a href="https://kor.youbianku.com" target="_blank">https://kor.youbianku.com</a>), and it broke down the address so that I could actually make sense of it.  The complete locational description of the school is: 388 Punghwailju-ro (ro is street), Sanyang-eup (eup is district), Tongyeong-si (si is city), Gyeongsangnam-do (do is province), South Korea. Now that I understood that South Korean addresses were broken down from street, to district, to city, to province, and finally to country, I understood exactly where the school was located by address. Other administrative subdivisions include gun (county) and three different subdivisions of eup, namely myeon, gu, and dong.
             </p>
         </section>
         <section id="3" class="scene photo-scene" data-scene-id="place3">
@@ -344,20 +348,20 @@
             <p>Photograph of Sanyang Elementary School.</p>
         </section>
         <section id="6" class="scene photo-scene" data-scene-id="place6">
-            <div class="figure" id="figure6" style="background-image:url(img/fig6.jpg);"></div>
+            <div class="figure contain" id="figure6" style="background-image:url(img/fig6.jpg);"></div>
             <p>Classroom Photo #1. Notice the number of student desks.</p>    
         </section>
         <section id="7" class="scene photo-scene" data-scene-id="place7">
-            <div class="figure" id="figure7" style="background-image:url(img/fig7.jpg);"></div>
+            <div class="figure contain" id="figure7" style="background-image:url(img/fig7.jpg);"></div>
             <p>Classroom Photo #2. </p>
         </section>
         <section id="8" class="scene photo-scene" data-scene-id="place8">
-            <div class="figure" id="figure8" style="background-image:url(img/fig8.jpg);"></div>
+            <div class="figure contain" id="figure8" style="background-image:url(img/fig8.jpg);"></div>
             <p>Classroom Photo #3.</p>
 
         </section>
         <section id="9" class="scene photo-scene" data-scene-id="place9">
-            <div class="figure" id="figure9" style="background-image:url(img/fig9.jpg);"></div>
+            <div class="figure contain" id="figure9" style="background-image:url(img/fig9.jpg);"></div>
             <p>Classroom Photo #4, dedicated to golf instruction.</p>
         </section>
         <section id="10" class="scene photo-scene" data-scene-id="place10">
