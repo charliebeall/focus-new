@@ -205,6 +205,15 @@
             background-color: rgba(205, 46, 58, 0.7);
             -ms-transition: width 0.5s ease-in-out;
         }
+		
+		.scene p:first-of-type {
+			padding-top: 30px;
+		}
+		
+		#photo-caption {
+			width: 30%;
+			font-size: 10px;
+		}
     </style>
 </head>
 <body>
@@ -271,7 +280,7 @@
 </div>
 <div id="text" class="photo-essay">
     <div class="content scenes">
-        <section id="introduction" class="scene photo-scene" data-scene-id="place1" title="Introduction">
+        <section id="introduction" class="scene photo-scene" data-scene-id="place0" title="Introduction">
 			<div class="figure" id="figure1" style="background-position: 0% 100%; background-image:linear-gradient(0deg, rgba(0,71,160,0.7) 60%, rgba(205, 46, 58, 1) 100%), url(img/fig6.jpg);"></div>
             <div class="intro">
             <h2 class="title">Schools in South Korea: Where have all the children gone?</h2>
@@ -301,100 +310,106 @@
             </div>
             </div>
 		</section>
-		<section id="1" class="scene" data-scene-id="place1">
+		<section id="1" class="scene photo-scene" data-scene-id="place0">
+				<div class="figure contain" id="figure0" style="background-image:url(img/mrauthor.jpg);"></div>
                 <p>
                 I am a high school geography teacher in Tennessee. During the summer of 2017, I traveled around South Korea as a part of a delegation of U.S. geography educators. During this trip, we were able to visit some of the rural areas of the country to see firsthand the impact that a severely declining birth rate and an increasing elderly population can have on communities and especially on their schools.
-				</p><p>
+				</p>
+		</section>
+		<section id="1-0" class="scene" data-scene-id="place0">
+				<p>
                 The sad reality is that many of South Korea’s rural communities are dying, or at the very least on life-support. The opportunities for a better living, better jobs, better housing, and more conveniences can be found in more populated urban areas. Many young people who grow up in rural areas move to the cities and suburbs seeking these opportunities. Few ever return to live.
                 </p><p>
                 Various geographic factors help shape the demographic structure of South Korea’s population and its vital statistics. <a href="#figure1">Figure 1</a> below shows the birth, death, and total fertility rates of South Korea. It is apparent that population is declining. The total fertility rate for South Korea in 2017 is 1.2/woman (PRB, 2018). The estimated 2017 population of South Korea is over 51 million and its urbanization rate is estimated at 90 percent (NGII, 3:116). This means that approximately 5 million people still live in rural areas, and, of this number, only a small proportion are school-age children. Such a demographic distribution has serious impacts rural schools; they must struggle to operate with fewer and fewer children. 
                 </p>
             <div class="figure contain" id="figure1" style="background-image:url(img/figure1.jpg);"></div>
-            <div class="caption"><i>Birth, death, and total fertility rates of South Korea, the declining trend is very apparent. (Source: The National Atlas of Korea, Vol. 3, p. 116; published with the permission of Korea’s National Geographic Information Institute)</i>
+            <div class="caption">Figure 1: Birth, death, and total fertility rates of South Korea, the declining trend is very apparent. (Source: The National Atlas of Korea, Vol. 3, p. 116; published with the permission of Korea’s National Geographic Information Institute)
 			</div>
 		</section>
-		<section id="1-1" class="scene" data-scene-id="place1">
+		<section id="1-1" class="scene" data-scene-id="place0">
                 <p>
                 The following excerpt by Choe Sang-Hun in her 2015 <i>New York Times</i> article, “As South Korean Villages
                 Empty, More Primary Schools Face Closings,” details the reality for many of the small towns and village
                 across South Korea:
                 </p><p>
-                <i style="text-indent: 0"><small>“Villages around here have no more children to send,” the school’s only teacher, Lee Sung-kyun, said recently, looking over an empty, weed-filled playground surrounded by old cherry trees. “Young people have all gone to cities to find work and get married there.”
+                <blockquote>“Villages around here have no more children to send,” the school’s only teacher, Lee Sung-kyun, said recently, looking over an empty, weed-filled playground surrounded by old cherry trees. “Young people have all gone to cities to find work and get married there.”
                 <br>
                 "Most South Koreans now live in the tall apartment buildings that are spread out like dominoes across South Korean cities, but many still bemoan the shrinking of rural communities.""
-                </small></i>
+				</blockquote>
 
             	</p><p>
                 This demographic challenge also confronts many rural communities in Tennessee where I grew up. I did what so many South Koreans did. I moved to a bigger city for a better job opportunity. Unfortunately for my small town, many of my classmates did the same, and the town’s growth has stagnated. So when we traveled to some of these rural South Korean communities, I could see a lot of similarities with my own hometown in southern middle Tennessee. The high school that I attended has dropped in enrollment to the point that it fell into Tennessee's smallest school classification. In both rural Tennessee and rural South Korea, schools are vital parts of their communities. Their closures threaten the communities' survival.
             	</p>
 			</section>
-			<section id="1-2" class="scene" data-scene-id="place1">
+			<section id="1-2" class="scene" data-scene-id="place0">
                 <div id="figure2" class="figure contain" style="background-image:url(img/figure2.jpg);"></div>
                 <div class="caption">
-                View from a bay-side fishing-village community where fishing is the main economic activity. The lack of other jobs is a driving force for the younger generation to leave for urban areas where more opportunities are available.
+                Figure 2: View from a bay-side fishing-village community where fishing is the main economic activity. The lack of other jobs is a driving force for the younger generation to leave for urban areas where more opportunities are available.
                 </div>
 
                 <p>
                 On our trip we visited three different schools in South Korea: A small elementary school in a rural fishing village, a closed elementary school in an inland agricultural community, and a high school in the urban area of Seoul. Together, these paint an interesting picture of the impact of demographic changes that have been occurring throughout South Korea.
             </p> 
-            <div id="figure3" class="figure contain" style="background-size: 120% auto; background-position: 0% 0%; background-image:url(img/figure3.jpg);"></div>
+		</section>
+		<section id="1-3" class="scene" data-scene-id="place4">
+            <div id="figure3" class="figure contain" style="background-image:url(img/figure3.jpg);"></div>
             <div class="caption">
-                Figure 3 shows the street address sign of the school and the Google Map location of the school at two different scales.
+                Figure 3: Street address sign of the school and the Google Map location of the school at two different scales.
             </div>
             <p>
                 Administrative units form a clear hierarchy in South Korea. One way to understand the different geographies of these communities, is to look at their street addresses. Each part reflects an administrative unit, and each unit determines school funding. See the street address of the first school that we visited in a quaint fishing-village community (<a href="#figure2">Figure 3</a>). The address for Sanyang Elementary School is 388 Punghwailju-ro, Sanyang- eup, Tongyeong-si, Gyeongsangnam-do, South Korea (<a href="#figure3">Figure 3</a>). The term “-ro” refers to the street, “-eup” is the district (can be as large as multiples of tens of square miles and include detached islands), “-si” is the city, and “-do” is the province. As for the fishing-village community in which the school is located, it does not even have a name, at least not as shown in the address.
             </p>
-            <div id="figure4" class="figure contain" style="background-size: 120% auto; background-position: 50% 0%; background-image:url(img/figure4.jpg);"></div>
+            <div id="figure4" class="figure contain" style="background-image:url(img/figure4.jpg);"></div>
             <div class="caption">
-                Figure 4 shows the four levels of Korean administrative divisions: -do (province), -si (city), -eup (district), and - ro (road) on Google Map
+                Figure 4: The four levels of Korean administrative divisions: -do (province), -si (city), -eup (district), and - ro (road) on Google Map
             </div>
         </section>
         <section id="4" class="scene photo-scene" data-scene-id="place4">
             <h3>Sanyang Elementary School</h3>
-			<div id="figure6" class="figure contain" style="background-size: 120% auto; background-position: 50% 0%; background-image:url(img/figure6.jpg);"></div>
+			<div id="figure6" class="figure contain" style="background-image:url(img/figure6.jpg);"></div>
             <p>
-                Figure 6: Photograph of Sanyang Elementary School. 
+                Figure 5: Photograph of Sanyang Elementary School. 
 				<br/><br/>
-				Our first school visit was something of a shock. The most intriguing part of this school is that there are only 9 students and 4 teachers. Yes, that is correct; there are only nine students in the entire school: eight boys and one girl. <a href="#figure7">Figure 7</a> below shows all the members of the school. The student-teacher ratio is terrific, but the per student cost of operating and maintaining this school is very high. Consolidation of schools is not an easy option. Children from the remaining rural communities have great difficulty commuting to urban school. Most South Korean students use public transportation to get to school; only elite international schools in Seoul and Busan operate their own small fleets of school buses. Students from rural areas with no public transportation have no means of traveling to urban schools.
+				Our first school visit was something of a shock. The most intriguing part of this school is that there are only 9 students and 4 teachers. Yes, that is correct; there are only nine students in the entire school: eight boys and one girl. <a href="#figure7">Figure 6</a> below shows all the members of the school. The student-teacher ratio is terrific, but the per student cost of operating and maintaining this school is very high. Consolidation of schools is not an easy option. Children from the remaining rural communities have great difficulty commuting to urban school. Most South Korean students use public transportation to get to school; only elite international schools in Seoul and Busan operate their own small fleets of school buses. Students from rural areas with no public transportation have no means of traveling to urban schools.
             </p>
         </section>
 
         <section id="5" class="scene photo-scene" data-scene-id="place5">
-            <div id="figure7" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure7.jpg);"></div>
+            <div id="figure7" class="figure contain" style="background-image:url(img/figure7.jpg);"></div>
             <p>
-                 Figure 7: The school sign as you enter the school; on the sign you can see a photo of all four teachers and nine students.
+                 Figure 6: The school sign as you enter the school; on the sign you can see a photo of all four teachers and nine students.
             </p>
         </section>
         <section id="6" class="scene photo-scene" data-scene-id="place6"> 
-            <div id="figure8" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure8.jpg);"></div>
+            <div id="figure8" class="figure contain" style="background-image:url(img/figure8.jpg);"></div>
             <p>
-                 Figure 8: Classroom Photo #1. Notice the number of student desks. Classroom space is certainly not a problem.
+                 Figure 7: Classroom Photo #1. Notice the number of student desks. Classroom space is certainly not a problem.
 				 <br/><br/>
 				 We felt an emptiness within the school grounds, not solely because of the small numbers, but also because of the excess classrooms.
             </p>
         </section>
 
         <section id="7" class="scene photo-scene" data-scene-id="place7">
-            <div id="figure9" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure9.jpg);"></div>
+            <div id="figure9" class="figure contain" style="background-image:url(img/figure9.jpg);"></div>
             <p>
-                 Figure 9: Classroom Photo #2. 
+                 Figure 8: Classroom Photo #2. 
 				 <br/><br/>
 				 In fact, the only girl in the school has a whole classroom dedicated for her use.  Even rural school children in Korea can enjoy (or keep up with) the latest fashion styles that urban school children often do, such as white-rim glasses and a digital watch with cat. There is no lack of social trends reaching rural areas.
             </p>
         </section>
 
         <section id="8" class="scene photo-scene" data-scene-id="place8">
-           <div id="figure10" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure10.jpg);"></div>
+           <div id="figure10" class="figure contain" style="background-image:url(img/figure10.jpg);"></div>
             <p>
-                 Figure 10: Classroom Photo #3.
+                 Figure 9: Classroom Photo #3.
 				 <br/><br/>
 				 One classroom was even turned into an indoor golf practice room. 
             </p>
         </section>
         <section id="9" class="scene photo-scene" data-scene-id="place9">
-            <div id="figure11" class="figure" style="background-position: 50% 0%; background-image:url(img/figure11.jpg);"></div>
+            <div id="figure11" class="figure" style="background-image:url(img/figure11.jpg);"></div>
             <p>
-                 Figure 11: The Vice-Principal walks down the empty hallway.
+                 Figure 10: The Vice-Principal walks down the empty hallway.
 				 <br/><br/>
 				 Unlike the hustle and bustle of student traffic in the hallways in an urban or suburban school, Sanyang Elementary School's halls were empty.
             </p>
@@ -403,19 +418,20 @@
             <p>
                 Karl Schultz, a teacher in a South Korean rural school, conveys the poignancy of these schools and towns in his article, “The End of South Korea’s Rural Schools:”
                 <br>
-                <small>
-                    <i>
+                <blockquote>
                         The elderly residents of Anpyeong literally grew up with the school, which was founded in 1952. It is the only symbol of youth in a blighted, aging town. For the few student-age residents that remain, having a local school means they can still live at home and do not have to deal with a long daily commute.
                         <br>
                         A school in each town may have made sense in the 1950s and 1960s, when most of these schools were being built, but they don’t make as much sense today. In 1955, for example, Anpyeong Middle School <a href="http://apms.school.gyo6.net/schoolContent/schoolHistory.do">graduated 117 students</a> (its first graduating class). Today, that number has shrunk to just two students per year.
                         <br>
-                    </i>
-                </small>
-                It remains to be seen how long this small elementary school with only nine students can stay open, but when you look at <a href="#figure12">Figure 12</a> you can see in this small fishing village there are few offerings for the nine young students when they finally graduate from school. There are limited jobs and few people their own age. For many people, there is little appealing about a quiet life in an isolated village populated by a majority of elderly people.
+					</blockquote>
+
+			</p>
+			<p>
+			It remains to be seen how long this small elementary school with only nine students can stay open, but when you look at <a href="#figure12">Figure 11</a> you can see in this small fishing village there are few offerings for the nine young students when they finally graduate from school. There are limited jobs and few people their own age. For many people, there is little appealing about a quiet life in an isolated village populated by a majority of elderly people.
 			</p>
             <div id="figure12" class="figure contain" style="background-image:url(img/figure12.jpg);"></div>
             <div class="caption">
-                 Figure 12: View of the small rural community behind Sanyang Elementary School where a supply of students is dwindling as people move to urban areas for better opportunities.
+                 Figure 11: View of the small rural community behind Sanyang Elementary School where a supply of students is dwindling as people move to urban areas for better opportunities.
             </div>
             <p>
                 Sanyang Elementary School is not unique. Nogok Primary School in Nogok, South Korea, waited until the last student graduated before closing it in 2016 (Choe, 2015). As a result, the only teacher in this school lost his job.
@@ -424,34 +440,34 @@
 
         <section id="12" class="scene photo-scene" data-scene-id="place12">
             <h3>The Former Daehak Elementary School</h3>
-            <div id="figure14" class="figure" style="background-position: 50% 0%; background-image:url(img/figure14.jpg);"></div>
+            <div id="figure14" class="figure" style="background-image:url(img/figure14.jpg);"></div>
             <p>
-				Figure 14: Pottery on display at Gurek-Gumnenzip.
+				Figure 12: Pottery on display at Gurek-Gumnenzip.
 				<br/><br/>
-                Our next school visit was to the Daehak Elementary School in a farming community where the school has been closed for some time. While driving through the rice fields in southern South Korea, we drove up to a place called Gurek-Gumnenzip that used to be the Daehak Elementary School. In Korean, gurek-gumnenzip means “house of making pottery.” When we went inside we could see that, in what was previously elementary classrooms, there were now classes set up to teach people how to make pottery. <a href="#figure15">Figure 15</a> and <a href="#figure16">Figure 16</a> show the scenes and characteristics of this rural farming community.
+                Our next school visit was to the Daehak Elementary School in a farming community where the school has been closed for some time. While driving through the rice fields in southern South Korea, we drove up to a place called Gurek-Gumnenzip that used to be the Daehak Elementary School. In Korean, gurek-gumnenzip means “house of making pottery.” When we went inside we could see that, in what was previously elementary classrooms, there were now classes set up to teach people how to make pottery. <a href="#figure15">Figure 13</a> and <a href="#figure16">Figure 14</a> show the scenes and characteristics of this rural farming community.
             </p>
         </section>
 
         <section id="13" class="scene photo-scene" data-scene-id="place13">
-            <div id="figure15" class="figure" style="background-position: 50% 0%; background-image:url(img/figure15.jpg);"></div>
+            <div id="figure15" class="figure" style="background-image:url(img/figure15.jpg);"></div>
             <p>
-               Figure 15: The road leading up to the former school was next to a paddy rice field.
+               Figure 13: The road leading up to the former school was next to a paddy rice field.
 			   <br/><br/>
 			   Farming, as a livelihood, is very apparent for this community. New methods of high-yield rice farming coupled with international trade agreements to import rice contribute to decreasing number of rice farms, even though rice has long been a staple diet.
             </p>
 
         </section>
 		<section id="14" class="scene photo-scene" data-scene-id="place14">
-	        <div id="figure16" class="figure" style="background-position: 50% 0%; background-image:url(img/figure16.jpg);"></div>
+	        <div id="figure16" class="figure" style="background-image:url(img/figure16.jpg);"></div>
 	        <p>
-	           Figure 16: The communities near the former Daehak Elementary School occur in scattered clusters each having about a dozen houses. A search on this lat/long location on Google Map Satellite View shows only a dozen of houses in this community cluster and other similar scattered clusters nearby.
+	           Figure 14: The communities near the former Daehak Elementary School occur in scattered clusters each having about a dozen houses. A search on this lat/long location on Google Map Satellite View shows only a dozen of houses in this community cluster and other similar scattered clusters nearby.
 	        </p>
 		</section>
 
         <section id="15" class="scene photo-scene" data-scene-id="place14">
-			<div id="figure17" class="figure contain" style="background-size: 120% auto; background-position: 50% 0%; background-image:url(img/figure17.jpg);"></div>
+			<div id="figure17" class="figure contain" style="background-image:url(img/figure17.jpg);"></div>
             <p>
-				Figure 17: The Former Daehak Elementary School (now closed and known as Gurek-Gumnenzip) (Photo taken from its playground in front of the main entrance.)
+				Figure 15: The Former Daehak Elementary School (now closed and known as Gurek-Gumnenzip) (Photo taken from its playground in front of the main entrance.)
 				<br/><br/>
                 Although the school has been repurposed as a place to learn how to make pottery, the building's appearance stood in stark contrast to the beautifully manicured and well-kept Sanyang Elementary School. This one took me back to my own hometown in rural Tennessee. The elementary school I attended as a child has also long been closed, and it has been everything from a flea market to a cheerleader uniform factory to a dance hall. Currently it is up for sale.
 				<br/><br/>
@@ -460,9 +476,9 @@
         </section>
 
         <section id="16" class="scene photo-scene" data-scene-id="place15">
-			<div id="figure18" class="figure contain" style="background-size: 120% auto; background-position: 50% 0%; background-image:url(img/figure18.jpg);"></div>
+			<div id="figure18" class="figure contain" style="background-image:url(img/figure18.jpg);"></div>
 			<p>
-				Figure 18: Car Camping at the former Daehak Elementary School (now closed and known as Gurek- Gumnenzip).
+				Figure 16: Car Camping at the former Daehak Elementary School (now closed and known as Gurek-Gumnenzip).
 				<br/><br/>
                 Outside the building, I caught sight of a car and a tent in front of the school. The school grounds have been multi-purposed for car camping.
             </p>
@@ -470,9 +486,9 @@
 
         <section id="17" class="scene" data-scene-id="place16">
             <h3>Yongmoon High School and Demographic Pressures</h3>
-            <div id="figure19" class="figure contain" style="background-size: 120% auto; background-position: 50% 0%; background-image:url(img/figure19.jpg);"></div>
+            <div id="figure19" class="figure contain" style="background-image:url(img/figure19.jpg);"></div>
             <div class="caption">
-               Figure 19: Yongmoon High School, Seoul, South Korea
+               Figure 17: Yongmoon High School, Seoul, South Korea
             </div>
             
             <p>
@@ -482,20 +498,20 @@
                 This fact is not lost on South Korea's government, which has invested millions of dollars in programs with the sole purpose of boosting the country’s birth rate. The government recognizes that raising a child in the modern ultra developed world that is now South Korea is extremely expensive. With tax breaks, monetary incentives, work incentives, paid leave, etc., the government is trying to make it easier for South Koreans to choose to have more children. Only time will tell if any of these actions will truly lead to South Koreans having more children.
             </p>
             <p>
-                The third and final school we visited does not seem to have an increasing number of students. In the vice- principal’s office at Yongmoon High School in Seoul (Figures <a href="#figure19"> 19</a> and <a href="#figure20">20</a>), a chalkboard (<a href="#figure21">Figure 21</a>) showed the number of classes in each year. Grade 3 (the oldest of the three classes shown on the board, equivalent to U.S. grade 12), had thirteen total classes, grade 2 (equivalent to U.S. grade 11) twelve, and grade 1, (equivalent to U.S. grade 10), only eleven. Each year there are fewer and fewer students--not few enough to threaten closure, but still of concern.
+                The third and final school we visited does not seem to have an increasing number of students. In the vice- principal’s office at Yongmoon High School in Seoul (Figures <a href="#figure19">17</a> and <a href="#figure20">18</a>), a chalkboard (<a href="#figure21">Figure 19</a>) showed the number of classes in each year. Grade 3 (the oldest of the three classes shown on the board, equivalent to U.S. grade 12), had thirteen total classes, grade 2 (equivalent to U.S. grade 11) twelve, and grade 1, (equivalent to U.S. grade 10), only eleven. Each year there are fewer and fewer students--not few enough to threaten closure, but still of concern.
             </p>
         </section>
 
         <section id="18" class="scene photo-scene" data-scene-id="place17">
-            <div id="figure20" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure20.jpg);"></div>
+            <div id="figure20" class="figure contain" style="background-image:url(img/figure20.jpg);"></div>
             <p>
-               Figure 20: Scene of the urban neighborhood surrounding Yongmoon High School and its soccer field.
+               Figure 18: Scene of the urban neighborhood surrounding Yongmoon High School and its soccer field.
             </p>
 		</section>
 		<section id="19" class="scene photo-scene" data-scene-id="place17">
-            <div id="figure21" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure21.jpg);"></div>
+            <div id="figure21" class="figure contain" style="background-image:url(img/figure21.jpg);"></div>
             <p>
-               Figure 21: Chalkboard in the vice-principal’s office at Yongmoon High School, Seoul, South Korea shows the declining number of classes by the grades.
+               Figure 19: Chalkboard in the vice-principal’s office at Yongmoon High School, Seoul, South Korea shows the declining number of classes by the grades.
 			   <br/><br/>
                There is no golf classroom at Yongmoon High School, because high school in South Korea is all work and more work. I had a student a few years ago in my class who had just moved to the United States from Seoul. I asked him what it was like to be a teenager in Seoul. His response was a bit startling. “Being a student in South Korea is no fun. Life is no fun. All you do is study.” To be fair, this student was extremely motivated and ambitious, so I am sure for him this was very true.
             </p>   
@@ -505,8 +521,7 @@
             <p>
                 In her BBC article, “South Korea’s Schools: Long Days, High Results,” journalist Reeta Chakrabarti documents a day in the life of a teenager in one of Seoul’s affluent neighborhoods of Gangnam:
                 <br>
-                <small>
-                    <i>
+                <blockquote>
                         Hye-Min Park is 16 and lives in the affluent Seoul district of Gangnam, made famous by the pop star Psy. Her day is typical of that of the majority of South Korean teenagers.
                         <br>
                         She rises at 6.30am, is at school by 8am, finishes at 4pm, (or 5pm if she has a club), then pops back home to eat.
@@ -514,54 +529,54 @@
                         She then takes a bus to her second school shift of the day, at a private crammer or hagwon, where she has lessons from 6pm until 9pm.
                         <br>
                         She spends another two hours in what she calls self-study back at school, before arriving home after 11pm. She goes to bed at 2am, and rises in the morning at 6.30am to do it all over again.
-                    </i>
-                </small>
+					</blockquote>
             </p>
             <p>
-                When walking down the hallway at Yongmoon High School during a time when students had a short break, I was surprised to see so many students sleeping (<a href="#figure22">Figure 22</a>). However, after I learned about the typical day of a student (above) it's not surprising that they are exhausted, overworked, and overstressed. Their job is to study in order to pass their exams so that they can ensure that they are granted entrance into a good university.
+                When walking down the hallway at Yongmoon High School during a time when students had a short break, I was surprised to see so many students sleeping (<a href="#figure22">Figure 20</a>). However, after I learned about the typical day of a student (above) it's not surprising that they are exhausted, overworked, and overstressed. Their job is to study in order to pass their exams so that they can ensure that they are granted entrance into a good university.
             </p>
         </section>
         <section id="21" class="scene photo-scene" data-scene-id="place19">
-            <div id="figure22" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure22.jpg);"></div>
+            <div id="figure22" class="figure" style="background-image:url(img/figure22.jpg);"></div>
             <p>
-               	Figure 22: Students at Yongmoon High School, Seoul, are allowed to take naps in the classroom because they often study into the early hours before going to bed very late.
-				<br/><br/>
-                The students we observed were well behaved and attentive throughout class instruction (<a href="#figure23">Figure 23</a>). They realize a successful future in South Korea means being a successful student. Here lies another obstacle for the South Korean government with improving its birth rate: to have a child in South Korea means needing to prepare a child with the best education possible, and with all of the extra tutoring and classes, it becomes very expensive to raise a successful child in South Korea
+               	Figure 20: Students at Yongmoon High School, Seoul, are allowed to take naps in the classroom because they often study into the early hours before going to bed very late.			
             </p>
         </section>
-		<section id="22" class="scene photo-scene" data-scene-id="place20">
-	        <div id="figure23" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure23.jpg);"></div>
+		<section id="22" class="scene photo-scene" data-scene-id="place19">
+	        <div id="figure23" class="figure contain" style="background-image:url(img/figure23.jpg);"></div>
 	        <p>
-	           Figure 23: Students at Yongmoon High School, Seoul, South Korea. They are all very attentive and well behaved.
+	           Figure 21: Students at Yongmoon High School, Seoul, South Korea.
+			   <br/><br/>
+               The students we observed were well behaved and attentive throughout class instruction. They realize a successful future in South Korea means being a successful student. Here lies another obstacle for the South Korean government with improving its birth rate: to have a child in South Korea means needing to prepare a child with the best education possible, and with all of the extra tutoring and classes, it becomes very expensive to raise a successful child in South Korea
 	        </p>
 		</section>
         <section id="23" class="scene photo-scene" data-scene-id="place20">
-			<div id="figure24" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure24.jpg);"></div>
+			<div id="figure24" class="figure contain" style="background-image:url(img/figure24.jpg);"></div>
             <p>
-				Figure 24: Subway sign in Seoul on the reserved seats for pregnant women.
+				Figure 22: Subway sign in Seoul on the reserved seats for pregnant women.
 				<br/><br/>
-                What changes can be made to reverse South Korea's demographic trend? The simple answer is for the people of South Korea to have more children, but the reality is not so simple. Efforts are subtle. As you travel around the country you see reserved seating for pregnant women on the subway (Figures <a href="#figure24">24</a> and <a href="#figure25">25</a>). You see bathrooms for pregnant women only, and in some situations you see the best parking spaces might also be reserved for pregnant women (<a href="#figure26">Figure 26</a>).
+                What changes can be made to reverse South Korea's demographic trend? The simple answer is for the people of South Korea to have more children, but the reality is not so simple. Efforts are subtle. As you travel around the country you see reserved seating for pregnant women on the subway (Figures <a href="#figure24">22</a> and <a href="#figure25">23</a>). You see bathrooms for pregnant women only, and in some situations you see the best parking spaces might also be reserved for pregnant women (<a href="#figure26">Figure 24</a>).
             </p>
         </section>
         <section id="24" class="scene photo-scene" data-scene-id="place21">
-            <div id="figure25" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure25.jpg);"></div>
+            <div id="figure25" class="figure" style="background-image:url(img/figure25.jpg);"></div>
             <p>
-               Figure 25: Subway seats reserved for pregnant women. (Seoul, South Korea).
+               Figure 23: Subway seats reserved for pregnant women. (Seoul, South Korea).
             </p>
         </section>
         <section id="25" class="scene photo-scene" data-scene-id="place22">
-            <div id="figure26" class="figure contain" style="background-position: 50% 0%; background-image:url(img/figure26.jpg);"></div>
+            <div id="figure26" class="figure contain" style="background-image:url(img/figure26.jpg);"></div>
             <p>
-              	Figure 26: Parking space for expecting mothers. (Geoje Island, South Korea)
+              	Figure 24: Parking space for expecting mothers. (Geoje Island, South Korea)
 				<br/><br/>
                 What South Korea does to (hopefully) turn the tide and return closer to that ideal two-child (or replacement rate) household may be of major lesson to those of us in the United States and many other developed countries facing population decline. What drives their success may be what we could have to do in the not-so-near future for our own success.
             </p>
         </section>
-        <section id="26" class="scene" data-scene-id="place23">
-            <h5>Acknowledgment</h5>
+        <section id="26" class="scene photo-scene" data-scene-id="place23">
+            <h3 style="z-index: 2;">Acknowledgments</h3>
+			<div id="figure27" class="figure contain" style="background-image:url(img/figure8.jpg); filter: grayscale(100%);"></div>
             <p>
-                The author is grateful to the Korean Geographical Society and The National Geographic Information Institute for their support without which this article would not be possible. Also, a great deal of gratitude goes to Dr. Gregory Chu for his expertise and assistance in helping with the editing of the article.
-                <span class="row footer-row"></span>
+                The author is grateful to the Korean Geographical Society and The National Geographic Information Institute for their support without which this article would not be possible. Also, a great deal of gratitude goes to Dr. Gregory Chu for his expertise and assistance in helping with the editing of the article.    
+				<span class="row footer-row"></span>     
             </p>
         </section>
 
@@ -620,10 +635,11 @@
             },
             "data": {
                 "type": "Feature",
-                "geometry":{"type":"Polygon","coordinates":[[[128.349716,38.612243],[129.21292,37.432392],[129.46045,36.784189],[129.468304,35.632141],[129.091377,35.082484],[128.18585,34.890377],[127.386519,34.475674],[126.485748,34.390046],[126.37392,34.93456],[126.559231,35.684541],[126.117398,36.725485],[126.860143,36.893924],[126.174759,37.749686],[126.237339,37.840378],[126.68372,37.804773],[127.073309,38.256115],[127.780035,38.304536],[128.205746,38.370397],[128.349716,38.612243]]]}},
+                "geometry":{"type":"Polygon","coordinates":[[[128.349716,38.612243],[129.21292,37.432392],[129.46045,36.784189],[129.468304,35.632141],[129.091377,35.082484],[128.18585,34.890377],[127.386519,34.475674],[126.485748,34.390046],[126.37392,34.93456],[126.559231,35.684541],[126.117398,36.725485],[126.860143,36.893924],[126.174759,37.749686],[126.237339,37.840378],[126.68372,37.804773],[127.073309,38.256115],[127.780035,38.304536],[128.205746,38.370397],[128.349716,38.612243]]]},
                 "properties": {
                     "name": "South Korea"
                 }
+			}
         },
         {
             //-17.583494, -66.008273
@@ -872,7 +888,8 @@
 					edgeStyle: 'ARC',
 					style: {"weight": 3, "mode": "Q", "markers": {"end":true}, color: 'rgb(205, 46, 58)'}
                 }],
-                "zoom": 2,
+                "zoom": 1,
+				"hideCenterPoint": true,
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.95,
@@ -1117,7 +1134,7 @@
                 }],
                 "zoom": 16,
                 "layers": [{
-                    "idRef": "daehak_elementary_road-eup"
+                    "idRef": "daehak_elementary_road"
                 }], 
                 "style": {
                     "filter": "sepia(0%)",
@@ -1177,7 +1194,7 @@
                         "imagerySet": "AerialWithLabels"
                     }
                 }],
-                "zoom": 8,
+                "zoom": 14,
                 "layers": [{
                     "idRef": "seoul"
                 }], 

@@ -16576,20 +16576,36 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
         });
     },
     changeScene: function (sceneInfo) {
+		/*
         var sceneModels = [this._scenes.findWhere({
             id: sceneInfo.sceneId
         }), this._scenes.findWhere({
             id: sceneInfo.nextSceneId
         })];
+		*/
 
         this._i = this._i || 0;
         this._i += 1;
         var index0 = this._i % 2;
         var index1 = (this._i + 1) % 2;
 
+		/*
         if (sceneInfo.sceneIndex < this._scenes.models.length) {
             this._mapView0.setScene(this._scenes.models[sceneInfo.sceneIndex], this._i > 1); //index0 === 0);
         }
+		*/
+		var referencedScene = this._scenes.findWhere({
+            id: sceneInfo.sceneId
+        });
+		
+		if (!referencedScene && sceneInfo.sceneIndex < this._scenes.models.length) {
+			referencedScene = this._scenes.models[sceneInfo.sceneIndex];
+		}
+		
+		if (referencedScene) {
+			this._mapView0.setScene(referencedScene, this._i > 1);
+		}
+		
     },
     changeProgress: function (progress) {
         this._progressModel.set('progress', progress);
