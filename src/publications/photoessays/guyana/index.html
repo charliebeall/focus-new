@@ -66,6 +66,9 @@
             padding: 0;
         }
 
+		.photo-scene .author {
+			background: transparent;
+		}
     </style>
 </head>
 <body>
@@ -132,20 +135,16 @@
 </div>
 <div id="text" class="photo-essay">
     <div class="content scenes">
-        <section id="introduction" class="scene" data-scene-id="place1">
+        <section id="introduction" class="scene photo-scene" data-scene-id="place1">
             <div class="intro">
-            <h2 class="title" style="color: #009E49;">GUYANA’S LINDEN TO LETHEM ROAD: A METAPHOR FOR CONSERVATION AND DEVELOPMENT</h2>
+            <h2 class="title" style="color: #009E49;">Guyana's Linden to Lethem Road: A Metaphor for Conservation and Development</h2>
             <div class="author">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-xs-3 col-sm-2 col-md-1 col-lg-1">
-                            <!--
-                                TODO: 
-                                GET AUTHOR PIC 
-                            -->
-                            <img class="author-photo" style="width: 100px; height: 60px; position: relative;" src="img/guyana_flag.jpg"/>
+                        <div class="col-12 col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                            <img class="author-photo" style="position: relative;" src="img/guyana_flag.jpg"/>
                         </div>
-                        <div style="position:absolute; left: 150px;" class="col-12 col-xs-9 col-sm-10 col-md-11 col-lg-11">
+                        <div class="col-12 col-xs-9 col-sm-10 col-md-10 col-lg-10">
                             <div class="row">
                                 <div class="col-12 col-xs-12 name" style="color:white">
                                     Karen Barton
@@ -164,10 +163,10 @@
                 </div>
             </div>
             </div>
-            <div class="figure " style="background-image:url(img/fig18.jpg);"></div>
+            <div class="figure" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.2) 90%), url(img/fig3.jpg);"></div>
             <p style="color:white">
                 The Linden-Lethem trail is one of the most legendary roads in South America, and traveling
-                its 276 miles transecting Guyana’s expansive interior is a rite of passage into the country. This
+                its 276 miles transecting <a href="#" class="location" data-layer-id="guyana">Guyana’s</a> expansive interior is a rite of passage into the country. This
                 gritty land artery is currently the only affordable transport link between urban Georgetown and
                 the remote stretches of the Brazilian border. An overwhelming 80 percent of Guyanese
                 territory bisected by the Linden-Lethem road is classified as wilderness, much of it only
@@ -185,11 +184,11 @@
                 conservation, particularly in the Iwokrama forest and Rupununi savannah regions, whose cultural
                 biodiversity continues to astound scientists.
 
-                In 2017, the author traveled the trail with a group of fourteen undergraduates from the University of Northern Colorado in order to study conservation and development in Iwokrama and Rupununi. This photo essay traverses the fabled, potholed trail from Georgetown to the Brazilian border illustrating the numerous geographic challenges and opportunities facing <a href="#" class="location" data-layer-id="guyana">Guyana</a> today.
+                In 2017, the author traveled the trail with a group of fourteen undergraduates from the University of Northern Colorado in order to study conservation and development in Iwokrama and Rupununi. This photo essay traverses the fabled, potholed trail from Georgetown to the Brazilian border illustrating the numerous geographic challenges and opportunities facing Guyana today.
             </p>
         </section>
         <section id="2" class="scene photo-scene" data-scene-id="place2">
-            <div class="figure contain" style="background-size: auto 60%; background-position: 50% 0%; background-image:url(img/fig1.jpg);"></div>
+            <div class="figure contain" style="background-position: 50% 0%; background-image:url(img/fig1.jpg);"></div>
             <p>
                 The road begins as a paved highway in the capital city of Georgetown, Guyana. Some 90
                 percent of Guyanese citizens reside within or in close proximity to this bustling capital. A
@@ -313,8 +312,8 @@
             </p>
         </section>
         <section id="12" class="scene photo-scene" data-scene-id="place12">
-            <video id="titlevideo" style="width: 100%;
-                    position: relative;" loop="true" autoplay="true" autostart="true" muted="true" poster="img/vid1.m4v">
+            <video id="titlevideo" style="width: calc(100% + 60px); margin: 0px -30px;
+                    position: relative;" loop="true" autoplay="true" autostart="true" muted="true" poster="img/videoposter.png">
                 <source src="img/vid1.m4v" type="video/mp4">
                 Sorry, your browser doesn't support embedded videos,
                 but don't worry, you can <a href="img/vid1.m4v">download it</a>
@@ -460,8 +459,66 @@
 <!-- endinject -->
 <script src="../../../js/combined.js"></script>
 <script>
+	Focus.Map = {};
+    Focus.Map.defaultOptions = {
+        color: 'rgb(205, 46, 58)', //'rgba(0, 42, 143, 1)', //'#B0BDCE', //'#D30F23', //'rgba(39, 171, 226, 1)',
+        fillColor: 'rgb(205, 46, 58)', //'rgba(0, 42, 143, 1)', //'rgba(39, 171, 226, 1)',
+        radius: 8,
+        weight: 16,
+		fillOpacity: 1,
+        opacity: 0.2
+    };
+
+    Focus.Map.options = {};
+    Focus.Map.options.panes = [];
+	
     var scenes = {
         "features": [{
+        	"id": "linden",
+			"type": "geojson",
+			"data": {
+				"type": "Feature",
+				"geometry": {
+					"type": "Point",
+					"coordinates": [-58.3, 6]
+				},
+				"properties": {
+					"name": "Linden"
+				}
+			}
+        },{
+        	"id": "lethem",
+			"type": "geojson",
+			"data": {
+				"type": "Feature",
+				"geometry": {
+					"type": "Point",
+					"coordinates": [-59.8, 3.383333]
+				},
+				"properties": {
+					"name": "Lethem"
+				}
+			}
+        },{
+        	"id": "road",
+			"type": "geojson",
+			"style": {"weight": 5, "opacity": 0.9},
+			"data": {
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "scalerank": 3, "featurecla": "Road", "type": "Road", "sov_a3": null, "note": null, "edited": "New in version 2.0.0", "name": null, "namealt": null, "namealtt": null, "routeraw": null, "question": 0, "length_km": 91, "toll": 0, "ne_part": "global_basic", "label": null, "label2": null, "local": null, "localtype": null, "localalt": null, "labelrank": 0, "ignore": 0, "add": 0, "rwdb_rd_id": 60279, "orig_fid": 28953, "prefix": null, "uident": 0, "continent": "South America", "expressway": 0, "level": null, "min_zoom": 3.000000, "min_label": 6.000000 }, "geometry": { "type": "LineString", "coordinates": [ [ -58.159381655518942, 6.795453473849861 ], [ -58.167630499952537, 6.783080207199471 ], [ -58.175879344386132, 6.73358714059791 ], [ -58.175879344386132, 6.700591762863537 ], [ -58.171754922169335, 6.675845229562756 ], [ -58.171754922169335, 6.64697427404518 ], [ -58.192377033253315, 6.585107940793229 ], [ -58.225372410987688, 6.535614874191668 ], [ -58.245994522071676, 6.490246229806904 ], [ -58.254243366505264, 6.453126429855734 ], [ -58.254243366505264, 6.374762407736597 ], [ -58.254243366505264, 6.337642607785426 ], [ -58.250118944288467, 6.275776274533476 ], [ -58.250118944288467, 6.246905319015899 ], [ -58.245994522071676, 6.185038985763948 ], [ -58.237745677638081, 6.127297074728794 ], [ -58.237745677638081, 6.106674963644811 ], [ -58.250118944288467, 6.061306319260047 ], [ -58.274865477589252, 6.00768883044169 ], [ -58.278989899806049, 6.003564408224893 ] ] } },
+{ "type": "Feature", "properties": { "scalerank": 7, "featurecla": "Road", "type": "Unknown", "sov_a3": null, "note": null, "edited": "New in version 2.0.0", "name": null, "namealt": null, "namealtt": null, "routeraw": null, "question": 0, "length_km": 161, "toll": 0, "ne_part": "global_basic", "label": null, "label2": null, "local": null, "localtype": null, "localalt": null, "labelrank": 0, "ignore": 0, "add": 0, "rwdb_rd_id": 60999, "orig_fid": 29417, "prefix": null, "uident": 0, "continent": "South America", "expressway": 0, "level": null, "min_zoom": 7.000000, "min_label": 9.500000 }, "geometry": { "type": "LineString", "coordinates": [ [ -58.658436743751345, 4.671376032199555 ], [ -58.662561165968143, 4.69199814328354 ], [ -58.691432121485718, 4.762113320969084 ], [ -58.720303077003294, 4.823979654221034 ], [ -58.740925188087282, 4.873472720822595 ], [ -58.745049610304072, 4.902343676340172 ], [ -58.74917403252087, 4.955961165158529 ], [ -58.74917403252087, 4.997205387326495 ], [ -58.745049610304072, 5.04257403171126 ], [ -58.736800765870484, 5.087942676096024 ], [ -58.712054232569699, 5.186928809299144 ], [ -58.712054232569699, 5.232297453683908 ], [ -58.712054232569699, 5.277666098068672 ], [ -58.712054232569699, 5.314785898019842 ], [ -58.695556543702516, 5.364278964621403 ], [ -58.679058854835326, 5.397274342355777 ], [ -58.633690210450567, 5.463265097824524 ], [ -58.575948299415408, 5.529255853293272 ], [ -58.522330810597055, 5.591122186545222 ], [ -58.493459855079479, 5.632366408713189 ], [ -58.468713321778694, 5.673610630881156 ], [ -58.443966788477915, 5.714854853049124 ], [ -58.43571794404432, 5.739601386349904 ], [ -58.427469099610725, 5.776721186301073 ], [ -58.406846988526745, 5.826214252902634 ], [ -58.353229499708391, 5.958195763840129 ], [ -58.344980655274796, 5.970569030490519 ], [ -58.320234121974011, 5.991191141574503 ] ] } },
+{ "type": "Feature", "properties": { "scalerank": 7, "featurecla": "Road", "type": "Unknown", "sov_a3": null, "note": null, "edited": "New in version 2.0.0", "name": null, "namealt": null, "namealtt": null, "routeraw": null, "question": 0, "length_km": 80, "toll": 0, "ne_part": "global_basic", "label": null, "label2": null, "local": null, "localtype": null, "localalt": null, "labelrank": 0, "ignore": 0, "add": 0, "rwdb_rd_id": 61187, "orig_fid": 29541, "prefix": null, "uident": 0, "continent": "South America", "expressway": 0, "level": null, "min_zoom": 7.000000, "min_label": 9.500000 }, "geometry": { "type": "LineString", "coordinates": [ [ -58.658436743751345, 4.671376032199555 ], [ -58.683183277052123, 4.654878343332369 ], [ -58.720303077003294, 4.630131810031589 ], [ -58.732676343653687, 4.617758543381199 ], [ -58.745049610304072, 4.593012010080418 ], [ -58.778044988038445, 4.539394521262061 ], [ -58.778044988038445, 4.469279343576517 ], [ -58.782169410255243, 4.45278165470933 ], [ -58.798667099122433, 4.436283965842144 ], [ -58.823413632423211, 4.411537432541363 ], [ -58.839911321290401, 4.341422254855819 ], [ -58.856409010157584, 4.320800143771836 ], [ -58.868782276807977, 4.283680343820665 ], [ -58.88527996567516, 4.263058232736681 ], [ -58.910026498975945, 4.254809388303088 ], [ -58.934773032276723, 4.254809388303088 ], [ -58.967768410011097, 4.234187277219105 ], [ -58.988390521095084, 4.246560543869495 ], [ -59.00076378774547, 4.238311699435902 ], [ -59.046132432130236, 4.180569788400748 ], [ -59.066754543214216, 4.164072099533561 ] ] } },
+{ "type": "Feature", "properties": { "scalerank": 4, "featurecla": "Road", "type": "Road", "sov_a3": null, "note": null, "edited": "New in version 2.0.0", "name": null, "namealt": null, "namealtt": null, "routeraw": null, "question": 0, "length_km": 53, "toll": 0, "ne_part": "global_basic", "label": null, "label2": null, "local": null, "localtype": null, "localalt": null, "labelrank": 0, "ignore": 0, "add": 0, "rwdb_rd_id": 61279, "orig_fid": 29607, "prefix": null, "uident": 0, "continent": "South America", "expressway": 0, "level": null, "min_zoom": 4.000000, "min_label": 7.000000 }, "geometry": { "type": "LineString", "coordinates": [ [ -59.066754543214216, 4.164072099533561 ], [ -59.070878965431014, 4.147574410666373 ], [ -59.070878965431014, 4.131076721799187 ], [ -59.054381276563831, 4.077459232980829 ], [ -59.058505698780628, 4.048588277463253 ], [ -59.083252232081406, 3.994970788644896 ], [ -59.107998765382185, 3.970224255344115 ], [ -59.120372032032577, 3.961975410910522 ], [ -59.13686972089976, 3.961975410910522 ], [ -59.161616254200545, 3.974348677560912 ], [ -59.186362787501324, 3.974348677560912 ], [ -59.219358165235697, 3.957850988693725 ], [ -59.256477965186868, 3.966099833127319 ], [ -59.26885123183726, 3.961975410910522 ], [ -59.326593142872412, 3.928980033176148 ], [ -59.35133967617319, 3.920731188742555 ] ] } },
+{ "type": "Feature", "properties": { "scalerank": 4, "featurecla": "Road", "type": "Road", "sov_a3": null, "note": null, "edited": "New in version 2.0.0", "name": null, "namealt": null, "namealtt": null, "routeraw": null, "question": 0, "length_km": 26, "toll": 0, "ne_part": "global_basic", "label": null, "label2": null, "local": null, "localtype": null, "localalt": null, "labelrank": 0, "ignore": 0, "add": 0, "rwdb_rd_id": 61325, "orig_fid": 29636, "prefix": null, "uident": 0, "continent": "South America", "expressway": 0, "level": null, "min_zoom": 4.000000, "min_label": 7.000000 }, "geometry": { "type": "LineString", "coordinates": [ [ -59.35133967617319, 3.920731188742555 ], [ -59.396708320557956, 3.895984655441775 ], [ -59.458574653809904, 3.867113699924198 ], [ -59.512192142628265, 3.850616011057011 ], [ -59.532814253712246, 3.854740433273808 ], [ -59.565809631446619, 3.871238122140994 ] ] } },
+{ "type": "Feature", "properties": { "scalerank": 4, "featurecla": "Road", "type": "Road", "sov_a3": null, "note": null, "edited": "New in version 2.0.0", "name": null, "namealt": null, "namealtt": null, "routeraw": null, "question": 0, "length_km": 63, "toll": 0, "ne_part": "global_basic", "label": null, "label2": null, "local": null, "localtype": null, "localalt": null, "labelrank": 0, "ignore": 0, "add": 0, "rwdb_rd_id": 61488, "orig_fid": 29752, "prefix": null, "uident": 0, "continent": "South America", "expressway": 0, "level": null, "min_zoom": 4.000000, "min_label": 7.000000 }, "geometry": { "type": "LineString", "coordinates": [ [ -59.565809631446619, 3.871238122140994 ], [ -59.574058475880214, 3.854740433273808 ], [ -59.565809631446619, 3.825869477756231 ], [ -59.569934053663417, 3.805247366672247 ], [ -59.574058475880214, 3.792874100021857 ], [ -59.644173653565758, 3.731007766769906 ], [ -59.648298075782556, 3.722758922336313 ], [ -59.664795764649739, 3.652643744650769 ], [ -59.677169031300132, 3.611399522482801 ], [ -59.689542297950524, 3.570155300314835 ], [ -59.697791142384112, 3.553657611447647 ], [ -59.730786520118485, 3.51241338927968 ], [ -59.763781897852866, 3.471169167111714 ], [ -59.767906320069656, 3.42580052272695 ], [ -59.780279586720049, 3.40105398942617 ], [ -59.800901697804029, 3.380431878342186 ] ] } },
+{ "type": "Feature", "properties": { "scalerank": 9, "featurecla": "Road", "type": "Unknown", "sov_a3": null, "note": null, "edited": "New in version 2.0.0", "name": null, "namealt": null, "namealtt": null, "routeraw": null, "question": 0, "length_km": 16, "toll": 0, "ne_part": "global_basic", "label": null, "label2": null, "local": null, "localtype": null, "localalt": null, "labelrank": 0, "ignore": 0, "add": 0, "rwdb_rd_id": 61549, "orig_fid": 29787, "prefix": null, "uident": 0, "continent": "South America", "expressway": 0, "level": null, "min_zoom": 7.600000, "min_label": 10.100000 }, "geometry": { "type": "LineString", "coordinates": [ [ -59.800901697804029, 3.380431878342186 ], [ -59.792652853370441, 3.351560922824609 ], [ -59.792652853370441, 3.326814389523829 ], [ -59.788528431153644, 3.302067856223049 ], [ -59.788528431153644, 3.269072478488675 ], [ -59.772030742286454, 3.240201522971098 ] ] } }
+]
+}
+
+        },{
             "id": "guyana",
             "type": "geojson",
             "style": {
@@ -581,7 +638,7 @@
                     }
                 }],
                 "center": [-58.156196, 6.813738],
-                "zoom": 3,
+                "zoom": 5,
                 "style": {
                     "filter": "sepia(0%)",
                     "opacity": 0.8,
@@ -591,14 +648,36 @@
             {
                 "id": "place2",
                 //"center": [-65.092255, -17.537959],
-                "zoom": 9,
+                "zoom": 8,
                 "layers": [
+					{"idRef": "road"},
+					{"idRef": "linden", "style": {
+                        "text": {
+                            "text": "Linden",
+                            "style": {
+                                "stroke": "rgba(0,0,0,0.5)",
+                                "fill": "#fff",
+                                "stroke-width": 0.1,
+                                "font-family": "Raleway", "font-weight": "bold",
+                                "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                            }
+                        }
+                    }}, {"idRef": "lethem", "style": {
+                        "text": {
+                            "text": "Lethem",
+                            "style": {
+                                "stroke": "rgba(0,0,0,0.5)",
+                                "fill": "#fff",
+                                "stroke-width": 0.1,
+                                "font-family": "Raleway", "font-weight": "bold",
+                                "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
+                            }
+                        }
+                    }},	
                 {
                     "id": "figure1",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Mosque",
                             "style": {
@@ -636,15 +715,16 @@
             },
             {
                 "id": "place3",
-                "zoom": 9,
+                "zoom": 12,
                 "baseLayer": {
                     "type": "esri-basemap",
-                    "url": "Streets",
+                    "url": "ImageryClarity",
                     "options": {
                         "detectRetina": true
                     }
                 },
                 "layers": [
+										
                 {
                     "id": "figure4",
                     "type": "geojson",
@@ -676,21 +756,21 @@
                 ]
             },{
                 "id": "place4",
-                "zoom": 9,
+                "zoom": 12,
                 "baseLayer": {
                     "type": "esri-basemap",
-                    "url": "Streets",
+                    "url": "ImageryClarity",
                     "options": {
                         "detectRetina": true
                     }
                 },
                 "layers": [
+										
                 {
                     "id": "figure5",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Reagan",
                             "style": {
@@ -715,10 +795,10 @@
                 }]
             }, {
                 "id": "place5",
-                "zoom": 9,
+                "zoom": 12,
                "baseLayer": {
                     "type": "esri-basemap",
-                    "url": "Streets",
+                    "url": "ImageryClarity",
                     "options": {
                         "detectRetina": true
                     }
@@ -728,8 +808,6 @@
                     "id": "figure6",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Bedford Truck",
                             "style": {
@@ -754,10 +832,10 @@
                 }]
             }, {
                 "id": "place6",
-                "zoom": 9,
+                "zoom": 12,
                 "baseLayer": {
                     "type": "esri-basemap",
-                    "url": "Streets",
+                    "url": "ImageryClarity",
                     "options": {
                         "detectRetina": true
                     }
@@ -767,8 +845,6 @@
                     "id": "figure7",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
                         "text": {
                             "text": "Guyoil station",
                             "style": {
@@ -801,13 +877,12 @@
                         "detectRetina": true
                     }
                 },
-                "layers": [
+                "layers": [{"idRef": "road"},
                 {
                     "id": "figure8",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Turtle Mt. Iwokrama",
                             "style": {
@@ -845,8 +920,7 @@
                     "id": "figure9",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Snake Iwokrama",
                             "style": {
@@ -884,8 +958,7 @@
                     "id": "figure10",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "River Iwokrama",
                             "style": {
@@ -923,8 +996,7 @@
                     "id": "figure11",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Iwokrama",
                             "style": {
@@ -962,8 +1034,7 @@
                     "id": "figure12",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Timber Site",
                             "style": {
@@ -1002,8 +1073,7 @@
                     "id": "figure12",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Iwokrama Research and Lodge",
                             "style": {
@@ -1041,8 +1111,7 @@
                     "id": "figure14",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Surama Ecolodge",
                             "style": {
@@ -1081,8 +1150,7 @@
                     "id": "figure14",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Surama Ecolodge",
                             "style": {
@@ -1120,8 +1188,7 @@
                     "id": "figure16",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Burro Burro",
                             "style": {
@@ -1159,8 +1226,7 @@
                     "id": "figure16",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Surama Village",
                             "style": {
@@ -1198,8 +1264,7 @@
                     "id": "figure19",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Burro Burro River",
                             "style": {
@@ -1237,8 +1302,7 @@
                     "id": "figure20",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Kurupukari Junction, Essequibo",
                             "style": {
@@ -1276,8 +1340,7 @@
                     "id": "figure21",
                     "type": "geojson",
                     "style": {
-                        "weight": 10,
-                        "opacity": 0.3,
+
                         "text": {
                             "text": "Georgetown",
                             "style": {
@@ -1310,46 +1373,7 @@
                         "detectRetina": true
                     }
                 },
-                // "baseLayer": [{
-                //     "type": "esri-basemap",
-                //     "url": "Imagery",
-                //     "options": {
-                //         "detectRetina": true,
-                //         "imagerySet": "AerialWithLabels"
-                //     }
-                // }],
                 "layers": [
-                // {
-                //     "id": "guyana",
-                //     "type": "geojson",
-                //     "style": {
-                //         "weight": 10,
-                //         "opacity": 0.3,
-                //         "text": {
-                //             "text": "Guyana",
-                //             "style": {
-                //                 "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                //             },
-                //             "style": {
-                //                 "stroke": "rgba(0,0,0,0.5)",
-                //                 "fill": "#fff",
-                //                 "stroke-width": 0.2,
-                //                 "font-family": "Raleway", "font-weight": "bold",
-                //                 "text-shadow": "0px 2px 2px rgba(0,0,0,0.8)"
-                //             }
-                //         }
-                //     },
-                //     "data": {
-                //         "type":"Feature",
-                //         "id":"GUY",
-                //         "properties":{
-                //             "name":"Guyana"
-                //         },"geometry":{
-                //                 "type":"Polygon",
-                //                 "coordinates":[[[-59.758285,8.367035],[-59.101684,7.999202],[-58.482962,7.347691],[-58.454876,6.832787],[-58.078103,6.809094],[-57.542219,6.321268],[-57.147436,5.97315],[-57.307246,5.073567],[-57.914289,4.812626],[-57.86021,4.576801],[-58.044694,4.060864],[-57.601569,3.334655],[-57.281433,3.333492],[-57.150098,2.768927],[-56.539386,1.899523],[-56.782704,1.863711],[-57.335823,1.948538],[-57.660971,1.682585],[-58.11345,1.507195],[-58.429477,1.463942],[-58.540013,1.268088],[-59.030862,1.317698],[-59.646044,1.786894],[-59.718546,2.24963],[-59.974525,2.755233],[-59.815413,3.606499],[-59.53804,3.958803],[-59.767406,4.423503],[-60.111002,4.574967],[-59.980959,5.014061],[-60.213683,5.244486],[-60.733574,5.200277],[-61.410303,5.959068],[-61.139415,6.234297],[-61.159336,6.696077],[-60.543999,6.856584],[-60.295668,7.043911],[-60.637973,7.415],[-60.550588,7.779603],[-59.758285,8.367035]]]
-                //         }
-                //     }
-                // },
                 {
                     "id": "figure12",
                     "type": "geojson",
