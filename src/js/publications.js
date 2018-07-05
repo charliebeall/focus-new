@@ -4,6 +4,15 @@ Focus.Volumes = [
         number: 61,
         publications: [{
             type: 'Photo Essay',
+            title: 'Guyana\'s Linden to Lethem Road: A Metaphor for Conservation and Development',
+            author: 'Karen Barton',
+            description: '',
+            date: '07/05/18',
+            thumbnail: 'publications/photoessays/guyana/img/fig3.jpg',
+            url: 'publications/photoessays/guyana/index.html',
+            location: []
+        },{
+            type: 'Photo Essay',
             title: 'Schools in South Korea: Where have All the Children Gone?',
             author: 'Michael Robinson',
             description: '',
