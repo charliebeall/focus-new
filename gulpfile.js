@@ -267,5 +267,5 @@ gulp.task('html', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build:dev', function (done) {runSequence('copy2020', 'copyfonts','concatcss','concat', 'html', done)});
-gulp.task('build:prod', function (done) {runSequence('copy2020', 'copyfonts', 'concatcss', 'minify', 'html', done)});
+gulp.task('default', function (done) {runSequence('copy2020', 'copyfonts','concatcss','concat', 'html', done)});
+gulp.task('build:minify', function (done) {runSequence('copy2020', 'copyfonts', 'concatcss', 'minify', 'html', done)});

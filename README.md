@@ -1,15 +1,21 @@
 # FOCUS on Geography
 
+Install NodeJS dependencies
+
 ```
 npm install
 ```
+
+Install Bower dependencies
 
 ```
 bower install
 ```
 
+Build
+
 ```
-gulp build:dev
+gulp
 ```
 
 All files will be built and copied to the `dist` directory
