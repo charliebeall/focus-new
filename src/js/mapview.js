@@ -220,7 +220,7 @@ Focus.Views.MapEngine = Backbone.View.extend({
 });
 
 var KEY = 'AIzaSyBw665hppQIz8zlv82yGUaFSSqcp_1a4Lk';
-Focus.Views.StreeviewMapEngine = Focus.Views.MapEngine.extend({
+Focus.Views.StreetviewMapEngine = Focus.Views.MapEngine.extend({
 //https://maps.googleapis.com/maps/api/streetview/metadata?size=600x300&location=78.648401,14.194336&fov=90&heading=235&pitch=10&key=YOUR_API_KEY
     initialize: function (options) {
         Focus.Views.MapEngine.prototype.initialize.call(this, options);

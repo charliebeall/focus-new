@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>GUYANA’S LINDEN TO LETHEM ROAD: A METAPHOR FOR CONSERVATION AND DEVELOPMENT</title>
-    <meta name="description" content="FOCUS on Geography: GUYANA’S LINDEN TO LETHEM ROAD: A METAPHOR FOR CONSERVATION AND DEVELOPMENT">
+    <title>Guyana’s Linden to Lethem Road: A Metaphor for Conservation and Development</title>
+    <meta name="description" content="FOCUS on Geography: Guyana’s Linden to Lethem Road: A Metaphor for Conservation and Development">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="geography,guyana,map">
     <meta name="author" content="Karen Barton">
@@ -71,9 +71,57 @@
 		}
 		
 		.photo-scene h3 {
-			padding: 10px 0px;
+			font-family: 'Crete Round', serif;
+			padding: 10px 10px;
 			background: #000;
 			position: absolute;
+			z-index: 2;
+		}
+		
+		#overview-map {
+		    left: calc(30% - 230px);
+		    z-index: 10;
+		}
+		
+		.figure-grid div.figure {
+			height: calc(33vh);
+			background-size: cover;
+			filter: grayscale(100%);
+			opacity: 0.4;
+		}
+		
+		@media (max-width: 1440px) {
+			#text p {
+				font-size: 14px;
+			}
+			#text h2 {
+				font-size: 50px;
+			}
+		}
+		
+		@media (max-width: 1366px) {
+			#text p {
+				font-size: 12px;
+			}
+			#text h2 {
+				font-size: 40px;
+			}
+		}
+		
+		@media (max-width: 768px) {
+			.figure-grid div.figure {
+				height: 100px;
+			}
+		}
+		
+		@media (max-height: 640px) {
+			#text p {
+				font-size: 10px;
+			}
+			
+			.dotstyle .sections li {
+				height: 12px !important;
+			}
 		}
     </style>
 </head>
@@ -196,14 +244,14 @@
         <section id="2" class="scene photo-scene" data-scene-id="place2">
             <div class="figure contain" style="background-position: 50% 0%; background-image:url(img/fig1.jpg);"></div>
             <p>
-                The road begins as a paved highway in the capital city of Georgetown, Guyana. Some 90
+                The road begins as a paved highway in the capital city of <a href="#" class="location" data-layer-id="figure1">Georgetown</a>, Guyana. Some 90
                 percent of Guyanese citizens reside within or in close proximity to this bustling capital. A
                 combination of Amerindian, Dutch, Indian, and West African settlement gave rise to the eclectic
                 mix of mosques, temples, churches, and structures that pepper the city today. After Christianity
                 and Hinduism, Islam is the third largest religion in Guyana, and according to the Guyana Islamic
                 Trust and the 2002 Guyana Census, some 7.3 percent of the country practices Islam.
                 Mandingo and Fulani Muslims were brought from West Africa to labor as slaves in Guyana’s
-                burgeoning sugar plantations, and today, South America’s <a href="#" class="location" data-layer-id="figure1">largest mosque</a> can be found in central
+                burgeoning sugar plantations, and today, South America’s largest mosque can be found in central
                 sector of Georgetown. Setting out from Georgetown, travelers head toward the town of Linden
                 some 103 kilometers away, where the asphalt becomes a dirt trail leading to Lethem and onward
                 to the Brazilian border.
@@ -211,7 +259,7 @@
         </section>
         <section id="3" class="scene photo-scene" data-scene-id="place3">
             <div class="row">
-            <div class="figure col-12 col-sm-6" style="background-image:url(img/fig2.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig3.jpg);"></div>
+            <div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig2.jpg);"></div><div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig3.jpg);"></div>
             </div>
             <p>
                 The many potholes on the inland <a href="#" class="location" data-layer-id="figure4">Linden-Lethem road</a> seem like a metaphor for Guyana’s
@@ -226,7 +274,7 @@
         </section>
         <section id="4" class="scene photo-scene" data-scene-id="place4">
             <div class="row">
-            <div class="figure col-12 col-sm-6" style="background-image:url(img/fig4.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig5.jpg);"></div>
+            <div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig4.jpg);"></div><div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig5.jpg);"></div>
             </div>
             <p>
                 Reagan, a Rupununi driver and self-described naturalist, holds a three toed sloth and emerald boa
@@ -248,7 +296,7 @@
             </p>
         </section>
         <section id="6" class="scene photo-scene" data-scene-id="place6">
-            <div class="figure " style="background-image:url(img/fig7.jpg);"></div>
+            <div class="figure contain" style="background-image:url(img/fig7.jpg);"></div>
             <p>
                 The drive between Georgetown and the Brazilian border takes between sixteen hours and two
                 days depending on the automobile and time of year, so <a href="#" class="location" data-layer-id="figure7">junctions</a> like Kurupukari that
@@ -304,7 +352,7 @@
         </section>
         <section id="11" class="scene photo-scene" data-scene-id="place11">
             <div class="row">
-            <div class="figure col-12 col-sm-6" style="background-image:url(img/fig12.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig13.jpg);"></div>
+            <div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig12.jpg);"></div><div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig13.jpg);"></div>
             </div>
             <p>
                 One of the Iwokrama Center’s key initiatives is to promote and pursue logging operations within
@@ -362,7 +410,7 @@
         </section>
         <section id="15" class="scene photo-scene" data-scene-id="place15">
             <div class="row">
-            <div class="figure col-12 col-sm-6" style="background-image:url(img/fig16.jpg);"></div><div class="figure col-12 col-sm-6" style="background-image:url(img/fig17.jpg);"></div>
+            <div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig16.jpg);"></div><div class="figure contain col-12 col-sm-6" style="background-image:url(img/fig17.jpg);"></div>
             </div>
             <p>
                 In 2017 a joint expedition led by World Wildlife Fund Guianas and Global Wildlife
@@ -396,8 +444,7 @@
              <div class="figure " style="background-image:url(img/fig20.jpg);"></div>
             <p>
                 Returning from the Rupununi savannah takes careful planning and an entirely different form of
-                transportation in order to reach Georgetown by nightfall. The Kurupukari ferry allows Linden-
-                Lethem travelers to traverse the serpentine Essequibo River, Guyana’s longest waterway and the
+                transportation in order to reach Georgetown by nightfall. The Kurupukari ferry allows Linden-Lethem travelers to traverse the serpentine Essequibo River, Guyana’s longest waterway and the
                 third longest river in all of South America. The ferry, which can carry up to ten vehicles, first
                 leaves port at 6:00 am, and a snackette– a small store selling snacks, cigarettes, and groceries– may sometimes be seen tied to side of the ferry, supplying food for early morning travelers.
             </p>
@@ -415,8 +462,19 @@
             </p>
         </section>
         <section id="20" class="scene photo-scene" data-scene-id="place20">
-            <h3 style="color:white">Conclusion</h3>
-            <p style="color:white">
+            <h3>Conclusion</h3>
+			<div class="figure figure-grid">
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig3.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig4.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig5.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig6.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig7.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig8.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig9.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig10.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig11.jpg);"></div>
+			</div>
+            <p>
                 This photo essay highlights the ways in which the small nation of Guyana faces large
                 challenges and opportunities in its struggle to develop and conserve its unique geographic
                 landscapes. The Linden-Lethem road, which bisects the nation’s vast wilderness, traverses both
@@ -425,7 +483,7 @@
                 arapaima can be found in the untrammeled bioregions of Iwokrama and the Rupununi, often
                 considered South America’s hidden jewels by ecotourism standards.
 
-                The Linden-Lethem road –called a “trail” locally due to its unpaved, red dirt status– 
+                The Linden-Lethem road – called a “trail” locally due to its unpaved, red dirt status – 
                 provides a metaphor for the choices that government officials and community leaders in Guyana
                 must now navigate. On one hand, the country’s “Low Carbon Development Strategy” may
                 enable Guyana to protect forest reserves and its occupants, serving as a model for other
@@ -441,8 +499,19 @@
             </p>
         </section>
         <section id="21" class="scene photo-scene" data-scene-id="place21">
-            <h3 style="color:white">Biography</h3>
-            <p style="color:white">
+            <h3>Biography</h3>
+			<div class="figure figure-grid">
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig12.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig13.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig14.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig15.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig16.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig17.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig18.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig20.jpg);"></div>
+			<div class="figure col-12 col-sm-4 col-xs-4" style="background-image:url(img/fig21.jpg);"></div>
+			</div>
+            <p>
                 Karen Barton is a Professor of Geography at the University of Northern Colorado. In 2017.
                 she ferried fourteen intrepid students to Guyana in order to study conservation and
                 development in the Iwokrama forest and Rupununi savannah as part of an undergraduate
@@ -544,7 +613,7 @@
                 "weight": 10,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Mosque",
+                    "text": "Georgetown",
                     "style": {
                         "stroke": "rgba(0,0,0,0.5)",
                         "fill": "#fff",
@@ -561,7 +630,7 @@
                     "coordinates": [-58.156196, 6.813738]
                 },
                 "properties": {
-                    "name": "Mosque"
+                    "name": "Georgetown"
                 }
             }
         }, 
@@ -643,7 +712,7 @@
                         }
                     }
                 }],
-                "center": [-58.156196, 6.813738],
+                //"center": [-58.156196, 6.813738],
                 "zoom": 5,
                 "style": {
                     "filter": "sepia(0%)",
@@ -685,7 +754,7 @@
                     "type": "geojson",
                     "style": {
                         "text": {
-                            "text": "Mosque",
+                            "text": "Georgetown",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
                                 "fill": "#fff",
@@ -852,7 +921,7 @@
                     "type": "geojson",
                     "style": {
                         "text": {
-                            "text": "Guyoil station",
+                            "text": "Guyoil Station (Kurupukari)",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
                                 "fill": "#fff",
@@ -876,13 +945,28 @@
             }, {
                 "id": "place7",
                 "zoom": 7,
-                "baseLayer": {
+                "baseLayer": [{
                     "type": "esri-basemap",
                     "url": "NationalGeographic",
                     "options": {
                         "detectRetina": true
                     }
-                },
+                }/*,{
+                        	"type": "wmts",
+							"url": "//map1{s}.vis.earthdata.nasa.gov/wmts-webmerc/ASTER_GDEM_Color_Index/default/{time}/{tileMatrixSet}/{z}/{y}/{x}.png", 
+							
+							"params": {
+								layer: "ASTER_GDEM_Color_Index",
+								style: "default",
+								tileMatrixSet: "GoogleMapsCompatible_Level12",
+								time: '2016-03-15',
+								detectRetina: true,
+								subdomains: "abc",
+								crs: L.CRS.EPSG3857
+								
+							}
+                        }*/
+					],
                 "layers": [{"idRef": "road"},
                 {
                     "id": "figure8",
@@ -890,7 +974,7 @@
                     "style": {
 
                         "text": {
-                            "text": "Turtle Mt. Iwokrama",
+                            "text": "Iwokrama Forest (Turtle Mt.)",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
                                 "fill": "#fff",
@@ -907,7 +991,7 @@
                             "coordinates": [-58.723850, 4.716483]
                         },
                         "properties": {
-                            "name": "Turtle Mt. Iwokrama"
+                            "name": "Iwokrama Forest (Turtle Mt.)"
                         }
                     }
                 }]
@@ -928,7 +1012,7 @@
                     "style": {
 
                         "text": {
-                            "text": "Snake Iwokrama",
+                            "text": "Essequibo River",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
                                 "fill": "#fff",
@@ -945,7 +1029,7 @@
                             "coordinates": [-58.666263, 4.650444]
                         },
                         "properties": {
-                            "name": "Snake Iwokrama"
+                            "name": "Essequibo River"
                         }
                     }
                 }]
@@ -966,7 +1050,7 @@
                     "style": {
 
                         "text": {
-                            "text": "River Iwokrama",
+                            "text": "Essequibo River",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
                                 "fill": "#fff",
@@ -983,7 +1067,7 @@
                             "coordinates": [-58.666263, 4.650444]
                         },
                         "properties": {
-                            "name": "River Iwokrama"
+                            "name": "Essequibo River"
                         }
                     }
                 }]
@@ -1004,7 +1088,7 @@
                     "style": {
 
                         "text": {
-                            "text": "Iwokrama",
+                            "text": "Iwokrama Research Center",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
                                 "fill": "#fff",
@@ -1021,7 +1105,7 @@
                             "coordinates": [-58.684287, 4.672937]
                         },
                         "properties": {
-                            "name": "Iwokrama"
+                            "name": "Iwokrama Research Center"
                         }
                     }
                 }]
@@ -1081,7 +1165,7 @@
                     "style": {
 
                         "text": {
-                            "text": "Iwokrama Research and Lodge",
+                            "text": "Iwokrama Research Center",
                             "style": {
                                 "stroke": "rgba(0,0,0,0.5)",
                                 "fill": "#fff",
@@ -1098,7 +1182,7 @@
                             "coordinates": [-58.684287, 4.672937]
                         },
                         "properties": {
-                            "name": "Iwokrama Research and Lodge"
+                            "name": "Iwokrama Research Center"
                         }
                     }
                 }]
@@ -1439,7 +1523,7 @@
                 }]
             },{
                 "id": "place21",
-                "zoom": 12,
+                "zoom": 5,
                 "baseLayer": {
                     "type": "esri-basemap",
                     "url": "NationalGeographic",

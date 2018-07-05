@@ -13961,6 +13961,24 @@ Focus.Volumes = [
 	{
         number: 61,
         publications: [{
+            type: 'Photo Essay',
+            title: 'Schools in South Korea: Where have All the Children Gone?',
+            author: 'Michael Robinson',
+            description: '',
+            date: '06/03/18',
+            thumbnail: 'publications/photoessays/southkorea/img/figure8.jpg',
+            url: 'publications/photoessays/southkorea/index.html',
+            location: []
+        },{
+            type: 'Geo Quiz',
+            title: 'The Geography of Food Origins',
+            author: 'Antoinette WinklerPrins',
+            description: '',
+            date: '05/10/18',
+            thumbnail: 'publications/quizzes/eight/img/1b.jpg',
+            url: 'publications/quizzes/eight/index.html',
+            location: []
+        },{
             type: 'Feature Article',
             title: 'America\'s Public Lands: What, Where, Why, and What Next?',
             author: 'David J. Rutherford',
@@ -14653,7 +14671,7 @@ Focus.Views.MapEngine = Backbone.View.extend({
 });
 
 var KEY = 'AIzaSyBw665hppQIz8zlv82yGUaFSSqcp_1a4Lk';
-Focus.Views.StreeviewMapEngine = Focus.Views.MapEngine.extend({
+Focus.Views.StreetviewMapEngine = Focus.Views.MapEngine.extend({
 //https://maps.googleapis.com/maps/api/streetview/metadata?size=600x300&location=78.648401,14.194336&fov=90&heading=235&pitch=10&key=YOUR_API_KEY
     initialize: function (options) {
         Focus.Views.MapEngine.prototype.initialize.call(this, options);
