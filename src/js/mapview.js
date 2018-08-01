@@ -2130,6 +2130,7 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
             $(this).on('mouseout touchend', function (e) {
                 $map.css('opacity',1);
                 $overviewMap.css('opacity',1);
+				$photos.css('background-image', 'none');
             });
             $(this).on('mousemove touchmove', function (e) {
                 var $this = $(this);
