@@ -179,22 +179,22 @@ gulp.task('build', function (done) {
 gulp.task('default', ['build']);
 
 var srcFiles = [
-    'bower_components/jquery/dist/jquery.min.js',
-    'bower_components/underscore/underscore-min.js',
-    'bower_components/backbone/backbone-min.js',
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/lodash/lodash.min.js',
+    'node_modules/backbone/backbone-min.js',
     'node_modules/leaflet/dist/leaflet.js',
     //'bower_components/flowtype/flowtype.js',
     'bower_components/d3/d3.min.js',
     'bower_components/topojson/topojson.js',
     'bower_components/velocity/velocity.min.js',
     'bower_components/velocity/velocity.ui.min.js',
-    'bower_components/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'bower_components/jquery.scrollex/jquery.scrollex.min.js',
     'node_modules/esri-leaflet/dist/esri-leaflet.js',
 	'node_modules/esri-leaflet-vector/dist/esri-leaflet-vector.js',
     'node_modules/proj4/dist/proj4.js',
     'node_modules/proj4leaflet/src/proj4leaflet.js',
-    'bower_components/leaflet-dvf/dist/leaflet-dvf.js',
+    'node_modules/leaflet-dvf/dist/leaflet-dvf.js',
     'bower_components/vanilla-lazyload/dist/lazyload.min.js',
     //'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
     'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.js',
@@ -226,8 +226,8 @@ gulp.task('concatcss', function () {
        'bower_components/fontawesome/css/font-awesome.min.css',
 	   'src/css/bootstrap.min.css',
        'src/css/normalize.css',
-       'bower_components/leaflet/dist/leaflet.css',
-       'bower_components/leaflet-dvf/dist/css/dvf.css',
+       'node_modules/leaflet/dist/leaflet.css',
+       'node_modules/leaflet-dvf/dist/css/dvf.css',
        'src/css/main.css',
        'src/css/index.css'
    ])
