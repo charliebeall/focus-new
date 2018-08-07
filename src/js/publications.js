@@ -3,6 +3,15 @@ Focus.Volumes = [
 	{
         number: 61,
         publications: [{
+            type: 'Feature Article',
+            title: 'Agricultural Social Networks as the future of Karst Science Communication in Phong Nha-Kẻ Bàng National Park, Vietnam',
+            author: 'Elizabeth Willenbrink, Leslie North, Vu Thi Minh Nguyet',
+            description: '',
+            date: '08/06/18',
+            thumbnail: 'publications/articles/vietnam/img/fig1.jpg',
+            url: 'publications/articles/vietnam/index.html',
+            location: []
+        },{
             type: 'Photo Essay',
             title: 'Guyana\'s Linden to Lethem Road: A Metaphor for Conservation and Development',
             author: 'Karen Barton',

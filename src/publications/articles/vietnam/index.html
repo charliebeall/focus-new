@@ -108,12 +108,13 @@
                     <p>
 
 				<a class="location" data-layer-id="hangsondoong">Hang Son Doong</a>, the world’s largest documented cave, is more than just a record-breaking karst phenomena. For the resident’s in Phong Nha-Ke Bang National Park (PN-KB), Son Doong and the Park’s 300 other discovered caves are a representation of the beauty and uniqueness of the region’s karst landscape (Figure 1). Karst landscapes are known for their unique cave systems and spectacular surface features. Formed in carbonate rock, such as limestone, karst landscapes are characterized by bedrock that is dissolved easily by water, resulting in the creation of conduits, caves, and surface features such as sinkholes and karst towers. These landscapes are also home to unique endemic cave and surface species (Ford and Williams 2007). Despite their fantastic and unique features, karst landscapes are highly vulnerable to anthropogenic degradation such as water contamination, surface erosion, and deforestation (Ford and Williams 2007; Fleury 2009). While PN-KB residents are eager to speak about the benefits of karst-centric tourism and show caves in their area, many lack fundamental knowledge about the formation of PN-KB’s geology and, even more importantly, its extreme fragility to human development, especially agriculture.
+		</section>
+<section id="place2" class="scene" data-scene-id="place2">
 <div class="figure" style="background-image:url(img/fig1.jpg)"></div>
 <div class="caption">
 				Figure 1: The welcome sign to Phong Nha-Ke Bang National Park perched high upon a karst tower.
 			</div> 
-		</section>
-<section id="place2" class="scene" data-scene-id="place2">
+
 	<p>
 				 	<a class="location" data-layer-id="park">PN-KB</a> is a UNESCO designated World Heritage Site located in central Vietnam. Measuring 350,000 hectares, the Park is a protected area covering one of the largest karst massifs in Asia (Tranh 2012) (Figure 2). The Park is known for its dense jungle, abundant biodiversity, massive cave systems, and soaring karst towers, some of which measure up to 1,000 meters (Hübner et al. 2014). Less frequently noted, however, is the Park’s large local population. Nearly 65,000 people live within the PN-KB buffer zone, the majority of which practice small-scale subsistence and commercial agriculture (Tranh 2012; Willenbrink 2018) (Figure 3).
  </p>
@@ -459,7 +460,7 @@
                                 type: 'tile',
                                 url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00'
                             },
-                            center: [0,0],
+                            center: [17.504458,106.261455],
                             zoom: 12,
                             showAttribution: false
                         })
@@ -468,6 +469,19 @@
                 });
                 var sceneManager = new Focus.Views.SceneManagerView({
                     el: $('body'),
+					initialScene: {
+						baseLayer: {
+		                    "type": "esri-basemap",
+		                    "url": "ImageryFirefly",
+		                    "options": {
+		                        "detectRetina": true
+		                    }
+		                },
+						center: [17.504458, 106.261455],
+						zoom: 9,
+						zoomDelta: 1,
+						markerZoomAnimation: false
+					},
                     navigatorClass: Focus.Views.ScrollingSceneNavigator,
                     mapEngineClass: Focus.Views.LeafletMapEngine //Focus.Views.OpenLayersMapEngine //LeafletMapEngine
                 });

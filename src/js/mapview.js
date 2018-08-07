@@ -415,19 +415,21 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             zoomDelta: 0.5
             //renderer: L.canvas()
         };
-        if (this.model.get('crs')) {
+        if (this.model.has('crs')) {
             mapOptions.crs = this.model.get('crs');
-            console.log(mapOptions.crs);
         }
-        if (this.model.get('renderer')) {
+        if (this.model.has('renderer')) {
             mapOptions.renderer = this.model.get('renderer');
         }
-        if (this.model.get('maxBounds')) {
+        if (this.model.has('maxBounds')) {
             mapOptions.maxBounds = this.model.get('maxBounds');
         }
-        if (this.model.get('zoomAnimation')) {
+        if (this.model.has('zoomAnimation')) {
             mapOptions.zoomAnimation = this.model.get('zoomAnimation');
         }
+		if (this.model.has('markerZoomAnimation')) {
+			mapOptions.markerZoomAnimation = this.model.get('markerZoomAnimation');
+		}
 
         this._map = new L.Map(this.$el.attr('id'), mapOptions);
 
