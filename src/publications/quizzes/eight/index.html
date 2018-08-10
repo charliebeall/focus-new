@@ -1,0 +1,1087 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Geo Quiz 8</title>
+    <meta name="description" content="FOCUS on Geography:  Geo Quiz #8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .modal-content {
+            background-image: linear-gradient(0deg, rgba(242, 121, 33, 0.9), rgba(242, 121, 33, 0.9)), url(img/2050_logo.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- Add your site or application content here -->
+<div id="background"></div>
+<div id="map" class="fill"></div>
+<div id="foreground"></div>
+<div id="photos"></div>
+<div id="shadow"></div>
+<div id="score-view"><h3>0</h3></div>
+<svg id="score-text" width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="position: absolute;bottom: 50px;z-index: 10;right: calc(50% - 100px);text-align: center;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(0.748233,-0.663437,0.663437,0.748233,-71.4993,95.3792)">
+        <g transform="matrix(0.974148,0.22591,-0.22591,0.974148,14.9332,-26.5052)">
+            <text x="123.276px" y="51.996px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">S</text>
+        </g>
+        <g transform="matrix(0.889935,0.456088,-0.456088,0.889935,41.1167,-58.1446)">
+            <text x="141.028px" y="56.117px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">C</text>
+        </g>
+        <g transform="matrix(0.741486,0.670968,-0.670968,0.741486,84.934,-89.7957)">
+            <text x="158.999px" y="65.324px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">O</text>
+        </g>
+        <g transform="matrix(0.533523,0.845785,-0.845785,0.533523,149.897,-110.802)">
+            <text x="175.398px" y="80.49px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">R</text>
+        </g>
+        <g transform="matrix(0.322984,0.946405,-0.946405,0.322984,217.645,-110.12)">
+            <text x="185.791px" y="97.063px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">E</text>
+        </g>
+    </g>
+</svg>
+<div id="main-nav" class="light">
+    <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+        <svg width="1000px" height="1000px">
+            <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800" style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+            <path id="pathE" d="M 300 500 L 700 500" style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+            <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200" style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+        </svg>
+
+        <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+    </div>
+    <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <div id="menu"></div>
+</div>
+<div id="questions">
+    <div class="content scenes">
+    </div>
+</div>
+<div id="progress">
+    <div id="bar"></div>
+</div>
+<div id="bar-top"></div>
+<div id="bar-bottom" class="large"></div>
+<!-- inject:templates:html -->
+<script id="modal-template" type="text/template">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><%= title %></h4>
+            </div>
+            <div class="modal-body">
+                <p><%= content %></p>
+            </div>
+            <div class="modal-footer" style="display:<% print(showFooter ? 'block' : 'none') %>;">
+                <button type="button" class="btn btn-success">Start Quiz</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</script>
+<script id="quiz-score-template" type="text/template">
+    <div class="quiz-score">
+        <h3><%= score %></h3>
+    </div>
+</script>
+<script id="choice-template" type="text/template">
+    <div class="choice-body <% print(selected ? 'selected' : '') %> <%=result%>" style="background-image:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5)), url(<%= photo %>), linear-gradient(180deg, rgba(31,31,31,0.9), rgba(51,51,51,0.9))">
+        <div class="row id-row">
+            <span><%= id %></span>
+        </div>
+        <div class="row photo-row">
+            <% if (result === 'right') { %>
+            <span class="col-12 col-sm-12 fa fa-check right result pull-right"></span>
+            <% } else if (result === 'wrong') { %>
+            <span class="col-12 col-sm-12 fa fa-ban wrong result pull-right"></span>
+            <% } %>
+        </div>
+        <div class="row text-row">
+            <%= text %>
+        </div>
+    </div>
+</script>
+<script id="question-template" type="text/template" >
+    <div class="prompt">
+        <h3><%= prompt %></h3>
+        <div class="row button-row">
+            <button class="btn btn-success check-answer">Check Answer</button>
+            <button class="btn btn-success next">Next</button>
+        </div>
+    </div>
+    <div class="row choice-row">
+
+    </div>
+</script>
+<script id="menu-items-template" type="text/template">
+    <div class="items"></div>
+</script>
+<script id="menu-item-template" type="text/template">
+    <div class="publication col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <div class="publication-wrapper">
+            <span class="image" style="background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(<%=thumbnail%>); background-size:cover; background-position: 50% 50%;"></span>
+            <a href="<%= url %>" class="<%= type.replace(' ', '').toLowerCase() %>">
+                <h2><%= type %></h2>
+                <div class="content">
+                    <p><%= title %></p>
+                </div>
+                <div class="author">
+                    <p><%= author %></p>
+                </div>
+                <div class="date">
+                    <p><%= date %></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</script>
+
+<!-- endinject -->
+<script src="../../../js/combined.js"></script>
+<script>
+    var scenes = {
+        "scenes": [
+            {
+                "id": "place1",
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "USATopo",
+                    "options": {
+                        "detectRetina": true,
+                        //"imagerySet": "AerialWithLabels"
+                    }
+                }, /*{
+                    "type": "tile",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png"
+                },*/
+                "layers": [
+                    {"id": "southeast_usa", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -83.5, 33
+                        ]
+                    }
+                }},
+                    {"id": "western_south_american", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -65.5, -23.75
+                            ]
+                        }
+                    }},
+                    {"id": "west_africa", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -1.05, 7.81
+                            ]
+                        }
+                    }},
+                    {"id": "caucuses", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                43.5, 42
+                            ]
+                        }
+                    }}],
+                //"center": [-60, 48],
+                "zoom": 2,
+                "style": {
+                    "filter": "sepia(70%) brightness(110%)",
+                    "opacity": 0.75,
+                    "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                }
+            },
+            {
+                "id": "place2",
+                "zoom": 2,
+                "layers": [
+                    {"id": "hawaii", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -155.5, 19.5666
+                            ]
+                        }
+                    }},
+                    {"id": "northeast_brazil", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -38.47, -12.97
+                            ]
+                        }
+                    }},
+                    {"id": "southwester_africa", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                18.5, -12.5
+                            ]
+                        }
+                    }},
+                    {"id": "borneo", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                114, 1
+                            ]
+                        }
+                    }}
+                ],
+                "baseLayer": {
+                    "type": "tile",
+                    //"url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
+                    "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                    "scheme": "xyz"
+
+                },
+                "style": {
+                    "filter": "sepia(70%)",
+                    "opacity": 0.3,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/old_mathematics.png)"
+                }
+            },
+            {
+                "id": "place3",
+                //"center": [0, 0],
+                "zoom": 3, //3
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+
+                },
+                layers: [
+                    {"id": "meso_america", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89, 20.833
+                        ]
+                    }
+                }},
+                    {"id": "central_africa", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                23.656, -2.88
+                            ]
+                        }
+                    }},
+                    {"id": "fertile_crescent", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                44, 33
+                            ]
+                        }
+                    }},
+                    {"id": "southeast_asia", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                96, 22
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/congruent_pentagon.png)"
+                }
+            },
+            {
+                "id": "place4",
+                //"center": [-79.541015625, -10.811724143275514],
+                "zoom": 2, //3
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+
+                },
+                layers: [
+                    {"id": "chile", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -70.666, -33.45
+                        ]
+                    }
+                }},
+                    {"id": "italy", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                11.35, 44.507
+                            ]
+                        }
+                    }},
+                    {"id": "china", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               104, 35
+                            ]
+                        }
+                    }},
+                    {"id": "new_zealand", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                174, -42
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.8,
+                    "background": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='44' viewBox='0 0 34 44'%3E%3Cg fill='%238e8e64' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M1 6.2C.72 5.55.38 4.94 0 4.36v13.28c.38-.58.72-1.2 1-1.84A12.04 12.04 0 0 0 7.2 22 12.04 12.04 0 0 0 1 28.2c-.28-.65-.62-1.26-1-1.84v13.28c.38-.58.72-1.2 1-1.84A12.04 12.04 0 0 0 7.2 44h21.6a12.05 12.05 0 0 0 5.2-4.36V26.36A12.05 12.05 0 0 0 28.8 22a12.05 12.05 0 0 0 5.2-4.36V4.36A12.05 12.05 0 0 0 28.8 0H7.2A12.04 12.04 0 0 0 1 6.2zM17.36 23H12a10 10 0 1 0 0 20h5.36a11.99 11.99 0 0 1 0-20zm1.28-2H24a10 10 0 1 0 0-20h-5.36a11.99 11.99 0 0 1 0 20zM12 1a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 14a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3.46-2a2 2 0 1 0-3.47 2 2 2 0 0 0 3.47-2zm0-4a2 2 0 1 0-3.47-2 2 2 0 0 0 3.47 2zM12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.46 2a2 2 0 1 0 3.47-2 2 2 0 0 0-3.47 2zm0 4a2 2 0 1 0 3.47 2 2 2 0 0 0-3.47-2zM24 43a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm0-14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3.46 2a2 2 0 1 0 3.47-2 2 2 0 0 0-3.47 2zm0 4a2 2 0 1 0 3.47 2 2 2 0 0 0-3.47-2zM24 37a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3.46-2a2 2 0 1 0-3.47 2 2 2 0 0 0 3.47-2zm0-4a2 2 0 1 0-3.47-2 2 2 0 0 0 3.47 2z'/%3E%3C/g%3E%3C/svg%3E\"), linear-gradient(0deg, #c2f0a2, #c2f0a2)"
+                }
+            },
+            {
+                "id": "place5",
+                //"center": [-79.541015625, -10.811724143275514],
+                "zoom": 3, //3
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+
+                },
+                layers: [
+                    {"id": "costa_rica", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -84, 10
+                            ]
+                        }
+                    }},
+                    {"id": "peru", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -76, -10
+                            ]
+                        }
+                    }},
+                    {"id": "paraguay", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               -58, -23
+                            ]
+                        }
+                    }},
+                    {"id": "brazil", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -52, -10
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.6,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/congruent_pentagon.png)"
+                }
+            },
+            {
+                "id": "place6",
+                //"center": [-40, 38],
+                "zoom": 2, //3
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+
+                },
+                layers: [
+                    {"id": "fort_collins", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -105.7, 40.56
+                        ]
+                    }
+                }},
+                    {"id": "wageningen", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                5.67, 51.967
+                            ]
+                        }
+                    }},
+                    {"id": "st.petersburg", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                30.31, 59.93
+                            ]
+                        }
+                    }},{"id": "spitsbergen", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                16, 78.75
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 1,
+                    "background": "linear-gradient(0deg, #000, #000)"
+                }
+            }, 
+            {
+                "id": "place7",
+                //"center": [-79.541015625, -10.811724143275514],
+                "zoom": 2, //3
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "USATopo",
+                    "options": {
+                        "detectRetina": true,
+                        //"imagerySet": "AerialWithLabels"
+                    }
+                },
+                layers: [
+                    {"id": "southeast_usa", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -81, 34
+                        ]
+                    }
+                }},
+                    {"id": "coastal_brazil", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -45.6, -6.18
+                            ]
+                        }
+                    }},
+                    {"id": "west_africa", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               -16.6, 13.467
+                            ]
+                        }
+                    }},
+                    {"id": "mediterranean_coast", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               31.12, 30.9
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.6,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/congruent_pentagon.png)"
+                }
+            },
+            {
+                "id": "place8",
+                //"center": [-79.541015625, -10.811724143275514],
+                "zoom": 2, //3
+                "baseLayer": {
+                    "type": "esri-basemap",
+                    "url": "USATopo",
+                    "options": {
+                        "detectRetina": true,
+                        //"imagerySet": "AerialWithLabels"
+                    }
+                }, 
+                layers: [
+                    {"id": "guatemala", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -90.25, 15.5
+                        ]
+                    }
+                }},
+                    {"id": "jamaica", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -77, 18
+                            ]
+                        }
+                    }},
+                    {"id": "ethiopia", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               38, 8
+                            ]
+                        }
+                    }},
+                    {"id": "java", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                110, -7.49
+                            ]
+                        }
+                    }}],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.6,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/congruent_pentagon.png)"
+                }
+            },
+            {
+                "id": "place9",
+                //"center": [0, 0],
+                "zoom": 4,
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.9,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                },
+                "layers": [{"id": "maldives", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            73.22, 3.2
+                        ]
+                    }
+                }},
+                    {"id": "andaman_nicobar", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                92.77, 11.68
+                            ]
+                        }
+                    }},
+                    {"id": "moluccas", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                128, -2
+                            ]
+                        }
+                    }},{"id": "philippines", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                               122, 13
+                            ]
+                        }
+                    }}]
+            }, {
+                "id": "place10",
+                "zoom": 3,
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "style": {
+                    "filter": "grayscale(0%)",
+                    "opacity": 0.8,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                },
+                "layers": [{"id": "peru", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -76, -10
+                        ]
+                    }
+                }},
+                    {"id": "guinea", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -10, 11
+                            ]
+                        }
+                    }},
+                    {"id": "okinawa", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                127.93, 26.48
+                            ]
+                        }
+                    }},
+                    {"id": "new_caledonia", "type": "geojson", "data": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                165.3, -21.25
+                            ]
+                        }
+                    }}]
+            }
+        ]
+    };
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79613259-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    var questions = [{
+        choices: [{
+            id: 'A',
+            text: 'Southeast USA',
+            photo: 'img/1a.jpg',
+            sceneId: 'southeast_usa'
+        }, {
+            id: 'B',
+            text: 'Western South America',
+            photo: 'img/1b.jpg',
+            sceneId: 'western_south_american'
+        }, {
+            id: 'C',
+            text: 'West Africa',
+            photo: 'img/1c.jpg',
+            sceneId: 'west_africa'
+        }, {
+            id: 'D',
+            text: 'Caucuses',
+            photo: 'img/1d.jpg',
+            sceneId: 'caucuses'
+        }],
+        prompt: 'Peanuts (<i>Arachis hypogaea</i>) are central to the cuisines of South-East Asia (think satay sauce) yet this crop did not originate in that part of the world. Where is the center of origin for peanuts?',
+        rightAnswer: {
+            id: 'B',
+            description: 'The exact place is unclear, but it is virtually certain that its center of origin is the lowland region of what is today the borderland between Argentina and Bolivia. The peanut is not a true ‘nut’ but a grain legume also known as a groundnut or goober.'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Hawaii',
+            photo: 'img/2a.jpg',
+            sceneId: 'hawaii'
+        }, {
+            id: 'B',
+            text: 'Northeast of Brazil',
+            photo: 'img/2b.jpg',
+            sceneId: 'northeast_brazil'
+        }, {
+            id: 'C',
+            text: 'Southwestern Africa',
+            photo: 'img/2c.jpg',
+            sceneId: 'southwester_africa'
+        }, {
+            id: 'D',
+            text: 'Borneo',
+            photo: 'img/2d.jpg',
+            sceneId: 'borneo'
+        }],
+        prompt: 'Palm oil is used in a myriad of food and industrial products and its increasing cultivation in tropical lowlands is causing extensive deforestation. But where did the palm (<i>Elaeis guineensis</i>) that produces palm oil originate?',
+        rightAnswer: {
+            id: 'C',
+            description: 'The exact region is not known, but Western-Southwestern Africa is generally accepted as the origin of the African Oil Palm.'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Meso-America',
+            photo: 'img/3a.jpg',
+            sceneId: 'meso_america'
+        }, {
+            id: 'B',
+            text: 'Central Africa',
+            photo: 'img/3b.jpg',
+            sceneId: 'central_africa'
+        }, {
+            id: 'C',
+            text: 'The Fertile-Crescent',
+            photo: 'img/3c.jpg',
+            sceneId: 'fertile_crescent'
+        }, {
+            id: 'D',
+            text: 'South-East Asia',
+            photo: 'img/3d.jpg',
+            sceneId: 'southeast_asia'
+        }],
+        prompt: 'The meat and eggs of varieties of the domesticated chicken (<i>Gallus gallus domesticus</i>) are a key source of protein around world, in rural as well as urban places. Where does this bird originally come from?',
+        rightAnswer: {
+            id: 'D',
+            description: 'The domesticated chicken is related to jungle-fowl found in the lowland forests of this world region.'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Chile',
+            photo: 'img/4a.jpg',
+            sceneId: 'chile'
+        }, {
+            id: 'B',
+            text: 'Italy',
+            photo: 'img/4b.jpg',
+            sceneId: 'italy'
+        }, {
+            id: 'C',
+            text: 'China',
+            photo: 'img/4c.jpg',
+            sceneId: 'china'
+        }, {
+            id: 'D',
+            text: 'New Zealand',
+            photo: 'img/4d.jpg',
+            sceneId: 'new_zealand'
+        }],
+        prompt: 'The kiwi-fruit (<i>Actinidia deliciosahas</i>) has its origins in:',
+        rightAnswer: {
+            id: 'C',
+            description: 'It was known as the Chinese Gooseberry before ingenious marketing decided kiwi-fruit would be much easier to sell.'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+
+            text: 'Costa Rica',
+            photo: 'img/5a.jpg',
+            sceneId: 'costa_rica' 
+        }, {
+            id: 'B',
+            text: 'Peru',
+            photo: 'img/5b.jpg',
+            sceneId: 'peru'
+        }, {
+            id: 'C',
+            text: 'Paraguay',
+            photo: 'img/5c.jpg',
+            sceneId: 'paraguay'
+        }, {
+            id: 'D',
+            text: 'Brazil',
+            photo: 'img/5d.jpg',
+            sceneId: 'brazil'
+        }],
+        prompt: 'Açaí juice has become a ‘hot’ antioxidant and is being added to many juices and smoothies. Where does this fruit originally come from?',
+        rightAnswer: {
+            id: 'D',
+            description: 'This fruit is from the <i>Euterpe oleracea</i> palm which graces the banks of the floodplain of the Amazon River.'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Fort Collins, USA',
+            photo: 'img/6a.jpg',
+            sceneId: 'fort_collins'
+        }, {
+            id: 'B',
+            text: 'Wageningen, The Netherlands',
+            photo: 'img/6b.jpg',
+            sceneId: 'wageningen'
+        }, {
+            id: 'C',
+            text: 'St. Petersburg, Russia',
+            photo: 'img/6d.jpg',
+            sceneId: 'st.petersburg'
+        }, {
+            id: 'D',
+            text: 'Spitsbergen, Norway',
+            photo: 'img/6c.jpg',
+            sceneId: 'spitsbergen'
+        }],
+        prompt: 'In order to prepare for possible crop disasters, scientists believe that seeds should be preserved both where they are cultivated, especially in centers of diversity and domestication (<i>in-situ</i> conservation), while also preserving seeds in climate-controlled vaults (<i>ex-situ</i> conservation). Where is the most famous of these seeds vaults located?',
+        rightAnswer: {
+            id: 'D',
+            description: 'Known as the <a href="https://www.croptrust.org/our-work/svalbard-global-seed-vault/">Svalbard Global Seed Vault</a>'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Southeast US',
+            photo: 'img/7a.jpg',
+            sceneId: 'southeast_usa'
+        }, {
+            id: 'B',
+            text: 'Coastal Brazil',
+            photo: 'img/7b.jpg',
+            sceneId: 'coastal_brazil'
+        }, {
+            id: 'C',
+            text: 'West Africa',
+            photo: 'img/7c.jpg',
+            sceneId: 'west_africa'
+        }, {
+            id: 'D',
+            text: 'Mediterranean Coast',
+            photo: 'img/7d.jpg',
+            sceneId: 'mediterranean_coast'
+        }],
+        prompt: 'General popular understanding is that most rice was domesticated in Asia (<i>Oryza sativa</i>) and that it travelled the world from there. However, recent scholarship clearly demonstrates a separate, parallel center of origin for rice (<i>Oryza glaberrima</i>). Where is this other center of rice domestication?',
+        rightAnswer: {
+            id: 'C',
+            description: 'West Africa'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Guatemala',
+            photo: 'img/8a.jpg',
+            sceneId: 'guatemala'
+        }, {
+            id: 'B',
+            text: 'Jamaica',
+            photo: 'img/8b.jpg',
+            sceneId: 'jamaica'
+        }, {
+            id: 'C',
+            text: 'Ethiopia',
+            photo: 'img/8c.jpg',
+            sceneId: 'ethiopia'
+        }, {
+            id: 'D',
+            text: 'Java',
+            photo: 'img/8d.jpg',
+            sceneId: 'java'
+        }],
+        prompt: 'Coffee (<i>Coffea arabica</i>) has become a ubiquitous beverage around the world. The hills of which of the following present-day countries is this crop said to have its origins?',
+        rightAnswer: {
+            id: 'C',
+            description: 'Ethiopia'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'The Maldives',
+            photo: 'img/9a.jpg',
+            sceneId: 'maldives'
+        }, {
+            id: 'B',
+            text: 'The Andaman and Nicobar Islands',
+            photo: 'img/9b.jpg',
+            sceneId: 'andaman_nicobar'
+        }, {
+            id: 'C',
+            text: 'The Moluccas',
+            photo: 'img/9d.jpg',
+            sceneId: 'moluccas'
+        }, {
+            id: 'D',
+            text: 'The Philippines',
+            photo: 'img/9c.jpg',
+            sceneId: 'philippines'  
+        }],
+        prompt: 'The quest for the ‘spice islands’ set-in motion extensive exploration of the world by people from the Iberian Peninsula. Which island group are the famed ‘spice islands’?',
+        rightAnswer: {
+            id: 'C',
+            description: 'The Moluccas'
+        }
+    }, {
+        choices: [{
+            id: 'A',
+            text: 'Peru',
+            photo: 'img/10a.jpg',
+            sceneId: 'peru'
+        }, {
+            id: 'B',
+            text: 'Guinea',
+            photo: 'img/10b.jpg',
+            sceneId: 'guinea'
+        }, {
+            id: 'C',
+            text: 'Okinawa',
+            photo: 'img/10c.jpg',
+            sceneId: 'okinawa'
+        }, {
+            id: 'D',
+            text: 'New Caledonia',
+            photo: 'img/10d.jpg',
+            sceneId: 'new_caledonia'
+        }],
+        prompt: 'Yams (Dioscerea spp.) and sweet potatoes (<i>Ipomoea batatas</i>) are often confused and interchanged for each other. The mix-up is an amalgam of cultural conflation and marketing confusion. To add to it, in some places the crop known as taro (<i>Colocasia esculenta</i>) is referred to as ‘yam.’ They are however, all different crops, with different places of origin. Where does the sweet potato have its origins?',
+        rightAnswer: {
+            id: 'A',
+            description: 'Peru'
+        }
+    }];
+
+        Focus.Map.defaultOptions = {
+            weight: 10,
+            radius: 8,
+            opacity: 0.3,
+            color: 'rgba(39, 171, 226, 1)',
+            fillColor: 'rgba(39, 171, 226, 1)'
+        };
+        var questionCollection = new Focus.Collections.QuestionCollection(questions);
+
+        var navigator = new Focus.Views.QuizSceneNavigator({
+            el: $('.scenes'),
+            model: new Focus.Models.ModalModel({
+                title: 'Welcome to the Eighth Geo Quiz, the Geography of Food Origins by Antoinette WinklerPrins',
+                content: "This quiz focuses on the history and geographic origins of some of our favorite foods.  How well do you know your food?",
+                buttonText: 'Start Quiz'
+            }),
+            collection: questionCollection
+        });
+        navigator.render();
+
+        var sceneManager = new Focus.Views.SceneManagerView({
+            el: $('body'),
+            navigator: navigator,
+            mapEngineClass: Focus.Views.LeafletMapEngine
+        });
+
+        var shareView = new Focus.Views.ShareView();
+        shareView.render();
+
+    });
+</script>
+</body>
+</html>
