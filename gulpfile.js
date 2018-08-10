@@ -183,22 +183,19 @@ var srcFiles = [
     'node_modules/lodash/lodash.min.js',
     'node_modules/backbone/backbone-min.js',
     'node_modules/leaflet/dist/leaflet.js',
-    //'bower_components/flowtype/flowtype.js',
-    'bower_components/d3/d3.min.js',
-    'bower_components/topojson/topojson.js',
-    'bower_components/velocity/velocity.min.js',
-    'bower_components/velocity/velocity.ui.min.js',
+    'node_modules/d3/d3.min.js',
+    'node_modules/topojson/topojson.js',
+    'node_modules/velocity-animate/velocity.min.js',
+    'node_modules/velocity-animate/velocity.ui.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    'bower_components/jquery.scrollex/jquery.scrollex.min.js',
+    'node_modules/jquery.scrollex/jquery.scrollex.min.js',
     'node_modules/esri-leaflet/dist/esri-leaflet.js',
 	'node_modules/esri-leaflet-vector/dist/esri-leaflet-vector.js',
     'node_modules/proj4/dist/proj4.js',
     'node_modules/proj4leaflet/src/proj4leaflet.js',
     'node_modules/leaflet-dvf/dist/leaflet-dvf.js',
-    'bower_components/vanilla-lazyload/dist/lazyload.min.js',
-    //'node_modules/leaflet-tilelayer-wmts/src/leaflet-tilelayer-wmts.js',
+    'node_modules/vanilla-lazyload/dist/lazyload.min.js',
     'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.js',
-    //'node_modules/leaflet-bing-layer/leaflet-bing-layer.min.js',
     'node_modules/clipboard/dist/clipboard.js',
     'node_modules/wavesurfer.js/dist/wavesurfer.min.js',
     'src/js/vendor/*.js',
@@ -223,7 +220,7 @@ gulp.task('minify', function () {
 
 gulp.task('concatcss', function () {
    return gulp.src([
-       'bower_components/fontawesome/css/font-awesome.min.css',
+       'node_modules/font-awesome/css/font-awesome.min.css',
 	   'src/css/bootstrap.min.css',
        'src/css/normalize.css',
        'node_modules/leaflet/dist/leaflet.css',
@@ -236,13 +233,15 @@ gulp.task('concatcss', function () {
 });
 
 gulp.task('copyfonts', function() {
-    gulp.src('bower_components/fontawesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
+    gulp.src('node_modules/font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
         .pipe(gulp.dest('dist/fonts'))
         .pipe(gulp.dest('src/fonts'));
 });
 
 gulp.task('copy2020', function() {
-    gulp.src('bower_components/twentytwenty/**/*')
+    gulp.src([
+		'bower_components/twentytwenty/**/*'
+	])
         .pipe(gulp.dest('dist/js/twentytwenty'))
         .pipe(gulp.dest('src/js/twentytwenty'));
 });

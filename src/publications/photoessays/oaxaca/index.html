@@ -1774,41 +1774,32 @@
         var shareView = new Focus.Views.ShareView();
         shareView.render();
 
+        var $maps = $('#map .leaflet-tile-pane, #overview-map .leaflet-tile-pane');
+        $('.twentytwenty-container').each(function () {
+            $(this).twentytwenty();
+            $(this).on('sliderChanged', function (e, data) {
+                var filter = 'grayscale(' + (data.pct * 100) + '%)'; // contrast(' + (0.5 * (data.pct * 100) + 150) + '%)';
+                $maps.css('-webkit-filter', filter);
+                $maps.css('-moz-filter', filter);
+                $maps.css('-ms-filter', filter);
+                $maps.css('filter', filter);
+            });
 
+            $(this).find('.twentytwenty-handle').attr('data-toggle', 'tooltip').tooltip({
+                title: 'Drag here to swipe between photos',
+                container: 'body'
+            }).tooltip('show');
+        });
+
+        // Setup the photos to rise on hover
+        $('li.grid-item').on('mouseenter', function (e) {
+            $(this).css('z-index', '5000');
+        }).on('mouseleave', function (e) {
+            $(this).css('z-index', '1');
+        });
 
 
     });
-
-    try {
-        $(window).load(function () {
-            var $maps = $('#map .leaflet-tile-pane, #overview-map .leaflet-tile-pane');
-            $('.twentytwenty-container').each(function () {
-                $(this).twentytwenty();
-                $(this).on('sliderChanged', function (e, data) {
-                    var filter = 'grayscale(' + (data.pct * 100) + '%)'; // contrast(' + (0.5 * (data.pct * 100) + 150) + '%)';
-                    $maps.css('-webkit-filter', filter);
-                    $maps.css('-moz-filter', filter);
-                    $maps.css('-ms-filter', filter);
-                    $maps.css('filter', filter);
-                });
-
-                $(this).find('.twentytwenty-handle').attr('data-toggle', 'tooltip').tooltip({
-                    title: 'Drag here to swipe between photos',
-                    container: 'body'
-                }).tooltip('show');
-            });
-
-            // Setup the photos to rise on hover
-            $('li.grid-item').on('mouseenter', function (e) {
-                $(this).css('z-index', '5000');
-            }).on('mouseleave', function (e) {
-                $(this).css('z-index', '1');
-            });
-        });
-    }
-    catch (ex) {
-
-    }
 
 </script>
 </body>
