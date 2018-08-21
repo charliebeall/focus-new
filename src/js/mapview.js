@@ -509,34 +509,25 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 bingMapsKey: BING_MAPS_KEY
             }, layerDef.params));
         }
-        else if (layerDef.type === 'country') {
+        else if (layerDef.type === 'country' || layerDef.type === 'state') {
             layer = new L.ChoroplethDataLayer(_.map([layerDef.data], function (value) {
                 return {code: value};
             }), {
                 recordsField: null,
-                locationMode: L.LocationModes.COUNTRY,
+                locationMode: L.LocationModes[layerDef.type.toUpperCase()],
                 codeField: 'code',
                 tooltipOptions: {
                     iconSize: null,
                     iconAnchor: new L.Point(-5, 0)
                 },
-                layerOptions: layerDef.style || {}
-            });
-
-            layer._bounds = layer.getBounds();
-        }
-        else if (layerDef.type === 'state') {
-            layer = new L.ChoroplethDataLayer(_.map([layerDef.data], function (value) {
-                return {code: value};
-            }), {
-                recordsField: null,
-                locationMode: L.LocationModes.STATE,
-                codeField: 'code',
-                tooltipOptions: {
-                    iconSize: null,
-                    iconAnchor: new L.Point(-5, 0)
-                },
-                layerOptions: layerDef.style || {}
+                layerOptions: layerDef.style || {},
+                onEachRecord: function (layerDef) {
+                    return function (layer, record) {
+                        layer.on('click', function (e) {
+                            me.trigger('layerClick', layerDef.id);
+                        });
+                    };
+                }(layerDef)
             });
 
             layer._bounds = layer.getBounds();
@@ -894,7 +885,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             $tileContainer.css('filter', filter);
 
             this.$el.css('background', background);
-			
+            this.$el.css('background-position', '50% 50%');
+            
 			if (backgroundSize) {
 				this.$el.css('background-size', backgroundSize);
 			}
