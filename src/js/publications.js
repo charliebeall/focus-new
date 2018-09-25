@@ -3,6 +3,15 @@ Focus.Volumes = [
 	{
         number: 61,
         publications: [{
+            type: 'Geo Quiz',
+            title: 'Quiz Nine: Energy',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '09/03/18',
+            thumbnail: 'publications/quizzes/nine/img/Q1/wind.jpg',
+            url: 'publications/quizzes/nine/index.html',
+            location: []
+        },{
             type: 'Feature Article',
             title: 'Agricultural Social Networks as the future of Karst Science Communication in Phong Nha-Kẻ Bàng National Park, Vietnam',
             author: 'Elizabeth Willenbrink, Leslie North, Vu Thi Minh Nguyet',
@@ -31,7 +40,7 @@ Focus.Volumes = [
             location: []
         },{
             type: 'Geo Quiz',
-            title: 'The Geography of Food Origins',
+            title: 'Quiz Eight: The Geography of Food Origins',
             author: 'Antoinette WinklerPrins',
             description: '',
             date: '05/10/18',

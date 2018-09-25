@@ -753,6 +753,9 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                         }
                         return marker;
                     },
+                    locationTextField: function (record) {
+                        return record.geometry.type;
+                    },
                     displayOptions: {
                         'properties.name': {
                             displayName: 'Name',
