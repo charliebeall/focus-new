@@ -344,7 +344,7 @@
     };
 
     Focus.Map.options = {};
-    Focus.Map.options.panes = [];
+    Focus.Map.options.panes = ['camera', 'place'];
 
     var scenes = {
         "features": [
@@ -366,14 +366,14 @@
                     "iconAnchor": [25, 25]
                 }
             }, "data": { "type": "Feature", "properties": { "name": "Camera Direction"}, "geometry": { "type": "Point", 
-            "coordinates": [ 86.6185, 67.465, 0.0 ] }}},
+            "coordinates": [ 86.6185, 67.465 ] }}},
             {"id": "fig4", "type": "geojson", "style": {
                 "pane": "place",
                 "radius": 3,
                 "weight": 6,
                 "opacity": 0.3,
                 "text": {
-                    "text": "Panorama",
+                    "text": "Figure 4",
                     "style": {
                         "stroke": "none",
                         "fill": "#fff",
@@ -382,7 +382,7 @@
                         "text-shadow": "0px 2px 2px rgba(0,0,0,1)"
                     }
                 }}, "data": { "type": "Feature", "properties": { "name": "Figure 4"}, "geometry": { "type": "Point", 
-                "coordinates": [ 86.6185, 67.465, 0.0 ] } }},
+                "coordinates": [ 86.6185, 67.465 ] } }},
             
 
         ],
