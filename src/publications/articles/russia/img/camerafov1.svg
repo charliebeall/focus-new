@@ -11,16 +11,16 @@
     </filter>
     <g transform="matrix(1,0,0,1,-0.913397,-0.42744)"  filter="url(#dropShadow)">
         <g transform="matrix(0.78947,0,0,0.870937,22.5114,-1.26939)">
-            <path d="M35.976,34.849L99.943,0.226" style="fill:rgba(242, 121, 33, 1);stroke-dasharray:8,8;stroke-linecap:round;stroke-width:6px;stroke:rgba(242, 121, 33, 1);"/>
+            <path d="M35.976,34.849L99.943,0.226" style="fill:#186EDA;stroke-dasharray:8,8;stroke-linecap:round;stroke-width:6px;stroke:#186EDA;"/>
         </g>
         <g transform="matrix(0.50525,0.717057,-0.525104,0.369996,51.0359,30.179)">
-            <path d="M35.976,34.849L99.943,0.226" style="fill:rgba(242, 121, 33, 1);stroke-dasharray:8,8;stroke-linecap:round;stroke-width:6px;stroke:rgba(242, 121, 33, 1);"/>
+            <path d="M35.976,34.849L99.943,0.226" style="fill:#186EDA;stroke-dasharray:8,8;stroke-linecap:round;stroke-width:6px;stroke:#186EDA;"/>
         </g>
         <g transform="matrix(1,0,0,1,1.4154,1.16838)">
-            <path d="M47.732,47.767C99.998,47.767 99.998,47.584 99.998,47.584" style="fill:rgba(242, 121, 33, 1);stroke-linecap:round;stroke-dasharray:8,8;stroke-width:6px;stroke:rgba(242, 121, 33, 1);"/>
+            <path d="M47.732,47.767C99.998,47.767 99.998,47.584 99.998,47.584" style="fill:#186EDA;stroke-linecap:round;stroke-dasharray:8,8;stroke-width:6px;stroke:#186EDA;"/>
         </g>
         <g transform="matrix(0.922491,0,0,1,17.5666,-1.07256)">
-            <rect x="29.059" y="27.616" width="13.08" height="44.419" style="fill:rgba(242, 121, 33, 1);"/>
+            <rect x="29.059" y="27.616" width="13.08" height="44.419" style="fill:#186EDA;"/>
         </g>
     </g>
 </svg>

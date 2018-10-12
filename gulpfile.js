@@ -246,6 +246,14 @@ gulp.task('copy2020', function() {
         .pipe(gulp.dest('src/js/twentytwenty'));
 });
 
+gulp.task('copyleafletplugins', function() {
+    gulp.src([
+		'node_modules/leaflet-plugins/layer/tile/*'
+	])
+        .pipe(gulp.dest('dist/js/leaflet-plugins'))
+        .pipe(gulp.dest('src/js/leaflet-plugins'));
+});
+
 gulp.task('html', function () {
     return gulp.src([
         'src/**/*.html',
@@ -266,5 +274,5 @@ gulp.task('html', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', function (done) {runSequence('copy2020', 'copyfonts','concatcss','concat', 'html', done)});
-gulp.task('build:minify', function (done) {runSequence('copy2020', 'copyfonts', 'concatcss', 'minify', 'html', done)});
+gulp.task('default', function (done) {runSequence('copyleafletplugins', 'copy2020', 'copyfonts','concatcss','concat', 'html', done)});
+gulp.task('build:minify', function (done) {runSequence('copyleafletplugins', 'copy2020', 'copyfonts', 'concatcss', 'minify', 'html', done)});

@@ -509,6 +509,10 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 bingMapsKey: BING_MAPS_KEY
             }, layerDef.params));
         }
+        else if (layerDef.type === 'yandex') {
+            this.yndx = this.yndx || new L.Yandex();
+            layer = new L.Yandex(layerDef.url, {traffic:false, opacity:1, overlay:true});
+        }
         else if (layerDef.type === 'country' || layerDef.type === 'state') {
             layer = new L.ChoroplethDataLayer(_.map([layerDef.data], function (value) {
                 return {code: value};
@@ -2111,8 +2115,10 @@ Focus.Views.SceneManagerView = Backbone.View.extend({
             }
 
             $(this).on('mouseover touchstart', function (e) {
-				var $this = $(this);
-				var url = $this.is('img') ? 'url(' + $this.attr('src') + ')' : $this.css('background-image');
+                var $this = $(this);
+                var isTwentyTwenty = $this.hasClass('twentytwenty-container');
+                var otherUrl = isTwentyTwenty ? 'url(' + $this.find('img').attr('src') + ')' : $this.css('background-image');
+				var url = $this.is('img') ? 'url(' + $this.attr('src') + ')' : otherUrl;
                 $photos.css('background-image', url);
                 if ($(this).hasClass('contain')) {
                     $photos.addClass('contain');
