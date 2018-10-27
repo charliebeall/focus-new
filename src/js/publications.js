@@ -3,6 +3,15 @@ Focus.Volumes = [
 	{
         number: 61,
         publications: [{
+            type: 'Feature Article',
+            title: 'Igarka Vanishes: The Story of a Rapidly Shrinking Russian Arctic City',
+            author: 'Kelsey Nyland, Valery Grebenets, Nikolay Shiklomanov, Dmitry Streletskiy',
+            description: '',
+            date: '10/26/18',
+            thumbnail: 'publications/articles/russia/img/figure6.jpg',
+            url: 'publications/articles/russia/index.html',
+            location: []
+        },{
             type: 'Geo Quiz',
             title: 'Quiz Nine: Energy',
             author: 'Wesley Reisser',
