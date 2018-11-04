@@ -2203,10 +2203,14 @@ Focus.Views.OverviewMapView = Focus.Views.MapView.extend({
             weight: 1,
             opacity: 1
         };
+        if (options.style) {
+            this.style = _.extend({}, this.style, options.style);
+        }
         if (options.showCenterPoint) {
             this._centerPoint = new L.RegularPolygonMarker(new L.LatLng(0, 0), this.style);
             this._engine._map.addLayer(this._centerPoint);
         }
+        this.options = options;
     },
     toggle: function () {
         this.$el.toggleClass('transparent');
@@ -2214,7 +2218,8 @@ Focus.Views.OverviewMapView = Focus.Views.MapView.extend({
     viewChanged: function (view) {
         if (view.center) {
             this.setCenter(view.center);
-            this.setZoom(~~(view.zoom/3));
+            var zoom = this.options.zoom || ~~(view.zoom/3);
+            this.setZoom(zoom);
 
             if (this._centerPoint) {
                 this._centerPoint.setLatLng(new L.LatLng(view.center[1], view.center[0]));

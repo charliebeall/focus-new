@@ -1,0 +1,81 @@
+<script id="modal-template" type="text/template">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><%= title %></h4>
+            </div>
+            <div class="modal-body">
+                <p><%= content %></p>
+            </div>
+            <div class="modal-footer" style="display:<% print(showFooter ? 'block' : 'none') %>;">
+                <button type="button" class="btn btn-success">Start Quiz</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</script>
+<script id="quiz-score-template" type="text/template">
+    <div class="quiz-score">
+        <h3><%= score %></h3>
+    </div>
+</script>
+<script id="choice-template" type="text/template">
+    <div class="choice-body <% print(selected ? 'selected' : '') %> <%=result%>" style="background-image:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5)), url(<%= photo %>), linear-gradient(180deg, rgba(31,31,31,0.9), rgba(51,51,51,0.9))">
+        <div class="row id-row">
+            <span><%= id %></span>
+        </div>
+        <div class="row photo-row">
+            <% if (result === 'right') { %>
+            <span class="col-12 col-sm-12 fa fa-check right result pull-right"></span>
+            <% } else if (result === 'wrong') { %>
+            <span class="col-12 col-sm-12 fa fa-ban wrong result pull-right"></span>
+            <% } %>
+        </div>
+        <div class="row text-row">
+            <%= text %>
+        </div>
+    </div>
+</script>
+<script id="question-template" type="text/template" >
+    <div class="prompt">
+        <h3><%= prompt %></h3>
+        <div class="row button-row">
+            <button class="btn btn-success check-answer">Check Answer</button>
+            <button class="btn btn-success next">Next</button>
+        </div>
+    </div>
+    <div class="row choice-row">
+
+    </div>
+</script>
+<script id="menu-header-template" type="text/template">
+    <div class="menu-header col-12 col-sm-12">
+        <span>Show</span>
+        <button type="button" class="btn btn-article <%= 'Feature Article' in filters ? 'active': '' %>" data-toggle="button" data-type="Feature Article">Articles</button>
+        <button type="button" class="btn btn-photo <%= 'Photo Essay' in filters ? 'active': '' %>" data-toggle="button" data-type="Photo Essay">Photo Essays</button>
+        <button type="button" class="btn btn-quiz <%= 'Geo Quiz' in filters ? 'active': '' %>" data-toggle="button" data-type="Geo Quiz">Quizzes</button>
+        <span>Search:</span>
+        <input type="text" value="search" />
+    </div>
+</script>
+<script id="menu-items-template" type="text/template">
+    <div class="items"></div>
+</script>
+<script id="menu-item-template" type="text/template">
+    <div class="publication col-lg-4 col-md-6 col-sm-6 col-xs-12" style="display: <%= visible ? 'block' : 'none' %>">
+        <div class="publication-wrapper">
+            <span class="image" style="background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(<%=thumbnail%>); background-size:cover; background-position: 50% 50%;"></span>
+            <a href="<%= url %>" class="<%= type.replace(' ', '').toLowerCase() %>">
+                <h2><%= type %></h2>
+                <div class="content">
+                    <p><%= title %></p>
+                </div>
+                <div class="author">
+                    <p><%= author %></p>
+                </div>
+                <div class="date">
+                    <p><%= date %></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</script>
