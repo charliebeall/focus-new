@@ -406,3 +406,21 @@ p {
         background-attachment: inherit;
     }
 }
+
+.main-links {
+    padding: 1.5rem 0px;
+    margin: 0px -20px;
+}
+
+.main-links * {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .main-links * {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+}

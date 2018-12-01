@@ -1,0 +1,1705 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cuban Transportation</title>
+    <meta name="description" content="FOCUS on Geography: Cuban Transportation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,cuba,transportation,map">
+    <meta name="author" content="Charles O. Collins">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Slabo+27px:400normal" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        body {
+            font-family: 'Lato', sans serif;
+        }
+        #text.photo-essay {
+            background: white;
+        }
+
+        #text h2, #text h3 {
+            color: rgba(0, 47, 108, 1);
+            font-family: 'Slabo 27px', sans serif;
+            text-transform: none;
+
+        }
+
+        div.author {
+            opacity: 1;
+        }
+
+        .photo-scene h2 {
+            background: linear-gradient(180deg,rgba(255,255,255,1),rgba(255,255,255,0))
+        }
+
+        .photo-scene p {
+            background: linear-gradient(0deg,rgba(255,255,255,.9) 90%,rgba(255,255,255,0));
+            color: rgba(0, 47, 108, 1);
+            text-shadow: none;
+        }
+        .photo-scene .author {
+            background: rgba(10, 95, 169, 0.95);
+        }
+
+        #text.photo-essay h2 {
+            *color: rgba(242, 223, 6, 1);
+            color: rgb(207, 20, 43);
+            text-shadow: 0px 1px 1px rgba(0, 47, 108, 1);
+            font-size: 50px;
+        }
+
+        span.place-text {
+            *font-family: 'Aladin', cursive;
+            color: #fff;
+        }
+
+        #text a, a.location, div.tooltip a {
+            color: rgba(0, 47, 108, 1) !important;
+            border-bottom-color: rgba(0, 47, 108, 1);
+        }
+
+        #text a:hover, a.location:hover, div.tooltip a {
+            background: rgba(0, 47, 108, 0.1);
+            text-decoration: none;
+        }
+
+        path.line {
+            stroke: rgba(0, 47, 108, 1) !important;
+        }
+        path.marker-path {
+            stroke: rgba(0, 47, 108, 1) !important;
+            fill: rgba(0, 47, 108, 1) !important;
+        }
+
+        #text h2 {
+            *text-shadow: 1px 0 0 #222, -1px 0 0 #222, 2px 0 0 #fff, -2px 0 0 #fff;
+            font-size: 40px;
+        }
+
+        #nav, #toggle-map {
+            background: rgba(0, 47, 108, 1);
+        }
+
+        #text {
+            *background: linear-gradient(90deg, rgba(254, 252, 238, 0.7), rgba(254, 252, 238, 1) 50%);
+            background: rgba(254, 252, 238, 1);
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: rgba(0, 47, 108, 1);
+            -webkit-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgba(0, 47, 108, 1);
+            transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-ms-fill {
+            background-color: rgba(0, 47, 108, 1);
+            -ms-transition: width 0.5s ease-in-out;
+        }
+
+        svg text {
+            font-family: 'Lato', sans serif;
+            font-size: 16px;
+            fill: #fff;
+        }
+
+        ul.grid {
+            top: 100px;
+            position: relative;
+            z-index: 100;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            justify-content: center;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 0 6em;
+            list-style: none;
+        }
+        li.grid-item {
+            display: block;
+            -webkit-flex: none;
+            flex: none;
+            width: 35%;
+            min-width: 180px;
+            padding: 10px;
+        }
+
+        .grid-item a {
+            border-bottom: none;
+        }
+
+        .grid-img {
+            display: block;
+            width: 100%;
+        }
+
+        .grid-link {
+            display: block;
+            padding: 13px 13px;
+            background: #fff;
+        }
+
+        .figure {
+            z-index: 1000;
+        }
+        p {
+            z-index: 1001;
+        }
+
+        #acknowledgements {
+            border-color: rgba(0, 47, 108, 1);
+        }
+
+        .photo-scene .row.footer-row {
+            color: rgba(0, 47, 108, 1);
+        }
+
+        			#text {
+				background: #fff;
+			}
+			#text h2 {
+				font-family: 'Poller One', cursive;
+				text-transform: none;
+				font-size: 60px;
+			}
+			
+			#text h3 {
+				font-family: 'Poller One', cursive;
+				text-transform: none;
+				color: rgba(0, 42, 143, 0.7);
+			}
+			
+			#nav, #toggle-map {
+				background: rgba(0, 42, 143, 0.7);
+			}
+			
+			span.place-text {
+	            font-family: 'Poller One', cursive;
+	            color: #fff;
+	        }
+
+	        #text a, a.location, div.tooltip a {
+	            color: rgba(0, 42, 143, 0.7);
+	            border-bottom-color: rgba(0, 42, 143, 0.7);
+	        }
+
+	        #text a:hover, a.location:hover, div.tooltip a {
+	            background: rgba(0, 42, 143, 0.1);
+	            text-decoration: none;
+	        }
+
+	        path.line {
+	            stroke: rgb(207, 20, 43) !important;
+	        }
+	        path.marker-path {
+	            stroke: rgb(207, 20, 43) !important;
+	            fill: rgb(207, 20, 43) !important;
+	        }
+
+	        progress::-webkit-progress-bar {
+	            background-color: transparent;
+	        }
+
+	        progress::-webkit-progress-value {
+	            background-color: rgba(0, 42, 143, 0.7);
+	            -webkit-transition: width 0.5s ease-in-out;
+	        }
+
+	        progress::-moz-progress-bar {
+	            background-color: rgba(0, 42, 143, 0.7);
+	            transition: width 0.5s ease-in-out;
+	            -moz-transition: width 0.5s ease-in-out;
+	        }
+
+	        progress::-ms-fill {
+	            background-color: rgba(0, 42, 143, 0.7);
+	            -ms-transition: width 0.5s ease-in-out;
+	        }
+
+	        svg text {
+	            font-family: 'Poller One', cursive;
+	            font-size: 16px;
+	            fill: #fff;
+				text-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+	        }
+			
+			.tooltip.bottom .tooltip-arrow, .tooltip.bottom-left .tooltip-arrow, .tooltip.bottom-right .tooltip-arrow {
+				border-bottom-color: rgb(207, 20, 43);
+			}
+			
+			.tooltip.left .tooltip-arrow {
+				border-left-color: rgb(207, 20, 43);
+			}
+			
+			.tooltip-inner {
+				background: rgb(207, 20, 43);
+				color: #fff;
+			}
+			.tooltip-inner a.location, #photo-caption a.location {
+				color: #fff;
+				border-bottom-color: #fff;
+            }
+            
+            .dotstyle .sections li {
+                position: relative;
+                display: block;
+                float: left;
+                margin: 2px 17px;
+                width: 16px;
+                height: 12px;
+                cursor: pointer;
+            }
+            
+            .dotstyle .sections li a {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 8px;
+                outline: 0;
+                border-radius: 0px;
+                background-color: #fff;
+                background-color: rgba(255,255,255,.3);
+                text-indent: -999em;
+                cursor: pointer;
+                position: absolute;
+                padding: 0;
+            }
+
+
+            @media (max-height: 640px) {
+                #text p {
+                    
+                }
+                
+                .dotstyle .sections li {
+                    height: 10px !important;
+                }
+            }
+    </style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<progress></progress>
+<div id="nav" class="dotstyle dotstyle-scaleup">
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <ul class="nav previous">
+        <li class="previous">
+            <a href="#"><span class="fa fa-chevron-up"></span></a>
+        </li>
+    </ul>
+    <ul class="nav sections">
+    </ul>
+    <ul class="nav next">
+        <li class="next">
+            <a href="#"><span class="fa fa-chevron-down"></span></a>
+        </li>
+    </ul>
+</div>
+<!-- Add your site or application content here -->
+<div id="background"></div>
+<div id="map" class="photo-essay"></div>
+<div id="overview-map" class="title-hidden transparent"></div>
+<div id="foreground"></div>
+<div id="photos"><div id="photo-caption"></div></div>
+<div id="shadow"></div>
+<div id="toggle-map" class="focus-black"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+<div id="main-nav" class="light">
+    <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+        <svg width="1000px" height="1000px">
+            <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800" style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+            <path id="pathE" d="M 300 500 L 700 500" style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+            <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200" style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+        </svg>
+
+        <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+    </div>
+    <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <div id="menu"></div>
+</div>
+<div id="text" class="photo-essay">
+    <div class="content scenes">
+        <section id="introduction" class="scene photo-scene" data-scene-id="place0">
+            <div class="intro">
+            <h2 class="title">Cuban Transportation</h2>
+            <div class="author">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-xs-3 col-sm-2 col-md-1 col-lg-1">
+                            <img class="author-photo" src="img/salbov.png"/>
+                        </div>
+                        <div class="col-12 col-xs-9 col-sm-10 col-md-11 col-lg-11">
+                            <div class="row">
+                                <div class="col-12 col-xs-12 name">
+                                    Charles O. Collins
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-xs-12 organization">
+                                    Department of Geography and GIS, University of Northern Colorado
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2018.61.5p</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="figure" style="overflow: hidden;">
+                <ul class="grid">
+                    <li class="grid-item" style="opacity: 1; transform: translateX(169.738px) translateY(-60.1781px) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-20deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig1.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(89.0125px) translateY(-222.278px) scaleX(1.4) scaleY(1.4) scaleZ(1.4) rotateZ(1deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig2.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(-195.812px) translateY(-141.578px) scaleX(1.3) scaleY(1.3) scaleZ(1.3) rotateZ(15deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig3.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(332.538px) translateY(-549.941px) scaleX(1.4) scaleY(1.4) scaleZ(1.4) rotateZ(-17deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig4.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(-53.0875px) translateY(-549.541px) scaleX(1.2) scaleY(1.2) scaleZ(1.2) rotateZ(-5deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig5.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="z-index: 1; opacity: 1; transform: translateX(-184.412px) translateY(-408.541px) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-15deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig6.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(256.412px) translateY(-868.541px) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(24deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig7.png" alt="Some image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                In 1959, the new revolutionary government of Cuba inherited the most developed national transportation system in Latin America.  Years of domestic and foreign infrastructure investment supported the export economies of sugar and nickel and a thriving tourist industry.  Railroad density was the highest in Latin America, to be sure in part owing to the sugar industry, but also to extensive passenger service.  Per capita motor vehicle ownership exceeded that in Mexico, Argentine, Brazil, Chile and virtually every country of the region save Venezuela and Uruguay.  An extensive highway system served industry and an emergent middle class, as well as an estimated quarter million tourist visitors.
+By 2014, in all Latin America only Haiti had fewer motor vehicles per capita than Cuba.  The quality of roads and streets is deteriorated, and the railroad system is described as the cheapest, slowest, and least reliable mode of travel in the country.  Many factors contribute to a national transportation crisis.  Not necessarily in order of importance are the disintegration of the Soviet Union and its extensive aid, the U.S. embargo, a shrinking sugar industry, nationalization of transport emphasizing public over private modes, and poor management.
+Faced with diminishing transport options, Cubans resort to resolviendo, the national trait of finding a way, of coping, in a word, resolving daily issues that go far beyond transportation. To resolver, to deal with a situation, can mean anything from resorting to la bolsa negra (black market) to periodic prostitution to pilfering from the workplace.  However, resolviendo in transport approaches creative genius.  A 1952 Buick taxi is powered by a Russian forklift engine skillfully cobbled into the old Cacharro; a farm truck goes under the torch and emerges a very Spartan bus; a Chinese-built Flying Pigeon bicycle morphs into a three-wheel bicitaxi or pedicab and part-time vegetable vending cart.  In the countryside a growing horse and oxen herd hauls passengers and produce in wagons fashioned from defunct Russian trucks. 
+Public health and public education are pillars of the Cuban Revolution; public transportation is the Achilles heel.  The images that follow trace a trail of trial and error, the essence of resolviendo.
+            </p>
+        </section>
+        <section id="2" class="scene photo-scene" data-scene-id="place0">
+            <div class="figure contain" style="background-image:url(img/fig1.png);"></div>
+            <p>
+                This farmer near Viňales rides a V-shaped sled or drag.  Constructed of heavy tree branches, the shape reduces friction and permits heavy loads to be moved, albeit slowly.  The design is ancient, harkening back centuries before Europeans mistakenly stumbled into the hemisphere, hoped it was Asia, and bemused, dubbed it America.  Oxen are far from a novelty in Cuba as high fuel prices and uncertain supplies help foster a comeback of draft animals, a reality recognized by recent government reforms allowing private enterprise in haulage.
+            </p>
+        </section>
+        <section id="3" class="scene photo-scene" data-scene-id="place1">
+            <div class="figure contain" style="background-image:url(img/fig2.png);"></div>
+            <p>
+                Oxen are not restricted to farm work.  In smaller towns and on the edge of cities they deliver and haul a variety of goods.  All seem to have nose rings yet they never seem out of control.  Indeed, amidst noisy traffic they seem quite placid.  Oxen are “driven” almost exclusively by voice commands and the long pole carried by most drivers seems to have little function, one driver explaining that they never use it to hit the animals.  The wheels on the cart came from a truck but now provide a sturdy base for what are often large loads.
+            </p>
+        </section>
+        <section id="4" class="scene photo-scene" data-scene-id="place2">
+            <div class="figure contain" style="background-image:url(img/fig3.png);"></div>
+            <p>
+                In 2013, the Cuban government authorized 201 specific forms of legal self-employment (cuentapropista).  One such activity was operator of "Horse-drawn" carriage.  Horses never left the scene as a mode of transportation but today they are everywhere including busy urban streets.             
+            </p>
+        </section>
+        <section id="5" class="scene photo-scene" data-scene-id="place3">
+            <div class="figure contain" style="background-image:url(img/fig4.png);"></div>
+            <p>
+                In many countries the appearance of horse-drawn carriages suggests one thing, tourism.  In Cuba they serve two, namely, less expensive domestic travel and tourism.  The gentleman in the near carriage is not a tourist but a local businessman.  As tourism expands in Cuba more horse-drawn conveyances appear, most for non-tourist use.  Approaching on the right is a chief form of competition.  The 1955 Cadillac sedan is a Rutero, a type of collective taxicab that operates on a fixed route, i.e., from point A to point B and back.  The large size of the Cadillac accommodates an extra bench seat increasing capacity to at least eight clients.  The driver does not typically depart from his stand until the vehicle is full but passengers can be dropped off at intermediate spots along the route. 
+            </p>
+        </section>
+        <section id="6" class="scene photo-scene" data-scene-id="place4">
+            <div class="figure contain" style="background-image:url(img/fig5.png);"></div>
+            <p>
+                Prior to economic reforms under President Raúl Castro, bicycle repair and sales were part of the Bolsa Negra (Black Market) and could bring fines and loss of equipment.  Repair and sales existed but were kept from public and official view.  Today this shop is part of the so-called cuentapropista (legal self-employment) economy and is regulated and taxed.
+            </p>
+        </section>
+        <section id="7" class="scene photo-scene" data-scene-id="place5">
+            <div class="figure contain" style="background-image:url(img/fig6.png);"></div>
+            <p>
+                Bicycles provide a versatile platform for moving people and goods.  It is a lesson the U.S. military learned in Vietnam as significant amounts of war materiel were moved from North Vietnam into the south on bicycles.  In Cuba if it can be loaded and secured on a bicycle, it will be moved.  This is more than simple shopping or taking groceries home.  Businesses depend upon supplies moved through narrow, potholed streets by bike.  Currency in the man’s hand suggests he is one of the many street vendors.
+            </p>
+        </section>
+        <section id="8" class="scene photo-scene" data-scene-id="place6">
+            <div class="figure contain" style="background-image:url(img/fig7.png);"></div>
+            <p>
+                Pedaled or pushed,  bicycles or parts of bicycles move a surprising variety of goods.  Cuban ingenuity and necessity make a delivery cart from bicycle parts.  The sign translates “Home Delivery” (Servicio a domicilio) and the item today is a refrigerator; tomorrow it could be building materials or a hog carcass.
+            </p>
+        </section>
+        <section id="9" class="scene photo-scene" data-scene-id="place7">
+            <div class="figure contain" style="background-image:url(img/fig8.png);"></div>
+            <p>
+                In Cuba they are called "bicitaxis" and they represent a perfect example of the Cuban tradition of resolviendo.  In the Special Period of the 1990s transportation availability fell by as much as 70%.  One response was to import a million Chinese bicycles for urban travel.  Today only a few Cubans continue to ride bicycles as their primary mode of transportation.  Chinese and other bicycles have largely disappeared but three wheeled bikes have proliferated.  These bicitaxis are used for hired transport.  Initially they were restricted to domestic use but tourists have taken to them with enthusiasm.  Variations on the three-wheelers also carry goods and freight.  No government-owned factory exists to manufacture bicis, rather, they are artisanal.
+            </p>
+        </section>
+        <section id="10" class="scene photo-scene" data-scene-id="place8">
+            <div class="figure contain" style="background-image:url(img/fig9.png);"></div>
+            <p>
+                In some locations the number of bicitaxis appears to exceed the number of potential customers.  Initially these vehicles were used mainly by local residents but as tourism expands a new client pool is evident.  Visitors who truly wish to see the local landscape in detail are better served with a bicitaxi than a cab.  Operators and riders are in close proximity and a motivated and knowledgeable taxista can conduct an engaging field trip.  The more elaborate canopy on this bici and the artful decoration suggest its owner is aiming at the tourist market.
+            </p>
+        </section>
+        <section id="11" class="scene photo-scene" data-scene-id="place9">
+            <div class="figure contain" style="background-image:url(img/fig10.png);"></div>
+            <p>
+                The bicitaxistas have adjusted quickly to the recent return of cruise ships to Havana harbor.  Here a tour group is pedaled through the streets.  The bicitaxi may not be any less expensive than riding in a vintage taxi but the pace and visibility are much better for sightseeing.  If one is fortunate to have a driver who is knowledgeable about the city it is another plus.  
+            </p>        
+        </section>
+        <section id="12" class="scene photo-scene" data-scene-id="place10">
+            <div class="figure contain" style="background-image:url(img/fig11.png);"></div>
+            <p>
+                With the 1960 embargo Cuba had to search for new sources of automobiles.  Given close political relations with the Soviet Union it was logical that it become an important new supplier of affordable vehicles.  The two most common models are the Lada and the Moskvitch (shown here).  The assets of this model are durability, simplicity of design, persistence of design, ease of repair, and cost.  The downsides include limited power, a lack of high quality finish or appointments, small size, and minimum attention to rider comfort.  Many Cuban owners point out that the simplicity of design and ease of repair make both the Lada and Moskvitch appropriate for Cuban driving conditions and limited supply of replacement parts.            </p>
+        </section>
+        <section id="13" class="scene photo-scene" data-scene-id="place11">
+            <div class="figure contain" style="background-image:url(img/fig12.png);"></div>
+            <p>
+                Two cars reflect two eras.  The DeSoto convertible symbolizes what for middle and upper class Cubans in the early 1950s was the good life.  Sugar and tourism (with Mafia undertones) supported some Cubans in grand style but left many in abject poverty.  To the right a contemporary Cuban family emerges from their Russian-built Lada.  Multiple comparisons can be made of the two vehicles in terms of luxury, size, style, comfort, refinement, etc.  The convertible now belongs to the Cuban government as part of a fleet of restored convertibles geared to a tourist clientele, or a Cuban family sacrificing to celebrate an hour-long wedding or quinceñiera ceremony that will have required months if not years to fund.  To the family the challenge is to keep their 30-year old means of family transportation on the road with makeshift repairs and innovations.
+            </p>
+        </section>
+        <section id="14" class="scene photo-scene" data-scene-id="place12">
+            <div class="figure contain" style="background-image:url(img/fig13.png);"></div>
+            <p>
+                With reforms making the buying and selling of automobiles legal, vintage cacharros have taken on greater importance.  Cubans report selling a car in good working order for an amount sufficient to purchase a house.  Taxi drivers earn more than university professors or medical doctors.  But repair and maintenance are issues.  This repair lasted a day and a half on the street with only a backpack and broken tree branch to alert oncoming traffic.            </p>
+        </section>
+        <section id="15" class="scene photo-scene" data-scene-id="place13">
+            <div class="figure contain" style="background-image:url(img/fig14.png);"></div>
+            <p>
+                The authors took a several hour ride in this 1955 Pontiac.  In Cuba such vintage United States-built cars are common and continue to serve an important economic function.  Sometimes called Almendrone (Almond) for the shape of certain older models, or Cacharro (Jalopy), Cubans display an extraordinary talent for keeping such machines on the road.  The driver, pictured here, is a mechanic specializing in old American cars.  This one he recently purchased from the original owner who gave it up in order to buy a house for his daughter; such is the value of a functioning Cacharro.  Recent reforms not only make it possible to buy and sell such vehicles, they also encourage owners to become licensed taxistas serving tourists and Cuban clients.  Auto bodies last with care but engines usually do not.  This particular vehicle is equipped with a Mitsubishi bus engine and transmission.  It was a comfortable and secure ride even without seatbelts.             </p>
+        </section>
+        <section id="16" class="scene photo-scene" data-scene-id="place14">
+            <div class="figure contain" style="background-image:url(img/fig15.png);"></div>
+            <p>
+                A light Chevrolet truck from the early 1950s becomes a “people hauler.”  The skill of mechanics and auto-body technicians is evident in the extensive modifications including roof, running boards, and bumper.  A vehicle of this capacity is a source of steady income as it can accommodate eight adults in addition to the driver, despite high fuel prices.  Entry and egress are not highly convenient but the fare is very competitive.            </p>
+        </section>
+        <section id="17" class="scene photo-scene" data-scene-id="place15">
+            <div class="figure contain" style="background-image:url(img/fig16.png);"></div>
+            <p>
+                On Havana's storied Malecon a flock of vintage convertibles carry tourists on what for some is a nostalgic ride.  It is common to see a two-person team of driver and guide/narrator leisurely cruising this waterfront street.  Vintage cars and stories of these Almendrones have become a significant element of international tourism advertising.  Given the number of convertibles in this convoy it is likely the ride is part of a package for cruise ship visitors to the Cuban capital, a recent but growing trade.            </p>
+        </section>
+        <section id="18" class="scene photo-scene" data-scene-id="place16">
+            <div class="figure contain" style="background-image:url(img/fig17.png);"></div>
+            <p>
+                General Motors never produced a 1956 Pontiac convertible in this particular shade of pink.  With the trade embargo declared in 1960, no new United States built cars or parts entered Cuba, and car owners who decided to leave the Island were not allowed to take their vehicles.  The common euphemism was “they are donated to the Revolution.”  Indeed,   cars left behind were rounded up and distributed to government employees who supported the Revolution.  Most of the best preserved or best restored convertibles are operated by the Cuban government.  A one-hour cruise is essentially equal to one month’s average wage for government employees.  Cubans who ride in restored pink convertibles are the driver (note the white hat) and the guide who turns to communicate with the clients. 
+            </p>
+        </section>
+        <section id="19" class="scene photo-scene" data-scene-id="place17">
+            <div class="figure contain" style="background-image:url(img/fig18.png);"></div>
+            <p>
+                Smaller motorcycles are favored modes of transportation across Cuba.  It is very common to see them with more than one passenger.  Initial cost and fuel savings are important considerations for having a motorcycle as the family vehicle, or in this case school bus.            </p>
+        </section>
+        <section id="20" class="scene photo-scene" data-scene-id="place18">
+            <div class="figure contain" style="background-image:url(img/fig19.png);"></div>
+            <p>
+                Small electric motorcycles from China are appearing in ever larger numbers in Cuba.  With the high cost of gasoline (despite Venezuelan petroleum imports at below world market prices), an automobile is out of the question for many families.  As reflected here, even a small motorcycle is treated as a family vehicle.  Curiously, many adult riders use helmets but not children.            </p>
+        </section>
+        <section id="21" class="scene photo-scene" data-scene-id="place19">
+            <div class="figure contain" style="background-image:url(img/fig20.png);"></div>
+            <p>
+                A compromise between a family bicycle and a family automobile is the family scooter for four.  With greater range, more speed, and less physical stress, these small bikes consume a fraction of the fuel for a car.  One advantage for this family is that other than certain streets in major cities, the density of traffic is moderate to light.  That advantage is partially offset, however, by the diversity of competing traffic---pedestrians, horses, bicitaxis, tractors, wheeled novelty “trains,” cars, and buses.  A Cuban friend, viewing this photo virtually shouted “that is illegal.”            </p>
+        </section>
+        <section id="22" class="scene photo-scene" data-scene-id="place20">
+            <div class="figure contain" style="background-image:url(img/fig21.png);"></div>
+            <p>
+                Every functioning vehicle is potentially a taxi.  The driver waits beside a busy intersection.  The second man approaches, they speak briefly, and the driver hands his fare an extra helmet which he barely has on before they are off.
+            </p>
+        </section>
+        <section id="23" class="scene photo-scene" data-scene-id="place21">
+            <div class="figure contain" style="background-image:url(img/fig22.png);"></div>
+            <p>
+                One can easily see more motorcycles with sidecars in one day in Cuba than in a year in the United States.  Their popularity is a combination of low fuel consumption and the capacity to carry two, three, or even four persons at a time.  Most are manufactured in Russia or Eastern Europe so parts can be an issue.  But with a motorcycle and sidecar one has a combination of family transportation and versatile taxi, or even small delivery van.  The smoking example is a reminder that parts and repairs can be a challenge on the average Cuban budget and repair is often postponed until the vehicle ceases to function.
+            </p>
+        </section>
+        <section id="24" class="scene photo-scene" data-scene-id="place22">
+            <div class="figure contain" style="background-image:url(img/fig23.png);"></div>
+            <p>
+                If it moves, it will have passengers.  Men on the way to work grab a bite to eat.  Everything in Cuba is a potential colectivo from bicycles to large trucks, reflecting the low per capita ownership or availability of personal vehicles or adequate public passenger service.  Safety features are largely absent.  Safety ordinances either do not exist or are not enforced.
+            </p>
+        </section>
+        <section id="25" class="scene photo-scene" data-scene-id="place23">
+            <div class="figure contain" style="background-image:url(img/fig24.png);"></div>
+            <p>
+                Two very typical scenes, a tractor hauling people in a farm wagon and a load of grass hauled by a horse.  Many of those who use horses live in towns or cities.  They are continually out along the highways and roads cutting grass and hauling it home as feed.  The man cutting roadside grass with a machete could be an accurate icon for Cuba.  Meanwhile a tractor, in the countryside, on a highway, or on city streets never seems to pull an empty wagon.  The tractors are large, loud, and old, most coming to Cuba from Soviet-bloc largess.            </p>
+        </section>
+        <section id="26" class="scene photo-scene" data-scene-id="place24">
+            <div class="figure contain" style="background-image:url(img/fig25.png);"></div>
+            <p>
+                Farm workers at the end of the day ride home in a large cart designed to haul crops.  Most farmers, at least on the large cooperative farms, live in villages or towns.  This is the reason tractors pulling wagons are a common sight in the morning on streets as they collect workers.  Look closely and you can see that some of the men are indulging a national pastime, dominoes, the board held on the laps of the four players.            </p>
+        </section>
+        <section id="27" class="scene photo-scene" data-scene-id="place25">
+            <div class="figure contain" style="background-image:url(img/fig26.png);"></div>
+            <p>
+                Havana once had streetcars, some tracks are still visible.  Soviet engineers and planners once studied the feasibility of a subway system for the capital city.  But by default the job of moving Habaneros has fallen to buses. They exist in a bewildering variety but insufficient quantity.  Typically they are packed and still leave crowds of frustrated clients at many stops.  The upside is that bus transportation is affordable to virtually everyone.            </p>
+        </section>
+        <section id="28" class="scene photo-scene" data-scene-id="place26">
+            <div class="figure contain" style="background-image:url(img/fig27.png);"></div>
+            <p>
+                Cuba is where old school buses go to live on and on and on.  This former Canadian school bus from Quebec now hauls workers from home to place of employment and back, hopefully to a stop not too distance from one’s place of residence.  It apparently was pressed into service without the nicety of removing, covering, or replacing the French warnings and labels.            </p>
+        </section>
+        <section id="29" class="scene photo-scene" data-scene-id="place27">
+            <div class="figure contain" style="background-image:url(img/fig28.png);"></div>
+            <p>
+                Víazul buses are touted as top-of-the-line in Cuba.  Fares are higher, sometimes as much as double, compared to older buses plying the same routes between major cities.  Consequently only higher income Cubans ride them.  Tourists or other visitors make up much of the client population.  But they are not without their problems.  This bus seemed to be functioning normally when the driver announced a stop for repairs and maintenance.  At an unmarked spot in front of a residence we stopped and workers immediately emerged from the house to tend to the bus.  At one point as the driver (blue shirt) supervised the work, he announced to no one in particular “these people are all my family.”            </p>
+        </section>
+        <section id="30" class="scene photo-scene" data-scene-id="place28">
+            <div class="figure contain" style="background-image:url(img/fig29.png);"></div>
+            <p>
+                Unquestionably the newest and best buses are reserved for tourists.  Two Yutong buses imported from China await their groups near a popular tourist destination.  Such government-owned buses are well maintained and it is unusual to see Cubans on board unless they are drivers or guides.  One driver commented that the Chinese buses were adequate but he longed for the refinements of the Volvo bus he had driven while residing in Canada.  As these buses age, they will be relegated to general national service and perhaps to the provinces.            </p>
+        </section>
+        <section id="31" class="scene photo-scene" data-scene-id="place29">
+            <div class="figure contain" style="background-image:url(img/fig30.png);"></div>
+            <p>
+                In the critical period of the 1990s after loss of Soviet-bloc subsidies, public transportation experienced a decline estimated at 70%.  One response was the “camello” (camel) bus.  In some cases two older bus bodies were literally welded together and attached to a large truck.  This one is a bit more refined but still the camello marked a low point in passenger comfort as up to 300 riders were packed into the non-air-conditioned people-hauler.  With their traditional sense of humor, Cubans said of the camello that each had a crew of four: driver, conductor collecting fares, pickpocket (cartista) and jamonero (groper).            </p>
+        </section>
+        <section id="32" class="scene photo-scene" data-scene-id="place30">
+            <div class="figure contain" style="background-image:url(img/fig31.png);"></div>
+            <p>
+                In the major cities camello buses have largely disappeared but still serve smaller towns.  Articulated buses now ply the major routes.  Clearly an improvement, these buses are often jammed with riders and frequently leave additional would-be riders standing at downtown stops.  Their number is too few to meet demand.            </p>
+        </section>
+        <section id="33" class="scene photo-scene" data-scene-id="place31">
+            <div class="figure contain" style="background-image:url(img/fig32.png);"></div>
+            <p>
+                As some of the despised camellos are pulled from the streets, at least in parts of major cities, one transportation mode to replace them is the camion, literally the truck.  Reforms make it legal to carry passengers in privately owned conveyances.  Essentially all that is required is a functioning truck chassis and the ability to fit it with a large box.  Typically several benches extend most of the length of the box but many of the passengers, if not most, stand up.  Note the several hands holding onto the bottom of the narrow opening…one can hardly call it a window.  There is no provision for ventilation, visibility, sanitation, and no safety features; basically there is little concern for passenger comfort.  And most are packed.  This may be the least expensive form of mass transport over distances.            </p>
+        </section>
+        <section id="34" class="scene photo-scene" data-scene-id="place32">
+            <div class="figure contain" style="background-image:url(img/fig33.png);"></div>
+            <p>
+                Not all camiones seek to maximize capacity and minimize comfort.  Newly painted, this example has real windows—large ones—and high-backed seats allowing passengers to actually see outside.  Is this an example of the Cuban entrepreneurial spirit and that typically forbidden aspect of a market economy…..competition?  It is not clear how fares for this bus might differ from the average camion.              </p>
+        </section>
+        <section id="35" class="scene photo-scene" data-scene-id="place33">
+            <div class="figure contain" style="background-image:url(img/fig34.png);"></div>
+            <p>
+                As more tourists arrive can "Disneyesque Toy Trains" be far behind?  As with several transport modes, those serving the tourist seem newer and better maintained than modes intended for Cubans.  There is no large amusement park in which such a “train” as this would ply its trade and haul its riders.  However, the increasing frequency of cruise ships in Havana harbor may justify spending limited funds on novel projects.            </p>
+        </section>
+        <section id="36" class="scene photo-scene" data-scene-id="place34">
+            <div class="figure contain" style="background-image:url(img/fig35.png);"></div>
+            <p>
+                The stern visage of “Revolutionary Che” carries many messages.  As author of the Motorcycle Diaries (Diarios de Motocicleta) the young Argentine medical student enjoyed the freedom of travel and discovery which contributed strongly to his social conscience and determination to devote himself to revolutionary change in Latin America.  Later, as a leader of the Cuban Revolution Che was the most devoted, the most doctrinaire spokesperson for a socialized Cuba where no person lacked for any of the elements of a good life.  Yet the small motorbike reminds us that today both travel and movement in Cuba are restricted both by policy and an economic system that restricts personal access to resources.            </p>
+        </section>
+        <section id="37" class="scene photo-scene" data-scene-id="place34">
+            <div class="figure" style="overflow: hidden;">
+                <ul class="grid">
+                    <li class="grid-item" style="opacity: 1; transform: translateX(169.738px) translateY(-60.1781px) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-20deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig10.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(89.0125px) translateY(-222.278px) scaleX(1.4) scaleY(1.4) scaleZ(1.4) rotateZ(1deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig11.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(-195.812px) translateY(-141.578px) scaleX(1.3) scaleY(1.3) scaleZ(1.3) rotateZ(15deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig12.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(332.538px) translateY(-549.941px) scaleX(1.4) scaleY(1.4) scaleZ(1.4) rotateZ(-17deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig13.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(-53.0875px) translateY(-549.541px) scaleX(1.2) scaleY(1.2) scaleZ(1.2) rotateZ(-5deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig14.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="z-index: 1; opacity: 1; transform: translateX(-184.412px) translateY(-408.541px) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-15deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig15.png" alt="Some image">
+                        </a>
+                    </li>
+                    <li class="grid-item" style="opacity: 1; transform: translateX(256.412px) translateY(-868.541px) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(24deg);">
+                        <a class="grid-link" href="#">
+                            <img class="grid-img" src="img/fig16.png" alt="Some image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                This photo essay of Cuban transportation issues seeks to convey three messages, two current and one future.  First, public transportation in Cuba is in crisis and has been for at least two decades.  The causes are multiple but clearly include a poorly administered nationalization plan, the enduring U.S. Embargo, loss of Soviet-bloc assistance, lack of domestic fuel resources, and the low priority given to transport by Marxist-Leninist economic philosophy.  Public transportation planning, if such exists, is strictly patchwork and stop-gap; donated busses, second-hand busses, used railroad cars, rented airplanes are pressed into service only to succumb to a lack of parts or essential maintenance. 
+An equally important message is the creativity of Cubans in the face of adversity, their penchant to resolver, to cope with deficiencies in multiple aspects of daily life.  Public education and public health are universally accessible but schools and clinics less so owing to poor public transportation.  More Cubans seem to complain about the difficulty of getting to and from work or to and from shopping than any other single topic.  Complain they do but in a variety of ways they cope, whether it means enduring a crowded stifling bus, keeping alive a vintage cacharro as a taxi, turning a truck into a bus, or packing three or more on a motorcycle.
+However, as leadership moves the national economy more deeply into international tourism, Cuba must create a tourist-worthy transportation system.  It is not enough to provide a nostalgic jaunt along the Malecon in a 1954 Buick convertible.  Most tourists expect to be delivered on time and in comfort to their chosen destinations. Just as Cubans have endured a quarter century of a dual currency policy that puts most at a disadvantage, it appears the country is creating a dual transportation system that has Cubans in horse-drawn wagons observing tourists in shiny new Chinese busses. Classlessness is a persistent Cuban priority in access to public health and education, cherished pillars of the Revolution.  The question is, are Cubans willing to remain an underclass in the fundamental need and right of personal mobility?  How will they choose to resolver this inequity?
+                <span class="row footer-row"></span>
+            </p>
+        </section>
+    </div>
+</div>
+<div id="progress">
+    <div id="bar"></div>
+</div>
+<div id="bar-top"></div>
+<div id="bar-bottom"></div>
+<!-- inject:templates:html -->
+<!-- endinject -->
+<script src="../../../js/combined.js"></script>
+<script>
+
+    Focus.Map = Focus.Map || {};
+    /*Focus.Map.traceOptions = {
+        style: {
+            dashArray: [4,4]
+        },
+        maxLength: 3
+    };*/
+    Focus.Map = {};
+    Focus.Map.defaultOptions = {
+        color: 'rgb(207, 20, 43)', //'rgba(0, 42, 143, 1)', //'#B0BDCE', //'#D30F23', //'rgba(39, 171, 226, 1)',
+        fillColor: 'rgb(207, 20, 43)', //'rgba(0, 42, 143, 1)', //'rgba(39, 171, 226, 1)',
+        radius: 8,
+        weight: 16,
+        fillOpacity: 1,
+        opacity: 0.2
+    };
+    Focus.Map.options = {};
+	Focus.Map.options.panes = [];
+    var scenes = {
+        "features": [
+            {
+                "id": "vinales", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Viñales"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -83.70694, 22.61892
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "holguin", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Holguín"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -76.26306, 20.88722
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "havana", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Havana"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -82.364167, 23.131944
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "remedios", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Remedios"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -79.545478, 22.495019
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "camaguey", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Camaguey"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -77.91694, 21.38083
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "guantanamo", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Guantanamo"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -75.20917, 20.14444
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "sanctispiritus", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Sancti Spíritus"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -79.4425, 21.92972
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "santiago", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Santiago"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -75.82667, 20.02083
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "santaclara", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Santa Clara"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -79.96472, 22.40694
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "cienfuegos", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Cienfuegos"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -80.44662, 22.14957
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "trinidad", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Trinidad"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -81.883611, 22.799167
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "lasterrazas", "type": "geojson", "data": {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Las Terrazas"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -82.94306, 22.845
+                        ]
+                    }
+                }
+            }
+        ],
+        "scenes": [
+            {
+                "id": "place0",
+                "zoom": 10,
+                "baseLayer": [{
+                "type": "esri-basemap",
+                "url": "Streets",
+                "options": {
+                    "detectRetina": true,
+                    "imagerySet": "AerialWithLabels"
+                }
+            }],
+                "layers": [{
+                    "idRef": "vinales"
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place1",
+                "zoom": 12,
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "layers": [{
+                    "idRef": "vinales"
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place2",
+                "layers": [{
+                    "idRef": "holguin"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place3",
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place4",
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place5",
+                "layers": [{
+                    "idRef": "holguin"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place6",
+                "layers": [{
+                    "idRef": "vinales"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place7",
+                "layers": [{
+                    "idRef": "remedios"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place8",
+                "layers": [{
+                    "idRef": "camaguey"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                "type": "esri-basemap",
+                "url": "Streets",
+                "options": {
+                    "detectRetina": true,
+                    "imagerySet": "AerialWithLabels"
+                }
+            }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place9",
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                "type": "esri-basemap",
+                "url": "Streets",
+                "options": {
+                    "detectRetina": true,
+                    "imagerySet": "AerialWithLabels"
+                }
+            }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place10",
+                "layers": [{
+                    "idRef": "guantanamo"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                "type": "esri-basemap",
+                "url": "Streets",
+                "options": {
+                    "detectRetina": true,
+                    "imagerySet": "AerialWithLabels"
+                }
+            }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place11",
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                "type": "esri-basemap",
+                "url": "Streets",
+                "options": {
+                    "detectRetina": true,
+                    "imagerySet": "AerialWithLabels"
+                }
+            }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place12",
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                "type": "esri-basemap",
+                "url": "Streets",
+                "options": {
+                    "detectRetina": true,
+                    "imagerySet": "AerialWithLabels"
+                }
+            }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place13",
+                "layers": [{
+                    "idRef": "sanctispiritus"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                "type": "esri-basemap",
+                "url": "Streets",
+                "options": {
+                    "detectRetina": true,
+                    "imagerySet": "AerialWithLabels"
+                }
+            }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place14",
+                "layers": [{
+                    "idRef": "santiago"
+                }],
+                //"trace": true,
+                "zoom": 12, "baseLayer": [{
+                "type": "esri-basemap",
+                "url": "Streets",
+                "options": {
+                    "detectRetina": true,
+                    "imagerySet": "AerialWithLabels"
+                }
+            }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place15",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place16",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place17",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "sanctispiritus"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place18",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "holguin"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place19",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "santaclara"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place20",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "santiago"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place21",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place22",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "camaguey"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place23",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "cienfuegos"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place24",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "trinidad"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place25",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place26",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place27",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "santaclara"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place28",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "lasterrazas"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place29",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place30",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place31",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "holguin"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place32",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "holguin"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place33",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            },
+            {
+                "id": "place34",
+                //"trace": true,
+                "zoom": 11,
+                "layers": [{
+                    "idRef": "havana"
+                }],
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Streets",
+                    "options": {
+                        "detectRetina": true,
+                        "imagerySet": "AerialWithLabels"
+                    }
+                }],
+                "style": {
+                    "filter": "sepia(0%)",
+                    "opacity": 0.95,
+                    "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                }
+            }
+
+
+        ]
+    };
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79613259-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script>
+
+
+    $(document).ready(function () {
+        $('#nav li.previous a').on('click', function (e) {
+            e.preventDefault();
+            var $prev = $('#nav').find('.sections li.active').prev();
+
+            if (!$prev.hasClass('previous')) {
+                $prev.find('a').click();
+            }
+        });
+
+        $('#nav li.next a').on('click', function (e) {
+            e.preventDefault();
+            var $next = $('#nav').find('.sections li.active').next();
+
+            if (!$next.hasClass('next')) {
+                $next.find('a').click();
+            }
+        });
+
+        document.onkeydown = function (e) {
+            if (e.keyCode == '38') {
+                // up arrow
+                $('#nav li.previous a').click();
+            }
+            else if (e.keyCode == '40') {
+                // down arrow
+                $('#nav li.next a').click();
+            }
+        };
+
+        var overviewMap = new Focus.Views.OverviewMapView({
+            model: new Backbone.Model({
+                initialScene: new Focus.Models.SceneModel({
+                    baseLayer: {
+                        type: 'tile',
+                        url: '//{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=b57289fed78a44df8828d53a3e03de00', //'//{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
+                        params: {
+                            attribution: 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                        }
+                    },
+                    center: [0,0],
+                    zoom: 12,
+                    showAttribution: false
+                })
+            }),
+            showCenterPoint: true
+        });
+        var sceneManager = new Focus.Views.SceneManagerView({
+            el: $('body'),
+            initialScene: {
+                center: [23.131944, -82.364167],
+                zoom: 4
+            },
+            navigatorClass: Focus.Views.ScrollingSceneNavigator,
+            mapEngineClass: Focus.Views.LeafletMapEngine //Focus.Views.OpenLayersMapEngine //LeafletMapEngine
+        });
+
+        var shareView = new Focus.Views.ShareView();
+        shareView.render();
+
+        /*
+        $(document).ready(function () {
+            new Focus.Views.LazyLoader().render();
+            // Setup the photos to rise on hover
+            $('li.grid-item').on('mouseenter', function (e) {
+                $(this).css('z-index', '5000');
+            }).on('mouseleave', function (e) {
+                $(this).css('z-index', '1');
+            });
+        });
+        */
+    });
+
+</script>
+</body>
+</html>
