@@ -1741,7 +1741,7 @@ div.photo-essay div.citation {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 823px) {
 
     #text h2.title {
         font-size: 24px;
