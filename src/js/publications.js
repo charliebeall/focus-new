@@ -3,6 +3,15 @@ Focus.Volumes = [
 	{
         number: 61,
         publications: [{
+            type: 'Photo Essay',
+            title: 'Moving Cuba',
+            author: 'Jenny Pettit, Charles O. Collins',
+            description: '',
+            date: '12/14/18',
+            thumbnail: 'publications/photoessays/cuba/img/fig16.png',
+            url: 'publications/photoessays/cuba/index.html',
+            location: []
+        },{
             type: 'Feature Article',
             title: 'Igarka Vanishes: The Story of a Rapidly Shrinking Russian Arctic City',
             author: 'Kelsey Nyland, Valery Grebenets, Nikolay Shiklomanov, Dmitry Streletskiy',
