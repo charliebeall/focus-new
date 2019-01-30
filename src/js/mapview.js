@@ -840,10 +840,10 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             if (fly) {
                 me._map.stop();
                 if (bounds) {
-                    me._map.flyToBounds(bounds, $.extend(true, sceneModel.get('panZoomOptions') || {}, {
+                    me._map.flyToBounds(bounds, $.extend(true, {
                         maxZoom: zoom,
                         padding: [15, 15]
-                    }));
+                    }, sceneModel.get('panZoomOptions') || {}));
                 }
                 else {
                     me._map.flyTo(latLng, zoom);
