@@ -1,5 +1,18 @@
 var Focus = Focus || {};
 Focus.Volumes = [
+    {
+        number: 62,
+        publications: [{
+            type: 'Feature Article',
+            title: 'Foreign Investment Dilemma: Real Estate on Jeju Island, Korea',
+            author: 'Gregory Chu',
+            description: '',
+            date: '01/31/19',
+            thumbnail: 'publications/articles/jeju/img/fig1.jpg',
+            url: 'publications/articles/jeju/index.html',
+            location: []
+        }]
+    },
 	{
         number: 61,
         publications: [{
