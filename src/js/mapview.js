@@ -1718,7 +1718,7 @@ Focus.Views.ButtonSceneNavigator = Focus.Views.SceneNavigator.extend({
     next: function (e) {
         e.preventDefault();
         this._sceneIndex += 1;
-        this._sceneIndex = this._sceneIndex % this._$scenes.size();
+        this._sceneIndex = this._sceneIndex % this._$scenes.length;
         this.changeScene(this._sceneIndex);
     }
 });
