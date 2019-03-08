@@ -4,6 +4,15 @@ Focus.Volumes = [
         number: 62,
         publications: [{
             type: 'Feature Article',
+            title: 'A Tale of Two Arctic Cities: Vorkuta and Salekhard',
+            author: 'Luis Suter',
+            description: '',
+            date: '03/07/19',
+            thumbnail: 'publications/articles/suter/img/fig5a.jpg',
+            url: 'publications/articles/suter/index.html',
+            location: []
+        },{
+            type: 'Feature Article',
             title: 'Foreign Investment Dilemma: Real Estate on Jeju Island, Korea',
             author: 'Gregory Chu',
             description: '',
