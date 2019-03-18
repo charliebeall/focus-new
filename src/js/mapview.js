@@ -88,7 +88,7 @@ Focus.Views.MapView = Backbone.View.extend({
         this._engine.setFeatures(featureLookup);
     },
     setScene: function (sceneModel, fly) {
-        this._engine.setScene(sceneModel, fly);
+        sceneModel = this._engine.setScene(sceneModel, fly);
         Focus.Events.trigger('viewChanged', sceneModel.toJSON());
         return this;
     },
@@ -139,7 +139,8 @@ Focus.Views.MapEngine = Backbone.View.extend({
         this._setBaseLayer(sceneModel.get('baseLayer'));
         this._setMapStyle(sceneModel);
         this._addLayers(sceneModel.get('layers') || []);
-        this._flyTo(sceneModel, fly);
+        sceneModel = this._flyTo(sceneModel, fly);
+        return sceneModel;
     },
     getLayerPoint: function (id) {
 
@@ -355,6 +356,7 @@ Focus.Views.StreetviewMapEngine = Focus.Views.MapEngine.extend({
 
         this._lastLocation = latLng;
 
+        return sceneModel;
     }
 });
 
@@ -874,6 +876,8 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
             console.log('Could not update scene bounds');
         }
 
+        return sceneModel;
+
     },
     _setMapStyle: function (sceneModel) {
         var style = sceneModel.get('style');
@@ -1119,7 +1123,9 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
     },
     setZoom: function (zoom) {
         try {
-            this._map.setZoom(zoom);
+            this._map.setZoom(zoom, {
+                animate: false
+            });
         }
         catch (ex) {
             console.log(ex);
@@ -1129,7 +1135,10 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
         try {
             if (center) {
                 var centerPoint = new L.LatLng(center[1], center[0]);
-                this._map.panTo(centerPoint);
+                this._map.setView(centerPoint, this._map.getZoom(), {
+                    animate: false
+                });
+                console.log(this._map.getCenter());
             }
         }
         catch (ex) {
@@ -1334,6 +1343,7 @@ Focus.Views.OpenLayersMapEngine = Focus.Views.MapEngine.extend({
         var coordinates = sceneModel.get('center');
         var zoom = sceneModel.get('zoom');
         this._fly(coordinates, zoom);
+        return sceneModel;
     },
     _fly: function (coordinates, zoom) {
         var point = ol.proj.transform(coordinates, 'EPSG:4326', 'EPSG:3857');
@@ -1508,6 +1518,8 @@ Focus.Views.MapboxMapEngine = Focus.Views.MapEngine.extend({
                 bearing: sceneModel.get('rotation') || 60
             });
         }
+
+        return sceneModel;
     },
     _disableControls: function () {
         this._map.scrollZoom.disable();
@@ -2218,9 +2230,6 @@ Focus.Views.OverviewMapView = Focus.Views.MapView.extend({
     viewChanged: function (view) {
         if (view.center) {
             this.setCenter(view.center);
-            var zoom = this.options.zoom || ~~(view.zoom/3);
-            this.setZoom(zoom);
-
             if (this._centerPoint) {
                 this._centerPoint.setLatLng(new L.LatLng(view.center[1], view.center[0]));
 				
@@ -2232,6 +2241,8 @@ Focus.Views.OverviewMapView = Focus.Views.MapView.extend({
 				}
             }
         }
+        var zoom = this.options.zoom || ~~(view.zoom/3);
+        this.setZoom(zoom);
     }
 });
 

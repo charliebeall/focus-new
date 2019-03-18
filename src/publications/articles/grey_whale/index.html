@@ -7,8 +7,10 @@
     <title>Whale Watching and Preservation of the Environment in Central Baja California, Mexico </title>
     <meta name="description" content="FOCUS on Geography: Whale Watching and Preservation of the Environment in Central Baja California, Mexico ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="geography,russia,map">
-    <meta name="author" content="Luis Suter">
+    <meta name="keywords" content="geography,whales,baja,mexico,map">
+    <meta name="author" content="Jeffrey Smith">
+    <meta name="author" content="Lorna Hill">
+    <meta name="author" content="Rodrigo Manterola Gonzalez">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -224,6 +226,7 @@
                         and Naturalist; Connemara, Ireland</span></div>
                 <div class="author"><span class="name">Rodrigo Manterola Gonzalez</span>, <span class="organization">Entrepreneur
                         and Naturalist; Mexico City</span></div>
+                <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2019.62.3f</div>
                 <h3>Introduction</h3>
                 <p>Worldwide the whale watching industry has become big business, generating about US$2 billion in
                     tourism sales each year (Black 2009; The Australian 2010). Nowhere is this more evident than along
@@ -420,6 +423,9 @@
                 <!-- <div id="figure6" class="figure" style="background-image:url(img/fig6.jpg);"></div>
                 <div class="caption">Figure 6: 1.4 minute video of tourists interacting with a baby Gray Whale. Video
                     by Jeffrey S. Smith</div> -->
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480" src="https://www.youtube.com/embed/lGgYp_Mo3oY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="caption">Figure 6: Tourists interacting with a baby Gray Whale. Video
+                    by Jeffrey S. Smith</div>
                 <p>Even though there are considerably more gray whales that pass the winter in Magdelena and Ojo de
                     Liebre bays, Laguna San Ignacio is considered the best place to whale watch because it is smaller
                     and more confined. Thus, the whales are more concentrated and easier to encounter. The incredibly
@@ -432,9 +438,9 @@
                 <div id="figure7" class="figure" style="background-image:url(img/fig7.jpg);"></div>
                 <div class="caption">Figure 7: Camp Cortez with the “cabins.” Photo by Jeffrey S. Smith</div>
                 <div id="figure8" class="figure" style="background-image:url(img/fig8.jpg);"></div>
-                <div class="caption"><a class="location" data-layer-id="fig8">Figure 8: Camp Punta Piedra offering tent
+                <div class="caption"><a class="location" data-layer-id="fig8">Figure 8</a>: Camp Punta Piedra offering tent
                         accommodations. Photo by Jeffrey S.
-                        Smith</a></div>
+                        Smith</div>
                 <p>Today there are a total of seven eco-camps offering varying degrees of comfort; some feature wooden
                     “cabins” (sheds) (<a href="#figure7">Figure 7</a>) while others invite visitors to sleep on cots in
                     tents (<a href="#figure8">Figure 8</a>). All
@@ -753,7 +759,7 @@
                     }, {
                         "idRef": "lp1-line"
                     }, ],
-                    "zoom": 3.4,
+                    "zoom": 3,
                     "style": {
                         "filter": "grayscale(0%)",
                         "opacity": 1,
@@ -777,7 +783,7 @@
                     }, {
                         "idRef": "laguna-ojo"
                     }],
-                    "zoom": 7.5,
+                    "zoom": 7,
                     "style": {
                         "filter": "grayscale(0%)",
                         "opacity": 1,
@@ -804,7 +810,7 @@
                             "idRef": "fig9"
                         }
                     ],
-                    "zoom": 10,
+                    "zoom": 12,
                     "style": {
                         "filter": "grayscale(0%)",
                         "opacity": 1,
@@ -885,9 +891,12 @@
                         baseLayer: {
                             "type": "esri-basemap",
                             "url": "NationalGeographic",
+                            "options": {
+                                "detectRetina": true
+                            }
                         },
-                        center: [0, 0],
-                        zoom: 11,
+                        center: [32.646475, -125.296614],
+                        zoom: 3,
                         showAttribution: false
                     })
                 }),
@@ -895,8 +904,21 @@
             });
             var sceneManager = new Focus.Views.SceneManagerView({
                 el: $('body'),
+                initialScene: {
+                    baseLayer: {
+                        "type": "esri-basemap",
+                        "url": "Oceans",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    },
+                    center: [32.646475, -125.296614],
+                    zoom: 3,
+                    zoomDelta: 1,
+                    markerZoomAnimation: false
+                },
                 navigatorClass: Focus.Views.ScrollingSceneNavigator,
-                mapEngineClass: Focus.Views.LeafletMapEngine //Focus.Views.OpenLayersMapEngine //LeafletMapEngine
+                mapEngineClass: Focus.Views.LeafletMapEngine
             });
 
             var shareView = new Focus.Views.ShareView();

@@ -1637,7 +1637,7 @@
             var sceneManager = new Focus.Views.SceneManagerView({
                 el: $('body'),
                 navigatorClass: Focus.Views.ScrollingSceneNavigator,
-                mapEngineClass: Focus.Views.LeafletMapEngine //Focus.Views.OpenLayersMapEngine //LeafletMapEngine
+                mapEngineClass: Focus.Views.LeafletMapEngine
             });
 
             var shareView = new Focus.Views.ShareView();
@@ -1645,20 +1645,11 @@
 
             $('.twentytwenty-container').each(function () {
                 $(this).twentytwenty();
-                $(this).on('sliderChanged', function (e, data) {
-                    var filter = 'grayscale(' + (data.pct * 100) + '%)'; // contrast(' + (0.5 * (data.pct * 100) + 150) + '%)';
-                    $maps.css('-webkit-filter', filter);
-                    $maps.css('-moz-filter', filter);
-                    $maps.css('-ms-filter', filter);
-                    $maps.css('filter', filter);
-                });
-
                 $(this).find('.twentytwenty-handle').attr('data-toggle', 'tooltip').tooltip({
                     title: 'Drag here to swipe between photos',
                     container: 'body'
                 }).tooltip('show');
             });
-
 
         });
 
