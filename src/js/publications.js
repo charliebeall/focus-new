@@ -4,6 +4,15 @@ Focus.Volumes = [
         number: 62,
         publications: [{
             type: 'Feature Article',
+            title: 'Whale Watching and Preservation of the Environment in Central Baja California, Mexico',
+            author: 'Jeffrey Smith, Lorna Hill, Rodrigo Manterola Gonzalez',
+            description: '',
+            date: '03/18/19',
+            thumbnail: 'publications/articles/grey_whale/img/fig3.jpg',
+            url: 'publications/articles/grey_whale/index.html',
+            location: []
+        },{
+            type: 'Feature Article',
             title: 'A Tale of Two Arctic Cities: Vorkuta and Salekhard',
             author: 'Luis Suter',
             description: '',
