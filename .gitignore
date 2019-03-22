@@ -4,3 +4,7 @@ dist/
 bower_components/
 .idea/
 src/js/combined.js
+
+#remove temp
+src/publications/**/._*.png
+src/publications/**/._*.jpg

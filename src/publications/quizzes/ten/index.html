@@ -1,0 +1,1184 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Geo Quiz 6</title>
+    <meta name="description" content="FOCUS on Geography:  Geo Quiz #6">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apwple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
+        type='text/css'>
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .modal-content {
+            background-image: linear-gradient(0deg, rgba(242, 121, 33, 0.7), rgba(242, 121, 33, 0.7)), url(img/water.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <!-- Add your site or application content here -->
+    <div id="background"></div>
+    <div id="map" class="fill"></div>
+    <div id="foreground"></div>
+    <div id="photos"></div>
+    <div id="shadow"></div>
+    <div id="score-view">
+        <h3>0</h3>
+    </div>
+    <svg id="score-text" width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="position: absolute;bottom: 50px;z-index: 10;right: calc(50% - 100px);text-align: center;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+        <g transform="matrix(0.748233,-0.663437,0.663437,0.748233,-71.4993,95.3792)">
+            <g transform="matrix(0.974148,0.22591,-0.22591,0.974148,14.9332,-26.5052)">
+                <text x="123.276px" y="51.996px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">S</text>
+            </g>
+            <g transform="matrix(0.889935,0.456088,-0.456088,0.889935,41.1167,-58.1446)">
+                <text x="141.028px" y="56.117px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">C</text>
+            </g>
+            <g transform="matrix(0.741486,0.670968,-0.670968,0.741486,84.934,-89.7957)">
+                <text x="158.999px" y="65.324px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">O</text>
+            </g>
+            <g transform="matrix(0.533523,0.845785,-0.845785,0.533523,149.897,-110.802)">
+                <text x="175.398px" y="80.49px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">R</text>
+            </g>
+            <g transform="matrix(0.322984,0.946405,-0.946405,0.322984,217.645,-110.12)">
+                <text x="185.791px" y="97.063px" style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">E</text>
+            </g>
+        </g>
+    </svg>
+    <div id="main-nav" class="light">
+        <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+                <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"
+                    style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+                <path id="pathE" d="M 300 500 L 700 500" style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+                <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
+                    style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+            </svg>
+
+            <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+        </div>
+        <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg" /></a>
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]"
+                    class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <div id="menu"></div>
+    </div>
+    <div id="questions">
+        <div class="content scenes">
+        </div>
+    </div>
+    <div id="progress">
+        <div id="bar"></div>
+    </div>
+    <div id="bar-top"></div>
+    <div id="bar-bottom" class="large"></div>
+    <!-- inject:templates:html -->
+    <!-- endinject -->
+    <script src="../../../js/combined.js"></script>
+    <script src="js/stateData.min.js"></script>
+    <script>
+        var statePolygonStyle = {
+            "fillColor": 'rgba(51,170,220, 0.4)',
+            "color": "rgba(51,170,220, 0.75)"
+        };
+        var scenes = {
+            "scenes": [{
+                    "id": "place1",
+                    "zoom": 3,
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                        "scheme": "xyz"
+
+                    },
+                    "style": {
+                        "filter": "sepia(80%)",
+                        "opacity": 0.75,
+                        "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    },
+                    "layers": [{
+                            "id": "palau",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Palau"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        134.5, 7.5
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "solomon islands",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Solomon Islands"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        159, -8
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "nauru",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Nauru"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        166.93, -0.53
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "tuvalu",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Tuvalu"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        179.19, -8.52
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                },
+                {
+                    "id": "place2",
+                    "zoom": 5,
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    },
+                    "style": {
+                        "filter": "sepia(50%)",
+                        "opacity": 0.7,
+                        "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    },
+                    "layers": [{
+                            "id": "mali",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Mali"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -4,
+                                        17
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "chad",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Chad"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        19, 15
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "south sudan",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "South Sudan"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        30, 8
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "eritrea",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Eritrea"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        39, 15
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                },
+                {
+                    "id": "place3", //figure out how to make black and white,
+                    //"center": [-79.541015625, -10.811724143275514],
+                    "zoom": 2.7, //3
+                    "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "NationalGeographic",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    }],
+
+                    "style": {
+                        "filter": "grayscale(100%)",
+                        "opacity": 0.6,
+                        "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
+                    },
+
+                    layers: [{
+                            "id": "bosnia",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Bosnia"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        18, 44
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "lithuania",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Lithuania"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        24, 55
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "lebanon",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Lebanon"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        35.83, 33.83
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "georgia",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Georgia"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        43.5, 42
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "style": {
+                        "filter": "sepia(0%)",
+                        "opacity": 0.9,
+                        "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    }
+                },
+                {
+                    "id": "place4", //figure out how to make black and white,
+                    "zoom": 3,
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                        "scheme": "xyz"
+                    },
+
+                    "style": {
+                        "filter": "grayscale(100%)",
+                        "opacity": 0.6,
+                        "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
+                    },
+
+
+                    layers: [{
+                            "id": "somalia",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Somalia"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        49, 10
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "afghanistan",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Afghanistan"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        65, 33
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "myanmar",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Myanmar"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        96, 22
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "cambodia",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Cambodia"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        104.92, 11.55
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                },
+                {
+                    "id": "place5",
+                    //"center": [0, 0],
+                    "zoom": 1.7, //3,
+                    "baseLayer": [{
+                        "type": "tile",
+                        //"url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png",
+                        "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                        "scheme": "xyz"
+                    }],
+
+                    "style": {
+                        "filter": "grayscale(100%)",
+                        "opacity": 0.6,
+                        "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
+                    },
+
+
+
+                    "layers": [{
+                            "id": "monaco",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Monaco"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        7.42, 43.73
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "san marino",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "San Marino"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        12.46, 43.94
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "singapore",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Singapore"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        103.8, 1.3
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "hong kong",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Hong Kong"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        114.2, 22.3
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "place6",
+                    "zoom": 1.5, //3,
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
+                        "scheme": "xyz"
+
+                    },
+                    "style": {
+                        "filter": "sepia(40%)",
+                        "opacity": 0.6,
+                        "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
+                    },
+                    "layers": [{
+                            "id": "chile",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Chile"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -71, -30
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "spain",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Spain"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -4, 40
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "israel",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Israel"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        35, 31
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "south korea",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "South Korea"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        128, 36
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "place7",
+                    "zoom": 4.4,
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    },
+                    "layers": [{
+                            "id": "utah",
+                            "type": "geojson",
+                            "data": L.states.UT,
+                            "style": statePolygonStyle
+                        },
+                        {
+                            "id": "kansas",
+                            "type": "geojson",
+                            "data": L.states.KS,
+                            "style": statePolygonStyle
+                        },
+                        {
+                            "id": "missouri",
+                            "type": "geojson",
+                            "data": L.states.MI,
+                            "style": statePolygonStyle
+                        },
+                        {
+                            "id": "alabama",
+                            "type": "geojson",
+                            "data": L.states.AL,
+                            "style": statePolygonStyle
+                        }
+                    ]
+                },
+                {
+                    "id": "place8", //style here needs to be touched up in terms of basemap
+                    "zoom": 4.4,
+                    "baseLayer": [{
+                        "type": "tile",
+                        "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    }],
+                    "style": {
+                        "filter": "sepia(40%)",
+                        "opacity": 0.6,
+                        "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
+                    },
+
+                    "layers": [{
+                            "id": "oregon",
+                            "type": "geojson",
+                            "data": L.states.OR,
+                            "style": statePolygonStyle
+                            
+                        },
+                        {
+                            "id": "colorado",
+                            "type": "geojson",
+                            "data": L.states.CO,
+                            "style": statePolygonStyle
+                                    
+                        },
+                        {
+                            "id": "illinois",
+                            "type": "geojson",
+                            "data": L.states.IL,
+                            "style": statePolygonStyle
+
+                        },
+                        {
+                            "id": "vermont",
+                            "type": "geojson",
+                            "data": L.states.VT,
+                            "style": statePolygonStyle
+                        }
+                    ]
+                },
+                {
+                    "id": "place9", //figure out how to make black and white,
+                    //"center": [-79.541015625, -10.811724143275514],
+                    "zoom": 4.4,
+                    "baseLayer": [{
+                        "type": "tile",
+                        "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    }],
+                    "style": {
+                        "filter": "sepia(70%)",
+                        "opacity": 0.6,
+                        "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
+                    },
+                    "layers": [{
+                            "id": "arkansas",
+                            "type": "geojson",
+                            "data": L.states.AR,
+                            "style": statePolygonStyle
+                        },
+                        {
+                            "id": "louisiana",
+                            "type": "geojson",
+                            "data": L.states.LA,
+                            "style": statePolygonStyle
+                        },
+                        {
+                            "id": "mississippi",
+                            "type": "geojson",
+                            "data": L.states.MS,
+                            "style": statePolygonStyle
+                        },
+                        {
+                            "id": "north carolina",
+                            "type": "geojson",
+                            "data": L.states.NC,
+                            "style": statePolygonStyle
+                        }
+                    ]
+                },
+                {
+                    "id": "place10", //change basemap
+                    "zoom": 3.5,
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    },
+                    "style": {
+                        "filter": "sepia(50%)",
+                        "opacity": 0.7,
+                        "background": "linear-gradient(180deg, rgba(255,255,255,1.0), rgba(255,255,255,0.2))"
+                    },
+                    "layers": [{
+                            "id": "mexico",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Mexico"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -107.095413, 29.765310
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "ireland",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Ireland"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -8, 53.41
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "the united kingdom",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "The United Kingdom"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -3, 55
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "id": "germany",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Germany"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        9, 51
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "place<CHANGE>",
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
+                    },
+                    "layers": [],
+                    "center": [0, 0],
+                    "zoom": 2,
+                    "style": {
+                        "opacity": 0,
+                        "backgroundSize": "cover",
+                        "background": "url(img/Q9/united-nations.jpg) 50% 50%"
+                    }
+                }, {
+                    "id": "place10",
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png"
+                    },
+                    "layers": [],
+                    "center": [0, 0],
+                    "zoom": 2,
+                    "style": {
+                        "opacity": 0,
+                        "backgroundSize": "cover",
+                        "background": "linear-gradient(180deg, black, rgba(255,255,255,0.1)), url(img/Q10/worldmap.jpg) 50% 50%"
+                    }
+
+                }
+            ]
+        };
+
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-135900212-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var questions = [{
+                    choices: [{
+                        id: 'A',
+                        text: 'Palau',
+                        photo: './img/Q1/Q1_A_Palau.jpg',
+                        sceneId: 'palau'
+                    }, {
+                        id: 'B',
+                        text: 'Solomon Islands',
+                        photo: './img/Q1/Q1_B_Solomon_Islands.jpg',
+                        sceneId: 'solomon islands'
+                    }, {
+                        id: 'C',
+                        text: 'Nauru',
+                        photo: './img/Q1/Q1_C_Nauru.jpg',
+                        sceneId: 'nauru'
+                    }, {
+                        id: 'D',
+                        text: 'Tuvalu',
+                        photo: './img/Q1/Q1_D_Tuvalu.jpg',
+                        sceneId: 'tuvalu'
+                    }],
+                    prompt: 'Most people know the world’s most populated country is China, but when it comes down to knowing the tiny countries, this often becomes a head-scratcher. So, among the members of the United Nations, which country has the smallest population?',
+                    rightAnswer: {
+                        id: 'D',
+                        description: 'Tuvalu'
+                    }
+                }, {
+                    choices: [{
+                        id: 'A',
+                        text: 'Mali',
+                        photo: './img/Q2/Q2_A_Mali.png',
+                        sceneId: 'mali'
+                    }, {
+                        id: 'B',
+                        text: 'Chad',
+                        photo: './img/Q2/Q2_B_Chad.png',
+                        sceneId: 'chad'
+                    }, {
+                        id: 'C',
+                        text: 'South Sudan',
+                        photo: './img/Q2/Q2_C_South_Sudan.png',
+                        sceneId: 'south sudan'
+                    }, {
+                        id: 'D',
+                        text: 'Eritrea',
+                        photo: './img/Q2/Q2_D_Eritrea.png',
+                        sceneId: 'eritrea'
+                    }, ],
+                    prompt: 'Demographers do far more than just raw population counts. One important statistic among population counts is population growth rate. The numbers are quite telling: most of the fastest growing countries in the world are located in sub-Saharan Africa, including all of the top ten. With a growth rate of 3.83%, which country is number one on the list? Hint: this country also happens to be the newest UN member country.',
+                    rightAnswer: {
+                        id: 'C',
+                        description: 'South Sudan'
+                    }
+                }, {
+                    choices: [{
+                        id: 'A',
+                        text: 'Bosnia',
+                        photo: './img/Q3/Q3_A_Bosania.png',
+                        sceneId: 'bosnia'
+                    }, {
+                        id: 'B',
+                        text: 'Lithuania',
+                        photo: './img/Q3/Q3_B_Lithuania.png',
+                        sceneId: 'lithuania'
+                    }, {
+                        id: 'C',
+                        text: 'Lebanon',
+                        photo: './img/Q3/Q3_C_Lebanon.png',
+                        sceneId: 'lebanon'
+                    }, {
+                        id: 'D',
+                        text: 'Georgia',
+                        photo: './img/Q3/Q3_D_Georgia.png',
+                        sceneId: 'georgia'
+                    }],
+                    prompt: 'While, on the one hand, the planet’s overall population continues to climb, many countries, on the other hand, are experiencing population declines. Because of its current population, and its -0.21% growth rate, Japan experiences one of the biggest declines annually in population in term of raw numbers. Now, known otherwise as the Land of the Cedars, which one of these countries faces the highest rate of population decline, currently around -1.1% per year?',
+                    rightAnswer: {
+                        id: 'C',
+                        description: 'Lebanon'
+                    }
+                }, {
+                    choices: [{
+                        id: 'A',
+                        text: 'Somalia',
+                        photo: './img/Q4/Q4_A_Somalia.png',
+                        sceneId: 'somalia'
+                    }, {
+                        id: 'B',
+                        text: 'Afghanistan',
+                        photo: './img/Q4/Q4_B_Afghanistan.png',
+                        sceneId: 'afghanistan'
+                    }, {
+                        id: 'C',
+                        text: 'Myanmar',
+                        photo: './img/Q4/Q4_C_Myanmar.png',
+                        sceneId: 'myanmar'
+                    }, {
+                        id: 'D',
+                        text: 'Cambodia',
+                        photo: './img/Q4/Q4_D_Cambodia.png',
+                        sceneId: 'cambodia'
+                    }],
+                    prompt: 'The infant mortality rate traditionally measures how many children will die by their first birthday for every one thousand live births. This number can be staggeringly high in certain conflict-riddled places. Waterborne disease, malnutrition, and violence are just a few examples adding to the infant mortality rate. In one country in particular, the number is over 110 per 1,000 live births. This means a baby has a one in ten chance of not making it to their first birthday. Can you identify this conflict-ridden country with the highest infant mortality rate? Hint: this country recently held parliamentary elections.',
+                    rightAnswer: {
+                        id: 'B',
+                        description: 'Afghanistan'
+                    }
+                }, {
+                    choices: [{
+                        id: 'A',
+                        text: 'Monaco',
+                        photo: './img/Q5/Q5_A_Monaco.jpg',
+                        sceneId: 'monaco'
+                    }, {
+                        id: 'B',
+                        text: 'San Marino',
+                        photo: './img/Q5/Q5_B_San_Marino.jpg',
+                        sceneId: 'san marino'
+                    }, {
+                        id: 'C',
+                        text: 'Singapore',
+                        photo: './img/Q5/Q5_C_Singapore.png',
+                        sceneId: 'singapore'
+                    }, {
+                        id: 'D',
+                        text: 'Hong Kong',
+                        photo: './img/Q5/Q5_D_Hong_Kong.png',
+                        sceneId: 'hong kong'
+                    }],
+                    prompt: 'Where widespread access to clean water, immunizations, and pre- and post-natal care are almost universally accessed, infant mortality rates have reached incredibly low levels in many developed countries. The U.S., however, ranks last among developed countries in this regard: with an infant mortality rate of 5.8 deaths per 1,000 live births. Now, at 1.8 deaths per 1,000 live births, which one of these city-states has the world’s lowest infant mortality rate, – not surprising since it is one of the world’s richest places?',
+                    rightAnswer: {
+                        id: 'A',
+                        description: 'Monaco'
+                    }
+                }, {
+                    choices: [{
+                        id: 'A',
+                        text: 'Chile',
+                        photo: './img/Q6/Q6_A_Chile.png',
+                        sceneId: 'chile'
+                    }, {
+                        id: 'B',
+                        text: 'Spain',
+                        photo: './img/Q6/Q6_B_Spain.png',
+                        sceneId: 'spain'
+                    }, {
+                        id: 'C',
+                        text: 'Israel',
+                        photo: './img/Q6/Q6_C_Israel.png',
+                        sceneId: 'israel'
+                    }, {
+                        id: 'D',
+                        text: 'South Korea',
+                        photo: './img/Q6/Q6_D_South_Korea.png',
+                        sceneId: 'south korea'
+                    }],
+                    prompt: 'The Total Fertility Rate (TFR) measures the average number of children a woman is expected to give birth to in her childbearing years. Low TFRs also tell us a lot more about the status of women in a society, as lower TFRs indicate that women are completing secondary education and entering the formal workforce. This often leads to the decision to have smaller families. So while Singapore has the lowest TFR at 0.83, Niger has the world’s highest, at 6.49. Among highly developed countries (as determined by membership in the OECD), only one has a TFR above 2.5, while most are below 2.0. With a large number of very religious residents, those of whom drive up the TFR relative to other developed countries, can you identify which country this is?',
+                    rightAnswer: {
+                        id: 'C',
+                        description: 'Israel'
+                    }
+                },
+
+
+
+
+
+
+
+
+
+                {
+                    choices: [{
+                        id: 'A',
+                        text: 'Utah',
+                        photo: './img/Q7/Q7_A_Utah.png',
+                        sceneId: 'utah'
+                    }, {
+                        id: 'B',
+                        text: 'Kansas',
+                        photo: './img/Q7/Q7_B_Kansas.png',
+                        sceneId: 'kansas'
+                    }, {
+                        id: 'C',
+                        text: 'Missouri',
+                        photo: './img/Q7/Q7_C_Missouri.png',
+                        sceneId: 'missouri'
+                    }, {
+                        id: 'D',
+                        text: 'Alabama',
+                        photo: './img/Q7/Q7_D_Alabama.png',
+                        sceneId: 'alabama'
+                    }],
+                    prompt: 'Demographers not only collect demographic data at the global, but also at lesser scales. Sticking to the United States for the remained of the quiz, as well as sticking with Total Fertility Rate, which U.S. state boasts the highest TFR, 2.62, well above the national TFR of 1.8? ',
+                    rightAnswer: {
+                        id: 'A',
+                        description: 'Utah'
+                    }
+                }, {
+                    choices: [{
+                        id: 'A',
+                        text: 'Oregon',
+                        photo: './img/Q8/Q8_A_Oregon.png',
+                        sceneId: 'oregon'
+                    }, {
+                        id: 'B',
+                        text: 'Colorado',
+                        photo: './img/Q8/Q8_B_Colorado.png',
+                        sceneId: 'colorado'
+                    }, {
+                        id: 'C',
+                        text: 'Illinois',
+                        photo: './img/Q8/Q8_C_Illinois.png',
+                        sceneId: 'illinois'
+                    }, {
+                        id: 'D',
+                        text: 'Vermont',
+                        photo: './img/Q8/Q8_D_Vermont.png',
+                        sceneId: 'vermont'
+                    }],
+                    prompt: 'In our field, we are able to track important trends in health, such as the current obesity crisis. Seven U.S. states have obesity rates well over 35%, while only two states and the District of Columbia have a rate below 25%. Which one of these states boasts the lowest obesity rate, likely attributable in part to the active lifestyle of its residents?',
+                    rightAnswer: {
+                        id: 'B',
+                        description: 'Colorado'
+                    }
+                }, {
+                    choices: [{
+                        id: 'A',
+                        text: 'Arkansas',
+                        photo: './img/Q9/Q9_A_Arkansas.png',
+                        sceneId: 'arkansas'
+                    }, {
+                        id: 'B',
+                        text: 'Louisiana',
+                        photo: './img/Q9/Q9_B_Louisiana.png',
+                        sceneId: 'louisiana'
+                    }, {
+                        id: 'C',
+                        text: 'Mississippi',
+                        photo: './img/Q9/Q9_C_Mississippi.png',
+                        sceneId: 'mississippi'
+                    }, {
+                        id: 'D',
+                        text: 'North Carolina',
+                        photo: './img/Q9/Q9_D_North_Carolina.png',
+                        sceneId: 'north carolina'
+                    }],
+                    prompt: 'Race plays a major role in the challenges faced in American society, and so trends related to different racial groups are closely monitored by demographers. No U.S. state is over 50% African American, while both Washington, DC and the U.S. Virgin Islands are. Which U.S. state has the highest percentage of African American residents, at 37.3%?',
+                    rightAnswer: {
+                        id: 'C',
+                        description: 'Mississippi'
+                    }
+                }, {
+                    choices: [{
+                        id: 'A',
+                        text: 'Mexico',
+                        photo: './img/Q10/Q10_A_Mexico.png',
+                        sceneId: 'mexico'
+                    }, {
+                        id: 'B',
+                        text: 'Ireland',
+                        photo: './img/Q10/Q10_B_Ireland.png',
+                        sceneId: 'ireland'
+                    }, {
+                        id: 'C',
+                        text: 'The United Kingdom',
+                        photo: './img/Q10/Q10_C_The_United_Kingdom.jpg',
+                        sceneId: 'the united kingdom'
+                    }, {
+                        id: 'D',
+                        text: 'Germany',
+                        photo: './img/Q10/Q10_D_Germany.png',
+                        sceneId: 'germany'
+                    }],
+                    prompt: 'The United States is a land of immigrants. Although much of our current discourse is focused on race, Americans can tie their heritage back to a many countries. Can you identify the country in which most Americans trace heritage back to?',
+                    rightAnswer: {
+                        id: 'D',
+                        description: 'Germany'
+                    }
+                }
+            ];
+
+            Focus.Map.defaultOptions = {
+                weight: 10,
+                radius: 8,
+                opacity: 0.3,
+                color: 'rgba(39, 171, 226, 1)',
+                fillColor: 'rgba(39, 171, 226, 1)'
+            };
+            var questionCollection = new Focus.Collections.QuestionCollection(questions);
+
+            var navigator = new Focus.Views.QuizSceneNavigator({
+                el: $('.scenes'),
+                model: new Focus.Models.ModalModel({
+                    title: 'Welcome to the tenth Geo Quiz!',
+                    content: "“Demography is destiny,” as the old saying goes. Within the study of population dynamics, the field of demography has been at the helm of geographic research, since its very inception. And so, this quiz will test your knowledge of some of the world’s major demographic indicators from biggest and smallest to highest and lowest, and everything in between.",
+                    buttonText: 'Start Quiz'
+                }),
+                collection: questionCollection
+            });
+            navigator.render();
+
+            var sceneManager = new Focus.Views.SceneManagerView({
+                el: $('body'),
+                navigator: navigator,
+                mapEngineClass: Focus.Views.LeafletMapEngine
+            });
+
+            var shareView = new Focus.Views.ShareView();
+            shareView.render();
+
+        });
+
+    </script>
+</body>
+
+</html>
