@@ -373,7 +373,7 @@
                 },
                 {
                     "id": "place4", //figure out how to make black and white,
-                    "zoom": 3,
+                    "zoom": 2,
                     "baseLayer": {
                         "type": "tile",
                         "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
@@ -385,8 +385,12 @@
                         "opacity": 0.6,
                         "background": "linear-gradient(180deg, rgba(0,0,0,1.0), rgba(0,0,0,0.2))"
                     },
-
-
+                    "bounds":{
+                        "somalia": true,
+                        "afghanistan": true,
+                        "myanmar": true,
+                        "cambodia":true
+                    },
                     layers: [{
                             "id": "somalia",
                             "type": "geojson",
@@ -452,6 +456,7 @@
                             }
                         }
                     ],
+
                 },
                 {
                     "id": "place5",
@@ -540,7 +545,7 @@
                 },
                 {
                     "id": "place6",
-                    "zoom": 1.5, //3,
+                    "zoom": 1.3, //3,
                     "baseLayer": {
                         "type": "tile",
                         "url": "http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg",
@@ -640,7 +645,7 @@
                         {
                             "id": "missouri",
                             "type": "geojson",
-                            "data": L.states.MI,
+                            "data": L.states.MO,
                             "style": statePolygonStyle
                         },
                         {
@@ -734,7 +739,7 @@
                 },
                 {
                     "id": "place10", //change basemap
-                    "zoom": 3.5,
+                    "zoom": 3.0,
                     "baseLayer": {
                         "type": "tile",
                         "url": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -895,7 +900,7 @@
                     choices: [{
                         id: 'A',
                         text: 'Mali',
-                        photo: './img/Q2/Q2_A_Mali.png',
+                        photo: './img/Q2/Q2_A_Mali.jpg',
                         sceneId: 'mali'
                     }, {
                         id: 'B',
@@ -905,12 +910,12 @@
                     }, {
                         id: 'C',
                         text: 'South Sudan',
-                        photo: './img/Q2/Q2_C_South_Sudan.png',
+                        photo: './img/Q2/Q2_C_South_Sudan.jpg',
                         sceneId: 'south sudan'
                     }, {
                         id: 'D',
                         text: 'Eritrea',
-                        photo: './img/Q2/Q2_D_Eritrea.png',
+                        photo: './img/Q2/Q2_D_Eritrea.jpg',
                         sceneId: 'eritrea'
                     }, ],
                     prompt: 'Demographers do far more than just raw population counts. One important statistic among population counts is population growth rate. The numbers are quite telling: most of the fastest growing countries in the world are located in sub-Saharan Africa, including all of the top ten. With a growth rate of 3.83%, which country is number one on the list? Hint: this country also happens to be the newest UN member country.',
@@ -921,18 +926,18 @@
                 }, {
                     choices: [{
                         id: 'A',
-                        text: 'Bosnia',
-                        photo: './img/Q3/Q3_A_Bosania.png',
-                        sceneId: 'bosnia'
+                        text: 'Lithuania',
+                        photo: './img/Q3/Q3_B_Lithuania.jpg',
+                        sceneId: 'lithuania'
                     }, {
                         id: 'B',
-                        text: 'Lithuania',
-                        photo: './img/Q3/Q3_B_Lithuania.png',
-                        sceneId: 'lithuania'
+                        text: 'Bosnia',
+                        photo: './img/Q3/Q3_A_Bosania.jpg',
+                        sceneId: 'bosnia'
                     }, {
                         id: 'C',
                         text: 'Lebanon',
-                        photo: './img/Q3/Q3_C_Lebanon.png',
+                        photo: './img/Q3/Q3_C_Lebanon.jpg',
                         sceneId: 'lebanon'
                     }, {
                         id: 'D',
@@ -948,24 +953,24 @@
                 }, {
                     choices: [{
                         id: 'A',
-                        text: 'Somalia',
-                        photo: './img/Q4/Q4_A_Somalia.png',
-                        sceneId: 'somalia'
-                    }, {
-                        id: 'B',
                         text: 'Afghanistan',
                         photo: './img/Q4/Q4_B_Afghanistan.png',
                         sceneId: 'afghanistan'
                     }, {
-                        id: 'C',
-                        text: 'Myanmar',
-                        photo: './img/Q4/Q4_C_Myanmar.png',
-                        sceneId: 'myanmar'
+                        id: 'B',
+                        text: 'Somalia',
+                        photo: './img/Q4/Q4_A_Somalia.png',
+                        sceneId: 'somalia'
                     }, {
-                        id: 'D',
+                        id: 'C',
                         text: 'Cambodia',
                         photo: './img/Q4/Q4_D_Cambodia.png',
                         sceneId: 'cambodia'
+                    }, {
+                        id: 'D',
+                        text: 'Myanmar',
+                        photo: './img/Q4/Q4_C_Myanmar.jpg',
+                        sceneId: 'myanmar'
                     }],
                     prompt: 'The infant mortality rate traditionally measures how many children will die by their first birthday for every one thousand live births. This number can be staggeringly high in certain conflict-riddled places. Waterborne disease, malnutrition, and violence are just a few examples adding to the infant mortality rate. In one country in particular, the number is over 110 per 1,000 live births. This means a baby has a one in ten chance of not making it to their first birthday. Can you identify this conflict-ridden country with the highest infant mortality rate? Hint: this country recently held parliamentary elections.',
                     rightAnswer: {
@@ -986,12 +991,12 @@
                     }, {
                         id: 'C',
                         text: 'Singapore',
-                        photo: './img/Q5/Q5_C_Singapore.png',
+                        photo: './img/Q5/Q5_C_Singapore.jpg',
                         sceneId: 'singapore'
                     }, {
                         id: 'D',
                         text: 'Hong Kong',
-                        photo: './img/Q5/Q5_D_Hong_Kong.png',
+                        photo: './img/Q5/Q5_D_Hong_Kong.jpg',
                         sceneId: 'hong kong'
                     }],
                     prompt: 'Where widespread access to clean water, immunizations, and pre- and post-natal care are almost universally accessed, infant mortality rates have reached incredibly low levels in many developed countries. The U.S., however, ranks last among developed countries in this regard: with an infant mortality rate of 5.8 deaths per 1,000 live births. Now, at 1.8 deaths per 1,000 live births, which one of these city-states has the world’s lowest infant mortality rate, – not surprising since it is one of the world’s richest places?',
@@ -1008,7 +1013,7 @@
                     }, {
                         id: 'B',
                         text: 'Spain',
-                        photo: './img/Q6/Q6_B_Spain.png',
+                        photo: './img/Q6/Q6_B_Spain.jpg',
                         sceneId: 'spain'
                     }, {
                         id: 'C',
@@ -1018,7 +1023,7 @@
                     }, {
                         id: 'D',
                         text: 'South Korea',
-                        photo: './img/Q6/Q6_D_South_Korea.png',
+                        photo: './img/Q6/Q6_D_South_Korea.jpg',
                         sceneId: 'south korea'
                     }],
                     prompt: 'The Total Fertility Rate (TFR) measures the average number of children a woman is expected to give birth to in her childbearing years. Low TFRs also tell us a lot more about the status of women in a society, as lower TFRs indicate that women are completing secondary education and entering the formal workforce. This often leads to the decision to have smaller families. So while Singapore has the lowest TFR at 0.83, Niger has the world’s highest, at 6.49. Among highly developed countries (as determined by membership in the OECD), only one has a TFR above 2.5, while most are below 2.0. With a large number of very religious residents, those of whom drive up the TFR relative to other developed countries, can you identify which country this is?',
@@ -1040,23 +1045,23 @@
                     choices: [{
                         id: 'A',
                         text: 'Utah',
-                        photo: './img/Q7/Q7_A_Utah.png',
+                        photo: './img/Q7/Q7_A_Utah.jpg',
                         sceneId: 'utah'
                     }, {
                         id: 'B',
                         text: 'Kansas',
-                        photo: './img/Q7/Q7_B_Kansas.png',
+                        photo: './img/Q7/Q7_B_Kansas.jpg',
                         sceneId: 'kansas'
                     }, {
                         id: 'C',
-                        text: 'Missouri',
-                        photo: './img/Q7/Q7_C_Missouri.png',
-                        sceneId: 'missouri'
+                        text: 'Alabama',
+                        photo: './img/Q7/Q7_D_Alabama.jpg',
+                        sceneId: 'alabama'
                     }, {
                         id: 'D',
-                        text: 'Alabama',
-                        photo: './img/Q7/Q7_D_Alabama.png',
-                        sceneId: 'alabama'
+                        text: 'Missouri',
+                        photo: './img/Q7/Q7_C_Missouri.jpg',
+                        sceneId: 'missouri'
                     }],
                     prompt: 'Demographers not only collect demographic data at the global, but also at lesser scales. Sticking to the United States for the remained of the quiz, as well as sticking with Total Fertility Rate, which U.S. state boasts the highest TFR, 2.62, well above the national TFR of 1.8? ',
                     rightAnswer: {
@@ -1067,22 +1072,22 @@
                     choices: [{
                         id: 'A',
                         text: 'Oregon',
-                        photo: './img/Q8/Q8_A_Oregon.png',
+                        photo: './img/Q8/Q8_A_Oregon.jpg',
                         sceneId: 'oregon'
                     }, {
                         id: 'B',
                         text: 'Colorado',
-                        photo: './img/Q8/Q8_B_Colorado.png',
+                        photo: './img/Q8/Q8_B_Colorado.jpg',
                         sceneId: 'colorado'
                     }, {
                         id: 'C',
                         text: 'Illinois',
-                        photo: './img/Q8/Q8_C_Illinois.png',
+                        photo: './img/Q8/Q8_C_Illinois.jpg',
                         sceneId: 'illinois'
                     }, {
                         id: 'D',
                         text: 'Vermont',
-                        photo: './img/Q8/Q8_D_Vermont.png',
+                        photo: './img/Q8/Q8_D_Vermont.jpg',
                         sceneId: 'vermont'
                     }],
                     prompt: 'In our field, we are able to track important trends in health, such as the current obesity crisis. Seven U.S. states have obesity rates well over 35%, while only two states and the District of Columbia have a rate below 25%. Which one of these states boasts the lowest obesity rate, likely attributable in part to the active lifestyle of its residents?',
@@ -1094,12 +1099,12 @@
                     choices: [{
                         id: 'A',
                         text: 'Arkansas',
-                        photo: './img/Q9/Q9_A_Arkansas.png',
+                        photo: './img/Q9/Q9_A_Arkansas.jpg',
                         sceneId: 'arkansas'
                     }, {
                         id: 'B',
                         text: 'Louisiana',
-                        photo: './img/Q9/Q9_B_Louisiana.png',
+                        photo: './img/Q9/Q9_B_Louisiana.jpg',
                         sceneId: 'louisiana'
                     }, {
                         id: 'C',
@@ -1126,7 +1131,7 @@
                     }, {
                         id: 'B',
                         text: 'Ireland',
-                        photo: './img/Q10/Q10_B_Ireland.png',
+                        photo: './img/Q10/Q10_B_Ireland.jpg',
                         sceneId: 'ireland'
                     }, {
                         id: 'C',
