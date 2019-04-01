@@ -3,6 +3,15 @@ Focus.Volumes = [
     {
         number: 62,
         publications: [{
+            type: 'Geo Quiz',
+            title: 'Quiz Ten: Demography',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '04/01/19',
+            thumbnail: 'publications/quizzes/ten/img/Q5/Q5_D_Hong_Kong.jpg',
+            url: 'publications/quizzes/ten/index.html',
+            location: []
+        },{
             type: 'Feature Article',
             title: 'Whale Watching and Preservation of the Environment in Central Baja California, Mexico',
             author: 'Jeffrey Smith, Lorna Hill, Rodrigo Manterola Gonzalez',
