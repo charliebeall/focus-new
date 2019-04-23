@@ -3,6 +3,15 @@ Focus.Volumes = [
     {
         number: 62,
         publications: [{
+            type: 'Photo Essay',
+            title: 'Capturing Long Distance Landscapes: GoPro Time-Lapse Photography',
+            author: 'Craig Colten',
+            description: '',
+            date: '04/22/19',
+            thumbnail: 'publications/photoessays/landscapes/img/figure5.jpg',
+            url: 'publications/photoessays/landscapes/index.html',
+            location: []
+        },{
             type: 'Geo Quiz',
             title: 'Quiz Ten: Demography',
             author: 'Wesley Reisser',
