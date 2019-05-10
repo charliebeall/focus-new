@@ -37,15 +37,15 @@
             background: #fff;
         }
 
-
-
         #text h2 {
             font-family: 'Carter One', cursive;
             text-transform: none;
-            font-size: 32px;
+            font-size: 50px;
             font-weight: bold;
-            color: rgba(20, 69, 92, 0.952) !important;
-            text-shadow: -2px 1px 10px #ffffff;
+            color: white;
+            text-shadow: 0px 1px 3px black;
+            margin-top: 0px;
+            margin-bottom: 40px;
         }
 
         #text h3 {
@@ -138,19 +138,22 @@
         .author {
             margin-bottom: 1em;
             font-size: 14px !important;
+            opacity: 1;
         }
 
         .author-photo {
-            height: 5em;
-            margin-right: 5px;
+            width: 100%;
+            margin-right: 0px;
             vertical-align: middle;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
         }
 
         .author-info {
-            background-color: rgba(231, 250, 248, 0.89);
-            font-size:1.2em;
+            *background-color: rgba(231, 250, 248, 0.89);
+            font-size: 1.2em;
             margin-top: 5px;
+            color: white;
+            text-shadow: 0px 1px 3px black;
         }
 
         /*leaflet popup*/
@@ -248,24 +251,24 @@
         <div class="content scenes">
             <section id="introduction" class="scene" data-scene-id="scene-1" title="Introduction">
                 <div class="title title-photo"
-                    style="background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.0)), url(img/fig7.jpg);">
+                    style="background-size: 175% auto; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.0)), url(img/fig7.jpg);">
                     <h2>Street Art in Baltimore: A Catalyst for Change</h2>
                     <div class="container-fluid">
                         <div class="author row">
-                            <div class="col-4">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-2">
                                 <img class="author-photo" src="img/author_stone.jpg" />
                             </div>
-                            <div class="col-8 author-info">
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-10 author-info">
                                 <span class="name">Meredith K. Stone</span>, <span class="organization">Annual
                                     Meeting and Outreach Associate, American Association of Geographers</span>
                             </div>
                         </div>
 
                         <div class="author row">
-                            <div class="col-4">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-2">
                                 <img class="author-photo" src="img/author_buckley.jpg" />
                             </div>
-                            <div class="col-8 author-info">
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-10 author-info">
                             <span class="name">Geoffrey L. Buckley</span>
                             <span class="organization">Ohio
                                 University</span>
@@ -344,7 +347,7 @@
                 relationships with city government. At present, black citizens comprise sixty-three percent of
                 Baltimore’s population and twenty-three percent of city residents live in poverty (United States
                 Census 2015).</p>
-            <div id="figure3" class="figure" style="background-image:url(img/fig3b.PNG);"></div>
+            <div id="figure3" class="figure" style="background-image:url(img/fig3b.png);"></div>
             <div class="caption">Figure 3: The “black butterfly” and “white L” map of Baltimore. Source <a
                     href="https://www.washingtonpost.com/graphics/2018/national/segregation-us-cities/ "
                     target="_blank">Washington
