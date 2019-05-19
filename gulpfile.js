@@ -257,7 +257,7 @@ gulp.task('copyleafletplugins', function() {
 gulp.task('html', function () {
     return gulp.src([
         'src/**/*.html',
-        'src/**/*.{png,jpg,jpeg,svg,ico,mp4,m4v,mp3,webm,ogg,csv,json,gif}',
+        'src/**/*.{png,jpg,jpeg,svg,ico,mp4,m4v,mp3,webm,ogg,csv,json,gif,otf,ttf,woff,woff2,eof}',
         'src/**/combined.js',
         'src/**/combined.css',
         'src/**/*.js'
