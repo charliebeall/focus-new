@@ -75,7 +75,6 @@
 
         #text.photo-essay h2 {
             color: rgb(219, 156, 152);
-            *text-shadow: 0px 1px 1px rgb(119, 29, 29);
             font-size: 60px;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0))
         }
@@ -230,8 +229,8 @@
         #text a,
         a.location,
         div.tooltip a {
-            color: rgba(174, 71, 65, 0.7);
-            border-bottom-color: rgba(174, 71, 65, 0.7);
+            color: rgb(219, 156, 152);
+            border-bottom-color: rgb(219, 156, 152);
         }
 
         #text a:hover,
@@ -462,21 +461,21 @@
                 <div class="figure" style="background-image: url(img/WR4.jpg);">
                 </div>
                 <p>
-                <br> 
-                </br>
-                    The typical tour of (the Hashemite Kingdom of) Jordan usually includes three main sites: Amman’s
-                    citadel (and its downtown souks), Petra, and Wadi Rum – all indeed spectacular, and the latter two
-                    UNESCO World Heritage sites (WHS). The more ambitious tourist might also visit Jerash, Ajloun, a
-                    resort at the Dead Sea, maybe a hot spring or Wadi Dana, and perhaps a few religious sites such as
-                    Bethany Beyond the Jordan, Mt. Nebo, Madaba, and the Red Sea. A few more days and some digging
-                    online might lead to Jordan’s castle circuit: <span style="font-style: italic;">Kharana</span> (most
-                    likely a caravanserai), <span style="font-style: italic;">Amra</span>(a UNESCO WHS with unique
-                    Islamic frescoes), <span style="font-style: italic;">Azraq</span> (where T.H. Lawrence and his
-                    comrades wintered), Kerak and Shobak (infamous Crusader castles), and Umm ar-Rasas (another UNESCO
+                    <br>
+                    </br>
+                    The typical tour of (the Hashemite Kingdom of) Jordan usually includes three main sites: <a class="location" data-layer-id="ammancitadel">Amman’s
+                    citadel</a> (and its downtown souks), <a class="location" data-layer-id="petra">Petra</a>, and <a class="location" data-layer-id="wadirum">Wadi Rum</a> – all indeed spectacular, and the latter two
+                    UNESCO World Heritage sites (WHS). The more ambitious tourist might also visit <a class="location" data-layer-id="jerash">Jerash</a>, <a class="location" data-layer-id="ajloun">Ajloun</a>, a
+                    resort at the Dead Sea, maybe a hot spring or <a class="location" data-layer-id="wadidana">Wadi Dana</a>, and perhaps a few religious sites such as
+                    <a class="location" data-layer-id="bethany">Bethany Beyond the Jordan</a>, <a class="location" data-layer-id="mountnebo">Mt. Nebo</a>, <a class="location" data-layer-id="madaba">Madaba</a>, and the Red Sea. A few more days and some digging
+                    online might lead to Jordan’s castle circuit: <a class="location" data-layer-id="kharana">Kharana</a> (most
+                    likely a caravanserai), <a class="location" data-layer-id="amra">Amra</a> (a UNESCO WHS with unique
+                    Islamic frescoes), <a class="location" data-layer-id="azraq">Azraq</a> (where T.H. Lawrence and his
+                    comrades wintered), <a class="location" data-layer-id="kerak">Kerak</a> and <a class="location" data-layer-id="shobak">Shobak</a> (infamous Crusader castles), and <a class="location" data-layer-id="ummarrasas">Umm ar-Rasas</a> (another UNESCO
                     WHS) mentioned in both the Old and New Testaments. All these places together, however, barely
                     scratch the surface of Jordan’s innumerable ancient and important sites.
                     <br /><br />I first visited Jordan as part of an undergraduate study abroad program in 1995. We
-                    spent only a couple days in the country: a few hours in Wadi Rum and an overnight in Petra. I
+                    spent only a couple days in the country: a few hours in <a class="location" data-layer-id="wadirum">Wadi Rum</a> and an overnight in <a class="location" data-layer-id="petra">Petra</a>. I
                     returned 20 years later as a Fulbright Scholar, initially to identify indicator species to help
                     establish biomes in the Wadi Dana Biosphere Reserve. But once there, as with many field-based
                     projects, my focus changed and broadened to document the Kingdom’s Eastern Desert ruins.
@@ -614,7 +613,7 @@
             <section id="12" class="scene photo-scene" data-scene-id="place9">
                 <div class="figure contain" style="background-image:url(img/L1030319.jpg);"></div>
                 <p>
-                    A view of <span style="font-style: italic;">qasr</span>  Usaiykhim looking WSW. The qasr is on the
+                    A view of <span style="font-style: italic;">qasr</span> Usaiykhim looking WSW. The qasr is on the
                     right, and the small outcrop in
                     the background (upper-left) is a modern cinder quarry. The fort’s
                     encompassing “wall ring” is also visible.
@@ -826,7 +825,7 @@
                 </p>
             </section>
             <section id="26" class="scene photo-scene" data-scene-id="place23">
-                <div class="figure contain" style="background-image:url(img/WR2.jpg);"></div>
+                <div class="figure" style="background-image:url(img/WR2.jpg);"></div>
                 <p>
                     Jordan got the short end of the Sykes-Picot stick, the 1916 Great Powers agreement that divided the
                     Middle East into states and spheres of influence. While some states got oil, Jordan was left without
@@ -946,10 +945,12 @@
         Focus.Map.defaultOptions = {
             color: '#AE4741', //'rgba(0, 42, 143, 1)', //'#B0BDCE', //'#D30F23', //'rgba(39, 171, 226, 1)',
             fillColor: '#AE4741', //'rgba(0, 42, 143, 1)', //'rgba(39, 171, 226, 1)',
-            radius: 8,
-            weight: 16,
+            radius: 6,
+            weight: 1,
             fillOpacity: 1,
-            opacity: 0.2
+            opacity: 0.2,
+            dropShadow: true,
+            gradient: true
         };
         Focus.Map.options = {};
         Focus.Map.options.panes = [];
@@ -1023,8 +1024,7 @@
                     "type": "geojson",
                     "style": {
                         "opacity": 0.6,
-                        "color": 'rgb(144,14,30,0.75)',
-                        "fillColor": 'rgb(144,14,30)',
+                        "fillOpacity": 0.01,
                         "dashArray": [3, 5],
                         "weight": 4
                     },
@@ -1135,8 +1135,7 @@
                     "type": "geojson",
                     "style": {
                         "opacity": 0.6,
-                        "color": 'rgb(144,14,30,0.75)',
-                        "fillColor": 'rgb(144,14,30)',
+                        "fillOpacity": 0.01,
                         "dashArray": [4, 7],
                         "weight": 5
                     },
@@ -1411,8 +1410,7 @@
                     "type": "geojson",
                     "style": {
                         "opacity": 0.6,
-                        "color": 'rgb(144,14,30,0.75)',
-                        "fillColor": 'rgba(144,14,30, 0.3)',
+                        "fillOpacity": 0.01,
                         "weight": 4
                     },
                     "data": {
@@ -1503,11 +1501,6 @@
                                 36.955000, 31.950833
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -1557,11 +1550,7 @@
                     "style": {
                         "weight": 5,
                         "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 0.2)',
-                        "stroke-width": 2,
-                        "stroke-opacity": 1,
-                        "fill": "#b8b8b8",
-                        "fill-opacity": 0.2
+                        "fillOpacity": 0.01,
                     }
                 },
                 {
@@ -1578,11 +1567,6 @@
                                 36.955000, 31.950833
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -1598,11 +1582,6 @@
                                 31.95449
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -1676,9 +1655,8 @@
                     "style": {
                         "weight": 5,
                         "radius": 5,
-                        "fillColor": 'rgba(144,14,30, .1)',
+                        "fillOpacity": 0.01,
                         "opacity": 0.6,
-                        "color": 'rgb(144,14,30,0.75)',
                         "dashArray": [3, 5],
                         "weight": 4
 
@@ -1698,11 +1676,6 @@
                                 36.83810, 32.28109
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -1744,11 +1717,7 @@
                     "style": {
                         "weight": 5,
                         "radius": 5,
-                        "fillColor": 'rgba(204, 204, 204, 0.2)',
-                        "stroke-width": 2,
-                        "stroke-opacity": 1,
-                        "fill": 'rgba(204, 204, 204, 0.2)',
-                        "fill-opacity": 0.25
+                        "fillOpacity": 0.01,
                     }
                 },
                 {
@@ -1766,11 +1735,6 @@
                                 32.28009406825981
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -1788,11 +1752,6 @@
                                 32.274978067879516
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -1810,11 +1769,6 @@
                                 32.27098666156322
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -1888,9 +1842,8 @@
                     "style": {
                         "weight": 3,
                         "radius": 4,
-                        "fillColor": 'rgba(144,14,30, .1)',
                         "opacity": 0.6,
-                        "color": 'rgba(144,14,30,0.30)',
+                        "fillOpacity": 0.01,
                         "dashArray": [3, 5],
                         "weight": 4
 
@@ -1911,11 +1864,6 @@
                                 31.52067
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -1923,8 +1871,7 @@
                     "type": "geojson",
                     "style": {
                         "opacity": 0.6,
-                        "color": 'rgb(144,14,30,0.75)',
-                        "fillColor": 'rgb(144,14,30)',
+                        "fillOpacity": 0.01,
                         "dashArray": [3, 7],
                         "weight": 5
                     },
@@ -2015,11 +1962,6 @@
                                 31.606609719226917
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -2037,11 +1979,6 @@
                                 31.52067
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -2049,8 +1986,7 @@
                     "type": "geojson",
                     "style": {
                         "opacity": 0.6,
-                        "color": 'rgb(144,14,30,0.75)',
-                        "fillColor": 'rgb(144,14,30)',
+                        "fillOpacity": 0.01,
                         "dashArray": [3, 7],
                         "weight": 5
                     },
@@ -2135,11 +2071,6 @@
                                 31.606609719226917
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -2157,11 +2088,6 @@
                                 31.50162
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -2179,11 +2105,6 @@
                                 31.606609719226917
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -2201,11 +2122,6 @@
                                 31.774877618507386
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(20,131,218)'
                     }
                 },
                 {
@@ -2213,8 +2129,7 @@
                     "type": "geojson",
                     "style": {
                         "opacity": 0.6,
-                        "color": 'rgb(144,14,30,0.75)',
-                        "fillColor": 'rgb(144,14,30)',
+                        "fillOpacity": 0.01,
                         "dashArray": [3, 7],
                         "weight": 5
                     },
@@ -2315,11 +2230,6 @@
                                 31.132019774732985
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -2393,9 +2303,10 @@
                     "style": {
                         "weight": 7,
                         "radius": 8,
-                        "fillColor": 'rgba(20,131,218, .1)',
+                        "fillOpacity": 0.01,
+                        "fill": false,
                         "opacity": 0.6,
-                        "color": 'rgb(20,131,218,0.92)',
+                        //"color": 'rgb(20,131,218,0.92)',
                         "dashArray": [3, 7],
                         "weight": 4
 
@@ -2416,11 +2327,6 @@
                                 31.10262754116744
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -2438,11 +2344,6 @@
                                 30.970249956717794
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -2460,11 +2361,6 @@
                                 30.91135644671695
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
@@ -2482,20 +2378,14 @@
                                 30.98908821348612
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(144,14,30, 1)'
                     }
                 },
                 {
                     "id": "Jordan-Polygon",
                     "type": "geojson",
                     "style": {
+                        "fillOpacity": 0.01,
                         "opacity": 0.6,
-                        "color": 'rgb(144,14,30,0.75)',
-                        "fillColor": 'rgba(144,14,30, 0.3)',
                         "weight": 4
                     },
                     "data": {
@@ -5015,6 +4905,7 @@
                     "style": {
                         "weight": 5,
                         "radius": 5,
+                        "fillOpacity": 0.01,
                     }
                 },
                 {
@@ -5215,11 +5106,251 @@
                         "radius": 5,
                         "fillColor": 'rgba(255,215,0)'
                     }
+                },
+                {
+                    "id": "wadirum",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Wadi Rum"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.404477, 29.533475
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "petra",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Petra"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.439699, 30.331592
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "ammancitadel",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Amman Citadel"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.935421, 31.954556
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "jerash",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Jerash"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.896024, 32.274184
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "ajloun",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Ajloun"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.758322, 32.340547
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "wadidana",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Wadi Dana"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.610343, 30.676143
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "mountnebo",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Mount Nebo"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.725278, 31.769462
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "bethany",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Bethany Beyond the Jordan"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.549575, 31.837747
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "madaba",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Madaba"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.794881, 31.716850
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "kharana",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Kharana"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                36.462943, 31.729165
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "amra",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Amra"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                36.587267, 31.801754
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "azraq",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Azraq"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                36.814220, 31.835769
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "kerak",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Kerak"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.701620, 31.185425
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "shobak",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Shobak"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.560888, 30.532265
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "ummarrasas",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Umm ar-Rasas"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                35.920286, 31.501616
+                            ]
+                        }
+                    }
                 }
             ],
             "scenes": [{
                     "id": "place0",
-                    "zoom": 6,
+                    "zoom": 7,
                     "baseLayer": [{
                         "type": "esri-basemap",
                         "url": "NationalGeographic",
@@ -5229,6 +5360,36 @@
                     }],
                     "layers": [{
                         "idRef": "Jordan-Polygon"
+                    }, {
+                        "idRef": "wadirum"
+                    }, {
+                        "idRef": "petra"
+                    }, {
+                        "idRef": "ammancitadel"
+                    }, {
+                        "idRef": "jerash"
+                    }, {
+                        "idRef": "ajloun"
+                    }, {
+                        "idRef": "wadidana"
+                    }, {
+                        "idRef": "mountnebo"
+                    }, {
+                        "idRef": "bethany"
+                    }, {
+                        "idRef": "madaba"
+                    }, {
+                        "idRef": "kharana"
+                    }, {
+                        "idRef": "amra"
+                    }, {
+                        "idRef": "azraq"
+                    }, {
+                        "idRef": "kerak"
+                    }, {
+                        "idRef": "shobak"
+                    }, {
+                        "idRef": "ummarrasas"
                     }],
                     "style": {
                         "filter": "sepia(0%)",
@@ -5423,7 +5584,7 @@
                             "idRef": "L1030319-fov"
                         }
                     ],
-                    "zoom": 10,
+                    "zoom": 8,
                     "baseLayer": [{
                         "type": "esri-basemap",
                         "url": "Imagery",
