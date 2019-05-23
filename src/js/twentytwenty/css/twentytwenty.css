@@ -82,8 +82,7 @@
   overflow: hidden;
   position: relative;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none; }
+  -moz-user-select: none; }
   .twentytwenty-container img {
     max-width: 100%;
     position: absolute;

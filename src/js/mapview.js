@@ -844,7 +844,7 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
                 if (bounds) {
                     me._map.flyToBounds(bounds, $.extend(true, {
                         maxZoom: zoom,
-                        padding: [15, 15]
+                        padding: [100, 100]
                     }, sceneModel.get('panZoomOptions') || {}));
                 }
                 else {
