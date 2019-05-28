@@ -3,6 +3,24 @@ Focus.Volumes = [
     {
         number: 62,
         publications: [{
+            type: 'Photo Essay',
+            title: 'Capturing Long Distance Landscapes: GoPro Time-Lapse Photography',
+            author: 'Craig Colten',
+            description: '',
+            date: '04/22/19',
+            thumbnail: 'publications/photoessays/landscapes/img/figure5.jpg',
+            url: 'publications/photoessays/landscapes/index.html',
+            location: []
+        },{
+            type: 'Geo Quiz',
+            title: 'Quiz Ten: Demography',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '04/01/19',
+            thumbnail: 'publications/quizzes/ten/img/Q5/Q5_D_Hong_Kong.jpg',
+            url: 'publications/quizzes/ten/index.html',
+            location: []
+        },{
             type: 'Feature Article',
             title: 'Whale Watching and Preservation of the Environment in Central Baja California, Mexico',
             author: 'Jeffrey Smith, Lorna Hill, Rodrigo Manterola Gonzalez',

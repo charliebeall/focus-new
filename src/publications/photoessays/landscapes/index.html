@@ -1,0 +1,953 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Capturing Long Distance Landscapes: GoPro Time-Lapse Photography</title>
+    <meta name="description"
+        content="FOCUS on Geography: Capturing Long Distance Landscapes: GoPro Time-Lapse Photography">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,landscapes,GoPro,time-lapse,photography,map">
+    <meta name="author" content="Craig E. Colten">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Montserrat" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .scene {
+            color: white;
+        }
+
+        div.caption {
+            font-size: 16px !important;
+            color: #fff !important;
+            font-family: 'Montserrat', sans-serif;
+            color: #d1c7c7;
+            line-height: 1.5em;
+            size: 1.2em;
+        }
+
+        #text.photo-essay {
+            background: rgb(72, 75, 72) !important;
+        }
+
+        #nav {
+            background: rgb(85, 147, 187) !important;
+        }
+
+        h2,
+        h3 {
+            color: #f1ffff !important;
+            font-family: 'Nunito', sans-serif !important;
+        }
+
+        p a,
+        .caption a,
+        .location {
+            color: rgb(109, 169, 248) !important;
+            border-bottom: solid 3px rgba(92, 178, 235, 0.7) !important;
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <progress></progress>
+    <div id="nav" class="dotstyle dotstyle-scaleup">
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <ul class="nav previous">
+            <li class="previous">
+                <a href="#"><span class="fa fa-chevron-up"></span></a>
+            </li>
+        </ul>
+        <ul class="nav sections">
+        </ul>
+        <ul class="nav next">
+            <li class="next">
+                <a href="#"><span class="fa fa-chevron-down"></span></a>
+            </li>
+        </ul>
+    </div>
+    <!-- Add your site or application content here -->
+    <div id="background"></div>
+    <div id="map" class="photo-essay"></div>
+    <div id="overview-map" class="title-hidden transparent"></div>
+    <div id="foreground"></div>
+    <div id="photos">
+        <div id="photo-caption"></div>
+    </div>
+    <div id="shadow"></div>
+    <div id="toggle-map" class="focus-black"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+    <div id="main-nav" class="light">
+        <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+                <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"
+                    style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+                <path id="pathE" d="M 300 500 L 700 500"
+                    style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+                <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
+                    style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+            </svg>
+
+            <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+        </div>
+        <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg" /></a>
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <div id="menu"></div>
+    </div>
+    <div id="text" class="photo-essay">
+        <div class="content scenes">
+            <section id="introduction" class="scene photo-scene" data-scene-id="place1">
+                <div class="intro">
+                    <h2 class="title">Capturing Long Distance Landscapes: GoPro Time-Lapse Photography</h2>
+                    <div class="author">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 col-xs-3 col-sm-2 col-md-1 col-lg-1">
+                                    <img class="author-photo" src="img/colton.jpg" />
+                                </div>
+                                <div class="col-12 col-xs-9 col-sm-10 col-md-11 col-lg-11">
+                                    <div class="row">
+                                        <div class="col-12 col-xs-12 name">
+                                            Craig E. Colten
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-xs-12 organization">
+                                            Carl O. Sauer Professor of Geography at LSU
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="citation"><span class="citation-label">DOI:</span>
+                                            10.21690/foge/2016.62.1p</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="figure contain"
+                    style="background-size: auto 70%; background-position: 50% 0%; background-image:url(img/intro.gif);">
+                </div>
+                <p>The roadside has long been a topic of interest to geographers. Over the years multiple approaches and
+                    methods have been used to understand this prominent landscape. In recent years, a wide chasm has
+                    opened among traditional geographic studies of the roadside, landscape histories, and current
+                    mobility studies. The former relied on slow, halting excursions that demanded the field worker pause
+                    and record roadside features in great detail. Landscape histories rely on archival material and
+                    field work to trace changing assemblages of features that line routeways. Mobility studies insert
+                    the traveler as the primary object of observation and analyze the travel experience more than the
+                    landscapes outside the vehicle. This paper reports on the use of a GoPro camera mounted inside a car
+                    to capture time-lapse images of long-distance drives which blends some of the strengths of each
+                    approach.
+                </p>
+            </section>
+            <section id="1" class="scene" data-scene-id="place1" title="Introduction">
+                <div class="figure" style="background-image:url(img/figure1.jpg);"></div>
+                <div class="caption"><a href="#" class="location" data-layer-id="figure1">Figure 1</a>. Dogtrot house,
+                    Dubach, Louisiana. Photo by author.</div>
+                <p>Fred Kniffen drove the roads of Louisiana in the early 1930s to identify, document, and classify folk
+                    housing (<a href="#figure1">Figure 1</a>). His field work was done
+                    in a car, but involved frequent stops to meticulously record the traditional structures: dogtrots,
+                    Acadian cottages, and other folk dwellings. Although relying on an auto for conveyance, his pace was
+                    more akin to Carl Sauer’s description of field work: “Locomotion should be slow, the slower the
+                    better, and be often interrupted by leisurely halts to sit at vantage points and stop at question
+                    marks” (Sauer, 1956, 400). Indeed, the cursory mention that Kniffen made about his method was: “It
+                    is slow, it involves an unwieldy mass of data . . .” (Kniffen 1935, 180). He made the case that his
+                    field work, although filled with challenges, would enable the mapping of culturogeographic regions
+                    that were readily apparent from the roadside. In Louisiana, he argued, house types are an element of
+                    culture that possessed great diagnostic value in regional differentiation. He later went on to
+                    enlarge his analysis of vernacular structures to map the routes of cultural diffusion across the
+                    entire eastern U.S. In his words, he ranged “through the whole eastern United States from the Gulf
+                    [of Mexico] to the [Great] Lakes and from the Atlantic to the Mississippi” (Kniffen 1965, 550). His
+                    focus of folk housing reflects his belief that “folkways are comparatively the simplest and most
+                    direct expressions of fundamental needs and urges” (Kniffen and Glassie 1966, 41). These efforts
+                    were classic windshield geography - observation from the seat of a car moving through the landscape,
+                    interspersed with close inspection of specific features. The target of observation was narrowly
+                    defined, and the methods were akin to a biogeography field survey - mapping distributions, charting
+                    morphologies, and classifying types. </p>
+            </section>
+            <section id="2" class="scene" data-scene-id="place2" title="History">
+                <div class="figure" id="figure2" style="background-image:url(img/figure2.jpg);"></div>
+                <div class="caption"><a href="#" class="location" data-layer-id="figure2">Figure 2</a>. Louisiane Motel,
+                    Natchitoches, Louisiana. Photo by author.</div>
+                <p>Over the last few decades, landscape histories of roadsides have proliferated. John Jakle and Keith
+                    Sculle have produced a library of books about roadside landscape change that directs attention to
+                    the material culture alongside the road (<a href="#figure2">Figure 2</a>; Jakle and Sculle 2002,
+                    2004, 2008, 2011). And
+                    there are numerous books about the more prominent highways, such as the National Road (Raitz and
+                    O’Malley 2012) and England’s M1 Motorway (Merriman 2007). The Vales’ and Wyckoff’s work on repeat
+                    photography provides a complementary tool for capturing insights about the changing roadside
+                    landscapes (Vale and Vale 1983 and Wyckoff 2006). While these authors follow rigorous methodology,
+                    copious use of landscape photographs illustrate these works, and method and theory are mentioned in
+                    passing.</p>
+                <p>These traditional approaches stand in contrast to a host of recent cultural geography field studies
+                    which rely on thick discussions of methods and theory. In these works the role and sensations of the
+                    observer becomes as important as the external landscapes (Delyser and Starrs 2001). Indeed, an
+                    emerging line of inquiry framed by the conceptual approach referred to as mobility studies contain
+                    remarkably few images (Edensore 2003 and 2004 and Merriman 009). Overlapping in time, if not
+                    conceptual orientation, with the more traditional approaches, mobility studies demonstrate a new
+                    appreciation for observation of the roadside landscape from vehicles in motion. With their emphasis
+                    on the driver as an experiential traveler, they afford little concern with the landscape (Endensore
+                    2003). Some authors ignore the underlying processes that create the roadside that is visible from
+                    the driver’s seat and eschew photographs, while others acknowledge the importance of highway
+                    construction history and the resulting infrastructure (Merriman 2007). Those practicing these newer
+                    approaches declare that the observer’s presence, moving through space, in effect creates the
+                    landscape. Their inquiries – which focus on the body in motion and experiencing that movement –
+                    concentrate on the personal experiences of the drive. </p>
+                <p>Alongside these pursuits is also a burgeoning body of scholarship that considers the use of various
+                    photographic tools to record the landscape and the individual in motion (Rogoff 2000, Garrett 2010,
+                    and Vannini 2017). Discussions of wearable technology merge with this experiential reporting and
+                    place the field worker at the center of the scene - rather than the landscape (Chalfen 2014).
+                    Time-lapse photography has been used extensively to track change from a fixed camera position
+                    (Simpson 2012) and also to capture long-distance journeys (Mather 2014). Mather’s transcontinental
+                    drive across the U.S. consists of an intense 1 hour and 47 minutes of driver’s seat -view of
+                    interstate highways, that offers no insights into the processes behind this extensive engineering
+                    accomplishment.</p>
+                <p>This paper will draw some connections among the slow field work akin to the work of Sauer and
+                    Kniffen, historical roadside landscape history, and the emerging work on mobility and visual
+                    studies. The notion of mobility was not absent among those pursuing the traditional approaches.
+                    Pierce Lewis used the term as the unifying thread in his opening chapter in the landmark volumes on
+                    the National Road. He makes the case that mobility is a driving passion that has defined the whole
+                    American experience, and that Americans are enraptured with the people and things that make mobility
+                    possible (Lewis 1996, 3 & 7). Jakle and Sculle, the two-headed juggernauts of roadside landscape
+                    scholarship, argue that geographic mobility, in the American context, promised not just geographic
+                    mobility, but social mobility as well (Jakle 2010, 420). Participants driving the current mobility
+                    turn see mobility in very different terms. They make the case that we experience the landscape by
+                    moving through it (Ingold 1993), and that what we observe, what we experience, is influenced by
+                    movement. The perspective from a body in motion becomes the core of their observations. As a
+                    consequence, their methodological challenge is how to capture and present mobile experiences (Urry
+                    2007 and Finchin et al. 2010, 1-2). Thus, there is a range of conceptual underpinnings to the notion
+                    of mobility that, while not in complete alignment, are not necessarily contradictory.</p>
+                <p> In this preliminary presentation on recent field work, I hope to critically examine what time-lapse
+                    photography along Louisiana’s highways can add to our understanding of landscapes and landscape
+                    change and how it can serve as a document of historical landscapes and also a record of the observer
+                    in motion. Most of the traditional houses that Kniffen tallied are no longer standing along
+                    Louisiana’s roads, indeed they would be largely invisible in this form of documentation. Nonetheless
+                    there is an abundance of material culture features and physical landscapes that time-lapse
+                    videography captures and permits subsequent examination and interpretation. The field work that
+                    provided the basis for this paper represents the first foray and will be followed by subsequent
+                    repeat videos that can expose change over time. Each sequence will also encapsulate a long-distance
+                    drive in a compressed format that will allow others to gain at least a superficial experience of
+                    traveling the particular route. Thus, I am convinced it offers a bridge among windshield geography
+                    of roadways, landscape change, and mobility studies of highways.</p>
+            </section>
+            <section id="3" class="scene" data-scene-id="place3" title="Capturing Long-Distance Landscapes">
+                <h3>Capturing Long-Distance Landscapes</h3>
+                <p>In the spring of 2017 I began documenting the main routes of Louisiana using time-lapse photography
+                    from a windshield-mounted GoPro camera (<a href="#figure3">Figure 3</a>). My work sought to use a
+                    form of photography that
+                    captures individual images at set intervals of time. For decades, it has been used extensively from
+                    a stationary vantage point in biological and meteorological studies to track the slow growth of
+                    plants or the more rapid formation of storms. It is also used with increasingly frequency, again
+                    from a fixed position, to track the construction of large buildings and engineering works. Depending
+                    on the interval between images, the camera can compress a two-year construction project into a
+                    matter of minutes. Likewise the film maker Evan Mather has compressed a multi-day cross-country
+                    drive into less than two hours (Mather 2014).</p>
+                <div class="figure" id="figure3" style="background-image:url(img/figure3.jpg);"></div>
+                <div class="caption">Figure 3. GoPro camera mounted on interior windshield. Photo by author.</div>
+                <p> I set out to record the observable landscapes along the principal non-interstate highways in
+                    Louisiana. The so-called blue highways - the non-interstate, lesser-used, and often forgotten
+                    highways among long-distance travelers (Moon 1982). My intent was not to retrace Kniffen’s routes,
+                    but to travel the major highways and routes that were central to the state’s economic and cultural
+                    development – Louisiana’s equivalents to the National Road or the Lincoln Highway. Most are numbered
+                    U.S. highways that parallel railroads, but I also drove the River Road along the Mississippi River
+                    which in many sections is a series of minor state highways. In all, I traversed over 5000 miles of
+                    highway, in some cases filming the route in both directions.</p>
+                <p>I opted for time-lapse photography to enable me to recreate extended drives in compressed time frames
+                    for my classes and public audiences, but also to explore the method’s potential to capture some of
+                    the experience of travel. This decision will allow audiences to accompany me across the width and
+                    length of the state within modest time spans. A video of the trip would avoid the messy and choppy
+                    imagery of the time-lapse, but oblige me to spend an entire semester introducing students to the
+                    state’s highway landscapes or limit presentations to frustratingly short segments of the road. After
+                    some experimentation, I selected a 1-image per second interval. This gives fairly complete imagery
+                    at lower speeds, but also provides the sensation of viewing an uninterrupted scene at highway
+                    speeds. It also captures pauses in the normal motion of the highway. And although Kniffen thought he
+                    was dealing with unwieldy volumes of data, the digital files for this procedure are substantial –
+                    but less than full video recordings. Using this method, I traveled the longest route in the state
+                    over a three-day period and compressed the resulting video to about 20 minutes. In homage to Kniffen
+                    and Sauer, there were some lingering halts at “question marks,” but they were not recorded in
+                    time-lapse. I did shoot a lot of still images as well to document those pauses.</p>
+                <p>The windshield placement provides the viewer with a front-seat perspective that is familiar to both
+                    drivers and passengers. I directed the camera’s wide-angle lense to the road’s centerline. This
+                    produces a view dominated by the paved surface itself, but it also captures the peripheral
+                    landscapes on both sides of the road, along with other motorists. Filming both sides was important
+                    for those routes that I only drove in one direction. The camera’s orientation is pivotal to both the
+                    ability to capture images of the roadside and the experience. It also captures nearly all features
+                    the car passes by. Thus, it is less selective than still photographs. Vannini and Stewart advanced
+                    the term “GoPro gaze” to refer to the ability of this handy wearable camera to capture suspenseful
+                    adventure. While this might be true for video productions of snowboarding or hang gliding, or even
+                    dancing in at Cajun nightclubs, my long-distance drives through a state not noted for dramatic
+                    scenery offered little in the way of adventure or suspense (Vannini and Stewart 2017). In fact, one
+                    reviewer of this manuscript commented on the unexpected monotony of the state’s topography.
+                    Nonetheless, as in adventure sports, the GoPro allows the viewer to get a sense of being a part of
+                    the action and movement, to share a bit of the experience – without motion sickness. At the same
+                    time, it did not fit in the category of Urry’s tourist gaze which refers to the cultural conventions
+                    that shape how tourists view, appreciate, and capture landscapes (Urry & Larsen 2011). This
+                    technique overcame that cultural bias. Not wanting to litter the literature with catchy terms, I
+                    suggest that this method allows non-participants to get a sense of travel and inserts them in a
+                    culturally familiar front-seat position. For those with more specific training it permits what I
+                    refer to as a geographers’ gaze. Even as Kniffen commented in his 1935 paper, the trained geographer
+                    can extract more meaning and understanding from this technique. The geographer’s gaze assumes a
+                    background knowledge of historical processes underlying the construction of human roadside
+                    landscapes and even those landscapes beyond the immediate frame of the camera which impinge on the
+                    visible scene. It demands familiarity with the work of the likes of Jakle, Sculle, and Raitz, but
+                    also enables an experiential perspective.</p>
+            </section>
+            <section id="4" class="scene" data-scene-id="place4"
+                title="Material Landscapes and the Front Seat Experience">
+                <h3>Material Landscapes and the Front Seat Experience</h3>
+                <div class="figure" id="figure4" style="background-image:url(img/figure4.jpg);"></div>
+                <div class="caption"><a href="#" class="location" data-layer-id="figure4">Figure 4</a>. Drive-thru
+                    daiquiri shop, Shreveport, Louisiana. Photo by author.</div>
+                <p>Opting to travel the blue highways, in many respects, pre-determined the images that would be
+                    captured. These routes penetrate the heart of towns and cities, and avoid the set-back, sculpted
+                    landscapes along the Interstate highways (the Motorways used by Merriman). This decision was vital
+                    to capturing the roadside features that crowd the shoulders of the older routes (<a
+                        href="#figure4">Figure 4</a>).
+                    Interstates have redirected traffic and consequently have contributed to considerable commercial
+                    decline along the older routes (Norris 1987). This reorientation in traffic contributed to one of
+                    the dominant overall impressions – widespread dereliction. And the commercial strips illustrate this
+                    change in profound ways. But, using the time-lapse photography, one of the underlying influences for
+                    public acceptance of limited access highways becomes all too apparent. The profusion of traffic
+                    lights and the stop-and-go traffic through larger cities underscore the inefficiency of the
+                    unlimited access roads.</p>
+                <p>John Jakle offers five categories in his overview of roadside landscapes: rural, suburban, commercial
+                    strip, inner city, and CBD (Jakle 2010). I turn to his typology, with some modifications for
+                    organizational structure. In Louisiana, there are multiple rural landscapes, most relatively
+                    monotonous, but reflective of the states physical geography or its rural economies. Three quick
+                    rural vignettes will suffice here. (Viewers should not expect sound which is not recorded using the
+                    time-lapse photo mode.)</p>
+            </section>
+            <section id="5" class="scene" data-scene-id="place5" title="Rural Landscapes">
+                <h3>Rural Landscapes</h3>
+                <div class="figure" id="figure5" style="background-image:url(img/figure5.jpg);"></div>
+                <div class="caption"><a href="#" class="location" data-layer-id="figure5">Figure 5</a>. Coastal marsh,
+                    in Cameron Parish, Louisiana. Photo by author.</div>
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/Z0WBojzslwc?version=3&loop=1&mute=1&playlist=Z0WBojzslwc"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Agriculture (Video 1): endless miles of cotton, soy, and sugar cane line the rural
+                    highways, interrupted by occasional agriculture infrastructure such as processing or storage
+                    facilities and agricultural hamlets.</div>
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/v0kskV5NVcI?version=3&loop=1&mute=1&playlist=v0kskV5NVcI"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Forests (Video 2) - another form of agriculture, the tall pines provide a welcomed
+                    shade to the roads in the early morning or evening. The narrow and winding roads in the Florida
+                    parishes create a “green tunnel” interspersed with emerging crops of young pine trees, small farms,
+                    and rural non-farm residences.</div>
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/ddYsOS6P0tI?version=3&loop=1&mute=1&playlist=ddYsOS6P0tI"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Wetlands (Video 3) - in southern Louisiana, seemingly endless miles of marsh and
+                    swamp hug the shoulders of lightly used routes that pass through the Chenier Plains. The live oaks
+                    hug one shoulder and the adjacent borrow pit reminds the driver to keep his vehicle out of the ditch
+                    where gators reside (<a href="#figure5">Figure 5</a>).</div>
+            </section>
+            <section id="6" class="scene" data-scene-id="place6" title="Urban Landscapes (1)">
+                <h3>Urban Landscapes</h3>
+                <p>Kniffen opted to exclude cities and larger towns because they “introduce complexities out of all pro-
+                    portion to the areas they occupy” (Kniffen 1935, 180). Yet, they are too important to exclude here.
+                    I start with suburbs.</p>
+
+                <div class="figure" id="figure6" style="background-image:url(img/figure6.jpg);"></div>
+                <div class="caption"><a href="#" class="location" data-layer-id="figure6">Figure 6</a>. Double shotgun
+                    house in New Orleans Bywater neighborhood. Photo by author.</div>
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/VB7bSufVwvQ?version=3&loop=1&mute=1&playlist=VB7bSufVwvQ"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Suburbs (Video 4): The typical post-war suburbs are largely shielded by commercial
+                    strips along the routes I followed. Nonetheless, the 19th century suburbs of the state’s oldest city
+                    are easily viewed. Uptown New Orleans contains an array of traditional New Orleans house types,
+                    commercial structures along the riverfront, and the imposing floodwall. The Bywater and Lower 9th
+                    Ward showcase the closely spaced creole cottages, shotguns, and double shotguns – albeit in a blur
+                    (<a href="#figure6">Figure 6</a>).</div>
+
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/cSCIjB42wss?version=3&loop=1&mute=1&playlist=cSCIjB42wss"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">CBD (Video 5): There is a lengthy lead up to Shreveport across the Red River
+                    floodplain, through Bossier – formerly known as the Neon Spectacular of the Arklatex, and over the
+                    bridge into the CBD. It is a short drive from the bridge to the imposing Baptist Church at the
+                    western end of the business district. While this setting was among my first youthful exposures to a
+                    “big” city, and it was a bustling commercial district in the 1960s, its boarded-up storefronts
+                    bespeak a major landscape change.</div>
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/cfPKFcVa5Vs?version=3&loop=1&mute=1&playlist=cfPKFcVa5Vs"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Commercial Strip (Video 6): These linear collections of services and retail stores
+                    have largely supplanted the CBD as the elongated centers for commerce and occupy some of the longest
+                    stretches of roadways leading into and passing out of larger urban areas. Signs and visual elements
+                    compete for the driver’s attention and announce many well-branded outlets. Stretches through lower
+                    income neighborhoods typically have fewer national chains and their signage. Traffic lights
+                    interrupt the flow and underscore one of the reasons that interstate highways gained such
+                    acceptance. They also obscure the post-war suburbs that were purposefully situated off the principal
+                    thoroughfares.</div>
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/Zsc6tjyaRPw?version=3&loop=1&mute=1&playlist=Zsc6tjyaRPw"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Industrial Districts (Video 7): Jakle omitted industrial landscapes, but they
+                    constitute an imposing section of landscapes in larger cities and exurban industrial districts
+                    depended on workers to commute by car. They typically have extensive parking lots as an indication
+                    of this reliance. Here we pass through the refineries and related industries along River Road on the
+                    west bank of New Orleans.</div>
+            </section>
+            <section id="7" class="scene" data-scene-id="place7" title="Urban Landscapes (2)">
+                <div class="figure" id="figure7" style="background-image:url(img/figure7.jpg);"></div>
+                <div class="caption"><a href="#" class="location" data-layer-id="figure7">Figure 7</a>. Derelict auto
+                    repair shop, Bernice, Louisiana. Photo by author.</div>
+
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/a5oxz-3W4Z8?version=3&loop=1&mute=1&playlist=a5oxz-3W4Z8"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Dereliction (Video 8): Jakle was keenly aware of dereliction (Jakle and Wilson
+                    1992), but he did not include it as a category in his roadside landscapes. In my survey of
+                    Louisiana, it was a dominant roadside feature. The large shipyard that has been closed on the west
+                    bank of New Orleans is one example. Little remains of the ship yard but empty parking and material
+                    storage areas. Small town CBD’s and commercial strips speak to the out migration of rural
+                    agricultural populations, the decline of locally owned businesses, and the shift of commerce from
+                    old highways towards interstate exchanges (<a href="#figure7">Figure 7</a>).</div>
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/xtBU92TN4V8?version=3&loop=1&mute=1&playlist=xtBU92TN4V8"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Engineering Works (Video 9): Another prominent set of landscapes in Louisiana, and
+                    elsewhere, that can dominate the roadside for mile after mile, are various engineering works. In
+                    particular the levees along the Mississippi River and the spillways and other river control
+                    structures.</div>
+            </section>
+            <section id="8" class="scene" data-scene-id="place8" title="Experiences">
+                <h3>Experiences</h3>
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/dBNZKftr7tI?version=3&loop=1&mute=1&playlist=dBNZKftr7tI"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Monotony (Video 10): Open stretches of rural highways seemed to stretch on
+                    endlessly. The coastal marshes with their perfectly level topography and nearly unbroken grassy
+                    expanses until you reach the “highlands” up the bayou. Similar sensations are encountered across the
+                    plowed but barren cotton fields and the dense pine forests.</div>
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/JOs1iElQW4s?version=3&loop=1&mute=1&playlist=JOs1iElQW4s"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Surprises (Video 11): Among the experiences that the mobility turn authors note are
+                    surprises – unexpected events or scenes (Edensor 2003). While I was fortunate to avoid any highway
+                    crashes, I fell in behind this early morning driver who was weaving from the shoulder and across the
+                    center line with some frequency. And there was also the Huey Long era effort to beautify the state’s
+                    new highways with an oak alley along US 190's entry into Baton Rouge from the west.</div>
+
+                <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480"
+                    src="https://www.youtube.com/embed/-U-2zSFZSeM?version=3&loop=1&mute=1&playlist=-U-2zSFZSeM"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="caption">Changing weather (Video 12): Rain offered another diversion from the tedium of
+                    driving through the bare cotton fields in north Louisiana.</div>
+            </section>
+            <section id="10" class="scene" data-scene-id="place8" title="Conclusion">
+                <h3>Benefits and Weaknesses</h3>
+                <p>These short clips reveal numerous shortcomings of this method. The road and the sky obviously
+                    dominate the image, and the fixed perspective eliminates the possibility of panning to follow an
+                    object of interest. Early morning sun light and the tyranny of shade obscures many features in this
+                    form of documentation, and when undertaking long-distance drives, it is sometimes difficult to drive
+                    only during optimal lighting. It is impossible to focus on details of the landscape and the rapid
+                    pace can be a bit disorienting if not mind-numbing after extended viewings. Using time-lapse,
+                    ambient sounds are not captured, although sounds can be inserted in the editing process. One loses
+                    external noises and also the internal sounds of radio news stories or music that shape the driver’s
+                    experiences. The actual feel of driving – vibrations, acceleration, deceleration, and turning – are
+                    absent.</p>
+
+                <p>On the positive side, it permits a simulated passage over lengthy stretches of road in a short time
+                    that offers a blurred panorama of the roadside that is akin to our memories of long drives. It
+                    provides a motorist’s perspective that enables viewers to discern the broad landscape textures in
+                    the sequences in which they appear. And, I am experimenting with repeat time-lapse photography along
+                    a major commercial strip in Baton Rouge that is undergoing a major modification. A series of monthly
+                    photo excursions will enable tracing landscape change along a 2-mile stretch of road that will be
+                    akin to static repeat photography, while capturing change along an extended route.</p>
+
+                <p>There are other benefits as well. Insertion of route maps and voice-overs can effectively introduce
+                    audiences to the varied and complex roadside landscapes at a particular point in time. Shown as a
+                    video, rather than static photographs, will appeal to viewers. This method is also more inclusive
+                    than selective photographs. It captures all the landscapes the driver passes, not just choice
+                    features. This makes it a more complete record of the landscape at the time of the filming. More
+                    importantly, using videos of extended stretches of highway, the method simulates movement and
+                    enables a sense of travel or mobility. Thus, it can begin to offer the sensations described in prose
+                    by the mobility studies scholars. The full route videos situate the viewers in the front seat and
+                    can immerse them in the visual experience of long-distance travel in relatively short spans of time.
+                    In effect, this approach can build on the both the landscape history approach and enrich the
+                    mobility approach with a powerful visual component currently lacking.</p>
+                <h3>References</h3>
+
+                <ul class="references">
+                    <li>Bradley, Ben. 2017. British Columbia by the Road: Car Culture and the Making of a Modern
+                        Landscape. Vancouver: UBC Press.</li>
+                    <li>Delyser, Dydia, and Paul F. Starrs. 2001. Special Issue on Doing Fieldwork. Geographical Review
+                        91, no. 1-2.</li>
+                    <li>Edensore, Tim. 2004. “Automobility and National Identity : Representation, Geography and Driving
+                        Practice.” Theory Culture Society 21: 101-119.</li>
+                    <li>Edensore, Tim. 2003. “M6 - Junction 19-16: Defamiliarizing the Mundane Roadscape.” Space &
+                        Culture 6, no. 2: 151-68.</li>
+                    <li>Fincham, Ben, Mark McGuinness, and Lesly Murray. 2010. “Introduction.” In Mobile Methodologies,
+                        Ben Fincham, Mark McGuinness, and Lesly Murray, eds., 1-10. New York: Palgrave/McMillan.</li>
+                    <li>Garrett, Bradley. 2010. “Videographic geographies: Using digital video for geographic research.”
+                        Progress in Human Geography 35, no. 4: 521-41.</li>
+                    <li>Ingold, Tim. 1993. “The Temporality of Landscape.” World Archaeology 25, no. 2: 152-174.</li>
+                    <li>Jakle, John. 2010. “Paving America for the Automobile.” In The Making of the American Landscape,
+                        2nd, Michael P. Conzen, ed., 403-22. New York: Routledge.</li>
+                    <li>Jakle, John A., and Keith A. Sculle. 2011. Remembering Roadside America. Philadelphia: Temple
+                        University Press.</li>
+                    <li>______. 2008. Motoring: The Highway Experience in America. Athens: University of Georgia Press.
+                    </li>
+                    <li>______. 2004. Signs in America’s Automobile Age: Signatures of Landscape and Place. Iowa City:
+                        University of Iowa Press.</li>
+                    <li>______. 2002. Fast Food: Roadside restaurants in the automobile age. Baltimore: Johns Hopkins
+                        University Press.</li>
+                    <li>Jakle, John A., Keith A. Sculle, and Jefferson S. Rogers. 2002. The Motel in America. Baltimore:
+                        Johns Hopkins University Press.</li>
+                    <li>Jalke, John and David Wilson. 1992. Derelict Landscapes. Savage, Md.: Rowman & Littlefield.</li>
+                    <li>Kniffen, Fred B. "Folk Housing: Key to Diffusion." Annals of the Association of American
+                        Geographers 55, no. 4 (1965): 549-576.</li>
+                    <li>Kniffen, Fred B. 1936. "Louisiana House Types." Annals of the Association of American
+                        Geographers 26, no. 4: 179-193.</li>
+                    <li>Kniffen, Fred B., and Henry Glassie. 1966. "Building in Wood in the Eastern United States: A
+                        Time-place Perspective." Geographical Review 56: 40-66.</li>
+                    <li>Lewis, Pierce. 1996. “The Landscapes of Mobility.” In The National Road. Karl Raitz, ed., 3-44.
+                        Baltimore: Johns Hopkins University Press, 1996.</li>
+                    <li>Mather, Evan. 2014. From Sea to Shining Sea. (Video)
+                        https://handcraftedfilms.com/2014/04/06/from-sea-to-shining-sea/</li>
+                    <li>Merriman, Peter. 2009. “Automobilities and Geographies of the Car.” Geography Compass 3, no. 2:
+                        586–599.</li>
+                    <li>Merriman, Peter. 2007. Driving Spaces: A Cultural-Historical Geography of England's M1 Motorway.
+                        New York: Blackwell.</li>
+                    <li>Moon, William Least Heat. 1982. Blue Highways: A Journey into America. Boston: Little, Brown,
+                        and Company.</li>
+                    <li>Norris, Darrell A. 2010. “Interstate Highway Exit Morphology: Non-Metropolitan Exit Commerce on
+                        I-75.” Professional Geographer 39:1, 23-32</li>
+                    <li>Raitz, Karl and Nancy O’Malley. 2012. Kentucky’s Frontier Highway: Historical Landscapes along
+                        the Maysville Road. Lexington: University of Kentucky Press.</li>
+                    <li>Rogoff, Irit. 2000. Terra Infirma: Geography’s Visual Culture. London: Routledge.</li>
+                    <li>Sauer, Carl O. 1956. "The Education of a Geographer." Annals of the Association of American
+                        Geographers 46, no. 3: 287-299.</li>
+                    <li>Simpson, Paul. 2012."Apprehending everyday rhythms: rhythmanalysis, time-lapse photography, and
+                        the space-times of street performance." cultural geographies 19, no. 4: 423-445.</li>
+                    <li>Urry, John. 2007. Mobilities. New York: Polity.</li>
+                    <li>Urry, John and J. Larsen. 2011. The Tourist Gaze 3.0. London: Sage.</li>
+                    <li>Vale, Thomas R. And Geraldine R. Vale. 1983. U.S. 40 Today: Thirty Years of Landscape Changae in
+                        America. Madison: University of Wisconsin Press.</li>
+                    <li>Vannini, Phillip. 2017. "Low and Slow: Notes on the Production and Distribution of a Mobile
+                        Video Ethnography." Mobilities 12, no. 1: 155-166.</li>
+                    <li>Vannini, Phillip, and Lindsay M. Stewart. 2017. "The GoPro Gaze." cultural geographies 24, no.
+                        1: 149-155.</li>
+                    <li>Wyckoff, William. 2006. On the Road Again: Montana’s Changing Landscape. Seattle: University of
+                        Washington Press.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div id="progress">
+        <div id="bar"></div>
+    </div>
+    <div id="bar-top"></div>
+    <div id="bar-bottom"></div>
+    <!-- inject:templates:html -->
+    <!-- endinject -->
+    <script src="../../../js/combined.js"></script>
+    <script src="data/US425.js"></script>
+    <script>
+        var pointStyle = {
+            "opacity": 0.7,
+            "radius": 12,
+            "fillColor": "#BE1931"
+
+        };
+
+        var lineStyle = {
+            "opacity": 0.7,
+            "weight": 10,
+            "color": 'rgb(144,14,30,0.75)',
+            "fillColor": 'rgb(144,14,30)'
+        }
+
+        var scenes = {
+            "features": [{
+                    "id": "figure1",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-92.656800, 32.699000]
+                        },
+                        "properties": {
+                            "name": "Figure 1. Dogtrot house, Dubach, Louisiana.",
+                        }
+                    },
+                    "style": pointStyle
+                },
+                {
+                    "id": "figure2",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-93.0823, 31.7436]
+                        },
+                        "properties": {
+                            "name": "Figure 2. Louisiane Motel, Natchitoches, Louisiana.",
+                        }
+                    },
+                    "style": pointStyle
+                },
+                {
+                    "id": "figure4",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-93.722920, 32.479461]
+                        },
+                        "properties": {
+                            "name": "Figure 4. Drive-thru daiquiri shop, Shreveport, Louisiana",
+                        }
+                    },
+                    "style": pointStyle
+                },
+                {
+                    "id": "figure5",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-93.359404, 30.106441]
+                        },
+                        "properties": {
+                            "name": "Figure 5. Coastal marsh, in Cameron Parish, Louisiana.",
+                        }
+                    },
+                    "style": pointStyle
+                },
+                {
+                    "id": "figure6",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-90.016694, 29.958056]
+                        },
+                        "properties": {
+                            "name": "Figure 6. Double shotgun house in New Orleans Bywater neighborhood.",
+                        }
+                    },
+                    "style": pointStyle
+                },
+                {
+                    "id": "figure7",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-92.658472, 32.828056]
+                        },
+                        "properties": {
+                            "name": "Figure 7. Derelict auto repair shop, Bernice, Louisiana.",
+                        }
+                    },
+                    "style": pointStyle
+                }
+            ],
+            "scenes": [{
+                    "id": "place1",
+                    "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true,
+
+                        }
+                    }],
+                    "layers": [{
+                        "idRef": "figure1"
+                    }],
+                    "zoom": 12,
+                }, {
+                    "id": "place2",
+                    "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    }],
+                    "layers": [{
+                        "idRef": "figure2"
+                    }],
+                    "zoom": 16
+                }, {
+                    "id": "place3",
+                    "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    }],
+                    "layers": [{
+                        "idRef": "figure2"
+                    }],
+                    "zoom": 12
+                }, {
+                    "id": "place4",
+                    "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    }],
+                    "layers": [{
+                        "idRef": "figure4"
+                    }],
+                    "zoom": 15
+                }, {
+                    "id": "place5",
+                    "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    }],
+                    "layers": [{
+                        "idRef": "figure5"
+                    }],
+                    "zoom": 13
+                }, {
+                    "id": "place6",
+                    "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    }],
+                    "layers": [{
+                        "idRef": "figure6"
+                    }],
+                    "zoom": 13
+                }, {
+                    "id": "place7",
+                    "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    }],
+                    "layers": [{
+                        "idRef": "figure7"
+                    }],
+                    "zoom": 15
+                },
+                {
+                    "id": "place8",
+                    "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "NationalGeographic"
+                    }],
+                    "layers": [{
+                            "idRef": "figure1"
+                        },
+                        {
+                            "idRef": "figure2"
+                        },
+                        {
+                            "idRef": "figure4"
+                        },
+                        {
+                            "idRef": "figure5"
+                        },
+                        {
+                            "idRef": "figure6"
+                        },
+                        {
+                            "idRef": "figure7"
+                        }
+                    ],
+                    "zoom": 8
+                }
+            ]
+
+        };
+
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-79613259-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#nav li.previous a').on('click', function (e) {
+                e.preventDefault();
+                var $prev = $('#nav').find('.sections li.active').prev();
+
+                if (!$prev.hasClass('previous')) {
+                    $prev.find('a').click();
+                }
+            });
+
+            $('#nav li.next a').on('click', function (e) {
+                e.preventDefault();
+                var $next = $('#nav').find('.sections li.active').next();
+
+                if (!$next.hasClass('next')) {
+                    $next.find('a').click();
+                }
+            });
+
+            document.onkeydown = function (e) {
+                if (e.keyCode == '38') {
+                    // up arrow
+                    $('#nav li.previous a').click();
+                } else if (e.keyCode == '40') {
+                    // down arrow
+                    $('#nav li.next a').click();
+                }
+            };
+
+            var overviewMap = new Focus.Views.OverviewMapView({
+                model: new Backbone.Model({
+                    initialScene: new Focus.Models.SceneModel({
+                        baseLayer: {
+                            "type": "esri-basemap",
+                            "url": "Streets",
+                            "options": {
+                                "detectRetina": true
+                            }
+                        },
+                        center: [0, 0],
+                        zoom: 8,
+                        showAttribution: false
+                    })
+                }),
+                showCenterPoint: true
+            });
+            var sceneManager = new Focus.Views.SceneManagerView({
+                el: $('body'),
+                initialScene: {
+                    baseLayer: {
+                        "type": "esri-basemap",
+                        "url": "Oceans",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    },
+                    center: [32.646475, -125.296614],
+                    zoom: 3,
+                    zoomDelta: 1,
+                    markerZoomAnimation: false
+                },
+                navigatorClass: Focus.Views.ScrollingSceneNavigator,
+                mapEngineClass: Focus.Views.LeafletMapEngine
+            });
+
+            var shareView = new Focus.Views.ShareView();
+            shareView.render();
+        });
+
+    </script>
+</body>
+
+</html>
