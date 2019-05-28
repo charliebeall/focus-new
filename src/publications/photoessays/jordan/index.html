@@ -38,6 +38,11 @@
             font-family: 'Lato', sans serif;
         }
 
+        .scene.photo-scene div.figure {
+            cursor: none;
+            pointer-events: none;
+        }
+
         #text.photo-essay {
             background: black;
         }
@@ -179,6 +184,8 @@
             padding: 10px 10px;
             background: #fff;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            cursor: none;
         }
 
         .figure {
@@ -193,12 +200,6 @@
             border-color: rgba(0, 47, 108, 1);
         }
 
-        .photo-scene:first-of-type p,
-        .photo-scene:last-of-type p {
-            font-size: 16px;
-            line-height: 18px;
-        }
-
         .photo-scene .row.footer-row {
             color: rgba(0, 47, 108, 1);
         }
@@ -206,7 +207,7 @@
         #text h2 {
             font-family: 'Poller One', cursive;
             text-transform: none;
-            font-size: 60px;
+            font-size: 50px;
         }
 
         #text h3 {
@@ -323,15 +324,18 @@
 
 
         @media (max-height: 768px) and (min-width: 900px) {
-
-            .photo-scene:first-of-type p,
-            .photo-scene:last-of-type p {
-                font-size: 14px;
-                line-height: 16px;
-            }
-
             .dotstyle .sections li {
                 height: 10px !important;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            #text.photo-essay h2 {
+                font-size: 40px;
+            }
+            #text .scene.photo-scene p {
+                font-size: 16px;
+                line-height: 20px;
             }
         }
 
@@ -348,6 +352,15 @@
 
         .photo-scene span.row.footer-row {
             color: #AE4741;
+        }
+
+        #overview-map {
+            width: 150px;
+            height: 150px;
+        }
+
+        .figure.zoom-height {
+            background-size: auto 55%;
         }
 
     </style>
@@ -510,15 +523,14 @@
             <section id="2" class="scene photo-scene" data-scene-id="place1">
                 <div class="figure contain" style="background-image:url(img/L1030058.jpg);"></div>
                 <p>
-                    While in <a class="location" data-layer-id="azzahib">Qasr Khan-az-Zahib</a> (az-Zahib to the west,
-                    the
-                    Crusader fort
-                    to the east),
-                    this ruin represents the spark of my interest in Jordan’s forgotten fortresses. It took me the
+                    <a class="location" data-layer-id="azzahib">Qasr Khan-az-Zahib</a> represents the spark of my interest in Jordan’s forgotten fortresses. It took me the
                     better part of a day to find it, as, like most of the qasr I “discovered”, it was just a dot on an
                     old map. As I was taking photos, a young Bedouin herder, perhaps 10-years old, came over to me with
                     some tea. He said these were Roman-era ruins and, just behind some rubble,
-                    there was another fortress from the Crusader era. The rubble
+                    there was another fortress from the Crusader era (az-Zahib to the west,
+                    the
+                    Crusader fort
+                    to the east). The rubble
                     in between the two sites represents looting pits. Sadly, this is a problem all over
                     Jordan. With limited funds focused on the more established sites, ruins and looting pits often go
                     hand-in-hand in the Kingdom.
@@ -644,14 +656,19 @@
             <section id="13" class="scene photo-scene" data-scene-id="place10">
                 <div class="figure contain" style="background-image:url(img/L1030405.jpg);"></div>
                 <p>
-                    <a class="location" data-layer-id="dayralkahf">Dayr al-Kahf</a>, the “Cave Monastery," often overshadowed by
-                    its neighbor, <a class="location" data-layer-id="ummaljimal">Umm al-Jimal</a>, just a day’s camel ride
+                    <a class="location" data-layer-id="dayralkahf">Dayr al-Kahf</a>, the “Cave Monastery," often
+                    overshadowed by
+                    its neighbor <a class="location" data-layer-id="ummaljimal">Umm al-Jimal</a> just a day’s camel
+                    ride
                     northwest of Usaykhim and a scant three kilometers south of the
-                    Syrian border, sits the qasr of <a class="location" data-layer-id="dayralkahf">Dayr al-Kahf</a>. Built with
+                    Syrian border, sits the qasr of <a class="location" data-layer-id="dayralkahf">Dayr al-Kahf</a>.
+                    Built with
                     local basalt like <a class="location" data-layer-id="usaykhim">Qasr Usaykhim</a>
-                    (as opposed to limestone like its nearest neighbor to the west, <a class="location" data-layer-id="ummaljimal">Umm al-Jimal</a>) it is thought <a class="location" data-layer-id="dayralkahf">Dayr al-Kahf</a>
+                    (as opposed to limestone like its nearest neighbor to the west, <a class="location"
+                        data-layer-id="ummaljimal">Umm al-Jimal</a>) it is thought <a class="location"
+                        data-layer-id="dayralkahf">Dayr al-Kahf</a>
                     functioned as a Roman sentry post in the 4th century. Its still-standing Roman arch
-                    (far-left) lends credence to this idea.
+                    (far-right) lends credence to this idea.
                 </p>
             </section>
             <section id="14" class="scene photo-scene" data-scene-id="place11">
@@ -678,11 +695,13 @@
                 <p>
                     Our lovely “tour guide” who was born and raised in the village – and only
                     traveled beyond it a few times in his so-far long life – explained that until the 1980s, people used
-                    the <a class="location" data-layer-id="dayralkahf">Dayr al-Kahf</a> as living quarters. This is evinced by the
+                    the <a class="location" data-layer-id="dayralkahf">Dayr al-Kahf</a> as living quarters. This is
+                    evinced by the
                     mud-and-straw plaster remnants on the
                     walls, ceilings, and archways. Around the country, as tourism became an ever-increasingly-important
                     economic sector, the government built nearby villages to relocate many locals who at that time
-                    inhabited historic sites (like <a class="location" data-layer-id="dayralkahf">Dayr al-Kahf</a> and even
+                    inhabited historic sites (like <a class="location" data-layer-id="dayralkahf">Dayr al-Kahf</a> and
+                    even
                     Petra), to new villages built for them. In some
                     regions this worked well, in others, the historically populated village/location became a ghost
                     town.
@@ -695,22 +714,27 @@
                     well as local residences. While obviously the columns and their sections do not match, the locals
                     used what they could find to create this entranceway into their village – an example of what some
                     call “Bedouin Ingenuity”. The locals are masters at using whatever they have on hand to remedy a
-                    perceived problem. (<a class="location" data-layer-id="dayralkahf">Dayr al-Kahf's</a> key master and my wife
+                    perceived problem. (<a class="location" data-layer-id="dayralkahf">Dayr al-Kahf's</a> key master and
+                    my wife
                     standing in the entrance).
                 </p>
             </section>
             <section id="17" class="scene photo-scene" data-scene-id="place14">
-                <div class="figure contain" style="background-image:url(img/L1030089.jpg);"></div>
+                <div class="figure zoom-height" style="background-image:url(img/L1030089.jpg);"></div>
                 <p>
-                    From the rubble pile in <a class="location" data-layer-id="ashid">Qasr Ashid</a>, it is not too difficult
+                    From the rubble pile in <a class="location" data-layer-id="ashid">Qasr Ashid</a>, it is not too
+                    difficult
                     to imagine how
                     this qasr must have looked when in use. Still, after identifying several potential
-                    locations, this was a coincidental discovery en route to finding another (<a class="location" data-layer-id="qilat">Qasr Qilat</a>). Being lost in
+                    locations, this was a coincidental discovery en route to finding another (<a class="location"
+                        data-layer-id="qilat">Qasr Qilat</a>). Being lost in
                     the Eastern Desert is exciting. For the first few hours. Even if you find a “road”, it may not lead
-                    to anywhere specific. That is how I found (<a class="location" data-layer-id="qilat">Qasr Qilat</a>).
+                    to anywhere specific. That is how I found (<a class="location" data-layer-id="qilat">Qasr
+                        Qilat</a>).
                     Cresting a small mountain, I saw two herders
                     sitting on top of this pile of rocks. I stopped, got out of my truck, and walked over to ask
-                    directions to (<a class="location" data-layer-id="qilat">Qasr Qilat</a>). They just stared at each other
+                    directions to (<a class="location" data-layer-id="qilat">Qasr Qilat</a>). They just stared at each
+                    other
                     for a moment, and then pointed around them.
                     Imagine my surprise when they said they were sitting on a (<span
                         style="font-style: italic;">qasr</span>)!
@@ -742,7 +766,8 @@
             <section id="20" class="scene photo-scene" data-scene-id="place17">
                 <div class="figure" style="background-image:url(img/L1030105.jpg);"></div>
                 <p>
-                    In <a class="location" data-layer-id="qilat">Qasr Qilat</a>, while on my way down the mountainside, I
+                    In <a class="location" data-layer-id="qilat">Qasr Qilat</a>, while on my way down the mountainside,
+                    I
                     met a young boy relaxing in
                     the shade of a large water tanker. I asked him if he knew where (<span
                         style="font-style: italic;">Qilat</span>) was, and he just stared at me.
@@ -753,7 +778,7 @@
                     reservoir. </p>
             </section>
             <section id="21" class="scene photo-scene" data-scene-id="place17">
-                <div class="figure contain" style="background-image:url(img/L1030097.jpg);"></div>
+                <div class="figure zoom-height" style="background-position: 75% 50%; background-image:url(img/L1030097.jpg);"></div>
                 <p>
                     A few moments later, he told me to stop. I asked him where <span style="font-style: italic;">
                         Qilat</span> was, and he said, (<span style="font-style: italic;">houn</span>) (“here”),
@@ -4104,9 +4129,8 @@
                 {
                     "id": "place7",
                     "layers": [{
-                            "idRef": "usaykhim"
-                        }
-                    ],
+                        "idRef": "usaykhim"
+                    }],
                     "zoom": 16,
                     "baseLayer": [{
                         "type": "esri-basemap",
@@ -4221,13 +4245,12 @@
                     }],
                     "zoom": 13,
                     "baseLayer": [{
-                            "type": "esri-basemap",
-                            "url": "Topographic",
-                            "options": {
-                                "detectRetina": false,
-                            }
-                        },
-                    ],
+                        "type": "esri-basemap",
+                        "url": "Topographic",
+                        "options": {
+                            "detectRetina": false,
+                        }
+                    }, ],
                     "style": {
                         //"filter": "grayscale(0%)",
                         "opacity": 0.95,
@@ -4237,9 +4260,8 @@
                 {
                     "id": "place12",
                     "layers": [{
-                            "idRef": "dayralkahf"
-                        },
-                    ],
+                        "idRef": "dayralkahf"
+                    }, ],
                     "zoom": 16,
                     "baseLayer": [{
                         "type": "esri-basemap",
@@ -4312,9 +4334,8 @@
                 {
                     "id": "place15",
                     "layers": [{
-                            "idRef": "ashid"
-                        }
-                    ],
+                        "idRef": "ashid"
+                    }],
                     "zoom": 16,
                     "baseLayer": [{
                         "type": "esri-basemap",
@@ -4358,9 +4379,8 @@
                 {
                     "id": "place17",
                     "layers": [{
-                            "idRef": "qilat"
-                        }
-                    ],
+                        "idRef": "qilat"
+                    }],
                     "zoom": 16,
                     "baseLayer": [{
                         "type": "esri-basemap",
@@ -4433,8 +4453,7 @@
                 },
                 {
                     "id": "place25",
-                    "layers": [
-                        {
+                    "layers": [{
                             "idRef": "amman"
                         },
                         {
@@ -4462,7 +4481,7 @@
                             "idRef": "usaykhim"
                         }
                     ],
-                    "zoom": 9,
+                    "zoom": 8,
                     "baseLayer": [{
                         "type": "esri-basemap",
                         "url": "NationalGeographic",
