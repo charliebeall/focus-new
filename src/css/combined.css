@@ -3406,18 +3406,18 @@ p {
 }
 
 /* Contact Wrap */
-#contactwrap {
+#contact {
     background-color: rgba(0, 123, 71, 0.1);
     margin-top: 0px;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-#contactwrap p {
+#contact p {
     *color: #f2f2f2;
 }
 
-#contactwrap small {
+#contact small {
     font-size: 13px;
 }
 
@@ -3425,7 +3425,7 @@ p {
     background-image: url(../img/agsglobe.jpg);
 }
 
-#contactwrap label {
+#contact label {
     color: #f2f2f2;
     margin-top: 10px;
 }
