@@ -1,0 +1,1045 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Street Art in Baltimore: A Catalyst for Change</title>
+    <meta name="description" content="FOCUS on Geography: Street Art in Baltimore: A Catalyst for Change">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,baltimore,steet,art,change,graffiti,civil rights,activism">
+    <meta name="author" content="Meredith K. Stone">
+    <meta name="author" content="Geoffrey L. Buckley">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Poppins|Raleway|Titillium+Web" rel="stylesheet">
+
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        #text {
+            background: #fff;
+        }
+
+        #text h2 {
+            font-family: 'Carter One', cursive;
+            text-transform: none;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0px 1px 3px black;
+            margin-top: 0px;
+            margin-bottom: 40px;
+        }
+
+        #text h3 {
+            font-family: 'Carter One', cursive;
+            text-transform: none;
+            color: rgba(25, 101, 136, 0.856);
+        }
+
+        #nav,
+        #toggle-map {
+            background: rgb(114, 131, 126);
+        }
+
+        span.place-text {
+            font-family: 'Carter One', cursive;
+            color: #fff;
+        }
+
+        #text a,
+        a.location,
+        div.tooltip a {
+            color: rgba(59, 73, 104, 0.7);
+            border-bottom-color: rgba(59, 73, 104, 0.7);
+        }
+
+        #text a:hover,
+        a.location:hover,
+        div.tooltip a {
+            background: rgba(0, 42, 143, 0.1);
+            text-decoration: none;
+        }
+
+        path.line {
+            stroke: rgb(216, 66, 85) !important;
+        }
+
+        path.marker-path {
+            stroke: rgb(216, 66, 85) !important;
+            fill: rgb(216, 66, 85) !important;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: rgba(59, 73, 104, 0.7);
+            -webkit-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgba(59, 73, 104, 0.7);
+            transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-ms-fill {
+            background-color: rgba(59, 73, 104, 0.7);
+            -ms-transition: width 0.5s ease-in-out;
+        }
+
+        svg text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            fill: #fff;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip.bottom .tooltip-arrow,
+        .tooltip.bottom-left .tooltip-arrow,
+        .tooltip.bottom-right .tooltip-arrow {
+            border-bottom-color: rgb(216, 66, 85);
+        }
+
+        .tooltip.left .tooltip-arrow {
+            border-left-color: rgb(216, 66, 85);
+        }
+
+        .tooltip-inner {
+            background: rgb(216, 66, 85);
+            color: #fff;
+        }
+
+        .tooltip-inner a.location,
+        #photo-caption a.location {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .author {
+            margin-bottom: 1em;
+            font-size: 14px !important;
+            opacity: 1;
+        }
+
+        .author-photo {
+            width: 100%;
+            margin-right: 0px;
+            vertical-align: middle;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+        }
+
+        .author-info {
+            *background-color: rgba(231, 250, 248, 0.89);
+            font-size: 1.2em;
+            margin-top: 5px;
+            color: white;
+            text-shadow: 0px 1px 3px black;
+        }
+
+        /*leaflet popup*/
+        div.leaflet-div-icon {
+            background-color: rgba(79, 90, 95, 0.9);
+            width: auto !important;
+            min-width: 100px !important;
+            font-family: 'Poppins', sans-serif;
+            z-index: 1000 !important;
+        }
+
+        div.figure {
+            height: 500px !important;
+        }
+
+    </style>
+</head>
+
+<body class="scrolled">
+    <progress></progress>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id="nav" class="title-hidden dotstyle dotstyle-scaleup">
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <ul class="nav previous">
+            <li class="previous">
+                <a href="#"><span class="fa fa-chevron-up"></span></a>
+            </li>
+        </ul>
+        <ul class="nav sections">
+        </ul>
+        <ul class="nav next">
+            <li class="next">
+                <a href="#"><span class="fa fa-chevron-down"></span></a>
+            </li>
+        </ul>
+    </div>
+    <!-- Add your site or application content here -->
+    <div id="background"></div>
+    <div id="map" class="title-hidden feature-article"></div>
+    <div id="overview-map" class="title-hidden transparent"></div>
+    <div id="foreground"></div>
+    <div id="photos" style="">
+        <div id="photo-caption" class="title-hidden"></div>
+    </div>
+    <div id="shadow"></div>
+    <div id="toggle-map" class="focus-green"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+    <div id="main-nav" class="light">
+        <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+                <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"
+                    style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+                <path id="pathE" d="M 300 500 L 700 500"
+                    style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+                <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
+                    style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+            </svg>
+
+            <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+        </div>
+        <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg" /></a>
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <div id="menu" class="container-fluid"></div>
+    </div>
+    <div id="text" class="title-hidden">
+        <div class="content scenes">
+            <section id="introduction" class="scene" data-scene-id="scene-1" title="Introduction">
+                <div class="title title-photo"
+                    style="background-size: 175% auto; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.0)), url(img/fig7.jpg);">
+                    <h2>Street Art in Baltimore: A Catalyst for Change</h2>
+                    <div class="container-fluid">
+                        <div class="author row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                                <img class="author-photo" src="img/author_stone.jpg" />
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-8 author-info">
+                                <span class="name">Meredith K. Stone</span>, <span class="organization">Annual
+                                    Meeting and Outreach Associate, American Association of Geographers</span>
+                            </div>
+                        </div>
+
+                        <div class="author row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                                <img class="author-photo" src="img/author_buckley.jpg" />
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-8 author-info">
+                            <span class="name">Geoffrey L. Buckley</span>,
+                            <span class="organization">Ohio
+                                University</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2019.62.5f</div>
+
+        <div class="citation"><span class="citation-label">Acknowledgments:</span> This research was funded by a
+            grant
+            from the National Science Foundation Long-Term Ecological Research Program (DEB-1027188).</div>
+
+        <div class="citation">
+        Scene Data: <a
+        href="https://www.google.com/maps/d/u/0/viewer?mid=1Ibgdp6yx3ublPAx3Bch4OgbFJPggelD_">Map photos and locations captured by Maria Wolfe @baltimurals.</a></a> 
+        </div>
+        <h3>Introduction</h3>
+        <p>In April 2015, Baltimore, Maryland was thrust into the national spotlight when Freddie Gray, a
+            twenty-five-year-old African American resident, lapsed into a coma while in police custody. His
+            death and subsequent funeral triggered a wave of protests in the state’s largest city. While these
+            events sparked a period of unrest, Baltimore community members also responded in meaningful and
+            powerful ways through the creation of street art.</p>
+        <p>One of the first efforts got its start at a candlelight vigil for Gray. Local street artist Justin
+            Nethercut, known as Nether, teamed up with Gray’s friend Brandon Ross to create a commemorative
+            mural near the spot where Gray was arrested in the Sandtown-Winchester neighborhood (Giordano 2015).
+            The mural they created shows Gray, front and center, flanked by historic civil rights leaders Martin
+            Luther King, Jr., Rosa Parks, and Thurgood Marshall on one side and contemporary protestors under
+            the banner of the Black Lives Matter movement on the other (Giordano 2015; <a href="#figure1">Figure
+                1</a>).</p>
+        <div id="figure1" class="figure" style="background-image:url(img/fig1.jpg);"></div>
+        <div class="caption"><a class="location" data-layer-id="figure1">Figure 1</a>: Freddie Gray Mural by
+            Nether in Sandtown-Winchester. Gray is pictured in
+            the middle, surrounded by activists past and present. Photo by Meredith K. Stone.</div>
+        <p>Once completed, Nether noted, it was Ross who mobilized the community and brought Gray’s family and
+            friends to visit. Longtime Baltimore Sun editorial writer and arts columnist Glenn McNatt said
+            neighborhood people came to treat the site like hallowed ground.</p>
+        </section>
+        <section id="2" class="scene" data-scene-id="scene-2" title="History (1)">
+            <h3>History</h3>
+            <p>Street art, a visual art form created on-site and often without formal approval, works in ways that
+                museum and gallery art cannot. It comes into view without warning, surprising observers with imagery
+                that can be both beautiful and provocative. Unlike a traditional museum experience where one goes
+                expecting to see art and may even know precise pieces and where to find them in the galleries,
+                street art is more likely to catch audiences off guard. Typically, its site is part of its subject
+                and stands as a form of commentary—sometimes subtle, sometimes not—on the political and social
+                climate of its location. The Freddie Gray mural was imbued with messages about racial inequality and
+                conflict. Studied carefully, it, like much other street art, reveals the diverse motivations and
+                power dynamics of Baltimore.</p>
+            <p> Baltimore’s history makes it especially apt for street art. Inequality, segregation, and poverty
+                were perpetuated through slavery, Jim Crow, redlining, and housing discrimination (Pappoe 2016),
+                leaving the majority of its residents without power or voice. According to an interactive map
+                produced by the Baltimore Office of Promotion and the Arts (BOPA), however, there are at least 165
+                murals in the city today that raise new voices (<a href="#figure2">Figure 2</a>). </p>
+            <div id="figure2" class="figure" style="background-image:url(img/fig2.png);"></div>
+            <div class="caption">Figure 2: <a target="_blank"
+                    href="https://www.google.com/maps/d/u/0/viewer?mid=1ufUGSVDUu9bMrSdwR3Ays9DmmzA&ll">Map of
+                    Murals</a> in Baltimore since 1987. Colored points represent murals
+                sponsored by different entities. Source: Baltimore Mural Program, a program of the Baltimore Office
+                of Promotion & The Arts.
+            </div>
+        </section>
+        <section id="3" class="scene" data-scene-id="scene-2" title="History (2)">
+            <p>In 1910, Baltimore enacted one of the country’s first segregation ordinances; it was the first city
+                to designate “white” and “black” blocks. Following World II and continuing through today, decades of
+                deindustrialization, housing discrimination, and white middle class migration to the suburbs have
+                left a legacy of segregation, disinvestment, vacancy, and poverty in inner city, low income areas
+                (Friedman 2012; Pappoe 2016). Police violence has frequently occurred along racial lines. </p>
+            <p>The collective result of these policies is a spatial pattern of occupancy in the city known today as
+                the “black butterfly” and the “white L.” Predominantly African American neighborhoods concentrate in
+                East and West Baltimore forming the wings of the “butterfly,” while mostly White neighborhoods
+                cluster in the middle and then wrap around the harbor in an “L” shape (Brown 2016; <a
+                    href="#figure3">Figure 3</a>). Brown
+                (2016) indicates that the “White L” enjoys better transportation options and more favorable
+                relationships with city government. At present, black citizens comprise sixty-three percent of
+                Baltimore’s population and twenty-three percent of city residents live in poverty (United States
+                Census 2015).</p>
+            <div id="figure3" class="figure" style="background-image:url(img/fig3b.png);"></div>
+            <div class="caption">Figure 3: The “black butterfly” and “white L” map of Baltimore. Source <a
+                    href="https://www.washingtonpost.com/graphics/2018/national/segregation-us-cities/ "
+                    target="_blank">Washington
+                    Post.</a></div>
+            <p>Drawing on conversations with six artists and educators, this paper explores how this powerful form
+                of expression is perceived as a catalyst for social change. Street art’s murals are symbolic
+                artifacts in and of themselves. Produced for specific sites, the symbolism of murals gets reinforced
+                by their location. Writing about murals in Belfast, Northern Ireland, Neil Jarman (1998)
+                contextualized street art by stating “A sense of place can always be understood in terms of the
+                content of the paintings…” but to fully engage “demands some wider recognition of placing, of the
+                area beyond the immediate frame or the edge of the wall, which all too often is the limit or
+                boundary... To see them as site-specific requires awareness of the physical and social environment
+                in which the images are produced and with which they interact. Meaning changes as the frame widens.”
+                It is as though one must see the wall and entire room beyond the picture frame to understand street
+                art. Belfast’s murals, when understood within the larger frame, become a conversation about violence
+                and social unrest (Jarman 1998).</p>
+            <p>Recent Black Lives Matter demonstrations highlight the value of artwork as a way to help communities
+                grieve and heal (Brooks 2016). Social media sharing of art related to #blacklivesmatter allows
+                images to extend their effects further than the local communities where violence has happened. Thus
+                the movement captured in street art becomes a very visual experience. Danielle Brooks says this is
+                “a new age of injustice, one with a heightened awareness of state violence and a national reckoning
+                with the state-sanctioned disposability of black lives… With the rise of new technologies, the
+                killings of unarmed black men as well as women – Trayvon Martin, Michael Brown, Tamir Rice, Freddie
+                Gray, Rekia Boyd – are etched into our public consciousness” through art in different forms (Brooks,
+                D. 2016)</p>
+        </section>
+        <section id="4" class="scene" data-scene-id="scene-4" title="What is Street Art?">
+            <h3>What is Street Art?</h3>
+            <p>French philosopher Henri Lefebvre once wrote, “There is nothing, in history, or in society, which
+                does not have to be achieved and produced” (Lefebvre 2009, 68). People are actors in creating their
+                own environments, and, art is intimately connected to how humans and their social establishments are
+                linked. In Cities Within the City, Kurt Iveson (2013) states that while we create our environment,
+                the way we do so is complicated by differences in power between contributors. For Lefebvre, it is
+                important to know who produces, what they produce, how, why, and for whom. Only then can one
+                understand urban space, its creators, intentions, and consumers.</p>
+            <div id="figure4" class="figure" style="background-image:url(img/fig4.jpg);"></div>
+            <div class="caption"><a class="location" data-layer-id="figure4">Figure 4</a>: Mural in Sandtown-Winchester commemorating Freddie Gray and the Black
+                Lives Matter Movement. This mural sends an explicit political message. Photo by Meredith K. Stone.
+            </div>
+            <p>Yet there is no explicit text that states the contributions, especially of the less powerful. That is
+                where street art comes in. “Street art,” is usually defined as a type of visual expression that
+                conveys meaning through different media such as murals, posters, and installations. It is primarily
+                an urban phenomenon and has strong ties to the hip hop culture of the late 1970s and 1980s. It is
+                rooted in the tradition of graffiti, but street art and graffiti are not synonymous. According to
+                Lewisohn (2008, 15) graffiti’s origins were less political than street arts’. Graffiti wasn’t “so
+                much about connecting with the masses… it’s an internal language, it’s a secret language.” It was
+                often viewed negatively as an illegal nuisance (Lewisohn 2008, 15). But as it evolved during the
+                protest movements of the 1970s, graffiti gained some recognition for its artistic creativity and its
+                ability to spread political and social messages (Cowick 2015; <a href="#figure4">Figure 4</a>).</p>
+            <p>The street art movement evolved out of this milieu and is perhaps best understood as an expression of
+                lost voices and of resistance. According to Carmen Cowick: “Street art has the ability to provide a
+                historical narrative to a disenfranchised voice. When the historical narrative is created by those
+                in power due to media control, the people sometimes take to the streets to create their own
+                narrative in order to level the playing field” (2015, 31). Street art often calls audiences and
+                viewers to action, encouraging them to fight for social justice, political action, and justice
+                (Miladi 2015).</p>
+            <p>This connection to social purpose is part of why street artists are often recognized as artists,
+                unlike graffiti “writers.” Street artists must spend a considerable amount of time preparing pieces
+                in advance, whereas graffiti artists need not prepare anything before painting a wall. According to
+                Lewisohn (2008), street artists may be seen as part of the “fine-arts” community (Lewisohn 2008).
+                Banksy is perhaps the best known example of a socially engaged street artist, with Shepard
+                Fairey—creator of President Barack Obama’s iconic 2008 campaign poster—a close second (Warnes 2013).
+                Street art pieces, such as those created by Banksy, tend to be site- and content-specific. By
+                contrast, graffiti art’s content is not location-driven and can feel ubiquitous, rather than
+                specific (Lewisohn 2008). In practice, these distinctions can blur, especially as cities vary in how
+                they define, permit, and engage with these different types of art and artists and as communities
+                feel empowered to create their stories.</p>
+
+        </section>
+        <section id="5" class="scene" data-scene-id="scene-5" title="What is Street Art? (2)">
+            <p>While graffiti differs from street art as a less formal and more personal public art form, the
+                commissioned public monument is a more formal and officially sanctioned art form. Baltimore was
+                known as “The Monumental City” during the late nineteenth century due to the many bronze statues and
+                memorials that adorned its parks and squares (Kachadourian 2010). Many of these monuments depict
+                past events and people in a way that systematically erases, damages, or excludes disenfranchised and
+                marginalized groups or politically and socially distressing events (Miles 2010; Burk 2006). They
+                produce a story, a legacy, and a landscape, as many scholars have discussed (Lowenthal 1975, Foote
+                1997, Hoelscher 1998, DeLyser 2001, and Stone et al. 2016) that does not represent the city’s
+                current residents and may even harm them. As Adrienne Burk (2006, 953) points out, an unsettling
+                aspect of this art form is that memory is both “organized forgetting as well as organized
+                remembering.” Derek Alderman (2010, 90) reinforces this notion when he points out that “what is
+                commemorated is not synonymous with all that has gone on in the past; what is defined as memorable
+                or historically significant is open to social control, contest, and negotiation.” Whose conception
+                of the past and what is suitable to be commemorated is, in large part, a political process where
+                those in power control the outcome. In Baltimore, street art challenges our conception of what is
+                “memorable” or “historically significant” and gives residents the chance to tell a story that has
+                been purposefully forgotten or otherwise erased from historical consciousness (<a href="#figure5">Figure
+                    5</a>).</p>
+
+            <div id="figure5" class="figure" style="background-image:url(img/fig5.jpg);"></div>
+            <div class="caption"><a class="location" data-layer-id="figure5">Figure 5</a>: Pontella Mason’s “The Baltimore Wall of Pride-Africa East to West,” a
+                mural in Sandtown-Winchester depicting major black leaders. Photo by Meredith K. Stone.</div>
+        </section>
+        <section id="6" class="scene" data-scene-id="scene-2" title="Street Art in Baltimore">
+            <h3>Street Art in Baltimore</h3>
+            <p>Maryland Institute College of Art (MICA) and Baltimore Office of Promotion & the Arts (BOPA) are
+                important sponsors of street art in Baltimore. Students enrolled in MICA’s Masters of Fine Arts in
+                Community Arts program work with communities to initiate and complete art projects, including, but
+                not limited to, murals and street paintings. For them, neighborhood members’ input is essential.
+                BOPA also works closely with the community but on a different scale because of its status as a
+                quasi-governmental entity. BOPA is a 501 c (3) nonprofit organization that functions as the city’s
+                arts council. One longstanding effort promoted by BOPA has been its mural program. Launched in 1975,
+                under former mayor William Donald Schafer, the program has sought “to make Baltimore neighborhoods
+                more attractive, instill a sense of pride, provide employment for local artists in their own field,
+                combat graffiti in neighborhoods, and engage young people in the beautification of their own
+                communities” (BOPA 2016). This initiative has contributed to a tradition of mural making in
+                Baltimore that has enabled local artists to engage with neighborhoods on a deeper level.</p>
+            <p>Two other active organizations are Creative Alliance and Jubilee Arts. Both have close relationships
+                with MICA and BOPA but function more at the neighborhood level. Creative Alliance is located in
+                Highlandtown, a diverse neighborhood in southeastern Baltimore, and supports a growing Latino
+                presence in the city through collaborative arts projects and creative spaces. Jubilee Arts is
+                located in Sandtown-Winchester, Freddie Gray’s neighborhood, a neighborhood that struggles with
+                vacancy, poverty, and drug abuse. The organization focuses on creating a space for art, engaging
+                youth in mural projects, and remembering the historic neighborhood’s most famous residents, such as
+                Thurgood Marshall and Billie Holiday. Jubilee Arts has been extensively involved in
+                justice-motivated projects since the Baltimore uprising in 2015.</p>
+            <p>Public events have played important roles in Baltimore’s street art landscape. Open Walls, the annual
+                street art festival in the Station North neighborhood, describes itself as an “unparalleled street
+                art project managed by and located in the Station North Arts & Entertainment District” (Open Walls
+                Baltimore 2014). Gaia, a well-known artist who splits time between Baltimore and traveling the
+                world, curates the project. While Open Walls has come under fire in recent years for its lack of
+                community outreach and support for local artists—a criticism that has been leveled at BOPA and MICA
+                at times-- all these groups have offered support in varying degrees to the city’s artistic
+                community.</p>
+        </section>
+        <section id="7" class="scene" data-scene-id="scene-7" title="Street Art in Baltimore">
+            <h3>A Catalyst for Change</h3>
+            <p>In October 2016 we interviewed six artists and arts educators about what constitutes street art in
+                Baltimore. As we talked with them, it became increasingly clear that street art is hard to define.
+                In large part, this stems from the fact that what distinguishes it is neither materials nor
+                techniques so much as purpose and immediacy. Equally difficult, there is no agreement on what it is.
+            </p>
+            <p> Maria, a public art specialist who works for BOPA, even questioned the usefulness of the term,
+                viewing it as incredibly transient: <blockquote>I see street art very much as this sort of I don’t
+                    know how to explain it … but it’s essentially hip public art. I would even venture to say that
+                    it’s falling out of fashion as a term. I think people are starting to get kind of bored of that
+                    name … I’m convinced that in like four years it will be called something completely different
+                    because … thinking of public art as something very stale, often geometric and inaccessible, and
+                    not engaging or too permanent, not responsive enough to the now … Street art is far more
+                    temporary, far more quick.</blockquote><cite>--Note that pseudonyms were used to allow
+                    interviewees to remain anonymous.</cite>
+
+            </p>
+            <p>A critical aspect of Maria’s definition of street art is
+                that it engages with people, is constantly changing, and responds to current events. She does not
+                mention political activism, but the term “hip public art” implies work that is responsive and
+                innovative.</p>
+            <p>Another interviewee, Patricia, an artist and educator at MICA, favored a broad definition of street
+                art: “Street art … can incorporate everything. It could incorporate every genre of art. It can be
+                performance. It can be painting. It can be sculptural forms. It can be oral histories as you go
+                walking down the street. It depends on what one views as art, and again, art is in the eye and ear,
+                in my opinion, of the beholder.” She sees the street art as there to motivate and empower residents:
+                “It can be used as a catalyst to incite change, to facilitate change, to coerce change. It can be
+                beautiful and terrible. It can have a terrible—I’ll put it this way, it can have a terrible,
+                terrible beauty to it. It can be painful. It can be inspiring. That’s what I see. But it is about
+                the [collective] people more so than a [individual] person or an entity.”</p>
+            <p>Both Patricia’s and Maria’s remarks suggest street art hangs on its ability to bring people together
+                to inspire and to effect change. Joe, a community organizer and artist, agreed. Talking of events
+                surrounding the Black Lives Matter uprising in Baltimore when several buildings in his neighborhood
+                were set on fire, he invoked street art as an important response. He said:<blockquote>[A] street
+                    artist that’s doing street art is much more relevant and important to the community than someone
+                    you paid a lot of money to come in and do what they do. And I think [in] Baltimore because it’s
+                    trying to very much push empowerment and transformative change that you get people that
+                    represent … you know what? We don’t want to just fund another mural that’s just pleasing to the
+                    eye. We want stuff that’s going to speak about what we’re challenging because when you’re in a
+                    community, when things are burning down, it’s the forethought. You don’t want to be having
+                    conversations about race on burning buildings on top of rubble on top of burned down buildings
+                    and if you have these conversations beforehand … that’s when they’re authentic that’s when
+                    they’re earnest.</blockquote>
+
+            </p>
+            <p>Joe’s view is that any mural that addresses socio-political
+                challenges facing the community is far better than a “top-down” approach to art that enlists someone
+                to come in and paint something pretty on the wall. He advocates for street art that calls attention
+                to the very specific racial tensions that exist in Baltimore communities. He believes that street
+                art can be used as a tool to facilitate productive conversations and foster empowerment and
+                transformative change.</p>
+            <div id="figure6" class="figure" style="background-image:url(img/fig6.jpg);"></div>
+            <div class="caption"><a class="location" data-layer-id="figure6">Figure 6</a>: Sandtown-Winchester mural depicting Black Lives Matter activists by
+                artist Pablo Machioli. Photo by Meredith K. Stone.</div>
+            <p>The belief that street art should be used as a vehicle to promote social change finds voice in other
+                quarters as well. In his critique of Open Walls, Baynard Woods of the City Paper argues that the
+                festival lacks the “political edge” of other street art projects: “The best street art has always
+                had a subversive, political bent,” he writes. “In fact, Wall Hunters—curated by the street artist
+                Nether in conjunction with Carol Ott, a Republican who runs non-profit Housing Policy Watch, to draw
+                attention to vacant houses in Baltimore—feels, as a whole, so much more successful than Open Walls
+                because it maintains this political edge.” He continues: “Nether is able to accomplish the rare task
+                of seeking community input by taking their side against an enemy, helping them draw attention to the
+                deplorable condition of some of the vacants in their neighborhoods.” Thanks to the fact the project
+                is not publicly funded, he adds, it “feels rebellious and punk and yet also righteous” (Woods 2014;
+                <a href="#figure6">Figure 6</a>).</p>
+            <p>American and Argentinian street artists Matt Fox-Tucker, Alfredo Segatori, Pablo Machioli, and
+                Richard Best collaborated on a project, Roots/Raíces in 2016 that produced a mural depicting an
+                early species of human called Homo naledi (Smith 2016). An extinct species, part of our common human
+                ancestry, is used as an implicit contrast with the racial divides found in both countries. “What
+                interests me in particular with street art in Baltimore is that it feels really connected to the
+                community,” comments international artist Matt Fox-Tucker. “It is a form of protest, if you like,
+                but it's also about trying to bring communities together.” Fox-Tucker recognizes the importance of
+                protest and community-based art and sees this as a unique and positive aspect of Baltimore’s art
+                scene. Put another way, street art is good at making political statements but it means so much more
+                when it represents real people in a real place. It is an outlet for their voices, the things they
+                care about, and the history they wish to preserve (Smith 2016). </p>
+            <p>Maura Callahan, a local artist and student at MICA talked of the role of artists: sometimes they
+                instigate and lead social movements; sometimes they serve as historians, but they are always a part
+                of them. Here she discusses the ethics of political art and the drawbacks of creating art behind
+                closed doors:<blockquote>If an artist creates political images in support of a movement to be
+                    exhibited in a museum or gallery, but fails to participate in the movement's activism directly,
+                    there is an obvious gap between the ideas their art communicates and the ideas it intends to
+                    represent. If artists are to make effective political art, they must be directly involved in the
+                    movement …and not be totally isolated in their studio. And even when art is made in direct
+                    proximity to revolt, it should not be seen as a symbol of a movement, but as a result of that
+                    movement. Those artworks exist and they are effective because they express the anger, despair,
+                    or perplexity of injustice.</blockquote>
+
+            </p>
+            <p>Though Callahan does not specifically use the term
+                street art, her meaning is clear. Artists must participate in the movement’s activism if they want
+                their art to amplify the voices of the people involved. She believes that artists are responsible
+                for documenting their times: “Art has the power to heal, to distract, to offend, and, perhaps most
+                importantly, dictate how history is represented. So it seems appropriate to say that artists should
+                respond to contemporary, real world issues through their art, especially when non-political art can
+                feel like distractions—or worse, entertainment—when shit is going down.” For Callahan, one of the
+                major aspects of using art to oppose injustice is that it can influence the way our world is
+                presented. Documentation through the arts can be a powerful way to show current struggles as well as
+                joys. Art should also be opinionated, according to Callahan. She argues that art that does not make
+                a political statement is not engaging and instead feels trivial, like fun and games, when serious
+                challenges are at stake (Callahan 2015).</p>
+        </section>
+
+        <section id="8" class="scene" data-scene-id="scene-8" title="Conclusion">
+            <h3>Conclusion</h3>
+            <p>Local artists and citizens use street art as a tool that creates value. It can beautify vacant lots
+                and buildings, advocate for justice, and spark dialogue for sustained conversations about race and
+                social conflict in American culture. The Baltimore uprising of spring 2015 was a catalyst that led
+                to a surge of community-based street art designed to call attention to culture, pride, grassroots
+                activism, and those who have lost their lives due to police brutality. Afterward, Nina, of Jubilee
+                Arts in Sandtown, wanted the neighborhood murals to send positive messages that are socially
+                empowering: “We ended up painting those eight murals in Sandtown and those murals had a different
+                theme. They were about community pride, empowerment, and cultural history. If you drive around you
+                can pick [them] out based on themes we did.” The Sandtown murals, part of the youth mural program
+                Art @ Work organized by Jubilee Arts and BOPA, can be identified through their themes of community
+                pride, empowerment, and cultural history. Nina wants young people to be united and empowered. Here,
+                she discusses one of her favorite pieces in the neighborhood: <blockquote>It’s called “The Thoughts
+                    in my Head” by Megan Lewis and it’s an image of a black woman and she’s holding a tiny little
+                    world in her hand. Her hair is this huge afro and the top blends into these protestors and
+                    they’re in silhouette form. It’s really beautiful but I think it perfectly walks that line
+                    between something that is beautiful and striking—the aesthetics are incredible— but it doesn’t
+                    let you off the hook. It still kind of pokes at those bigger social ideas, without hammering you
+                    in the face with them. I think that’s where art can be so powerful. It can talk about those
+                    things without being didactic or preachy… I think it’s really powerful (<a href="#figure7">Figure
+                        7</a>).</blockquote>
+            </p>
+            <div id="figure7" class="figure" style="background-image:url(img/fig7.jpg);"></div>
+            <div class="caption"><a class="location" data-layer-id="figure7">Figure 7</a>: Megan Lewis’ “The Thoughts in my Head.” Photo by Meredith K. Stone.</div>
+            <p>This mural, just a few blocks away from the
+                Freddie Gray memorial mural gives people who walk or drive by it every day art that is beautiful and
+                inspiring social change. For all the street artists with whom we spoke, this is what makes the best
+                street art—or any kind of art. Through collaborative street art projects communities are able to
+                resist racial oppression and visually protest inequality, when they come from the bottom-up. Street
+                art is one way black Americans can claim the narrative of their lived realities and experiences yet
+                there is still much to learn about the dynamics of urban public space and street art.</p>
+            <p>Today, racial politics in Baltimore remain complicated. To mark the two-year anniversary of Freddie
+                Gray’s death and the riots that ensued, NBC News revisited Sandtown. Comments from locals indicate
+                that serious problems persist, though police-resident relations may be starting to improve. One
+                anonymous interviewee commented: “I think there’s more respect…The police come to community meetings
+                and they’re trying to build relationships.” At the same time, community activists and artists
+                continue to promote dialogue and create art. According to Nether, creator of the Freddie Gray mural,
+                painting a mural “isn't going to solve police brutality…But it can act as a catalyst to change
+                people's thoughts" (Campbell 2015). As the artists and educators we interviewed for this paper
+                noted, street art also can help us bind our wounds as we chart a course towards a more just society.
+            </p>
+            <h3>REFERENCES</h3>
+            <ul class="references">
+                <li>Alderman, D. H. 2010. Surrogation and the Politics of Remembering Slavery in Savannah, Georgia
+                    (USA). Journal of Historical Geography 36 (1): 90–101. </li>
+                <li>Boone, Christopher G., Geoffrey L. Buckley, J. Morgan Grove, and Chona Sister. 2009. Parks and
+                    People: An Environmental Justice Inquiry in Baltimore, Maryland. Annals of the Association of
+                    American Geographers 99 (4): 767–87. </li>
+                <li>Baltimore Office of Promotion & The Arts. 2016. Baltimore Mural Program. Baltimore Office of
+                    Promotion & The Arts. [http://www.promotionandarts.org/arts-council/baltimore-mural-program].
+                </li>
+                <li>Brooks, D. A. "How #BlackLivesMatter Started a Musical Revolution." The Guardian. March 13,
+                    2016. Accessed December 27, 2018.
+                    https://www.theguardian.com/us-news/2016/mar/13/black-lives-matter-beyonce-kendrick-lamar-protest.
+                </li>
+                <li>Brooks, K. "How Artists Are Supporting #BlackLivesMatter In The Wake Of Brutality." The
+                    Huffington Post. July 07, 2016. Accessed December 27, 2018.
+                    https://www.huffingtonpost.com/entry/artists-supporting-black-lives-matter_us_577e879ae4b0c590f7e84cb9
+                </li>
+                <li>Brown, L. "Two Baltimores: The White L vs. the Black Butterfly." Citypaper.com. June 28, 2016.
+                    Accessed December 27, 2018.
+                    https://www.citypaper.com/bcpnews-two-baltimores-the-white-l-vs-the-black-butterfly-20160628-htmlstory.html.
+                </li>
+                <li>Burk, A. 2006. Beneath and before: Continuums of Publicness in Public Art. Social and Cultural
+                    Geography 7 (6): 949–64.</li>
+                <li>Callahan, M. 2015. Crop Top Rites: On the Ethics of Political Art. Citypaper.com.
+                    [http://www.citypaper.com/arts/bcp-081215-column-croptoprites-20150812-story.html].</li>
+                <li>Campbell, C. 2015. “After Freddie Gray Unrest, Activists Hope to Transform Sandtown-Winchester
+                    with Murals, Gardens.” Baltimoresun.com. Accessed January 25, 2017.
+                    http://www.baltimoresun.com/news/maryland/freddie-gray/bs-md-freddie-gray-mural-garden-20150608-story.html
+                </li>
+                <li>Cowick, C. 2015. Preserving Street Art: Uncovering the Challenges and Obstacles. Art
+                    Documentation: Bulletin of the Art Libraries Society of North America 34(1): 29–44.</li>
+                <li>DeLyser, D. 2001. When Less Is More: Absence and Social Memory in a California Ghost Town. In
+                    Textures of Place, edited by P. Adams, S. Hoelscher, and K. Till. University of Minnesota Press.
+                    24–40.</li>
+                <li>Foote, K. E. 1997. Shadowed Ground: America’s Landscapes of Violence and Tragedy. Austin:
+                    University of Texas Press.</li>
+                <li>Friedman, M. T., J. J. Bustad, and D. L. Andrews. “Feeding the Downtown Monster: (Re)developing
+                    Baltimore’s ‘tourist Bubble.’” City, Culture and Society 3, no. 3 (September 2012): 209–18.
+                    doi:10.1016/j.ccs.2012.11.004</li>
+                <li>Giordano, J.M. 2015. Street Muralist Nether Connects the Civil Rights Movement with Sandtown in
+                    Freddie Gray Mural. Citypaper.com.
+                    [http://www.citypaper.com/arts/visualart/bcpnews-street-artist-nether-connects-civil-rights-movement-with-sandtown-in-freddie-gray-mural-20150526-story.html].
+                </li>
+                <li>Giordano, J.M. 2014. The Mural of the Story. Citypaper.com.
+                    [http://www.citypaper.com/news/features/bcp-cms-1-1624289-migrated-story-cp-20140129-featu-20140129-story.html].
+                </li>
+                <li>Hoelscher, S. 1998. Heritage on Stage: The Invention of Ethnic Places in America’s Little
+                    Switzerland. Madison: University of Wisconsin Press.</li>
+                <li>Iveson, K. 2013. Cities within the City: Do-It-Yourself Urbanism and the Right to the City.
+                    International Journal of Urban and Regional Research 37(3): 941–56.</li>
+                <li>Jarman, N. "Painting Landscapes: The Place of Murals in the Symbolic Construction of Urban
+                    Space." Edited by Anthony Buckley. In Symbols in Northern Ireland. Institute of Irish Studies,
+                    Queen's University of Belfast, 1998.</li>
+                <li>Kachadourian, G. 2010. Public Art on the Streets of Baltimore: From the Top Down and Bottom Up.
+                    Public Art Review 21 (2): 48–51.</li>
+                <li>Lefebvre, H. 2009. The Production of Space. Translated by Donald Nicholson-Smith. Malden, MA:
+                    Blackwell.</li>
+                <li>Lewisohn, r. 2008. Street Art: The Graffiti Revolution. New York, NY: Abrams.</li>
+                <li>Lowenthal, D. 1975. Past Time, Present Place: Landscape and Memory. Geographical Review 65 (1):
+                    1–36.</li>
+                <li>Miladi, N. 2015. Alternative Fabrics of Hegemony: City Squares and Street Graffiti as Sites of
+                    Resistance and Interactive Communication Flow. Journal of African Media Studies 7 (2): 129–40.
+                </li>
+                <li>Miles, M. 2010. Representing Nature: Art and Climate Change. Cultural Geographies 17 (1): 19–35.
+                    Open Walls Baltimore. 2012. About Open Walls Baltimore, Open Walls Baltimore.
+                    [https://openwallsbaltimore.com/].
+                </li>
+                <li>Owens, D. ""A City Divided": Baltimore Mends Two Years after Freddie Gray's Death." NBCNews.com.
+                    April 19, 2017. Accessed December 27, 2018.
+                    https://www.nbcnews.com/storyline/baltimore-unrest/city-divided-baltimore-mending-two-years-after-freddie-grays-death-n748101.
+                </li>
+                <li>Pappoe, Y. N. “Remedying the Effects of Government-Sanctioned Segregation in a Post-Freddie Gray
+                    Baltimore.” University of Maryland Law Journal of Race, Religion, Gender and Class 16 (April 1,
+                    2016): 115.</li>
+                <li>Smith, T. 2016. Cultural Exchange Unites Street Artists from Buenos Aires and Baltimore.
+                    Baltimoresun.com.
+                    [http://www.baltimoresun.com/entertainment/arts/artsmash/bal-cultural-exchange-unites-street-artists-from-buenos-aires-and-baltimore-20160817-story.html].
+                </li>
+                <li>Stone, M, I. Spangler, X. Griffin, and S. P. Hanna. 2016. Searching for the Enslaved in the
+                    ‘Cradle of Democracy’: Virginia’s James River Plantation Websites and the Reproduction of Local
+                    Histories. Southeastern Geographer 56 (2): 203–22.</li>
+                <li>Warnes, Kathy. 2013. Street Art. Salem Press Encyclopedia.
+                    Woods, B. 2014. Putting the Art Back in Street Art. Citypaper.com.
+                    [http://www.citypaper.com/arts/bcp-open-walls-baltimore-20140710-story.html].</li>
+                <li>Woods, B. 2013.Wall Hunters Takes on the Slumlords Crippling Baltimore. Citypaper.com.
+                    [http://www.citypaper.com/news/features/2013/bcp-cms-1-1545933-migrated-story-cp-20130904-featu-20130904-story.html].
+                </li>
+            </ul>
+        </section>
+        <div class="row footer-row"></div>
+    </div>
+    </div>
+    <div id="progress">
+        <div id="bar"></div>
+    </div>
+    <div id="bar-top"></div>
+    <div id="bar-bottom"></div>
+    <!-- inject:templates:html -->
+    <!-- endinject -->
+    <script src="../../../js/combined.js"></script>
+    <script src="./data/murals.js"></script>
+
+    <script>
+        Focus.Map.defaultOptions = {
+            color: 'rgb(207, 20, 43)',
+            fillColor: 'rgb(207, 20, 43)',
+            radius: 3,
+            weight: 4,
+            fillOpacity: 1,
+            opacity: 0.5
+        };
+
+        var figureStyle = {
+            "weight": 5,
+            "radius": 5,
+            "fillOpacity": .8
+        }
+
+        var muralAttribution =
+            '<a href="https://carto.com/attributions#basemaps" target="_blank">CARTO</a> & Mural locations were gathered by Maria Wolfe aka @baltimurals. All photos © Maria Wolfe. Data pulled from <a href="https://www.google.com/maps/d/u/0/viewer?mid=1Ibgdp6yx3ublPAx3Bch4OgbFJPggelD_" target="_blank">Google My Maps</a> (4/17/2019)';
+
+
+        var scenes = {
+            "features": [{
+                    "id": "murals",
+                    "type": "geojson",
+                    "data": murals,
+                    "style": {
+                        "radius": 4,
+                        "stroke": false,
+                        "fillOpacity": .8,
+                        "color": 'rgba(64, 162, 177)',
+                        "fillColor": 'rgba(64, 162, 177)'
+                        // "icon": {
+                        //     "html": "<div><img width='15px' style='text-align: center;' src='img/art-gallery-11.svg'/></div>",
+                        //     "iconSize": [15, 15],
+                        //     "iconAnchor": [15,15]
+                        // }
+                    }
+                },
+                {
+                    "id": "figure1",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-76.644660, 39.308280]
+                        },
+                        "properties": {
+                            "name": "Figure 1: Freddie Gray Mural by Nether in Sandtown-Winchester. Gray is pictured in the middle, surrounded by activists past and present.",
+                        }
+                    },
+                    "style": figureStyle
+                },
+                {
+                    "id": "figure4",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-76.646610, 39.307820]
+                        },
+                        "properties": {
+                            "name": "Figure 4: Mural in Sandtown-Winchester commemorating Freddie Gray and the Black Lives Matter Movement. This mural sends an explicit political message. Photo by Meredith K. Stone",
+                        }
+                    },
+                    "style": figureStyle
+                },
+                {
+                    "id": "figure5",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-76.642368, 39.308702]
+                        },
+                        "properties": {
+                            "name": "Figure 5: Pontella Mason’s “The Baltimore Wall of Pride-Africa East to West,” a mural in Sandtown-Winchester depicting major black leaders. Photo by Meredith K. Stone.",
+                        }
+                    },
+                    "style": figureStyle
+                },
+                {
+                    "id": "figure6",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-76.644650, 39.308670]
+                        },
+                        "properties": {
+                            "name": "Figure 6: Sandtown-Winchester mural depicting Black Lives Matter activists by artist Pablo Machioli. Photo by Meredith K. Stone.",
+                        }
+                    },
+                    "style": figureStyle
+                },
+                {
+                    "id": "figure7",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-76.648060, 39.304280]
+                        },
+                        "properties": {
+                            "name": "Figure 7: Megan Lewis’ “The Thoughts in my Head.” Photo by Meredith K. Stone.",
+                        }
+                    },
+                    "style": figureStyle
+                },
+            ],
+            "scenes": [{
+                    "id": "scene-1",
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+                        "attribution": muralAttribution
+                    },
+                    "bounds": {
+                        "figure1": true
+                    },
+                    "layers": [{
+                        "idRef": "murals"
+                    }, {
+                        "idRef": "figure1"
+                    }],
+                    "zoom": 16,
+                    "style": {
+                        "filter": "grayscale(0%)",
+                        "opacity": 1
+                    }
+                },
+                {
+                    "id": "scene-2",
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+                        "attribution": muralAttribution
+                    },
+                    "layers": [{
+                        "idRef": "murals"
+                    }],
+                    "zoom": 12,
+                    "style": {
+                        "filter": "grayscale(10%)",
+                        "opacity": 1
+                    }
+                },
+                {
+                    "id": "scene-4",
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+                        "attribution": muralAttribution
+                    },
+                    "bounds": {
+                        "figure4": true
+                    },
+                    "layers": [{
+                        "idRef": "murals"
+                    }, {
+                        "idRef": "figure4"
+                    }],
+                    "zoom": 16,
+                    "style": {
+                        "filter": "grayscale(0%)",
+                        "opacity": 1
+                    }
+                },
+                {
+                    "id": "scene-5",
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+                        "attribution": muralAttribution
+                    },
+                    "bounds": {
+                        "figure5": true
+                    },
+                    "layers": [{
+                        "idRef": "murals"
+                    }, {
+                        "idRef": "figure5"
+                    }],
+                    "zoom": 16,
+                    "style": {
+                        "filter": "grayscale(0%)",
+                        "opacity": 1
+                    }
+                },
+                {
+                    "id": "scene-7",
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+                        "attribution": muralAttribution
+                    },
+                    "bounds": {
+                        "figure6": true
+                    },
+                    "layers": [{
+                        "idRef": "murals"
+                    }, {
+                        "idRef": "figure6"
+                    }],
+                    "zoom": 16,
+                    "style": {
+                        "filter": "grayscale(0%)",
+                        "opacity": 1
+                    }
+                },
+                {
+                    "id": "scene-8",
+                    "baseLayer": {
+                        "type": "tile",
+                        "url": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+                        "attribution": muralAttribution
+                    },
+                    "bounds": {
+                        "figure7": true
+                    },
+                    "layers": [{
+                        "idRef": "murals"
+                    }, {
+                        "idRef": "figure7"
+                    }],
+                    "zoom": 16,
+                    "style": {
+                        "filter": "grayscale(0%)",
+                        "opacity": 1
+                    }
+                },
+            ]
+        };
+
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-79613259-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('#nav li.previous a').on('click', function (e) {
+                e.preventDefault();
+                var $prev = $('#nav').find('.sections li.active').prev();
+
+                if (!$prev.hasClass('previous')) {
+                    $prev.find('a').click();
+                }
+            });
+
+            $('#nav li.next a').on('click', function (e) {
+                e.preventDefault();
+                var $next = $('#nav').find('.sections li.active').next();
+
+                if (!$next.hasClass('next')) {
+                    $next.find('a').click();
+                }
+            });
+
+            var overviewMap = new Focus.Views.OverviewMapView({
+                model: new Backbone.Model({
+                    initialScene: new Focus.Models.SceneModel({
+                        "baseLayer": {
+                            "type": "tile",
+                            "url": "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png"
+                        },
+                        center: [39.308280, -76.644660],
+                        zoom: 15,
+                        showAttribution: false
+                    })
+                }),
+                showCenterPoint: true
+            });
+            var sceneManager = new Focus.Views.SceneManagerView({
+                el: $('body'),
+                initialScene: {
+                    baseLayer: {
+                        "type": "tile",
+                        "url": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+                    },
+                    center: [39.308280, -76.644660],
+                    zoom: 6,
+                    zoomDelta: 1,
+                    markerZoomAnimation: false
+                },
+                navigatorClass: Focus.Views.ScrollingSceneNavigator,
+                mapEngineClass: Focus.Views.LeafletMapEngine
+            });
+
+            var shareView = new Focus.Views.ShareView();
+            shareView.render();
+
+        });
+
+    </script>
+</body>
+
+</html>
