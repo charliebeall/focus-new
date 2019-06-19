@@ -1,0 +1,1387 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Geo Quiz #11</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
+        type='text/css'>
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .modal-content {
+            background-image: linear-gradient(0deg, rgba(242, 121, 33, 0.7), rgba(242, 121, 33, 0.7)), url(img/agsglobe.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <!-- Add your site or application content here -->
+    <div id="background"></div>
+    <div id="map" class="fill"></div>
+    <div id="foreground"></div>
+    <div id="photos"></div>
+    <div id="shadow"></div>
+    <div id="score-view">
+        <h3>0</h3>
+    </div>
+    <svg id="score-text" width="200px" height="200px" viewBox="0 0 200 200" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+        style="position: absolute;bottom: 50px;z-index: 10;right: calc(50% - 100px);text-align: center;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+        <g transform="matrix(0.748233,-0.663437,0.663437,0.748233,-71.4993,95.3792)">
+            <g transform="matrix(0.974148,0.22591,-0.22591,0.974148,14.9332,-26.5052)">
+                <text x="123.276px" y="51.996px"
+                    style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">S</text>
+            </g>
+            <g transform="matrix(0.889935,0.456088,-0.456088,0.889935,41.1167,-58.1446)">
+                <text x="141.028px" y="56.117px"
+                    style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">C</text>
+            </g>
+            <g transform="matrix(0.741486,0.670968,-0.670968,0.741486,84.934,-89.7957)">
+                <text x="158.999px" y="65.324px"
+                    style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">O</text>
+            </g>
+            <g transform="matrix(0.533523,0.845785,-0.845785,0.533523,149.897,-110.802)">
+                <text x="175.398px" y="80.49px"
+                    style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">R</text>
+            </g>
+            <g transform="matrix(0.322984,0.946405,-0.946405,0.322984,217.645,-110.12)">
+                <text x="185.791px" y="97.063px"
+                    style="font-family:'Raleway';font-weight:900;font-size:28px;fill:white;stroke-width:0.8px;stroke:#000;">E</text>
+            </g>
+        </g>
+    </svg>
+    <div id="main-nav" class="light">
+        <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+                <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"
+                    style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+                <path id="pathE" d="M 300 500 L 700 500"
+                    style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+                <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
+                    style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+            </svg>
+
+            <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+        </div>
+        <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg" /></a>
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <div id="menu"></div>
+    </div>
+    <div id="questions">
+        <div class="content scenes">
+        </div>
+    </div>
+    <div id="progress">
+        <div id="bar"></div>
+    </div>
+    <div id="bar-top"></div>
+    <div id="bar-bottom" class="large"></div>
+    <!-- inject:templates:html -->
+    <!-- endinject -->
+    <script src="../../../js/combined.js"></script>
+    <script>
+        var statePolygonStyle = {
+            "fillColor": 'rgba(51,170,220, 0.4)',
+            "color": "rgba(51,170,220, 0.75)"
+        };
+
+        var scenes = {
+            "scenes": [{
+                    "id": "place1",
+                    "baseLayer": {
+                        "type": "esri-basemap",
+                        "url": "NationalGeographic",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    },
+                    "layers": [{
+                            "id": "LW",
+                            "type": 'geojson',
+                            "style": {
+                                "weight": 10,
+                                "opacity": 0.3
+                            },
+                            "data": {
+                                "type": "Feature",
+                                "geometry": {
+                                    "coordinates": [-96.8957214, 49.4723994],
+                                    "type": "Point"
+                                },
+                                "properties": {
+                                    "name": "Lake of the Woods",
+                                    "style": {}
+                                }
+                            }
+                        }, {
+                            "id": "LS",
+                            "type": "geojson",
+                            "style": {
+                                "weight": 10,
+                                "opacity": 0.3
+                            },
+                            "data": {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-87.5, 47.7]
+                                },
+                                "properties": {
+                                    "name": "Lake Superior",
+                                    "style": {}
+                                }
+                            }
+                        }, {
+                            "id": "LH",
+                            "type": "geojson",
+                            "style": {
+                                "weight": 10,
+                                "opacity": 0.3
+                            },
+                            "data": {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-82.4, 44.8]
+                                },
+                                "properties": {
+                                    "name": "Lake Huron",
+                                    "style": {}
+                                }
+                            }
+                        }, {
+                            "id": "LO",
+                            "type": "geojson",
+                            "style": {
+                                "weight": 10,
+                                "opacity": 0.3
+                            },
+                            "data": {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-77.9, 43.7]
+                                },
+                                "properties": {
+                                    "name": "Lake Ontario",
+                                    "style": {}
+                                }
+                            }
+                        }
+                        // "style": {
+                        //     "icon": {
+                        //         "html": '<img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Rigging-longship.svg" style="width: 80px;"/>',
+                        //         "iconSize": [80, 80],
+                        //         "iconAnchor": [40, 0]
+                        //     }
+                        // }
+                    ],
+                    //"center": [-60, 48],
+                    "zoom": 4,
+                    "style": {
+                        "filter": "sepia(20%) brightness(80%)",
+                        "opacity": 0.7,
+                        //"background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
+                    }
+                },
+                {
+                    "id": "place2",
+                    //"center": [0, 0],
+                    "zoom": 7,
+                    "baseLayer": [{
+                            /*
+                            "type": "tile",
+                            "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                            */
+                            "type": "esri-basemap",
+                            "url": "Physical",
+                            "options": {
+                                "detectRetina": false
+                            }
+                        },
+                        {
+                            "type": "esri-basemap",
+                            "url": "ImageryLabels",
+                            "options": {
+                                "detectRetina": false
+                            }
+                        }
+                    ],
+
+                    layers: [{
+                        "id": "GS",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [34.33, 31.42]
+                            },
+                            "properties": {
+                                "name": "Gaza Strip",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "WB",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [35.38, 32]
+                            },
+                            "properties": {
+                                "name": "The West Bank",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "GH",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [35.74, 32.98]
+                            },
+                            "properties": {
+                                "name": "The Golan Heights",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "JD",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [36.51, 31.24]
+                            },
+                            "properties": {
+                                "name": "Jordan",
+                                "style": {}
+                            }
+                        }
+                    }],
+                    "style": {
+                        "filter": "brightness(0%)",
+                        "opacity": 0.6,
+                        "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                    }
+                },
+                {
+                    "id": "place3",
+                    //"center": [-79.541015625, -10.811724143275514],
+                    "zoom": 5,
+                    "baseLayer": [{
+                        "type": "esri-basemap",
+                        "url": "Physical",
+                        "options": {
+                            "detectRetina": true,
+                            //"imagerySet": "AerialWithLabels"
+                        }
+                    }, {
+                        "type": "esri-basemap",
+                        "url": "TerrainLabels",
+                        "options": {
+                            "detectRetina": true,
+                            //"imagerySet": "AerialWithLabels"
+                        }
+
+                    }],
+                    layers: [{
+                        "id": "SR",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [100.67, 49.26]
+                            },
+                            "properties": {
+                                "name": "Selenga River",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "OR",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [106.13, 50.25]
+                            },
+                            "properties": {
+                                "name": "Orkhon River",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "AR",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [121.47, 53.33]
+                            },
+                            "properties": {
+                                "name": "Amur River",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "UR",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [134.98, 48.43]
+                            },
+                            "properties": {
+                                "name": "Ussuri River",
+                                "style": {}
+                            }
+                        }
+                    }],
+                    "style": {
+                        "filter": "sepia(30%)",
+                        "opacity": 0.8,
+                        "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                    }
+                }, {
+                    "id": "place4",
+                    //"center": [-40, 38],
+                    "zoom": 2,
+                    "baseLayer": {
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    },
+                    layers: [{
+                        "id": "Amazon_River",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-60, -3.1]
+                            },
+                            "properties": {
+                                "name": "Amazon River",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "Niger_River",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [2.12, 13.51]
+                            },
+                            "properties": {
+                                "name": "Niger River",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "Danube_River",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [12.45, 43.94]
+                            },
+                            "properties": {
+                                "name": "Danube River",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "Nile_River",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [32.56, 15.5]
+                            },
+                            "properties": {
+                                "name": "Nile River",
+                                "style": {}
+                            }
+                        }
+                    }],
+                    "style": {
+                        "filter": "sepia(90%)",
+                        "opacity": 0.8,
+
+                        "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                    }
+                },
+                {
+                    "id": "place5",
+                    //"center": [-40, 38],
+                    "zoom": 5,
+                    "baseLayer": {
+                        /*
+                        "type": "tile",
+                        "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                        */
+                        "type": "esri-basemap",
+                        "url": "Imagery",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    }
+                    //     {
+                    //     "type": "esri-basemap",
+                    //     "url": "ImageryLabels",
+                    //     "options": {
+                    //     "detectRetina": true
+                    //     }
+                    // }
+                    ,
+                    layers: [{
+                        "id": "Andorra",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [1.51, 42.5]
+                            },
+                            "properties": {
+                                "name": "Andorra",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "Switzerland",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [8.33, 46.83]
+                            },
+                            "properties": {
+                                "name": "Switzerland",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "San_Marino",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [12.45, 43.94]
+                            },
+                            "properties": {
+                                "name": "San Marino ",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "Montenegro",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [19.3, 42.5]
+                            },
+                            "properties": {
+                                "name": "Montenegro",
+                                "style": {}
+                            }
+                        }
+                    }],
+                    "style": {
+                        "filter": "sepia(90%)",
+                        "opacity": 0.8,
+
+                        "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                    }
+                }, {
+                    "id": "place6",
+                    //"center": [170, -3.3704],
+                    "zoom": 8,
+                    "baseLayer":
+                    /*{
+                                       "type": "tile",
+                                       "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
+                                   }*/
+                    {
+                        "type": "tile",
+                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+                        "scheme": "xyz"
+                    },
+                    "style": {
+                        "filter": "invert(100%) sepia(50%)",
+                        "opacity": 0.7,
+                        "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/paper_3.png)"
+                    },
+                    layers: [{
+                        "id": "Sumatra",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "Sumatra"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    102, 0
+                                ]
+                            }
+                        }
+                    }, {
+                        "id": "Borneo",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "Borneo"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    114, 1
+                                ]
+                            }
+                        }
+                    }, {
+                        "id": "Timor",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "Timor"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    124.93, -9.23
+                                ]
+                            }
+                        }
+                    }, {
+                        "id": "New_Guinea",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "New Guinea"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    141, -5.5
+                                ]
+                            }
+                        }
+                    }, ]
+                },
+                {
+                    "id": "place7",
+                    //"center": [0, 30],
+                    "zoom": 3,
+                    "baseLayer": {
+                        /*
+                        "type": "tile",
+                        "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
+                        */
+                        /*
+                        "type": "tile",
+                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png"
+                        */
+                        "type": "esri-basemap",
+                        "url": "Oceans",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    },
+                    "style": {
+                        "filter": "grayscale(0%)",
+                        "opacity": 0.8,
+                        "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                    },
+                    layers: [{
+                            "id": "Dall_Island",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Dall Island"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -139.5480562, 43.3127886
+                                    ]
+                                }
+                            },
+                            // "style": {
+                            //     "icon": {
+                            //         "html": "<img src='img/atlasv.svg' style='width: 100%;'/>",
+                            //         "iconSize": [40, 80],
+                            //         "iconAnchor": [20, 80]
+                            //     }
+                            // }
+                        }, {
+                            "id": "Isla_Portillos",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Isla Portillos"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -83.69, 10.93
+                                    ]
+                                }
+                            },
+                            // "style": {
+                            //     "icon": {
+                            //         "html": "<img src='img/r7.svg' style='width: 100%;'/>",
+                            //         "iconSize": [40, 80],
+                            //         "iconAnchor": [20, 80]
+                            //     }
+                            // }
+                        },
+                        {
+                            "id": "St_Martin",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "St. Martin"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -63.05, 18.07
+                                    ]
+                                }
+                            },
+                            // "style": {
+                            //     "icon": {
+                            //         "html": "<img src='img/atlasv.svg' style='width: 100%;'/>",
+                            //         "iconSize": [40, 80],
+                            //         "iconAnchor": [20, 80]
+                            //     }
+                            // }
+                        }, {
+                            "id": "Martinique",
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "properties": {
+                                    "name": "Martinique"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -61, 14.67
+                                    ]
+                                }
+                            },
+                            // "style": {
+                            //     "icon": {
+                            //         "html": "<img src='img/atlasv.svg' style='width: 100%;'/>",
+                            //         "iconSize": [40, 80],
+                            //         "iconAnchor": [20, 80]
+                            //     }
+                            // }
+                        }
+                    ]
+                },
+                {
+                    "id": "place8",
+                    //"center": [0, 0],
+                    "zoom": 4,
+                    "baseLayer": [{
+                            /*
+                            "type": "tile",
+                            "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                            */
+                            "type": "esri-basemap",
+                            "url": "Imagery",
+                            "options": {
+                                "detectRetina": true
+                            }
+                        },
+                        {
+                            "type": "esri-basemap",
+                            "url": "ImageryLabels",
+                            "options": {
+                                "detectRetina": true
+                            }
+                        }
+                    ],
+                    "style": {
+                        "filter": "sepia(0%)",
+                        "opacity": 0.6,
+                        "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                    },
+                    "layers": [{
+                        "id": "California_Nevada",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "California/Nevada"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -120, 39
+                                ]
+                            }
+                        },
+                        "style": {
+                            "weight": 10,
+                            "opacity": 0.3
+                        }
+                    }, {
+                        "id": "Idaho_Montana",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "Idaho/Montana"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -114.58, 46.64
+                                ]
+                            }
+                        },
+                        "style": {
+                            "weight": 10,
+                            "opacity": 0.3
+                        }
+                    }, {
+                        "id": "Colorado_Wyoming",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "Colorado/Wyoming"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -106, 41
+                                ]
+                            }
+                        },
+                        "style": {
+                            "weight": 10,
+                            "opacity": 0.3
+                        }
+                    }, {
+                        "id": "Texas_Oklahoma",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": 'Texas/Oklahoma'
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -96.57, 33.83
+                                ]
+                            }
+                        },
+                        "style": {
+                            "weight": 10,
+                            "opacity": 0.3
+                        }
+                    }]
+                }, {
+                    "id": "place9",
+                    // "center": [142.5, 17.75],
+                    "zoom": 5,
+                    "baseLayer": [{
+                            /*
+                            "type": "tile",
+                            "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                            */
+                            "type": "esri-basemap",
+                            "url": "Imagery",
+                            "options": {
+                                "detectRetina": true
+                            }
+                        },
+                        {
+                            "type": "esri-basemap",
+                            "url": "ImageryLabels",
+                            "options": {
+                                "detectRetina": true
+                            }
+                        }
+                    ],
+                    "style": {
+                        "filter": "grayscale(0%)",
+                        "opacity": 0.8,
+                        "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                    },
+                    layers: [{
+                        "id": "Pittsburgh",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "Pittsburgh"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -79.97, 40.44
+                                ]
+                            }
+                        },
+                        "style": {
+                            "icon": {
+                                "html": "<img src='img/ship.svg' style='width: 100%;'/>",
+                                "iconSize": [80, 40],
+                                "iconAnchor": [40, 40]
+                            }
+                        }
+                    }, {
+                        "id": "Washington_DC",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "Washington, DC"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -76.99, 38.9
+                                ]
+                            }
+                        },
+                        // "style": {
+                        //     "icon": {
+                        //         "html": "<img src='img/ship.svg' style='width: 100%;'/>",
+                        //         "iconSize": [80, 40],
+                        //         "iconAnchor": [40, 40]
+                        //     }
+                        // }
+                    }, {
+                        "id": "Philadelphia",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "Philadelphia"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -75.21, 39.97
+                                ]
+                            }
+                        },
+                        // "style": {
+                        //     "icon": {
+                        //         "html": "<img src='img/ship.svg' style='width: 100%;'/>",
+                        //         "iconSize": [80, 40],
+                        //         "iconAnchor": [40, 40]
+                        //     }
+                        // }
+                    }, {
+                        "id": "Newark",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "properties": {
+                                "name": "Newark"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -74.21, 40.71
+                                ]
+                            }
+                        },
+                        // "style": {
+                        //     "icon": {
+                        //         "html": "<img src='img/ship.svg' style='width: 100%;'/>",
+                        //         "iconSize": [80, 40],
+                        //         "iconAnchor": [40, 40]
+                        //     }
+                        // }
+                    }, ]
+                },
+                {
+                    "id": "place10",
+                    //"center": [-40, 38],
+                    "zoom": 2.8,
+                    "baseLayer": {
+                        /*
+                        "type": "tile",
+                        "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                        */
+                        "type": "esri-basemap",
+                        "url": "Physical",
+                        "options": {
+                            "detectRetina": true
+                        }
+                    },
+                    layers: [{
+                        "id": "United_States",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-100, 40]
+                            },
+                            "properties": {
+                                "name": "The United States",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "France",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [2, 47]
+                            },
+                            "properties": {
+                                "name": "France",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "Russia",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [90, 60]
+                            },
+                            "properties": {
+                                "name": "Russia",
+                                "style": {}
+                            }
+                        }
+                    }, {
+                        "id": "Japan",
+                        "type": "geojson",
+                        "data": {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [136, 35]
+                            },
+                            "properties": {
+                                "name": "Japan",
+                                "style": {}
+                            }
+                        }
+                    }],
+                    "style": {
+                        "filter": "sepia(30%)",
+                        "opacity": 0.8,
+
+                        "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png)"
+                    }
+                }
+            ]
+        };
+
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-79613259-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var questions = [{
+                choices: [{
+                    id: 'A',
+                    text: 'Lake of the Woods',
+                    photo: 'img/Lake_of_the_Woods.jpg',
+                    sceneId: 'LW'
+                }, {
+                    id: 'B',
+                    text: 'Lake Superior',
+                    photo: 'img/Lake_Superior.jpg',
+                    sceneId: 'LS'
+                }, {
+                    id: 'C',
+                    text: 'Lake Huron',
+                    photo: 'img/Lake_Huron.jpg',
+                    sceneId: 'LH'
+                }, {
+                    id: 'D',
+                    text: 'Lake Ontario',
+                    photo: 'img/Lake_Ontario.jpg',
+                    sceneId: 'LO'
+                }, ],
+                prompt: 'The U.S. Canada border runs across the western half along the 49th parallel (49 degrees North longitude) with one anomaly at the lake where this begins, known as the Northwest Angle, and the only point along this border where the U.S. extends north of the 49th parallel. What lake is this located along, where a piece of U.S. territory sits on the north side of the lake in an area otherwise part of Canada?',
+                rightAnswer: {
+                    id: 'A',
+                    description: 'Lake of the Woods'
+                }
+            }, {
+                choices: [{
+                    id: 'A',
+                    text: 'The West Bank',
+                    photo: 'img/West_Bank.jpg',
+                    sceneId: 'WB'
+                }, {
+                    id: 'B',
+                    text: 'Gaza Strip',
+                    photo: 'img/Gaza_Strip.jpg',
+                    sceneId: 'GS'
+                }, {
+                    id: 'C',
+                    text: 'Jordan',
+                    photo: 'img/Jordan.jpg',
+                    sceneId: 'JD'
+                }, {
+                    id: 'D',
+                    text: 'The Golan Heights',
+                    photo: 'img/Golan_Heights.jpg',
+                    sceneId: 'GH'
+                }],
+                prompt: 'Some of the world’s borders are highly fortified. Israel has built an enormous “Separation Barrier” along one such ceasefire line that cuts through urban areas and divides communities to protect against terrorism. This barrier at times follows the “Green Line” and at other times deviates from that 1948 ceasefire line in significant places, perhaps as a way to claim more territory. What territory is separated from Israel by the “Separation Barrier”?',
+                rightAnswer: {
+                    id: 'B',
+                    description: 'Gaza Strip'
+                }
+            }, {
+                choices: [{
+                    id: 'A',
+                    text: 'Selenga River',
+                    photo: 'img/Selenga_River.jpg',
+                    sceneId: 'SR'
+                }, {
+                    id: 'B',
+                    text: 'Orkhon River',
+                    photo: 'img/Orkhon_River.jpg',
+                    sceneId: 'OR'
+                }, {
+                    id: 'C',
+                    text: 'Amur River',
+                    photo: 'img/Amur_River.jpg',
+                    sceneId: 'AR'
+                }, {
+                    id: 'D',
+                    text: 'Ussuri River',
+                    photo: 'img/Ussuri_River.jpg',
+                    sceneId: 'UR'
+                }],
+                prompt: 'Rivers have often been used as a means to draw borders between countries. Two of the world’s largest countries – China and Russia – mostly share a river border that includes multiple rivers. Which river serves as the longest part of the China/Russia border?',
+                rightAnswer: {
+                    id: 'C',
+                    description: 'Amur River'
+                }
+            }, {
+                choices: [{
+                    id: 'A',
+                    text: 'Amazon River',
+                    photo: 'img/Amazon_River.jpg',
+                    sceneId: 'Amazon_River'
+                }, {
+                    id: 'B',
+                    text: 'Niger River',
+                    photo: 'img/Niger_River.jpg',
+                    sceneId: 'Niger_River'
+                }, {
+                    id: 'C',
+                    text: 'Nile River',
+                    photo: 'img/Nile.jpg',
+                    sceneId: 'Nile_River'
+                }, {
+                    id: 'D',
+                    text: 'Danube River',
+                    photo: 'img/Danube.jpg',
+                    sceneId: 'Danube_River'
+                }],
+                prompt: 'Not only do rivers form borders, but many cross international borders as well, posing challenges in sharing water resources, the flow of water pollution downstream, and complicating border control for those using the river as a means of transit. Which river crosses the most international borders along its course?',
+                rightAnswer: {
+                    id: 'D',
+                    description: 'Danube River'
+                }
+            }, {
+                choices: [{
+                    id: 'A',
+                    text: 'Switzerland',
+                    photo: 'img/Switzerland.jpg',
+                    sceneId: 'Switzerland'
+                }, {
+                    id: 'B',
+                    text: 'Andorra',
+                    photo: 'img/Andorra.jpg',
+                    sceneId: 'Andorra'
+                }, {
+                    id: 'C',
+                    text: 'San Marino',
+                    photo: 'img/San_Marino.jpg',
+                    sceneId: 'San_Marino'
+                }, {
+                    id: 'D',
+                    text: 'Montenegro',
+                    photo: 'img/Montenegro.jpg',
+                    sceneId: 'Montenegro'
+                }],
+                prompt: 'The world political map changes all the time, with the most recent international border changes happening in 2009, when Sudan and South Sudan split into two countries. Which country’s entire border is the world’s oldest, not changing since 1278 AD?',
+                rightAnswer: {
+                    id: 'A',
+                    description: 'Andorra'
+                }
+            }, {
+                choices: [{
+                    id: 'A',
+                    text: 'Sumatra',
+                    photo: 'img/Sumatra.jpg',
+                    sceneId: 'Sumatra'
+                }, {
+                    id: 'B',
+                    text: 'Borneo',
+                    photo: 'img/Borneo.jpg',
+                    sceneId: 'Borneo'
+                }, {
+                    id: 'C',
+                    text: 'Timor',
+                    photo: 'img/Timor.jpg',
+                    sceneId: 'Timor'
+                }, {
+                    id: 'D',
+                    text: 'New Guinea',
+                    photo: 'img/New_Guinea.jpg',
+                    sceneId: 'New_Guinea'
+                }],
+                prompt: 'Many international borders lie on islands, not just the major continents. What is the world’s largest island divided by an international border?',
+                rightAnswer: {
+                    id: 'D',
+                    description: 'New Guinea'
+                }
+            }, {
+                choices: [{
+                    id: 'A',
+                    text: 'Dall Island',
+                    photo: 'img/Dall_Island.jpg',
+                    sceneId: 'Dall_Island'
+                }, {
+                    id: 'B',
+                    text: 'Isla Portillos',
+                    photo: 'img/Isla_Portillos.jpg',
+                    sceneId: 'Isla_Portillos'
+                }, {
+
+                    id: 'C',
+                    text: 'Martinique',
+                    photo: 'img/Martinique.jpg',
+                    sceneId: 'Martinique'
+                }, {
+                    id: 'D',
+                    text: 'St. Martin',
+                    photo: 'img/St_Martin.jpg',
+                    sceneId: 'St_Martin'
+                }],
+                prompt: 'Just as big islands are split between countries, so are many small islands. Excluding islands less than one square kilometer, what is the smallest island in the world shared by two countries?',
+                rightAnswer: {
+                    id: 'D',
+                    description: 'St. Martin'
+                }
+            }, {
+                choices: [{
+                    id: 'A',
+                    text: 'Idaho/Montana',
+                    photo: 'img/Idaho_Montana.jpg',
+                    sceneId: 'Idaho_Montana'
+                }, {
+                    id: 'B',
+                    text: 'California/Nevada',
+                    photo: 'img/California_Nevada.jpg',
+                    sceneId: 'California_Nevada'
+                }, {
+                    id: 'C',
+                    text: 'Texas/Oklahoma',
+                    photo: 'img/Texas_Oklahoma.jpg',
+                    sceneId: 'Texas_Oklahoma'
+                }, {
+                    id: 'D',
+                    text: 'Colorado/Wyoming',
+                    photo: 'img/Colorado_Wyoming.jpg',
+                    sceneId: 'Colorado_Wyoming'
+                }],
+                prompt: 'We encounter borders at others scales than international borders, such as the borders between U.S. states. Which two U.S. states share the longest border?',
+                rightAnswer: {
+                    id: 'C',
+                    description: 'Texas/Oklahoma'
+                }
+            }, {
+                choices: [{
+                    id: 'A',
+                    text: 'Pittsburgh',
+                    photo: 'img/Pittsburgh.jpg',
+                    sceneId: 'Pittsburgh'
+                }, {
+                    id: 'B',
+                    text: 'Washington, DC',
+                    photo: 'img/Washington_DC.jpg',
+                    sceneId: 'Washington_DC'
+                }, {
+                    id: 'C',
+                    text: 'Philadelphia',
+                    photo: 'img/Philadelphia.jpg',
+                    sceneId: 'Philadelphia'
+                }, {
+                    id: 'D',
+                    text: 'Newark',
+                    photo: 'img/Newark.jpg',
+                    sceneId: 'Newark'
+                }],
+                prompt: 'Borders also occur at even smaller scale than U.S. states, such as county border, school district borders, and neighborhood borders. Redlining is a term for borders drawn after the National Housing Act of 1934 to separate out individual neighborhoods, making it hard to get loans in areas. Redlining helped drive racial segregation in American cities. Which city pioneered this practice, even before the National Housing Act went into full effect in 1935, with the creation of the J.M. Brewer Map in 1934, and remains today a highly segregated city with poor African American neighborhoods such as Mount Airy and Overbrook?',
+                rightAnswer: {
+                    id: 'C',
+                    description: 'Philadelphia'
+                }
+            }, {
+                choices: [{
+                    id: 'A',
+                    text: 'United States',
+                    photo: 'img/United_States.jpg',
+                    sceneId: 'United_States'
+                }, {
+                    id: 'B',
+                    text: 'France',
+                    photo: 'img/France.jpg',
+                    sceneId: 'France'
+                }, {
+                    id: 'C',
+                    text: 'Russia',
+                    photo: 'img/Russia.jpg',
+                    sceneId: 'Russia'
+                }, {
+                    id: 'D',
+                    text: 'Japan',
+                    photo: 'img/Japan.jpg',
+                    sceneId: 'Japan'
+                }],
+                prompt: 'Going back to the global scale, we think of borders everywhere, yet much of the world exists in areas beyond the control of bordered countries, such as Antarctica and the High Seas. Even the oceans include huge areas of control by countries, mostly within exclusive economic zones, areas allowed under the Law of the Sea for only a single country to control fishing and the harvesting of oil and minerals. Which country has the largest area of ocean encompassed by exclusive economic zone (remember, overseas island territories far from other countries make up a huge part of these claims)?',
+                rightAnswer: {
+                    id: 'B',
+                    description: 'France'
+                }
+            }];
+
+            var questionCollection = new Focus.Collections.QuestionCollection(questions);
+
+            var navigator = new Focus.Views.QuizSceneNavigator({
+                el: $('.scenes'),
+                model: new Focus.Models.ModalModel({
+                    title: 'Welcome to the Eleventh Geo Quiz!',
+                    content: "The world political map is covered in lines, some straight, some following natural features, and many related to other historical and cultural phenomena. These lines change with time and how they impact the world changes as well. <div> This year’s American Geographical Society Symposium –Geography 2050: Borders and Borderless World – will further explore the many issues related to the lines on the map. Learn more at <a href=http://2019.geography2050.org!>Geography2050!</a><br/><img src=\"img/geography_2050.jpg\"/>",
+                    buttonText: 'Start Quiz'
+                }),
+                collection: questionCollection
+            });
+            navigator.render();
+
+            var sceneManager = new Focus.Views.SceneManagerView({
+                el: $('body'),
+                navigator: navigator,
+                mapEngineClass: Focus.Views.LeafletMapEngine //OpenLayersMapEngine //LeafletMapEngine
+            });
+
+            var shareView = new Focus.Views.ShareView();
+            shareView.render();
+
+        });
+
+    </script>
+</body>
+
+</html>
