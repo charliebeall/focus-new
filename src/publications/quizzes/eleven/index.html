@@ -321,7 +321,7 @@
                 {
                     "id": "place3",
                     //"center": [-79.541015625, -10.811724143275514],
-                    "zoom": 5,
+                    "zoom": 4,
                     "baseLayer": [{
                         "type": "esri-basemap",
                         "url": "Physical",
@@ -480,24 +480,24 @@
                     //"center": [-40, 38],
                     "zoom": 5,
                     "baseLayer": {
-                        /*
-                        "type": "tile",
-                        "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-                        */
-                        "type": "esri-basemap",
-                        "url": "Imagery",
-                        "options": {
-                            "detectRetina": true
-                        }
-                    }
-                    //     {
-                    //     "type": "esri-basemap",
-                    //     "url": "ImageryLabels",
-                    //     "options": {
-                    //     "detectRetina": true
-                    //     }
-                    // }
-                    ,
+                            /*
+                            "type": "tile",
+                            "url": "http://otile4.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+                            */
+                            "type": "esri-basemap",
+                            "url": "Imagery",
+                            "options": {
+                                "detectRetina": true
+                            }
+                        },
+                        // {
+                        //     "type": "esri-basemap",
+                        //     "url": "ImageryLabels",
+                        //     "options": {
+                        //         "detectRetina": true
+                        //     }
+                        
+                    
                     layers: [{
                         "id": "Andorra",
                         "type": "geojson",
@@ -564,16 +564,13 @@
                 }, {
                     "id": "place6",
                     //"center": [170, -3.3704],
-                    "zoom": 8,
-                    "baseLayer":
-                    /*{
-                                       "type": "tile",
-                                       "url": "http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png"
-                                   }*/
-                    {
-                        "type": "tile",
-                        "url": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
-                        "scheme": "xyz"
+                    "zoom": 4.7,
+                    "baseLayer": {
+                        "type": "esri-basemap",
+                        "url": "ImageryFirefly",
+                        "options": {
+                            "detectRetina": true
+                        }
                     },
                     "style": {
                         "filter": "invert(100%) sepia(50%)",
