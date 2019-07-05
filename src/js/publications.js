@@ -3,6 +3,24 @@ Focus.Volumes = [
     {
         number: 62,
         publications: [{
+            type: 'Photo Essay',
+            title: 'Food Sovereignty: Views from Cuba',
+            author: 'Lindsay Naylor, Ibrahim Ali, Paul Massey, Mary Mathison, Alyshia Silva, Paul Wasserman',
+            description: '',
+            date: '06/27/19',
+            thumbnail: 'publications/photoessays/cuba_food_sovereignty/img/figure9.jpg',
+            url: 'publications/photoessays/cuba_food_sovereignty/index.html',
+            location: []
+        },{
+            type: 'Photo Essay',
+            title: 'Jordan\'s Forgotten Eastern Desert Qasour',
+            author: 'Casey D. Allen',
+            description: '',
+            date: '05/30/19',
+            thumbnail: 'publications/photoessays/jordan/img/WR4.jpg',
+            url: 'publications/photoessays/jordan/index.html',
+            location: []
+        },{
             type: 'Feature Article',
             title: 'Street Art in Baltimore: A Catalyst for Change',
             author: 'Meredith K. Stone, Geoffrey L. Buckley',            
@@ -11,7 +29,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/baltimore/img/fig7.jpg',
             url: 'publications/articles/baltimore/index.html',
             location: []
-        }, {
+        },{
             type: 'Photo Essay',
             title: 'Capturing Long Distance Landscapes: GoPro Time-Lapse Photography',
             author: 'Craig Colten',
