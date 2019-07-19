@@ -1,0 +1,796 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cairns: An Invitation</title>
+    <meta name="description" content="FOCUS on Geography: Cairns: An Invitation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,map,hiking,cairns,mountains,trails">
+    <meta name="author" content="Tyra A. Olstad">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway&display=swap" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        #text {
+            background: #fff;
+        }
+
+        #text h2 {
+            font-family: 'Poppins', sans-serif;
+            text-transform: none;
+            font-size: 32px;
+            font-weight: bold;
+            color: rgb(73, 83, 102) !important;
+            text-shadow: 2px 2px #ffffff;
+        }
+
+        #text h3 {
+            font-family: 'Poppins', sans-serif;
+            text-transform: none;
+            color: rgb(61, 76, 104);
+        }
+
+        #nav,
+        #toggle-map {
+            background: rgba(124, 127, 113, 0.8);
+        }
+
+        span.place-text {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        #text a,
+        a.location,
+        div.tooltip a {
+            color: rgba(59, 73, 104, 0.7);
+            border-bottom-color: rgba(59, 73, 104, 0.7);
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: rgba(197, 151, 114, 0.8);
+            -webkit-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgba(197, 151, 114, 0.8);
+            transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-ms-fill {
+            background-color: rgba(197, 151, 114, 0.8);
+            -ms-transition: width 0.5s ease-in-out;
+        }
+
+        svg text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            fill: #fff;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip.bottom .tooltip-arrow,
+        .tooltip.bottom-left .tooltip-arrow,
+        .tooltip.bottom-right .tooltip-arrow {
+            border-bottom-color: rgb(90, 128, 75);
+        }
+
+        .tooltip.left .tooltip-arrow {
+            border-left-color: rgb(87, 136, 68);
+
+        }
+
+        .tooltip-inner {
+            background: rgb(105, 160, 84);
+            color: #fff;
+        }
+
+        .tooltip-inner a.location,
+        #photo-caption a.location {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .author,
+        .citation {
+            font-size: 15px !important;
+        }
+
+    </style>
+</head>
+
+<body class="scrolled">
+    <progress></progress>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id="nav" class="title-hidden dotstyle dotstyle-scaleup">
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <ul class="nav previous">
+            <li class="previous">
+                <a href="#"><span class="fa fa-chevron-up"></span></a>
+            </li>
+        </ul>
+        <ul class="nav sections">
+        </ul>
+        <ul class="nav next">
+            <li class="next">
+                <a href="#"><span class="fa fa-chevron-down"></span></a>
+            </li>
+        </ul>
+    </div>
+    <!-- Add your site or application content here -->
+    <div id="background"></div>
+    <div id="map" class="title-hidden feature-article"></div>
+    <div id="overview-map" class="title-hidden transparent"></div>
+    <div id="foreground"></div>
+    <div id="photos" style="">
+        <div id="photo-caption" class="title-hidden"></div>
+    </div>
+    <div id="shadow"></div>
+    <div id="toggle-map" class="focus-green"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+    <div id="main-nav" class="light">
+        <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+                <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"
+                    style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+                <path id="pathE" d="M 300 500 L 700 500"
+                    style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+                <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
+                    style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+            </svg>
+
+            <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+        </div>
+        <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg" /></a>
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <div id="menu" class="container-fluid"></div>
+    </div>
+    <div id="text" class="title-hidden">
+        <div class="content scenes">
+            <section id="introduction" class="scene" data-scene-id="lp1a" title="To Follow (1)">
+                <h2 class="title title-photo"
+                    style="background-position: 50% 85%;background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), url(img/fig0.jpg);">
+                    Cairns: An Invitation</h2>
+                <div class="author"><span class="name">Tyra A. Olstad</span>, <span class="organization">Department of
+                        Geography and Environmental Sustainability, SUNY Oneonta</span></div>
+                <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2019.62.3f</div>
+                <h3>I. To Follow</h3>
+                <p>Baking and half-blinded by the summer sun, you squint out at the horizon, searching for anything
+                    other than sandstone and sky, an infinity of turquoise-blue arcing over waves of gritty, griddle-hot
+                    rock. No sign of life, not even a gnarled shrub. No sign of the trail, either—just air and stone,
+                    stretching out beyond the curvature of the earth.</p>
+                <p>Your face is redder than the rock, sweat streaming from every pore. You’ve been out in this
+                    unforgiving landscape far longer than intended. Even though you’re equipped with hat, water, map,
+                    and other essentials, you’re beginning to worry that you’re lost in the labyrinthine Needles
+                    District of Canyonlands National Park. Where are you? Why are you even here? Skin and brain burn
+                    with anxiety.</p>
+                <p>Swallowing the rising panic, you again scan the landscape. Your eye snags on a small pile of
+                    rocks—inelegant, unimpressive, but something that stands out as clearly human-made; something
+                    telling you that you’re neither lost nor alone; something you can trust for help in this harsh,
+                    indifferent place. A cairn! Salvation!</p>
+            </section>
+            <section id="1b" class="scene" data-scene-id="lp1b" title="To Follow (2)">
+                <p>Buoyed by thankfulness, you practically dance over to the stack of stones, and from there on to the
+                    next, and next. With wordless encouragement, the cairns guide you across swaths of slickrock,
+                    through a tangle of slots, and finally to the base of a soaring fin of sandstone, naturally hollowed
+                    by wind, water, and gravity. Aesthetically, the towering, elegant span of Druid Arch is an
+                    antithesis to the minute, distinctly human-made jumbles you’ve been following. Experientially,
+                    though, the natural landmark and anthropogenic markers are part of the same place. Though you’ve
+                    come seeking solitude, your pilgrimage through Canyonlands would not be possible without the
+                    companionship of these ordinary yet extraordinary cairns.</p>
+                <div id="figure1" class="figure" style="background-image:url(img/fig1.jpg);"></div>
+                <div class="caption">Figure 1: Cairns inviting hikers through a window into a maze of redrock,
+                    Canyonlands National Park, Utah</div>
+                <p> “[N]othing,” asserts David Williams, author of Cairns: Messengers in Stone, “is more reassuring than
+                    finding a cairn” (2012, 11). The term “cairn” (rooted in the medieval Scottish Gaelic word “carn”,
+                    meaning “heap of stones” [Online Etymology Dictionary]) refers to a deliberately-constructed pile of
+                    rocks. Used to mark locations, delineate routes, serve as spiritual offerings, and/or merely
+                    entertain or amuse, cairns are one of mankind’s most universal and universally-recognizable symbols,
+                    present to offer passers-by guidance and hope. Although names and purposes vary worldwide, rock
+                    piles share at least three attributes: visually, they stand out from the horizon or surroundings; in
+                    so doing, they differentiate otherwise unintelligible space and create distinctive places; and even
+                    in the most far-flung and/or wildest locations, they serve as reminders of near-ubiquitous human
+                    presence on the planet and stand as testaments to a seemingly innate desire to make our presence
+                    known.</p>
+                <p>First and foremost, cairns are navigational tools. Worldwide, people trying to move through treeless
+                    landscapes such as tundras, deserts, mountain ridges, or shorelines—places where even well-traveled
+                    paths may not be well-worn—rely on rock piles to mark safe passage along reliable routes. Cairns
+                    prove especially useful in areas that are prone to bad weather—places where fog, rain, and/or snow
+                    perpetually disorient travelers or leave them isolated in viewsheds that only extend out a few feet
+                    at a time. Basque sheepherders, for example, use “stone boys” (harri mutilak) to demarcate borders
+                    and serve as navigational references on foggy days, while Icelandic travelers follow evenly-spaced
+                    stone and turf “guardians” (vörður) across stormy highlands (Williams 2012 and Mizin 2013,
+                    respectively).</p>
+                <p>In addition to their roles as geographic markers or waypoints, cairns can also protect food,
+                    clothing, navigational tools, and/or messages. Historically, polar explorers cached food and
+                    personal, scientific, and navigational notes in rock piles, while desert wayfarers stored water in
+                    the shade of stone structures or used properly-positioned cairns as condensation-catchers. Equally
+                    importantly, sturdy rock piles can deter scavengers from reaching human remains, or at least stand
+                    as lasting memorials to the dead, best exemplified by elaborate, multichambered, Neolithic and
+                    Bronze Ages stone tombs found throughout the United Kingdom.</p>
+                <p>While they may exist primarily for utilitarian purposes, cairns are often imbued with sociocultural
+                    significance and/or steeped in sociocultural lore. Many are believed to provide magical
+                    protection—an ability to save people from malevolent spirits, as in the case of Icelandic vörður,
+                    and/or to offer healing to travelers, as with Arctic tunillarvik. On a deeper level, some are
+                    crucial elements of sacred geography, built to indicate the location for important ceremonies, as do
+                    Mongolian sky-spirit “magnificent bundles” (ovoo), or serve as ritual gateways to a spirit world, as
+                    with Arctic shamans’ tupqujaq (Williams 2012, 124 and Hallendy 2009, respectively). In some cases,
+                    the stones themselves become sacred: for example, the Klamath and Modoc peoples of Oregon and
+                    California have such deep reverence for their cairns that they have a taboo against touching or even
+                    photographing them (Haynal 2000). More often, holiness or supernatural qualities supplement but do
+                    not supersede cairns’ more mundane purposes. For example, piles of old prayer stones in northeastern
+                    Tibet are, according to writer and naturalist Craig Childs, “meant for use. Truck drivers…pulled out
+                    these…stones and poured them into ruts. Monks had told me this is what they are for, to usher
+                    prayers into the world” (2012, 240).</p>
+                <p>Perhaps the most widely-recognized, multi-purposed, and enigmatic of stone structures are the
+                    inuksuit (singular inuksuk) of Arctic peoples of Alaska, northern Canada, and Greenland. These
+                    “person-substitutes” (McNeill 2004) or “things that act for or perform the function of a person”
+                    (Hallendy 2009) (the kind depicted on the flag of Nunavut, not the controversial figure used as a
+                    logo for the Vancouver 2010 Winter Olympics, which was, technically, a human-shaped inunngiiaq
+                    [Hallendy 2000; McNeill 2004]) serve multiple purposes, all of which are imbued with deep meaning
+                    (Hallendy 2009; Graburn 2004). At their simplest, inuksuit serve as landmarks, erected by Arctic
+                    peoples to identify locations and/or biogeophysical features. “They mark trails, delineate spiritual
+                    precincts, herd caribou, and locate good hunting and fishing,” writes ethnohistorian Norman
+                    Hallendy, adding that they can indicate, among other attributes: snow depth, ice characteristics,
+                    safe or dangerous passages across rivers or ice, and polar orientation (2009, 80). Hallendy also
+                    describes inuksuit as “material forms of oral tradition” and, even more abstractly, as “a metaphor”,
+                    there to “remind [the elders] … of the time when people were attached to the land by an unbroken
+                    thread of reverence, when they…placed huge inuksuit on hilltops… and communicated by rearranging or
+                    shaping fragments of the landscape” (2000, 23 and 63, respectively.) For Arctic peoples, following
+                    an inuksuk is an act of ritual, leading them through both space and time, connecting them to
+                    generations of others who’ve found themselves in the same place.</p>
+                <p>In a broader sense, to follow any cairn is an act of friendship and faith—a way of moving through a
+                    sometimes harsh and unfamiliar world by trusting in others’ wisdom and guidance.</p>
+                <div id="figure2" class="figure" style="background-image:url(img/fig2.jpg);"></div>
+                <div class="caption">Figure 2: A World of Cairns</div>
+            </section>
+            <section id="2a" class="scene" data-scene-id="lp2a" title="To Build (1)">
+                <h3>II. To Build</h3>
+                <p>Shoulders aching, fingers bruised, black flies buzzing in your ears, you pause to survey the stones
+                    at your feet—which one has the right mix of flatness and tilt? Breadth and depth? Beauty and
+                    substance? You pick one up and feel that it’s wrong even before you put it on the pile—too bulgy.
+                    Take two—too big. Not the third or fourth or even the fifth; you’re beginning to consider going on a
+                    reconnaissance mission and lugging back more options. But then, a half-dozen tries in, you finally
+                    find the near-magic stone that settles perfectly into its spot, completing the second layer of your
+                    cairn.</p>
+                <p>Satisfied, you step back to appreciate your accomplishment. Although far from finished, you’ve made
+                    decent headway—the large, sturdy base should support several more layers. Once complete, the stack
+                    will clearly stand out from the otherwise smooth, steep surface. Even in the iciest, foggiest,
+                    and/or windiest conditions, it will help hikers find the safe, proper route up to and down from the
+                    summit of Wright Peak in upstate New York’s Adirondack State Park. In addition to improving safety,
+                    the cairn will help protect the peak’s rare and fragile Arctic-Alpine vegetation. (If visitors know
+                    where the trail is, they’ll be more likely to stay on the bare rock face rather than go tromping off
+                    across the tundra.) In fact, that’s your main objective—to try to protect the plants atop the
+                    heavily-visited mountain.</p>
+                <p>That’s not to say you don’t feel pride in your work. You’re fully aware that from this day forth,
+                    your cairn will be a fact on the landscape, a waypoint experienced by every hiker. Years hence,
+                    you’ll be able to point to it and say: I built that; that’s my legacy. Without having to carve your
+                    initials into a tree or peck them out of the bedrock, you’re showing: I was here!</p>
+                <div id="figure3" class="figure" style="background-image:url(img/fig3.jpg);"></div>
+                <div class="caption">Figure 3: Tapering-style cairn, Adirondack State Park, New York</div>
+                <p>“Like much rock work,” cairn construction is, according to trails experts with the Appalachian
+                    Mountain Club (AMC), “as much an art as a science” (Lentz 2007, 26). Unlike monumental architecture
+                    or infrastructure, cairns do not require elaborate equipment or superhuman strength to build—only
+                    sweat, patience, an eye for design, and a touch of luck. To be able to withstand the vagaries of
+                    weather (and the occasional vandal, or at least individuals who curiously or unknowingly push or
+                    prod), cairns must be made up of what Hallendy calls “the perfect balance of stones selected and
+                    arranged with great care” (2000, 21).</p>
+            </section>
+            <section id="2b" class="scene" data-scene-id="lp2b" title="To Build (2)">
+                <p>Before beginning the stone-selection and arrangement—the actual construction—cairn-builders must
+                    carefully consider sites and sight-lines. Navigational aids must be visible from the neighboring
+                    structures so that travelers will be always able to see at least one pile ahead, in either
+                    direction. For this to be so, cairns must stand out against the horizon and/or be made of material
+                    of a different color, texture, or pattern than the surrounding scene. The placement of
+                    non-directional cairns—shrines, burial mounds, or commemorative stacks—must also reflect an
+                    understanding of a place’s personal or cultural significance. For example, cairns to which travelers
+                    give offerings and pray for safety in treacherous terrain in the Andes are most commonly situated at
+                    the crest of a mountain pass or at a trail junction (Jett 1986)—places where people are in greatest
+                    need of assistance. Alternatively, Hallendy notes that inuksuit “tend to be plentiful at places were
+                    [sic] people have waited… It’s at the waiting places where you can sometimes find…the most beautiful
+                    kind of inuksuk” (2000, 27). </p>
+
+                <p>Just as a cairn-builder chooses a location based on a mix of personal, cultural, and environmental
+                    factors, they design their pile depending on its purpose, available source material, and local
+                    cultural or artistic traditions. There are a few distinctive styles, ranging from Arctic people’s
+                    human-like inunngiiaq to Acadia National Park’s iconic “Bates cairns” (two-legged platforms with
+                    pointer-rocks, first designed and built by early-20th century trailmaker Waldron Bates). These are
+                    exceptions to “tapering piles”—a wide, circular base supporting subsequently smaller-diameter
+                    layers—which are, by and large, the most common cairn design worldwide (Williams 2012). Although
+                    they are comparatively easy to build, balance, and scale, construction of tapering cairns still
+                    requires a great deal of forethought, effort, skill, and patience. The AMC’s Handbook spells out
+                    their standards:<q>“Cairns should be … almost as wide at the base as they are high… Large, flat
+                        rocks should be used…Use as large stones as possible for the base. Each layer should slope
+                        slightly to the center…, so that gravity will stabilize the cairn …Build up successive layers
+                        making sure that each joint is bridged by a stone. Each stone should also have at least three
+                        points of contact with underlying stones” (Lentz 2007, 26).</q>Only after testing the stability
+                    of the cairn—by standing on it, to see whether pieces slide away or the entire form collapses—can a
+                    cairn builder’s attention turn to the overall appearance: “you can try putting small stones in gaps
+                    for aesthetic reasons,” the AMC manual concedes, and consider “search[ing] for a white rock to place
+                    on top…for visibility” (Lentz 2007, 26).</p>
+            </section>
+            <section id="2c" class="scene" data-scene-id="lp2c" title="To Build (3)">
+                <p>Intentionally-designed and -built cairns differ in form, function, and construction from heaps that
+                    rise organically and communally as travelers, pilgrims, and passers-by add pebbles to a pile. These
+                    heaps may serve as navigational landmarks, but, more importantly, are physical manifestations of
+                    local history and lore. People add stones to piles as memorials, tokens of respect for spirits or
+                    landscape features, or for plain old good luck. For example, a sizeable if haphazard pile has
+                    accumulated atop Skylight Peak in the Adirondacks, as generations of hikers have put hope in the
+                    superstition that they’ll have better weather if they carry a rock to the summit.</p>
+                <div id="figure4" class="figure" style="background-image:url(img/fig4.jpg);"></div>
+                <div class="caption">Figure 4: Wishes for no rain atop Skylight Peak, Adirondacks</div>
+                <p>This “practice of establishing cairn trail shrines to which passers-by add stones” is “extremely
+                    widespread”, according to geographer Stephen Jett (1986, 615). In his study of trail shrines
+                    specific to the Central Andes—apacheta, a Quechuan term meaning “carrying or having something
+                    carried” (Williams 2012, 88) or “burden depositor” (Jett 1994, 5)—Jett finds that people contribute
+                    to cairns as an act of prayer. Weary travelers make offerings to apacheta—food items such as maize
+                    or coca, cloth, and, especially, stones—to “reduce fatigue and to obtain good luck and protection on
+                    [their] journey” (Jett 1994, 1), or, in the words of 16th-century conquistador Pedro Cieza de Leon,
+                    to “leave their tiredness behind” (quoted in Jett 1994, 1). Archaeologist Carolyn Dean adds that
+                    apacheta are so revered because they’re seen as “embodiments of Andean topography”—sacred mountains
+                    made miniature (2015, 93). By adding to the apacheta, travelers form or strengthen a symbiotic
+                    relationship with the terrain: they help the apacheta, which means they’re helping the mountains;
+                    the mountains, in turn, will smile favorably on them.</p>
+                <p>In all cases, building or adding to a cairn can help individuals engender a sense of connection with
+                    the world in which they live and through which they move. Williams describes the instinct to add a
+                    rock to a trailside mound as “a way to leave a little part of ourselves in the landscape” (2012,
+                    23). Likewise, an Inuit interviewee told folklorist Lynne McNeill that “when you put a stone where
+                    other people put stones, it's like you're contributing a part of your presence to something that
+                    stays behind when you leave” (2004). Zulu people’s relationship with rock piles called Isivivane
+                    exemplifies that sense of both membership and contribution. The term “Isivivane” translates to
+                    “throw your stone upon the pile”, signifying an act of both honoring the sacred and/or historical
+                    sites upon which isivivane appear and participating in a group effort. Passers-by are expected to
+                    “pick up a stone, spit on it and place it on the heap of stones” so as to “pay respect to the
+                    spirits and so ensure that they have a safe journey” (Pongola Game Reserve, KwaZulu Natal.)</p>
+                <p>On a larger level, constructing a cairn is a way for individuals to mark their presence and actively
+                    shape the meaning of a place. “‘I was here[!]’” builders announce through their rock-creations; “‘I
+                    have something important to say about this place[!]” (McNeill 2004). For Andean travelers, apacheta
+                    are a means of participating in an ancient ritual. For Inuit peoples, inuksuit are affirmations of
+                    their existence within both a landscape and a culture. For AMC trails crews, cairns are ways to say,
+                    Here’s the path—stay on it! For someone laboring away in the Adirondacks, layering on stone after
+                    heavy, oddly-shaped stone, each addition says, I care about Wright Peak and want to celebrate and
+                    protect it! (Implied: I am part of this place!)</p>
+            </section>
+            <section id="3a" class="scene" data-scene-id="lp3a" title="To Dismantle (1)">
+                <p>Lungs and legs burning, you pause to catch your breath and look back across the valley before
+                    continuing up to the ridgetop. The view is spectacular—a deep carpet of mosses and grasses stretches
+                    off to mingle with darker patches of pine; higher up on the flanks distant ridges, bright grey-blue
+                    rock remains exposed; behind the ridges, peak after sharp, furrowed, snow-capped peak, is swallowed
+                    up by sky. Somewhere out there, far to the southeast and shrouded in its typical clouds, stands “The
+                    High One”—Denali, crown of the North American continent and heart of its namesake National Park. You
+                    only know that it’s there because you were fortunate enough see it a week earlier, on the bluebird
+                    day when you first clambered up Primrose Ridge. You were so enamored of that experience—including
+                    not only a glimpse of Denali, but an encounter with a pair of Dall sheep and one lonely caribou—that
+                    you’ve decided to return.</p>
+                <p>Although the weather isn’t as cooperative this weekend, you don’t mind the low blanket of clouds and
+                    cool mist. You’re happy to wander freely through the trailless, treeless terrain, looking for more
+                    sheep or caribou or flowers bursting into bloom; thirsty for any and all bits of wildness, no need
+                    for a goal or destination. The higher you climb away from the park road (the only sign of humanity
+                    in the otherwise primeval landscape), the more boundless you feel. After all, the ridge is in a
+                    federally-designated wilderness—one of the few places on the planet where, as per the Wilderness Act
+                    of 1964, “the earth and its community of life are untrammeled by man” and where you’re promised
+                    “outstanding opportunities for solitude or a primitive and unconfined type of recreation.”</p>
+                <p>One last push to the top. Already immersed in the sense of wildness, you’re especially shocked to see
+                    them—a dozen or so stones balanced artfully if not a bit jauntily atop an outcrop. This pile is not
+                    a friendly guide and definitely not an inuksuk. Is it even a cairn? Or a type of graffiti made of
+                    rock? Instead of welcoming or guiding you, it seems antithetical to the idea of wilderness. It does
+                    not belong here.</p>
+            </section>
+            <section id="3b" class="scene" data-scene-id="lp3b" title="To Dismantle (b)">
+                <p>What David Williams calls an “epidemic of stacked stone” is afflicting protected areas around the
+                    United States (2012, 109). Although recreational stone-stacking is also increasing in other parts of
+                    the world, it’s especially popular in American national and state parks, which have recently seen a
+                    proliferation of visitor-built cairn-like sculptures and, with them, a suite of environmental,
+                    recreational, and aesthetic impacts. </p>
+                <p>At first glance, building a personal cairn or rock sculpture would seem an innocuous or even
+                    admirable pursuit—a way for individuals to interact with and deepen their relationship with wild
+                    spaces and/or public places. To some people, stone-stacking is “a way of honoring an urgent inner
+                    soul demand to be more balanced, quiet, still, and centered” (quoted in Williams 2012, 105), a way
+                    to “leave something in the landscape artfully altered” (an editor’s addendum to an essay on “Rock
+                    Stacking and the Art of Balance”, Rogers 2013), and/or “part of the human condition… this is humans
+                    expressing their bliss” (according to a High Country News reader, “M Pinenut”, response to Martin
+                    2015).</p>
+                <p>To others, though, erection of personal cairns is an unnecessary, disrespectful, and damaging
+                    pursuit. “Stop the rock-stacking[!]” exasperated writer Robyn Martin urged in a High Country News
+                    opinion piece (2015), eliciting vehement praise and equally-vehement admonition from more than two
+                    hundred agitated readers. Martin lists several problems associated with structures that she
+                    dismisses as New Agey “prayer stone stacks” and/or manifestations of selfishness: “First, if [rock
+                    stacks are] set in a random place, they can lead an unsuspecting hiker into trouble, away from the
+                    trail... Second, we go to wilderness to remove ourselves from the human saturation of our lives, not
+                    to see mementoes from other people's lives”; moreover, “[m]oving rocks increases erosion by exposing
+                    the soil underneath” and can destroy the burrows of insects or small mammals (Martin 2015). In
+                    addition to the social and ecological concerns Martin describes, pseudo-cairns belittle indigenous
+                    cultures. When non-Inuit outsiders build inauthentic inuksuit-like structures just for fun, for
+                    example, Inuit elders fear that their material culture is being disrespectfully appropriated
+                    (McNeill 2004). Similarly, native Hawaiians feel that visitor-built recreational cairns delegitimize
+                    traditional native ahu and desecrate sacred places (Hawaiian Volcano Observatory 2005).</p>
+                <p>In public parks and preserves, land managers use a mix of education and regulation to try to prevent
+                    visitors from illegally tampering with legitimate cairns and/or erecting personal sculptures. For
+                    example, in Hawaii Volcanoes National Park, where stone-stacking visitors were peeling stones off
+                    lava flows, “eras[ing] geologic history” and “destroy[ing] important archaeological evidence”,
+                    personnel began dismantling new structures, posted “no rock stacking” signs, and issued a news
+                    release pleading: “Respect the Land, Honor the Culture, Leave the Rocks in the Rightful Place”
+                    (Hawaiian Volcano Observatory 2005). Outreach materials politely explain the difference between
+                    legitimate ahu and tourist-built heaps, describe the impacts of improperly-built structures, and
+                    sternly inform visitors of a federal law prohibiting “disturbing from its natural state all mineral
+                    resources” (Hawaii Volcanoes 2005). Meanwhile, officials at Acadia National Park face a mix of
+                    vandals knocking over trail cairns as well as visitors out “pil[ing] rocks on ridgetops and
+                    cobblestone beaches, not knowing that violates park rules, or that it may offend others” (Acadia
+                    2015). Rangers have spent years trying to find the most effective ways to educate the public and
+                    mitigate the damage, but sometimes wonder if “‘[i]t is a waste of our time when somebody is undoing
+                    the work that [we] do on a daily basis’” (quoted in Acadia 2015).</p>
+                <p>It's not just about the rocks, or even the environmental, cultural, and social impacts of
+                    stone-stacking, according to Charlie Jacobi, the former Resource Specialist at Acadia—the larger
+                    issue centers on “‘stewardship of public lands and…places we love and go to’” (quoted in Acadia
+                    2015). He cites the principles of the “Leave No Trace” Center for Outdoor Ethics, a widely-accepted
+                    program that “teaches people…how to enjoy the outdoors responsibly” (LNT n.d.). Most notably, the
+                    principle “Leave What You Find” urges outdoor recreationists not to take or alter existing objects
+                    or features, or return temporary alterations to pre-use conditions (i.e. disassemble stone
+                    sculptures before leaving) to preserve natural and cultural integrity. Put bluntly by Martin: stone
+                    stacks are “unnecessary marker[s] of humanity... Pointless cairns are simply pointless reminders of
+                    the human ego” (2015).</p>
+                <p>“Pointlessness” is at the heart of the dispute. Is stacking stones a universal instinct practiced by
+                    peoples worldwide for millennia, a right of self-expression, and/or an emerging aesthetic? Or is
+                    piling rocks for no utilitarian or symbolic purpose an exercise in selfishness and disregard for
+                    ecological and/or cultural landscapes? Researchers agree that traditionally-built cairns serve as
+                    important navigational cues and reflect meaningful environmental perceptions, but where do personal
+                    rock sculptures fit in, both figuratively and geographically? Are there places or spaces that aren’t
+                    meant to be humanized?</p>
+
+                <div id="figure5" class="figure" style="background-image:url(img/fig5.jpg);"></div>
+                <div class="caption">Figure 5 (Natural geologic feature, Primrose Ridge, Denali National Park, Alaska)
+                </div>
+                <p>Atop Primrose Ridge, it may have given someone pleasure to balance some rocks—a sense of engagement,
+                    perhaps, with the wide, wondrous landscape, or a way to create a secure, meaningful place out of
+                    that sweeping “chaos of natural ‘space’” (McNeill 2004). A small act of defiance; a means of
+                    humanizing a decidedly non-human place. Something to do to pass the time while waiting for wildlife,
+                    who knows. </p>
+                <p>You do know, though, that it gives you a feeling of deep satisfaction and joy to dismantle the
+                    structure and gently nestle the stones back into the divots from which they must have come. Within a
+                    few minutes, you return the scene to its wild, windswept character—creating your own mental landmark
+                    in the process—then continue on your way, guided across the emptiness of the landscape by only your
+                    own curiosity and desire. </p>
+                <h3>References</h3>
+                <ul class="references">
+                    <li>Acadia National Park. n.d. Waldron Bates, Pathmaker.
+                        [https://www.nps.gov/acad/learn/historyculture/uplcelandoad/WaldronBates.pdf].</li>
+                    <li>Childs, C. 2012. Apocalyptic Planet: Field Guide to the Everending Earth. New York: Pantheon
+                        Books.</li>
+                    <li>Dean, C. 2015. Rethinking Apacheta. Journal of Andean Archaeology 1: 93-108.</li>
+                    <li>Graburn, N. 2004. Inuksuk: Icon of the Inuit of Nunavut. Etudes / Inuit / Studies 28 (1): 69-82.
+                    </li>
+                    <li>Hallendy, N. 2000. Inuksuit: Silent Messengers of the Arctic. Vancouver: Douglas & McIntyre
+                        Ltd., and Seattle: University of Washington Press.</li>
+                    <li>Hallendy, N. 2009. Tukilut: The Stone People Who Live in the Wind.. Fairbanks: Douglas and
+                        Mclntyre and University of Alaska Press.</li>
+                    <li>Hawaii Volcanoes National Park. 2005. Respect the Land, Honor the Culture Leave the Rocks in
+                        their Rightful Place.</li>
+                    <li>Haynal, P. M. 2000. The Influence of Sacred Rock Cairns and Prayer Seats on Modern Klamath and
+                        Modoc Religion and World View. Journal of California and Great Basin Anthropology, 22(2):
+                        170-185.</li>
+                    <li>Jett, S. C. 1986. Observations regarding Chartkoff's California "Rock Feature Complex". American
+                        Antiquity 51 (3): 615-616.</li>
+                    <li>Jett, S. C. 1994. Cairn Trail Shrines in Middle and South America. Yearbook. Conference of Latin
+                        Americanist Geographers 20: 1-8.</li>
+                    <li>Leave No Trace Center for Outdoor Ethics. n.d. Boulder, CO. [https://lnt.org/].</li>
+                    <li>Lentz, T. L. 2007. AMC Trail Adopter’s Handbook, 9th edition. Boston: Appalachian Mountain Club
+                        White Mountain Adopt-A-Trail Program.</li>
+                    <li>Martin, R. 2015. Stop the rock-stacking. High Country News.</li>
+                    <li>McNeill, L. 2004. “Traces of Coming and Going”: The Contemporary Creation of Inuksuit on the
+                        Avalon Peninsula. Revue de la Culture Materielle 60.</li>
+                    <li>Mizin, V. 2013. Stone Cairns and Simulacra: Navigation, Folklore, and Tradition in the Arctic.
+                        Time and Mind: The Journal of Archaeology, Consciousness and Culture 6(3): 313-329.</li>
+                    <li>Online Etymology Dictionary. N.d. “Cairn (n.)” 
+                        [https://www.etymonline.com/word/cairn#etymonline_v_580]</li>
+                    <li>Pongola Game Reserve, Amafa/Heritage KwaZulu Natal. N.d. “Isivivane, Weenen”
+                        [http://www.heritagekzn.co.za/sites/visit/ladysmith/item/63-isivivane-weenen]</li>
+                    <li>Rogers, P. 2013. Relaxation: Rock Stacking and the Art of Balance. Simply Sonoma : June. </li>
+                    <li>Hawaiian Volcano Observatory. 2005. Rock piles tell stories we don’t want to hear. U.S.
+                        Geological Survey.</li>
+                    <li>Wilderness Act of 1964. Public Law 88-577, 16 U.S.C. 1131-1136.</li>
+                    <li>Williams, D. B. 2012. Cairns: Messengers in Stone. Seattle: The Mountaineers Books.</li>
+                </ul>
+
+            </section>
+
+            <div class="row footer-row"></div>
+        </div>
+    </div>
+    <div id="progress">
+        <div id="bar"></div>
+    </div>
+    <div id="bar-top"></div>
+    <div id="bar-bottom"></div>
+    <!-- inject:templates:html -->
+    <!-- endinject -->
+    <script src="../../../js/combined.js"></script>
+    <script>
+        Focus.Map.defaultOptions = {
+            color: 'rgb(207, 20, 43)',
+            fillColor: 'rgb(207, 20, 43)',
+            radius: 3,
+            weight: 4,
+            fillOpacity: 1,
+            opacity: 0.5
+        };
+
+        var figureStyle = {
+            "weight": 4,
+            "radius": 4,
+            "fillOpacity": .8
+        }
+
+        var baseLayer = {
+            "type": 'tile',
+            "url": 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+        }
+
+        var imageryLayer = {
+            "type": "esri-basemap",
+            "url": "ImageryFirefly"
+        }
+
+        var imageryLayer2 = {
+            "type": "esri-basemap",
+            "url": "ImageryClarity"
+        }
+
+        var layerStyle = {
+            "filter": "saturate(1.5)",
+            "opacity": 0.8,
+            "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
+        }
+
+        var scenes = {
+            "features": [{
+                "id": "fig1",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-109.85178, 38.17648]
+                    },
+                    "properties": {
+                        "name": "Figure 1 (Cairns inviting hikers through a window into a maze of redrock, Canyonlands National Park, Utah)",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "fig3",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-73.923668, 44.112518]
+                    },
+                    "properties": {
+                        "name": "Figure 3 (Tapering-style cairn, Adirondack State Park, New York)",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "fig4",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-73.93097, 44.09945]
+                    },
+                    "properties": {
+                        "name": "Figure 4 (Wishes for no rain atop Skylight Peak, Adirondacks)",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "fig5",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-149.29513, 63.75609]
+                    },
+                    "properties": {
+                        "name": "Figure 5 (Natural geologic feature, Primrose Ridge, Denali National Park, Alaska)",
+                    }
+                },
+                "style": figureStyle
+            }],
+            "scenes": [{
+                "id": "lp1a",
+                "baseLayer": imageryLayer,
+                "center": [-109.85178, 38.17648],
+                "zoom": 13
+            }, {
+                "id": "lp1b",
+                "baseLayer": baseLayer,
+                "style": layerStyle,
+                "layers": [{
+                    "idRef": "fig1"
+                }],
+                "zoom": 13
+            }, {
+                "id": "lp2a",
+                "baseLayer": imageryLayer,
+                "center": [-73.9236, 44.1125],
+                "zoom": 12
+            }, {
+                "id": "lp2b",
+                "baseLayer": baseLayer,
+                "style": layerStyle,
+                "layers": [{
+                    "idRef": "fig3"
+                }, {
+                    "idRef": "fig4"
+                }],
+                "zoom": 14
+            }, {
+                "id": "lp2c",
+                "baseLayer": imageryLayer2,
+                "layers": [{
+                    "idRef": "fig3"
+                }, {
+                    "idRef": "fig4"
+                }],
+                "zoom": 14
+            }, {
+                "id": "lp3a",
+                "baseLayer": baseLayer,
+
+                "layers": [{
+                    "idRef": "fig5"
+                }],
+                "zoom": 11
+            }, {
+                "id": "lp3b",
+                "baseLayer": imageryLayer2,
+                "style": layerStyle,
+                "layers": [{
+                    "idRef": "fig5"
+                }],
+                "zoom": 11
+            }]
+        };
+
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-79613259-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('#nav li.previous a').on('click', function (e) {
+                e.preventDefault();
+                var $prev = $('#nav').find('.sections li.active').prev();
+
+                if (!$prev.hasClass('previous')) {
+                    $prev.find('a').click();
+                }
+            });
+
+            $('#nav li.next a').on('click', function (e) {
+                e.preventDefault();
+                var $next = $('#nav').find('.sections li.active').next();
+
+                if (!$next.hasClass('next')) {
+                    $next.find('a').click();
+                }
+            });
+
+            var overviewMap = new Focus.Views.OverviewMapView({
+                model: new Backbone.Model({
+                    initialScene: new Focus.Models.SceneModel({
+                        baseLayer: {
+                            "type": "esri-basemap",
+                            "url": "NationalGeographic",
+                        },
+                        "style": {
+                            "filter": "brightness(120%)"
+                        },
+                        center: [38.17648, -109.85178],
+                        zoom: 3,
+                        showAttribution: false
+                    })
+                }),
+                showCenterPoint: true
+            });
+            var sceneManager = new Focus.Views.SceneManagerView({
+                el: $('body'),
+                initialScene: {
+                    baseLayer: {
+                        "type": "esri-basemap",
+                        "url": "Terrain"
+                    },
+                    center: [38.17648, -109.85178],
+                    zoom: 10,
+                    markerZoomAnimation: false
+                },
+                navigatorClass: Focus.Views.ScrollingSceneNavigator,
+                mapEngineClass: Focus.Views.LeafletMapEngine
+            });
+
+            var shareView = new Focus.Views.ShareView();
+            shareView.render();
+
+        });
+
+    </script>
+</body>
+
+</html>
