@@ -211,7 +211,7 @@
                     Cairns: An Invitation</h2>
                 <div class="author"><span class="name">Tyra A. Olstad</span>, <span class="organization">Department of
                         Geography and Environmental Sustainability, SUNY Oneonta</span></div>
-                <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2019.62.3f</div>
+                <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2019.62.6f</div>
                 <h3>I. To Follow</h3>
                 <p>Baking and half-blinded by the summer sun, you squint out at the horizon, searching for anything
                     other than sandstone and sky, an infinity of turquoise-blue arcing over waves of gritty, griddle-hot
@@ -324,8 +324,6 @@
                     your cairn will be a fact on the landscape, a waypoint experienced by every hiker. Years hence,
                     you’ll be able to point to it and say: I built that; that’s my legacy. Without having to carve your
                     initials into a tree or peck them out of the bedrock, you’re showing: I was here!</p>
-                <div id="figure3" class="figure" style="background-image:url(img/fig3.jpg);"></div>
-                <div class="caption">Figure 3: Tapering-style cairn, Adirondack State Park, New York</div>
                 <p>“Like much rock work,” cairn construction is, according to trails experts with the Appalachian
                     Mountain Club (AMC), “as much an art as a science” (Lentz 2007, 26). Unlike monumental architecture
                     or infrastructure, cairns do not require elaborate equipment or superhuman strength to build—only
@@ -347,7 +345,8 @@
                     need of assistance. Alternatively, Hallendy notes that inuksuit “tend to be plentiful at places were
                     [sic] people have waited… It’s at the waiting places where you can sometimes find…the most beautiful
                     kind of inuksuk” (2000, 27). </p>
-
+                <div id="figure3" class="figure" style="background-image:url(img/fig3.jpg);"></div>
+                <div class="caption">Figure 3: Tapering-style cairn, Adirondack State Park, New York</div>
                 <p>Just as a cairn-builder chooses a location based on a mix of personal, cultural, and environmental
                     factors, they design their pile depending on its purpose, available source material, and local
                     cultural or artistic traditions. There are a few distinctive styles, ranging from Arctic people’s
@@ -562,6 +561,7 @@
     <!-- inject:templates:html -->
     <!-- endinject -->
     <script src="../../../js/combined.js"></script>
+    <script src="./data/druid_arch_trail.js"></script>
     <script>
         Focus.Map.defaultOptions = {
             color: 'rgb(207, 20, 43)',
@@ -607,13 +607,23 @@
                     "type": "Feature",
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [-109.85178, 38.17648]
+                        "coordinates": [-109.83238, 38.09272]
                     },
                     "properties": {
                         "name": "Figure 1 (Cairns inviting hikers through a window into a maze of redrock, Canyonlands National Park, Utah)",
                     }
                 },
                 "style": figureStyle
+            }, {
+                "id": "DRUID_ARCH_TRAIL",
+                "type": "geojson",
+                "data": DRUID_ARCH_TRAIL,
+                "style": {
+                    "opacity": 0.7,
+                    "color": 'rgb(128,128,128)',
+                    "fillColor": 'rgb(128,128,128)',
+                    "dashArray": [10, 10]
+                }
             }, {
                 "id": "fig3",
                 "type": "geojson",
@@ -660,16 +670,23 @@
             "scenes": [{
                 "id": "lp1a",
                 "baseLayer": imageryLayer,
-                "center": [-109.85178, 38.17648],
-                "zoom": 13
+                "center": [-109.83238, 38.09272],
+                "zoom": 16
             }, {
                 "id": "lp1b",
                 "baseLayer": baseLayer,
                 "style": layerStyle,
                 "layers": [{
-                    "idRef": "fig1"
-                }],
-                "zoom": 13
+                        "idRef": "fig1"
+                    },
+                    {
+                        "idRef": "DRUID_ARCH_TRAIL"
+                    }
+                ],
+                "bounds": {
+                    "fig1": true,
+                },
+                "zoom": 14
             }, {
                 "id": "lp2a",
                 "baseLayer": imageryLayer,
