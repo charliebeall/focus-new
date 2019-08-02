@@ -3,6 +3,24 @@ Focus.Volumes = [
     {
         number: 62,
         publications: [{
+            type: 'Geo Quiz',
+            title: 'Quiz Eleven: Borders',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '07/18/19',
+            thumbnail: 'publications/quizzes/eleven/img/Isla_Portillos.jpg',
+            url: 'publications/quizzes/eleven/index.html',
+            location: []
+        },{
+            type: 'Photo Essay',
+            title: 'Food Sovereignty: Views from Cuba',
+            author: 'Lindsay Naylor, Ibrahim Ali, Paul Massey, Mary Mathison, Alyshia Silva, Paul Wasserman',
+            description: '',
+            date: '06/27/19',
+            thumbnail: 'publications/photoessays/cuba_food_sovereignty/img/figure9.jpg',
+            url: 'publications/photoessays/cuba_food_sovereignty/index.html',
+            location: []
+        },{
             type: 'Photo Essay',
             title: 'Jordan\'s Forgotten Eastern Desert Qasour',
             author: 'Casey D. Allen',
