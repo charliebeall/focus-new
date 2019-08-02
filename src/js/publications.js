@@ -3,6 +3,15 @@ Focus.Volumes = [
     {
         number: 62,
         publications: [{
+            type: 'Feature Article',
+            title: 'Cairns:  An Invitation',
+            author: 'Tyra A. Olstad',            
+            description: '',
+            date: '08/02/19',
+            thumbnail: 'publications/articles/cairns/img/fig3.jpg',
+            url: 'publications/articles/cairns/index.html',
+            location: []
+        },{
             type: 'Geo Quiz',
             title: 'Quiz Eleven: Borders',
             author: 'Wesley Reisser',
