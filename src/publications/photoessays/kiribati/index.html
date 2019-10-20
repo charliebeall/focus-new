@@ -27,7 +27,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Place favicon.ico in the root directory -->
-    <link href="https://fonts.googleapis.com/css?family=Lato|Poller+One|Slabo+27px&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato|Poller+One|Long+Cang&display=swap" rel="stylesheet"> 
     <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
     <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
@@ -47,7 +47,7 @@
         #text h2,
         #text h3 {
             color: rgba(0, 47, 108, 1);
-            font-family: 'Slabo 27px', sans serif;
+            font-family: 'Long Cang', cursive;
             text-transform: none;
 
         }
@@ -75,7 +75,8 @@
         }
 
         #text.photo-essay h2 {
-            color: rgb(219, 156, 152);
+            *color: rgb(219, 156, 152);
+            color: #FCD116;
             font-size: 60px;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0))
         }
@@ -202,13 +203,13 @@
         }
 
         #text h2 {
-            font-family: 'Poller One', cursive;
+            font-family: 'Long Cang', cursive;
             text-transform: none;
             font-size: 50px;
         }
 
         #text h3 {
-            font-family: 'Poller One', cursive;
+            font-family: 'Long Cang', cursive;
             text-transform: none;
             color: rgba(0, 42, 143, 0.7);
         }
@@ -219,7 +220,7 @@
         }
 
         span.place-text {
-            font-family: 'Poller One', cursive;
+            font-family: 'Long Cang', cursive;
             color: #fff;
         }
 
@@ -353,6 +354,7 @@
         #overview-map {
             width: 150px;
             height: 150px;
+            border-radius: 0px;
         }
 
         .figure.zoom-height {
@@ -447,10 +449,13 @@
                 <div class="intro">
                     <h2 class="title">Kiribati at the Center of the World</h2>
                     <div class="author"
-                        style="background: linear-gradient(90deg, rgb(84, 33, 224), rgba(18, 128, 179, 0.644)); color: rgb(255, 255, 255);">
+                        style="background: linear-gradient(90deg, rgb(0, 63, 135), rgba(18, 128, 179, 0.644)); color: rgb(255, 255, 255);">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="col-12 col-xs-3 col-sm-3 col-md-2 col-lg-2">
+                                    <img class="author-photo" src="img/AuthorPhoto.jpg">
+                                </div>
+                                <div class="col-12 col-xs-9 col-sm-9 col-md-10 col-lg-10">
                                     <div class="row">
                                         <div class="col-12 col-xs-12">
                                             <span class="name">Rex Rowley</span>,&nbsp;<span
@@ -460,7 +465,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="citation"><span class="citation-label">DOI:</span>
-                                            10.21690/foge/2019.62.2p</div>
+                                            10.21690/foge/2019.62.4p</div>
                                     </div>
                                 </div>
                             </div>
@@ -485,7 +490,7 @@
                 </p>
             </section>
             <section id="1" class="scene photo-scene" data-scene-id="place1">
-                <div class="figure contain" style="background-image:url(img/Fig2.jpg);"></div>
+                <div class="figure contain" style="background-position: 50% 0%; background-image:url(img/Fig2.jpg);"></div>
                 <p>
                     Kiribati is made up of 21 inhabited islands on 33 atolls (and one phosphate rock island) spread over
                     a wide swath of the Pacific Ocean.
@@ -498,7 +503,7 @@
                 </p>
             </section>
             <section id="2" class="scene photo-scene" data-scene-id="place2">
-                <div class="figure contain" style="background-image:url(img/Fig3.jpg);"></div>
+                <div class="figure contain" style="background-position: 50% 0%; background-size: 75% auto; background-image:url(img/Fig3.jpg);"></div>
                 <p>
                     Despite its remoteness Kiribati is a place linked to the rest of the world.
                     The most evident connections appear in landscapes and material culture.
@@ -517,9 +522,7 @@
                     island places and populations with few resources to combat its harm.
                     Indeed, the fact that Kir-ibati literally touches all four hemispheres of the earth is a metaphor
                     for a country with deep and global connections.
-                </p>
-                <div></div>
-                <p>
+                    <br/><br/>
                     Although Tarawa is only one of the many islands in this Pacific nation, it is a good microcosm of
                     the broader country as
                     its center of population, government, tourism, and economy.
@@ -553,9 +556,7 @@
                 </p>
             </section>
             <section id="4" class="scene photo-scene" data-scene-id="place4">
-                <div class="row">
-                    <div class="figure" style="background-image:url(img/Fig5.jpg);"></div>
-                </div>
+                <div class="figure" style="background-image:url(img/Fig5.jpg);"></div>
                 <p>
                     I noticed a pattern in the cars parked at the airport and throughout my travels in Tarawa:
                     most vehicles are used cars from Japan.
@@ -622,7 +623,7 @@
                 </p>
             </section>
             <section id="9" class="scene photo-scene" data-scene-id="place9">
-                <div class="figure contain" style="background-image:url(img/Fig10.jpg);"></div>
+                <div class="figure contain" style="background-position: 50% 0%; background-image:url(img/Fig10.jpg);"></div>
                 <p>
                     Unfortunately, much of the trash never makes it to the landfill.
                     Instead, it is found on the ground all over the most populated islets on Tarawa.
@@ -645,7 +646,7 @@
                 </p>
             </section>
             <section id="11" class="scene photo-scene" data-scene-id="place10">
-                <div class="figure contain" style="background-image:url(img/Fig12.jpg);"></div>
+                <div class="figure contain" style="background-position: 50% 0%; background-image:url(img/Fig12.jpg);"></div>
                 <p>
                     Signs along Tarawa’s main island road reveal the impact of aid from several countries in the region.
                     The sign in front of this complex of prefabricated multi-family homes states: “Bairiki New Houses,
@@ -671,7 +672,7 @@
                 </p>
             </section>
             <section id="12" class="scene photo-scene" data-scene-id="place11">
-                <div class="figure contain" style="background-image:url(img/Fig13.jpg);"></div>
+                <div class="figure contain" style="background-position: 50% 0%; background-image:url(img/Fig13.jpg);"></div>
                 <p>
                     In Tarawa, I met another Australian, Mike Savins, with longtime connections to Kiribati.
                     Savins had a career in high-end boat building in New South Wales and started coming to Kiribati 30
@@ -688,7 +689,7 @@
                 </p>
             </section>
             <section id="13" class="scene photo-scene" data-scene-id="place12">
-                <div class="figure contain" style="background-image:url(img/Fig14.jpg);"></div>
+                <div class="figure" style="background-image:url(img/Fig14.jpg);"></div>
                 <p>
                     Savins and his wife also run ecolodges, one on the southern tip of Abatao (pictured here) and
                     another on Nabeina.
@@ -715,7 +716,7 @@
                 </p>
             </section>
             <section id="15" class="scene photo-scene" data-scene-id="place14">
-                <div class="figure contain" style="background-image:url(img/Fig16.jpg);"></div>
+                <div class="figure contain" style="background-position: 50% 0%; background-image:url(img/Fig16.jpg);"></div>
                 <p>
                     The strength of the Catholic faith in Kiribati is easily recognizable in the church buildings that
                     dot the Tarawa atoll,
@@ -728,7 +729,7 @@
                 </p>
             </section>
             <section id="16" class="scene photo-scene" data-scene-id="place15">
-                <div class="figure zoom-height" style="background-image:url(img/Fig17.jpg);"></div>
+                <div class="figure" style="background-image:url(img/Fig17.jpg);"></div>
                 <p>
                     The Church of Jesus Christ of Latter-day Saints is another common denomination in this largely
                     Christian country.
@@ -784,8 +785,8 @@
                 </p>
             </section>
             <section id="20" class="scene photo-scene" data-scene-id="place19">
-                <div class="figure zoom-height"
-                    style="background-position: 75% 50%; background-image:url(img/Fig21.jpg);"></div>
+                <div class="figure"
+                    style="background-image:url(img/Fig21.jpg);"></div>
                 <p>
                     The Japanese defenses on Betio were strong.
                     Four Vickers eight-inch guns on the west and south shores of the islet were a major threat to an
@@ -803,8 +804,8 @@
                 </p>
             </section>
             <section id="21" class="scene photo-scene" data-scene-id="place20">
-                <div class="figure zoom-height"
-                    style="background-position: 75% 50%; background-image:url(img/Fig22.jpg);"></div>
+                <div class="figure"
+                    style="background-image:url(img/Fig22.jpg);"></div>
                 <p>
                     The Battle of Tarawa was a defining moment in the push against the Japanese in the Pacific.
                     It took place largely on three beaches on Betio’s north coast, which US strategists labeled Red
@@ -834,7 +835,7 @@
             </section>
             <section id="23" class="scene photo-scene" data-scene-id="place22">
                 <div class="figure contain"
-                    style="background-image:url(img/Fig24.jpg); background-position: 50% -100px;"></div>
+                    style="background-image:url(img/Fig24.jpg);"></div>
                 <p>
                     Other artifacts from World War II are never far from residential life in Betio.
                     In the background of this photograph a family takes residence in a makeshift hut on the ocean side
@@ -928,7 +929,7 @@
                 </p>
             </section>
             <section id="31" class="scene photo-scene" data-scene-id="place30">
-                <div class="figure" style="background-image:url(img/Fig32.jpg);"></div>
+                <div class="figure" style="background-image:url(img/Fig32-0.jpg);"></div>
                 <p>
                     Made up of low-lying atolls less than a mile wide and with average maximum elevations less than 6
                     meters above sea level,
@@ -960,13 +961,13 @@
                 </p>
             </section>
             <section id="34" class="scene photo-scene" data-scene-id="place32">
-                <div class="figure" style="background-image:url(img/Fig33.jpg);"></div>
+                <div class="figure contain" style="background-position: 50% 0%; background-size: 75% auto; background-image:url(img/Fig33.jpg);"></div>
                 <p>
-                    While Kiribati’s president, Anote Tong made addressing climate change one of his most important
+                    While <a class="location" data-layer-id="fig1">Kiribati</a>’s president, Anote Tong made addressing climate change one of his most important
                     concerns.
-                    He successfully negotiated a deal in 2014 to acquire several acres sur-rounding Naviavia,
+                    He successfully negotiated a deal in 2014 to acquire several acres sur-rounding <a class="location" data-layer-id="naviavia">Naviavia</a>,
                     a village on the large and rocky island of Vanua Levu in Fiji.
-                    This image shows the edge of Naviavia and the valley below that could potentially be used as an
+                    This image shows the edge of <a class="location" data-layer-id="naviavia">Naviavia</a> and the valley below that could potentially be used as an
                     actual place of refuge,
                     should the i-Kiribati be required to leave their home. Or, perhaps the move was a political
                     statement to bring the world’s attention
@@ -987,7 +988,7 @@
                     will simply not allow their home-land to disappear.
                 </p>
             </section>
-            <section id="35" class="scene photo-scene" data-scene-id="conclusion">
+            <section id="35" class="scene" data-scene-id="place1" style="color: white;">
                 <div class="figure" style="background-image:url(img/Fig1.jpg);"></div>
                 <p>
                     This exploration of the Tarawa Atoll uncovers several important themes.
@@ -1012,10 +1013,7 @@
                     Japanese imperial exploits in the mid-20th century lead the way to the Battle of Tawara, a watershed
                     moment in the American push westward across
                     the Pacific Ocean after Pearl Harbor.
-                </p>
-                <div>
-                </div>
-                <p>
+                    <br/><br/>
                     Second, even in what might be one of the most isolated island nations in the world today,
                     globalization and globalism are front and center.
                     Kiribati wouldn’t survive in its modern form without aid and political ties to countries and peoples
@@ -1028,9 +1026,7 @@
                     opportunities and medicinal technologies,
                     for example, have changed the demographic and economic patterns and prospects of the Kiribati
                     people.
-                </p>
-                <div></div>
-                <p>
+                    <br/><br/>
                     Future prospects for Kiribati amid global climate change illustrate a third example of how
                     intertwined this country is with the rest of the world.
                     Sea level rise may lead to a diaspora of i-Kiribati to Australia, New Zealand, and Fiji.
@@ -1047,9 +1043,7 @@
                     perspective,
                     it is not like-ly that future climate change issues facing atolls states like Kiribati will fade
                     away soon from the global view.
-                </p>
-                <div></div>
-                <p>
+                    <br/><br/>
                     Indeed, in its past, present, and future, Kiribati is illustrative of the connections that even the
                     most isolated places possess within a globalized world.
                 </p>
@@ -1075,7 +1069,7 @@
         Focus.Map = {};
         Focus.Map.defaultOptions = {
             color: '#333', //'rgba(0, 42, 143, 1)', //'#B0BDCE', //'#D30F23', //'rgba(39, 171, 226, 1)',
-            fillColor: '#AE4741', //'rgba(0, 42, 143, 1)', //'rgba(39, 171, 226, 1)',
+            fillColor: '#FCD116', //'rgba(0, 42, 143, 1)', //'rgba(39, 171, 226, 1)',
             radius: 5,
             weight: 0.5,
             fillOpacity: 1,
@@ -1132,13 +1126,6 @@
                                 172.967435, 1.416681
                             ]
                         }
-                    },
-                    "style": {
-                        "icon": {
-                            "html": "<div class='place-image'><img src='img/castlered.svg'/></div>",
-                            "iconSize": [36, 28],
-                            "iconAnchor": [18, 14]
-                        }
                     }
                 },
                 {
@@ -1171,13 +1158,6 @@
                                 172.975173, 1.330205
                             ]
                         }
-                    },
-                    "style": {
-                        "icon": {
-                            "html": "<div class='place-image'><img src='img/castlered.svg'/></div>",
-                            "iconSize": [36, 28],
-                            "iconAnchor": [18, 14]
-                        }
                     }
                 },
                 {
@@ -1193,13 +1173,6 @@
                             "coordinates": [
                                 172.938097, 1.354299
                             ]
-                        }
-                    },
-                    "style": {
-                        "icon": {
-                            "html": "<div class='place-image'><img src='img/castlered.svg'/></div>",
-                            "iconSize": [36, 28],
-                            "iconAnchor": [18, 14]
                         }
                     }
                 },
@@ -1217,13 +1190,6 @@
                                 172.927909, 1.356899
                             ]
                         }
-                    },
-                    "style": {
-                        "icon": {
-                            "html": "<div class='place-image'><img src='img/castlered.svg'/></div>",
-                            "iconSize": [36, 28],
-                            "iconAnchor": [18, 14]
-                        }
                     }
                 },
                 {
@@ -1240,11 +1206,6 @@
                                 172.936008, 1.357029
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillOpacity": 0.01,
                     }
                 },
                 //
@@ -1294,11 +1255,6 @@
                                 172.933165, 1.357545
                             ]
                         }
-                    },
-                    "style": {
-                        "weight": 5,
-                        "radius": 5,
-                        "fillColor": 'rgba(255,215,0)'
                     }
                 },
                 {
@@ -1419,7 +1375,7 @@
                     "data": {
                         "type": "Feature",
                         "properties": {
-                            "name": "Historial war sight"
+                            "name": "Historical war sight"
                         },
                         "geometry": {
                             "type": "Point",
@@ -1435,7 +1391,7 @@
                     "data": {
                         "type": "Feature",
                         "properties": {
-                            "name": "Historial war sight"
+                            "name": "Historcial war sight"
                         },
                         "geometry": {
                             "type": "Point",
@@ -1451,7 +1407,7 @@
                     "data": {
                         "type": "Feature",
                         "properties": {
-                            "name": "Historial war sight"
+                            "name": "Historical war sight"
                         },
                         "geometry": {
                             "type": "Point",
@@ -1677,14 +1633,29 @@
                             ]
                         }
                     }
-                },
+                }, {
+                    "id": "naviavia",
+                    "type": "geojson",
+                    "data": {
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Naviavia"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                179.095827, -16.765668
+                            ]
+                        }
+                    }
+                }
             ],
             "scenes": [{
                     "id": "place0",
-                    "zoom": 7,
+                    "zoom": 2,
                     "baseLayer": [{
                         "type": "esri-basemap",
-                        "url": "Oceans",
+                        "url": "NationalGeographic",
                         "options": {
                             "detectRetina": true,
                         }
@@ -2273,9 +2244,11 @@
                     {
                     "id": "place32",
                     "layers": [{
-                            "idRef": "fig31"
+                            "idRef": "naviavia"
+                        }, {
+                            "idRef": "fig1"
                         }],
-                    "zoom": 16,
+                    "zoom": 5,
                     "baseLayer": [{
                         "type": "esri-basemap",
                         "url": "Imagery",
@@ -2304,7 +2277,7 @@
                     }, {
                     "id": "place34",
                     "layers": [{
-                            "idRef": "fig33"
+                            "idRef": "naviavia"
                         }],
                     "zoom": 16,
                     "baseLayer": [{
