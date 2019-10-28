@@ -3,6 +3,24 @@ Focus.Volumes = [
     {
         number: 62,
         publications: [{
+            type: 'Photo Essay',
+            title: 'Kiribati at the Center of the World',
+            author: 'Rex Rowley',
+            description: '',
+            date: '10/27/19',
+            thumbnail: 'publications/photoessays/kiribati/img/Fig14.jpg',
+            url: 'publications/photoessays/kiribati/index.html',
+            location: []
+        },{
+            type: 'Feature Article',
+            title: 'Oil and the Misspent Riches of Equatorial Guinea',
+            author: 'Thomas Wikle',
+            description: '',
+            date: '09/11/19',
+            thumbnail: 'publications/articles/equatorial_guinea/img/fig2.jpg',
+            url: 'publications/articles/equatorial_guinea/index.html',
+            location: []
+        },{
             type: 'Feature Article',
             title: 'Cairns:  An Invitation',
             author: 'Tyra A. Olstad',            
