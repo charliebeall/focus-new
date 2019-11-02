@@ -4,6 +4,42 @@ Focus.Volumes = [
         number: 62,
         publications: [{
             type: 'Photo Essay',
+            title: 'Kiribati at the Center of the World',
+            author: 'Rex Rowley',
+            description: '',
+            date: '10/27/19',
+            thumbnail: 'publications/photoessays/kiribati/img/Fig14.jpg',
+            url: 'publications/photoessays/kiribati/index.html',
+            location: []
+        },{
+            type: 'Feature Article',
+            title: 'Oil and the Misspent Riches of Equatorial Guinea',
+            author: 'Thomas Wikle',            
+            description: '',
+            date: '09/11/19',
+            thumbnail: 'publications/articles/equatorial_guinea/img/fig2.jpg',
+            url: 'publications/articles/equatorial_guinea/index.html',
+            location: []
+        },{
+            type: 'Feature Article',
+            title: 'Cairns:  An Invitation',
+            author: 'Tyra A. Olstad',            
+            description: '',
+            date: '08/02/19',
+            thumbnail: 'publications/articles/cairns/img/fig3.jpg',
+            url: 'publications/articles/cairns/index.html',
+            location: []
+        },{
+            type: 'Geo Quiz',
+            title: 'Quiz Eleven: Borders',
+            author: 'Wesley Reisser',
+            description: '',
+            date: '07/18/19',
+            thumbnail: 'publications/quizzes/eleven/img/Isla_Portillos.jpg',
+            url: 'publications/quizzes/eleven/index.html',
+            location: []
+        },{
+            type: 'Photo Essay',
             title: 'Food Sovereignty: Views from Cuba',
             author: 'Lindsay Naylor, Ibrahim Ali, Paul Massey, Mary Mathison, Alyshia Silva, Paul Wasserman',
             description: '',
