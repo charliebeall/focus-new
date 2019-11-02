@@ -14,15 +14,6 @@ Focus.Volumes = [
         },{
             type: 'Feature Article',
             title: 'Oil and the Misspent Riches of Equatorial Guinea',
-            author: 'Thomas Wikle',
-            description: '',
-            date: '09/11/19',
-            thumbnail: 'publications/articles/equatorial_guinea/img/fig2.jpg',
-            url: 'publications/articles/equatorial_guinea/index.html',
-            location: []
-        },{
-            type: 'Feature Article',
-            title: 'Oil and the Misspent Riches of Equatorial Guinea',
             author: 'Thomas Wikle',            
             description: '',
             date: '09/11/19',
