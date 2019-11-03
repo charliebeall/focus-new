@@ -594,11 +594,14 @@
                 >
                     <p>
                         So, sitting at our stuffy academic desks in the
-                        provincial capital of Thai Nguyen City reviewing
-                        interview transcripts one rainy December afternoon in
-                        2018, the research team realized it needed a dose of
-                        positivity and a mental re-boot. It was time to
-                        reconnect to the places where the buffalo are still
+                        provincial capital of
+                        <a class="location" data-layer-id="thai-hguyen-city"
+                            >Thai Nguyen City</a
+                        >
+                        reviewing interview transcripts one rainy December
+                        afternoon in 2018, the research team realized it needed
+                        a dose of positivity and a mental re-boot. It was time
+                        to reconnect to the places where the buffalo are still
                         profoundly entrenched in the daily lives of the people.
                         It was time again to head to the mountainous regions
                         further north. Bac Kan Province is located in the
@@ -662,7 +665,9 @@
                         style="background-image:url(img/figure4.jpg);"
                     ></div>
                     <div class="caption">
-                        The main street for the Cong Bang Market.
+                        The
+                        <a class="location" data-layer-id="road">main street</a>
+                        for the Cong Bang Market.
                     </div>
                     <p>
                         This market was founded in 1990 through government
@@ -1176,6 +1181,7 @@
         <script src="./data/vietnam.js"></script>
         <script src="./data/bac_kan.js"></script>
         <script src="./data/pak_nam.js"></script>
+        <script src="./data/road.js"></script>
         <script>
             'use strict';
             var pointStyle = {
@@ -1187,8 +1193,8 @@
             };
 
             var lineStyle = {
-                opacity: 0.6,
-                weight: 2,
+                opacity: 0.9,
+                weight: 4,
                 color: 'rgb(144,14,30,0.75)',
                 fillColor: 'rgb(144,14,30)'
             };
@@ -1224,15 +1230,11 @@
                         },
                         {
                             idRef: 'hanoi'
-                        },
-                        {
-                            idRef: 'thai-hguyen-city'
                         }
                     ],
                     bounds: {
                         'bac-kan-province': true,
-                        'thai-hguyen-city': true,
-                        vietnam: true
+                        'thai-hguyen-city': true
                     }
                 },
                 {
@@ -1246,6 +1248,9 @@
                         },
                         {
                             idRef: 'cong-bang-market'
+                        },
+                        {
+                            idRef: 'thai-hguyen-city'
                         }
                     ]
                 },
@@ -1253,18 +1258,19 @@
                     id: 'place4', // 8 - 11
                     center: [105.588631, 22.596699],
                     zoom: 15.7,
-                    baseLayer: mapboxLayer
+                    baseLayer: mapboxLayer,
+                    layers: [{ idRef: 'road' }]
                 },
                 {
                     id: 'place6', // 12 - 21
                     center: [105.589333, 22.596352],
-                    zoom: 18,
+                    zoom: 17.5,
                     baseLayer: mapboxLayer
                 },
                 {
                     id: 'place7', // 22 - 31
                     center: [105.586944, 22.590278],
-                    zoom: 18,
+                    zoom: 17.5,
                     baseLayer: mapboxLayer
                 }
             ];
@@ -1342,6 +1348,12 @@
 
             var scenes = {
                 features: [
+                    {
+                        id: 'road',
+                        type: 'geojson',
+                        data: ROAD,
+                        style: lineStyle
+                    },
                     {
                         id: 'hanoi',
                         type: 'geojson',
