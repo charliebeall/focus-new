@@ -95,6 +95,7 @@
             href="https://fonts.googleapis.com/css?family=Libre+Baskerville|PT+Sans|Raleway&display=swap"
             rel="stylesheet"
         />
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
         <link
             href="../../../css/combined.css"
             rel="stylesheet"
@@ -123,7 +124,7 @@
             }
 
             #text.photo-essay h2 {
-                letter-spacing: -3px;
+                letter-spacing: -1px;
                 text-transform: none;
                 font-size: 3em;
                 font-weight: bold;
@@ -143,7 +144,6 @@
                 font-style: italic;
             }
 
-            p a,
             .caption a {
                 color: rgb(201, 69, 69) !important;
                 border-bottom: solid 3px rgb(177, 79, 79) !important;
@@ -240,6 +240,11 @@
                 top: 35px;
                 color: rgb(138, 138, 138);
                 font-size: 3em;
+            }
+
+            div.figure.figure_size {
+                background-size: contain;
+                height: 600px;
             }
         </style>
     </head>
@@ -551,11 +556,11 @@
                     id="2"
                     class="scene"
                     data-scene-id="place1"
-                    title="place1"
+                    title="Introduction"
                 >
                     <h3>Introduction</h3>
                     <p>
-                        Vietnam is industrializing quickly, and the north of the
+                        <a class="location" data-layer-id="vietnam">Vietnam</a> is industrializing quickly, and the north of the
                         country is no exception. On the flatter lands in the
                         comparatively wealthier farming communities around the
                         capital of Hanoi, the gasoline powered tractor has
@@ -590,7 +595,6 @@
                     id="3"
                     class="scene"
                     data-scene-id="place2"
-                    title="place2"
                 >
                     <p>
                         So, sitting at our stuffy academic desks in the
@@ -656,7 +660,7 @@
                     id="5"
                     class="scene"
                     data-scene-id="place4"
-                    title="place4"
+                    title="The Market"
                 >
                     <h3>The Market</h3>
                     <div
@@ -731,7 +735,7 @@
                     id="6"
                     class="scene"
                     data-scene-id="place6"
-                    title="place6"
+                    title="People and Goods"
                 >
                     <h3>People and goods</h3>
                     <div
@@ -880,7 +884,6 @@
                     id="7"
                     class="scene"
                     data-scene-id="place7"
-                    title="place7"
                 >
                     <div
                         class="figure figure_size"
@@ -1033,38 +1036,16 @@
                         are also considered. Payments are in cash.
                     </p>
                     <h3>Videos</h3>
-
-                    <iframe
-                        style="width: calc(100% + 60px); margin: 30px -30px;"
-                        src=""
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""
-                        height="480"
-                        frameborder="0"
-                    ></iframe>
+                    <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480" src="https://www.youtube.com/embed/kRygZlJ8QEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p>
                         A young calf just does not want to go.
                     </p>
-                    <iframe
-                        style="width: calc(100% + 60px); margin: 30px -30px;"
-                        src=""
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""
-                        height="480"
-                        frameborder="0"
-                    ></iframe>
+                    <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480" src="https://www.youtube.com/embed/uVJ2eBeLLxA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p>
                         This clip gives a sense of the general atmosphere of the
                         larger animal section of the Cong Bang Market.
                     </p>
-                    <iframe
-                        style="width: calc(100% + 60px); margin: 30px -30px;"
-                        src=""
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""
-                        height="480"
-                        frameborder="0"
-                    ></iframe>
+                    <iframe style="width: calc(100% + 60px); margin: 30px -30px;" height="480" src="https://www.youtube.com/embed/ujQDQDDck4A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p>
                         This clip shows negotiations over the price of a water
                         buffalo between H’mong men. The video does not include
@@ -1217,28 +1198,54 @@
                 {
                     id: 'place0',
                     center: [105.588212, 22.594213],
-                    zoom: 14
+                    zoom: 5,
+                    baseLayer: [
+                        {
+                            type: 'esri-basemap',
+                            url: 'NationalGeographic',
+                            options: {
+                                detectRetina: true
+                            }
+                        }
+                    ],
+                    layers: [
+                        {
+                            idRef: 'vietnam'
+                        }
+                    ]
                 },
                 {
                     id: 'place1',
+                    zoom: 8,
                     layers: [
                         {
                             idRef: 'vietnam'
                         },
                         {
+                            idRef: 'hanoi'
+                        },
+                        {
                             idRef: 'bac-kan-province'
                         },
                         {
-                            idRef: 'hanoi'
+                            idRef: 'pak-nam-district'
+                        },
+                        {
+                            idRef: 'cong-bang-market'
+                        },
+                        {
+                            idRef: 'thai-hguyen-city'
                         }
                     ],
                     bounds: {
                         'bac-kan-province': true,
-                        'thai-hguyen-city': true
+                        'thai-hguyen-city': true,
+                        'vietnam': true
                     }
                 },
                 {
                     id: 'place2',
+                    zoom: 8,
                     layers: [
                         {
                             idRef: 'bac-kan-province'
@@ -1257,21 +1264,23 @@
                 {
                     id: 'place4', // 8 - 11
                     center: [105.588631, 22.596699],
-                    zoom: 15.7,
+                    zoom: 16,
                     baseLayer: mapboxLayer,
                     layers: [{ idRef: 'road' }]
                 },
                 {
                     id: 'place6', // 12 - 21
                     center: [105.589333, 22.596352],
-                    zoom: 17.5,
-                    baseLayer: mapboxLayer
+                    zoom: 16,
+                    baseLayer: mapboxLayer,
+                    layers: [{ idRef: 'road' }]
                 },
                 {
                     id: 'place7', // 22 - 31
                     center: [105.586944, 22.590278],
-                    zoom: 17.5,
-                    baseLayer: mapboxLayer
+                    zoom: 16,
+                    baseLayer: mapboxLayer,
+                    layers: [{ idRef: 'road' }]
                 }
             ];
 
