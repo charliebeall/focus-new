@@ -560,7 +560,7 @@
                 >
                     <h3>Introduction</h3>
                     <p>
-                        <a class="location" data-layer-id="vietnam">Vietnam</a> is industrializing quickly, and the north of the
+                        <a class="location" data-layer-id="vietnam-center">Vietnam</a> is industrializing quickly, and the north of the
                         country is no exception. On the flatter lands in the
                         comparatively wealthier farming communities around the
                         capital of Hanoi, the gasoline powered tractor has
@@ -745,12 +745,13 @@
                     ></div>
                     <div class="caption">
                         A woman from the Dao ethnic group sells a variety of
-                        items at the market. From left to right, there are
-                        jujube fruit (in the white box); Chè Đông (Note: Chè
-                        Đông is from the Tày language with no English or
-                        Vietnamese translations found)
+                        items at the market.
                     </div>
                     <p>
+                        From left to right, there are
+                        jujube fruit (in the white box); Chè Đông (Note: Chè
+                        Đông is from the Tày language with no English or
+                        Vietnamese translations found).
                         Chè Đông is used to treat osteoarthritis and joint pain;
                         wild honey in the two bottles and bucket; and tubers
                         from the Fallopia multiflora commonly used in
@@ -826,7 +827,7 @@
                         style="background-image:url(img/figure13.jpg);"
                     ></div>
                     <div class="caption">
-                        Bounded and weighed
+                        Bound and weighed
                     </div>
                     <div
                         class="figure figure_size"
@@ -1197,7 +1198,7 @@
             var places = [
                 {
                     id: 'place0',
-                    center: [105.588212, 22.594213],
+                    //center: [105.588212, 22.594213],
                     zoom: 5,
                     baseLayer: [
                         {
@@ -1211,15 +1212,21 @@
                     layers: [
                         {
                             idRef: 'vietnam'
+                        },
+                        {
+                            idRef: 'vietnam-center'
                         }
                     ]
                 },
                 {
                     id: 'place1',
-                    zoom: 8,
+                    zoom: 6,
                     layers: [
                         {
                             idRef: 'vietnam'
+                        },
+                        {
+                            idRef: 'vietnam-center'
                         },
                         {
                             idRef: 'hanoi'
@@ -1396,6 +1403,25 @@
                             fillColor: 'rgba(255,153,50, 0.0)',
                             color: 'rgba(255,153,50, 1)',
                             weight: 3
+                        }
+                    },
+                    {
+                        id: 'vietnam-center',
+                        type: 'geojson',
+                        data: {
+                            type: 'Feature',
+                            geometry: {
+                                type: 'Point',
+                                coordinates: [108.205368, 14.504352]
+                            },
+                            properties: {
+                                name: 'Vietnam'
+                            }
+                        },
+                        style: {
+                            radius: 0,
+                            fillColor: 'rgba(0,0,0,0)',
+                            color: 'rgba(0,0,0,0)'
                         }
                     },
                     {
