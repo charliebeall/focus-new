@@ -4,6 +4,15 @@ Focus.Volumes = [
         number: 62,
         publications: [{
             type: 'Photo Essay',
+            title: 'Thinking about water buffalo: A visit to the Cong Bang Market of Bac Kan Province in the north of Vietnam',
+            author: 'Aaron Kingsbury, Hong Ha, Le Tu, Huong Kieu Thi Thu',
+            description: '',
+            date: '11/15/19',
+            thumbnail: 'publications/photoessays/water_buffalo/img/figure1.jpg',
+            url: 'publications/photoessays/water_buffalo/index.html',
+            location: []
+        },{
+            type: 'Photo Essay',
             title: 'Kiribati at the Center of the World',
             author: 'Rex Rowley',
             description: '',
