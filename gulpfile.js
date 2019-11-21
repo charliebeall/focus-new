@@ -3,7 +3,7 @@ var path = require('path');
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var rename = require('gulp-rename');
+// var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var useref = require('gulp-useref');
 var gulpif = require('gulp-if');
@@ -14,10 +14,6 @@ var inject = require('gulp-inject');
 // and attach them to the `plugins` object
 var plugins = require('gulp-load-plugins')();
 
-// Temporary solution until gulp 4
-// https://github.com/gulpjs/gulp/issues/355
-var runSequence = require('run-sequence');
-
 var pkg = require('./package.json');
 var dirs = pkg['h5bp-configs'].directories;
 
@@ -25,8 +21,9 @@ var dirs = pkg['h5bp-configs'].directories;
 // | Helper tasks                                                      |
 // ---------------------------------------------------------------------
 
-gulp.task('archive:create_archive_dir', function () {
+gulp.task('archive:create_archive_dir', function (done) {
     fs.mkdirSync(path.resolve(dirs.archive), '0755');
+    done();
 });
 
 gulp.task('archive:zip', function (done) {
@@ -73,15 +70,8 @@ gulp.task('clean', function (done) {
     });
 });
 
-gulp.task('copy', [
-    'copy:.htaccess',
-    'copy:index.html',
-    'copy:jquery',
-    'copy:license',
-    'copy:main.css',
-    'copy:misc',
-    'copy:normalize'
-]);
+
+//copy task
 
 gulp.task('copy:.htaccess', function () {
     return gulp.src('node_modules/apache-server-configs/dist/.htaccess')
@@ -145,6 +135,16 @@ gulp.task('copy:normalize', function () {
                .pipe(gulp.dest(dirs.dist + '/css'));
 });
 
+gulp.task('copy', gulp.parallel(
+    'copy:.htaccess',
+    'copy:index.html',
+    'copy:jquery',
+    'copy:license',
+    'copy:main.css',
+    'copy:misc',
+    'copy:normalize'
+));
+
 gulp.task('lint:js', function () {
     return gulp.src([
         'gulpfile.js',
@@ -161,22 +161,10 @@ gulp.task('lint:js', function () {
 // | Main tasks                                                        |
 // ---------------------------------------------------------------------
 
-gulp.task('archive', function (done) {
-    runSequence(
-        'build',
-        'archive:create_archive_dir',
-        'archive:zip',
-    done);
-});
+gulp.task('build', gulp.series('clean','lint:js','copy'));
+//gulp.task('default', ['build']);
 
-gulp.task('build', function (done) {
-    runSequence(
-        ['clean', 'lint:js'],
-        'copy',
-    done);
-});
-
-gulp.task('default', ['build']);
+gulp.task('archive',gulp.series('build','archive:create_archive_dir','archive:zip'));
 
 var srcFiles = [
     'node_modules/jquery/dist/jquery.min.js',
@@ -184,7 +172,7 @@ var srcFiles = [
     'node_modules/backbone/backbone-min.js',
     'node_modules/leaflet/dist/leaflet.js',
     'node_modules/d3/d3.min.js',
-    'node_modules/topojson/topojson.js',
+    'node_modules/topojson/dist/topojson.js',
     'node_modules/velocity-animate/velocity.min.js',
     'node_modules/velocity-animate/velocity.ui.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
@@ -195,8 +183,8 @@ var srcFiles = [
     'node_modules/proj4leaflet/src/proj4leaflet.js',
     'node_modules/leaflet-dvf/dist/leaflet-dvf.js',
     'node_modules/vanilla-lazyload/dist/lazyload.min.js',
-    'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.js',
-    'node_modules/clipboard/dist/clipboard.js',
+    // 'node_modules/leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled.js',
+    // 'node_modules/clipboard/dist/clipboard.js',
     'node_modules/wavesurfer.js/dist/wavesurfer.min.js',
     'src/js/vendor/*.js',
     'src/js/publications.js',
@@ -214,7 +202,7 @@ gulp.task('minify', function () {
     return gulp.src(srcFiles)
         .pipe(concat('combined.js'))
         .pipe(gulp.dest('src/js'))
-        .pipe(uglify())
+        .pipe(uglify({ mangle: false }))
         .pipe(gulp.dest('src/js'));
 });
 
@@ -233,13 +221,13 @@ gulp.task('concatcss', function () {
 });
 
 gulp.task('copyfonts', function() {
-    gulp.src('node_modules/font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
+    return gulp.src('node_modules/font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
         .pipe(gulp.dest('dist/fonts'))
         .pipe(gulp.dest('src/fonts'));
 });
 
 gulp.task('copy2020', function() {
-    gulp.src([
+    return gulp.src([
 		'bower_components/twentytwenty/**/*'
 	])
         .pipe(gulp.dest('dist/js/twentytwenty'))
@@ -247,7 +235,7 @@ gulp.task('copy2020', function() {
 });
 
 gulp.task('copyleafletplugins', function() {
-    gulp.src([
+    return gulp.src([
 		'node_modules/leaflet-plugins/layer/tile/*'
 	])
         .pipe(gulp.dest('dist/js/leaflet-plugins'))
@@ -274,5 +262,6 @@ gulp.task('html', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', function (done) {runSequence('copyleafletplugins', 'copy2020', 'copyfonts','concatcss','concat', 'html', done)});
-gulp.task('build:minify', function (done) {runSequence('copyleafletplugins', 'copy2020', 'copyfonts', 'concatcss', 'minify', 'html', done)});
+gulp.task('default', gulp.series('copyleafletplugins', 'copy2020', 'copyfonts','concatcss','concat', 'html'));
+
+gulp.task('build:minify', gulp.series('copyleafletplugins', 'copy2020', 'copyfonts', 'concatcss', 'minify', 'html'));

@@ -4,6 +4,7 @@ Install NodeJS dependencies
 
 ```
 npm install
+npm install gulp-cli bower -g
 ```
 
 Install Bower dependencies
