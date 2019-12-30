@@ -3,6 +3,15 @@ Focus.Volumes = [
     {
         number: 62,
         publications: [{
+            type: 'Feature Article',
+            title: 'Contesting the Confederacy: Mobile Memory and the Making of Black Geographies in Brazil',
+            author: 'Jordan Brasher',
+            description: '',
+            date: '12/30/19',
+            thumbnail: 'publications/articles/brazil_confederacy/img/figure4.jpg',
+            url: 'publications/articles/brazil_confederacy/index.html',
+            location: []
+        },{
             type: 'Photo Essay',
             title: 'Thinking about water buffalo: A visit to the Cong Bang Market of Bac Kan Province in the north of Vietnam',
             author: 'Aaron Kingsbury, Hong Ha, Le Tu, Huong Kieu Thi Thu',
