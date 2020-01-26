@@ -1,0 +1,402 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Picturing the National Parks through postcards at the National Park Service Centennial</title>
+    <meta name="description" content="FOCUS on Geography: Picturing the National Parks through postcards at the National Park Service Centennial">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,map,place identity,national parks,postcards">
+    <meta name="author" content="Robert Briwa">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Sigmar+One&display=swap" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #text {
+            background: #fff;
+        }
+
+        #text h2 {
+            font-family: 'Sigmar One', cursive;
+            text-transform: none;
+            font-size: 32px;
+            font-weight: bold;
+            color:rgb(255, 255, 255) !important;
+            text-shadow: 1px 1px 3px rgb(33, 49, 26);
+        }
+
+        #text h3 {
+            font-family: 'Sigmar One', cursive;
+            text-transform: none;
+            color: rgba(37, 65, 25, 0.8);
+        }
+
+        #nav,
+        #toggle-map {
+            background: rgba(52, 95, 52, 0.8);
+        }
+
+        span.place-text {
+            font-family: 'Sigmar One', cursive;
+            color: #fff;
+        }
+
+        #text a,
+        a.location,
+        div.tooltip a {
+            color: rgba(59, 73, 104, 0.7);
+            border-bottom-color: rgba(59, 73, 104, 0.7);
+        }
+
+        #text a:hover,
+        a.location:hover,
+        div.tooltip a {
+            background: rgba(0, 42, 143, 0.1);
+            text-decoration: none;
+        }
+
+        path.line {
+            stroke: rgb(165, 70, 82) !important;
+        }
+
+        path.marker-path {
+            stroke: rgb(165, 70, 82) !important;
+            fill: rgb(165, 70, 82) !important;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: rgba(59, 73, 104, 0.7);
+            -webkit-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgba(59, 73, 104, 0.7);
+            transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-ms-fill {
+            background-color: rgba(59, 73, 104, 0.7);
+            -ms-transition: width 0.5s ease-in-out;
+        }
+
+        svg text {
+            font-family: 'Sigmar One', cursive;
+            font-size: 14px;
+            fill: #fff;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip.bottom .tooltip-arrow,
+        .tooltip.bottom-left .tooltip-arrow,
+        .tooltip.bottom-right .tooltip-arrow {
+            border-bottom-color: rgb(150, 55, 67);
+        }
+
+        .tooltip.left .tooltip-arrow {
+            border-left-color: rgb(150, 55, 67);
+        }
+
+        .tooltip-inner {
+            background: rgb(150, 55, 67);
+            color: #fff;
+        }
+
+        .tooltip-inner a.location,
+        #photo-caption a.location {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .author{
+            opacity: 100% !important;
+        }
+        
+        .author-photo{
+            width: 100%;
+            margin-right: 0px;
+            vertical-align: middle;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .author-info {
+            *background-color: rgba(231, 250, 248, 0.89);
+            font-size: 1.2em;
+            margin-top: 5px;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            font-family: 'Montserrat', sans-serif;
+            font-size: large;
+        }
+
+    </style>
+</head>
+
+<body class="scrolled">
+    <progress></progress>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id="nav" class="title-hidden dotstyle dotstyle-scaleup">
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]"
+                    class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <ul class="nav previous">
+            <li class="previous">
+                <a href="#"><span class="fa fa-chevron-up"></span></a>
+            </li>
+        </ul>
+        <ul class="nav sections">
+        </ul>
+        <ul class="nav next">
+            <li class="next">
+                <a href="#"><span class="fa fa-chevron-down"></span></a>
+            </li>
+        </ul>
+    </div>
+    <!-- Add your site or application content here -->
+    <div id="background"></div>
+    <div id="map" class="title-hidden feature-article"></div>
+    <div id="overview-map" class="title-hidden transparent"></div>
+    <div id="foreground"></div>
+    <div id="photos" style="">
+        <div id="photo-caption" class="title-hidden"></div>
+    </div>
+    <div id="shadow"></div>
+    <div id="toggle-map" class="focus-green"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+    <div id="main-nav" class="light">
+        <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+                <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"
+                    style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+                <path id="pathE" d="M 300 500 L 700 500" style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+                <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
+                    style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+            </svg>
+
+            <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+        </div>
+        <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg" /></a>
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]"
+                    class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <div id="menu" class="container-fluid"></div>
+    </div>
+    <div id="text" class="title-hidden">
+        <div class="content scenes">
+            <section id="introduction" class="scene" data-scene-id="lp1" title="Introduction">
+                <div class="title title-photo" style="background-image: linear-gradient(0deg, rgba(142, 142, 142, 0.2), rgba(27, 27, 27, 0.7)), url(images/main.jpg);">
+                        <h2>Picturing the National Parks through postcards at the National Park Service Centennial</h2>
+
+                        <div class="author row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 author-info">
+                                <span class="name">Robert Briwa & Nicolas T. Bergmann</span>
+                                <span class="organization">Department of Earth Sciences, Montana State University</span>
+                            </div>
+                        </div>  
+                        <div class="citation author-info">
+                            <span class="citation-label">DOI:</span>
+                            10.21690/foge/2020.63.1f
+                        </div>
+                    </div>
+
+                <h3>Introduction</h3>
+                <p>In 2016 the National Park Service (NPS) celebrated its 100th year of existence. Anniversaries like these have historically provided opportunities for the NPS and supporters to promote the values of national park landscapes and plan for their future use and maintenance. Most famously, an ambitious ten-year project dubbed “Mission 66” expanded infrastructure across park lands for the NPS’ 50th anniversary. The 2016 centennial offered further opportunity to generate widespread support for the parks. Centennial promotion took many forms. Promotions included An Evening at the Arch at 
+                    <a class="location" data-layer-id="yellowstone">Yellowstone National Park</a>, the Every Kid in a Park initiative, President Obama’s Father’s Day visit to 
+                    <a class="location" data-layer-id="yosemite">Yosemite National Park</a>, and a wide array of visual and textual material including books, films, social media campaigns, stamps, and postcards. These materials are critical sources shaping popular understandings of the national parks.</p>
+                <p>This article interrogates centennial promotion efforts to understand dominant place-based narratives associated with the national parks. In particular, we examine a series of commemorative centennial postcards produced by the private studio Anderson Design Group. Comprised of fifty-nine postcards, the Anderson Design collection presents rich visual imagery of each national park. Produced in an artistic style reminiscent of classic Works Progress Administration (WPA) promotional imagery, the postcards were tacitly approved by the NPS and made available in national park stores. Successfully marketed to a large audience, the postcards’ visual narrative shapes the meanings of national parks at the centennial.</p>
+                <p>Our analysis of the Anderson Design Group (ADG) postcard collection suggests three key findings. First, by dint of their popularity and mass distribution, we suggest the postcards are one mechanism through which collective place-based meanings of the national parks are established. Second, our content analysis of the postcards suggests four facets of national park place identity: 1) nature’s refuge; 2) America’s playground; 3) American heritage; and 4) mythic space. Lastly, we suggest these themes convey visions of the national parks that favor traditional attitudes towards nature and American identity, and consequently come into tension with alternative conceptualizations of the national parks.</p>
+            </section>
+            <section id="2a" class="scene" data-scene-id="lp1" title="Exploring Place Identity">
+                <h3>Exploring Place Identity</h3>
+                <p>Geographers have long recognized the power of visual media to construct enduring place identities (Tuan 1976; Schwartz and Ryan 2003; Schnell and Reese 2014). We define place identity as the collective understandings of places contributing to a sense of shared belonging (Blake 2008; Antonsich 2010). Visual media are cultural texts, conveying dominant ideologies through reproducing selective visions of place (Pritchard and Morgan 2003). They are also a primary means of constructing social memories, particularly about place, that are crucial to identity formation (Hoelscher and Alderman 2004). From landscape paintings (Allen 1992) and magazine illustrations (Wyckoff and Nash 1994) to beer labels (Schnell and Reese 2014) and comic books (Dittmer 2005), visual media in their myriad forms articulate selective visions of place.</p>
+                <p>Postcards (Blake 2008; Youngs 2011; Youngs 2012) also manufacture and project place identity. Postcards are not neutral representations of the places they depict. Instead, they project idealized and selective visions of place, where their images are edited for particular meanings. Youngs (2011), for example, finds that Grand Canyon postcards are edited to convey idealized images of place. Postcards also have the ability to reach a geographically far-flung audience and shape how this audience understands places. Valued as collectors’ items, souvenirs, and a means of correspondence, postcards remain available at many tourist waypoints, including gas-stations, museums, or national park gift stores. Their utility and popularity may also be explained by postcards’ material form and the implications it has for social memory. As Delyser (2004) suggests, social memory is recaptured through examining even the smallest traces of past experiences. Serving as souvenirs, postcards are small, easily stored linkages between places and people. Kept in a scrapbook, magnetized to a refrigerator door, or mailed to friends and family, postcards like the Anderson Design Group collection are a source and shaper of place identity.</p>
+                <p>Previous geographical postcard analyses inform our examination of the ADG postcard collection. First, we employ content analysis to identify the postcards’ major themes. We follow Blake (2008) and Youngs (2011) by recognizing that postcards must be examined holistically. The whole postcard is greater than the sum of its parts. Second, we complement existing geographical postcard analysis by using a contemporary case study. Studies within geography predominantly use historical postcards as their source materials (Pritchard and Morgan 2003). Our research showcases the importance of twenty-first century postcard analysis.</p>
+            </section>
+            <section id="2b" class="scene" data-scene-id="lp1" title="Examining the Postcards">  
+                <h3>Examining the Postcards</h3>
+                <p>The Anderson Design Group’s centennial postcard collection provides the source materials for our content analysis. We initially reviewed the entire collection to develop a general understanding of the collection’s content. Following Youngs’ (2012) methods, we categorized and quantified images important to identifying postcard themes such as the appearance of wildlife, presence of people, depictions of historic sites, and scenic views. In doing so, however, we confronted the lesson cultural geographers are careful to remember in exploring representations of place through content analysis: conflating features for meaning (Schnell 2011). We felt our initial quantitative approach failed to capture the greater themes embedded in the collection. Our subsequent examination recognized the importance of subjectivity in analysis. We embraced the complexities of postcards by considering each as an individual work of art, understood and interpreted holistically for the collection’s major themes.</p>
+                <p>Four significant themes emerged from our revised qualitative content analysis that understands postcards as shapers of national park place identity. Anderson Design Group’s centennial postcard collection presents the national parks as 1) nature’s refuge; 2) America’s playground; 3) American heritage; and 4) mythic space. In the following sections, we examine how selected postcards exemplify a particular theme of the national parks. To do so, we identify how features in ADG help construct a particular theme. Second, we interpret these features to understand how they contribute to national park place identity.</p>
+            </section>
+            <section id="3a" class="scene" data-scene-id="lp3a" title="Nature's Refuge">
+                <h3>Nature's Refuge</h3>
+                <p>The vision of the national parks as nature’s refuge is the most prominent theme of the postcard collection. Postcards most representative of this theme depict charismatic wildlife; images of pristine wilderness; powerful geologic and fluvial processes; and an absence of humans and human activity. This theme primarily taps into deeply rooted wilderness attitudes towards nature and affirms popularly entrenched assumptions that humans and nature are separate and oppositional entities (Cronon 1995).</p>
+                <p>The Katmai National Park postcard epitomizes the theme of national parks as nature’s refuge. Three mature grizzlies dominate the scene as they hunt for spawning salmon forcing their way upstream. Intent on their task, the bears fix their eyes on the water. The beholding eye of the postcard viewer cannot help but be drawn to the bear in the foreground, depicted here a split second before capturing a leaping fish. The spawning fish and saturated blue of the fast-flowing river suggests a healthy riparian system, as does the rich and thick greenery lining the river’s banks. The interplay of shadow and light on the vegetation and water, the orange sky above, and the warm hues that highlight the bears’ richly textured hides all suggest a crepuscular scene moments before an unseen sun sinks below the horizon (Figure 1)</p>
+            </section>
+            <section id="3b" class="scene" data-scene-id="lp3b" title="Nature's Refuge (2)">
+                <div id="katmai" class="figure" style="background-image:url(images/katmai.jpg); background-size: contain;"></div>
+                <div class="caption"><a class="location" data-layer-id="katmai">Figure 1</a>: Katmai National Park. Copyright Anderson Design Group, Inc. All rights reserved. Used with Permission.</div>
+                <p>Katmai National Park presents an untrammeled and dynamic nature, where fluvial and biological processes intertwine and continue unabated. Through light, color, and shadow, the sky, water, bears, and fish are all imbued with a sense of movement. The water flows with enough force to splash upward and soak the bears’ underbellies. The viewer can almost hear the burbling roar of the water as it flows and crashes over the rocky riverbed. The fishes’ muscular bodies twist in effort as they try to make their way up the fast-flowing rapids. One can imagine their frenetic and desperate movements as they launch themselves into air. The bears’ intense focus and raw power are subtly captured in how they hunch over the water, muscles tense as they wait, poised, to snap their jaws shut on prey.</p>
+                <p>In this scene from Katmai, there are no humans to interfere with the life-and-death struggle playing out between two charismatic beings in the waning daylight of the Alaskan backcountry. Human absence reveals the national parks as a last bastion of wild nature. Furthermore, Katmai and the other national parks postcards convey a distinctly American nature. The use of the charismatic fauna in national park imagery suggests a form of American national identity bound to natural resources and a wilderness experience (Cronon 1995).</p>
+            </section>
+            <section id="4a" class="scene" data-scene-id="lp4a" title="America's Playground">
+                <h3>America's Playground</h3>
+                <p>The second most visible theme of ADG postcard collection is that of an American playground. National parks become sites where people can enjoy recreating in some of the country’s most spectacular places. Many of these postcards explicitly depict people at play. Sailboats, hikers, water planes, canoers, and kayakers feature prominently. Many postcards also include slogans or invitations to the viewer. These exhort viewers to immerse themselves into a particular park experience. The Badlands National Park postcard instructs viewers to “Enjoy the Good Life.” The Carlsbad Caverns postcard encourages viewers to “Walk the Hall of Giants.” Slogans and invitations like these offer a direct link between the viewer and the parks. These slogans promote a set of activities deemed “proper” in park landscapes. No less significant is what goes unsaid by these slogans. Historically significant use of park landscapes, including subsistence lifeways, are left out of the slogans’ narrative. What emerges is a moral geography, where postwar middle-class recreation is privileged (Spence 1996; Jacoby 2001).</p>
+            </section>
+            <section id="4b" class="scene" data-scene-id="lp4b" title="America's Playground (2)">
+                <div id="biscayne" class="figure" style="background-image:url(images/biscayne.jpg); background-size: contain;"></div>
+                <div class="caption"><a class="location" data-layer-id="biscayne">Figure 2</a>: Biscayne National Park. Copyright Anderson Design Group Inc. All rights reserved. Used with permission.</div>
+                <p>	Biscayne National Park is the most playful of the entire collection (Figure 2). It best represents the national parks as an American playground. Biscayne is one of the few postcards to depict a waterscape. The point of view is literally immersed in the water, revealing a subtropical reef, brightly colored and patterned fish, and a sea turtle. In the background swims a feminine silhouette equipped in scuba gear. This view is from an impossible vantage point, for the image’s perspective simultaneously captures sights of the water’s surface, the sky above, seabirds, and a small personal sailboat. Across the bottom of the image the postcard proclaims that Biscayne National Park is in the Florida Keys.</p>
+                <p>	The postcard imbues a sense of playfulness into the scene through the use of subject matter, color, and intertextual associations with place. The diver’s presence suggests that Biscayne is best enjoyed through a literal immersion into place. The postcard’s perspective captures a vision of Biscayne that invites the viewer to join the diver in a subtropical playground. The exotic fish and turtle give reasons as to why the diver has chosen Biscayne. The fishes’ bright colors and scattered arrangement across the image’s foreground draws the eye like thrown confetti. The association between the Florida Keys and Biscayne, meanwhile, introduces an intertextual element to what it means to be in Biscayne National Park. Through invoking the Florida Keys toponym, Biscayne becomes linked with a popular vacation destination. To experience Biscayne is also to engage with the Florida Keys and partake of its recreational amenities for adventurous tourists and snowbirds. Such intertextual references reveal how national parks’ recreational landscapes can transcend park boundaries and engage with expanded American playgrounds.</p>
+            </section>
+            <section id="5a" class="scene" data-scene-id="lp5a" title="America Heritage">
+                <h3>America Heritage</h3>
+                <p>A third significant theme is that of a distinct American heritage. Discussions about precise definitions of heritage are numerous and oft-contested. Two definitions frame our identification of heritage as a distinct theme within the postcard series. Graham (2002) suggests heritage is defined best as contemporary use of the past, while Johnson (1999) calls heritage an ideological framing of identity. These two definitions inform our identification of heritage in the centennial postcards through emphasizing their ability to depict American cultural landscapes and ideologies of exceptionalism. The Acadia National Park and Sequoia National Park postcards depict historically significant objects and sites and serve as strong examples of American heritage.</p>
+                <div id="acadia" class="figure" style="background-image:url(images/acadia.jpg); background-size: contain;"></div>
+                <div class="caption"><a class="location" data-layer-id="acadia">Figure 3</a>: Acadia National Park. Copyright Anderson Design Group, Inc. All rights reserved. Used with Permission.</div>
+            </section>
+            <section id="5b" class="scene" data-scene-id="lp5b" title="America Heritage (2)">
+                <p>The postcard of Acadia National Park showcases an understanding of heritage that aligns with Graham’s (2002) argument that heritage is contemporary use of the past (Figure 3). At the postcard’s top, a slogan instructs viewers to “Visit Beautiful Acadia National Park, Maine.” The eye, however, is first drawn to a tall-masted schooner with a crowded deck. It cuts through calm green waters, angling for an advantageous position to view a whale’s tail breaking the surface. On a rocky cliff shoreline, Bass Head Harbor Lighthouse is immaculate. Its clean lines are framed by a backdrop of thick and continuous evergreens.</p>
+                <p>The Acadia National Park postcard resurrects historically significant Maine industries, but transforms them to reflect what is valuable about Acadia’s contemporary park landscape. Schooners, for example, are anchors of the cultural landscapes of New England pelagic fishing industries and were popular 19th century whaling vessels. In this image, whales remain the schooner’s goal, but the ship’s armament is no longer the whaleman’s harpoon, but rather the 21st century tourist’s camera. Thanks to national park protections, the backdrop of evergreens no longer holds value as a rich source of timber (Cronon 1983). Instead, they become part of a larger Acadian landscape aesthetic, one that can be consumed by those seeking beauty on Maine’s coastline. Acadia’s flora and fauna are thus transformed from industrial resource to aesthetic resource.</p>
+            </section>
+            <section id="5c" class="scene" data-scene-id="lp5c" title="America Heritage (3)">
+                <p>Postcards representative of American heritage space are also laden with a sense of American exceptionalism, which aligns with Johnson’s (1999) definition of heritage as an ideological framing of identity. With respect to national parks, American exceptionalism is grounded in superlative landscape features (Runte 2010). Environmental historians and historical geographers have long recognized the role of nature in consolidating a sense of American national identity (Cronon 1995). The postcard image of Sequoia National Park is the strongest example of this phenomenon (Figure 4).</p>
+                <div id="sequoia" class="figure" style="background-image:url(images/sequoia.jpg); background-size: contain;"></div>
+                <div class="caption"><a class="location" data-layer-id="sequoia">Figure 4</a>: Sequoia National Park. Copyright Anderson Design Group, Inc. All rights reserved. Used with permission.</div>
+                <p>Framed by two tree trunks reminiscent of the columns of a Greek temple, the General Sherman tree dominates the scene and towers high above a miniaturized man and station wagon. The slogan, too, is miniaturized, and the effect is that General Sherman’s image is left to speak for itself. The massive tree and miniaturized slogan work together to proclaim this sequoia as “the world’s biggest,” establishing this national park as the root of an American national identity grounded in monumental nature (Nash 2014; Runte 2010).</p>
+            </section>
+            <section id="6a" class="scene" data-scene-id="lp6a" title="Mythic Space">
+                <h3>Mythic Space</h3>
+                <p>Highly symbolic, often amorphous, and slipping just out of reach like a willow-o’-the-wisp beckoning a traveler in a dark wood, the nature of myth defies easy comprehension or articulation (White 1991). Myths are also intimately bound to place and are embedded in the material world just as much as in the terrain of the mind. Geographical thinking encourages conceptualizations of myth that focus on landscape as much as metaphor. The American Southwest’s Monument Valley, for example, has been cited as a mythic landscape par excellence (Blake 2014). Myths are integral to many cultural landscapes. Mythic space is the final dominant theme present in the centennial postcard collection, and all postcards laden with this theme showcase western landscapes and support the claim that the American West is “arguably the most mythic ever created by a nation from its past” (Murdoch 2001, quoted in Blake 2014 p. 261).</p>
+                <p>Those postcards demonstrating mythic space feature heavy use of symbolic figures and iconography. The postcard of Saguaro National Park leverages symbolism and a singular color palette to develop a sense of a mythic landscape (Figure 5).</p>
+                <div id="saguaro" class="figure" style="background-image:url(images/saguaro.jpg); background-size: contain;"></div>
+                <div class="caption"><a class="location" data-layer-id="saguaro">Figure 5</a>: Saguaro National Park. Copyright Anderson Design Group, Inc. All rights reserved. Used with permission.</div>
+                <p>Two symbols of a mythic American West hold primary positions in the image. First, there is the silhouette of a lone rider, an icon wedded to discourses of a masculine frontier central to construction of popular understandings of the West as a region (Blake 1995; Hausladen 2003). Second, there are the park’s eponymous saguaros. Obscured by orange shades of sunset, the saguaros—looming like arid Ents—frame and surround the rider. The backdrop to these western icons also shaped our contemplation of the scene.</p>
+                <p>The wider landscape is a desert, affirming widespread understandings of aridity as a defining feature of the American West (Worster 1985; Wright 2014). Rider, saguaros, and desert are arrayed on a deeper tableau. In the scene’s backdrop, hazily outlined mountain silhouettes subtly mirror the sky’s shape above. Contemplating the full image may leave the viewer with a sense that this landscape retains power and agency that defies full human comprehension.</p>
+            </section>
+            <section id="6b" class="scene" data-scene-id="lp6b" title="Mythic Space (2)">
+                <div id="zion" class="figure" style="background-image:url(images/zion.jpg); background-size: contain;"></div>
+                <div class="caption"><a class="location" data-layer-id="zion">Figure 6</a>: Zion National Park. Copyright Anderson Design Group, Inc. All rights reserved. Used with permission.</div>
+                <p>Mythic space is also captured in the image of Zion National Park (Figure 6). Visually centered on crepuscular rays streaming through iconic Kolob Arch, this scene draws on long established traditions of romanticism in depicting Western landscapes (Cronon 1995). The bowl of golden sky pours through Kolob Arch. Rays of light illuminate a verdant pine forest. Its rich green stands in stark contrast to the burnt hues of the sandstone cliffs. The waterfall falling over the cliffs on the viewer’s right suggests that springtime has arrived in the Utah desert. Clouds shaped like undiscovered continents are blazoned across an evening sky. Hanging above them is the slogan “See Kolob Arch”. As representative of the national park system, this postcard shapes wider perceptions of not only Kolob Arch and Zion, but also of Western landscapes more generally. Like the image of Saguaro National Park, the Zion postcard’s mythic dimensions are strongest when its image is considered holistically. Its rich color palette and framing of light through an arch helps tap into deeply held Judeo-Christian notions of the divine.</p>
+            </section>
+            <section id="7" class="scene" data-scene-id="lp7" title="Conclusion">
+                <h3>Conclusion</h3>
+                <p>The Anderson Design Group’s centennial postcards present narratives aligning with mainstream understandings of the national parks’ historical significance. Our analysis reveals four themes—nature’s refuge, America’s playground, American heritage, and mythic space—that collectively anchor national park place identity. These themes are manifested through ADG’s use of charismatic North American wildlife and images of wilderness; depictions of outdoor recreation and use of inviting slogans; representations of American cultural landscapes; and adept use of iconic images and application of light and color. Widely available to the public, the postcard images actively shape popular understandings of the national parks. The visions present in the postcards reach audiences across the world, offering a powerful reminder of the role visual imagery has in contributing to geographic imaginations.</p>
+                <p>The way these postcards frame place identity, however, offers only a partial picture of the federal government’s larger twenty-first century vision for the national parks. While the postcards achieve the task of celebrating and promoting the national parks, their success does not completely align with other park initiatives addressing the rapidly changing terrain of twenty-first century environmental, political, and social challenges facing the national parks. The federal government’s centennial program, including the NPS’s signature event An Evening at the Arch; Secretary of the Interior Dirk Kempthorne’s The Future of America’s National Parks report to President Bush; and President Obama’s Father’s Day address established new directions for the parks. These include revamping outdated and overused park infrastructure, increasing diversity and inclusion, and addressing the consequences of climate change. Although these two narratives remain disconnected in key ways, we believe the tensions between Anderson Design Group’s postcard collection and the federal government’s centennial initiatives do not represent a lasting failure, but instead reveal opportunities for future reconciliation between promotion and policy.</p>
+                <h3>Acknowledgements</h3>
+                <p>The authors thank Joel Anderson of Anderson Design Group for his enthusiastic support and his permission to use Anderson Design Group artwork and colleague Laurel Angell for her input on an earlier draft of this paper. They also thank the services and comments of two anonymous reviewers and editor Dr. Michael Steinberg: all offered valuable insights during the revisions process.</p>
+                <h3>References</h3>
+                <ul class="references">
+                    <li>Allen, J. 1992. Horizons of the Sublime: The Invention of the Romantic West. Journal of Historical Geography 18 (1): 27-40.</li>
+                    <li>Antonsich, M. 2010. Meanings of Place and Aspects of the Self: An Interdisciplinary and Empirical Account. GeoJournal 75 (1): 119-132.</li>
+                    <li>Blake, K. 1995. Zane Grey and Images of the American West. Geographical Review 85 (2): 202-216.</li>
+                    <li>----------. 2008. Imagining Heaven and Earth at the Mount of the Holy Cross, Colorado. Journal of Cultural Geography 25 (1): 1-30.</li>
+                    <li>----------. 2014. Making Mythic Landscapes. In North American Odyssey: Historical Geographies for the Twenty-First Century, edited by C. Colton and G. Buckley, 251-271. Lanham: Rowman Littlefield and Sons.</li>
+                    <li>Cronon, W. 1983. Changes in the Land: Indians, Colonists, and the Ecology of New England. New York: Hill and McGraw.</li>
+                    <li>----------. 1995. Uncommon Ground: Toward Reinventing Nature. New York: Norton.</li>
+                    <li>DeBres, K. and J. Sowers. 2009. The Emergence of Standardized, Idealized, and Placeless Landscapes in Midwestern Main Street Postcards. The Professional Geographer 61 (2): 216-230.</li>
+                    <li>Delyser, D. 2004. Recovering Social Memories from the Past: the 1884 Novel Ramona and Tourist Practices in Turn-of-the-Century Southern California. Social and Cultural Geography 5 (3): 483-496.</li>
+                    <li>Dittmer, J. 2005. Captain America’s Empire: Reflections on Identity, Popular Culture, and Post-9/11 Geopolitics. Annals of the Association of American Geographers 95 (3): 626-643.</li>
+                    <li>Graham, B. 2002. Heritage as Knowledge: Capital or Culture? Urban Studies 39 (5-6): 1003-1017.</li>
+                    <li>Hausladen, G. 2003. Where the Cowboy Rides Away: Mythic Places for Western Film. In Western Places, American Myths: How We Think About the West, edited by G. Hausladen, 296-318. Reno: University of Nevada Press.</li>
+                    <li>Hoelscher, S. and D. Alderman. 2004. Memories and Place: Geographies of a Critical Relationship. Social and Cultural Geography 5 (3): 347-355.</li>
+                    <li>Jacoby, K. 2001. Crimes Against Nature: Squatters, Poachers, Thieves, and the Hidden History of American Conservation. Berkeley: University of California Press.</li>
+                    <li>Johnson, N. 1999. Framing the Past: Time, Space, and the Politics of Heritage Tourism in Ireland. Political Geography 18 (2): 187-207. </li>
+                    <li>Murdoch, D. 2001. The American West: The Invention of a Myth. Reno: University of Nevada Press.</li>
+                    <li>Nash, R. 2014. Wilderness and the American Mind, 5th Edition. New Haven: Yale University Press.</li>
+                    <li>Ponterotto, J.G. 2006. Brief Note on the Origins, Evolution, and Meaning of Qualitative Thick Description. The Qualitative Report 11(3): 538-549.</li>
+                    <li>Pritchard, A. and N. Morgan. 2003. Mythic Geographies of Representation and Identity: Contemporary Postcards of Wales. Journal of Tourism and Cultural Change 1 (2): 111-130.</li>
+                    <li>Runte, A. 2010. National Parks: The American Experience, 4th Edition. Lanham: Taylor Trade Publishing. </li>
+                    <li>Schnell, S. and J. Reese. 2014. Microbreweries, Place, and Identity in the United States. In A Geography of Beer, edited by M. Patterson and N. Hoalst-Pullen, 167-187. Dordrecht: Springer Science and Media.</li>
+                    <li>----------. 2011. The Local Traveler: Farming, Food, and Place in State and Provincial Tourism Guides, 1993-2008. Journal of Cultural Geography 28 (2): 281-309.</li>
+                    <li>Schwartz, J. and J. Ryan. 2003. Picturing Place: Photography and the Geographical Imagination. London: IB Tauris.  </li>
+                    <li>Spence, M. 1996. Crown of the Continent, Backbone of the World: The American Wilderness Ideal and Blackfeet Exclusion from Glacier National Park. Environmental History 1 (3): 29-49.</li>
+                    <li>Worster, D. 1985. Rivers of Empire: Water, Aridity, and the Growth of the American West. New York: Oxford University Press.</li>
+                    <li>Wright, J. 2014. Four Symbolic Boundaries of the American West. Geographical Review 104 (2): 229-241.</li>
+                    <li>Wyckoff, W. and C. Nash. 1994. Geographical Images of the American West: The View from Harper’s Monthly, 1850-1900. Journal of the West 33 (3): 10-21.</li>
+                    <li>Tuan, Y.F. 1976. Humanistic Geography. Annals of the Association of American Geographers 66 (2): 266-276.</li>
+                    <li>Youngs, Y. 2011. On Grand Canyon Postcards. Environmental History 16 (1): 138-147.</li>
+                    <li>----------. 2012. Editing Nature in Grand Canyon National Park Postcards. Geographical Review 102 (4): 486-509.</li>
+                </ul>
+                <h3>Map Sources</h3>
+                <ul>
+                    <li><a href="https://public-nps.opendata.arcgis.com/datasets/national-park-service-park-unit-boundaries-1">National Park Service - Park Unit Boundaries</a></li>
+                    <li><a href="https://www.gifex.com/fullsize-en/2009-09-18-9102/Katmai_National_Park_and_Preserve_Alaska.html">Map of Katmai National Park and Preserve (1994)</a></li>
+                    <li><a href="http://npmaps.com/biscayne/">Map of Biscayne National Park</a></li>
+                    <li><a href="https://www.loc.gov/resource/g3732a.np000038/?r=0.069,0.352,0.736,0.462,0">Topographic Map of Acadia National Park (1931)</a></li>
+                    <li>National Geographic,<a href="http://www.arcgis.com/home/item.html?id=b9b1b422198944fbbd5250b3241691b6">Esri,</a> Garmin, HERE, INCREMENT P, NRCAN, METI</li>
+                    <li><a href="https://www.mapbox.com/about/maps/">Mapbox </a><a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></li>
+                </ul>
+            </section>
+            <div class="row footer-row"></div>
+        </div>
+    </div>
+    <div id="progress">
+        <div id="bar"></div>
+    </div>
+    <div id="bar-top"></div>
+    <div id="bar-bottom"></div>
+    <!-- inject:templates:html -->
+    <!-- endinject -->
+    <script src="../../../js/combined.js"></script>
+    <script src="./data/parks.js"></script>
+    <script src="./index.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-79613259-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
