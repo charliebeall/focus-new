@@ -505,7 +505,11 @@ Focus.Views.LeafletMapEngine = Focus.Views.MapEngine.extend({
 		}
 		else if (layerDef.type === 'tangram') {
 			layer = Tangram.leafletLayer(layerDef.options);
-		}
+        }
+        else if (layerDef.type === 'imageOverlay') {
+            //https://leafletjs.com/reference-1.6.0.html#imageoverlay
+            layer = L.imageOverlay(layerDef.url, layerDef.bounds, layerDef.options);
+        }
         else if (layerDef.type === 'bing') {
             layer = L.tileLayer.bing($.extend(true, {
                 bingMapsKey: BING_MAPS_KEY
