@@ -3,7 +3,18 @@ Focus.Volumes = [
 
     {
         number: 63,
-        publications: [{
+        publications: [
+            {
+                type: 'Photo Essay',
+                title: 'Landscapes of Multicultural Memory and Heritage in Wales',
+                author: 'Mark Alan Rhodes II, PhD',
+                description: '',
+                date: '3/14/20',
+                thumbnail: 'publications/photoessays/wales/images/figure19.jpg',
+                url: 'publications/photoessays/wales/index.html',
+                location: []
+            },
+            {
             type: 'Feature Article',
             title: 'Picturing the National Parks through postcards at the National Park Service Centennial',
             author: 'Robert Briwa, Nicolas T. Bergmann',
@@ -46,7 +57,7 @@ Focus.Volumes = [
         },{
             type: 'Feature Article',
             title: 'Oil and the Misspent Riches of Equatorial Guinea',
-            author: 'Thomas Wikle',            
+            author: 'Thomas Wikle',
             description: '',
             date: '09/11/19',
             thumbnail: 'publications/articles/equatorial_guinea/img/fig2.jpg',
@@ -55,7 +66,7 @@ Focus.Volumes = [
         },{
             type: 'Feature Article',
             title: 'Cairns:  An Invitation',
-            author: 'Tyra A. Olstad',            
+            author: 'Tyra A. Olstad',
             description: '',
             date: '08/02/19',
             thumbnail: 'publications/articles/cairns/img/fig3.jpg',
@@ -91,7 +102,7 @@ Focus.Volumes = [
         },{
             type: 'Feature Article',
             title: 'Street Art in Baltimore: A Catalyst for Change',
-            author: 'Meredith K. Stone, Geoffrey L. Buckley',            
+            author: 'Meredith K. Stone, Geoffrey L. Buckley',
             description: '',
             date: '05/11/19',
             thumbnail: 'publications/articles/baltimore/img/fig7.jpg',
