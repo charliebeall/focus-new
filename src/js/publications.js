@@ -1,20 +1,29 @@
 var Focus = Focus || {};
 Focus.Volumes = [
-
     {
         number: 63,
         publications: [
-            {
-                type: 'Photo Essay',
-                title: 'Landscapes of Multicultural Memory and Heritage in Wales',
-                author: 'Mark Alan Rhodes II, PhD',
-                description: '',
-                date: '3/14/20',
-                thumbnail: 'publications/photoessays/wales/images/figure19.jpg',
-                url: 'publications/photoessays/wales/index.html',
-                location: []
-            },
-            {
+        {
+            type: 'Feature Article',
+            title: 'Colorism in Bangladeshi Society',
+            author: 'Kari Jensen',
+            description: '',
+            date: '4/8/20',
+            thumbnail: 'publications/articles/bangladeshi/img/figure11.jpg',
+            url: 'publications/articles/bangladeshi/index.html',
+            location: []
+        },
+        {
+            type: 'Photo Essay',
+            title: 'Landscapes of Multicultural Memory and Heritage in Wales',
+            author: 'Mark Alan Rhodes II, PhD',
+            description: '',
+            date: '3/14/20',
+            thumbnail: 'publications/photoessays/wales/images/figure19.jpg',
+            url: 'publications/photoessays/wales/index.html',
+            location: []
+        },
+        {
             type: 'Feature Article',
             title: 'Picturing the National Parks through postcards at the National Park Service Centennial',
             author: 'Robert Briwa, Nicolas T. Bergmann',
@@ -36,7 +45,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/brazil_confederacy/img/figure4.jpg',
             url: 'publications/articles/brazil_confederacy/index.html',
             location: []
-        },{
+        }, {
             type: 'Photo Essay',
             title: 'Thinking about water buffalo: A visit to the Cong Bang Market of Bac Kan Province in the north of Vietnam',
             author: 'Aaron Kingsbury, Hong Ha, Le Tu, Huong Kieu Thi Thu',
@@ -45,7 +54,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/water_buffalo/img/figure1.jpg',
             url: 'publications/photoessays/water_buffalo/index.html',
             location: []
-        },{
+        }, {
             type: 'Photo Essay',
             title: 'Kiribati at the Center of the World',
             author: 'Rex Rowley',
@@ -54,7 +63,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/kiribati/img/Fig14.jpg',
             url: 'publications/photoessays/kiribati/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'Oil and the Misspent Riches of Equatorial Guinea',
             author: 'Thomas Wikle',
@@ -63,7 +72,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/equatorial_guinea/img/fig2.jpg',
             url: 'publications/articles/equatorial_guinea/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'Cairns:  An Invitation',
             author: 'Tyra A. Olstad',
@@ -72,7 +81,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/cairns/img/fig3.jpg',
             url: 'publications/articles/cairns/index.html',
             location: []
-        },{
+        }, {
             type: 'Geo Quiz',
             title: 'Quiz Eleven: Borders',
             author: 'Wesley Reisser',
@@ -81,7 +90,7 @@ Focus.Volumes = [
             thumbnail: 'publications/quizzes/eleven/img/Isla_Portillos.jpg',
             url: 'publications/quizzes/eleven/index.html',
             location: []
-        },{
+        }, {
             type: 'Photo Essay',
             title: 'Food Sovereignty: Views from Cuba',
             author: 'Lindsay Naylor, Ibrahim Ali, Paul Massey, Mary Mathison, Alyshia Silva, Paul Wasserman',
@@ -90,7 +99,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/cuba_food_sovereignty/img/figure9.jpg',
             url: 'publications/photoessays/cuba_food_sovereignty/index.html',
             location: []
-        },{
+        }, {
             type: 'Photo Essay',
             title: 'Jordan\'s Forgotten Eastern Desert Qasour',
             author: 'Casey D. Allen',
@@ -99,7 +108,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/jordan/img/WR4.jpg',
             url: 'publications/photoessays/jordan/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'Street Art in Baltimore: A Catalyst for Change',
             author: 'Meredith K. Stone, Geoffrey L. Buckley',
@@ -108,7 +117,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/baltimore/img/fig7.jpg',
             url: 'publications/articles/baltimore/index.html',
             location: []
-        },{
+        }, {
             type: 'Photo Essay',
             title: 'Capturing Long Distance Landscapes: GoPro Time-Lapse Photography',
             author: 'Craig Colten',
@@ -117,7 +126,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/landscapes/img/figure5.jpg',
             url: 'publications/photoessays/landscapes/index.html',
             location: []
-        },{
+        }, {
             type: 'Geo Quiz',
             title: 'Quiz Ten: Demography',
             author: 'Wesley Reisser',
@@ -126,7 +135,7 @@ Focus.Volumes = [
             thumbnail: 'publications/quizzes/ten/img/Q5/Q5_D_Hong_Kong.jpg',
             url: 'publications/quizzes/ten/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'Whale Watching and Preservation of the Environment in Central Baja California, Mexico',
             author: 'Jeffrey Smith, Lorna Hill, Rodrigo Manterola Gonzalez',
@@ -135,7 +144,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/grey_whale/img/fig3.jpg',
             url: 'publications/articles/grey_whale/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'A Tale of Two Arctic Cities: Vorkuta and Salekhard',
             author: 'Luis Suter',
@@ -144,7 +153,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/suter/img/fig5a.jpg',
             url: 'publications/articles/suter/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'Foreign Investment Dilemma: Real Estate on Jeju Island, Korea',
             author: 'Gregory Chu',
@@ -155,7 +164,7 @@ Focus.Volumes = [
             location: []
         }]
     },
-	{
+    {
         number: 61,
         publications: [{
             type: 'Photo Essay',
@@ -166,7 +175,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/cuba/img/fig16.png',
             url: 'publications/photoessays/cuba/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'Igarka Vanishes: The Story of a Rapidly Shrinking Russian Arctic City',
             author: 'Kelsey Nyland, Valery Grebenets, Nikolay Shiklomanov, Dmitry Streletskiy',
@@ -175,7 +184,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/russia/img/figure6.jpg',
             url: 'publications/articles/russia/index.html',
             location: []
-        },{
+        }, {
             type: 'Geo Quiz',
             title: 'Quiz Nine: Energy',
             author: 'Wesley Reisser',
@@ -184,7 +193,7 @@ Focus.Volumes = [
             thumbnail: 'publications/quizzes/nine/img/Q1/wind.jpg',
             url: 'publications/quizzes/nine/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'Agricultural Social Networks as the future of Karst Science Communication in Phong Nha-Kẻ Bàng National Park, Vietnam',
             author: 'Elizabeth Willenbrink, Leslie North, Vu Thi Minh Nguyet',
@@ -193,7 +202,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/vietnam/img/fig1.jpg',
             url: 'publications/articles/vietnam/index.html',
             location: []
-        },{
+        }, {
             type: 'Photo Essay',
             title: 'Guyana\'s Linden to Lethem Road: A Metaphor for Conservation and Development',
             author: 'Karen Barton',
@@ -202,7 +211,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/guyana/img/fig3.jpg',
             url: 'publications/photoessays/guyana/index.html',
             location: []
-        },{
+        }, {
             type: 'Photo Essay',
             title: 'Schools in South Korea: Where have All the Children Gone?',
             author: 'Michael Robinson',
@@ -211,7 +220,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/southkorea/img/figure8.jpg',
             url: 'publications/photoessays/southkorea/index.html',
             location: []
-        },{
+        }, {
             type: 'Geo Quiz',
             title: 'Quiz Eight: The Geography of Food Origins',
             author: 'Antoinette WinklerPrins',
@@ -220,7 +229,7 @@ Focus.Volumes = [
             thumbnail: 'publications/quizzes/eight/img/1b.jpg',
             url: 'publications/quizzes/eight/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'America\'s Public Lands: What, Where, Why, and What Next?',
             author: 'David J. Rutherford',
@@ -229,7 +238,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/american_lands/img/fig4b.jpg',
             url: 'publications/articles/american_lands/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'Cuba\'s Precarious Population Pyramid',
             author: 'Charles O. Collins',
@@ -238,7 +247,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/cuba/img/coverphoto.jpg',
             url: 'publications/articles/cuba/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'Reimagining Zimbabwe’s Cape-to-Cairo Railroad',
             author: 'Thomas Wikle',
@@ -247,7 +256,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/zimbabwe/img/fig2.jpg',
             url: 'publications/articles/zimbabwe/index.html',
             location: []
-        },{
+        }, {
             type: 'Geo Quiz',
             title: 'Quiz Seven: The Built Environment',
             author: 'Deborah Popper',
@@ -256,7 +265,7 @@ Focus.Volumes = [
             thumbnail: 'publications/quizzes/seven/img/Q2.jpg',
             url: 'publications/quizzes/seven/index.html',
             location: []
-        },{
+        }, {
             type: 'Photo Essay',
             title: 'Constructing Nationalism Through the Cityscape: The Skopje 2014 Project',
             author: 'Wesley Reisser',
@@ -265,7 +274,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/skopje/img/fig14.jpg',
             url: 'publications/photoessays/skopje/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'Agave Cultivation, Terracing, and Conservation in Mexico',
             author: 'Matthew LaFevor, Jordan Cissell, James Misfeldt',
@@ -275,7 +284,7 @@ Focus.Volumes = [
             url: 'publications/articles/mexico/index.html',
             location: []
         }]
-	},
+    },
     {
         number: 60,
         publications: [{
@@ -287,7 +296,7 @@ Focus.Volumes = [
             thumbnail: 'publications/quizzes/six/img/Q10/Erdapfel.jpg',
             url: 'publications/quizzes/six/index.html',
             location: []
-        },{
+        }, {
             type: 'Photo Essay',
             title: 'Organic Agriculture, Scale, and the Production of a Region in Northeast, India',
             author: 'David Meek',
@@ -296,7 +305,7 @@ Focus.Volumes = [
             thumbnail: 'publications/photoessays/india/img/fig18.jpg',
             url: 'publications/photoessays/india/index.html',
             location: []
-        },{
+        }, {
             type: 'Feature Article',
             title: 'The Joola: The Geographical Dimensions of Africa\'s Greatest Shipwreck',
             author: 'Karen Barton',
@@ -305,7 +314,7 @@ Focus.Volumes = [
             thumbnail: 'publications/articles/joola/img/figure1.jpg',
             url: 'publications/articles/joola/index.html',
             location: []
-        },{
+        }, {
             type: 'Geo Quiz',
             title: 'Quiz Five: Transportation',
             author: 'Wesley Reisser',
@@ -342,25 +351,25 @@ Focus.Volumes = [
             url: 'publications/quizzes/four/index.html',
             location: []
         }, {
-        	type: 'Photo Essay',
-			title: 'Wildlife Conservation in Kenya and Tanzania and Effects on Maasai Communities',
-			author: 'Daniel Sambu',
-			citationAuthor: 'Sambu, D.',
-			description: '',
-			date: '05/24/17',
-			thumbnail: 'publications/photoessays/kenya/img/3.jpg',
-			url: 'publications/photoessays/kenya/index.html',
-			location: []
+            type: 'Photo Essay',
+            title: 'Wildlife Conservation in Kenya and Tanzania and Effects on Maasai Communities',
+            author: 'Daniel Sambu',
+            citationAuthor: 'Sambu, D.',
+            description: '',
+            date: '05/24/17',
+            thumbnail: 'publications/photoessays/kenya/img/3.jpg',
+            url: 'publications/photoessays/kenya/index.html',
+            location: []
         }, {
-        	type: 'Feature Article',
-			title: 'Floods Collide with Sprawl in Louisiana\'s Amite River Basin',
-			author: 'Craig Colten',
-			citationAuthor: 'Colten, C.',
-			description: '',
-			date: '04/24/17',
-			thumbnail: 'publications/articles/louisiana/img/titlefigure.jpg',
-			url: 'publications/articles/louisiana/index.html',
-			location: []
+            type: 'Feature Article',
+            title: 'Floods Collide with Sprawl in Louisiana\'s Amite River Basin',
+            author: 'Craig Colten',
+            citationAuthor: 'Colten, C.',
+            description: '',
+            date: '04/24/17',
+            thumbnail: 'publications/articles/louisiana/img/titlefigure.jpg',
+            url: 'publications/articles/louisiana/index.html',
+            location: []
         }, {
             type: 'Geo Quiz',
             title: 'Quiz Three:  The Arctic',
