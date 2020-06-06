@@ -5,6 +5,16 @@ Focus.Volumes = [
         publications: [
         {
             type: 'Feature Article',
+            title: 'Saving an Impacted Sacred River of Punjab (India) with the Help of a Volunteer Sikh Religious Community',
+            author: 'Ranbir Singh Kang',
+            description: '',
+            date: '6/6/20',
+            thumbnail: 'publications/articles/river_of_punjab/img/cover.png',
+            url: 'publications/articles/river_of_punjab/index.html',
+            location: []
+        },
+        {
+            type: 'Feature Article',
             title: 'Colorism in Bangladeshi Society',
             author: 'Kari Jensen',
             description: '',
