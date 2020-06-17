@@ -4,6 +4,16 @@ Focus.Volumes = [
         number: 63,
         publications: [
         {
+            type: 'Photo Essay',
+            title: 'Can Making a Book Conserve a Forest? Bubango, Tanzania',
+            author: 'Maria Fadiman, Grace Gobbo',
+            description: '',
+            date: '6/15/20',
+            thumbnail: 'publications/photoessays/tanzania/img/figure15.jpg',
+            url: 'publications/photoessays/tanzania/index.html',
+            location: []
+        },
+        {
             type: 'Feature Article',
             title: 'Saving an Impacted Sacred River of Punjab (India) with the Help of a Volunteer Sikh Religious Community',
             author: 'Ranbir Singh Kang',
