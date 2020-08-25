@@ -1,0 +1,949 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>The Intimate China-Africa in Kampala, Uganda</title>
+    <meta name="description" content="FOCUS on Geography: The Intimate China-Africa in Kampala, Uganda">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,map,place identity,kampala,uganda,china,chinese,business">
+    <meta name="author" content="Devon Hsiao">
+    <meta name="author" content="Dr. Caroline Faria">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Sigmar+One&display=swap" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #text {
+            background: #fff;
+        }
+
+        #text h2 {
+            text-transform: none;
+            font-size: 32px;
+            font-weight: bold;
+            color: rgb(255, 255, 255) !important;
+            text-shadow: 1px 1px 3px rgb(33, 49, 26);
+        }
+
+        #text h3 {
+            text-transform: none;
+        }
+
+        #nav,
+        #toggle-map {
+            background: rgba(188, 35, 46, 0.8);
+        }
+
+        span.place-text {
+            font-family: 'Sigmar One', cursive;
+            color: #fff;
+        }
+
+        #text a,
+        a.location,
+        div.tooltip a {
+            color: rgba(59, 73, 104, 0.7);
+            border-bottom-color: rgba(59, 73, 104, 0.7);
+        }
+
+        #text a:hover,
+        a.location:hover,
+        div.tooltip a {
+            background: rgba(0, 42, 143, 0.1);
+            text-decoration: none;
+        }
+
+        path.line {
+            stroke: rgb(165, 70, 82) !important;
+        }
+
+        path.marker-path {
+            stroke: rgb(165, 70, 82) !important;
+            fill: rgb(165, 70, 82) !important;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: rgba(59, 73, 104, 0.7);
+            -webkit-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgba(59, 73, 104, 0.7);
+            transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-ms-fill {
+            background-color: rgba(59, 73, 104, 0.7);
+            -ms-transition: width 0.5s ease-in-out;
+        }
+
+        svg text {
+            font-family: 'Sigmar One', cursive;
+            font-size: 14px;
+            fill: #fff;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip.bottom .tooltip-arrow,
+        .tooltip.bottom-left .tooltip-arrow,
+        .tooltip.bottom-right .tooltip-arrow {
+            border-bottom-color: rgb(150, 55, 67);
+        }
+
+        .tooltip.left .tooltip-arrow {
+            border-left-color: rgb(150, 55, 67);
+        }
+
+        .tooltip-inner {
+            background: rgb(150, 55, 67);
+            color: #fff;
+        }
+
+        .tooltip-inner a.location,
+        #photo-caption a.location {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .author {
+            opacity: 100% !important;
+        }
+
+        .author-photo {
+            width: 100%;
+            margin-right: 0px;
+            vertical-align: middle;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .author-info {
+            *background-color: rgba(231, 250, 248, 0.89);
+            font-size: 1.2em;
+            margin-top: 5px;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            font-family: 'Montserrat', sans-serif;
+            font-size: large;
+        }
+
+        div.figure-contain {
+            background-size: contain;
+            height: 600px;
+        }
+
+        /* from https://www.kirstencassidy.com/css-fancy-quotes/ */
+
+        blockquote {
+            background: rgba(244, 245, 241, 0.88);
+            border-left: 8px solid rgb(255, 100, 100);
+            margin: 0.5em 10px;
+            padding: 0 10px;
+            quotes: '\201C' '\201D' '\2018' '\2019';
+            padding: 10px 20px;
+            line-height: 1.4;
+        }
+
+        .quotation {
+            font-size: 1.3rem !important;
+            font-family: 'Libre Baskerville', serif;
+            margin: 0;
+        }
+
+        .quotation:before {
+            content: open-quote;
+            display: inline;
+            line-height: 0;
+            left: -5px;
+            position: relative;
+            top: 20px;
+            color: rgb(138, 138, 138);
+            font-size: 3em;
+        }
+
+        .quotation::after {
+            content: close-quote;
+            display: inline;
+            line-height: 0;
+            left: 5px;
+            position: relative;
+            top: 35px;
+            color: rgb(138, 138, 138);
+            font-size: 3em;
+        }
+    </style>
+</head>
+
+<body class="scrolled">
+<progress></progress>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div id="nav" class="title-hidden dotstyle dotstyle-scaleup">
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter"
+               href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]"
+               class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook"
+               href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <ul class="nav previous">
+        <li class="previous">
+            <a href="#"><span class="fa fa-chevron-up"></span></a>
+        </li>
+    </ul>
+    <ul class="nav sections">
+    </ul>
+    <ul class="nav next">
+        <li class="next">
+            <a href="#"><span class="fa fa-chevron-down"></span></a>
+        </li>
+    </ul>
+</div>
+<!-- Add your site or application content here -->
+<div id="background"></div>
+<div id="map" class="title-hidden feature-article"></div>
+<div id="overview-map" class="title-hidden transparent"></div>
+<div id="foreground"></div>
+<div id="photos">
+    <div id="photo-caption" class="title-hidden"></div>
+</div>
+<div id="shadow"></div>
+<div id="toggle-map" class="focus-green"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+<div id="main-nav" class="light">
+    <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+        <svg width="1000px" height="1000px">
+            <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"
+                  style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+            <path id="pathE" d="M 300 500 L 700 500"
+                  style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+            <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
+                  style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+        </svg>
+
+        <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+    </div>
+    <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a data-toggle="tooltip" title="Share on Twitter"
+               href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]"
+               class="twitter-share-button"><span class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share on Facebook"
+               href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <div id="menu" class="container-fluid"></div>
+</div>
+<div id="text" class="title-hidden">
+    <div class="content scenes">
+        <section id="introduction" class="scene" data-scene-id="lp1a" title="Introduction">
+            <div class="title title-photo"
+                 style="background-image: linear-gradient(0deg, rgba(142, 142, 142, 0.2), rgba(27, 27, 27, 0.7)), url(images/figure13.jpg);">
+                <h2>The Intimate China-Africa in Kampala, Uganda</h2>
+                <div class="author row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 author-info">
+                        <span class="name">Devon Hsiao and Dr. Caroline Faria</span><br/>
+                        <span class="organization">The University of Texas at Austin </span>
+                    </div>
+                </div>
+                <div class="citation author-info">
+                    <span class="citation-label">DOI:</span>
+                    10.21690/foge/2020.63.4f
+                </div>
+            </div>
+
+            <blockquote>
+                <p class="quotation">
+                    Life here is interesting; it is not boring, and we are busy.
+                </p>
+                <footer
+                    style="margin-top:10px;text-align: right;font-size: 1em;font-style: italic;"
+                >
+                    This is the response I (Hsiao) received from Mr. Wong, a Chinese business owner along William Street
+                    in Kampala, Uganda, when I asked for his opinion on life in Uganda. His response was surprising,
+                    because it was much more positive than I had been expecting, given the general tone of articles I
+                    read leading up to my research trip to Kampala in the summer of 2018.
+                </footer>
+            </blockquote>
+
+            <p>China’s political and economic engagement with African states is a hot topic. But it is often simplified
+                in popular debate. China’s role on the continent tends to be positioned as neo-colonial and
+                exploitative, exemplified most recently in a 2019 Forbes article that claims China “wants everything”
+                from Africa, serving China’s “ambitions to write the rules of the next stage of globalization”
+                (Mourdoukoutas 2019). On the other hand, pro- Chinese media portray the relationship as far more
+                democratic, mutually beneficial, and “anything but a debt-trap” (“Why Belt and Road” 2019). What made
+                Mr. Wong’s response so unexpected was how mundane his outlook was. It did not fit into either familiar
+                narrative on China-Africa; he did not seem like he was there in Kampala to try to exploit locals, but
+                neither did he seem overly enthusiastic about helping them, in the vein of “win-win” cooperation. He
+                just seemed like a person trying to make a living. </p>
+            <p>The intellectual and policy-oriented narratives that dominate China-Africa debate remain focused on
+                macro-level interactions between governments, corporations, and banks, and quantitative data such as the
+                cost of infrastructure projects and the size of certain loans. While important, this scalar emphasis
+                misses an important part of the story. As Mr. Wong’s words above suggest, something far more complex and
+                embodied is really at work. China’s engagement with Africa and vice versa involves people like Mr. Wong,
+                each with their own motivations, concerns, and goals that are separate from grand narratives of mutual
+                development or exploitation. These people are motivated by more mundane concerns, such as how to make a
+                living for their family. A small but growing body of research reflects a recognition of the need for
+                more fine-grained and qualitative analyses (Driessen 2016; Postel 2017; Huynh 2018; Warmerdam and van
+                Dijk 2016). </p>
+        </section>
+        <section id="introduction-b" class="scene" data-scene-id="lp1b" title="Introduction (2)">
+            <p>This project builds on this kind of work, utilizing a feminist geographic framework to understand
+                China-Africa relations. This means that we recognize that those every-day, intimate and or micro-level
+                interactions, are also vital to pay attention to and cannot be separated from the macro geoeconomic and
+                geopolitical. As such, while traditional political economic analyses tend to examine China-Africa from a
+                purely economic standpoint, a feminist geographic approach accepts that economic and social processes
+                are interconnected and mutually influential. Much can be revealed to us if we examine the geopolitical
+                relations between China and countries in Africa via a “global intimate” lens (Pratt and Rosner 2006),
+                one that includes the experiences of Mr. Wong. Several others before us have already begun these
+                efforts, focusing on small Chinese trading communities in places like South Africa (Huynh, 2018; Deumert
+                and Mabandla, 2013). That this body of work connects with wider feminist moves in economic geography to
+                highlight the importance of researching and valuing subjects, spaces and scales that are usually
+                ignored. In this paper, we do so with a focus on small scale traders in Uganda from China. Here in East
+                Africa, a multitude of new infrastructure projects are underway. Uganda is a significant nation in the
+                China-Africa discussion because it was one of the first nations to declare that it intended to model its
+                own development after that of China (Shen and Taylor 2012). The Chinese community there is also
+                relatively less researched, addressed in only a handful of publications (Warmerdam and van Dijk 2016;
+                Arsene 2019).</p>
+            <p>Popular western media outlets like <i>The New York Times</i> have reported on several hydroelectric
+                projects in Uganda, including the Isimba and Karuma dam projects. In these, China’s involvement is
+                typically framed as “competition” for American firms, where large international actors “scramble” for
+                the “prize” of infrastructure contracts (Wong 2019). This echoes earlier colonial efforts laid out in
+                the Berlin Conference of 1884 to divide up the resources of the continent for European powers. Yet
+                Ugandan media sources often differ in their narrative. For example, journalists in the Ugandan media
+                outlet <i>The Independent</i> argue that China is a better alternative to institutions such as the World
+                Bank (“Museveni Hails China” 2019).</p>
+            <p>By examining the everyday social and economic interactions of Chinese traders and entrepreneurs in
+                Kampala, and what spaces they occupy around the city, we can gain a more nuanced understanding of the
+                global-intimacies of China-Africa engagement. To do so here, we ask: What is the scope and form of
+                Chinese investment in Uganda? What are some of the main ways that the Chinese state, government and
+                individuals are engaging in the Ugandan economy, and how does this contribute to Chinese soft power? And
+                on a more intimate scale: what are the motivations, concerns and everyday experiences of Chinese
+                individuals on the ground in Kampala?</p>
+        </section>
+        <section id="lp2" class="scene" data-scene-id="lp2" title="Methodology">
+            <h3>Methodology</h3>
+            <p>To answer these questions, Author 1 (Hsiao) undertook three main methods of data gathering. First,
+                secondary work on online trade databases and articles was conducted for economic figures and statistics,
+                particularly to examine specific economic sectors where China is active in Uganda, with additional data
+                drawn from Author 2’s (Faria) dataset of research on economic activity in Kampala. Secondly, I (Hsiao)
+                gathered ethnographic observations, including retail geography mapping techniques and participant
+                observation in public spaces and events over two periods of field research in Kampala. Lastly, I
+                conducted interviews of traders along William Street in Kampala, Uganda. This research occurred in
+                January 2019. The data was analyzed collaboratively by Authors 1 and 2.</p>
+            <p>Informed by feminist and critical methodologies, our work relies mainly on qualitative data gathered
+                through fieldwork, particularly approaches such as in-depth interviews, participant observation and
+                ethnographic methods. However, what is important in our critical framework is not just how data about a
+                phenomenon is being gathered, analyzed and used; the positionality of the researchers themselves must
+                also be addressed. The ‘position’ of a researcher is made up of many factors, such as their personality,
+                history, identity, and other characteristics. Not only does their position affect their insights into
+                and interpretation of data, but actually affects how the researched subjects respond to the researcher’s
+                presence. In order to address the potential for power imbalances between the researcher and the
+                researched, feminist methodologies advocate for collaboration, where fieldwork is an interactive
+                experience (England, 1994). Being aware of how the position of the researcher affects the discourses
+                present in their work is necessary if we are to move beyond single stories of China-Africa.</p>
+            <p>In the particular context of interviewing and interacting with Chinese in Africa, the positionality of
+                the researcher is particularly important because of the performative nature of speech (Schmitz, 2018);
+                responses from Chinese will vary given who their audience is, and what they are trying to accomplish
+                with their speech and why. The position of Author 1 as a researcher of mixed ethnic background but
+                fluent in Mandarin contributed to the kinds of data able to be gathered as part of this study, as many
+                subjects expressed interest in her and why she could speak their language, which opened the window to
+                conversation and approaching people for interviews and information. To establish trust and mutual
+                connections, Author 1 would inform the merchants during casual conversation that her paternal
+                grandfather was from Shandong province. The highly informal nature of the conversations meant that it
+                was difficult to get traders to stick to the planned interview questions, as many wanted to turn the
+                conversation back to Author 1’s family background. Author 1’s position as ethnically ambiguous and
+                linguistically flexible also allowed her to collect ethnographic data in Chinese-dominated spaces such
+                as the 2018 Dragonboat Festival celebrations by Lake Victoria in Entebbe, or a Chinese soccer tournament
+                by Lugogo Mall, as well as during her normal everyday excursions throughout the city. Coming across
+                Chinese during casual activities carried out without intending to specifically seek out Chinese, such as
+                eating at a popular brunch spot or visiting a craft market for some trinket shopping, provided valuable
+                information on how Chinese navigate the city. Elaine Ho describes a similar method of data gathering,
+                where her position as a Singaporean with connections to China allowed her to conduct ethnographic work
+                on Chinese migration during her everyday life (Ho, 2019).</p>
+        </section>
+        <section id="lp3a" class="scene" data-scene-id="lp3a"
+                 title="Political and Economic ties between China and Uganda (1)">
+            <h3>Political and Economic ties between China and Uganda</h3>
+            <p>China is involved in a wide range of economic and political activities in Uganda. Primarily these
+                include; infrastructural development, educational training, trade relations and manufacturing. Following
+                the first bilateral treaty between China and Uganda, signed in 2004, there have been a number of other
+                agreements between the two nations (“China- Uganda BIT” 2004). In 2006, Uganda and China signed a series
+                of agreements focusing on economy, trade, agriculture, education, and technology, and in June 2019 the
+                two nations agreed to establish their relationship as a “comprehensive cooperative partnership” (“China,
+                Uganda Sign” 2006; “China-Uganda Lift Ties” 2019). In addition to cooperation between the two on a
+                national government level, the Ugandan government has also begun establishing relationships with
+                individual Chinese provinces. For example, in June 2018, Uganda signed a deal with the government of
+                China’s Hunan Province, focusing on collaboration in the “key sectors” of agriculture, mining, energy
+                (hydro power, solar, and wind energy), tourism, and industrialization (“China’s Hunan Province”
+                2018).</p>
+            <div id="figure1" class="figure figure-contain"
+                 style="background-image:url(images/figure1.jpg); background-size: contain;"></div>
+            <div class="caption"><a class="location" data-layer-id="figure1">Figure 1</a>: The Huawei building in
+                Kampala; Huawei is a Chinese multinational tech company that sells consumer electronics as well as works
+                on ICT infrastructure programs (January 2019). Source: Author’s own
+            </div>
+        </section>
+        <section id="lp3b" class="scene" data-scene-id="lp3b"
+                 title="Political and Economic ties between China and Uganda (2)">
+            <p>One of the most visible areas of Chinese economic activity in Uganda is the realm of infrastructure
+                construction. The importance of infrastructure is also reflected in the focus areas of the previously
+                mentioned agreements between Uganda and China, which place emphasis on collaboration in the realms of
+                energy, agriculture, mining, and technology. Uganda hopes to secure loans from China for the Ugandan
+                section of the Standard Gauge Railway. This is a regional project that will construct a railway line
+                across East Africa from Kenya into multiple cities in Uganda, Rwanda, and even South Sudan, which will
+                dramatically increase access to coastal ports like Mombasa in Kenya (Anyanzwa 2019). Currently, only the
+                Mombasa-Nairobi line is operational, although it is operating in the negative; until the viability and
+                sustainability of the project can be evaluated, China has not yet approved the loans needed for the
+                Ugandan extension of the line (Herbling and Li 2019). Other major planned and completed projects include
+                the expansion of Entebbe International Airport and the Kampala-Entebbe Expressway, which opened in June
+                2018 (Ladu 2015). One of the major players in Ugandan infrastructure projects is China Communications
+                Construction Company (CCCC), who worked on the Kampala-Entebbe Expressway. During travel in Uganda, we
+                found the CCCC operating across the country, including in the Murchison Falls National Park in
+                North-western Uganda (Figure 2).</p>
+            <div id="figure2" class="figure"
+                 style="background-image:url(images/figure2.jpg);"></div>
+            <div class="caption"><a class="location" data-layer-id="figure2">Figure 2</a>: Author 1 standing next to
+                CCCC construction signs in Murchison Falls National Park, Uganda (January 2019). Source: Author’s own.
+            </div>
+            <p>Another major area of China-Ugandan engagement is through education. Opening its doors in 2014, the
+                Confucius Institute at Makerere University is a Chinese government- backed program. It focuses on
+                cultural exchange and language instruction, offering Chinese language courses to Makerere students and
+                the wider Kampala community (“Services” 2019). Furthermore, a teacher-training program is underway at a
+                private school in Kampala, Luyanzi College Bweyogerere (see Figure 3). This is owned by a Chinese woman,
+                Wang Li Hong Sooma, and her Ugandan husband Ayub Sooma. This program is training Ugandan teachers in
+                Chinese language instruction. It is funded by the Chinese government and supported by resources from the
+                Confucius Institute at Makerere (Byaruhanga 2019). The goal of the program is to increase the presence
+                of Chinese language courses available in Uganda, in order to ultimately aid Ugandan students with
+                accessing international education and business opportunities. As of December 2018, 35 secondary schools
+                will offer Chinese language courses, and Makerere University in Kampala has announced plans to offer a
+                bachelor's program in Chinese language and culture by the year 2019/2020 (Wandera 2018).</p>
+        </section>
+        <section id="lp3c" class="scene" data-scene-id="lp3c"
+                 title="Political and Economic ties between China and Uganda (3)">
+            <div id="figure3" class="figure"
+                 style="background-image:url(images/figure3.jpg); "></div>
+            <div class="caption"><a class="location" data-layer-id="figure3">Figure 3</a>: Author 1 standing in the
+                courtyard of Luyanzi College, Bweyogerere, decorated with Chinese lanterns. The surrounding classrooms
+                are used for Chinese language lessons funded by the Chinese government (June 2018). Source: Author’s
+                own.
+            </div>
+            <p>Last, and of particular interest to our project, are China-Uganda trading ties, which are centered in the
+                2006 agreements signed between the two nations. In 2017, Uganda imported $1.15 billion worth of products
+                from China. Of these imports, 47% are machines such as broadcasting equipment, phones, and semiconductor
+                devices; 9.2% are textiles such as used clothing; 8.4% are chemical products such as pesticides; 7.3%
+                are plastics and rubbers; and 4.9% are footwear and headwear (“What Does China Export” 2017). In turn,
+                only 5.9% of Uganda’s total exports go to China, worth $44.6 million. Products imported from Uganda by
+                China include tanned equine and bovine hides (48% of imports from Uganda), other oily seeds (17%),
+                coffee (6.1%), and scrap plastic (5.2%) (“What Does China Import” 2017). Recently, Chinese companies
+                have ramped up manufacturing in the country. In 2016, the China-Uganda Agricultural Industrial Park
+                opened. This is one of several China-backed industrial parks in Uganda. Another is Tian Tang Industrial
+                Park, which has four factories that work with steel, foam, and wood (Huaxia 2019).</p>
+            <p>Given the increasing partnerships between China and Uganda, Chinese companies, politicians and
+                individuals
+                have significant and growing influence in the country. However, most of the media coverage and exposure
+                we
+                receive is concerned with specific groups of highly visible Chinese: diplomats, officials, employees of
+                large corporations, and those in the construction business. What about Chinese traders in the city,
+                those
+                that interact with ordinary Ugandans more intimately on a daily basis? Drawing on the work by Nagar et
+                al.
+                on economic geography, we want to refocus on the voices that are most often excluded in economic
+                analysis,
+                such as migrants and those engaged in informal sectors of the economy. Below, we focus on this group of
+                Chinese migrants in Uganda. We ask: where are they located in the city? Who are they, where are they
+                from,
+                and what are their drivers for moving to Uganda? And, lastly, what are their everyday experiences of
+                life
+                like in Uganda?</p>
+        </section>
+        <section id="lp4a" class="scene" data-scene-id="lp4a"
+                 title="Locating the Chinese in Kampala: Traders on William Street (1)">
+            <h3>Locating the Chinese in Kampala: Traders on William Street </h3>
+            <p>The location of Chinese businesses around the city of Kampala can reveal to us a lot about their lives.
+                Are they all concentrated in one space, like a ‘Chinatown’? How can their proximity, or lack of it, to
+                other Chinese businesses impact their relationships with other Chinese, as well as local Ugandans? How
+                accessible are their businesses to local customers?</p>
+            <p>To answer these questions, Author 1 began by using business permit records to map out Chinese businesses
+                in the city. All businesses operating within Kampala city limits are required to register for business
+                permits with the Kampala Capital City Authority (KCCA), so we requested registration records from them.
+                The KCCA does not record the nationality of business owners, so we devised a way to locate at least
+                partial records of registered Chinese-affiliated businesses. Author 1 requested records from the KCCA on
+                businesses registered by individuals with the top ten most common Chinese surnames: Chen (陈), Huang (黄),
+                Lee/Li (李), Liu (刘), Wang (王), Wu (吴), Yang (杨), Zhang (张), Zhao (赵), Zhou (周) (“百 家姓” 2019).
+                Romanization differences resulted in the final list actually consisting of 11 names; “Li” and “Lee” were
+                both included but correspond to the same Chinese surname 李. This initial dataset consisted of 658
+                results, and included information on the nature of the businesses and their location within Kampala. As
+                these locations were denoted by Kampala city zoning designations, some of them were too vague to
+                pinpoint on the map, such as “A” or “K10”. However, some locations could be identified with general
+                locations on a map, such as “Sixth Street” or “Kampala Road.” Approximate coordinates for these
+                identifiable locations were collected from Google maps, with a final total of 398 businesses able to be
+                plotted on a map. Figure 4 below is not a trader-specific map, and is by no means a comprehensive
+                representation of Chinese businesses throughout the city. But it does tell us some interesting things.
+                There is a concentration of traders on William Street, popularly associated with Chinese economic
+                activity amongst Kampala-residents.</p>
+        </section>
+        <section id="lp4b" class="scene" data-scene-id="lp4b"
+                 title="Locating the Chinese in Kampala: Traders on William Street (2)">
+            <div id="figure4" class="figure"
+                 style="background-image:url(images/figure4.jpeg); background-size: contain;"></div>
+            <div class="caption">Figure 4 (hover over the points for more details)</div>
+            <p>Our first map (Figure 4) shows that according to business permit records, there does not appear to be a
+                single area within the city with a concentrated presence of Chinese businesses. However, in practice,
+                tips from locals pointed towards William Street in Kampala as a place where Chinese could easily be
+                found. Located in Nakasero, an area of the city traditionally occupied with trade, William Street is
+                mostly populated by Chinese small-scale traders. A small minority of these stores are retail businesses,
+                but most of them operate as wholesale operations, hence the abundance of large delivery trucks up and
+                down the street, as seen in Figure 5.</p>
+            <div id="figure5" class="figure"
+                 style="background-image:url(images/figure5.jpg); "></div>
+            <div class="caption"><a class="location" data-layer-id="figure5">Figure 5</a>: Traffic on William Street,
+                Kampala (2017). Source: Author’s own.
+            </div>
+            <p>Attempting to carry out GPS-based retail geography mapping using an iPhone, Author 1 walked up and down
+                William Street, dropping a pin on a map to mark the location of every storefront she passed that was
+                obviously identifiable as Chinese-owned, whether by signage or the presence of Chinese behind the store
+                counters. A total of 51 shops were recorded along William Street, with 2 other shops along adjacent
+                streets.</p>
+            <div id="figure6" class="figure"
+                 style="background-image:url(images/figure6.jpg); "></div>
+            <div class="caption"><a class="location" data-layer-id="figure6">Figure 6</a>: Chinese-staffed stores along
+                William Street in Kampala, Uganda (June 2018). Source: Author’s own, taken with permission from the
+                subjects.
+            </div>
+        </section>
+        <section id="lp4c" class="scene" data-scene-id="lp4c"
+                 title="Locating the Chinese in Kampala: Traders on William Street (3)">
+            <div id="figure7" class="figure figure-contain"
+                 style="background-image:url(images/figure7.jpeg); "></div>
+            <div class="caption">Figure 7 “Chinese” places identified based on information from locals in Kampala,
+                Uganda. Types of places include stores (concentrated on William Street), restaurants/hotels, embassy
+                office, and “other” spaces such as grocery stores (June 2018) Hover over the points for more details.
+            </div>
+            <p>Figure 7 is a map created based on the author’s retail mapping method focusing on William Street as well
+                as other spaces in the city identified as “Chinese” places in conversations and interviews with locals.
+                The “other spaces” on the map include a retail ‘mall’ that houses multiple Chinese businesses, as well
+                as a Chinese supermarket located in a commercial mall complex along with two other major South African
+                supermarkets; these spaces were all identified to the authors by Chinese traders on William Street as
+                spaces where Chinese could easily be found. Centering our research along William Street, we complemented
+                the KCCA research with qualitative data collection. Via interviews we learned that the average Chinese
+                trader on William Street is male, in his twenties or thirties, and predominantly from one of three
+                provinces: Zhejiang, Jiangsu, and Shandong (Author 1 field notes, June 2018). </p>
+        </section>
+        <section id="lp4d" class="scene" data-scene-id="lp4d"
+                 title="Locating the Chinese in Kampala: Traders on William Street (4)">
+            <div id="figure8" class="figure"
+                 style="background-image:url(images/figure8.jpg); "></div>
+            <div class="caption"><a class="location" data-layer-id="figure8">Figure 8</a>: Author 1 interviewing a
+                Chinese trader on William Street. The inventory of the store, mainly bedding and handbags, are clearly
+                visible. (June 2018). Source: Author’s own, taken with permission from the subjects.
+            </div>
+            <div id="figure9" class="figure"
+                 style="background-image:url(images/figure9.jpg); "></div>
+            <div class="caption"><a class="location" data-layer-id="figure9">Figure 9</a>: Chinese shoppers and store
+                staff in a shop along William Street, Kampala. The main inventory of the shop, brightly colored plastic
+                footwear, is clearly visible. (June 2018). Source: Author’s own, taken with permission from the
+                subjects.
+            </div>
+            <p>The majority of the shops along William Street operate as wholesale rather than retail businesses, and
+                they cater to all—rather than focusing on Chinese consumer goods and services alone. For example, the
+                main products sold are shoes, clothing, and bedding (as seen in Figures 8 and 9). And indeed, most
+                stores import their goods from China, although a small minority manufacture their products in local
+                factories in Uganda (Author 1 field notes, June 2018). Beyond these descriptive characteristics though,
+                what is it like to actually live and work in Kampala, from the perspective of these Chinese
+                traders? </p>
+        </section>
+        <section id="lp5" class="scene" data-scene-id="lp5"
+                 title="Tensions around Chinese traders in Kampala and trader experiences">
+            <h3>Tensions around Chinese traders in Kampala and trader experiences </h3>
+            <p>There are two main ways China is characterized in the debate on China-Africa. On one hand, China is a
+                resource-hungry giant engaged in a new form of colonialism, and on the other hand, it is portrayed as a
+                sincere partner in development (Van Mead 2018). What about on a more micro-scale? The increasing number
+                of small-scale Chinese traders operating in Kampala has led to growing competition and tensions over
+                what one Ugandan shopkeeper referred to as the “importation of importers” (BBC News, 2011). In their
+                paper on Ugandan youths’ perceptions of China, Shen and Taylor describe how views of China will
+                obviously differ case by case, but at the government level and for those directly involved with China in
+                trade, “the Chinese undoubtedly offer a welcome alternative to their Western counterparts”. (2012, 696)
+                However, they point out that among the general public there are anxieties that the Chinese actually pose
+                a threat, such as through economic competition and questionable labor and business practices. In their
+                survey of Ugandan youths, 36.2 percent of respondents reported they worried about Chinese impacts on
+                their own job security due to an increasing number of Chinese workers, and 38.6 percent believed that
+                “Chinese workers have taken away Ugandans’ jobs.” These survey results are limited to youth aged 18 to
+                30 years old, but these findings suggest a popular distrust of Chinese on the ground. Indeed, in 2011
+                Ugandan traders in Kampala went on strike for two days to protest about rising costs, many of them
+                pointing to an influx of Chinese traders as the source of the issue. The root of their complaints seemed
+                less rooted in racism, and more related to economic concerns and structural challenges, like lenient
+                regulation of Chinese economic activities. One common accusation was that Chinese were coming to the
+                country as investors, but instead of investing (which would be welcomed), they illegally set up petty
+                trade shops. These claims are backed up by a survey conducted by Seruwagi (2012), which revealed that
+                many Chinese businessmen that were originally licensed as investors had set up shop in the petty trade
+                business instead.</p>
+            <div id="figure10" class="figure figure-contain"
+                 style="background-image:url(images/figure10.png);"></div>
+            <div class="caption">Figure 10 details the number of businesses registered with the KCCA by people with
+                Chinese surnames. Although it is not trader-specific, the rise in Chinese businesses in Kampala is still
+                indicative of an increasingly competitive market. Under these market conditions, the Chinese traders
+                seem increasingly agitated and unhappy with their financial situations.
+            </div>
+            <p>Within the grouping of “traders” are two subgroups: the business owners and Chinese contract workers.
+                Generally speaking, the workers come to Uganda because they hear about employment opportunities, usually
+                from friends or family. Their main motivation in coming to Uganda is to make money so they can improve
+                their economic conditions back home in China, and they view their time in Uganda as temporary. Because
+                of this, they rarely venture outside of their William Street bubble. The only Ugandans they interact
+                with on a regular basis are their customers. Since their contracts often include room and board, their
+                main social circles consist primarily of only fellow Chinese traders. Many of the contract workers I
+                spoke to share the same slightly more pessimistic outlook of life in Uganda – life there is hard and
+                isolated, particularly because they are so far away from their family and friends. They only put up with
+                these conditions because of the relatively higher pay they receive compared to what they would be making
+                back in China. Their views, that life in Uganda “is not easy,” contrast with Mr. Wong’s views at the
+                beginning of this paper that life in Kampala is “interesting”. This perhaps reflects the differences in
+                position between hired workers and business owners, of which Mr. Wong is one. </p>
+            <p>When asked why they came to Uganda, business owners echo their workers: they’re here to make money. Some
+                speak of frustrations with local labor, often relying on racist stereotypes in their claims that
+                Ugandans are “lazy” or that they steal from them. These frustrations are similar to those recorded in
+                Warmerdam and Van Dijk’s 2016 survey of Chinese businesses in Kampala, where 27% of respondents
+                identified “workers steal things” as a problem faced by Chinese traders. This argument is used to
+                justify the preference of many Chinese business owners to hire Chinese workers to man their stores and
+                warehouses. However, they show an overall slightly more optimistic outlook about life in Uganda,
+                especially when compared to the views of the Chinese contract workers. This may be due to their greater
+                access to financial and social capital, as these traders generally are wealthier than the contract
+                workers they employ. Generally, the business owners are also able to return to China more often than the
+                contract workers, which may contribute to their greater satisfaction with conditions and life in Kampala
+                (Author 1 field notes, June 2018). </p>
+            <p>On the Ugandan side, the topic of Chinese traders remains controversial. Although consumers and those
+                employed in Chinese-owned shops benefit from the presence of Chinese traders, protests over foreign
+                traders have broken out in Kampala in 2011 and 2017. One of the main issues behind the tensions over
+                Chinese traders is the often hazy legal definitions between “investor” and “trader” that Chinese
+                businessmen operate under, allowing them to pursue business interests that might not be sanctioned under
+                their particular licenses and visas. Since the Chinese traders can generally access cheaper products
+                sourced from China, the Ugandan shopkeepers struggle to match their low prices, and thus their business
+                has suffered. Furthermore, the tendency of Chinese traders interviewed to root their complaints about
+                local Ugandan labor in racist rhetoric, associating blackness with laziness and ineptitude, contribute
+                to the continued issue of racism and a sense of superiority in the Chinese that make it difficult for
+                Ugandan employees. We need more economic geographic analysis of how racial power operates in this
+                particular context, and within wider China-Africa geoeconomic and geopolitical relations.</p>
+            <p>As Figure 10 suggests, in recent years it is highly possible that competition between Chinese businesses
+                in Kampala has increased, as the traders claim. According to local Ugandan traders though, their
+                business has also decreased, so there is less competition from Ugandans for these Chinese businesses. It
+                is important to note that increased competition is only one of the complaints of Chinese traders in
+                Kampala. The issue of smaller profit margins needs to be considered in a more holistic view that factors
+                in other complaints of isolation, insecurity and language barriers etc. Within this context, it is
+                possible that in the minds of Chinese traders in Kampala, a combination of these other factors with more
+                business competition could create negative impressions of business there.</p>
+            <p>Public events Author 1 witnessed suggest that Chinese businesses in Uganda are thriving, and that there
+                are ample social opportunities for the Chinese that are living and working in Kampala. However,
+                interviews with traders tell a different story. Many of the traders spoken to complained of high
+                taxation rates and increased competition from other Chinese that have moved to Uganda in the last four
+                years. This is in contrast to their hopes of making a profit, as promised by the win-win rhetoric so
+                prevalent in Chinese discussion of Africa. Their increasingly lower profit margins are making it
+                difficult to justify the social hardships they endure, including distance from family back in China,
+                feelings of insecurity, and a general lack of sufficient social outlets (Author 1 field notes, June
+                2018; January 2019).</p>
+            <p>It was challenging to secure interviews with Chinese corporate employees so unfortunately we do not have
+                much data on their own personal views of their lives and struggles living in Kampala to speak on the
+                matter. This is an interesting area for future work. Author 1 was however able to speak to several women
+                whose husbands work at Chinese corporations while they were enjoying a day of socializing with their
+                children at the Dragon Boat Festival event in <a lass="location" data-layer-id="figure10">Entebbe</a> ,
+                2018. In contrast to the traders on William
+                Street, these women expressed overall positive views about their lives in Kampala. They noted that,
+                generally speaking, they could get most items from home that they needed from Chinese grocery stores, or
+                sold over WeChat, a popular Chinese messaging application. One woman’s youngest child was even born in
+                Kampala. These women spoke of their children attending international schools, Chinese church events for
+                socializing, and weekend Chinese school for their children. They go back to China once a year for
+                vacation, and usually stay for about a month (Author 1 field notes, June 2018). These women seem to have
+                more opportunities for socialization and access to resources than their trader counterparts. The same
+                can be said for the corporate employees that participated in the social events we witnessed, such as the
+                soccer tournament organized by the Chinese Embassy in Kampala. The contrast between the conditions
+                described by these mothers against those of the traders on William Street illustrate how there is a
+                great diversity in individual experiences within the broader Chinese migrant community in Kampala. These
+                differences could be due to a myriad of factors, such as gender, class, education etc. This diversity
+                within the Chinese migrant community in Kampala supports our argument that lumping all Chinese migrants
+                under one label is too simple and ineffective, and results in the loss of important perspectives. </p>
+        </section>
+        <section id="lp6" class="scene" data-scene-id="lp6"
+                 title="Mitigating Tensions: Social Events and Soft Power">
+            <h3>Mitigating Tensions: Social Events and Soft Power</h3>
+            <p>The presence of these traders is not just significant economically, but also has significant social
+                impacts because of their contributions to the image of China in Africa, even if indirectly and
+                unintentionally. The image of China is directly related to the strength of its soft power, which is its
+                power to persuade others without the use of force, relying on economics and culture instead (Li, 2018)
+                These traders interact with Ugandans on an everyday basis, outside of the pomp of official diplomatic
+                engagements. Their attitudes and behaviors contribute to Chinese soft power on the continent, and can
+                help to mitigate some of the tensions surrounding Chinese activities (Liang, 2012). For this reason, we
+                were interested in seeking out Chinese-specific (and not necessarily trader-specific) social events
+                while in Kampala. We wanted to learn about what kinds of opportunities Chinese have to socialize with
+                each other, and how larger gatherings of Chinese are received by local Ugandans.</p>
+            <p>First was the second annual Dragon Boat Festival held at Lake Victoria in Entebbe in June 2018. Hosted by
+                the Chinese People’s Association for Friendship with Foreign Countries and the China Africa Friendship
+                Association of Uganda, this event had a high turnout of both Chinese and Ugandans. Several teams lined
+                up on the beach, preparing to compete in the dragon boat race. Some of these teams were formed by
+                representatives from certain companies, such as Huawei. Others were formed by groups such as the
+                Zhejiang Chinese Association of Uganda (Figure 11). This event was entirely open to the public, and
+                there were just as many local Ugandan spectators on the shores of Lake Victoria as Chinese. The event
+                featured speeches from both Ugandan and Chinese officials, musical performances by students of the
+                Confucius Academy, and many others. Food stalls set up by Chinese vendors sold a wide array of entrees,
+                drinks and snacks. Overall, this event seemed equally intended to showcase Chinese culture to local
+                Ugandans as well as provide socialization opportunities with fellow Chinese countrymen.</p>
+            <div id="figure11" class="figure"
+                 style="background-image:url(images/figure11.jpg); "></div>
+            <div class="caption"><a class="location" data-layer-id="figure11">Figure 11</a>: Chinese participants in a
+                boat race line up on the beach in Entebbe, Uganda. Each team represents a specific provincial
+                association, such as the Zhejiang Chinese Association Uganda and the Taizhou TECNO team pictured here.
+                (July 2018). Source: Author’s own, taken with permission from subjects.
+                subjects.
+            </div>
+            <p>A second event Author 1 attended was a soccer tournament in January 2019 hosted by the Chinese embassy.
+                Unlike the Dragonboat Festival, this event was not open to the public, and the participants and
+                spectators were almost entirely Chinese. There were no trader teams participating in this particular
+                event, but a wholesaler interviewed on William Street told us that he has participated in a similar
+                event hosted by the embassy for basketball. Nevertheless, it was interesting to watch the teams of
+                corporate employees from the Chinese embassy, CCCC, and Huawei, among others, interact with each other.
+                Not only were there both men and women playing on the field (although it was mostly men), there was a
+                decent turnout of supporters there to cheer the players on (Author 1 field notes, January 2019).
+                Overall, it was a much more family-oriented event than we were expecting, and the number of children and
+                families present was surprising. We learned that these events are not just a way for corporate and
+                government employees from China to interact and connect, but also a forum for their families to connect
+                with each other too, addressing some of the isolation and homesickness they may feel. These interactions
+                between the embassy government employees and the corporate groups also suggest that private and state
+                interests are closely connected.</p>
+            <div id="figure12" class="figure"
+                 style="background-image:url(images/figure12.jpg); "></div>
+            <div class="caption"><a class="location" data-layer-id="figure12">Figure 12</a>: Chinese corporate employees
+                participating in a soccer tournament. Kampala, Uganda (January 2019). Source: Author’s own, taken with
+                permission from subjects.
+            </div>
+            <p>These events serve a dual purpose: they provide opportunities for Chinese to socialize, but also
+                opportunities to display Chinese culture and develop China’s soft power influence over the Ugandan
+                public (see Figure 13) . China’s presence is growing daily, both in subtle and ostentatious ways. These
+                include both the appearance of Chinese writing on advertisements and billboards around town, and large
+                public events where you can see a large number of Ugandans enjoying the festivities and performances. In
+                these “soft” ways, the Chinese are leaving their mark on Kampala. </p>
+            <div id="figure13" class="figure"
+                 style="background-image:url(images/figure13.jpg); "></div>
+            <div class="caption"><a class="location" data-layer-id="figure13">Figure 13</a>: Ugandan drummers in
+                traditional dress next to traditional Chinese Lion Dance costumes and drums. Entebbe, Uganda (July
+                2018). Source: Author’s own, taken with permission from subjects.
+            </div>
+            <p>These large glitzy events can distract us from the daily experiences of life in Kampala. These festivals
+                and celebrations promote the rosy idea that China’s engagement with Uganda is a win-win, as framed by
+                the Chinese government. </p>
+            <p>This is highlighted, for example, by the presence of buzzwords “Cooperation” and “Friendship” which
+                featured in the names of the organizers of the dragon boat event (the Chinese People’s Association for
+                Friendship with Foreign Countries and the China Africa Friendship Association of Uganda). With these
+                words, the Chinese government creates a promise of prosperity in the minds of both Chinese traders and
+                local Ugandans. The win-win argument suggests that China provides capital in the form of large credits
+                and loans, and ties this money to requirements on the use of Chinese machinery and construction
+                contracts. In exchange, the nation it is working with provides access to resources such as minerals or
+                oil. China gains resources it needs to fuel its economy, and its partner gains new infrastructure and
+                access to capital. Theoretically, this win-win type of partnership should also be possible to extend
+                down onto a micro-level, where Chinese traders import affordable products for Ugandan consumers.
+                However, the on-the-ground experiences of Chinese traders in Kampala and their Ugandan counterparts tell
+                a different story.</p>
+
+        </section>
+        <section id="7" class="scene" data-scene-id="lp7" title="Conclusion">
+            <h3>A binary narrative is not enough: complicating the story of “China in Africa”</h3>
+            <p>An intimate lens on the relationship between China and African countries reveals many interesting details
+                that inform our wider understanding. From this research project in particular, we see that China’s
+                involvement in Uganda comes in many different shapes and forms, from investment and contracts in
+                infrastructure, education and the energy resource sector to trading and cultural exchanges. Chinese at
+                all levels are engaged in these interactions, from government officials and corporate workers all the
+                way down to small-scale individual traders and their employees. What our work suggests is that the
+                current portrayal of Chinese migrants is too simple, at the expense of important nuances and differences
+                in perspective. As shown by the individual experiences of Chinese small- scale traders and the outlook
+                of Chinese women married to corporate employees stationed in Kampala, when examined on an intimate level
+                the experiences of Chinese involved in the broad range of economic activities China conducts in Uganda
+                do not fit comfortably into the black-and-white narrative of China-Africa we are so familiar with, where
+                Chinese activities either constitute exploitation or win-win partnerships. </p>
+            <p>Recently, on July 23, 2019, the China-Uganda Industrial Capacity Cooperation Exposition took place in
+                Kampala, Uganda. The event focused on how Chinese firms could help speed up the rate of Ugandan
+                industrialization, and involved 43 enterprises from 12 different Chinese provinces (Liangyu, 2019).
+                These events are important to facilitate better partnerships, but in the fanfare it can be easy to focus
+                on numbers in the form of loans and investments, at the expense of more intimate-level interactions that
+                will be impacted by agreements reached at such events. On the macro-level, more than Uganda’s rate of
+                industrial development will be affected by the outcomes of this expo; along with the flow of Chinese
+                money and machinery will come Chinese people working in a variety of fields and capacities, and they
+                will all have different and diverse experiences of the continent. Thus, it is not enough to just focus
+                on the category of “Chinese migrants in Africa”; we need to pay attention to socio-economic and cultural
+                differences within this group. Thus, more research needs to be done on the various groups of Chinese,
+                tailored and targeted to each kind of migrant (trader, laborer, construction workers, service industry,
+                corporate employee etc.). In turn, future work must also attend to the experiences and challenges of
+                Uganda traders who operate in an increasingly neoliberalized economic setting, and one where China has a
+                powerful role. And we must attend to the experiences of Ugandans in China, where they too are fostering
+                socio-economic ties and promoting new forms of economic development. By utilizing a feminist geographic
+                lens in our examination of social and economic processes, we can begin to challenge the binary narrative
+                of “China-Africa”. </p>
+            <h3>Bibliography</h3>
+            <ul class="references">
+                <li>Anyanzwa, J. 2019. “East Africa’s Joint Mega Railway Project at the Crossroads.” The East African ,
+                    January 28, 2019.
+                </li>
+                <li>Arsene, C. 2014. “Chinese Employers and Their Ugandan Workers: Tensions, Frictions and Cooperation
+                    in an African City.” Journal of Current Chinese Affairs 4 3 (1): 139- 176.
+                </li>
+                <li>Byaruhanga, C. 2019. “The Woman Bringing Mandarin to Uganda.” BBC News2, March 25, 2019.</li>
+                <li>Deumert, A. and N. Mabandla. 2013. “‘Every Day a New Shop Pops Up’- South Africa’s ‘New’ Chinese
+                    Diaspora and the Multilingual Transformation of Rural Towns.” English Today 29 (1): 44-52.
+                </li>
+                <li>Driessen, M. 2016. “Pushed to Africa: Emigration and Social Change in China.” Journal of Ethnic and
+                    Migration Studies 42 (15): 2482–98. https://doi.org/10.1080/1369183X.2016.1174569 .
+                </li>
+                <li>England, K. 1994. “Getting Personal: Reflexivity, Positionality, and Feminist Research.”
+                    Professional Geographer 46 (1): 80-89.
+                </li>
+                <li>Herbling, D, and D. Li. 2019. “China’s Built a Railroad to Nowhere in Kenya.” Bloomberg , July 18,
+                    2019. https://www.bloomberg.com/news/features/2019-07- 19/china-s-belt-and-roa
+                    d-leaves-kenya-with-a-railroad-to-nowhere .
+                </li>
+                <li>Ho, E. 2019. Citizens in Motion; Emigration, Immigration, and Re-Migration Across China’s Borders.
+                    Stanford: Stanford University Press.
+                </li>
+                <li>Huaxia. 2019. “Chinese-Built Industrial Park in Uganda Employs Thousands of Youths.” Xinhua New
+                    China, April 8, 2019. http://www.xinhuanet.com/english/2019- 04/08/c_137960431.htm.
+                </li>
+                <li>Huynh, T. 2018. “China Town Malls in South Africa in the 21st Century: Ethnic Chinatowns or Chinese
+                    State Projects?” Asian and Pacific Migration Journal 27 (1): 28– 54.
+                    https://doi.org/10.1177/0117196818760405.
+                </li>
+                <li>Ladu, I. M. 2015. “Envoy Tells Ugandans to Work Harder.” The Daily Monitor, March 23, 2015.</li>
+                <li>Li, E. 2018. “The Rise and Fall of Soft Power.” Foreign Policy, August 20, 2018.</li>
+                <li>Liang, W. 2012. “China’s Soft Power in Africa: Is Economic Power Sufficient?” Asian Perspective 36
+                    (4): 667–92.
+                </li>
+                <li>Liangyu. 2019. “First China-Uganda Industrial Expo Opens with Calls for Partnerships.” Xinhua, July
+                    23, 2019.
+                </li>
+                <li>Mourdoukoutas, P. 2019. “What China Wants From Africa? Everything.” Forbes , May 4, 2019.</li>
+                <li>Postel, H. 2017. “Moving Beyond ‘China in Africa’: Insights from Zambian Immigration Data.” Journal
+                    of Current Chinese Affairs 4 6 (2): 155-74.
+                </li>
+                <li>Schmitz, C. 2018. “Performing ‘China in Africa’ for the West: Chinese Migrant Discourses in Angola.”
+                    Asian and Pacific Migration Journal 27 (1): 9-27.
+                </li>
+                <li>Seruwagi, Moses Kalisa. 2012. “Ugandan Trade Liberalizations ‘Hindering not Helping’.” African
+                    Review of Business and Technology.
+                    http://www.africanreview.com/finance/economy/ugandan-trade-liberalisation-hindering-not-helping
+                </li>
+                <li>Shen, S. and I. Taylor. 2012. “Ugandan Youths’ Perceptions of Relations with China.” Asian
+                    Perspective 36 (4): 693-723.
+                </li>
+                <li>Simoes, AJG, and CA Hidalgo. 2017. “What Does China Import from Uganda?” The Economic Complexity
+                    Observatory. https://oec.world/en/visualize/tree_map/hs92/import/chn/uga/show/2017/.
+                </li>
+                <li>Simoes, A.J.G. and C.A. Hidalgo. 2017. “What Does China Export to Uganda?” The Economic Complexity
+                    Observatory.
+                </li>
+                <li>Van Mead, N. 2018. “China in Africa: Win-Win Development, or a New Colonialism?” The Guardian, July
+                    31, 2018.
+                </li>
+                <li>Wandera, D. 2018. “35 Schools to Teach Chinese.” The Daily Monitor, December 21, 2018.</li>
+                <li>Warmerdam, W, and M. P. van Dijk. 2016. “Chinese Traders in Kampala: Status, Challenges, and Impact
+                    on Ugandan Society.” African Studies Quarterly 16 (3–4): 129– 48.
+                </li>
+                <li>Wong, E. 2019. “Competing Against Chinese Loans, U.S. Companies Face Long Odds in Africa.” The New
+                    York Times, January 13, 2019.
+                    https://www.nytimes.com/2019/01/13/world/africa/china-loans-africa-usa.html .
+                </li>
+                <li>BBC News. 2011. “Uganda Traders Close Shop in Protest,” July 6, 2011.</li>
+                <li>China Daily. 2019. “Why Belt and Road Initiative Is Anything but Debt Trap,” April 14, 2019.</li>
+                <li>The Independent . 2019. “Museveni Hails China for Support, Says World Bank ‘Not Serious,’” June 25,
+                    2019.
+                </li>
+                <li>“China - Uganda BIT (2004).” n.d. UNCTAD Investment Policy Hub.</li>
+                <li>Xinhua. 2018. “China’s Hunan Province, Uganda Sign Cooperation Agreement,” June 23, 2018.</li>
+                <li>“China, Uganda Sign Six Trade Agreements.” 2006. The People’s Republic of China State Council.
+                    2006.
+                </li>
+                <li>“China, Uganda Lift Ties to Comprehensive Cooperative Partnership.” 2019. Xinhua. 2019.</li>
+                <li>“百家姓: 最新中国姓氏排名,第一名你猜是哪个.” 2019. Sohu. 2019. http://www.sohu.com/a/298949901_164568.</li>
+                <li>“Services.” 2019. Confucius Institute at Makerere University. 2019.
+                    https://ci.mak.ac.ug/?q=content/services.
+                </li>
+            </ul>
+            <h3>Map Sources</h3>
+            <ul>
+                <li>Kampala Capital City Authority on businesses registered by person with Chinese surnames</li>
+                <li><a href="https://www.mapbox.com/about/maps/">Mapbox </a><a
+                    href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></li>
+            </ul>
+        </section>
+        <div class="row footer-row"></div>
+    </div>
+</div>
+<div id="progress">
+    <div id="bar"></div>
+</div>
+<div id="bar-top"></div>
+<div id="bar-bottom"></div>
+<!-- inject:templates:html -->
+<!-- endinject -->
+<script src="../../../js/combined.js"></script>
+<script src="./data/murchison_expressway.js"></script>
+<script src="./data/businesses.js"></script>
+<script src="./data/spaces.js"></script>
+<script src="./index.js"></script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-79613259-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+
+</html>
