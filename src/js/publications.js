@@ -5,6 +5,16 @@ Focus.Volumes = [
         publications: [
         {
             type: 'Feature Article',
+            title: 'Trade, Tourism and the Environment in Asia’s Durian Boom',
+            author: 'Christopher Airriess',
+            description: '',
+            date: '10/13/20',
+            thumbnail: 'publications/articles/durian/img/figure10.jpg',
+            url: 'publications/articles/durian/index.html',
+            location: []
+        },
+        {
+            type: 'Feature Article',
             title: 'Urbanism and Iron Mining in Labrador',
             author: 'Arthur Krim',
             description: '',
