@@ -53,7 +53,7 @@
 <script id="menu-item-template" type="text/template">
     <div class="publication col-lg-4 col-md-6 col-sm-6 col-xs-12">
         <div class="publication-wrapper">
-            <span class="image" style="background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(<%=thumbnail%>); background-size:cover; background-position: 50% 50%;"></span>
+            <span class="image lazy" style="background: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(<%=thumbnail%>); background-size:cover; background-position: 50% 50%;"></span>
             <a href="<%= url %>" class="<%= type.replace(' ', '').toLowerCase() %>">
                 <h2><%= type %></h2>
                 <div class="content">

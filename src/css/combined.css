@@ -1396,21 +1396,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.lazy {
+    background-image: none !important;
+    background-color: #F1F1FA;
+}
 
 /* ==========================================================================
    Helper classes
@@ -1582,21 +1571,21 @@ textarea {
 				#nav, #toggle-map {
 					display: none !important;
 				}
-				
+
 				a, a.location {
 					text-decoration: none;
 					border-bottom: none !important;
 					color: inherit !important;
 				}
-				
+
 				span.helper-icon {
 					display: none;
 				}
-				
+
 				progress {
 					display: none;
 				}
-				
+
 				body, div.figure {
 					-webkit-print-color-adjust: exact;
 					print-color-adjust: exact;
@@ -1609,7 +1598,7 @@ textarea {
 .row.footer-row .pull-right {
 	display: none;
 }
-				
+
 }
 
 body {

@@ -4,6 +4,26 @@ Focus.Volumes = [
         number: 63,
         publications: [
         {
+            type: 'Feature Article',
+            title: 'Trade, Tourism and the Environment in Asia’s Durian Boom',
+            author: 'Christopher Airriess',
+            description: '',
+            date: '10/13/20',
+            thumbnail: 'publications/articles/durian/img/figure10.jpg',
+            url: 'publications/articles/durian/index.html',
+            location: []
+        },
+        {
+            type: 'Feature Article',
+            title: 'Urbanism and Iron Mining in Labrador',
+            author: 'Arthur Krim',
+            description: '',
+            date: '9/20/20',
+            thumbnail: 'publications/articles/labrador/img/figure1.jpg',
+            url: 'publications/articles/labrador/index.html',
+            location: []
+        },
+        {
             type: 'Photo Essay',
             title: 'Can Making a Book Conserve a Forest? Bubango, Tanzania',
             author: 'Maria Fadiman, Grace Gobbo',
