@@ -1,0 +1,2206 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>Tweeting Images of Fandom: A Geographic Photo Analysis of Southeastern Conference Football Support</title>
+    <meta content="FOCUS on Geography: A Geographic Photo Analysis of Southeastern Conference Football Support."
+          name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Twitter, Cultural identity, US South, American college football, sports fandom" name="keywords">
+    <meta content="J. A. Cooper" name="author">
+    <link href="/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/manifest.json" rel="manifest">
+    <meta content="#ffffff" name="msapplication-TileColor">
+    <meta content="/ms-icon-144x144.png" name="msapplication-TileImage">
+    <meta content="#ffffff" name="theme-color">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway&display=swap" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        #text {
+            background: #fff;
+        }
+
+        #text h2 {
+            font-family: 'Poppins', sans-serif;
+            text-transform: none;
+            font-size: 32px;
+            font-weight: bold;
+            color: #198fba !important;
+            text-shadow: 1px 2px #ffffff;
+        }
+
+        #text h3 {
+            font-family: 'Poppins', sans-serif;
+            text-transform: none;
+            color: rgb(61, 76, 104);
+        }
+
+        #nav,
+        #toggle-map {
+            background: rgba(124, 127, 113, 0.8);
+        }
+
+        span.place-text {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        #text a,
+        a.location,
+        div.tooltip a {
+            color: rgba(59, 73, 104, 0.7);
+            border-bottom-color: rgba(59, 73, 104, 0.7);
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: rgba(197, 151, 114, 0.8);
+            -webkit-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgba(197, 151, 114, 0.8);
+            transition: width 0.5s ease-in-out;
+            -moz-transition: width 0.5s ease-in-out;
+        }
+
+        progress::-ms-fill {
+            background-color: rgba(197, 151, 114, 0.8);
+            -ms-transition: width 0.5s ease-in-out;
+        }
+
+        svg text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            fill: #fff;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip.bottom .tooltip-arrow,
+        .tooltip.bottom-left .tooltip-arrow,
+        .tooltip.bottom-right .tooltip-arrow {
+            border-bottom-color: rgb(90, 128, 75);
+        }
+
+        .tooltip.left .tooltip-arrow {
+            border-left-color: rgb(87, 136, 68);
+
+        }
+
+        .tooltip-inner {
+            background: rgb(105, 160, 84);
+            color: #fff;
+        }
+
+        .tooltip-inner a.location,
+        #photo-caption a.location {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .author {
+            margin-bottom: 1em;
+            font-size: 14px !important;
+            opacity: 1;
+        }
+
+        .author-photo {
+            width: 100%;
+            margin-right: 0px;
+            vertical-align: middle;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .author-info {
+            *background-color: rgba(231, 250, 248, 0.89);
+            font-size: 1.2em;
+            margin-top: 5px;
+            color: white;
+            text-shadow: 3px 2px 3px black;
+            font-family: 'Raleway', sans-serif;
+        }
+
+
+        div.figure.figure_size {
+            /*            background-size: cover!important;*/
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #figure1, #figure5, #figure11, #figure12, #figure14 {
+            background-size: contain !important;
+        }
+
+        .caption {
+            margin-top: -1rem;
+            margin-left: -1rem;
+            font-weight: 800;
+            font-size: 1rem;
+            line-height: 16px;
+            padding-bottom: 1rem;
+            border-bottom: darkgrey solid 1px;
+        }
+
+        .twitterImage {
+            border: 0px solid black;
+            border-radius: 15px;
+            border-width: 1px;
+            border-color: rgb(204, 214, 221);
+            padding: 8px 15px;
+            background-color: rgb(248, 249, 250);
+            margin-bottom: 1rem;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+        }
+
+        .twitterImage div {
+            border-radius: 10px;
+        }
+
+        .twitterImage p:last-of-type {
+            margin-top: 1rem;
+            color: grey;
+        }
+
+    </style>
+    <script src="footprint.js"></script>
+</head>
+
+<body class="scrolled">
+<progress></progress>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="title-hidden dotstyle dotstyle-scaleup" id="nav">
+    <ul class="nav share">
+        <li>
+            <a class="twitter-share-button" data-toggle="tooltip"
+               href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" title="Share on Twitter"><span
+                class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"
+               title="Share on Facebook"><span
+                class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]" title="Share via E-mail"><span
+                class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <ul class="nav previous">
+        <li class="previous">
+            <a href="#"><span class="fa fa-chevron-up"></span></a>
+        </li>
+    </ul>
+    <ul class="nav sections">
+    </ul>
+    <ul class="nav next">
+        <li class="next">
+            <a href="#"><span class="fa fa-chevron-down"></span></a>
+        </li>
+    </ul>
+</div>
+<!-- Add your site or application content here -->
+<div id="background"></div>
+<div class="title-hidden feature-article" id="map"></div>
+<div class="title-hidden transparent" id="overview-map"></div>
+<div id="foreground"></div>
+<div id="photos" style="">
+    <div class="title-hidden" id="photo-caption"></div>
+</div>
+<div id="shadow"></div>
+<div class="focus-green" id="toggle-map"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+<div class="light" id="main-nav">
+    <div class="menu-icon-wrapper" id="menu-icon-wrapper2" style="visibility: visible;">
+        <svg height="1000px" width="1000px">
+            <path d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800" id="pathD"
+                  style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+            <path d="M 300 500 L 700 500" id="pathE"
+                  style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+            <path d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200" id="pathF"
+                  style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+        </svg>
+
+        <div class="menu-icon-trigger" id="menu-icon-trigger2"></div>
+    </div>
+    <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg"/></a>
+    <ul class="nav share">
+        <li>
+            <a class="twitter-share-button" data-toggle="tooltip"
+               href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" title="Share on Twitter"><span
+                class="fa fa-twitter"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"
+               title="Share on Facebook"><span
+                class="share-button fa fa-facebook-official"></span></a>
+        </li>
+        <li>
+            <a data-toggle="tooltip" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]" title="Share via E-mail"><span
+                class="share-button fa fa-envelope"></span></a>
+        </li>
+    </ul>
+    <div class="container-fluid" id="menu"></div>
+</div>
+<div class="title-hidden" id="text">
+    <div class="content scenes">
+        <section class="scene" data-scene-id="lp1" id="introduction" title="Introduction">
+            <div class="title title-photo"
+                 style="background-position: 10% 10%;background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.8), rgba(50, 50, 50, 0.5)), url(img/pregame.jpg);">
+                <h2>Tweeting Images of Fandom: A Geographic Photo Analysis of Southeastern Conference Football
+                    Support</h2>
+                <div class="container-fluid">
+                    <div class="author row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+                            <img class="author-photo" src="img/profile1.jpg"/>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-3 col-xs-3 author-info">
+                            <span class="name">J. A. Cooper </span>, <span class="organization">The University of Tennessee, Knoxville</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="citation"><span class="citation-label">DOI:</span> 10.21690/foge/2020.63.3p</div>
+            <h3>Introduction</h3>
+            <p>College football is a United States phenomenon that occurs every autumn. Much of the attention given to
+                the sport is usually directed towards the competitive game itself. Entire media apparatuses exist to
+                predict and retrospectively analyze the outcomes of college football games. However, this is to serve
+                fanbases across the country that invest in following their football team throughout the course of a
+                season. Popular support for college football teams is visible in American culture through inscriptions
+                in the landscape, consumptive economic activities, and altered mobility dynamics in host cities and
+                towns on gamedays. A heightened affinity exists for the following of college football in the southern
+                United States, and football contributes greatly to the cultural geography of many areas in the US South
+                (Morgan & Klimasewski 2015). For many regional residents, their support for their favorite college
+                football team, especially those members of the Southeastern Conference (SEC), helps them to define and
+                construct a place identity. <br>
+                The academic study of sport within and outside the discipline of geography has traditionally focused on
+                player production origins and the marketing and management of mega sports events (Wise & Kohe 2020, see
+                Rooney 1969, Hetherington 1993, Lee et al. 2011, Menaker & Chaney 2014). However, there is a need to
+                further examine vernacular, grassroots sports fandom and the ways in which support of sports teams
+                impacts landscapes, identities, lifestyles, the environment, and human dynamics. While focusing on more
+                popular actors like players, coaches, or managerial staff within various sports apparatuses is useful
+                for garnering a greater understanding of competitive and recreational cultures and geographies, everyday
+                fans deserve attention for the roles they play in the economic and cultural development of sport and
+                tourism within society. This is especially true in 2020, a year in which the COVID-19 pandemic has
+                immensely changed the way in which teams’ supporters perform their fandom (Majumdar & Naha 2020).
+                Particularly, it has impeded fans’ ability to attend these games in-person, resulting in a loss of a
+                cherished ritual for many (Cooper & Alderman 2020). <br>
+                A widespread tool of fandom available to many of these common fans is social media. Fandoms and fanbases
+                are constructed as imagined communities that support themselves by continued affirmation and recreation
+                (Anderson 2016, Hills 2002). Social media and its platforms have proven to be a useful apparatus for
+                fanbases seeking to do this because it instantly connects groups with common interests across any
+                distance to show a collective simultaneous attention to an event or matter (Dillette et al. 2019). These
+                platforms have proven to be a powerful social force in the United States for not only revolutionizing
+                the construction of sports fandom and fan communities; it is also changing the very places in which the
+                sport is played. Because of the power of SEC football fandom in the U.S. South, member schools’ coaches
+                and players are afforded a celebrity social status. Using this status and the social media platform
+                Twitter, Mississippi State running back Kylin Hill <a
+                    href="https://twitter.com/H_Kylin/status/1275128689638936581" target="_blank">advocated</a> for the
+                changing of the state’s flag amid the United States’ period of intense racial reckoning in 2020. After
+                decades of advocacy for the replacement of this emblem which bared the racist yet controversial southern
+                Confederate battle flag (Webster & Leib 2016, Brasher 2019), Hill’s one tweet led to immediate action by
+                the <a href="https://apnews.com/article/1e1d9c2726493917790a122b3e539355" target="_blank">SEC</a> and
+                National Collegiate Athletic Association <a
+                    href="https://apnews.com/article/bc2347ed8a69f52bc7b060b30661808c" target="_blank">(NCAA)</a> that
+                pushed the State of Mississippi to <a
+                    href="https://www.cnn.com/2020/06/27/politics/mississippi-confederate-flag-vote/index.html?utm_medium=social&utm_source=twcnnbrk&utm_term=image&utm_content=2020-06-27T20%3A14%3A46"
+                    target="_blank">formally change </a> its flag. Through both the creation of fan communities and the
+                very making of place, social media is a social force. <br>
+                Social media platforms like Twitter are also useful in conducting geographic research because the media
+                itself is generated in spaces and places that give insight into how, where, and when people (re)create
+                places (Poorthuis et al. 2016, Metzger et al. 2016, Arthur & Williams 2019). Game days are particularly
+                good times to study these fan cultures because of fans’ observance of pregame and game-time rituals.
+                Rituals should not be misconstrued as banal, mundane activities; rather, ritual can give meaningful
+                insight into societies, cultures, and communities (Turner 1969, Geertz 1972).<br>
+                This project therefore uses Twitter to examine the dynamics of college football fandom in the pre-COVID
+                era on game days in the US South in relation to fans’ place identity and construction of a community of
+                fandom. Only tweets from public accounts were used. To search for relevant tweets, “vaguely purposive”
+                (Reed 1976, 926) keywords like “game day” and “tailgate” were used in conjunction with official and
+                unofficial team hashtags (Notes 1 & 2). Hashtags succinctly group tweets and their text, pictures, or
+                videos to a single topic on Twitter, and these hashtags can be used to foster virtual community
+                construction (Dillette et al. 2019). This essay employs a twist on volunteer employed photography, a
+                research method that is valuable in studying sport and its actors’ relationship to place and space
+                (Hinch & Kono 2018). These photos were volunteered on public accounts into the public domain of Twitter.
+                Social media photos are particularly useful in photography analyses because text usually accompanies the
+                pictures that can complement, explain, and in some ways complicate the image or the user’s intent in
+                posting it. <br>
+                This essay is focused on bottom-up fandom, so while most of the pictures returned by the query that was
+                used to search Twitter (Notes) were generated by the official football accounts of the SEC schools, only
+                photos posted by other non-affiliated users were employed here. Additionally, when a Twitter account was
+                a personal one (neither a fan nor a verified account), no ancillary information about the user was
+                gleaned or used. If the user was verified as a public figure, further exploration of their profiles
+                occasionally contributed to the discussion. <br>
+
+                Considering the power of the internet and social media to allow users to express both fandom and
+                place-based identity, this piece works to investigate and contextualize the various ways in which
+                Twitter users express Southeastern Conference football fandom through photos. The analysis will seek to
+                qualitatively explore different ways in which imagined communities and places within the US South are
+                constructed and created through experiences of college football fandom.
+
+                <section class="scene" data-scene-id="lpGrip" id="main-1" title="Four Season Fandom">
+                    <div class="twitterImage">
+
+                        <h3>Renee G</h3>
+            <p>@retiremomsrmg</p>
+            <b>#grip the swamp</b>
+            <p style="font-size:100%;">because we only have 39 days until</p><b>#Gameday</b> <b>@UFRecSports</b><b>#ufpreview</b>
+            <b>#GoGators</b>
+
+            <div class="figure" id="grip" style="background-image:url(img/grip.jpg); max-width: 500px;
+  margin: auto;"></div>
+            <p style="font-size:100%;">6:38 PM - Jul 28, 2015</p>
+
+    </div>
+    <br>
+    <p>1.SEC football fandom is not reserved exclusively for the fall. After the triumphs or defeats of the previous
+        autumn, fans often follow their teams during the off-season through recruiting in the spring and practice in the
+        summer in anticipation of the next upcoming season. Noted sports geographer John Bale includes anticipation as a
+        vital part of the sports spectator’s experience (2003, 120). Football is one of the shorter seasons in college
+        sports, and if the sport is an important component of one’s collective regional identity, that fan will attempt
+        to stay connected to the sport outside of the autumn season. A considerable number of hours on ESPN’s SEC
+        television network is devoted to covering the 14 teams’ off-season activities because there is a market for this
+        coverage due to this anticipation. Social media serves as a year-round platform where fans can continually
+        engage with their collective support. This fan’s tweet shows an empty Ben Hill Griffin Stadium with a countdown
+        until gameday. There is a potential energy communicated in this visual: the stadium is not yet full of its
+        thousands of fans, the field is not yet primed and painted for the action, and the athletes are nowhere to be
+        seen. And yet, there is an excitement and longing for the eventual time when the pageantry of gameday is
+        realized and the ritual is rejuvenated.
+
+
+    </p>
+
+    </section>
+    <section class="scene" data-scene-id="lpBreakfast" id="main-2" title="Tailgating">
+        <br>
+
+        <div class="twitterImage">
+
+            <h3>288seafox</h3>
+            <p>@288seafox</p>
+            <p style="font-size:100%;">Breakfast, gameday, tiger stadium. No better place</p> <b>#geauxtigers</b>
+
+            <div class="figure" id="breakfast" style="background-image:url(img/breakfast.jpg); max-width: 500px;
+  margin: auto;"></div>
+            <p style="font-size:100%;">9:15 AM - Sep 30, 2017</p>
+        </div>
+
+        <p>2.After anticipating the journey, the next steps in Bale’s (2003) spectator’s experience sequentially include
+            the journey to spectate and then the on-site stadium experience itself. In theorizing specifically the
+            spectator experience of American college football, it would be useful to add another step in between the
+            journey and the game: tailgating. Fans of the SEC tend to take their tailgating very seriously. <i>Southern
+                Living,</i> a magazine that serves as a guide for how a perceived “good Southerner” lives in the
+            exceptional South (Lauder 2012), has published two editions of the SEC tailgating cookbook to capitalize
+            upon the fact that this particular ritual is a vital part of gameday for many ticket holders. This tweet
+            from 2007 was sent at 9:15 AM showing off a fully set-up tailgating scene in Baton Rouge, Louisiana. The
+            sender contently declares his/er place to be superior to all others because of the food, event, and stadium
+            view. Cooking food is a very common component of tailgating, and this fan is showing that s/he is so
+            committed that they began cooking early in the morning for what was that day a 7:00 PM game. In the
+            background is Tiger Stadium where the tailgater’s LSU team would play later that day. Again, we see the
+            stadium as a significant icon for fans as they express their fandom. Participation in the tailgating ritual
+            on a gameday in proximity to this cathedral creates for this tweeter the ideal place and experience.</p>
+
+
+    </section>
+    <section class="scene" data-scene-id="lpPregame" id="main-3" title="Pregame Festival">
+        <br>
+
+        <div class="twitterImage">
+
+            <h3>RebelPix</h3>
+            <p> @RebelPix</p>
+            <p style="font-size:100%;">Guys, IT'S GAMEDAY</p> <b>#HottyToddy #BeatBSU #OleMiss
+            #MostBeautifulPeopleAlive</b>
+            <p style="font-size:100%;">by badamhill </p>
+
+            <div class="figure" id="pregame" style="background-image:url(img/pregame.jpg); max-width: 500px;
+  margin: auto;"></div>
+            <p style="font-size:100%;">9:06 AM - Aug 28, 2014</p>
+        </div>
+
+        <p>3. The University of Mississippi’s tradition of tailgating is to convert the campus’s central quad known as
+            “The Grove” into a pregame festival. This tweet’s photo is not focused on any one tailgate but rather on the
+            vast nature of all the tailgates together. The Grove is known for both the sheer mass of people who
+            congregate there on gamedays and for its excessively posh tailgating atmosphere where people are known to
+            use crystal drinking glasses and fine tablecloths under their tents. <br>
+            A component of these formalities at Ole Miss is that many tailgaters will dress formally for the day. These
+            essentially Southern standards are reflected and reestablished by media (like <i>Southern Living</i>) and
+            stores (like Belk, an official corporate sponsor of the Southeastern Conference, whose most recent tagline
+            is “Modern. Southern. Style.”). This expectation of elegance is reflected by this fan account’s tweet
+            declaring The Grove as a collective fan community to be the “#MostBeautifulPeopleAlive.” Like marketing and
+            other media, social media works as a force to (re)create social standards (see Haenschen 2016, Stephens &
+            Poorthuis 2015). In order to claim membership in the Ole Miss community, to truly be excited for a football
+            game in Oxford, and to be a respectable spectator, a Rebel fan must achieve a status of beauty. Notice also
+            the racial makeup of this collective fan community: the majority of the visible faces in this picture appear
+            white. This racial construction of beauty and ideal fandom then establishes whiteness as a part of the
+            elegant pageantry vital to the identity of Ole Miss football fandom. </p>
+
+
+        <section class="scene" data-scene-id="lpDressFormal" id="main-4" title="Dress Formal">
+            <br>
+
+            <div class="twitterImage">
+
+                <h3>Maddie Samuels</h3>
+                <p> @GeauxMaddie</p>
+                <p style="font-size:100%;">Gameday with my bestest friends!!!</p> <b>#GeauxTigers #tailgate
+                #homecoming </b>
+
+                <div class="figure" id="dressFormal" style="background-image:url(img/dressFormal.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">11:29 PM - Oct 26, 2013</p>
+            </div>
+            <p>
+                4. While the elegance is emphasized at Ole Miss, other SEC schools’ fans also use gameday as an event
+                for which to spiff up and look their best. This tweet from LSU focuses on presumably undergraduate fans
+                preparing for the game, and all are dressed formally. This photo, unlike the previous ones, is less
+                concerned with the landscape of tailgating than the people who construct and participate in the
+                experience. For this tweeter, the important aspect of gameday is not necessarily the competition, the
+                food, the clothes, or the tradition (though some or all of those are certainly connoted); rather, it is
+                the friendship, community, and relationships engendered in the midst of the ritual that matter. <br>
+                For college students, home gamedays often serve as respites from schoolwork. Notice the cup that is
+                partially visible in the right of the frame. The red solo cup is a US cultural icon for parties and
+                tailgates, and it is frequently referenced in works of popular culture like
+                <a href=" https://www.youtube.com/watch?v=BKZqGJONH68" target="_blank">Toby Keith’s 2011 song, “Red Solo
+                    Cup.” </a>
+                Research finds that alcohol consumption increases on college football game days at the home campus
+                (Menaker & Chaney 2014). Though a majority of undergraduates are under the legal drinking age in the
+                United States (21), alcohol, often found in disposable plastic cups like this one, is usually included
+                in students’ weekend tailgates with friends. This tweeter is expressing her fandom by emphasizing
+                friendship and more subtly including alcohol.
+            </p>
+        </section>
+
+        <section class="scene" data-scene-id="lpGamedayActivities" id="main-5" title="Gameday Activities">
+
+            <div class="twitterImage">
+
+                <h3>Uncle Enneagram 7</h3>
+                <p> @uncle_seven</p>
+                <p style="font-size:100%;">First time <span><b>#tailgating </b></span> as a <span><b>#ChiO</b></span>
+                    dad! </p>
+                <b> #HAILSTATE @HailStateFB</b>
+                <div class="figure" id="gamedayActivities" style="background-image:url(img/gamedayActivities.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">4:23 PM - Sep 1, 2018 · Starkville, MS</p>
+            </div>
+            <p>5. In researching the American college town, geographer Blake Gumprecht (2008) found that Greek life
+                dominates formal aspects of student life on college campuses. This is apparent at SEC tailgates and
+                football games. Fraternity and sorority members often congregate with other members of their
+                organization to participate in the many gameday activities. Unlike their peers’ more informal friendly
+                gatherings, Greeks usually brand themselves not only with their team’s logo but with their
+                organization’s letters as well. This display of community membership is a point of pride,
+                distinctiveness, exclusivity and honor for members. <br>
+                In this tweet, a new sister of Chi Omega at Mississippi State emphasizes her sorority’s button as a
+                focal point of her gameday experience. The tweeter is her father who is also proudly wearing Chi-O
+                letters on his shirt along with the Mississippi State logo. Tradition is a popularly lauded ideal in the
+                Southern gameday rituals, and both Greek organizations and familial ties are a part of that tradition.
+                The commonly used saying of “Faith, Family, Football” is meant to indicate the traditions of these
+                rituals. This father is evoking the family and football tradition by sharing with the world his
+                observance of the ritual with his daughter. He also emphasizes his daughter’s acceptance into a new
+                family: a sorority. Greek organizations often use familial diction in defining members’ roles. And, if
+                an inductee’s blood relative was also once a sorority or fraternity member, they can sometimes even
+                inherit membership into that Greek organization. This father is clearly pleased with both his daughter’s
+                observance of the tailgating tradition of gameday with him and the infusion of sorority membership into
+                the ritual.
+            </p>
+
+        </section>
+
+        <section class="scene" data-scene-id="lpTailgatingWithFamily" id="main-6" title="Tailgating with Family">
+
+
+            <div class="twitterImage">
+
+                <h3>Out of Bounds</h3>
+                <p> @bobounds</p>
+                <p style="font-size:100%;">Saw my cousin at the
+                    <span><b> #tailgate #Gators #UGA @YallLifestyle</b></span> tailgating </p>
+
+                <div class="figure" id="tailgatingWithFamily" style="background-image:url(img/tailgatingWithFamily.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">11:38 AM - Oct 27, 2018</p>
+            </div>
+            <p>
+                6. This next tweet is also evocative of the tradition of tailgating with family: the tweeter expresses
+                his pleasure at his reunion with his cousin at the 2018 Florida vs Georgia game. This annual matchup
+                played on a neutral site in Jacksonville, FL is colloquially known as the “World’s Largest Outdoor
+                Cocktail Party,” and it is certainly possible the cup-holding Gators fans are participating in this
+                tradition. The tweeter shared this image perhaps not just for the family connection but also for the
+                eccentric, colorful Florida getup his cousin was donning. This speaks to an extremely common occurrence
+                at a college football gameday: the material commodification of fandom. Sports merchandise purchasing and
+                displaying reflects the consumer’s values and serves to emphasize his/her fandom (Lee et al. 2011). The
+                tweeter’s cousin paid money for each item in his extensive blue-and-orange outfit so he could then
+                display his fandom. This tweet was probably sent in part because this outfit expresses “more” fandom
+                than the average tailgater’s does. However, the merchandise consumerism culture is not reserved for
+                exceptional displays of fan values like this suit; also visible in this picture are Gator branded bins,
+                cornhole boards, a chair, a tent, and even a grill. Entire economic enterprises are predicated on the
+                popular positive correlation between merchandise consumerism and fandom, and this is reflected across
+                cultural and gameday landscapes. <br>
+                It is also worth noting that this tweeter tagged @YallLifestyle in this tweet. Further examination of
+                that account’s website reveals that the tweeter is actually the co-founder of the company, Y’all
+                Lifestyle. The online store markets its products by appealing to an essentially Southern way of life.
+                The <a href=" https://www.yalllifestyle.com/lifestyle/" target="_blank"> website </a> explains that the
+                “y’all lifestyle” is about: </p>
+
+            <i>Living in the South. It’s tailgating on SEC campuses in the fall, where you start the morning with a
+                Bloody Mary and “How are y’all?”, followed by the roar of a packed stadium, and then meeting up again
+                with family and friends to celebrate the win or critique the loss – but either way, there’s never a
+                shortage of cold beverages, good buddies or laughter close by.
+                Football fandom via tailgating and game-going is integrated into a vision of a Southern lifestyle that
+                is itself a marketing strategy: those who ascribe to this vision of southern living are being encouraged
+                to purchase from this company that shares the ideal.
+
+            </i>
+            <p>Football fandom via tailgating and game-going is integrated into a vision of a Southern lifestyle that is
+                itself a marketing strategy: those who ascribe to this vision of southern living are being encouraged to
+                purchase from this company that shares the ideal.
+            </p>
+        </section>
+
+        <section class="scene" data-scene-id="lpTradition" id="main-7" title="Tradition">
+            <div class="twitterImage">
+
+                <h3>Rhett Hobart</h3>
+                <p> @RhettHobart</p>
+                <p style="font-size:100%;">10 minutes until The Junction opens and safe to say it’s going to be a little
+                    crowded this weekend.<span><b> #HailState</b></span></p>
+
+                <div class="figure" id="tradition" style="background-image:url(img/tradition.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">4:49 PM - Sep 28, 2018 · Starkville, MS</p>
+            </div>
+            <p>
+
+                7. This tweet reemphasizes the integration of tradition and tailgating. It refers to the Mississippi
+                State custom of opening up its most coveted tailgating spot, The Junction, in an Oklahoma land
+                rush-esque fashion where fans sprint to claim their plot. In Starkville, Mississippi, this pregame
+                activity itself is a competition. Even as fans prepare to view a football contest later in the day, they
+                will first compete for space where they can participate in the tailgating ritual. The “gaze” (Urry 2002)
+                of the camera is focused on the fans’ anticipation, but it also shows the empty, coveted space. Why is
+                this space so valuable? Perhaps because of the excellent proximity to the Davis Wade Stadium.
+                <br>
+                But also the tradition itself serves to elevate the value of this space in the tailgaters’ minds. The
+                tradition of rushing The Junction is part of gameday for Mississippi State fans, one that, as <a
+                href="https://twitter.com/ToddBowering/status/1045780076145577984" target="_blank">a fellow fan noted in
+                a direct reply tweet, never gets old.</a> The rushing ritual along with other tailgating processes are
+                themselves placemaking activities. Here, The Junction, formerly empty, grassy space, is made into a
+                place infused with meaning by those who are lucky enough to stake their claim.
+            </p>
+
+
+        </section>
+
+
+        <section class="scene" data-scene-id="lpMascot" id="main-8" title="Mascot">
+            <div class="twitterImage">
+
+                <h3>Philip Stroud</h3>
+                <p> @stroud023</p>
+                <p style="font-size:100%;">It’s game day on Rocky Top! Good luck to <span><b>  @Vol_Football</b></span>and
+                    <span><b>  @CoachPruitt_UT</b></span> in CLT today! <span><b>  @HeatherStroud84</b></span> and I say
+                    Go Big Orange and bring home that W! <span><b>  #gbo #VFL #RockyTop</b></span></p>
+
+                <div class="figure" id="mascot" style="background-image:url(img/mascot.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">7:51 AM - Sep 1, 2018</p>
+            </div>
+
+            <p>
+                8. Several themes already explored appear in this tweet about the University of Tennessee: the tweeter
+                and his wife (who is tagged in the tweet) are seen in their orange and smoky gray getup in preparation
+                for the Vols’ season opener in 2018. Rather than a picture of the couple at an iconic pregame tradition
+                in Knoxville like the Vol Navy or the band’s “playing to The Hill” performance outside Neyland Stadium,
+                they are photographed in front of a backdrop of the Tennessee football team’s traditional entrance onto
+                the field: running through the “T.”. The vantage point of the backdrop allows the couple to simulate
+                actively participating inside this tradition that fans usually experience with a more passive voyeurism.
+                It is unclear if this picture was taken on the day this tweet was sent, but if it was, it was shot in
+                Charlotte, North Carolina, where Tennessee played in a neutral-site game. In this case, this backdrop
+                serves as a way to infuse the very place-based gameday traditions of Knoxville, Tennessee, into the
+                unclaimed no-man’s-land of Charlotte, North Carolina. <br>
+                Prominently making an appearance in this tweet is Smokey, Tennessee’s live blue tick hound mascot.
+                Mascots are icons that are frequently included in the festival of gameday; several SEC schools have dog
+                mascots, and LSU even has a live tiger, Mike. Mascots are revered by their fans even as they are
+                misunderstood by outsiders (see Parks & Recreation‘s <a
+                href="https://www.youtube.com/watch?v=xUvkyBH--D0&feature=youtu.be" target="_blank">satire</a> of this).
+                Often, a team’s nickname and mascot are related (the Georgia Bulldogs’ mascot is an actual bulldog), but
+                this is not always the case (The Alabama Crimson Tide’s mascot is an elephant). Mascots can be
+                represented in artificial human costumes or by live animals. Regardless, they are not static sideline
+                ornaments but can be very powerful icons evocative of a school’s history or its fans’ collective memory.
+                Some mascots can be extremely controversial (Bever 2011), but they can also inspire a great deal of
+                pride. Smokey is seen in this tweet as an icon of Tennessee football, and the tweeter and his wife’s
+                proximity to the hound serves to elevate their fandom in the eyes of his followers.
+
+            </p>
+
+        </section>
+
+        <section class="scene" data-scene-id="lpLocalSpin" id="main-9" title="Local Spin">
+            <div class="twitterImage">
+
+                <h3>Brittany Berry</h3>
+                <p>@Brittany_Berry</p>
+                <p style="font-size:100%;">Had a fun filled day cheering on the Tigers in New Orleans! I've never been
+                    more ready for a game! <span><b> #geauxtigers #LSU</b></span></p>
+
+                <div class="figure" id="localSpin" style="background-image:url(img/localSpin.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">12:33 AM - Jan 9, 2012</p>
+            </div>
+
+
+            <p>
+                9. This tweet from an LSU fan shows a local spin on the Southern tailgating tradition. Some elements
+                remain the same: the branding of the self and automobile with team logo merchandise and the
+                self-beautification efforts, for instance. There is also an integration of Louisiana and specifically
+                New Orleans culture into this scene. The étouffée referenced on the alliteration sign refers to the dish
+                commonly eaten in Louisiana, the state of both LSU and New Orleans. The elephant meat in this
+                theoretical étouffée refers to the opponent Alabama’s elephant mascot, Big Al. This sign is meant to
+                evoke images of hunting and dominating a lesser prey; in so doing, it glorifies the violence of college
+                football as a sport. <br>
+                Notice also that the girls holding the sign are sitting up on the convertible as if it were a float, and
+                one is even wearing gold beads. This is evocative of Mardi Gras and the many parades that occur annually
+                in New Orleans. Mardi Gras and other Carnival celebrations around the world are cultural rituals in
+                their own right (Turner 1969). This picture was before the 2012 National Championship in New Orleans.
+                Through text on a poster board and parading through the streets, these fans are signing to Alabama that
+                this territory belongs to LSU. These fans claim the Louisiana city as their own by couching LSU
+                traditions (a rivalry with Alabama) with those of New Orleans (particular foods and rituals) into a
+                larger Louisiana flavor of tailgating. This is not a unique, isolated occurrence for LSU; the hashtag in
+                this tweet (#GeauxTigers) shows support for the LSU team in the widely used, more Louisiana-French
+                phonetic way of spelling “go.” State borders are particularly important in constructing fandoms
+                geographically in college football (Roseman & Shelley 1988), and the combining of LSU tailgating rituals
+                with New Orleans culinary and Mardi Gras rituals shows a particular perceived ownership of Louisiana by
+                the LSU fanbase.
+
+            </p>
+
+        </section>
+
+
+        <section class="scene" data-scene-id="lpfandomEverywhere" id="main-10" title="Fandom Everywhere">
+
+            <div class="twitterImage">
+
+                <h3>Emily Sprayberry</h3>
+                <p>@ecsprayberry</p>
+                <p style="font-size:100%;">That face you make when you find out it's game day !<span><b> #RollTide #RTR #SEC #gameday #stellagracespray</b></span>
+                </p>
+
+                <div class="figure" id="fandomEverywhere" style="background-image:url(img/fandomEverywhere.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">11:06 AM - Sep 2, 2017</p>
+            </div>
+            <p>
+                10. Many fans experience college football in places away from the stadium, and this is no less
+                significant than those tourists who attend the game in person (Roseman & Shelley 1988). It is unclear if
+                this tweeter and her daughter featured in the image will attend the Alabama game later in the day, but
+                the background of the picture appears to be a house, and the daughter in the foreground is outside in
+                the yard area. Themes of family appear again in this tweet. The featured toddler has no real agency of
+                her own to decide what, if any, college football team she would support. Here, the mother is actively
+                passing down her Alabama fandom to her daughter in hopes that she will continue the tradition of
+                cheering for the Crimson Tide. Just as with other merchandise sales, this tweeter has purchased a
+                trademarked item to express her own fandom, but in this instance, she intends for her daughter to be the
+                expresser. That is, the mother creates a character of her daughter as an Alabama fan. However, this
+                creation and narration actually expresses her own fandom. In all likelihood, the toddler is not smiling
+                because she realizes that the Alabama team is playing a football game that day, but her mother
+                interprets it as such to her followers. In so doing, she expresses her own fandom as an Alabama
+                supporter and demonstrates that she is committed to the Faith-Family-Football pillars that are tent
+                poles to the SEC fan community and culture.
+            </p>
+
+
+        </section>
+
+
+        <section class="scene" data-scene-id="lpAwayFromTheStadium" id="main-11" title="Away from the Stadium">
+
+            <div class="twitterImage">
+
+                <h3>Brooke Heil</h3>
+                <p>@brooke_heil</p>
+                <p style="font-size:100%;">It's finally<span><b> #GameDay</b></span>in the swamp! Jeffrey is patiently
+                    waiting for the <span><b> @UF</b></span> game to start. <span><b> #GoGators</b></span></p>
+
+                <div class="figure" id="awayFromTheStadium" style="background-image:url(img/awayFromTheStadium.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">1:01 PM - Sep 5, 2015</p>
+            </div>
+            <p>
+
+                11. This Twitter user appropriates her dog’s existence to express her football fandom much like the
+                mother in the last tweet did with her daughter. This dog, Jeffrey, is being used as a prop to express
+                his owner’s excitement for Florida football. The owner purchased an officially licensed Florida collar
+                and jersey for Jeffrey and pretends that his facing the television demonstrates a similar anticipation
+                for the upcoming contest to her own. This is a clear example of anthropomorphism, a phenomenon by which
+                people ascribe human traits and characteristics to nonhuman agents (Epley et al. 2013). And while this
+                fan tweets this cute anthropomorphic scene to connect with other football fans, Jeff himself probably
+                doesn’t care much whether the team in jerseys similar to his own wins or not. <br>
+                Beyond the utilization of a pet to express one’s own fandom, this tweet shows a gameday experience away
+                from the stadium. Instead of tailgating, this tweeter has chosen to watch the game from the comfort of
+                her own home. The television looks adequately big enough with a high enough definition to allow for an
+                optimal viewing experience, one that many fans choose. These remote fans can use media and television to
+                construct virtual spaces of belonging that still allow them to feel the game and perform their fandom
+                even in their state of diaspora (Baker 2018). Jeffery, probably a usual character around the home, helps
+                this tweeter perform her fandom even as she is excited for the game to happen where she is not (the
+                Swamp, Florida’s football stadium).
+
+
+            </p>
+
+        </section>
+        <section class="scene" data-scene-id="lpRegionalFandom" id="main-12" title="Regional Fandom">
+
+            <div class="twitterImage">
+
+                <h3>OneSouthernMan</h3>
+                <p>@one_southernman</p>
+                <p style="font-size:100%;">Stopped at<span><b> #barbaraann’s</b></span>in
+                    <span><b> #Eldridge #Alabama.</b></span> game to start. <span><b> #GoGators</b></span> God Bless
+                    <span><b> #Dixie #RollTide @AlabamaFTBL</b></span></p>
+
+                <div class="figure" id="awayFromTheStadium" style="background-image:url(img/regionalFandom.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">2:36 PM - Sep 30, 2017</p>
+            </div>
+            <p>
+                12. This is an example of an expression of fandom that directly conflates football fandom with larger
+                contested regional cultures. This anonymous account by the pseudonym “OneSouthernMan,” proclaims himself
+                in his Twitter bio a “Connoisseur of Everything Southern” including food, Southern belles, guns,
+                politics, and SEC football. It is telling that his perception of Southern-ness includes college,
+                specifically SEC, football. This tweet’s textual content contains the language of SEC football, but the
+                image tells a much different story. The photo shows a collection of pamphlets, the left on icons of the
+                Confederacy and the right on Christianity. The Lost Cause ideology in the South, evocative of the
+                defeated Confederacy and its Antebellum predecessor, is a powerful, active, and potent mindset in the
+                region today. This misremembered, white-supremacist collective memory is often emotionally connected to
+                the icons of the Confederacy’s flag and heroic generals (Bohland 2013), all of which are prominently
+                displayed in these pamphlets. The placement of religious pamphlets beside the confederate ones and the
+                invocation of God in the tweet represent the extent to which the Lost Cause as a part of a “white
+                southern identity is tightly bound with the regional population’s fundamentalist religious practices”
+                (Webster & Leib 2016, 32). The South is indeed often thought of as the “Bible Belt” of conservative
+                evangelical Christianity (Brunn et al. 2011), though the right-hand pamphlets in the photo are not
+                explicitly conservative or evangelical in nature. Specifically, the tweeter asks God to bless “#Dixie.”
+                Dixie is a term evocative of the old Confederate south that is highly charged, radicalized, and strongly
+                identified with in Alabama (Alderman & Beavers 1999, Cooper & Knotts 2017). <br>
+                This tweet’s text also uses the hashtag #RollTide, the favorite saying of Alabama fans. It even tags
+                Alabama’s official football account in the tweet. College football, specifically Alabama football, was
+                on OneSouthernMan’s mind when he sent this tweet. Why the coupling of Alabama football, Confederate
+                iconography and verbiage, and images of Christianity? Perhaps it is simply Eldridge, Alabama’s proximity
+                to The University of Alabama in Tuscaloosa. However, since OneSouthernMan is an account dedicated to the
+                expression of a decidedly white male Southern identity, this tweeter believes that the Confederacy,
+                Christianity, and Crimson Tide are natural components of this identity. This tweet seems subtle enough,
+                but it serves as an example of how “electronic mass media is partly responsible for making the idea of a
+                distinctive South a social reality” (Alderman & Good 1997, 21) and how that distinctiveness can push an
+                agenda of exclusivity. This tweet is also indicative of the depths to which SEC football is entrenched
+                in and intertwined with one such idea of a distinctive southern identity, and it calls into question
+                just what and for whom that southern-ness is.
+            </p>
+        </section>
+        <section class="scene" data-scene-id="lpFandomCapitalization" id="main-13" title="Capitalizing Fandom">
+
+            <div class="twitterImage">
+
+                <h3>Johnsonville</h3>
+                <p>@Johnsonville</p>
+                <p style="font-size:100%;">A little morning rain couldn’t put a damper on our “Made the Knoxville Way”
+                    tailgate!RT if<span><b> #Johnsonville</b></span> is your official sausage on game day! <span><b> #BigTasteGrill #SEC</b></span>
+                </p>
+
+                <div class="figure" id="fandomCapitalization" style="background-image:url(img/fandomCapitalization.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">12:05 PM - Oct 20, 2018</p>
+            </div>
+
+            <p>13. As previously mentioned in the cases of <i>Southern Living </i> and Belk, there exist corporate
+                actors apart from the individual fan that have recognized the importance of football fandom in the lives
+                of SEC supporters and seek to capitalize on this fandom. Merchandise, specifically clothing, dominates
+                most university bookstores and unofficial fan shops. Other industries have realized this marketing
+                potential. Johnsonville sausage has a deal with the Southeastern Conference to be the official sausage
+                brand of the league. This seems like an unnatural alliance on the surface: besides frankfurters being
+                sold at sports events traditionally, there is nothing particularly tying link sausage to SEC football.
+                Johnsonville was founded and is headquartered in Wisconsin, far from any state hosting an SEC
+                institution. The sausage company though sees that attaching the SEC brand to its product and advertising
+                it at its games will more fully open up a market in the southern US. <a
+                    href="https://www.secsports.com/article/11055657/official-sec-corporate-sponsors" target="_blank">Other
+                    SEC sponsors</a> attempt similar strategies. This tweet shows Alabama and Tennessee fans alike
+                lining up on a rainy third Saturday in October to buy the official sausage of the SEC that is somehow
+                “made the Knoxville way.”
+
+
+            </p>
+        </section>
+        <section class="scene" data-scene-id="lpCorporateSponsorship" id="main-14" title="Corporate Sponsorship">
+
+            <div class="twitterImage">
+
+                <h3>tgh3316</h3>
+                <p>@tgh3316</p>
+                <p style="font-size:100%;">Tailgating has commenced!!<span><b> @UKFootball</b></span> is gonna beat the
+                    hell out of some Dawgs!
+                    <span><b> #NewSign #TillTheBattleIsWon #BBN #GoCats #GetUp #LesssssssGoooooo</b></span></p>
+
+                <div class="figure" id="corporateSponsorship" style="background-image:url(img/corporateSponsorhip.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">4:21 PM - Nov 2, 2018</p>
+            </div>
+
+            <p>
+                14. This next tweet returns to the tailgating fields, this time in Lexington, Kentucky. This tweeter is
+                eager to show off his newly constructed custom banner for his tailgate tent. He also establishes his
+                proximity to the stadium where the game would later that night be played. He includes the Georgia
+                equipment truck in his shot to go along with his highly antagonistic diction in his tweet.<br>
+                The picture of the stadium is of particular interest because it shows both top-down and bottom-up
+                corporate sponsorship. The University of Kentucky’s stadium was named “Commonwealth Stadium” for many
+                years, but recently, Kroger purchased the naming rights to the field and facility. The new “Kroger
+                Field” name is prominently displayed on the side of the stadium imposing and inscribing a toponymic name
+                change onto the landscape. This is not insignificant; place naming actively allocates meanings to
+                places, orders the ways in which people interact with their environment, and facilitates identity
+                construction (Alderman 2015). Kroger, a Cincinnati, Ohio-based Fortune 500 corporation, is attempting to
+                strengthen its connection to the state of Kentucky through this top-down sponsorship technique. Kroger
+                hopes to create a positive, place-based connotation for its brand in the minds of Wildcats fans so they
+                will hopefully become loyal grocery shoppers. <br>
+                Anheuser-Busch on the other hand is attempting to drum up business using a similar appeal but with a
+                bottom-up approach. The tweeter is displaying his “Dilly Dilly Y’all” beer koozie. “Dilly Dilly” is a
+                recent Bud Light marketing slogan, but this is amended to appeal to Kentucky fans. The state outline of
+                Kentucky is mapped onto the koozie, showing the beer company’s attempt to create a linkage between the
+                beer and the state. Bud Light assumes, based on the university’s official colors on the koozie, a
+                connection between state identity and Kentucky Wildcats fandom. Furthermore, “Dilly Dilly” becomes
+                “Dilly Dilly Y’all,” giving a southern spin to the corporate trademark. Using this southernism further
+                connects a state that has a complicated history with vernacular southern identity to its Southeastern
+                Conference region. These koozies are cheap to make and can be distributed to masses of fans rather than
+                investing in one logo/name display as Kroger did with the Wildcats’ field. This strategy is clearly
+                working for this tweeter; he intentionally holds up his beer can to show his consumption during his
+                tailgating along with his place identity.
+            </p>
+
+
+        </section>
+        <section class="scene" data-scene-id="lpLocalMarketing" id="main-15" title="Local Marketing">
+
+            <div class="twitterImage">
+
+                <h3>Encore Athens</h3>
+                <p>@EncoreAthens</p>
+                <p style="font-size:100%;">Are you Gameday ready?? Four shopping days left until our Dawgs are back
+                    between the hedges!<span><b> #encoreathens #godawgs </b></span></p>
+
+                <div class="figure" id="localMarketing" style="background-image:url(img/localMarketing.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">8:04 AM - Sep 16, 2014 · Georgia, USA</p>
+            </div>
+            <p>
+                15. Marketing football fandom is not only done through corporate actions, however. This tweet is from a
+                local clothing store in Athens, Georgia, and it reminds those lady Georgia Bulldog fans of the
+                expectation for women to look their nicest on gamedays. This tweet contains a countdown of anticipation
+                like <a href="https://twitter.com/rmarin93/status/626159903258877952" target="_blank">the first
+                tweet,</a> but this is less about excitement and more about conforming to a social expectation. <br>
+                The local business evokes language and images of Georgia fandom: spelling “dogs” as “Dawgs” and
+                referring to Samford Stadium by is commonly used name, “between the hedges.” The model in the shot wears
+                red and has black hair. And, like many fans we’ve seen in these tweets, she is white. Probably not
+                coincidentally, red, black, and white are Georgia’s three colors.<br>
+                Substantial research suggests that American football is connected in myriad ways to masculinity
+                (Steinfeldt et. al 2011). This tweet however, unlike others, has been directed towards the feminine fan.
+                A mere glance at a stadium or tailgate on gameday would show that college football fans are not
+                exclusively men. This local store understands this fact and uses the expectation of women to dress
+                nicely in Athens when going to Georgia football games to market its clothing. While it is not unusual
+                for men to wear coats, ties, or other nice garb to a game, the popular imaginary associates the nice
+                dress at Southern football games primarily with women (see <a
+                href="https://edition.cnn.com/2014/12/05/living/irpt-sec-football-fashion/index.htm" target="_blank">this
+                CNN article</a>). The dress featured in this tweet could be perfectly appealing to customers out of
+                context with no connection to Georgia football at all. However, this store markets it using football as
+                a social tool to create and recreate the expectations that drives its business in a college town
+                (Gumprecht 2008).
+
+            </p>
+
+        </section>
+        <section class="scene" data-scene-id="lpCampaigning" id="main-16" title="Campaigning">
+
+            <div class="twitterImage">
+
+                <h3>Marsha Blackburn</h3>
+                <p>@VoteMarsha</p>
+                <p style="font-size:100%;">It’s football time on Rocky Top and we kicked off tailgating at the Ag Day
+                    50th anniversary celebration!<span><b>#GBO </b></span></p>
+
+                <div class="figure" style="background-image:url(img/campaigning.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">4:28 PM - Sep 22, 2018</p>
+            </div>
+            <br>
+            <div class="twitterImage">
+
+                <h3>Bill Lee</h3>
+                <p>@BillLeeTN</p>
+                <p style="font-size:100%;">It’s football time in Tennessee! We had a great time tailgating before the
+                    game today in Knoxville.<span><b>#GBO </b></span></p>
+
+                <div class="figure" id="campaigning" style="background-image:url(img/campaigning2.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:100%;">6:32 PM - Sep 22, 2018</p>
+            </div>
+
+            <p>
+                16. These tweets show a different type of marketing with college football. In preparation for the 2018
+                gubernatorial and US senate elections in Tennessee, then-candidates Marsha Blackburn and Bill Lee
+                visited Knoxville for the Vol’s best-attended football game of 2018 (Cooper 2020): the SEC home opener
+                against rival Florida. The two Republican candidates campaigned together by meeting fans and documenting
+                their tailgating on social media. Both candidates were marketing themselves as worthy governing
+                officials by appealing to the average citizen. College football attendance and tailgating is seen as a
+                popular activity and is, in this case, connected to a state-funded public institution. Both candidates
+                appear to be interacting with orange-wearing Tennessee fans in a very common way with the message that
+                they are not so different from any other Tennessean. Their campaign Twitter accounts use verbiage that a
+                fan might use like “#GBO” (for “go Big Orange”) and the traditional kickoff refrain of “It’s Football
+                Time in Tennessee.” Just as corporations and local stores seek to connect their business and products to
+                the tradition of football, these candidates are using football as a marketing appeal to a popular fandom
+                for their own benefit. Moreover, this photo visually represents an intersection of political power with
+                the geographic space of a public campus. Public higher education campus landscapes have been theorized
+                as arenas for contesting power and social issues (Brasher et al. 2017, Luke & Heynen 2019). The
+                campaigning shown in these tweets represents an active participation of politicians in the public campus
+                arena by wielding football fandom in the hopes of increasing political power.
+
+
+            </p>
+
+
+            <section class="scene" data-scene-id="lpWeddingDay" id="main-17" title="Wedding Day">
+
+                <div class="twitterImage">
+
+                    <h3>Sara Gonzales</h3>
+                    <p>@SaraGonzalesTX</p>
+                    <p style="font-size:100%;">TFW you get married on game
+                        day.<span><b>#RollTide #RollTideRoll </b></span></p>
+
+                    <div class="figure" id="weddingDay" style="background-image:url(img/weddingDay.jpg); max-width: 500px;
+  margin: auto;"></div>
+                    <p style="font-size:100%;">10:11 PM - Dec 29, 2018</p>
+                </div>
+
+                <p>
+                    17. This tweet shows a newlywed couple celebrating their marriage on a gameday for their Alabama
+                    Crimson Tide. While it is not necessarily unique, it is still very telling when a couple includes
+                    their fandom in wedding pictures. This wedding was held on the same day as one of Alabama’s most
+                    important games of the 2018-19 season: the College Football Playoff semifinal. The Tide can be seen
+                    on the television in the background running up the score.
+                    <br>
+                    This tweet becomes even more interesting when the identity of the tweeter is revealed to be <a
+                    href="https://www.saragonzales.com/">Sara Gonzales,</a> a conservative television pundit living in
+                    Texas. With the exception of Florida in 2008 and 2012, every state in the 11-state SEC footprint has
+                    designated its Electoral College votes for the Republican candidate in every US presidential
+                    election in the twenty-first century. This expression of fandom from a conservative commentator then
+                    is a very intriguing intersection of these two attributes of a particular southern culture. It is
+                    also interesting to see Crimson Tide fandom transcend the Alabama state borders. State borders play
+                    a major role in the bounding of fandom, so this Texan cheering for the Tide speaks to the
+                    persistence of anomalies in systems and categorizations.
+                    <br>
+                    Scholars have warned against constructing and studying the region of the US South as essentially
+                    unique from everywhere else in the country and world (Wilson 2017), and some have specifically
+                    called for an unbounding of the region in the way we discuss it and its attributes (Nagel 2018). For
+                    the purposes of this examination into southern football, it means recognizing the ways in which SEC
+                    fandom is not constrained to the 11-state conference footprint but is rather part of larger national
+                    and international systems. The game of football itself is an imported sport: it developed in the
+                    North in the late nineteenth century after it was inherited from England as a modified form of
+                    rugby, a modification itself of soccer (Riesman & Denney 1951). And of course, Twitter is an
+                    internationally available media that itself allows global access to localized cultures (Stephens &
+                    Poorthuis 2015). These remaining tweets explore some ways in which SEC football fandom operates
+                    outside of the region of the perceived South.
+                </p>
+            </section>
+            <section class="scene" data-scene-id="lpTourism" id="main-18" title="Tourism">
+
+                <div class="twitterImage">
+
+                    <h3>Mad</h3>
+                    <p>@MadelynReaves</p>
+                    <p style="font-size:100%;">came all the way to Auburn from Delaware just to show him how the south
+                        does game days<span><b>#WarEagle </b></span></p>
+
+                    <div class="figure" id="weddingDay" style="background-image:url(img/tourism.jpg); max-width: 500px;
+  margin: auto;"></div>
+                    <p style="font-size:100%;">10:57 AM - Oct 13, 2018</p>
+                </div>
+                <p>
+                    18. This tweeter has journeyed from Delaware to Auburn, Alabama for a football game. This requires
+                    either a plane flight or at least a 13 hour drive, a serious tourism travel commitment. The tweet
+                    suggests that the tweeter is probably from the South but is at least familiar with and is proud of a
+                    connection to the region. Her companion on the other hand is an outsider inexperienced in this
+                    ritual of Auburn football. The two seek the authentic tourism experience of southern gameday by
+                    wearing the correctly logo-ed gear for the home team. The tweeter seems to assume that Auburn
+                    football is representative of an entire regional tradition and that immersion is the best
+                    communicator of that tradition. In this tweet, a southern expatriate returns to the region and
+                    chooses SEC gameday as a demonstration of an essentially southern ritual. This tourism journey to
+                    the spectate can be easily considered a pilgrimage (Baker 2018). <br>
+                    It is worth noting too that these fans are not obviously white. Certainly, ascribing a racial
+                    category to otherwise anonymous persons in pictures is tricky and can be problematic. However, it is
+                    pertinent here to the discussion of SEC fandom because even the potential of racial ambiguity in the
+                    gameday crowd works against the normative notions of whiteness that are subtly instituted and
+                    reinforced as the standard of the ideal Southern fan. Whiteness works as a structure of normative
+                    privilege (Bonds & Inwood 2016), and this is apparent in southern stadium seats on Saturdays. A more
+                    diverse fanbase works to unbound an unassuming white South and its white football fans.
+                </p>
+            </section>
+            <section class="scene" data-scene-id="lpRemote" id="main-19" title="Remote Fandom">
+
+                <div class="twitterImage">
+
+                    <h3>Vandy Panda</h3>
+                    <p>@cwgleason7</p>
+                    <p style="font-size:100%;">Tailgating has already begun for the<span><b> #SexySix in South Haven #PureMichigan #AnchorDown </b></span>
+                    </p>
+
+                    <div class="figure" id="remote" style="background-image:url(img/remote.jpg); max-width: 500px;
+  margin: auto;"></div>
+                    <p style="font-size:100%;">12:44 PM - Sep 14, 2018</p>
+                </div>
+                <p>
+                    19. This tweet was sent by a Vanderbilt fan apparently engaged in a reunion with his friends, also
+                    Vanderbilt fans, on a Commodore gameday. The group is preparing for the game by remotely tailgating
+                    in South Haven, Michigan.
+                    <br>
+                    South Haven, Michigan, is a small town on Lake Michigan, a considerable distance away from
+                    Nashville, Tennessee. These friends, like their campus tailgating counterparts, are outdoors
+                    enjoying the company of others in preparation for a football game, but these men are well outside of
+                    the SEC footprint. Media has allowed them to keep tabs on the game and participate in the
+                    traditional tailgating ritual away from Vanderbilt, and social media has allowed them to be included
+                    in the online fan discussion, a virtual tailgate, by using the team’s official hashtag
+                    “#AnchorDown”. Despite the distance, this is still an authentic experience of SEC football fandom
+                    even in an area where there are probably very few SEC fans.
+
+
+                </p>
+
+
+            </section>
+            <section class="scene" data-scene-id="lpLoveFromTheNorth" id="main-20" title="Love from the North">
+
+                <div class="twitterImage">
+
+                    <h3>Cort Egan</h3>
+                    <p>@cwcegan</p>
+                    <p style="font-size:100%;"><span><b> @LSUfootball</b></span> Tiger tailgating in Canada. <span><b> #LSU</b></span>
+                        love north of the border <span><b>#LSU125 #GeauxTigers </b></span></p>
+
+                    <div class="figure" id="loveFromTheNorth" style="background-image:url(img/loveFromTheNorth.jpg); max-width: 500px;
+  margin: auto;"></div>
+                    <p style="font-size:100%;">4:32 PM – Oct 20, 2018</p>
+                </div>
+                <p>
+
+                    Similarly, this group of LSU fans has congregated together to perform the tailgating ritual in
+                    Canada. Kraszewski (2008) would suggest sports-based gatherings like these for displaced fans help
+                    them to reconnect with and negotiate understandings of home, and Baker (2018) expands this
+                    discussion by highlighting the fluidity of emotion across space. This tweet features the house of at
+                    least one of these LSU Canadians. These fans are constructing home by performing the fandom of a
+                    sport played beyond their international borders. The house even has a flag in the style of the USA
+                    banner with the LSU tiger eye and colors superimposed. This is a potent choice of symbolism for a
+                    group of expatriates: they are presenting a symbol commonly displayed in the United States,
+                    Louisiana, Baton Rouge, and within Tiger Stadium itself even though they may not usually see the
+                    stars and stripes as a part of their daily international cultural landscape. The tweeter is keenly
+                    aware of their expatriate status and uses it to uniquely define this Canadian fan group. One girl in
+                    the picture wears an LSU hockey jersey to this tailgate. LSU and indeed no other SEC team has a
+                    varsity hockey program, yet she wears the logo of her favorite team much in the same way her peers
+                    in Canada might where the ice sport is more popular. And while the #GeauxTigers is meant to invoke
+                    the Cajun French spoken in Louisiana, it may hold a double meaning coming from Canada where French
+                    is an official language.
+
+                </p>
+
+
+            </section>
+
+            <section class="scene" data-scene-id="lpHelloFromNorway" id="main-21" title="Hello from the North">
+
+                <div class="twitterImage">
+
+                    <h3>Presley Griffith</h3>
+                    <p>@Griffraff870</p>
+                    <p style="font-size:100%;">We ready!!
+                        <span><b> #Gameday #WPS #Arkansas #Razorbacks #BEATEIU</b></span></p>
+
+                    <div class="figure" id="helloFromNorway" style="background-image:url(img/helloFromNorway.jpg); max-width: 500px;
+  margin: auto;"></div>
+                    <p style="font-size:100%;">7:56 AM - Sep 1, 2018</p>
+                </div>
+                <p>
+                    21.This tweet completely subverts normative notions of SEC football fandom. This tweet shows a still
+                    image of the performative ritual for Arkansas Razorbacks fans: Calling the Hogs. A man, his wife,
+                    and their daughter are doing the calling, and they all are outfitted in Arkansas garb. The mother’s
+                    shirt plays upon the “Family Faith Football” mantra, and the daughter is dressed much like the young
+                    Alabama fan from above. This family structure is not one considered normative in the South however;
+                    this is an interracial family, and the daughter is mixed-race. Such relationships and family
+                    structures were considered taboo in the US South until relatively recently, and they can still be
+                    viewed as subversive (Djamba & Kimuna 2014). If SEC football fandom and whiteness are both seen as
+                    ideally Southern, then the support for the Razorbacks within this interracial family structure could
+                    certainly be subversive.
+                </p>
+            </section>
+
+
+            <section class="scene" data-scene-id="lpSverd" id="main-22" title="Sverd i fjell">
+
+
+                <p>Perhaps this family feels more at ease performing their fandom because they are in a different
+                    country. The location from which this tweet was sent is vital in understanding this unbounded
+                    fandom. There are three flags in this picture: one with the Arkansas logo, one like the LSU flag in
+                    the previous tweet that superimposes the Hogs’ logo and colors on the American flag, and the
+                    Norwegian flag. These SEC fans are actually performing the traditional Fayetteville, Arkansas,
+                    ritual in Norway. Even the background of this shot is significant: these fans are at <a
+                        href="https://en.wikipedia.org/wiki/Sverd_i_fjell">Sverd i fjell </a>(English: Swords in rock),
+                    a commemorative Norwegian monument.
+                </p>
+
+
+                <div class="figure" id="sverd" style="background-image:url(img/sverd.jpg); max-width: 500px;
+  margin: auto;"></div>
+
+                <p>
+                    These fans are outside of Arkansas, the South, the United States, and North America. The vernacular
+                    Norwegian understanding of “football” is a game played with a round ball and goals. This shot is
+                    intended to highlight the international nature of this family’s fandom: flags of both the US and
+                    Norway are present, and the iconic ritual of Arkansas fandom is performed in front of a Norwegian
+                    icon. In fact, the tweet before this one from the same sender includes a video of not only this
+                    couple but a whole group of Arkansas fans calling the hogs from this site:
+
+                </p>
+
+                <div class="twitterImage">
+
+                    <h3>Presley Griffith</h3>
+                    <p>@Griffraff870</p>
+                    <p style="font-size:100%;"><span><b> #ONEHogCall </b></span>All the way from Norway! <span><b> #BeatEIU #Arkansas #Razorbacks </b></span>
+                    </p>
+
+                    <div class="figure" style="background-image:url(img/sverdTweet.jpg); max-width: 500px;
+  margin: auto;"></div>
+                    <p style="font-size:100%;">2:06 PM - Aug 31, 2018</p>
+                </div>
+                <p>
+                    This was even picked up by the SEC Network, the conference’s premier US-based media apparatus, and
+                    displayed to fans watching the game because of the unique, unusual, and highly devoted expression of
+                    fandom.
+                </p>
+
+                <div class="twitterImage">
+
+                    <h3>Presley Griffith</h3>
+                    <p>@Griffraff870</p>
+                    <p style="font-size:100%;">Catch me on the
+                        <span><b>@SECNetwork #Arkansas #Razorbacks #WPS</b></span></p>
+
+                    <div class="figure" style="background-image:url(img/sverdTweet2.jpg); max-width: 500px;
+  margin: auto;"></div>
+                    <p style="font-size:100%;">4:30 PM - Sep 1, 2018</p>
+                </div>
+                <p>Once again, we see the use of American football fandom used to help negotiate notions of home in
+                    physical spaces far removed from the spectate and the fluidity of emotions across that space.
+                    Twitter as a social media platform has made it easier to construct and participate in ever-expanding
+                    virtual fandoms in the internet age (Bale 1998).</p>
+
+                <h3>Note</h3>
+                <p>1. The search query used on Twitter’s advanced search GUI for pictures:
+                    (game day OR tailgating) (#SEC OR #HailState OR #HottyToddy OR #RollTide OR #WPS OR #CommitToTheG OR
+                    #WeAreUK OR #PoweredByTheT OR #WarEagle OR #BBN OR #GeauxTigers OR #AnchorDown OR #GoGators OR
+                    #RockyTop OR #GBO OR #MIZZOU OR #UGA OR #GigEm) since:2018-08-01 until:2019-01-08 <br>
+                    Hashtags were gleaned either from the official football accounts of the SEC schools or by
+                    recognition of popular usage during research. <br><br>
+                    2. South Carolina’s mascot of Gamecocks would not return search results on Twitter for its
+                    potentially graphic homonym, and #USC returned mostly material on the University of Southern
+                    California.
+
+                </p>
+
+                <h3>References</h3>
+                <ul class="references">
+                    <li>Alderman, D. H. 2015. When Exotic Becomes Native: Taming, Naming, and Kudzu as Regional Symbolic
+                        Capital. <i>Southeastern Geographer</i> 55(1): 32-56.
+                    </li>
+                    <li>Alderman, D. H. and R. M. Beavers. 1999. Heart of Dixie Revisited: An Update on the Geography of
+                        Naming in the American South. <i>Southeastern Geographer</i> 39 (2): 190-205.
+                    </li>
+                    <li>Alderman, D. H. and D. B. Good. 1997. Exploring the Virtual South: the Idea of a Distinctive
+                        Region on ‘the Web.’ <i>Southeastern Geographer</i> 37 (1): 20-45.
+                    </li>
+
+                    <li>Anderson, B. 2016. Imagined Communities: <i>Reflections on the Origin and Spread of
+                        Nationalism</i> revised ed. New York: Verso.
+                    </li>
+
+                    <li> Arthur, R. and H. T. P. Williams. 2019. The human geography of Twitter: Quantifying regional
+                        identity and inter-region communication in England and Wales. <i>PloS one</i> 14 (4): e0214466.
+                        DOI: 10.1371/journal.pone.0214466.
+                    </li>
+                    <li>Baker, T. A. 2018. Long-Distance Football Fandom: Emotional Mobilities and Fluid Geographies of
+                        Home. <i>Social & Cultural Geography</i>. Advance online publication: 1-17. DOI:
+                        10.1080/14649365.2018.1563709.
+                    </li>
+                    <li>Bale, J. 2003. <i>Sports Geography</i>. New York: Routledge.</li>
+
+
+                    <li>Bale, J. 1998. Virtual Fandoms: Futurescapes of Football. <i>In Fanatics!: Power, Identity, and
+                        Fandom in Football</i>, edited by A. Brown, 168-202. Psychology Press.
+                    </li>
+
+                    <li>Bever, M. L. 2011. Fuzzy Memories: College Mascots and the Struggle to Find Appropriate Legacies
+                        of the Civil War. <i>Journal of Sport History 38</i> (3): 447-463.
+                    </li>
+
+                    <li>Bohland, J. D. 2013. Look Away, Look Away, Look Away to Lexington: Struggles over
+                        Neo-Confederate Nationalism, Memory, and Masculinity in a Small Virginia Town. <i>Southeastern
+                            Geographer</i> 53 (3): 267-295.
+                    </li>
+
+                    <li>Bonds, A. and J. Inwood. 2016. Beyond White Privilege: Geographies of White Supremacy and
+                        Settler Colonialism. <i>Progress in Human Geography</i> 40 (6): 715-733.
+                    </li>
+
+                    <li>
+                        Brasher, J. P. (2019). Contesting the Confederacy: Mobile memory and the making of Black
+                        geographies in Brazil. <i>FOCUS on Geography </i> 62. https://doi.org/10.21690/foge/2019.62.8f
+                    </li>
+
+                    <li>
+
+                        Brasher, J. P., Alderman, D. H., and Inwood, J. F. J. 2017. Applying critical race and memory
+                        studies to university place naming controversies: Toward a responsible landscape policy. Papers
+                        in <i>Applied Geography</i> 3 (3-4): 292-307. https://doi.org/10.1080/23754931.2017.1369892
+
+
+                    </li>
+
+                    <li>
+
+                        Brunn, S. D., G. R. Webster, and J. C. Archer. 2011. The Bible Belt in a Changing South:
+                        Shrinking, Relocating, and Multiple Buckles.” <i>Southeastern Geographer </i> 51 (4): 513-549.
+
+
+                    </li>
+
+                    <li>
+                        Cooper, C. A., and H. G. Knotts. 2017. <i>The Resilience of Southern Identity: Why the South
+                        Still Matters in the Minds of Its People.</i> Chapel Hill, NC: UNC Press Books.
+
+                    </li>
+
+                    <li>
+                        Cooper, J. A. 2020. Making orange green? A critical carbon footprinting of Tennessee football
+                        gameday tourism. <i>Journal of Sport & Tourism</i> 24 (1): 31-51.
+                        https://doi.org/10.1080/14775085.2020.1726802
+
+                    </li>
+
+                    <li>
+                        Cooper, J. A., & Alderman, D. H. (2020). Cancelling March Madness exposes opportunities for a
+                        more sustainable sports tourism economy. <i>Tourism Geographies </i> 22 (3): 525-535.
+                        https://doi.org/10.1080/14616688.2020.1759135
+
+
+                    </li>
+                    <li>
+                        Dillette, A. K., S. Benjamin, and C. Carpenter. 2019. Tweeting the Black Travel Experience:
+                        Social Media Counternarrative Stories as Innovative Insight on #TravelingWhileBlack. <i>Journal
+                        of Travel Research</i> 58 (8): 1357-1372. https://doi.org/10.1177/0047287518802087.
+
+                    </li>
+
+                    <li>
+
+                        Djamba, Y. K., and S. R. Kimuna. 2014. Are Americans Really in Favor of Interracial Marriage? A
+                        Closer Look at when they are Asked about Black-White Marriage for their Relatives.” <i>Journal
+                        of Black Studies</i> 45 (6): 528-544.
+
+                    </li>
+                    <li>
+                        Epley, N., J. Schroeder, and A. Waytz. 2013. Motivated Mind Perception: Treating Pets as People
+                        and People as Animals.” In <i>Objectification and (De) Humanization,</i> 127-152. New York, NY:
+                        Springer.
+                    </li>
+
+                    <li>
+
+                        Geertz, C. 1972. Deep Play: Notes on the Balinese Cockfight. <i>Daedalus</i> 101 (1): 1-37.
+
+                    </li>
+
+                    <li>
+                        Gumprecht, B. 2008. <i>The American College Town.</i> Amherst, MA: University of Massachusetts
+                        Press.
+
+                    </li>
+
+                    <li>
+
+                        Haenschen, K. 2016. Social pressure on social media: Using Facebook status updates to increase
+                        voter turnout. <i>Journal of Communication</i> 66 (4): 542-563.
+                        https://doi.org/10.1111/jcom.12236.
+
+                    </li>
+
+                    <li>
+
+                        Hetherington, W. 1993. Sports tourism facility management functions. <i>Journal of Sport
+                        Tourism </i> 1 (1): 18-20.
+
+                    </li>
+
+                    <li>
+
+                        Hills, M. 2002. <i>Fan Cultures.</i> New York: Routledge.
+
+                    </li>
+
+                    <li>
+                        Hinch, T., and S. Kono. 2018. Ultramarathon Runners’ Perception of Place: a Photo-Based
+                        Analysis. <i>Journal of Sport & Tourism</i> 22 (2): 109-130.
+                    </li>
+
+                    <li>
+                        Kraszewski, J. 2008. Pittsburgh in Fort Worth: Football Bars, Sports Television, Sports Fandom,
+                        and the Management of Home. <i>Journal of Sport and Social Issues</i> 32 (2): 139-157.
+                    </li>
+
+
+                    <li>
+                        Lauder, T. 2012. Southern Identity in Southern Living Magazine. <i>Journal of Geography</i> 111
+                        (1): 27-38.
+
+                    </li>
+
+                    <li>
+                        Lee, D., G. T. Trail, H. H. Kwon, and D. F. Anderson. 2011. Consumer Values Versus Perceived
+                        Product Attributes: Relationships among Items from the MVS, PRS, and PERVAL Scales. <i>Sport
+                        Management Review </i> 14 (1): 89-101.
+
+                    </li>
+
+                    <li>
+                        Luke, N. and Heynen, N. 2019. Abolishing the frontier: (De)colonizing ‘public’education. <i>Social
+                        & Cultural Geography.</i> https://doi.org/10.1080/14649365.2019.1593492
+
+                    </li>
+
+                    <li>
+
+                        Majumdara, B., & Nahab, S. 2020. Live sport during the COVID-19 crisis: fans as creative
+                        broadcasters. <i>Sport in Society</i> 23 (7): 1091-1099.
+                        https://doi.org/10.1080/17430437.2020.1776972
+                    </li>
+
+                    <li>
+                        Menaker, B. E., and B. H. Chaney. 2014. College Football Game Day Stadium Incidents: Policy and
+                        Environmental Effects on Alcohol-Related Ejections and Crime. <i>Journal of Policy Research in
+                        Tourism, Leisure and Events</i> 6 (2): 119-134.
+                    </li>
+
+                    <li>
+                        Metzger, M. M., R. Bonneau, J. Nagler, and J. A. Tucker. 2016. Tweeting Identity? Ukrainian,
+                        Russian, and #Euromaidan. <i>Journal of Comparative Economics </i> 44 (1): 16-40.
+                        https://doi.org/10.1016/j.jce.2015.12.004
+
+                    </li>
+
+                    <li>
+                        Morgan, L. J. and T. Klimasewski. 2015. Pigskin Power Region: Dominance of Southern Collegiate
+                        Football.<i> Southeastern Geographer</i> 55 (2): 214-224.
+
+
+                    </li>
+
+
+                    <li>
+                        Nagel, C. R. 2018. Southern Exceptionalism and the Perils of Region. <i>The Professional
+                        Geographer </i> 70 (4): 678-686.
+
+
+                    </li>
+
+                    <li>
+                        Poorthuis, A., M. Zook, M. Graham, T. Shelton, and M. Stephens. 2016. Using Geotagged Digital
+                        Social Data in Geographic Research.” In <i>Key Methods in Geography</i>, edited by Clifford, N.,
+                        M. Cope, T. W. Gillespie, and S. French, 248-269. Los Angeles, CA: Sage.
+
+                    </li>
+
+
+                    <li>
+
+                        Polese, A. 2018 Building a Ukrainian Identity in Odessa: Negotiation of Markers and Informal
+                        Nationalism. Otoritas: <i>Jurnal Ilmu Pemerintahan</i> 8 (1): 1-16.
+
+                    </li>
+
+                    <li>
+                        Reed, J. S. 1976. The heart of Dixie: An essay in folk geography. <i>Social Forces</i> 54 (4):
+                        925-939.
+
+                    </li>
+
+                    <li>
+                        Riesman, D. and R. Denney. 1951. Football in America: A Study in Cultural Diffusion. <i>American
+                        Quarterly</i> 3 (4): 309-325.
+
+                    </li>
+                    <li>
+
+                        Roseman, C. C. and F. M. Shelley. 1988. The Geography of Collegiate Football Radio Broadcasting.
+                        <i>Sport Place</i> 2 (2): 42-50.
+
+                    </li>
+
+                    <li>
+                        Steinfeldt, J. A., G. A. Gilchrist, A. W. Halterman, A. Gomory, and M. C. Steinfeldt. 2011.
+                        Drive for Muscularity and Conformity to Masculine Norms among College Football Players. <i>Psychology
+                        of Men & Masculinity</i> 12 (4): 324-338.
+                    </li>
+
+                    <li>
+                        Stephens, M., & Poorthuis, A. (2015). Follow thy neighbor: Connecting the social and the spatial
+                        networks on Twitter. <i>Computers, Environment and Urban Systems</i>. 53: 87-95.
+
+                    </li>
+
+                    <li> Turner, Victor. 1969. <i>The Ritual Process: Structure and Anti-Structure.</i> Chicago: Aldine
+                        Publishing.
+                    </li>
+
+                    <li>
+
+                        Urry, J. 2002. <i>The Tourist Gaze</i> 2nd ed. London: Sage Publishing.
+                    </li>
+
+                    <li>
+
+                        Webster, G. R., and J. I. Leib. 2016. Religion, Murder, and the Confederate Battle Flag in South
+                        Carolina. <i>Southeastern Geographer.</i> 56 (1): 29-37.
+                    </li>
+
+                    <li>
+                        Wilson, C. R. 2017. Reimagining Southern Studies: time and space bodies and spirits. In <i>Navigating
+                        Souths: Transdisciplinary Explorations of a U.S. Region</i>, edited by Coffey, M. G. and J.
+                        Skipper, 21-54. Athens, GA: University of Georgia Press.
+                    </li>
+
+                    <li>
+                        Wise, N. & G. Z. Kohe. 2020. Sports geography: new approaches, perspectives and directions. <i>Sport
+                        in Society </i> 23 (1): 1-10. https://doi.org/10.1080/17430437.2018.1555209
+
+                    </li>
+
+                </ul>
+
+                <h3>Acknowledgements</h3>
+
+                <p>
+
+                    A note of thank to Dr. Derek H. Alderman of the University of Tennessee, Knoxville for his advice
+                    and support throughout this photo essay’s conception and refinement. I would also like to thank Dr.
+                    Jordan P. Brasher for his guidance through the publication process. Finally, I would like to thank
+                    the editors of FOCUS on Geography and staff of the AGS for their longstanding cooperation throughout
+                    the publication process. </p>
+
+                <h3> Author Identification</h3>
+                <p>
+                    J. A. Cooper <br>
+                    The University of Tennessee, Knoxville<br>
+                    Masters of Science -- Department of Geography<br>
+                    <a href="mailto:jacooper1317@gmail.com ">jacooper1317@gmail.com</a> <br>
+                    <a href="https://orcid.org/0000-0002-4334-4079" target="_blank">https://orcid.org/0000-0002-4334-4079</a>
+                </p>
+                <div class="row footer-row"></div>
+</div>
+</div>
+<div id="progress">
+    <div id="bar"></div>
+</div>
+<div id="bar-top"></div>
+<div id="bar-bottom"></div>
+<!-- inject:templates:html -->
+<!-- endinject -->
+<script src="../../../js/combined.js"></script>
+<script src="footprint.js"></script>
+<script src="points.js"></script>
+<script>
+    Focus.Map.defaultOptions = {
+        color: 'rgb(207, 20, 43)',
+        fillColor: 'rgb(207, 20, 43)',
+        radius: 3,
+        weight: 4,
+        fillOpacity: 1,
+        opacity: 0.5
+    };
+
+    var figureStyle = {
+        "weight": 4,
+        "radius": 4,
+        "fillOpacity": .8
+    }
+
+    var baseLayer = {
+        "type": 'tile',
+        "url": 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+    }
+
+    var imageryLayer = {
+        "type": "esri-basemap",
+        "url": "ImageryFirefly"
+    }
+
+    var layerStyle = {
+        "filter": "saturate(1.5)",
+        "opacity": 0.8,
+        "background": "url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png)"
+    }
+
+    var scenes = {
+        "features": [
+            {
+                "id": "points",
+                "type": "geojson",
+                "data": points,
+                "style": {
+                    "weight": 3,
+                    "radius": 3,
+                    "fillOpacity": .8
+                }
+            },
+            {
+                "id": "footprint",
+                "type": "geojson",
+                "data": footprint,
+                "style": {
+                    "fillColor": 'rgba(227,227,227,0)',
+                    "color": "rgb(217,59,59,0.8)"
+                }
+            },
+            {
+                "id": "grip",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-82.348649, 29.649848]
+                    },
+                    "properties": {
+                        "name": "Ben Hill Griffin Stadium – Gainesville, FL",
+                    }
+                },
+                "style": figureStyle
+            },
+            {
+                "id": "breakfast",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-91.183838, 30.411961]
+                    },
+                    "properties": {
+                        "name": "Tiger Stadium – Baton Rouge, LA",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "pregame",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-89.532665, 34.365715]
+                    },
+                    "properties": {
+                        "name": "The Grove – Oxford, MS",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "dressFormal",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-91.183838, 30.411961]
+                    },
+                    "properties": {
+                        "name": "Tiger Stadium – Baton Rouge, LA",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "gamedayActivities",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-88.793373, 33.456354]
+                    },
+                    "properties": {
+                        "name": "Davis Wade Stadium – Starkville, MS",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "tailgatingWithFamily",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-81.637316, 30.323778]
+                    },
+                    "properties": {
+                        "name": "Jacksonville, FL near TIAA Bank Field",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "tradition",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-88.793373, 33.456354]
+                    },
+                    "properties": {
+                        "name": "Davis Wade Stadium – Starkville, MS",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "junction",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-88.793800, 33.454841]
+                    },
+                    "properties": {
+                        "name": "The Junction",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "mascot",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-80.852887, 35.225766]
+                    },
+                    "properties": {
+                        "name": "Charlotte, NC near Bank of America Stadium",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "localSpin",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-90.080022, 29.950546]
+                    },
+                    "properties": {
+                        "name": "New Orleans, LA near the Superdome",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "fandomEverywhere",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-87.550469, 33.207665]
+                    },
+                    "properties": {
+                        "name": "Tuscaloosa, AL",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "awayFromTheStadium",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-82.348649, 29.649848]
+                    },
+                    "properties": {
+                        "name": "Gainesville, FL",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "regionalFandom",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-87.622680, 33.924374]
+                    },
+                    "properties": {
+                        "name": "Barbara Ann's Place – Eldridge, AL",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "bryantDennyStadium",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-87.550469, 33.207665]
+                    },
+                    "properties": {
+                        "name": "Bryant-Denny Stadium in Tuscaloosa, AL",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "fandomCapitalization",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-83.924964, 35.954999]
+                    },
+                    "properties": {
+                        "name": "Neyland Stadium – Knoxville, TN",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "corporateSponsorship",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-84.505152, 38.022685]
+                    },
+                    "properties": {
+                        "name": "Commonwealth Stadium – Lexington, KY",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "localMarketing",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-83.377654, 33.958471]
+                    },
+                    "properties": {
+                        "name": "Encore – Athens, GA",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "samfordStadium",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-83.374226, 33.950342]
+                    },
+                    "properties": {
+                        "name": "Samford Stadium",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "campaigning",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-83.924964, 35.954999]
+                    },
+                    "properties": {
+                        "name": "Neyland Stadium – Knoxville, TN",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "weddingDay",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-97.7431484848795, 27.2945595064574]
+                    },
+                    "properties": {
+                        "name": "Texas",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "tourism",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-85.488898, 32.602099]
+                    },
+                    "properties": {
+                        "name": "Jordan-Hare Stadium – Auburn, AL",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "remote",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-86.27637061126012, 42.39353891416465]
+                    },
+                    "properties": {
+                        "name": "South Haven, MI",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "loveFromTheNorth",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-112.9230855809142, 59.36965307555298]
+                    },
+                    "properties": {
+                        "name": "Canada",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "helloFromNorway",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-94.179498, 36.069101]
+                    },
+                    "properties": {
+                        "name": "Fayetteville, AR",
+                    }
+                },
+                "style": figureStyle
+            }, {
+                "id": "sverd",
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [5.672137, 58.941605]
+                    },
+                    "properties": {
+                        "name": "Sverd I fjell, Norway",
+                    }
+                },
+                "style": figureStyle
+            }],
+        "scenes": [{
+            "id": "lp1",
+            "baseLayer": {
+                "type": "esri-basemap",
+                "url": "NationalGeographic",
+            },
+            "bounds": {
+                "points": true,
+                "footprint":true
+            },
+            "zoom": 4.9,
+            "layers": [
+                {"idRef": "footprint"},
+                {"idRef": "points"}
+            ]
+        },{
+            "id": "lpGrip",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "grip"
+            }],
+        }, {
+            "id": "lpBreakfast",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "breakfast"
+            }],
+        }, {
+            "id": "lpPregame",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "pregame"
+            }],
+        }, {
+            "id": "lpDressFormal",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "dressFormal"
+            }],
+        }, {
+            "id": "lpGamedayActivities",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "gamedayActivities"
+            }],
+        }, {
+            "id": "lpTailgatingWithFamily",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "tailgatingWithFamily"
+            }],
+        }, {
+            "id": "lpTradition",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "tradition"
+            }, {
+                "idRef": "junction"
+            }],
+        }, {
+            "id": "lpMascot",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "mascot"
+            }],
+        }, {
+            "id": "lpLocalSpin",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "localSpin"
+            }],
+        }, {
+            "id": "lpFreedomEverywhere",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "freedomEverywhere"
+            }],
+        }, {
+            "id": "lpAwayFromTheStadium",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "awayFromTheStadium"
+            }],
+        }, {
+            "id": "lpRegionalFandom",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "regionalFandom"
+            }, {
+                "idRef": "bryantDennyStadium"
+            }],
+        }, {
+            "id": "lpFandomCapitalization",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "fandomCapitalization"
+            }],
+        }, {
+            "id": "lpCorporateSponsorship",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "corporateSponsorship"
+            }],
+        }, {
+            "id": "lpLocalMarketing",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "localMarketing"
+            }, {
+                "idRef": "samfordStadium"
+            }],
+        }, {
+            "id": "lpCampaigning",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "campaigning"
+            }],
+        }, {
+            "id": "lpWeddingDay",
+            "baseLayer": imageryLayer,
+            "zoom": 15,
+            "layers": [{
+                "idRef": "weddingDay"
+            }],
+        }
+            , {
+                "id": "lpTourism",
+                "baseLayer": imageryLayer,
+                "zoom": 15,
+                "layers": [{
+                    "idRef": "tourism"
+                }],
+            }, {
+                "id": "lpRemote",
+                "baseLayer": imageryLayer,
+                "zoom": 15,
+                "layers": [{
+                    "idRef": "remote"
+                }],
+            }, {
+                "id": "lpLoveFromTheNorth",
+                "baseLayer": imageryLayer,
+                "zoom": 4,
+                "layers": [{
+                    "idRef": "loveFromTheNorth"
+                }],
+            }, {
+                "id": "lpHelloFromNorway",
+                "baseLayer": imageryLayer,
+                "zoom": 15,
+                "layers": [{
+                    "idRef": "helloFromNorway"
+                }],
+            }, {
+                "id": "lpSverd",
+                "baseLayer": imageryLayer,
+                "zoom": 15,
+                "layers": [{
+                    "idRef": "sverd"
+                }],
+            }
+
+        ]
+
+
+    };
+
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-79613259-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script>
+    $(document).ready(function () {
+
+        $('#nav li.previous a').on('click', function (e) {
+            e.preventDefault();
+            var $prev = $('#nav').find('.sections li.active').prev();
+
+            if (!$prev.hasClass('previous')) {
+                $prev.find('a').click();
+            }
+        });
+
+        $('#nav li.next a').on('click', function (e) {
+            e.preventDefault();
+            var $next = $('#nav').find('.sections li.active').next();
+
+            if (!$next.hasClass('next')) {
+                $next.find('a').click();
+            }
+        });
+
+        var overviewMap = new Focus.Views.OverviewMapView({
+            model: new Backbone.Model({
+                initialScene: new Focus.Models.SceneModel({
+                    baseLayer: {
+                        "type": "esri-basemap",
+                        "url": "NationalGeographic",
+                    },
+                    center: [24.753989, 90.4037568],
+                    zoom: 10,
+                    showAttribution: false
+                })
+            }),
+            showCenterPoint: true
+        });
+        var sceneManager = new Focus.Views.SceneManagerView({
+            el: $('body'),
+            initialScene: {
+                baseLayer: {
+                    "type": "esri-basemap",
+                    "url": "Terrain"
+                },
+                center: [53.532262, -64.006481],
+                zoom: 10,
+                markerZoomAnimation: false
+            },
+            navigatorClass: Focus.Views.ScrollingSceneNavigator,
+            mapEngineClass: Focus.Views.LeafletMapEngine
+        });
+
+        var shareView = new Focus.Views.ShareView();
+        shareView.render();
+
+    });
+
+</script>
+</body>
+
+</html>
