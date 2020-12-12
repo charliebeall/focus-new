@@ -28,25 +28,34 @@
     <meta content="/ms-icon-144x144.png" name="msapplication-TileImage">
     <meta content="#ffffff" name="theme-color">
     <!-- Place favicon.ico in the root directory -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
     <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
+        body{
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body p{
+            font-weight: 300;
+        }
+
         #text {
             background: #fff;
+            margin-top: -3rem;
         }
 
         #text h2 {
-            font-family: 'Poppins', sans-serif;
             text-transform: none;
             font-size: 32px;
             font-weight: bold;
-            color: #198fba !important;
-            text-shadow: 1px 2px #ffffff;
+            color: #3db9e3 !important;
+            text-shadow: 1px 1px #2d2d2d;
         }
 
         #text h3 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'EB Garamond', serif;
             text-transform: none;
             color: rgb(61, 76, 104);
         }
@@ -57,8 +66,12 @@
         }
 
         span.place-text {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'EB Garamond', serif;
             color: #fff;
+        }
+
+        .twitter-title a{
+            border-bottom: none !important;
         }
 
         #text a,
@@ -89,7 +102,7 @@
         }
 
         svg text {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             font-size: 14px;
             fill: #fff;
             text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -136,7 +149,7 @@
             margin-top: 5px;
             color: white;
             text-shadow: 3px 2px 3px black;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Open Sans', sans-serif;
         }
 
 
@@ -179,7 +192,33 @@
             color: grey;
         }
 
+        .twitter-title{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+
+        .twitter-title h3{
+            margin:0px;
+        }
+
+        #twitter{
+            fill: rgb(29, 161, 242)
+        }
+
+        section br{
+            margin-bottom: 1.5rem;
+        }
+
     </style>
+    <svg width="30" height="30">
+        <defs>
+            <g id="twitter" transform="scale(1.1)">
+                <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path>
+            </g>
+        </defs>
+    </svg>
     <script src="footprint.js"></script>
 </head>
 
@@ -263,17 +302,17 @@
 </div>
 <div class="title-hidden" id="text">
     <div class="content scenes">
-        <section class="scene" data-scene-id="lp1" id="introduction" title="Introduction">
+        <section class="scene" data-scene-id="lp1" id="lp1" title="Introduction">
             <div class="title title-photo"
                  style="background-position: 10% 10%;background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.8), rgba(50, 50, 50, 0.5)), url(img/pregame.jpg);">
                 <h2>Tweeting Images of Fandom: A Geographic Photo Analysis of Southeastern Conference Football
                     Support</h2>
                 <div class="container-fluid">
                     <div class="author row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <img class="author-photo" src="img/profile1.jpg"/>
                         </div>
-                        <div class="col-lg-7 col-md-7 col-sm-3 col-xs-3 author-info">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 author-info">
                             <span class="name">J. A. Cooper </span>, <span class="organization">The University of Tennessee, Knoxville</span>
                         </div>
                     </div>
@@ -360,8 +399,14 @@
 
                 <section class="scene" data-scene-id="lpGrip" id="main-1" title="Four Season Fandom">
                     <div class="twitterImage">
-
-                        <h3>Renee G</h3>
+                        <div class="twitter-title">
+                            <h3>Renee G</h3>
+                            <a href="https://twitter.com/retiremomsrmg/status/626159903258877952" target="_blank">
+                                <svg width="30" height="30">
+                                    <use xlink:href="#twitter" />
+                                </svg>
+                            </a>
+                        </div>
             <p>@retiremomsrmg</p>
             <b>#grip the swamp</b>
             <p style="font-size:100%;">because we only have 39 days until</p><b>#Gameday</b> <b>@UFRecSports</b><b>#ufpreview</b>
@@ -396,7 +441,14 @@
 
         <div class="twitterImage">
 
-            <h3>288seafox</h3>
+            <div class="twitter-title">
+                <h3>@288seafox</h3>
+                <a href="https://twitter.com/288seafox/status/914116577590677504" target="_blank">
+                    <svg width="30" height="30">
+                        <use xlink:href="#twitter" />
+                    </svg>
+                </a>
+            </div>
             <p>@288seafox</p>
             <p style="font-size:100%;">Breakfast, gameday, tiger stadium. No better place</p> <b>#geauxtigers</b>
 
@@ -426,8 +478,14 @@
         <br>
 
         <div class="twitterImage">
-
-            <h3>RebelPix</h3>
+            <div class="twitter-title">
+                <h3>RebelPix</h3>
+                <a href="https://twitter.com/RebelPix/status/504993397732802560" target="_blank">
+                    <svg width="30" height="30">
+                        <use xlink:href="#twitter" />
+                    </svg>
+                </a>
+            </div>
             <p> @RebelPix</p>
             <p style="font-size:100%;">Guys, IT'S GAMEDAY</p> <b>#HottyToddy #BeatBSU #OleMiss
             #MostBeautifulPeopleAlive</b>
@@ -460,8 +518,14 @@
             <br>
 
             <div class="twitterImage">
-
-                <h3>Maddie Samuels</h3>
+                <div class="twitter-title">
+                    <h3>Maddie Samuels</h3>
+                    <a href="https://twitter.com/GeauxMaddie/status/394304892648448000" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p> @GeauxMaddie</p>
                 <p style="font-size:100%;">Gameday with my bestest friends!!!</p> <b>#GeauxTigers #tailgate
                 #homecoming </b>
@@ -494,8 +558,14 @@
         <section class="scene" data-scene-id="lpGamedayActivities" id="main-5" title="Gameday Activities">
 
             <div class="twitterImage">
-
-                <h3>Uncle Enneagram 7</h3>
+                <div class="twitter-title">
+                    <h3>Uncle Enneagram 7</h3>
+                    <a href="https://twitter.com/uncle_seven/status/1035986518932897792" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p> @uncle_seven</p>
                 <p style="font-size:100%;">First time <span><b>#tailgating </b></span> as a <span><b>#ChiO</b></span>
                     dad! </p>
@@ -531,8 +601,14 @@
 
 
             <div class="twitterImage">
-
-                <h3>Out of Bounds</h3>
+                <div class="twitter-title">
+                    <h3>Out of Bounds</h3>
+                    <a href="https://twitter.com/bobounds/status/1056208597133262850" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p> @bobounds</p>
                 <p style="font-size:100%;">Saw my cousin at the
                     <span><b> #tailgate #Gators #UGA <a href="https://twitter.com/YallLifestyle" target="_blank">@YallLifestyle</a></b></span> tailgating </p>
@@ -580,8 +656,14 @@
 
         <section class="scene" data-scene-id="lpTradition" id="main-7" title="Tradition">
             <div class="twitterImage">
-
-                <h3>Rhett Hobart</h3>
+                <div class="twitter-title">
+                    <h3>Rhett Hobart</h3>
+                    <a href="https://twitter.com/RhettHobart/status/1045777622591053824" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p> @RhettHobart</p>
                 <p style="font-size:100%;">10 minutes until The Junction opens and safe to say it’s going to be a little
                     crowded this weekend.<span><b> #HailState</b></span></p>
@@ -614,8 +696,14 @@
 
         <section class="scene" data-scene-id="lpMascot" id="main-8" title="Mascot">
             <div class="twitterImage">
-
-                <h3>Philip Stroud</h3>
+                <div class="twitter-title">
+                    <h3>Philip Stroud</h3>
+                    <a href="https://twitter.com/stroud023/status/1035857742882385921" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p> @stroud023</p>
                 <p style="font-size:100%;">It’s game day on Rocky Top! Good luck to <span><b>  @Vol_Football</b></span>and
                     <span><b>  @CoachPruitt_UT</b></span> in CLT today! <span><b>  @HeatherStroud84</b></span> and I say
@@ -632,7 +720,7 @@
                 for the Vols’ season opener in 2018. Rather than a picture of the couple at an iconic pregame tradition
                 in Knoxville like the Vol Navy or the band’s “playing to The Hill” performance outside Neyland Stadium,
                 they are photographed in front of a backdrop of the Tennessee football team’s traditional entrance onto
-                the field: running through the “T.”. The vantage point of the backdrop allows the couple to simulate
+                the field: running through the "T." The vantage point of the backdrop allows the couple to simulate
                 actively participating inside this tradition that fans usually experience with a more passive voyeurism.
                 It is unclear if this picture was taken on the day this tweet was sent, but if it was, it was shot in
                 Charlotte, North Carolina, where Tennessee played in a neutral-site game. In this case, this backdrop
@@ -657,8 +745,14 @@
 
         <section class="scene" data-scene-id="lpLocalSpin" id="main-9" title="Local Spin">
             <div class="twitterImage">
-
-                <h3>Brittany Berry</h3>
+                <div class="twitter-title">
+                    <h3>Brittany Berry</h3>
+                    <a href="https://twitter.com/Brittany_Berry/status/156231996841000960" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p>@Brittany_Berry</p>
                 <p style="font-size:100%;">Had a fun filled day cheering on the Tigers in New Orleans! I've never been
                     more ready for a game! <span><b> #geauxtigers #LSU</b></span></p>
@@ -700,8 +794,14 @@
         <section class="scene" data-scene-id="lpfandomEverywhere" id="main-10" title="Fandom Everywhere">
 
             <div class="twitterImage">
-
-                <h3>Emily Sprayberry</h3>
+                <div class="twitter-title">
+                    <h3>Emily Sprayberry</h3>
+                    <a href="https://twitter.com/ecsprayberry/status/903997679457505280" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p>@ecsprayberry</p>
                 <p style="font-size:100%;">That face you make when you find out it's game day !<span><b> #RollTide #RTR #SEC #gameday #stellagracespray</b></span>
                 </p>
@@ -735,8 +835,14 @@
         <section class="scene" data-scene-id="lpAwayFromTheStadium" id="main-11" title="Away from the Stadium">
 
             <div class="twitterImage">
-
-                <h3>Brooke Heil</h3>
+                <div class="twitter-title">
+                    <h3>Brooke Heil</h3>
+                    <a href="https://twitter.com/brooke_heil/status/640208169160060928" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p>@brooke_heil</p>
                 <p style="font-size:100%;">It's finally<span><b> #GameDay</b></span>in the swamp! Jeffrey is patiently
                     waiting for the <span><b> @UF</b></span> game to start. <span><b> #GoGators</b></span></p>
@@ -771,8 +877,14 @@
         <section class="scene" data-scene-id="lpRegionalFandom" id="main-12" title="Regional Fandom">
 
             <div class="twitterImage">
-
-                <h3>OneSouthernMan</h3>
+                <div class="twitter-title">
+                    <h3>OneSouthernMan</h3>
+                    <a href="https://twitter.com/one_southernman/status/914197205103398917" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p>@one_southernman</p>
                 <p style="font-size:100%;">Stopped at<span><b> #barbaraann’s</b></span>in
                     <span><b> #Eldridge #Alabama.</b></span> game to start. <span><b> #GoGators</b></span> God Bless
@@ -818,13 +930,21 @@
         <section class="scene" data-scene-id="lpFandomCapitalization" id="main-13" title="Capitalizing Fandom">
 
             <div class="twitterImage">
-
-                <h3>Johnsonville</h3>
+                <div class="twitter-title">
+                    <h3>Johnsonville</h3>
+                    <a href="https://twitter.com/Johnsonville/status/1053678485284274176" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p>@Johnsonville</p>
                 <p style="font-size:100%;">A little morning rain couldn’t put a damper on our “Made the Knoxville Way”
                     tailgate!RT if<span><b> #Johnsonville</b></span> is your official sausage on game day! <span><b> #BigTasteGrill #SEC</b></span>
                 </p>
-
+                <div class="figure" id="fandomCapitalization1" style="background-image:url(img/sag.jpg); max-width: 500px;
+  margin: auto;"></div>
+                <p style="font-size:0%;"</p>
                 <div class="figure" id="fandomCapitalization" style="background-image:url(img/fandomCapitalization.jpg); max-width: 500px;
   margin: auto;"></div>
                 <p style="font-size:100%;">12:05 PM - Oct 20, 2018</p>
@@ -851,8 +971,14 @@
         <section class="scene" data-scene-id="lpCorporateSponsorship" id="main-14" title="Corporate Sponsorship">
 
             <div class="twitterImage">
-
-                <h3>tgh3316</h3>
+                <div class="twitter-title">
+                    <h3>tgh3316</h3>
+                    <a href="https://twitter.com/tgh3316/status/1058453961131417600" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p>@tgh3316</p>
                 <p style="font-size:100%;">Tailgating has commenced!!<span><b> @UKFootball</b></span> is gonna beat the
                     hell out of some Dawgs!
@@ -897,8 +1023,14 @@
         <section class="scene" data-scene-id="lpLocalMarketing" id="main-15" title="Local Marketing">
 
             <div class="twitterImage">
-
-                <h3>Encore Athens</h3>
+                <div class="twitter-title">
+                    <h3>Encore Athens</h3>
+                    <a href="https://twitter.com/EncoreAthens/status/511848172881465344" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p>@EncoreAthens</p>
                 <p style="font-size:100%;">Are you Gameday ready?? Four shopping days left until our Dawgs are back
                     between the hedges!<span><b> #encoreathens #godawgs </b></span></p>
@@ -936,8 +1068,14 @@
         <section class="scene" data-scene-id="lpCampaigning" id="main-16" title="Campaigning">
 
             <div class="twitterImage">
-
-                <h3>Marsha Blackburn</h3>
+                <div class="twitter-title">
+                    <h3>Marsha Blackburn</h3>
+                    <a href="https://twitter.com/VoteMarsha/status/1043597948674822145" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p>@VoteMarsha</p>
                 <p style="font-size:100%;">It’s football time on Rocky Top and we kicked off tailgating at the Ag Day
                     50th anniversary celebration!<span><b>#GBO </b></span></p>
@@ -948,8 +1086,14 @@
             </div>
             <br>
             <div class="twitterImage">
-
-                <h3>Bill Lee</h3>
+                <div class="twitter-title">
+                    <h3>Bill Lee</h3>
+                    <a href="https://twitter.com/BillLeeTN/status/1043629176815792128" target="_blank">
+                        <svg width="30" height="30">
+                            <use xlink:href="#twitter" />
+                        </svg>
+                    </a>
+                </div>
                 <p>@BillLeeTN</p>
                 <p style="font-size:100%;">It’s football time in Tennessee! We had a great time tailgating before the
                     game today in Knoxville.<span><b>#GBO </b></span></p>
@@ -985,8 +1129,14 @@
             <section class="scene" data-scene-id="lpWeddingDay" id="main-17" title="Wedding Day">
 
                 <div class="twitterImage">
-
-                    <h3>Sara Gonzales</h3>
+                    <div class="twitter-title">
+                        <h3>Sara Gonzales</h3>
+                        <a href="https://twitter.com/SaraGonzalesTX/status/1079198179890028549" target="_blank">
+                            <svg width="30" height="30">
+                                <use xlink:href="#twitter" />
+                            </svg>
+                        </a>
+                    </div>
                     <p>@SaraGonzalesTX</p>
                     <p style="font-size:100%;">TFW you get married on game
                         day.<span><b>#RollTide #RollTideRoll </b></span></p>
@@ -1012,7 +1162,9 @@
                     also interesting to see Crimson Tide fandom transcend the Alabama state borders. State borders play
                     a major role in the bounding of fandom, so this Texan cheering for the Tide speaks to the
                     persistence of anomalies in systems and categorizations.
-                    <br>
+                </p>
+                <hr/>
+                <p>
                     Scholars have warned against constructing and studying the region of the US South as essentially
                     unique from everywhere else in the country and world (Wilson 2017), and some have specifically
                     called for an unbounding of the region in the way we discuss it and its attributes (Nagel 2018). For
@@ -1029,8 +1181,14 @@
             <section class="scene" data-scene-id="lpTourism" id="main-18" title="Tourism">
 
                 <div class="twitterImage">
-
-                    <h3>Mad</h3>
+                    <div class="twitter-title">
+                        <h3>Mad</h3>
+                        <a href="https://twitter.com/MadelynReaves/status/1051124828143534082" target="_blank">
+                            <svg width="30" height="30">
+                                <use xlink:href="#twitter" />
+                            </svg>
+                        </a>
+                    </div>
                     <p>@MadelynReaves</p>
                     <p style="font-size:100%;">came all the way to Auburn from Delaware just to show him how the south
                         does game days<span><b>#WarEagle </b></span></p>
@@ -1062,8 +1220,14 @@
             <section class="scene" data-scene-id="lpRemote" id="main-19" title="Remote Fandom">
 
                 <div class="twitterImage">
-
-                    <h3>Vandy Panda</h3>
+                    <div class="twitter-title">
+                        <h3>Vandy Panda</h3>
+                        <a href="https://twitter.com/cwgleason7/status/1040642358700851200" target="_blank">
+                            <svg width="30" height="30">
+                                <use xlink:href="#twitter" />
+                            </svg>
+                        </a>
+                    </div>
                     <p>@cwgleason7</p>
                     <p style="font-size:100%;">Tailgating has already begun for the<span><b> #SexySix in South Haven #PureMichigan #AnchorDown </b></span>
                     </p>
@@ -1094,8 +1258,14 @@
             <section class="scene" data-scene-id="lpLoveFromTheNorth" id="main-20" title="Love from the North">
 
                 <div class="twitterImage">
-
-                    <h3>Cort Egan</h3>
+                    <div class="twitter-title">
+                        <h3>Cort Egan</h3>
+                        <a href="https://twitter.com/cwcegan/status/1053745670706802688" target="_blank">
+                            <svg width="30" height="30">
+                                <use xlink:href="#twitter" />
+                            </svg>
+                        </a>
+                    </div>
                     <p>@cwcegan</p>
                     <p style="font-size:100%;"><span><b> @LSUfootball</b></span> Tiger tailgating in Canada. <span><b> #LSU</b></span>
                         love north of the border <span><b>#LSU125 #GeauxTigers </b></span></p>
@@ -1131,8 +1301,14 @@
             <section class="scene" data-scene-id="lpHelloFromNorway" id="main-21" title="Hello from the North">
 
                 <div class="twitterImage">
-
-                    <h3>Presley Griffith</h3>
+                    <div class="twitter-title">
+                        <h3>Presley Griffith</h3>
+                        <a href="https://twitter.com/Griffraff870/status/1035858928658251777" target="_blank">
+                            <svg width="30" height="30">
+                                <use xlink:href="#twitter" />
+                            </svg>
+                        </a>
+                    </div>
                     <p>@Griffraff870</p>
                     <p style="font-size:100%;">We ready!!
                         <span><b> #Gameday #WPS #Arkansas #Razorbacks #BEATEIU</b></span></p>
@@ -1184,8 +1360,14 @@
                 </p>
 
                 <div class="twitterImage">
-
-                    <h3>Presley Griffith</h3>
+                    <div class="twitter-title">
+                        <h3>Presley Griffith</h3>
+                        <a href="https://twitter.com/Griffraff870/status/1035589681759576064" target="_blank">
+                            <svg width="30" height="30">
+                                <use xlink:href="#twitter" />
+                            </svg>
+                        </a>
+                    </div>
                     <p>@Griffraff870</p>
                     <p style="font-size:100%;"><span><b> #ONEHogCall </b></span>All the way from Norway! <span><b> #BeatEIU #Arkansas #Razorbacks </b></span>
                     </p>
@@ -1201,8 +1383,14 @@
                 </p>
 
                 <div class="twitterImage">
-
-                    <h3>Presley Griffith</h3>
+                    <div class="twitter-title">
+                        <h3>Presley Griffith</h3>
+                        <a href="https://twitter.com/Griffraff870/status/1035988388535590912" target="_blank">
+                            <svg width="30" height="30">
+                                <use xlink:href="#twitter" />
+                            </svg>
+                        </a>
+                    </div>
                     <p>@Griffraff870</p>
                     <p style="font-size:100%;">Catch me on the
                         <span><b>@SECNetwork #Arkansas #Razorbacks #WPS</b></span></p>
@@ -1521,7 +1709,7 @@
                 <p>
                     J. A. Cooper <br>
                     The University of Tennessee, Knoxville<br>
-                    Masters of Science -- Department of Geography<br>
+                    Master of Science -- Department of Geography<br>
                     <a href="mailto:jacooper1317@gmail.com ">jacooper1317@gmail.com</a> <br>
                     <a href="https://orcid.org/0000-0002-4334-4079" target="_blank">https://orcid.org/0000-0002-4334-4079</a>
                 </p>
@@ -1739,7 +1927,7 @@
                     "type": "Feature",
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [-87.550469, 33.207665]
+                        "coordinates": [-87.550502, 33.207629]
                     },
                     "properties": {
                         "name": "Tuscaloosa, AL",
@@ -1767,7 +1955,7 @@
                     "type": "Feature",
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [-87.622680, 33.924374]
+                        "coordinates": [-87.550502,33.207629]
                     },
                     "properties": {
                         "name": "Barbara Ann's Place – Eldridge, AL",
@@ -1781,7 +1969,7 @@
                     "type": "Feature",
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [-87.550469, 33.207665]
+                        "coordinates": [-87.617187, 33.922804]
                     },
                     "properties": {
                         "name": "Bryant-Denny Stadium in Tuscaloosa, AL",
@@ -1862,14 +2050,31 @@
                 "id": "weddingDay",
                 "type": "geojson",
                 "data": {
-                    "type": "Feature",
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [-97.7431484848795, 27.2945595064574]
-                    },
-                    "properties": {
-                        "name": "Texas",
-                    }
+                    "type": "FeatureCollection",
+                    "features": [
+                        {
+                            "type": "Feature",
+                            "properties": {},
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -98.72314453125,
+                                    31.840232667909365
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Feature",
+                            "properties": {},
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -86.94580078125,
+                                    32.84267363195431
+                                ]
+                            }
+                        }
+                    ]
                 },
                 "style": figureStyle
             }, {
@@ -2023,12 +2228,13 @@
             "layers": [{
                 "idRef": "localSpin"
             }],
-        }, {
-            "id": "lpFreedomEverywhere",
+        },
+        , {
+            "id": "lpfandomEverywhere",
             "baseLayer": imageryLayer,
             "zoom": 15,
             "layers": [{
-                "idRef": "freedomEverywhere"
+                "idRef": "fandomEverywhere"
             }],
         }, {
             "id": "lpAwayFromTheStadium",
@@ -2039,8 +2245,11 @@
             }],
         }, {
             "id": "lpRegionalFandom",
-            "baseLayer": imageryLayer,
-            "zoom": 15,
+            "baseLayer": {
+                "type": "esri-basemap",
+                "url": "NationalGeographic",
+            },
+            "zoom": 14,
             "layers": [{
                 "idRef": "regionalFandom"
             }, {
@@ -2078,8 +2287,11 @@
             }],
         }, {
             "id": "lpWeddingDay",
-            "baseLayer": imageryLayer,
-            "zoom": 15,
+            "baseLayer": {
+                "type": "esri-basemap",
+                "url": "NationalGeographic",
+            },
+            "zoom": 5,
             "layers": [{
                 "idRef": "weddingDay"
             }],
@@ -2185,10 +2397,10 @@
             initialScene: {
                 baseLayer: {
                     "type": "esri-basemap",
-                    "url": "Terrain"
+                    "url": "NationalGeographic"
                 },
-                center: [53.532262, -64.006481],
-                zoom: 10,
+                center: [31.95216, -92.98828],
+                zoom: 4,
                 markerZoomAnimation: false
             },
             navigatorClass: Focus.Views.ScrollingSceneNavigator,
