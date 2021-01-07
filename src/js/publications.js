@@ -4,6 +4,26 @@ Focus.Volumes = [
         number: 63,
         publications: [
         {
+            "type": "Feature Article",
+            "title": "Understanding Riverbank Erosion in Majuli Island of India: Geomorphological Process and Policy Implications",
+            "author": "Avijit Sahay, Nikhil Roy, Azizur Rahman Siddiqui",
+            "description": "",
+            "date": "12/31/20",
+            "thumbnail": "publications/articles/majuli_2/files/250bda5355e41ed548dc47c0f6900e723fafe38f06618c46e8814f71025d.jpg",
+            "url": "publications/articles/majuli_2/index.html",
+            "location": []
+        },
+        {
+            "type": "Photo Essay",
+            "title": "Tweeting Images of Fandom: A Geographic Photo Analysis of Southeastern Conference Football Support",
+            "author": "J. A. Cooper",
+            "description": "",
+            "date": "12/21/20",
+            "thumbnail": "publications/photoessays/football_fans/img/pregame.jpg",
+            "url": "publications/photoessays/football_fans/index.html",
+            "location": []
+        },
+        {
             type: 'Feature Article',
             title: 'Trade, Tourism and the Environment in Asia’s Durian Boom',
             author: 'Christopher Airriess',
