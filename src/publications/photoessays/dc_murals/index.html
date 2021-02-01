@@ -1,0 +1,586 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Visuals of protest, solidarity and healing: Street art on the urban canvas of Washington, D.C</title>
+    <meta name="description" content="FOCUS on Geography: Food Sovereignty: Views from Cuba">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,photography,map,dc,washington dc, blm, street art, urban canvas">
+    <meta name="author" content="Elizabeth Chacko">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Poppins|Raleway|Titillium+Web" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        #text {
+            background: #fff;
+        }
+
+        .scene {
+            color: black;
+        }
+
+        div.caption {
+            font-size: 0.9rem;
+            font-family: 'Raleway', serif;
+            color: #535353;
+            line-height: 1.5em;
+        }
+
+        #text.photo-essay {
+            background: rgb(235, 236, 247) !important;
+        }
+
+        #nav,
+        #toggle-map {
+            background: rgb(114, 131, 126);
+        }
+
+
+        #text.photo-essay h2 {
+            font-family: 'Carter One', cursive;
+            text-transform: none;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0px 1px 3px black;
+            margin-top: 0px;
+            margin-bottom: 40px;
+        }
+
+        #text.photo-essay h2 .sub-title {
+            font-size: 2.2rem;
+            font-weight: 300;
+        }
+
+
+        #text.photo-essay h3 {
+            font-family: 'Carter One', cursive;
+            text-transform: none;
+            color: rgba(25, 101, 136, 0.856);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+
+        p a,
+        .caption a {
+            color: rgb(201, 69, 69) !important;
+            border-bottom: solid 3px rgb(177, 79, 79) !important;
+            line-height: 1.2em;
+        }
+
+        p,
+        .references {
+            line-height: 1.6;
+        }
+
+        a.location {
+            color: rgb(177, 79, 79) !important;
+            border-bottom: dotted 2px rgb(177, 79, 79) !important;
+        }
+
+        .author {
+            margin-bottom: 1em;
+            font-size: 14px !important;
+            opacity: 1;
+        }
+
+        .author-photo {
+            width: 100%;
+            margin-right: 0px;
+            vertical-align: middle;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+        }
+
+        .author-info {
+            *background-color: rgba(231, 250, 248, 0.89);
+            font-size: 1.2em;
+            margin-top: 5px;
+            color: white;
+            text-shadow: 0px 1px 3px black;
+        }
+
+        div.figure.figure_large {
+            background-size: contain;
+            height: 600px;
+        }
+
+        div.figure.figure_size {
+            background-size: contain !important;
+        }
+
+        section p:last-of-type {
+            padding-bottom: 3rem;
+            border-bottom: rgb(58, 58, 58, 0.6) solid 1px;
+
+        }
+
+        /*leaflet popup*/
+        div.leaflet-div-icon {
+            background-color: rgba(79, 90, 95, 0.9);
+            width: auto !important;
+            min-width: 100px !important;
+            z-index: 1000 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <progress></progress>
+    <div id="nav" class="dotstyle dotstyle-scaleup">
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <ul class="nav previous">
+            <li class="previous">
+                <a href="#"><span class="fa fa-chevron-up"></span></a>
+            </li>
+        </ul>
+        <ul class="nav sections">
+        </ul>
+        <ul class="nav next">
+            <li class="next">
+                <a href="#"><span class="fa fa-chevron-down"></span></a>
+            </li>
+        </ul>
+    </div>
+    <!-- Add your site or application content here -->
+    <div id="background"></div>
+    <div id="map" class="photo-essay"></div>
+    <div id="overview-map" class="title-hidden transparent"></div>
+    <div id="foreground"></div>
+    <div id="photos">
+        <div id="photo-caption"></div>
+    </div>
+    <div id="shadow"></div>
+    <div id="toggle-map" class="focus-black"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+    <div id="main-nav" class="light">
+        <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+                <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"
+                    style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+                <path id="pathE" d="M 300 500 L 700 500"
+                    style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+                <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
+                    style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+            </svg>
+
+            <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+        </div>
+        <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg" /></a>
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <div id="menu"></div>
+    </div>
+    <div id="text" class="photo-essay">
+        <div class="content scenes">
+            <section id="introduction" class="scene" data-scene-id="place0" title="Introduction">
+                <div class="title title-photo"
+                    style="background-image: linear-gradient(0deg, rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0.425)), url(img/figure4.jpeg);">
+                    <h2>Visuals of protest, solidarity and healing: <span class="sub-title">Street art on the urban
+                            canvas of Washington, D.C</span></h2>
+                    <div class="container-fluid">
+
+                        <div class="author row">
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                                <img class="author-photo" src="img/author.jpg" />
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-7 author-info">
+                                <span class="name">Elizabeth Chacko</span>, <span class="organization">Department of
+                                    Geography, The George Washington University</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="citation author-info"><span class="citation-label">DOI:</span> 10.21690/foge/2016.64.1p
+                    </div>
+                </div>
+                <h3>Introduction</h3>
+                <p>Temporary murals and street art that appeared in the city of Washington, D.C. fix in time reactions
+                    to three momentous events during the summer of 2020: the death of African-American George Floyd in
+                    Minneapolis while in police custody; the flaring of Covid-19 infections into a full-blown pandemic
+                    and a historic vote in the House of Representatives to make D.C the 51st U.S. state.</p>
+                <p>DC Mayor Muriel Bowser commissioned a diverse group of six local artists to create 51 murals around
+                    themes of black history, social justice and DC statehood in advance of the historic Congressional
+                    vote. The murals were funded by MuralsDC, which also commissioned the painting of “Black Lives
+                    Matter” on 16th Street near the White House. The murals are found at 13 sites spread across all
+                    eight wards of a city that once had a black majority and is still segregated by race and
+                    socio-economic class. As non-essential businesses closed in response to the pandemic, the surfaces
+                    of their boarded store fronts were sometimes used as canvases, with owners commissioning artists to
+                    express solidarity with the Black Lives Matter movement and to counter negative stereotypes of
+                    people of color through art. In this photo essay, I present a selection from street art and murals
+                    created during the summer of 2020.</p>
+            </section>
+            <section id="1" class="scene" data-scene-id="place1" title="Power salute & banana tree leaves">
+                <div class="figure figure_large" style="background-image:url(img/figure1.jpeg);"></div>
+                <div class="caption">Figure 1: Power salute & banana tree leaves
+                </div>
+                <p>Burmese restaurant Thamee’s triptych is dominated by a giant raised and clenched fist, a symbol of
+                    black power and resistance in the USA since the 1960s. The restaurant’s website also proclaims its
+                    support for racial justice and equity.
+                </p>
+            </section>
+
+            <section id="2" class="scene" data-scene-id="place2" title="George Floyd - I can't breathe">
+                <div class="figure figure_size" style="background-image:url(img/figure2.jpeg);"></div>
+                <div class="caption">Figure 2: Image of George Floyd surrounded by repeated phrase "I can't breathe"
+                </div>
+                <p>George Floyd, whose death set off nationwide and global protests, is framed by his last
+                    words, “I can’t breathe”, now part of the lexicon and used by protesters of police brutality across
+                    the country and world.
+                </p>
+            </section>
+
+            <section id="3" class="scene" data-scene-id="place3" title="George Floyd and Love knuckleduster">
+                <div class="figure figure_size" style="background-image:url(img/figure3.jpeg);"></div>
+                <div class="caption">Figure 3: George Floyd and Love knuckleduster
+                </div>
+                <p>Artwork on the store front of <i>&pizza</i> marks the death of George Floyd and also portrays the
+                    power of love, depicted as a knuckleduster on a black power fist to counteract injustice and social
+                    violence.
+                </p>
+            </section>
+
+            <section id="4" class="scene" data-scene-id="place4" title="I'll tell you what freedom is to me - No fear">
+                <div class="figure figure_size" style="background-image:url(img/figure4.jpeg);"></div>
+                <div class="caption">Figure 4: I'll tell you what freedom is to me - No fear. Nina Simone and lily on
+                    blue background
+                </div>
+                <p>African-American singer and civil rights activist Nina Simone, who said, “I’ll tell you
+                    what freedom means to me… no fear” is portrayed on a window of Cusbah, an Indian restaurant.
+                </p>
+            </section>
+
+            <section id="5" class="scene" data-scene-id="place5" title="Enough is enough">
+                <div class="figure figure_size" style="background-image:url(img/figure5.jpg);"></div>
+                <div class="caption">Figure 5: Enough is enough, #BlackLivesMatter, fist raised in black salute
+                </div>
+                <p>Timehri, a dance club, sports colorful abstract art and a sign that has the black power salute, the
+                    BLM hashtag and the words “Enough is enough”, underscoring the need to end systemic racism and
+                    violence against blacks.</p>
+            </section>
+
+            <section id="6" class="scene" data-scene-id="place6" title="BLM with faces of those killed by police">
+                <div class="figure" style="background-image:url(img/figure6.jpeg);"></div>
+                <div class="caption">Figure 6: BLM with faces of those killed by police</div>
+                <p><i>The Park at 14th</i>, a restaurant and dance club, shows the American flag with “Black Lives
+                    Matter”
+                    written across it, threaded through the fist of a black power salute against the cityscape of
+                    Washington, DC. This is foregrounded by images of six African Americans who lost their lives due to
+                    violence perpetrated by police and vigilantes. </p>
+            </section>
+
+            <section id="7" class="scene" data-scene-id="place7" title="Surgeon and stylish black woman">
+                <div class="figure" style="background-image:url(img/figure7.jpg);"></div>
+                <div class="caption">Figure 7: Surgeon and stylish black woman with an afro, BLM and version of the DC
+                    flag on red background
+                </div>
+                <p>A haloed black medic and a woman with a rainbow afro, and a stylized version of the D.C. flag along
+                    with the words “Black Lives Matter” illustrate the confluence of the summer’s three historic events.
+                </p>
+            </section>
+
+            <section id="8" class="scene" data-scene-id="place8" title="51st state in rainbow colors">
+                <div class="figure figure_size" style="background-image:url(img/figure8.jpeg);"></div>
+                <div class="caption">Figure 8: 51st state in rainbow colors
+                </div>
+                <p>A map of DC in the upscale neighborhood of Georgetown radiates colors of the pride flag, signaling
+                    diversity and inclusion. The mural has high visibility on Pennsylvania Avenue, NW and faces the Four
+                    Seasons Hotel, which is frequented by foreign dignitaries and wealthy patrons.</p>
+            </section>
+
+            <section id="9" class="scene" data-scene-id="place9" title="51st state - birthday cake">
+                <div class="figure figure_size" style="background-image:url(img/figure9.jpeg);"></div>
+                <div class="caption">Figure 9: 51st state - birthday cake with DC 51 & Justice, peace, BLM, Las vidas
+                    negras importan, don't taze me bro, Washington monument and helicopters flying overhead
+                </div>
+                <p>This mural in an easily overlooked alley shows the iconic Washington Monument positioned like a
+                    candle on top of a multilayered cake decorated with the words “DC 51”. Flags with the phrases “Don’t
+                    taze me bro”, “Justice and Peace”, “BLM” and “Las vidas Negras importan” (Black lives Matter in
+                    Spanish) are entreaties for fair and just treatment.
+                </p>
+            </section>
+
+            <section id="10" class="scene" data-scene-id="place10" title="DC Statehood, Delish, Hungry for Justice">
+                <div class="figure figure_size" style="background-image:url(img/figure10.jpeg);"></div>
+                <div class="caption">Figure 10: DC Statehood, Delish, Hungry for Justice</div>
+                <p>This mural depicts the future 51st state as a wedge in the shape of D.C. cut from the middle of a
+                    freshly baked pie. The centrality of DC as the capital of the country is contrasted with its
+                    residents’ lack of equity in the realm of political rights.</p>
+            </section>
+
+            <section id="11" class="scene" data-scene-id="place11" title="Douglas Commonwealth, you are loved">
+                <div class="figure figure_size" style="background-image:url(img/figure11.jpg);"></div>
+                <div class="caption">Figure 11: Douglas Commonwealth, you are loved</div>
+                <p>This mural in an alley in a historically black neighborhood in north-east DC shows a black man
+                    wearing a face mask that reads “You are loved” while he signs “I-L-Y” (I love you). Printed on his
+                    t-shirt are the words “Douglass Commonwealth” (after Frederick Douglass, prominent black
+                    abolitionist and author who spent his final years in DC), the name that Mayor Bowser proposed for
+                    the 51st state.
+                </p>
+            </section>
+
+            <section id="12" class="scene" data-scene-id="place12" title="Kinds of racism, people holding hands">
+                <div class="figure" style="background-image:url(img/figure12.jpeg);"></div>
+                <div class="caption">Figure 12: Kinds of racism, people holding hands</div>
+                <p>Art on a store front articulating different kinds of racism (structural, institutional, interpersonal
+                    and internalized) and how they can be overcome through partnership with people of all genders and
+                    races.
+                </p>
+            </section>
+
+            <section id="13" class="scene" data-scene-id="place13" title="Washington Monument with Unity, love, change">
+                <div class="figure figure_size" style="background-image:url(img/figure13.jpeg);"></div>
+                <div class="caption">Figure 13: Washington Monument with Unity, love, change</div>
+                <p>The Washington Monument circled by American flags on the National Mall, with the words, “Unity”,
+                    “Love” and “Change” in the sky above sends a clear message of hope: through unity and love for all
+                    Americans, radical positive change is achievable.</p>
+            </section>
+
+            <section id="14" class="scene" data-scene-id="place14" title="Quote from MLK Jr">
+                <div class="figure" style="background-image:url(img/figure14.jpeg);"></div>
+                <div class="caption">Figure 14: Quote from MLK Jr</div>
+                <p>A quote from Dr. Martin Luther King, Jr. on a boarded-up window facing Black Lives Matter Plaza
+                    stresses MLK’s hope for a harmonious “beloved community” characterized by justice and love that is
+                    necessary for the survival of individuals and the nation.
+                </p>
+            </section>
+
+            <section id="15" class="scene" data-scene-id="place15"
+                title="You complete me. Clasped black and white hands">
+                <div class="figure figure_size" style="background-image:url(img/figure15.jpeg);"></div>
+                <div class="caption">Figure 15: You complete me. Clasped black and white hands</div>
+                <p>Clasped white and black hands titled “You complete me”, a phrase borrowed from the popular movie
+                    Jerry Maguire, speak to the need for individuals and communities of different races and ethnicities
+                    to recognize how vital they are to each other. </p>
+            </section>
+
+            <section id="16" class="scene" data-scene-id="place0" title="Conclusion">
+                <h3>Conclusion</h3>
+                <p>The murals commissioned for D.C. Government’s <a href="https://muralsdcproject.com/" target="_blank"> MuralDC51 project</a> and art contracted by store owners
+                    are found across the city. Both social commentary and discourse, the street art communicates
+                    protest, ethno-racial pride, gratitude to medical first responders during the pandemic, aspirations
+                    for equity in political representation, inter-racial solidarity, and a desire for unity and healing.
+                    But the removal of paintings on boarded up storefronts as retail establishments opened up during
+                    Phase 2 of the pandemic also underscores the transient nature of this art. While all are open to
+                    public viewing, place plays a critical role in determining the viewership of the murals. Those
+                    painted on walls of narrow alleys are easy to miss, while those on storefronts and walls of
+                    buildings along major thoroughfares are difficult to ignore.
+                </p>
+            </section>
+        </div>
+    </div>
+    <div id="progress">
+        <div id="bar"></div>
+    </div>
+    <div id="bar-top"></div>
+    <div id="bar-bottom"></div>
+    <!-- inject:templates:html -->
+    <!-- endinject -->
+    <script src="../../../js/combined.js"></script>
+    <script src="data/murals.js"></script>
+    <script>
+        var pointStyle = {
+            "opacity": 0.7,
+            "radius": 4,
+            "weight": 2,
+            "fillColor": "#BE1931",
+            "color": "#BE1931"
+        };
+        var features_array = murals.map(function (feature) {
+            return {
+                "id": "figure".concat(feature.id),
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [feature.lng, feature.lat]
+                    },
+                    "properties": {
+                        "name": "<p>".concat(feature.description, ", ").concat(feature.artist, "</p><img style=\"max-width: 200px !important;\" src=\"img/figure").concat(feature.id, ".jpeg\"/>")
+                    }
+                },
+                "style": pointStyle
+            };
+        });
+        var scenes_array = murals.map(function (feature) {
+            return {
+                "id": "place".concat(feature.id),
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }, {
+                    "type": "esri-basemap",
+                    "url": "ImageryTransportation"
+                }],
+                "layers": [{
+                    "idRef": "figure".concat(feature.id)
+                }],
+                "zoom": 16
+            };
+        });
+        var scenes = {
+            "features": features_array,
+            "scenes": [{
+                "id": "place0",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "NationalGeographic",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "layers": features_array.map(function (feature, i) {
+                    return {
+                        "idRef": feature.id
+                    };
+                }),
+                "zoom": 12.1,
+                "center": [-77.035280, 38.88930]
+            }].concat(scenes_array)
+        };
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-79613259-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('#nav li.previous a').on('click', function (e) {
+                e.preventDefault();
+                var $prev = $('#nav').find('.sections li.active').prev();
+
+                if (!$prev.hasClass('previous')) {
+                    $prev.find('a').click();
+                }
+            });
+
+            $('#nav li.next a').on('click', function (e) {
+                e.preventDefault();
+                var $next = $('#nav').find('.sections li.active').next();
+
+                if (!$next.hasClass('next')) {
+                    $next.find('a').click();
+                }
+            });
+
+            document.onkeydown = function (e) {
+                if (e.keyCode == '38') {
+                    // up arrow
+                    $('#nav li.previous a').click();
+                } else if (e.keyCode == '40') {
+                    // down arrow
+                    $('#nav li.next a').click();
+                }
+            };
+
+            var overviewMap = new Focus.Views.OverviewMapView({
+                model: new Backbone.Model({
+                    initialScene: new Focus.Models.SceneModel({
+                        baseLayer: {
+                            "type": "esri-basemap",
+                            "url": "NationalGeographic",
+                        },
+                        center: [0, 0],
+                        zoom: 12,
+                        showAttribution: false
+                    })
+                }),
+                showCenterPoint: true
+            });
+            var sceneManager = new Focus.Views.SceneManagerView({
+                el: $('body'),
+                initialScene: {
+                    baseLayer: {
+                        "type": "esri-basemap",
+                        "url": "NationalGeographic"
+                    },
+                    center: [38.88930, -77.035280],
+                    zoom: 12,
+                    zoomDelta: 1,
+                    markerZoomAnimation: false
+                },
+                navigatorClass: Focus.Views.ScrollingSceneNavigator,
+                mapEngineClass: Focus.Views.LeafletMapEngine
+            });
+
+            var shareView = new Focus.Views.ShareView();
+            shareView.render();
+        });
+
+    </script>
+</body>
+
+</html>
