@@ -1,6 +1,31 @@
 var Focus = Focus || {};
 Focus.Volumes = [
     {
+        number: 64,
+        publications: [
+            {
+                "type": "Feature Article",
+                "title": "Siddi Life and Their Sense of Belonging in Karnataka, India",
+                "author": "Sumanth Reddy",
+                "description": "",
+                "date": "3/15/21",
+                "thumbnail": "publications/articles/siddi/img/figure18.jpg",
+                "url": "publications/articles/siddi/index.html",
+                "location": []
+            },
+            {
+                "type": "Photo Essay",
+                "title": "Visuals of protest, solidarity and healing: Street art on the urban canvas of Washington, D.C",
+                "author": "Elizabeth Chacko",
+                "description": "",
+                "date": "2/08/21",
+                "thumbnail": "publications/photoessays/dc_murals/img/figure2.jpeg",
+                "url": "publications/photoessays/dc_murals/index.html",
+                "location": []
+            }
+        ]
+    },
+    {
         number: 63,
         publications: [
         {

@@ -1,0 +1,962 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Siddi Life and Their Sense of Belonging in Karnataka, India</title>
+    <meta name="description" content="FOCUS on Geography: Siddi Life and Their Sense of Belonging in Karnataka, India">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="geography,photography,map,Siddis,African Indians, India, Karnataka, sense of place">
+    <meta name="author" content="Sumanth Reddy">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Poppins|Raleway|Titillium+Web" rel="stylesheet">
+    <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        #text {
+            background: #fff;
+        }
+
+        .scene {
+            color: black;
+        }
+
+        div.caption {
+            font-size: 0.9rem;
+            font-family: 'Raleway', serif;
+            color: #535353;
+            line-height: 1.5em;
+        }
+
+        #text.photo-essay {
+            background: rgb(243, 245, 236) !important;
+        }
+
+        #nav,
+        #toggle-map {
+            background: rgb(92, 116, 98);
+        }
+
+
+        #text.photo-essay h2 {
+            font-family: 'Merriweather', serif;
+            text-transform: none;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0px 1px 3px black;
+            margin-top: 0px;
+            margin-bottom: 40px;
+        }
+
+        #text.photo-essay h3 {
+            font-family: 'Merriweather', serif;
+            text-transform: none;
+            color: rgba(44, 87, 19, 0.856);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .caption {
+            margin-left: 0.2rem;
+        }
+
+        p a,
+        .caption a {
+            color: rgb(201, 69, 69) !important;
+            border-bottom: solid 3px rgb(177, 79, 79) !important;
+            line-height: 1.2em;
+        }
+
+        p,
+        .references {
+            line-height: 1.6;
+        }
+
+        a.location {
+            color: rgb(177, 79, 79) !important;
+            border-bottom: dotted 2px rgb(177, 79, 79) !important;
+        }
+
+        .author {
+            margin-bottom: 1em;
+            font-size: 14px !important;
+            opacity: 1;
+        }
+
+        .author-photo {
+            width: 100%;
+            margin-right: 0px;
+            vertical-align: middle;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+        }
+
+        .author-info {
+            *background-color: rgba(231, 250, 248, 0.89);
+            font-size: 1.2em;
+            margin-top: 5px;
+            color: white;
+            text-shadow: 0px 1px 3px black;
+        }
+
+        div.figure.figure-large {
+            background-size: contain;
+            height: 600px;
+        }
+
+        div.figure.figure-wide {
+            background-size: cover;
+            height: 300px;
+        }
+
+        div.figure.figure_size {
+            background-size: contain !important;
+        }
+
+        .center {
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .figure-video {
+            max-height: 420px;
+            max-width: 100%;
+            cursor: pointer;
+        }
+
+        /*leaflet popup*/
+        div.leaflet-div-icon {
+            background-color: rgba(79, 90, 95, 0.9);
+            width: auto !important;
+            min-width: 100px !important;
+            z-index: 1000 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <progress></progress>
+    <div id="nav" class="dotstyle dotstyle-scaleup">
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <ul class="nav previous">
+            <li class="previous">
+                <a href="#"><span class="fa fa-chevron-up"></span></a>
+            </li>
+        </ul>
+        <ul class="nav sections">
+        </ul>
+        <ul class="nav next">
+            <li class="next">
+                <a href="#"><span class="fa fa-chevron-down"></span></a>
+            </li>
+        </ul>
+    </div>
+    <!-- Add your site or application content here -->
+    <div id="background"></div>
+    <div id="map" class="photo-essay"></div>
+    <div id="overview-map" class="title-hidden transparent"></div>
+    <div id="foreground"></div>
+    <div id="photos">
+        <div id="photo-caption"></div>
+    </div>
+    <div id="shadow"></div>
+    <div id="toggle-map" class="focus-black"><span class="fa fa-map-o" style="color: #fff; margin: 8px;"></span></div>
+    <div id="main-nav" class="light">
+        <div id="menu-icon-wrapper2" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+                <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"
+                    style="stroke-dashoffset: 5803.15; stroke-dasharray: 2901.57, 2981.57, 240;"></path>
+                <path id="pathE" d="M 300 500 L 700 500"
+                    style="stroke-dashoffset: 800; stroke-dasharray: 400, 480, 240;"></path>
+                <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
+                    style="stroke-dashoffset: 6993.11; stroke-dasharray: 3496.56, 3576.56, 240;"></path>
+            </svg>
+
+            <div id="menu-icon-trigger2" class="menu-icon-trigger"></div>
+        </div>
+        <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg" /></a>
+        <ul class="nav share">
+            <li>
+                <a data-toggle="tooltip" title="Share on Twitter"
+                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                        class="fa fa-twitter"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share on Facebook"
+                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                        class="share-button fa fa-facebook-official"></span></a>
+            </li>
+            <li>
+                <a data-toggle="tooltip" title="Share via E-mail"
+                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                        class="share-button fa fa-envelope"></span></a>
+            </li>
+        </ul>
+        <div id="menu"></div>
+    </div>
+    <div id="text" class="photo-essay">
+        <div class="content scenes">
+            <section id="0" class="scene" data-scene-id="place0" title="Introduction">
+                <div class="title title-photo"
+                    style="background-image: linear-gradient(0deg, rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0.425)), url(img/figure18.jpg);">
+                    <h2>Siddi Life and Their Sense of Belonging in Karnataka, India</h2>
+                    <div class="container-fluid">
+
+                        <div class="author row">
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                                <img class="author-photo" src="img/sreddy.jpg" />
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-7 author-info">
+                                <span class="name">Sumanth Reddy</span>, <span class="organization">Department of
+                                    History & Government, Bowie State University </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="citation author-info"><span class="citation-label">DOI:</span> 10.21690/foge/2016.64.1f
+                    </div>
+                </div>
+                <h3>Introduction</h3>
+                <p>When Indians think about Africans in India, most likely will think of African students who are
+                    pursuing college degrees in the country, or the African actors/dancers who regularly play small
+                    roles in Bollywood, India’s Hindi-language film industry. The majority of people likely will not
+                    think of the Siddis, who are Indians of African descent who have lived in India for several
+                    centuries. The Siddis are descendants of the Bantu populations of East and Central Africa and are
+                    also sometimes referred to as Habshis or Abyssinians. It is thought that they were transported to
+                    India in several waves starting as early as the 7th century, first by the Arab merchants/traders,
+                    and later by the Portuguese and British, starting in the 16th century. Many Siddis likely were
+                    brought to India as slaves, but some were also taken as servants, blacksmiths, carpenters, and
+                    masons. Some probably arrived as independent merchants/traders, or soldiers in Arab armies. A few
+                    Siddis even held high-ranking positions as kings, military commanders, foot soldiers, and
+                    administrators in small regions of India between the 14th and 16th centuries. However, most
+                    contemporary Siddis likely are the descendants of slaves or domestic servants. Between 40,000 and
+                    50,000 Siddis currently live in India. The population resides primarily in five states (Goa,
+                    Gujarat, Karnataka, Maharashtra, and Telangana), but the majority (90%) reside in <a
+                        class="location" data-layer-id="state-gujarat">Gujarat</a> or
+                    <a class="location" data-layer-id="state-karnataka">Karnataka</a>.
+                </p>
+                <p>Historically, circumstances and discrimination led many Siddis to practice social and self-exclusion
+                    by remaining in the forests that they escaped to after they were freed from bondage. Today, some
+                    Siddis still live in physical isolation in forests while other Siddis have physically integrated in
+                    towns and villages. However, they have all attained socio-cultural integration within the larger
+                    Indian society, despite maintaining their physical African traits. In a society where people from
+                    lower-caste populations or who have darker complexions are commonly discriminated against, Siddis
+                    face significant challenges. They belong to a lower caste, have a darker skin color and have
+                    different physical traits. Supported by a small research grant from my university, I embarked on a
+                    one-month summer fieldwork trip to the state of Karnataka to better understand Siddi life and to
+                    examine the concept of place attachment as described by the Siddi people. During my fieldwork, I was
+                    able to stay with several Siddi families and observe their daily lives, which provided valuable
+                    insight into the economic and socio-cultural landscapes. In addition, I was able to see the impact
+                    geographical distance played in creating these landscapes.
+                </p>
+            </section>
+            <section id="1" class="scene" data-scene-id="place1" title="Murudeshwar">
+                <div class="figure figure-wide" style="background-image:url(img/figure1.jpg);"></div>
+                <div class="caption">Figure 1: The coastal town of Murudeshwar, which overlooks the Arabian Sea on one
+                    side and the mountainous Western Ghats on the other.
+                </div>
+                <div class="figure" style="background-image:url(img/figure2.jpg);"></div>
+                <div class="caption">Figure 2: The Murudeshwar Temple complex includes an imposing 10-story Lord Shiva
+                    Statue and 20-story gopura (temple entrance).
+                </div>
+                <p>The British outlawed slavery in the early to mid-1800s, coinciding with the end of the Goa
+                    Inquisition. Fearing recapture, many of the Siddis who were residing in port towns along the Western
+                    coast of India escaped deep into the forests of the Uttara Kannada District in the state of
+                    Karnataka. The coastal <a class="location" data-layer-id="feature-0">town of Murudeshwar</a>, which overlooks the Arabian Sea
+                    on one side and the mountainous Western Ghats on the other, was one such gateway into the dense
+                    forests of Uttara Kannada District. Today, Murudeshwar primarily depends on fishing and tourism to
+                    support its economy. The Murudeshwar Temple complex includes an imposing 10-story Lord Shiva Statue
+                    and 20-story gopura (temple entrance) and is the most popular attraction in town.
+                </p>
+            </section>
+            <section id="2" class="scene" data-scene-id="place2" title="Murudeshwar">
+                <div class="center">
+                    <video class="figure-video" controls>
+                        <source src="img/figure3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="caption">Figure 3: Time-lapse video that shows blind curves on wet roads in Uttar Kannada
+                    District.
+                </div>
+                <p>Traveling during the Monsoon season in Uttar Kannada District via public
+                    transportation, from the coast into the forests over the Western Ghats Mountains, can be a
+                    hair-raising experience. This time-lapse video shows blind curves on wet roads, and the
+                    overtaking of vehicles traveling in the opposite direction. Most Siddis live in the Uttar Kannada
+                    District, which is part of the Malnad region. Malnad or Malenadu means land of hills and/or land of
+                    rain as the area contains the hilly Western Ghats and also receives some of the highest rates of
+                    annual rainfall in India. </p>
+            </section>
+            <section id="3" class="scene" data-scene-id="place3" title="Yellapur">
+                <div class="figure" style="background-image:url(img/figure4.jpg);"></div>
+                <div class="caption">Figure 4: Mother and daughter at the weekly market in town of Yellapur.
+                </div>
+                <p>My first encounter with the Siddis after my guide picked me up in the <a class="location" data-layer-id="feature-2">town of Yellapur</a> was with a mother and daughter who had come into town to shop for vegetables and other
+                    household goods at the weekly market. They were dressed in traditional Indian clothes, and I was
+                    surprised by how easily and naturally they mingled with other locals. Although Siddis primarily
+                    speak Konkani (local dialect), they spoke Kannada—the official language of the state—fluently. They
+                    were surprised to learn that I could also converse in Kannada, after my guide introduced me as a
+                    researcher from the United States who had come to Karnataka to learn about the Siddis. Although many
+                    Indians might view the Siddi people as being out of place because of their physical African
+                    characteristics, I realized at that moment that I might have looked out of place to them. Only a few
+                    Siddi families live within and on the outskirts of Yellapur. Most families live in small villages,
+                    isolated groups, or individual households in the forests farther away and must travel to the larger
+                    towns once a week on specific market days to purchase groceries. </p>
+            </section>
+            <section id="4" class="scene" data-scene-id="place4" title="Hullaramane">
+                <div class="figure" style="background-image:url(img/figure5.jpg);"></div>
+                <div class="caption">Figure 5: <a class="location" data-layer-id="feature-3">Rice paddy fields in Hullaramane</a>
+                </div>
+                <p>The majority of Siddi men work as farmers or day laborers. Here, men in a Hindu Siddi family are seen
+                    tending to their rice paddy fields in Hullaramane. They explained to me
+                    that two of the men were brothers, and that they worked these fields together with their sons. They
+                    believed that their ancestors had been on the land for approximately 120 years. The family owned the
+                    land and were proud of their self-reliance. The family elder spoke fondly of his grandparents and
+                    parents who regularly conveyed to him the importance of owning their land and being self-sufficient.
+                    Siddi farmers who are Hindu often own their land. Their ancestors may have settled on unoccupied
+                    land, or the land may have been acquired from the property owners (usually upper-caste Brahmins) in
+                    return for cultivating it. Many Hindu Siddis depend on farming as their primary economic activity
+                    and owing farmland is not uncommon. By comparison, the Christian and Muslim Siddis in Karnataka do
+                    not own agricultural land to the same extent.</p>
+                <div class="figure" style="background-image:url(img/figure6.jpg);"></div>
+                <div class="caption">Figure 6: <a class="location" data-layer-id="feature-4">Palm trees near Hullaramane</a>
+                </div>
+                <p>Areca nuts, also known as betel nuts, are a profitable crop that many Siddi farmers grow in addition
+                    to rice. These thin, tall, palm trees near Hullaramane bear berries that
+                    encapsulate the nuts, which are harvested and used in many Indian traditions. Areca /betel nuts
+                    wrapped in a betel leaf are known to be a low-level psychoactive drug that plays an important role
+                    in various South and Southeast Asian cultures. It is a common practice in rural communities to chew
+                    on the nut-leaf blend, especially among older people. The blend is also a traditional after-meal
+                    mouth refresher known as paan that is widely used across India. India is the world’s largest
+                    producer of Areca nuts and the state of Karnataka produces two-thirds of it. The Uttar Kannada
+                    District is the most productive area in the state, and so cultivation of the Areca nut is a central
+                    aspect of Siddi life.
+                </p>
+                <div class="figure" style="background-image:url(img/figure7.jpg);"></div>
+                <div class="caption">Figure 7: <a class="location" data-layer-id="feature-5">Small temple near Hullaramane</a>
+                </div>
+                <p>The Siddis in Karnataka identify as Hindus (40%), Christians (30%), or Muslims (30%). Religious
+                    affiliation can often be traced back to the specific experience encountered by each group after
+                    escaping from the western port towns and cities. Religion is important to Siddis, but it has never
+                    been a source of division among the people. Siddis believe that they are all descendants of the same
+                    ancestors, regardless of their religion, and many Siddis are related to each other within a few
+                    generations of lineage. Consequently, Siddis from different religions practice mutual respect,
+                    maintain a strong sense of community, and shared identity. This unity has become especially
+                    important over the last decade in the wake of the ascension to political power of the Hindu
+                    nationalist Bharatiya Janata Party (BJP) and the religion-based, divisive politics of Prime Minister
+                    Narendra Modi. Here, a saffron-colored BJP flag is flown on a small temple near Hullaramane to show support for the BJP government. These flags are ubiquitous in
+                    India and represent an ‘in-your-face’ approach to the nationalist Hindu sentiment. Although these
+                    flags instill a sense of pride in many Hindus, they could be antagonizing to other religious groups.
+                </p>
+                <div class="figure" style="background-image:url(img/figure8.jpg);"></div>
+                <div class="caption">Figure 8: A Siddi family
+                </div>
+                <p>Not all Siddi families own large plots of land. This family owned a small plot of land, but they
+                    worked for a Brahmin/upper-caste family as their main source of income. Most of the Siddis who
+                    adopted Hinduism did so as a result of their indenturement to Brahmin and upper-caste Hindu
+                    families. As the Siddis worked, they voluntarily or were forced to adopt the religion of the
+                    property owners as their own. Adopting the religion of their property owners, however, did not
+                    prevent the Siddis from being discriminated against. Several Hindu Siddi families recalled how,
+                    after finishing a meal provided by the upper-caste Hindu family, they had to clean the area that
+                    they had sat on while eating. They had to wash the areas with cow dung and water, which is
+                    considered to be a cleansing agent in Hindu society. The Siddis considered this practice to be
+                    demeaning and believed that it meant that the upper-caste Hindus did not look at them as equals.
+                    Although this practice is less common today due the rights that they have attained over the past
+                    decade, it was common until recently.</p>
+            </section>
+            <section id="5" class="scene" data-scene-id="place5" title="Tavarkatta">
+                <div class="figure" style="background-image:url(img/figure9.jpg);"></div>
+                <div class="caption">Figure 9: A Siddi family near the village of Tavarkatta.
+                </div>
+                <p>The Siddis struggled and fought to attain Scheduled Tribe status, which was granted to them in 2003
+                    by the Indian government. This change in status meant that many Siddis were eligible to receive
+                    certain government benefits that helped to empower and uplift the communities. The last Siddi
+                    communities to be granted Scheduled Tribe status obtained that status only recently, in 2019.
+                    However, although Siddis have access to more benefits today than in the past, widespread poverty
+                    persists. This family near the <a class="location" data-layer-id="feature-6">village of Tavarkatta</a> owns some land
+                    around their home that is used for subsistence farming. To make ends meet, some Siddis who work on
+                    small patches of land that they do not necessarily own legally also work as day laborers in the
+                    surrounding area. Some also travel to larger towns to become seasonal migrant workers.</p>
+                <div class="figure" style="background-image:url(img/figure10.jpg);"></div>
+                <div class="caption">Figure 10: Youngsters try to catch catfish near the village of Tavarkatta.</div>
+                <p>Incessant rain is common during the monsoons. A local pond in the area overflowed after a night
+                    of
+                    torrential rain, allowing the fish in the pond to swim across the flooded area. Here, youngsters
+                    from a Siddi family near the village of Tavarkatta try to catch
+                    catfish
+                    to supplement their farming activities. In addition, Siddis collect wild berries and mushrooms,
+                    and/or hunt small deer, rabbits, and wild boars.</p>
+                <div class="center">
+                    <video class="figure-video" controls>
+                        <source src="img/figure11.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="caption">Figure 11: This video shows the father of a Siddi family near the
+                    village of Tavarkatta gathering the catch to sell, exchange, or
+                    consume as food.
+                </div>
+                <p>This catfish is known as Chigur in the local dialect, and it is an important source of protein
+                    for many people in the area during the monsoon season. </p>
+            </section>
+            <section id="6" class="scene" data-scene-id="place6" title="Isolated communities">
+                <div class="figure" style="background-image:url(img/figure12.png);"></div>
+                <div class="caption">Figure 12: Rough paths through the forest that connect small, isolated communities.
+                </div>
+                <p>Because many Siddi farmers live in small, isolated communities, they must often walk for an hour
+                    or more to catch a bus into town. Many families described the challenges associated with sending
+                    their children to school in town, which involve long walks on rough paths through the forest.
+                    These paths were forged over generations by Siddi families that lived in isolation but remained
+                    in intermittent contact with the outside world. My guide told me that some Siddi families still
+                    lived in isolation, deep in the forest. The Uttar Kannada District (14.6°N 74.7°E), where most
+                    of the Siddis live, is located along the Western Ghats Mountains in the Malnad (land of rain)
+                    region. The monsoon rains in this region can make the smaller roads and forest paths difficult
+                    to traverse. Commonly, the forest paths become impassable and, as a result, self-sufficient
+                    Siddi families often remain in the forests to wait out the monsoons.</p>
+                <div class="figure figure-wide" style="background-image:url(img/figure13.jpg);"></div>
+                <div class="caption">Figure 13: <a class="location" data-layer-id="feature-7">The Magod waterfall</a> is a pristine and
+                    jaw-dropping sight.</div>
+                <p>During the monsoon season, the rain inundates the River Bedti in the mountainous Western Ghats, which
+                    drops more than 600 feet into the gorge below and eventually empties into the Arabian Sea. The
+                    Uttara Kannada District has many beautiful waterfalls due to its topography and the heavy rainfall
+                    it receives. </p>
+                <div class="figure" style="background-image:url(img/figure14.jpg);"></div>
+                <div class="caption">Figure 14: The monsoon rains provide a muddy pool for
+                    water buffalo to relax and cool off in the afternoon heat. </div>
+               <p> Some Siddi families depend on cows and buffaloes for their milk. These animals are an important part of
+                rural life in India.</p>
+            </section>
+            <section id="7" class="scene" data-scene-id="place7" title="Isolated communities (2)">
+                <div class="center">
+                    <video class="figure-video" controls>
+                        <source src="img/figure15.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="caption">Figure 15: This hyper-lapse video shows cows returning to <a class="location" data-layer-id="feature-8">Tattigere
+                    village</a> in the evening after a day of grazing in the surrounding
+                    grasslands.</div>
+                <div class="figure" style="background-image:url(img/figure16.jpg);"></div>
+                <div class="caption">Figure 16: Young adults in this small Muslim Siddi settlement near Halligadde
+                    village</div>
+                <p>Because most Siddis live in isolation, many Siddi children must travel a long distance every day to
+                    attend school. Even if a Siddi village has a school, it is commonly just for younger children. Older
+                    Siddi children often end up going to boarding schools in larger towns if they can get assistance
+                    from the government. Even if an opportunity exists for Siddi children who live near larger towns to
+                    go to school, many face racial and caste discrimination from non-Siddi students and the teachers. As
+                    a result, the dropout rates for Siddi children are high. Unfortunately, many Siddi children do not
+                    have the resources to continue their education beyond primary or elementary school. These children
+                    end up working on family farms or taking low-paying jobs to support their families. Young adults in
+                    this small Muslim Siddi settlement near <a class="location" data-layer-id="feature-9">Halligadde village</a> work in menial
+                    jobs in the surrounding area because they see no other prospect for the future.</p>
+            </section>
+            <section id="8" class="scene" data-scene-id="place8" title="Gadagera">
+                <div class="figure figure-wide" style="background-image:url(img/figure17.jpg);"></div>
+                <div class="caption">Figure 17: Boarding school near Gadagera village</div>
+                <p>Non-governmental organizations (NGOs) and charitable individuals have assisted the Siddis somewhat in
+                    obtaining a formal education. An Austrian couple funds this boarding school near <a class="location" data-layer-id="feature-10">Gadagera village</a> for children between grades 1 and 4. The couple has set up a charitable
+                    fund so that the money raised goes directly to the school, without passing through an intermediary.
+                    The 85 children who live and attend school here come from the surrounding villages and are fortunate
+                    to have access to an all-expenses-paid primary school education.</p>
+            </section>
+            <section id="8a" class="scene" data-scene-id="place8a" title="Yellapur">
+                <div class="figure" style="background-image:url(img/figure18.jpg);"></div>
+                <div class="caption">Figure 18: A Siddi couple on the outskirts of <a class="location" data-layer-id="feature-2">Yellapur town</a> sit in front of their small roadside shop, where they sell coffee/tea, snacks, fruit,
+                    and other essentials to travelers. This couple stated that they did not own land and that the shop
+                    was their only means of income.</div>
+                <div class="figure" style="background-image:url(img/figure19.jpg);"></div>
+                <div class="caption">Figure 19: Work in relentless rain</div>
+                <p>Many Siddi men who do not own or work on farmland generally work as day laborers in labor-intensive
+                    jobs. As we were driving through the <a class="location" data-layer-id="feature-11">village of Idgundi</a>, we came across
+                    these men who were busy filling in a gully with mud to stop rainwater from overflowing into the
+                    road. The relentless rain, common in this region, did not pose a deterrent to them as they toiled.
+                    Most Siddis do not stray far from the homes or villages that they are familiar with. Due to their
+                    history, Siddis feel a strong connection to the forests and places they were raised in. The few who
+                    venture beyond their homeland in search of jobs face discrimination and struggle. Many Siddis told
+                    me during my fieldwork that they felt most comfortable staying within a 50- to 100-km radius of
+                    their homes, because the Siddis and non-Siddis in these areas tend to be familiar with one another.
+                    However, if a Siddi ventures beyond that radius in search of work in a larger town and city, he/she
+                    is often considered to be an outsider or foreigner. Most non-Siddi Indians who live further than 50-
+                    to 100-km from the Siddi homelands are not familiar with Siddis or their history. These Indians
+                    automatically assume that any person with Black African physical traits is a recent African
+                    immigrant. It has been well documented that African immigrants, primarily students who have come to
+                    India to pursue college education, face extreme discrimination. African immigrants in India are
+                    commonly stereotyped as drug dealers, gang members, commercial sex workers, or members of other
+                    nefarious trades. Thus, societal challenges prevent most Siddis from comfortably venturing beyond a
+                    certain distance from their homeland. </p>
+            </section>
+            <section id="9" class="scene" data-scene-id="place9" title="Wada and Mainalli">
+                <div class="figure figure-large" style="background-image:url(img/figure20.jpg);"></div>
+                <div class="caption">Figure 20: Siddi boys on top of a water tank in an attempt to receive better
+                    cell phone reception</div>
+                <p>Although most Siddis live in isolated areas, small villages, or at the edge of larger towns, modern
+                    technologies, specifically smartphones, have a universal presence. My guide explained to me that it
+                    was common for teenage Siddi boys to climb on top of a water tank in an attempt to receive better
+                    cell phone reception. This is a common social activity in the evenings for many teenagers. Here, a
+                    teenager is enjoying better cell phone reception on top of a water tank located at the edge of the
+                    village of <a class="location" data-layer-id="feature-12">Wada</a>.</p>
+                <div class="figure" style="background-image:url(img/figure21.jpg);"></div>
+                <div class="caption">Figure 21: Several teenagers in village of Mainalli</div>
+                <p>Siddis initially received some national attention in the 1980s for their athletic abilities. The
+                    Sports Authority of India thought that their African genetic heritage and natural athletic abilities
+                    might mean more medals won for India at international sporting events. Siddi children were selected
+                    for this purpose and trained for participation in world competitions. The few Siddis that succeeded
+                    in sports at the national level also attained well-paying, stable, government jobs. However, the
+                    program was cut after a few years and attempts to revive it have been unsuccessful. In the <a class="location" data-layer-id="feature-13">village
+                    of Mainalli</a>, made up of mostly Christian Siddis, several teenagers shared
+                    with me that they aspired to play sports or act in Bollywood movies, which they viewed as their
+                    ‘ticket to success.’
+                </p>
+            </section>
+            <section id="10" class="scene" data-scene-id="place10" title="Religion">
+                <div class="figure" style="background-image:url(img/figure22.jpg);"></div>
+                <div class="caption">Figure 22: Christian church in Gadagera village</div>
+                <p>It is rare to find Hindu, Christian, and Muslim Siddis living in the same village or area. Generally,
+                    Hindus tend to live in more dispersed and isolated areas because they own farmland. By contrast,
+                    Christians and Muslims live in compact Siddi villages, or in larger villages that are also home to
+                    non-Siddi Hindu populations. <a class="location" data-layer-id="feature-10">Gadagera</a> is a small, Christian Siddi village
+                    that has its own church and a weekly Sunday service. Most Christian Siddis are Catholic and were
+                    probably converted/baptized to Christianity after being brought to India by the Portuguese. The
+                    greater Catholic Church sends non-Siddi priests into the smaller villages to conduct Sunday
+                    services. Christian Siddi communities often have better educational outcomes due to the involvement
+                    and financial support of church groups, which have set up schools and other facilities. </p>
+                <div class="figure" style="background-image:url(img/figure23.jpg);"></div>
+                <div class="caption">Figure 23: Hindu family in Bhurunaki village</div>
+                <p>Hindu and Christian Siddi people occasionally practice intermarriage with each other, but rarely
+                    practice interracial marriage with non-Siddis. However, Muslim Siddis commonly marry non-Siddi
+                    Muslims. Muslim Siddis are conversant in Kannada and Konkani (the two most common languages for
+                    Siddis). However, they primarily speak Urdu, which is the language spoken by most Muslims in India.
+                    <a class="location" data-layer-id="feature-14">The village of Bhurunaki</a> is predominantly a Hindu village but it has a
+                    small population of Muslim Siddis. Here, a non-Siddi Muslim man has two wives—one of which is Siddi
+                    and the other is not. Unlike Hindu or Christian Siddi families, who tend to live in their own
+                    communities, Muslim Siddi families live in larger, predominantly Hindu villages. Discrimination
+                    against Muslim Siddis is common when the group is small in proportion compared to the overall
+                    population of the Hindu village.</p>
+                <div class="figure" style="background-image:url(img/figure24.jpg);"></div>
+                <div class="caption">Figure 24: Hindu family in Tattigere village</div>
+                <p><a class="location" data-layer-id="feature-8">Tattigere village</a> is a larger Hindu village that is home to a significant
+                    Muslim community. Several Siddis have interracial marriages in this community, and harmonious
+                    relationships with their Hindu neighbors. They were quite happy with life in general. It appears
+                    that if the Muslim Siddi community in a Hindu village is populous enough, they have no major
+                    problems due to their strength in numbers. However, the smaller Muslim Siddi communities in Hindu
+                    villages seem to have more communal issues, which could be partly explained by their smaller
+                    population size.</p>
+                <div class="figure" style="background-image:url(img/figure25.jpg);"></div>
+                <div class="caption">Figure 25: A Hindu non-Siddi woman married into a Christian Siddi family in
+                    Hunsittekoppa</div>
+                <p>Although Muslim Siddis marry non-Siddi Muslims, they rarely marry Hindu or Christian Siddis. However,
+                    Hindu and Christian Siddis marry both inter-religiously and inter-racially. A Hindu non-Siddi woman
+                    married into a Christian Siddi family in <a class="location" data-layer-id="feature-15">Hunsittekoppa</a>. The Hindu woman
+                    fell in love with the Christian Siddi man and was able to convince her family to approve the
+                    relationship despite their reservations. Today, both families regularly socialize with each other.
+                    These families have broken down their personal barriers to inter-caste, inter-racial, and
+                    inter-religious marriage, but this is generally rare in Indian society. </p>
+                <div class="figure figure-large" style="background-image:url(img/figure26.jpg);"></div>
+                <div class="caption">Figure 26: Siddi elders congregate</div>
+                <p>Here, Siddi elders congregate for a quick chat as they cross paths in the forest on the way home from
+                    their jobs near <a class="location" data-layer-id="feature-16">Jaddigadde</a>. These paths and forests are an omnipresent
+                    part of Siddi life. Many of the Siddi elders that I interviewed fondly shared their connection with
+                    the forests and surrounding areas. Despite the struggles and challenges they encountered in life,
+                    this was home to them. </p>
+            </section>
+            <section id="11" class="scene" data-scene-id="place11" title="Conclusion">
+                <h3>Conclusion</h3>
+                <p>Siddis have lived in India for centuries, but very few Indians likely know about them. Siddis face
+                    many of the challenges that other rural communities do, including lack of access to education,
+                    healthcare, adequate housing, and finance. The status of Siddis within Indian communities may have
+                    improved slightly since being recognized as a Scheduled Tribe, which allows access to certain
+                    government benefits and protection under discrimination laws. However, Siddis still regularly
+                    encounter caste-, religion-, and race-based discrimination, especially in areas farther from their
+                    homeland. For this reason, many Siddis have a strong sense of place and an attachment to their
+                    homeland. They have lived on these lands for decades, if not centuries, and identify as Indian.
+                    Except for retaining some of the physical features of their African ancestors, the Siddis have
+                    little-to-no cultural connection to Africa. Every Siddi that I spoke to said that they considered
+                    themselves Indian because of how well they have integrated into the surrounding socio-cultural
+                    landscape. They speak the same languages, dress the same way, eat the same food, and practice the
+                    same religions as any other Indians in the area. To the Siddis, they are the same as anyone else
+                    there, and their place attachment to the surrounding forests and landscapes is profound. </p>
+                <h3>References and Further Readings</h3>
+
+                <ul class="references">
+                    <li>Bhatt, P. 2018. The African Diaspora in India: Assimilation, Change and Cultural Survival. New
+                        York: Routledge.
+                    </li>
+                    <li>Drewal, J. 2013. Soulful Stitching: Patchwork Quilts by Africans (Siddis) of India. African Arts
+                        46(1): 6-17.</li>
+                    <li>Harris, J. 1971. The African Presence in Asia: Consequences of the East African Slave Trade.
+                        Evanston: Northwestern University Press.</li>
+                    <li>Obeng, P. 2007. Service to God, Service to Master/Client: African Indian Military Contribution
+                        in Karnataka. African and Asian Studies 6: 271-288.</li>
+                    <li>-------------. 2007. Shaping Membership, Defining Nation: The Cultural Politics of African
+                        Indians in South Asia. New York: Lexington Books.</li>
+                    <li>Pinto, J. 2008. African Slavery and Christian Humanism in Portuguese Goa. In The African
+                        Diaspora in Asia, edited by K. Prasad and J. Angenot, 183-189. Bangalore: Jana Jagrati
+                        Prakashana.</li>
+                    <li>Prasad, K. 2005. In Search of an Identity: An Ethnographic Study of the Siddis in Karnataka.
+                        Bangalore: Jana Jagrati Prakashana.</li>
+                    <li>Shroff, B. 2008. Indians of African Descent: History and Contemporary Experience. Souls 10(4):
+                        315-326.</li>
+                </ul>
+                <h3>Acknowledgements</h3>
+                <p>I would like to thank Bowie State University for supporting me with a research grant to conduct my
+                    fieldwork. I would like to thank all the Siddi families that welcomed me into their homes and
+                    communities, and fed and lodged me in their humble homes. Most importantly, I thank the Siddis for
+                    sharing their daily lives and their views about what it is like to be a Siddi with me. I would also
+                    like to thank my driver, Rosario, who not only navigated many rough roads off the beaten path, but
+                    also provided lively conversation throughout the trip. Finally, I reserve my deepest gratitude for
+                    my field guide, Juje Siddi, without whom I would not have known where to begin. His personable
+                    attitude, extensive network within the Siddi community, and immense knowledge about his people
+                    provided me with a deep appreciation and understanding of the Siddi people that I would never have
+                    gained without him.</p>
+            </section>
+        </div>
+    </div>
+    <div id="progress">
+        <div id="bar"></div>
+    </div>
+    <div id="bar-top"></div>
+    <div id="bar-bottom"></div>
+    <!-- inject:templates:html -->
+    <!-- endinject -->
+    <script src="../../../js/combined.js"></script>
+    <script src="data/states.js"></script>
+    <script>
+        Focus.Map.defaultOptions = {
+            color: 'rgb(207, 20, 43)',
+            fillColor: 'rgb(207, 20, 43)',
+            radius: 3,
+            weight: 4,
+            fillOpacity: 1,
+            opacity: 0.5
+        };
+
+        var pointStyle = {
+            "opacity": 0.7,
+            "radius": 4,
+            "weight": 2,
+            "fillColor": "#BE1931",
+            "color": "#BE1931"
+        };
+
+        var towns = [
+            ['Coastal town of Murudeshwar', 14.09359027151528, 74.48324095348275],
+            ['Uttar Kannada District', 14.89516887504696, 74.65290343984611],
+            ['Town of Yellapur ', 14.96406158399822, 74.71211072635981],
+            ['Rice paddy fields in Hullaramane', 14.839290302736797, 74.86664160754819],
+            ['Palm trees near Hullaramane', 14.838241414210431, 74.87018243865988],
+            ['Small temple near Hullaramane', 14.839916753699676, 74.86607208385645],
+            ['Town of Tavarkatta', 14.980484623425745, 74.8047642431377],
+            ['The Magod waterfall', 14.849863399618743, 74.75190678023341],
+            ['Village of Tattigere', 15.174774821406732, 74.8350623358706],
+            ['Village of Halligadde', 14.870023327259583, 74.81573418460312],
+            ['Village of Gadagera', 14.96912627580558, 74.71233661276078],
+            ['Village of Idgundi', 14.919704680254192, 74.6570091739714],
+            ['Village of Wada', 15.261245122287274, 74.70037997013301],
+            ['Village of Mainalli', 14.975698051524944, 74.88660629863521],
+            ['Village of Bhurunaki', 15.48915291213801, 74.68485101612112],
+            ['Village of Hunsittekoppa', 14.983213267476316, 74.81634317020762],
+            ['Village of Jaddigadde', 14.833110226043111, 74.86573692523646]
+        ]
+
+        var states_array = states.map(function (feature, i) {
+            return {
+                "id": "state-".concat(feature.properties.name.toLowerCase()),
+                "type": "geojson",
+                "data": feature,
+                "style": {
+                    "fillColor": "rgba(108,187,71,0.62)",
+                    "color": "rgba(23,135,0,0.9)"
+                }
+            };
+        });
+
+
+        var features_array = towns.map(function (feature, i) {
+            return {
+                "id": "feature-".concat(i),
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [feature[2], feature[1]]
+                    },
+                    "properties": {
+                        "name": feature[0]
+                    }
+                },
+                "style": pointStyle
+            };
+        });
+
+        var imageryLayer = {
+            "type": "esri-basemap",
+            "url": "ImageryFirefly"
+        }
+
+        var natgeoLayer = {
+            "type": "esri-basemap",
+            "url": "NationalGeographic",
+            "options": {
+                "detectRetina": true
+            }
+        }
+
+        var scenes = {
+            "features": features_array.concat(states_array),
+            "scenes": [
+                {
+                    "id": "place0",
+                    "baseLayer": natgeoLayer,
+                    "layers": states_array.map(function (feature, i) {
+                        return {
+                            "idRef": feature.id
+                        };
+                    }),
+                    "zoom": 5
+                },
+                {
+                    "id": "place1",
+                    "baseLayer": imageryLayer,
+                    "layers": [
+                        { "idRef": "feature-0" }
+                    ],
+                    "zoom": 15
+                },
+                {
+                    "id": "place2",
+                    "baseLayer": imageryLayer,
+                    "layers": [
+                        { "idRef": "feature-1" }
+                    ],
+                    "zoom": 14
+                },
+                {
+                    "id": "place3",
+                    "baseLayer": imageryLayer,
+                    "layers": [
+                        { "idRef": "feature-2" }
+                    ],
+                    "zoom": 16
+                },
+                {
+                    "id": "place4",
+                    "baseLayer": imageryLayer,
+                    "layers": [
+                        { "idRef": "feature-3" },
+                        { "idRef": "feature-4" },
+                        { "idRef": "feature-5" }
+                    ],
+                    "zoom": 17
+                },
+                {
+                    "id": "place5",
+                    "baseLayer": imageryLayer,
+                    "layers": [
+                        { "idRef": "feature-6" },
+                    ],
+                    "zoom": 16
+                },
+                {
+                    "id": "place6",
+                    "baseLayer": imageryLayer,
+                    "layers": [
+                        { "idRef": "feature-7" },
+                    ],
+                    "zoom": 16
+                },
+                {
+                    "id": "place7",
+                    "baseLayer": natgeoLayer,
+                    "layers": [
+                        { "idRef": "feature-8" },
+                        { "idRef": "feature-9" },
+                    ],
+                    "zoom": 9
+                },
+                {
+                    "id": "place8",
+                    "baseLayer": imageryLayer,
+                    "layers": [
+                        { "idRef": "feature-10" },
+                    ],
+                    "zoom": 16
+                },
+                {
+                    "id": "place8a",
+                    "baseLayer": natgeoLayer,
+                    "layers": [
+                        { "idRef": "feature-2" },
+                        { "idRef": "feature-11" },
+                    ],
+                    "zoom": 17
+                },
+                {
+                    "id": "place9",
+                    "baseLayer": natgeoLayer,
+                    "layers": [
+                        { "idRef": "feature-12" },
+                        { "idRef": "feature-13" },
+                    ],
+                    "zoom": 17
+                },
+                {
+                    "id": "place10",
+                    "baseLayer": natgeoLayer,
+                    "layers": [
+                        { "idRef": "feature-10" },
+                        { "idRef": "feature-14" },
+                        { "idRef": "feature-8" },
+                        { "idRef": "feature-15" },
+                        { "idRef": "feature-16" }
+                    ],
+                    "zoom": 10
+                },
+                {
+                    "id": "place11",
+                    "baseLayer": natgeoLayer,
+                    "layers": [
+                        { "idRef": "feature-0" },
+                        { "idRef": "feature-2" },
+                        { "idRef": "feature-3" },
+                        { "idRef": "feature-6" },
+                        { "idRef": "feature-8" },
+                        { "idRef": "feature-9" },
+                        { "idRef": "feature-10" },
+                        { "idRef": "feature-11" },
+                        { "idRef": "feature-12" },
+                        { "idRef": "feature-13" },
+                        { "idRef": "feature-14" },
+                        { "idRef": "feature-15" },
+                    ],
+                    "zoom": 8
+                }
+            ]
+        };
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-79613259-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('#nav li.previous a').on('click', function (e) {
+                e.preventDefault();
+                var $prev = $('#nav').find('.sections li.active').prev();
+
+                if (!$prev.hasClass('previous')) {
+                    $prev.find('a').click();
+                }
+            });
+
+            $('#nav li.next a').on('click', function (e) {
+                e.preventDefault();
+                var $next = $('#nav').find('.sections li.active').next();
+
+                if (!$next.hasClass('next')) {
+                    $next.find('a').click();
+                }
+            });
+
+            document.onkeydown = function (e) {
+                if (e.keyCode == '38') {
+                    // up arrow
+                    $('#nav li.previous a').click();
+                } else if (e.keyCode == '40') {
+                    // down arrow
+                    $('#nav li.next a').click();
+                }
+            };
+
+            var overviewMap = new Focus.Views.OverviewMapView({
+                model: new Backbone.Model({
+                    initialScene: new Focus.Models.SceneModel({
+                        baseLayer: {
+                            "type": "esri-basemap",
+                            "url": "NationalGeographic",
+                        },
+                        center: [0, 0],
+                        zoom: 12,
+                        showAttribution: false
+                    })
+                }),
+                showCenterPoint: true
+            });
+            var sceneManager = new Focus.Views.SceneManagerView({
+                el: $('body'),
+                initialScene: {
+                    baseLayer: {
+                        "type": "esri-basemap",
+                        "url": "NationalGeographic"
+                    },
+                    center: [14.839290302736797, 74.86664160754819],
+                    zoom: 4,
+                    zoomDelta: 1,
+                    markerZoomAnimation: false
+                },
+                navigatorClass: Focus.Views.ScrollingSceneNavigator,
+                mapEngineClass: Focus.Views.LeafletMapEngine
+            });
+
+            var shareView = new Focus.Views.ShareView();
+            shareView.render();
+        });
+
+    </script>
+</body>
+
+</html>
