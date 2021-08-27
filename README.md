@@ -1,5 +1,12 @@
 # FOCUS on Geography
 
+Install [nvm](https://github.com/nvm-sh/nvm), then install node v10.24.1 (npm v6.14.12)
+
+```
+nvm install 10.24.1
+nvm use 10.24.1
+```
+
 Install NodeJS dependencies
 
 ```
