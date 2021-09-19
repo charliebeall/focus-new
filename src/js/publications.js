@@ -5,6 +5,66 @@ Focus.Volumes = [
         publications: [
             {
                 "type": "Feature Article",
+                "title": "Sports Infrastructure, Sports Entertainment, and Reshaping Place in St. Louis",
+                "author": "Doug Hurt",
+                "description": "",
+                "date": "9/15/21",
+                "thumbnail": "publications/articles/st_louis/img/figure18.png",
+                "url": "publications/articles/st_louis/index.html",
+                "location": []
+            },
+            {
+                "type": "Photo Essay",
+                "title": "Pagodas and PowerPoint – Teaching Geography in Mandalay, Myanmar",
+                "author": "John Bowen and Heike Alberts",
+                "description": "",
+                "date": "9/6/21",
+                "thumbnail": "publications/photoessays/pagodas_ppt/img/figure5.jpg",
+                "url": "publications/photoessays/pagodas_ppt/index.html",
+                "location": []
+            },
+            {
+                "type": "Photo Essay",
+                "title": "Hurricane Dorian and Landscapes of Recovery in the Bahamas",
+                "author": "Jordan R. Cissell",
+                "description": "",
+                "date": "7/24/21",
+                "thumbnail": "publications/photoessays/cissell/img/figure10.jpg",
+                "url": "publications/photoessays/cissell/index.html",
+                "location": []
+            },
+            {
+                "type": "Feature Article",
+                "title": "Ecological restoration and economic recovery in Kazakhstan’s Northern Aral Sea region",
+                "author": "Kristopher D. White and Philip Micklin",
+                "description": "",
+                "date": "7/13/21",
+                "thumbnail": "publications/articles/aral_sea/figurea.jpg",
+                "url": "publications/articles/aral_sea/index.html",
+                "location": []
+            },
+            {
+                "type": "Feature Article",
+                "title": "Ramadan Signs in Niamey, Niger: An Examination of an Urban Advertising Landscape",
+                "author": "Sara Beth Keough",
+                "description": "",
+                "date": "5/26/21",
+                "thumbnail": "publications/articles/niamey_ramadan/img/cover.jpg",
+                "url": "publications/articles/niamey_ramadan/index.html",
+                "location": []
+            },
+            {
+                "type": "Feature Article",
+                "title": "Chocolate and the Ugly Secret of Cacao Production on São Tomé Island",
+                "author": "Thomas A. Wikle",
+                "description": "",
+                "date": "4/25/21",
+                "thumbnail": "publications/articles/toma/image3.jpeg",
+                "url": "publications/articles/toma/index.html",
+                "location": []
+            },
+            {
+                "type": "Feature Article",
                 "title": "Siddi Life and Their Sense of Belonging in Karnataka, India",
                 "author": "Sumanth Reddy",
                 "description": "",
