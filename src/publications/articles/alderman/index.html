@@ -28,130 +28,127 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Place favicon.ico in the root directory -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Sigmar+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="../../../css/combined.css" rel="stylesheet" type="text/css">
     <script src="../../../js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
         }
-
+        
         #text {
             background: #fff;
         }
-
+        
         #text h2 {
-            font-family: 'Sigmar One', cursive;
+            font-family: 'Roboto Mono', monospace;
             text-transform: none;
             font-size: 32px;
             font-weight: bold;
             color: rgb(255, 255, 255) !important;
-            text-shadow: 1px 1px 3px rgb(33, 49, 26);
+            text-shadow: 1px 1px 3px rgb(39, 34, 10);
         }
-
+        
         #text h3 {
-            font-family: 'Sigmar One', cursive;
+            font-family: 'Roboto Mono', monospace;
             text-transform: none;
-            color: rgba(37, 65, 25, 0.8);
+            color: rgb(39, 34, 10);
         }
-
+        
         #nav,
         #toggle-map {
-            background: rgba(52, 95, 52, 0.8);
+            background: rgba(39, 34, 10, 0.8);
         }
-
+        
         span.place-text {
-            font-family: 'Sigmar One', cursive;
+            font-family: 'Roboto Mono', monospace;
             color: #fff;
         }
-
+        
         #text a,
         a.location,
         div.tooltip a {
             color: rgba(59, 73, 104, 0.7);
             border-bottom-color: rgba(59, 73, 104, 0.7);
         }
-
+        
         #text a:hover,
         a.location:hover,
         div.tooltip a {
             background: rgba(0, 42, 143, 0.1);
             text-decoration: none;
         }
-
+        
         path.line {
             stroke: rgb(165, 70, 82) !important;
         }
-
+        
         path.marker-path {
             stroke: rgb(165, 70, 82) !important;
             fill: rgb(165, 70, 82) !important;
         }
-
+        
         progress::-webkit-progress-bar {
             background-color: transparent;
         }
-
+        
         progress::-webkit-progress-value {
             background-color: rgba(59, 73, 104, 0.7);
             -webkit-transition: width 0.5s ease-in-out;
         }
-
+        
         progress::-moz-progress-bar {
             background-color: rgba(59, 73, 104, 0.7);
             transition: width 0.5s ease-in-out;
             -moz-transition: width 0.5s ease-in-out;
         }
-
+        
         progress::-ms-fill {
             background-color: rgba(59, 73, 104, 0.7);
             -ms-transition: width 0.5s ease-in-out;
         }
-
+        
         svg text {
-            font-family: 'Sigmar One', cursive;
+            font-family: 'Roboto Mono', monospace;
             font-size: 14px;
             fill: #fff;
             text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
         }
-
+        
         .tooltip.bottom .tooltip-arrow,
         .tooltip.bottom-left .tooltip-arrow,
         .tooltip.bottom-right .tooltip-arrow {
             border-bottom-color: rgb(150, 55, 67);
         }
-
+        
         .tooltip.left .tooltip-arrow {
             border-left-color: rgb(150, 55, 67);
         }
-
+        
         .tooltip-inner {
             background: rgb(150, 55, 67);
             color: #fff;
         }
-
+        
         .tooltip-inner a.location,
         #photo-caption a.location {
             color: #fff;
             border-bottom-color: #fff;
         }
-
-        div.caption {
-            font-size: 1.2rem;
-
-        }
-
+        
         .author {
             opacity: 100% !important;
         }
-
+        
         .author-photo {
             width: 100%;
             margin-right: 0px;
             vertical-align: middle;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-
+        
         .author-info {
             *background-color: rgba(231, 250, 248, 0.89);
             font-size: 1.2em;
@@ -161,10 +158,21 @@
             font-family: 'Montserrat', sans-serif;
             font-size: large;
         }
-
-        div.figure {
+        
+        div.figure-contain {
             background-size: contain;
+        }
+        
+        div.figure-large {
             height: 600px;
+        }
+        
+        section p {
+            margin-top: 1rem !important;
+        }
+        
+        section {
+            border-bottom: 2px solid rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
@@ -177,18 +185,15 @@
     <div id="nav" class="title-hidden dotstyle dotstyle-scaleup">
         <ul class="nav share">
             <li>
-                <a data-toggle="tooltip" title="Share on Twitter"
-                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
                         class="fa fa-twitter"></span></a>
             </li>
             <li>
-                <a data-toggle="tooltip" title="Share on Facebook"
-                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
                         class="share-button fa fa-facebook-official"></span></a>
             </li>
             <li>
-                <a data-toggle="tooltip" title="Share via E-mail"
-                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
                         class="share-button fa fa-envelope"></span></a>
             </li>
         </ul>
@@ -231,18 +236,15 @@
         <a class="main-link" href="../../../index.html"><img id="logo" src="../../../img/focus-logo.svg" /></a>
         <ul class="nav share">
             <li>
-                <a data-toggle="tooltip" title="Share on Twitter"
-                    href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
+                <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?status=[TITLE]+[URL]" class="twitter-share-button"><span
                         class="fa fa-twitter"></span></a>
             </li>
             <li>
-                <a data-toggle="tooltip" title="Share on Facebook"
-                    href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
+                <a data-toggle="tooltip" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]"><span
                         class="share-button fa fa-facebook-official"></span></a>
             </li>
             <li>
-                <a data-toggle="tooltip" title="Share via E-mail"
-                    href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
+                <a data-toggle="tooltip" title="Share via E-mail" href="mailto:?subject=[TITLE]&body=[TITLE]: [URL]"><span
                         class="share-button fa fa-envelope"></span></a>
             </li>
         </ul>
@@ -250,361 +252,285 @@
     </div>
     <div id="text" class="title-hidden">
         <div class="content scenes">
-            <section id="introduction" class="scene" data-scene-id="lp1" title="Introduction">
-                <div class="title title-photo"
-                    style="background-image: linear-gradient(0deg, rgba(142, 142, 142, 0.2), rgba(27, 27, 27, 0.7)), url(images/7b.jpg);">
+            <section id="introduction" class="scene" data-scene-id="place1" title="Introduction">
+                <div class="title title-photo" style="background-image: linear-gradient(0deg, rgba(142, 142, 142, 0.2), rgba(27, 27, 27, 0.7)), url(images/7b.jpg);">
                     <h2>Memory-Work in Montgomery, Alabama</h2>
 
-                    <div class="author row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 author-info">
-                            <span class="name">Derek Alderman & Joshua Inwood</span><br />
-                            <span class="organization">Department of Geography, University of Tennessee & Pennsylvania
-                                State University</span>
-                        </div>
-                    </div>
-                    <div class="citation author-info">
-                        <span class="citation-label"></span>
+                    <div class="container-fluid">
 
+                        <div class="author row">
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                                <img class="author-photo" src="images/author1.jpg" />
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-7 author-info">
+                                <span class="name">Derek Alderman</span>, <span class="organization">Department of
+                                    Geography, University of Tennessee</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="author row">
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                                <img class="author-photo" src="images/author2.jpg" />
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-7 author-info">
+                                <span class="name">Joshua Inwood</span>, <span class="organization">Department of
+                                    Geography, Pennsylvania State University</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="citation author-info">
+                        <span class="citation-label">10.21690/foge/2021.64.4p</span>
                     </div>
                 </div>
 
                 <h3>Introduction</h3>
-                <p>Between 1877 and 1950, White lynch mobs murdered at least 4,400 African Americans. Often carried out
-                    with impunity, these killings were a tactic for controlling Black populations through
-                    community-level terror (Equal Justice Initiative 2017). The scope and scale of this killing is
-                    overwhelming and calls out for conceptualizing it in place. Until recently, few public memorial
-                    projects had attempted to narrate the histories of violence, dispossession, and oppression
-                    associated with lynching. Now, demand for memorializing the victims of historical lynching grows as
-                    activists—in the wake of the murders of George Floyd, Ahmaud Arbery, Breona Taylor, and so many
-                    others—insist on greater social reckoning with the continuing precarity of Black lives. </p>
-                <p> The southeastern United States as a region has many locations marked by the lynching of Black men,
-                    women, and children and the subsequent violence of actively forgetting and denying these atrocities.
-                    Drawing from the path-breaking work of Karen Till (2012), we identify these sites of trauma and
-                    amnesia as “wounded places.” As Till notes, activists, artists, non-profits, local and regional
-                    governments as well as citizens are increasingly trying to come to terms with these realities
-                    through "memory-work." Memory-work draws attention to the range of labor—intellectual, social,
-                    bodily and political—required to create new public memorials that build the social capacity to
-                    recognize, understand, and act upon the legacies of discrimination and violence. These places of
-                    memory open up opportunities not only for marginalized people to assert their rights but also for
-                    the wider society to confront and take responsibility for perpetuating injustice.</p>
-                <p>Montgomery, Alabama highlights this memory-work process, showing how it affects the design and
-                    meaning of places and the legacy of race and racism in cities in the Southeastern USA. Although
-                    Montgomery has received limited attention from geographers in the past, the city is home to one of
-                    the most recent and ambitious memory-work projects in the nation, the Equal Justice Initiative
-                    (EJI). In addition to providing legal representation to those denied a fair trial and advocating for
-                    criminal justice reform, EJI and its founder and Executive Director Bryan Stevenson have led the
-                    construction of The Legacy Museum and the National Memorial for Peace and Justice. Both sites
-                    narrate in unflinching graphic terms the history of racism against Black people beginning with
-                    enslavement. The National Memorial for Peace and Justice has garnered particular attention for
-                    speaking to the ways in which lynching is an unreconciled chapter in the nation’s story of race
-                    relations and a bond between past and present racial inequalities. </p>
-                <p>This photo essay offers a visual and narrative exploration of the memory-work in the National
-                    Memorial, the affective power of its mission and message, its broader situation within Montgomery,
-                    and the lessons it might hold for enhancing the political efficacy and social healing associated
-                    with commemorative change and reform in a racialized America and in the Southeast. In doing so, we
-                    hope to show the value of conducting critical spatial readings of memorial landscapes and the
-                    important but complex role that place plays in publicly narrating histories in an anti-racist ways
+                <p>Between 1877 and 1950, White lynch mobs murdered at least 4,400 African Americans. <sup><a
+                            href="#footnote-1">1</a></sup> Often carried out with impunity, these killings were a tactic for controlling Black populations through community-level terror (Equal Justice Initiative 2017). The scope and scale of this killing
+                    is overwhelming and calls out for conceptualizing it in place. Until recently, few public memorial projects had attempted to narrate the histories of violence, dispossession, and oppression associated with lynching. Now, demand for
+                    memorializing the victims of historical lynching grows as activists—in the wake of the murders of George Floyd, Ahmaud Arbery, Breona Taylor, and so many others—insist on greater social reckoning with the continuing precarity of Black
+                    lives. </p>
+                <p> The southeastern United States as a region has many locations marked by the lynching of Black men, women, and children and the subsequent violence of actively forgetting and denying these atrocities. Drawing from the path-breaking work
+                    of Karen Till (2012), we identify these sites of trauma and amnesia as “wounded places.” As Till notes, activists, artists, non-profits, local and regional governments as well as citizens are increasingly trying to come to terms with
+                    these realities through "memory-work." Memory-work draws attention to the range of labor—intellectual, social, bodily and political—required to create new public memorials that build the social capacity to recognize, understand, and
+                    act upon the legacies of discrimination and violence. These places of memory open up opportunities not only for marginalized people to assert their rights but also for the wider society to confront and take responsibility for perpetuating
+                    injustice.
                 </p>
-                <div class="figure" style="background-image:url(images/1a.jpg);"></div>
-                <div class="figure" style="background-image:url(images/1b.jpg);"></div>
-                <div class="figure" style="background-image:url(images/1c.jpg);"></div>
-                <div class="caption">Caption 1: Over the last decade, the City of Montgomery has invested in its
-                    downtown core. Interspersed, sometimes uncomfortably but necessarily, among the new restaurants, a
-                    baseball stadium, boutiques and high rises are reminders of the city’s past and its connection to
-                    the most divisive moments in U.S. history. To find Maya Angelou’s admonition displayed so
-                    prominently on the landscape along with a number of historical markers to Montgomery’s significant
-                    involvement in the domestic slave trade is indicative of the visibility of the city’s ongoing
-                    memory-work. A geography of remembering is emerging that even the most casual and uninterested
-                    person passing by must acknowledge at some level. The Angelou quote adorns the site of former
-                    warehouse used to imprison enslaved African Americans and now EJI’s Legacy Museum, which chronicles
-                    the continuing legacies of slavery, lynching, racial segregation, and mass incarceration. EJI
-                    collaborated with the Black Heritage Council of the Alabama Historical Commission to sponsor the
-                    establishment of slavery-related historical markers in downtown Montgomery. In addition, the
-                    organization established a “Memory Wall” in the Peace and Justice Garden right outside the entrance
-                    of its memorial to lynching victims to recognize the strength and skill of Black Americans held in
-                    bondage in Montgomery. The wall is composed of bricks fashioned by enslaved artisans in the 1850s
-                    for the city’s theater and offers—along with the aforementioned quote, museum, and markers—a
-                    touchstone for recognizing how our most everyday spaces can be racially wounded places in need of
-                    being addressed (Alderman et al. 2020).</div>
+                <p>Montgomery, Alabama highlights this memory-work process, showing how it affects the design and meaning of places and the legacy of race and racism in cities in the Southeastern USA. Although Montgomery has received limited attention from
+                    geographers in the past, the city is home to one of the most recent and ambitious memory-work projects in the nation, the Equal Justice Initiative (EJI). In addition to providing legal representation to those denied a fair trial and
+                    advocating for criminal justice reform, EJI and its founder and Executive Director Bryan Stevenson have led the construction of The Legacy Museum and the National Memorial for Peace and Justice. Both sites narrate in unflinching graphic
+                    terms the history of racism against Black people beginning with enslavement. The National Memorial for Peace and Justice has garnered particular attention for speaking to the ways in which lynching is an unreconciled chapter in the
+                    nation’s story of race relations and a bond between past and present racial inequalities. <sup><a
+                            href="#footnote-2">2</a></sup></p>
+                <p>This photo essay offers a visual and narrative exploration of the memory-work in the National Memorial, the affective power of its mission and message, its broader situation within Montgomery, and the lessons it might hold for enhancing
+                    the political efficacy and social healing associated with commemorative change and reform in a racialized America and in the Southeast. In doing so, we hope to show the value of conducting critical spatial readings of memorial landscapes
+                    and the important but complex role that place plays in publicly narrating histories in an anti-racist ways
+                </p>
+                <div class="row">
+                    <div class="figure figure-contain col-12 col-sm-6 help" style="background-image:url(images/1a.jpg);">
+                    </div>
+                    <div class="figure figure-contain col-12 col-sm-6 help" style="background-image:url(images/1b.jpg);">
+                    </div>
+                    <div class="figure figure-large col-12 col-sm-12 help" style="background-image:url(images/1c.jpg);">
+                    </div>
+                </div>
+                <div class="caption">[Top-Bottom] Wall outside of Legacy Museum; Slave Depot historical marker; The Memory Wall in Peace and Justice Memorial Garden at the entrance of National Memorial for Peace and Justice (NMPJ) </div>
+                <p>Over the last decade, the City of Montgomery has invested in its downtown core. Interspersed, sometimes uncomfortably but necessarily, among the new restaurants, a baseball stadium, boutiques and high rises are reminders of the city’s
+                    past and its connection to the most divisive moments in U.S. history. To find Maya Angelou’s admonition displayed so prominently on the landscape along with a number of historical markers to Montgomery’s significant involvement in
+                    the domestic slave trade is indicative of the visibility of the city’s ongoing memory-work. A geography of remembering is emerging that even the most casual and uninterested person passing by must acknowledge at some level. The Angelou
+                    quote adorns the site of former warehouse used to imprison enslaved African Americans and now EJI’s Legacy Museum, which chronicles the continuing legacies of slavery, lynching, racial segregation, and mass incarceration. EJI collaborated
+                    with the Black Heritage Council of the Alabama Historical Commission to sponsor the establishment of slavery-related historical markers in downtown Montgomery. In addition, the organization established a “Memory Wall” in the Peace
+                    and Justice Garden right outside the entrance of its memorial to lynching victims to recognize the strength and skill of Black Americans held in bondage in Montgomery. The wall is composed of bricks fashioned by enslaved artisans in
+                    the 1850s for the city’s theater and offers—along with the aforementioned quote, museum, and markers—a touchstone for recognizing how our most everyday spaces can be racially wounded places in need of being addressed (Alderman et al.
+                    2020).
+                </p>
 
             </section>
+            <section id="2" class="scene" data-scene-id="place2" title="2">
 
-            <div class="figure" style="background-image:url(images/2a.jpg);"></div>
-            <div class="figure" style="background-image:url(images/2b.jpg);"></div>
-            <div class="caption">Caption 2: Long remembered and venerated as the first Capitol of the Confederacy and
-                more recently for George Wallace’s vitriolic support of segregation, Montgomery is now the
-                self-declared “Capital Cool.”
-                Any effort to understand the city’s decision to reconnect to its past and to incorporate diverse and
-                contradictory memories must be carried through a complex lens of interpretation. Such a lens
-                recognizes not only the raw activism of memory-work and the taking of responsibility for histories
-                and victims of racism but also how Montgomery and other southern cities appropriate or co-opt
-                commemorative change in serving the growing market influence of civil rights tourism and neoliberal
-                urban development and promotion. Many municipal leaders advocate for commemorative change simply to
-                defuse public controversy and thus avoid difficult discussions about the still strong presence of
-                White supremacy in communities. In 2015, in the wake of the Charleston Massacre, Alabama Governor
-                Robert Bentley took down the Confederate battle flag and other Civil War-related flags from the foot
-                of the Confederate memorial on the State Capitol grounds in Montgomery, leaving behind conspicuously
-                empty flagpole mounts. The nation, in this case the New York Times, is taking notice of Montgomery’s
-                memory-work of confronting the historical legacies of racism, and for some in the city that is one
-                of the major motivations to engage memories traditionally repressed and suppressed.
-            </div>
+                <div class="figure" style="background-image:url(images/2a.jpg);"></div>
+                <div class="figure figure-large" style="background-image:url(images/2b.jpg);"></div>
+                <div class="caption">Montgomery Visitor Center - Capital Cool & NYT quote; Empty flagpole mount, Confederate Memorial, State Capitol Grounds</div>
+                <p>Long remembered and venerated as the first Capitol of the Confederacy and more recently for George Wallace’s vitriolic support of segregation, Montgomery is now the self-declared “Capital Cool.” Any effort to understand the city’s decision
+                    to reconnect to its past and to incorporate diverse and contradictory memories must be carried through a complex lens of interpretation. Such a lens recognizes not only the raw activism of memory-work and the taking of responsibility
+                    for histories and victims of racism but also how Montgomery and other southern cities appropriate or co-opt commemorative change in serving the growing market influence of civil rights tourism and neoliberal urban development and promotion.
+                    Many municipal leaders advocate for commemorative change simply to defuse public controversy and thus avoid difficult discussions about the still strong presence of White supremacy in communities. In 2015, in the wake of the Charleston
+                    Massacre, Alabama Governor Robert Bentley took down the Confederate battle flag and other Civil War-related flags from the foot of the Confederate memorial on the State Capitol grounds in Montgomery, leaving behind conspicuously empty
+                    flagpole mounts. The nation, in this case the New York Times, is taking notice of Montgomery’s memory-work of confronting the historical legacies of racism, and for some in the city that is one of the major motivations to engage memories
+                    traditionally repressed and suppressed.</p>
+            </section>
+            <section id="3" class="scene" data-scene-id="place3" title="3">
+                <div class="figure" style="background-image:url(images/3a.jpg);"></div>
+                <div class="figure figure-large" style="background-image:url(images/3b.jpg);"></div>
+                <div class="caption">Voting Rights March Marker (opposite of the church); Dexter Ave Baptist Church
+                </div>
+                <p>The birthplace of the Montgomery Bus Boycott and one of the first major civil rights victories on the long road toward freedom in the 1950s and 1960s, Dexter Avenue Baptist Church sits in the shadow of the Alabama State Capitol Building,
+                    which doubled as the Capitol of the Confederacy. Dexter reminds us that US history has always included the lives and perspectives of African Americans, even if it takes decades to begin to come to terms with that story is and how we
+                    remember it. Nearby is a marker that recalls the Voting Rights March, which began with the bloody encounters at Selma’s Edmund Pettis Bridge and ended at the State Capitol Building in Montgomery. The march precipitated the passage
+                    of the 1965 Voting Rights Act—arguably the crowning achievement of the Southern Movement for civil and political rights. Directly across the street from the voting rights marker is a heavily stained and nearly unreadable marker to
+                    the Confederacy, suggesting how different and even conflicting memories can claim and appear to occupy in an unproblematic way the same space. Important to the project of memory-work, according to architectural historian Dell Upton
+                    (2015), is challenging the tendency in Montgomery and other cities to separate Black and White history into a dual heritage of “parallel, equally honorable paths" rather than seeing them as consequentially entangled. The EJI’s memorial
+                    to lynching is significant in acknowledging how a study of civil rights struggle is impossible without an open accounting of the history of White violence and discrimination against communities of color.</p>
+            </section>
+            <section id="4" class="scene" data-scene-id="place4" title="4">
+                <div class="figure" style="background-image:url(images/4a.jpg);"></div>
+                <div class="figure figure-large" style="background-image:url(images/4b.jpg);"></div>
+                <div class="figure" style="background-image:url(images/4c.jpg);"></div>
+                <div class="caption">Front of National Memorial for Peace and Justice (NMPJ); Column describing memorials to lynching; Entryway to NMPJ showing MLK quote.</div>
+                <p>Early on, the Equal Justice Initiative recognized that many of Montgomery’s historical markers, museums, and other commemorative symbols glorified the history of the Confederacy. In addition to being a major change for the City of Montgomery,
+                    the National Memorial for Peace and Justice represents a first for a nation that had not sufficiently memorialized the victims of lynching. Officials have never bothered to create a comprehensive accounting of the number, location,
+                    and cause of lynching deaths. Preceding the opening of the National Memorial in Montgomery, EJI generated a highly publicized Lynching in America report. The report conducted an exacting historical count of murdered African Americans
+                    and, at the same time, sought to make those bodies count or matter within public thought and debate, even as EJI recognized that their census of racialized murders was incomplete. Some suffering is not fully knowable because of the
+                    nature of oppression and disregard for life. To recognize this fact is not just about being historically accurate but also about doing justice to the victims of historical violence. Stretching out and across the entryway to the National
+                    Memorial is a quote from Martin Luther King Jr., who proclaimed, “True peace is not merely the absence of tension. It is the presence of justice.” Memory-work is as much about creative tension and destabilizing taken for granted narratives
+                    about the past as it is about presenting unified, comforting stories.</p>
             </section>
 
-            <div class="figure" style="background-image:url(images/3a.jpg);"></div>
-            <div class="figure" style="background-image:url(images/3b.jpg);"></div>
-            <div class="caption">Caption 3: The birthplace of the Montgomery Bus Boycott and one of the first major
-                civil rights victories on the long road toward freedom in the 1950s and 1960s, Dexter Avenue Baptist
-                Church sits in the shadow of the Alabama State Capitol Building, which doubled as the Capitol of the
-                Confederacy. Dexter reminds us that US history has always included the lives and perspectives of
-                African Americans, even if it takes decades to begin to come to terms with that story is and how we
-                remember it. Nearby is a marker that recalls the Voting Rights March, which began with the bloody
-                encounters at Selma’s Edmund Pettis Bridge and ended at the State Capitol Building in Montgomery.
-                The march precipitated the passage of the 1965 Voting Rights Act—arguably the crowning achievement
-                of the Southern Movement for civil and political rights. Directly across the street from the voting
-                rights marker is a heavily stained and nearly unreadable marker to the Confederacy, suggesting how
-                different and even conflicting memories can claim and appear to occupy in an unproblematic way the
-                same space. Important to the project of memory-work, according to architectural historian Dell Upton
-                (2015), is challenging the tendency in Montgomery and other cities to separate Black and White
-                history into a dual heritage of “parallel, equally honorable paths" rather than seeing them as
-                consequentially entangled. The EJI’s memorial to lynching is significant in acknowledging how a
-                study of civil rights struggle is impossible without an open accounting of the history of White
-                violence and discrimination against communities of color.</div>
+            <section id="5" class="scene" data-scene-id="place4" title="5">
+                <div class="figure" style="background-image:url(images/5a.jpg);"></div>
+                <div class="figure figure-contain" style="background-image:url(images/5b.jpg);"></div>
+                <div class="caption">Hands up memorial at NMPJ with US Attorney office complex in background. Caption also refers to NMPJ being near Alabama Parole Reporting Center; Close-up of Hands Up Don’t Shoot Memorial
+                </div>
+                <p>Abutting the National Memorial for Peace and Justice is a State of Alabama Parole Reporting Center and dominating one side of the memorial’s horizon is the large office complex of the US Attorney for Middle District of Alabama. It is a
+                    thought provoking spatial association given EJI’s mission of penal justice. Alabama has one of the highest incarceration rates in the world with 946 people per 100,000 in prison (Wagner and Sawyer 2018). The US rate is 698 per 100,000
+                    as a way of comparison. Fifty-four percent of the prison population is African American and the disproportionate incarceration rate is a reminder of the brutal geographies that exist across time and space as it relates to racial ‘justice’
+                    in the United States (Gilmore 2007). Undergirding Bryan Stevenson’s memory-work, especially as it relates to lynching, is the belief that challenging contemporary racial inequalities in mass incarceration requires a historical understanding
+                    of legal and extra-legal violence against Black people (Hasian and Paliewicz 2020). Meaningful memory-work emphasizes creating new forms of public memory not simply for the sake of history but for addressing the ongoing legacies of
+                    trauma and inequality. Within the National Memorial, EJI decidedly moves away from celebratory treatments of civil rights history to argue that the political harassment and brutality now terrorizing poor people of color is a continuation
+                    of a long history and geography of anti-Black violence and discrimination. “Hands up don’t shoot” has become a rallying cry for thousands in the wake of the shooting and killing of figures such as Michael Brown, Trayvon Martin, and
+                    many others. The struggle to make Black Lives Matter not only connects past and present injustices, but the efforts of African American men and women to assert their individual and collective humanity in a system of justice that was
+                    built through enslaved labor, lynching, share cropping and later the prison industrial complex. The National Memorial concludes with this work by Hank Willis Thomas on the precarity of Black life at the hands of law enforcement, but
+                    it is a useful starting point here for putting EJI’s memory-work in context.
+                </p>
             </section>
 
-            <div class="figure" style="background-image:url(images/4a.jpg);"></div>
-            <div class="figure" style="background-image:url(images/4b.jpg);"></div>
-            <div class="figure" style="background-image:url(images/4c.jpg);"></div>
-            <div class="caption">Caption 4: Early on, the Equal Justice Initiative recognized that many of
-                Montgomery’s historical markers, museums, and other commemorative symbols glorified the history of
-                the Confederacy. In addition to being a major change for the City of Montgomery, the National
-                Memorial for Peace and Justice represents a first for a nation that had not sufficiently
-                memorialized the victims of lynching. Officials have never bothered to create a comprehensive
-                accounting of the number, location, and cause of lynching deaths. Preceding the opening of the
-                National Memorial in Montgomery, EJI generated a highly publicized Lynching in America report. The
-                report conducted an exacting historical count of murdered African Americans and, at the same time,
-                sought to make those bodies count or matter within public thought and debate, even as EJI recognized
-                that their census of racialized murders was incomplete. Some suffering is not fully knowable because
-                of the nature of oppression and disregard for life. To recognize this fact is not just about being
-                historically accurate but also about doing justice to the victims of historical violence. Stretching
-                out and across the entryway to the National Memorial is a quote from Martin Luther King Jr., who
-                proclaimed, “True peace is not merely the absence of tension. It is the presence of justice.”
-                Memory-work is as much about creative tension and destabilizing taken for granted narratives about
-                the past as it is about presenting unified, comforting stories.</div>
+            <section id="6" class="scene" data-scene-id="place4" title="6">
+                <div class="row">
+                    <div class="figure figure-contain col-12 col-sm-6 help" style="background-image:url(images/6a.jpg);">
+                    </div>
+                    <div class="figure figure-contain col-12 col-sm-6 help" style="background-image:url(images/6b.jpg);">
+                    </div>
+                    <div class="figure figure-large col-12 col-sm-12 help" style="background-image:url(images/6c.jpg);">
+                    </div>
+                </div>
+                <div class="caption">Photo of lynching memorial on hill at NMPJ; Walkway to the memorial, include signage and statues of enslaved figures; Close-up of statues of enslaved.
+                </div>
+                <p>The National Memorial for Peace and Justice sits high on a hill. The long walking path that visitors take to the lynching memorial uses explanatory signage and statues of chained Africans writhing in pain and resistance to create its own
+                    narrative. It was as if artist Kwame Akoto-Bamfo captured the moment of initial capture in Africa or arrival in the Americas. One sculpted female slave, with child in arms, reaches out desperately for a stolen or deceased mate. The
+                    empty chains at her feet symbolize that absence. The starkness of the memorial and these bodies against the green fields challenges the tradition of trivializing the physical and emotional pain of racism. The images reflect what historian
+                    Manning Marable (2002) described as the “deep wells of democracy” on which the nation was built, the reality of terror lynching juxtaposes American democracy with the long and brutal history of racial violence in the nation. </p>
+            </section>
 
 
-            <div class="figure" style="background-image:url(images/5a.jpg);"></div>
-            <div class="figure" style="background-image:url(images/5b.jpg);"></div>
-            <div class="caption">Caption 5: Abutting the National Memorial for Peace and Justice is a State of
-                Alabama Parole Reporting Center and dominating one side of the memorial’s horizon is the large
-                office complex of the US Attorney for Middle District of Alabama. It is a thought provoking spatial
-                association given EJI’s mission of penal justice. Alabama has one of the highest incarceration rates
-                in the world with 946 people per 100,000 in prison (Wagner and Sawyer 2018). The US rate is 698 per
-                100,000 as a way of comparison. Fifty-four percent of the prison population is African American and
-                the disproportionate incarceration rate is a reminder of the brutal geographies that exist across
-                time and space as it relates to racial ‘justice’ in the United States (Gilmore 2007). Undergirding
-                Bryan Stevenson’s memory-work, especially as it relates to lynching, is the belief that challenging
-                contemporary racial inequalities in mass incarceration requires a historical understanding of legal
-                and extra-legal violence against Black people (Hasian and Paliewicz 2020). Meaningful memory-work
-                emphasizes creating new forms of public memory not simply for the sake of history but for addressing
-                the ongoing legacies of trauma and inequality. Within the National Memorial, EJI decidedly moves
-                away from celebratory treatments of civil rights history to argue that the political harassment and
-                brutality now terrorizing poor people of color is a continuation of a long history and geography of
-                anti-Black violence and discrimination. “Hands up don’t shoot” has become a rallying cry for
-                thousands in the wake of the shooting and killing of figures such as Michael Brown, Trayvon Martin,
-                and many others. The struggle to make Black Lives Matter not only connects past and present
-                injustices, but the efforts of African American men and women to assert their individual and
-                collective humanity in a system of justice that was built through enslaved labor, lynching, share
-                cropping and later the prison industrial complex. The National Memorial concludes with this work by
-                Hank Willis Thomas on the precarity of Black life at the hands of law enforcement, but it is a
-                useful starting point here for putting EJI’s memory-work in context.</div>
+            <section id="7" class="scene" data-scene-id="place4" title="7">
+                <div class="figure figure-large" style="background-image:url(images/7a.jpg);"></div>
+                <div class="figure figure-contain" style="background-image:url(images/7b.jpg);"></div>
+                <div class="figure figure-large" style="background-image:url(images/7c.jpg);"></div>
+                <div class="caption">Photos of corten steel monuments acknowledging counties, names, and dates of lynching victims</div>
+                <p>Upon entering the formal confines of the memorial to lynching victims, one encounters rows and rows of suspended steel monuments, a visual allusion we believe to the way in which lynch mobs hanged many victims from trees. Each suspended
+                    form references by name a county where lynchings took place along with the inscribed names of those murdered and the date of the racial terror. Raising consciousness among communities of their culpability in the history of lynching
+                    is exactly the intent of EJI, not only the National Memorial for Peace and Justice but also through the Community Remembrance Project. That project collects soil from lynching sites and works with locals to erect historical markers
+                    at those sites. A sober realization of the nation’s complicity in the history of racial terror comes over visitors as they stumble upon or seek to find their own home counties among the geographically ordered 800 monuments. Stretching
+                    out and across an inner courtyard, the individual names and counties eventually blur until each memorial marker folds into one other.
+                </p>
+            </section>
 
+            <section id="8" class="scene" data-scene-id="place4" title="8">
+                <div class="figure figure-large" style="background-image:url(images/8a.jpg);"></div>
+                <div class="figure figure-contain" style="background-image:url(images/8b.jpg);"></div>
+                <div class="caption">Photo of overhanging corten steel monuments; Ida B. Wells Memorial Grove, located at NMPJ as one exists the array of suspended corten steel monuments</div>
+                <p>The very form, design, layout, and location of memorials have an affective power that advocates hope to harness, to re-work how people interact with, appreciate these painful histories, and imagine the possibility of more socially just
+                    futures. This speaks to not only the labor of memory-work, but also the labor involved in taking in and reflecting on the realities of terror lynching in the United States. Initially, as one enters the memorial, the hanging corten
+                    steel monuments are at eye level with visitors. As one moves deeper and lower into the memorial, one experiences the suspended monuments from high above, contributing to an overwhelming if not smothering sense of the scope of the injustice.
+                    Recognizing the emotional gravity of moving through the memorial, EJI established the Ida B. Wells Memorial Grove, consisting of forty black granite cylinders where visitors can sit and reflect. The functional sculpture, designed by
+                    Dana King, honors in Wells one of the first major figures in anti-lynching activism of the late 19th and early 20th centuries (Alderman et al. 2021). Guided by Justice is another one of King’s works found at the National Memorial.
+                    It commemorates the often under-acknowledged women who led and sustained the 1950s’s Montgomery bus boycott. EJI reaffirms what scholars such as Katherine McKittrick (2011) argue, namely the importance of not erasing Black humanity,
+                    resistance, and sense of place from our discussions of the heavy weight of oppression and racialized violence.
+                </p>
+            </section>
 
-            <div class="figure" style="background-image:url(images/6a.jpg);"></div>
-            <div class="figure" style="background-image:url(images/6b.jpg);"></div>
-            <div class="figure" style="background-image:url(images/6c.jpg);"></div>
-            <div class="caption">Caption 6: The National Memorial for Peace and Justice sits high on a hill. The
-                long walking path that visitors take to the lynching memorial uses explanatory signage and statues
-                of chained Africans writhing in pain and resistance to create its own narrative. It was as if artist
-                Kwame Akoto-Bamfo captured the moment of initial capture in Africa or arrival in the Americas. One
-                sculpted female slave, with child in arms, reaches out desperately for a stolen or deceased mate.
-                The empty chains at her feet symbolize that absence. The starkness of the memorial and these bodies
-                against the green fields challenges the tradition of trivializing the physical and emotional pain of
-                racism. The images reflect what historian Manning Marable (2002) described as the “deep wells of
-                democracy” on which the nation was built, the reality of terror lynching juxtaposes American
-                democracy with the long and brutal history of racial violence in the nation. </div>
+            <section id="9" class="scene" data-scene-id="place4" title="9">
+                <div class="row">
+                    <div class="figure figure-contain col-12 col-sm-12 help" style="background-image:url(images/9a.jpg);">
+                    </div>
+                    <div class="figure figure-contain col-12 col-sm-6 help" style="background-image:url(images/9b.jpg);">
+                    </div>
+                    <div class="figure figure-contain col-12 col-sm-6 help" style="background-image:url(images/9c.jpg);">
+                    </div>
+                </div>
+                <div class="caption">Photos of signage found in the lynching memorial at NMPJ within the area containing the hanging corten steel monuments</div>
+                <p>Importantly, the idea of memory-work recognizes that landscape, space, and built environment are not passive to recovering (from) the past but critical to creating what geographer Karen Till calls a “place-based ethics of care” for injured
+                    communities. It encompasses processes of remembering and destabilizing, but also hope and struggle. There is an efficiency of inscriptions and signage within the National Memorial, allowing the words communicated to have special power
+                    amid the heavy materiality and affectivity of the monuments to lynching victims. Especially powerful are the descriptions of some of the reasons behind lynching, chosen specifically to challenge generations of myth making that framed
+                    lynching as anything but a tool of White social control over the bodies, livelihoods, and psyches of African Americans. EJI tells us that lynching affected all Black communities in the US, even those not physically harmed or killed;
+                    they cite the fact that the Great Migration or Diaspora out of the South was taken on not only for economic opportunity but to protect themselves and their children from the racial terror.</p>
+            </section>
+            <section id="10" class="scene" data-scene-id="place10" title="10">
+                <div class="figure" style="background-image:url(images/10a.jpg);"></div>
+                <div class="figure figure-contain" style="background-image:url(images/10b.jpg);"></div>
+                <div class="figure figure-large" style="background-image:url(images/10c.jpg);"></div>
+                <div class="caption">Photos of duplicate monuments of lynching victims available for relocation to counties participating in the Community Remember Project. The last photo is the duplicate monument for Orange County, Florida, which has many unidentified lynching
+                    victims.
+                </div>
+                <p>Duplicate copies of the suspended county monuments to lynching victims lie out, almost like coffins or caskets, for further inspection by visitors as they begin to exit the National Memorial. In the case of Orange County, Florida, where
+                    a White mob in 1920 carried out the Ocoee Massacre to prevent Black citizens from voting, the names of many lynching victims are unknown. This anonymity provokes this and other communities to engage in their own memory-work of identifying
+                    murdered men, women, or children. Critically, EJI recognizes the mutuality of scale that should operate through memory-work, how a national lynching project must also be a local one and vice versa. The ultimate goal is to have the
+                    counties represented at the National Memorial claim and take home their duplicate monument for local display and reflection. As one EJI staff member described during our visit, as this process ensues, the remaining unclaimed steel
+                    monuments will serve as a report card of sorts of who is trying to reckon with the past and who is not. Taking responsibility for past trauma is one of the key aspects of meaningful memory-work.</p>
+            </section>
 
-
-            <div class="figure" style="background-image:url(images/7a.jpg);"></div>
-            <div class="figure" style="background-image:url(images/7b.jpg);"></div>
-            <div class="figure" style="background-image:url(images/7c.jpg);"></div>
-            <div class="caption">Caption 7: Upon entering the formal confines of the memorial to lynching victims,
-                one encounters rows and rows of suspended steel monuments, a visual allusion we believe to the way
-                in which lynch mobs hanged many victims from trees. Each suspended form references by name a county
-                where lynchings took place along with the inscribed names of those murdered and the date of the
-                racial terror. Raising consciousness among communities of their culpability in the history of
-                lynching is exactly the intent of EJI, not only the National Memorial for Peace and Justice but also
-                through the Community Remembrance Project. That project collects soil from lynching sites and works
-                with locals to erect historical markers at those sites. A sober realization of the nation’s
-                complicity in the history of racial terror comes over visitors as they stumble upon or seek to find
-                their own home counties among the geographically ordered 800 monuments. Stretching out and across an
-                inner courtyard, the individual names and counties eventually blur until each memorial marker folds
-                into one other.</div>
-            <div class="figure" style="background-image:url(images/8a.jpg);"></div>
-            <div class="figure" style="background-image:url(images/8b.jpg);"></div>
-            <div class="caption">Caption 8: The very form, design, layout, and location of memorials have an
-                affective power that advocates hope to harness, to re-work how people interact with, appreciate
-                these painful histories, and imagine the possibility of more socially just futures. This speaks to
-                not only the labor of memory-work, but also the labor involved in taking in and reflecting on the
-                realities of terror lynching in the United States. Initially, as one enters the memorial, the
-                hanging corten steel monuments are at eye level with visitors. As one moves deeper and lower into
-                the memorial, one experiences the suspended monuments from high above, contributing to an
-                overwhelming if not smothering sense of the scope of the injustice. Recognizing the emotional
-                gravity of moving through the memorial, EJI established the Ida B. Wells Memorial Grove, consisting
-                of forty black granite cylinders where visitors can sit and reflect. The functional sculpture,
-                designed by Dana King, honors in Wells one of the first major figures in anti-lynching activism of
-                the late 19th and early 20th centuries (Alderman et al. 2021). Guided by Justice is another one of
-                King’s works found at the National Memorial. It commemorates the often under-acknowledged women who
-                led and sustained the 1950s’s Montgomery bus boycott. EJI reaffirms what scholars such as Katherine
-                McKittrick (2011) argue, namely the importance of not erasing Black humanity, resistance, and sense
-                of place from our discussions of the heavy weight of oppression and racialized violence.</div>
-            <div class="figure" style="background-image:url(images/9a.jpg);"></div>
-            <div class="figure" style="background-image:url(images/9b.jpg);"></div>
-            <div class="figure" style="background-image:url(images/9c.jpg);"></div>
-            <div class="caption">Caption 9: Importantly, the idea of memory-work recognizes that landscape, space, and
-                built environment are not passive to recovering (from) the past but critical to creating what geographer
-                Karen Till calls a “place-based ethics of care” for injured communities. It encompasses processes of
-                remembering and destabilizing, but also hope and struggle. There is an efficiency of inscriptions and
-                signage within the National Memorial, allowing the words communicated to have special power amid the
-                heavy materiality and affectivity of the monuments to lynching victims. Especially powerful are the
-                descriptions of some of the reasons behind lynching, chosen specifically to challenge generations of
-                myth making that framed lynching as anything but a tool of White social control over the bodies,
-                livelihoods, and psyches of African Americans. EJI tells us that lynching affected all Black communities
-                in the US, even those not physically harmed or killed; they cite the fact that the Great Migration or
-                Diaspora out of the South was taken on not only for economic opportunity but to protect themselves and
-                their children from the racial terror.</div>
-            <div class="figure" style="background-image:url(images/10a.jpg);"></div>
-            <div class="figure" style="background-image:url(images/10b.jpg);"></div>
-            <div class="figure" style="background-image:url(images/10c.jpg);"></div>
-            <div class="caption">Caption 10: Duplicate copies of the suspended county monuments to lynching victims lie
-                out, almost like coffins or caskets, for further inspection by visitors as they begin to exit the
-                National Memorial. In the case of Orange County, Florida, where a White mob in 1920 carried out the
-                Ocoee Massacre to prevent Black citizens from voting, the names of many lynching victims are unknown.
-                This anonymity provokes this and other communities to engage in their own memory-work of identifying
-                murdered men, women, or children. Critically, EJI recognizes the mutuality of scale that should operate
-                through memory-work, how a national lynching project must also be a local one and vice versa. The
-                ultimate goal is to have the counties represented at the National Memorial claim and take home their
-                duplicate monument for local display and reflection. As one EJI staff member described during our visit,
-                as this process ensues, the remaining unclaimed steel monuments will serve as a report card of sorts of
-                who is trying to reckon with the past and who is not. Taking responsibility for past trauma is one of
-                the key aspects of meaningful memory-work.</div>
-            <div class="figure" style="background-image:url(images/11a.jpg);"></div>
-            <div class="figure" style="background-image:url(images/11b.jpg);"></div>
-            <div class="caption">Caption 11: While the National Memorial for Peace and Justice understandably has
-                garnered much public attention outside of Montgomery, residents of the city will remind you that there
-                are other locations where the work of coming to terms with a racialized past happens. The recently
-                renovated and reopened Kress Building has emerged as a zone for actively remembering and confronting the
-                legacy of discrimination and segregation, creating a complex and contradictory blending of
-                reconciliation and capitalism (Inwood and Alderman 2020). Kress, like many department stores of its
-                time, was a site of unequal access and source of humiliation for African American consumers, powerfully
-                captured in the store’s separate water fountains for Black and White citizens. Construction crews
-                recovered the segregation-era marble slabs, later converted into what has become an emotionally charged
-                memorial. The words “Colored” and “White” etched into the marble speak to not only the way the nation
-                and region have changed, but also the seeming permanence of our divisions. The Kress building is also a
-                place for less seemingly static and fixed memory practices such as the “Story Booth and Podcast Studio,”
-                where the people of Montgomery can tell, record, and archive the stories of their lives and hardships.
-                Listening to and sharing our individual and collective stories is an important piece of the memory-work
-                process of confronting difficult pasts.</div>
-            <section id="7" class="scene" data-scene-id="lp7" title="Concluding Remarks">
+            <section id="11" class="scene" data-scene-id="place11" title="11">
+                <div class="figure" style="background-image:url(images/11a.jpg);"></div>
+                <div class="figure" style="background-image:url(images/11b.jpg);"></div>
+                <div class="caption">Photos of preserved marble slab from segregated drinking foundation and storytelling booth from the Kress Building in Montgomery, Alabama.</div>
+                <p>While the National Memorial for Peace and Justice understandably has garnered much public attention outside of Montgomery, residents of the city will remind you that there are other locations where the work of coming to terms with a racialized
+                    past happens. The recently renovated and reopened Kress Building has emerged as a zone for actively remembering and confronting the legacy of discrimination and segregation, creating a complex and contradictory blending of reconciliation
+                    and capitalism (Inwood and Alderman 2020). Kress, like many department stores of its time, was a site of unequal access and source of humiliation for African American consumers, powerfully captured in the store’s separate water fountains
+                    for Black and White citizens. Construction crews recovered the segregation-era marble slabs, later converted into what has become an emotionally charged memorial. The words “Colored” and “White” etched into the marble speak to not
+                    only the way the nation and region have changed, but also the seeming permanence of our divisions. The Kress building is also a place for less seemingly static and fixed memory practices such as the “Story Booth and Podcast Studio,”
+                    where the people of Montgomery can tell, record, and archive the stories of their lives and hardships. Listening to and sharing our individual and collective stories is an important piece of the memory-work process of confronting difficult
+                    pasts.
+                </p>
+            </section>
+            <section id="7" class="scene" data-scene-id="place1" title="Concluding Remarks">
                 <h3>Concluding Remarks</h3>
-                <p>This essay has sought to illustrate a few key themes that can further advance research, teaching, and
-                    general thinking in geography. First, readers are encouraged to consider and study memory-work as a
-                    place-making and reparative force within communities wounded (and continuing to be wounded) by
-                    historical legacies of racism and anti-Black violence—recognizing of course that this work is
-                    fraught with tension, potential co-option, and the necessity of holding uncomfortable discussions.
-                    Geographical studies of memory and commemorative landscapes have grown over the past couple of
-                    decades, but the Equal Justice Initiative provokes us to consider more fully the role that
-                    memorializing the past—particularly difficult histories—can and should play in “regenerating” a more
-                    socially just present and future (Sheehan et al. 2021). </p>
-                <p>Second, geographers are encouraged to carry out critical spatial readings of memorial sites in ways
-                    that expose the material, emotional, and political dimensions of those landscapes. The National
-                    Memorial for Peace and Justice powerfully illustrates that place is not just a setting or stage for
-                    memory but it actively reshapes how many of us view, feel about, and connect with the history of
-                    American lynching and its victims. The affective power of the National Memorial comes not just from
-                    the histories and wounded people and places it references directly but also in its capacity to form
-                    a “commemorative atmosphere” or feel by combining space, material environment, sensory experience,
-                    and the racial and place histories and movements of individual visitors (Sumartojo 2016).</p>
-                <p>Third and finally, in conducting the spatial reading of memory we suggest it is key to set the
-                    memorial site within and against the city’s larger landscape and put its various commemorative and
-                    everyday spaces, practices, and tensions in conversation with each other. Although Montgomery is not
-                    a frequent analytical stop for geographers, it is nonetheless a powerful microcosm for the nation
-                    given the city’s conflicted commemorations—of White supremacy and civil rights—and the innovative
-                    nature of anti-racist memory-work being attempted there. How we navigate these divides and changes
-                    in Alabama have implications for all of us. </p>
+                <p>This essay has sought to illustrate a few key themes that can further advance research, teaching, and general thinking in geography. First, readers are encouraged to consider and study memory-work as a place-making and reparative force
+                    within communities wounded (and continuing to be wounded) by historical legacies of racism and anti-Black violence—recognizing of course that this work is fraught with tension, potential co-option, and the necessity of holding uncomfortable
+                    discussions. Geographical studies of memory and commemorative landscapes have grown over the past couple of decades, but the Equal Justice Initiative provokes us to consider more fully the role that memorializing the past—particularly
+                    difficult histories—can and should play in “regenerating” a more socially just present and future (Sheehan et al. 2021).
+                </p>
+                <p>Second, geographers are encouraged to carry out critical spatial readings of memorial sites in ways that expose the material, emotional, and political dimensions of those landscapes. The National Memorial for Peace and Justice powerfully
+                    illustrates that place is not just a setting or stage for memory but it actively reshapes how many of us view, feel about, and connect with the history of American lynching and its victims. The affective power of the National Memorial
+                    comes not just from the histories and wounded people and places it references directly but also in its capacity to form a “commemorative atmosphere” or feel by combining space, material environment, sensory experience, and the racial
+                    and place histories and movements of individual visitors (Sumartojo 2016).</p>
+                <p>Third and finally, in conducting the spatial reading of memory we suggest it is key to set the memorial site within and against the city’s larger landscape and put its various commemorative and everyday spaces, practices, and tensions
+                    in conversation with each other. Although Montgomery is not a frequent analytical stop for geographers, it is nonetheless a powerful microcosm for the nation given the city’s conflicted commemorations—of White supremacy and civil rights—and
+                    the innovative nature of anti-racist memory-work being attempted there. How we navigate these divides and changes in Alabama have implications for all of us. </p>
 
                 <h3>Acknowledgements</h3>
-                <p>We would like the reviewers for their helpful comments on an earlier draft of this essay. We
-                    collected the photographs and observations reported here in spring 2018, while conducting a broader
-                    fieldwork project funded by the National Science Foundation (grant # # 1660274). </p>
+                <p>We would like the reviewers for their helpful comments on an earlier draft of this essay. We collected the photographs and observations reported here in spring 2018, while conducting a broader fieldwork project funded by the National Science
+                    Foundation (grant # # 1660274). </p>
                 <h3>References</h3>
                 <ul class="references">
-                    <li>Alderman D. H., Brasher, J., and Dwyer, O.J. 2020. Memorials and Monuments. International
-                        Encyclopedia of Human Geography, 2nd edition. Oxford: Elsevier (edited by Audrey Kobayashi),
-                        Vol. 9. Elsevier, 39-47.</li>
+                    <li>Alderman D. H., Brasher, J., and Dwyer, O.J. 2020. Memorials and Monuments. International Encyclopedia of Human Geography, 2nd edition. Oxford: Elsevier (edited by Audrey Kobayashi), Vol. 9. Elsevier, 39-47.</li>
 
-                    <li>Blake, K. 1995. Zane Grey and Images of the AmAlderman, D. H., Inwood, J. F., and Bottone, E.
-                        2021. The Mapping Behind the Movement: On Recovering the Critical Cartographies of the African
-                        American Freedom Struggle. Geoforum 120: 67-78.erican West. Geographical Review 85 (2): 202-216.
+                    <li>Blake, K. 1995. Zane Grey and Images of the AmAlderman, D. H., Inwood, J. F., and Bottone, E. 2021. The Mapping Behind the Movement: On Recovering the Critical Cartographies of the African American Freedom Struggle. Geoforum 120: 67-78.erican
+                        West. Geographical Review 85 (2): 202-216.
                     </li>
-                    <li>Apel, D. 2008. Memorialization and its Discontents: America's First Lynching Memorial. The
-                        Mississippi Quarterly 61(1/2): 217-235.</li>
-                    <li>Equal Justice Initiative. 2017. Lynching in America: Confronting the Legacy of Racial Terror (3d
-                        Ed.). Montgomery, AL.</li>
-                    <li>Gilmore, R. W. 2007. Golden Gulag: Prisons, Surplus, Crisis, and Opposition in Globalizing
-                        California. University of California Press.</li>
-                    <li>Hasian, M., and Paliewicz, N. S. 2020. The National Memorial for Peace and Justice, Dark Tourist
-                        Argumentation, and Civil rights Memoryscapes. Atlantic Journal of Communication 1-17.</li>
-                    <li>Inwood, J., and Alderman, D. H. 2020. Urban Redevelopment as Soft Memory-Work in Montgomery,
-                        Alabama. Journal of Urban Affairs 1-20. (available online not yet in print)
+                    <li>Apel, D. 2008. Memorialization and its Discontents: America's First Lynching Memorial. The Mississippi Quarterly 61(1/2): 217-235.</li>
+                    <li>Equal Justice Initiative. 2017. Lynching in America: Confronting the Legacy of Racial Terror (3d Ed.). Montgomery, AL.</li>
+                    <li>Gilmore, R. W. 2007. Golden Gulag: Prisons, Surplus, Crisis, and Opposition in Globalizing California. University of California Press.</li>
+                    <li>Hasian, M., and Paliewicz, N. S. 2020. The National Memorial for Peace and Justice, Dark Tourist Argumentation, and Civil rights Memoryscapes. Atlantic Journal of Communication 1-17.
                     </li>
-                    <li>Marable, M. 2002. The Great Wells of Democracy: The Meaning of Race in American Life. Civitas
-                        Books. </li>
-                    <li>McKittrick, K. 2011. On Plantations, Prisons, and a Black Sense of Place. Social & Cultural
-                        Geography 12(8): 947-963.</li>
-                    <li>Sheehan, R., Brasher, J.P., and Speights-Binet, J. 2021. Mobilities and Regenerative
-                        Memorialization: Examining the Equal Justice Initiative and Strategies for the Future of the
-                        American South. Southeastern Geographer (forthcoming)
+                    <li>Inwood, J., and Alderman, D. H. 2020. Urban Redevelopment as Soft Memory-Work in Montgomery, Alabama. Journal of Urban Affairs 1-20. (available online not yet in print)
                     </li>
-                    <li>Sumartojo, S. 2016. Commemorative Atmospheres: Memorial Sites, Collective Events and the
-                        Experience of National Identity. Transactions of the Institute of British Geographers 41(4):
-                        541-553.</li>
-                    <li>Till, K. E. 2012. Wounded Cities: Memory-work and a Place-Based Ethics of Care. Political
-                        Geography 31(1): 3-14.</li>
-                    <li>Upton, D. 2015. What Can and Can't Be Said: Race, Uplift, and Monument Building in the
-                        Contemporary South. Yale University Press.</li>
-                    <li>Wagner, P. and Sawyer, W. 2018. States of Incarceration: The Global Context 2018. Prison Policy
-                        Initiative. Last accessed June 25, 2021 from https://www.prisonpolicy.org/global/2018.html</li>
-                    <li>Yuan, J. 27 February 2018. “The 52 Places Traveler: In Montgomery, a City Embedded With Pain,
-                        Finding Progress.” New York Times. Last accessed June 22, 2021 from
-                        https://www.nytimes.com/2018/02/27/travel/montgomery-alabama-history-race.html
+                    <li>Marable, M. 2002. The Great Wells of Democracy: The Meaning of Race in American Life. Civitas Books.
+                    </li>
+                    <li>McKittrick, K. 2011. On Plantations, Prisons, and a Black Sense of Place. Social & Cultural Geography 12(8): 947-963.</li>
+                    <li>Sheehan, R., Brasher, J.P., and Speights-Binet, J. 2021. Mobilities and Regenerative Memorialization: Examining the Equal Justice Initiative and Strategies for the Future of the American South. Southeastern Geographer (forthcoming)
+                    </li>
+                    <li>Sumartojo, S. 2016. Commemorative Atmospheres: Memorial Sites, Collective Events and the Experience of National Identity. Transactions of the Institute of British Geographers 41(4): 541-553.
+                    </li>
+                    <li>Till, K. E. 2012. Wounded Cities: Memory-work and a Place-Based Ethics of Care. Political Geography 31(1): 3-14.</li>
+                    <li>Upton, D. 2015. What Can and Can't Be Said: Race, Uplift, and Monument Building in the Contemporary South. Yale University Press.</li>
+                    <li>Wagner, P. and Sawyer, W. 2018. States of Incarceration: The Global Context 2018. Prison Policy Initiative. Last accessed June 25, 2021 from https://www.prisonpolicy.org/global/2018.html
+                    </li>
+                    <li>Yuan, J. 27 February 2018. “The 52 Places Traveler: In Montgomery, a City Embedded With Pain, Finding Progress.” New York Times. Last accessed June 22, 2021 from https://www.nytimes.com/2018/02/27/travel/montgomery-alabama-history-race.html
                     </li>
 
                 </ul>
-                <p> Using rather exhaustive measures, the Equal Justice Initiative (EJI) (2017) found 4084 lynchings of
-                    African Americans in the states of Alabama, Arkansas, Florida, Georgia, Kentucky, Louisiana,
-                    Mississippi, North Carolina, South Carolina, Tennessee, Texas, and Virginia. An additional 300
-                    racial terror lynchings were carried out against Black people in other states during this historical
-                    period, according to EJI. The focus of EJI and this essay is anti-Black killings, which claimed the
-                    vast majority of victims nationally and within the Southeast; however, lynch mobs also targeted and
-                    murdered members of Native American, Chinese, and Mexican communities to different degrees
-                    regionally and historically.</p>
-                <p> Duluth, Minnesota is generally credited with building the first public lynching memorial in the
-                    United States, memorializing three Black men who were falsely accused in 1920 of raping a young
-                    white woman and hanged from a lamppost in the center of town in front of a mob of thousands. The
-                    lynching was publicized at the time in a widely circulated picture postcard. Unlike EJI’s memorial
-                    that addresses the widespread and continuing national and regional legacies of lynching, Duluth is a
-                    strictly localized commemoration and one, according to Apel 2008), more focused on creating a
-                    redemptive and unifying narrative in the face of White shame and backlash to the memorial rather
-                    than fully coming to terms with Black oppression and loss.</p>
+
+                <h3>Footnotes</h3>
+                <p id='footnote-1'><sup>[1]</sup> Using rather exhaustive measures, the Equal Justice Initiative (EJI) (2017) found 4084 lynchings of African Americans in the states of Alabama, Arkansas, Florida, Georgia, Kentucky, Louisiana, Mississippi, North Carolina,
+                    South Carolina, Tennessee, Texas, and Virginia. An additional 300 racial terror lynchings were carried out against Black people in other states during this historical period, according to EJI. The focus of EJI and this essay is anti-Black
+                    killings, which claimed the vast majority of victims nationally and within the Southeast; however, lynch mobs also targeted and murdered members of Native American, Chinese, and Mexican communities to different degrees regionally and
+                    historically.
+                </p>
+                <p id='footnote-2'><sup>[2]</sup> Duluth, Minnesota is generally credited with building the first public lynching memorial in the United States, memorializing three Black men who were falsely accused in 1920 of raping a young white woman and hanged from
+                    a lamppost in the center of town in front of a mob of thousands. The lynching was publicized at the time in a widely circulated picture postcard. Unlike EJI’s memorial that addresses the widespread and continuing national and regional
+                    legacies of lynching, Duluth is a strictly localized commemoration and one, according to Apel 2008), more focused on creating a redemptive and unifying narrative in the face of White shame and backlash to the memorial rather than fully
+                    coming to terms with Black oppression and loss.</p>
 
             </section>
             <div class="row footer-row"></div>
@@ -618,13 +544,136 @@
     <!-- inject:templates:html -->
     <!-- endinject -->
     <script src="../../../js/combined.js"></script>
-    <script src="./data/parks.js"></script>
-    <script src="./index.js"></script>
+    <script>
+        var pointStyle = {
+            "opacity": 0.5,
+            "radius": 4,
+            "weight": 2,
+            "fillColor": "#BE1931",
+            "color": "#BE1931"
+        };
+
+        var figures = [
+            ['1a', 'Wall outside of Legacy Museum', 32.38233154647823, -86.30855560351475],
+            ['1b', 'Slave Depot historical marker', 32.37860670277665, -86.30610385260869],
+            ['1c', 'The Memory Wall in Peace and Justice Memorial Garden at NMPJ', 32.37201841865131, -86.31263520872436],
+            ['2a', 'Capital Cool & NYT quote (Montgomery Visitor Center)', 32.38038243038555, -86.31407197541849],
+            ['2b', 'Empty flagpole mount, Confederate Memorial, State Capitol Grounds', 32.37828115578527, -86.3006201309255],
+            ['3a', 'Voting Rights March Marker', 32.3776812944537, -86.30241896370237],
+            ['3b', 'Dexter Ave Baptist Church', 32.377378581496394, -86.30262924705747],
+            ['4', 'National Memorial for Peace and Justice Entrance', 32.37283237166673, -86.31332089982735],
+            ['5', 'Hands up memorial', 32.37264720036799, -86.31222775790457],
+            ['aprc', 'Alabama Parole Reporting Center', 32.37328216116583, -86.313063468505],
+            ['10', 'Orange County Courthouse', 28.548195099178525, -81.37777329558244],
+            ['11', 'Kress Building in Montgomery, Alabama', 32.37780522098657, -86.30817888156804],
+        ]
+
+
+        var features_array = figures.map(function(feature, i) {
+            return {
+                "id": "figure".concat(feature[0]),
+                "type": "geojson",
+                "data": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [feature[3], feature[2]]
+                    },
+                    "properties": {
+                        "name": feature[1]
+                    }
+                },
+                "style": pointStyle
+            };
+        });
+
+        var basemap = [{
+            "type": "esri-basemap",
+            "url": "Imagery",
+            "options": {
+                "detectRetina": true
+            }
+        }, {
+            "type": "esri-basemap",
+            "url": "ImageryLabels",
+            "options": {
+                "detectRetina": true
+            }
+        }]
+
+        var scenes = {
+            "features": features_array,
+            "scenes": [{
+                "id": "place1",
+                "baseLayer": basemap,
+                "zoom": 15,
+                "layers": [{
+                    "idRef": 'figure1a'
+                }, {
+                    "idRef": 'figure1b'
+                }, {
+                    "idRef": 'figure1c'
+                }]
+            }, {
+                "id": "place2",
+                "baseLayer": basemap,
+                "zoom": 15,
+                "layers": [{
+                    "idRef": 'figure2a'
+                }, {
+                    "idRef": 'figure2b'
+                }]
+            }, {
+                "id": "place3",
+                "baseLayer": basemap,
+                "zoom": 17,
+                "layers": [{
+                    "idRef": 'figure3a'
+                }, {
+                    "idRef": 'figure3b'
+                }]
+            }, {
+                "id": "place4",
+                "baseLayer": [{
+                    "type": "esri-basemap",
+                    "url": "Imagery",
+                    "options": {
+                        "detectRetina": true
+                    }
+                }],
+                "zoom": 18,
+                "layers": [{
+                    "idRef": 'figure4'
+                }, {
+                    "idRef": 'figure5'
+                }, {
+                    "idRef": 'figureaprc'
+                }]
+            }, {
+                "id": "place10",
+                "baseLayer": basemap,
+                "layers": [{
+                    "idRef": 'figure10'
+                }, {
+                    "idRef": 'figure1c'
+                }]
+            }, {
+                "id": "place11",
+                "baseLayer": basemap,
+                "zoom": 16,
+                "layers": [{
+                    "idRef": 'figure11'
+                }, {
+                    "idRef": 'figure1c'
+                }]
+            }]
+        };
+    </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-        (function (i, s, o, g, r, a, m) {
+        (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
+            i[r] = i[r] || function() {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
             a = s.createElement(o),
@@ -636,6 +685,71 @@
 
         ga('create', 'UA-79613259-1', 'auto');
         ga('send', 'pageview');
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $('#nav li.previous a').on('click', function(e) {
+                e.preventDefault();
+                var $prev = $('#nav').find('.sections li.active').prev();
+
+                if (!$prev.hasClass('previous')) {
+                    $prev.find('a').click();
+                }
+            });
+
+            $('#nav li.next a').on('click', function(e) {
+                e.preventDefault();
+                var $next = $('#nav').find('.sections li.active').next();
+
+                if (!$next.hasClass('next')) {
+                    $next.find('a').click();
+                }
+            });
+
+            document.onkeydown = function(e) {
+                if (e.keyCode == '38') {
+                    // up arrow
+                    $('#nav li.previous a').click();
+                } else if (e.keyCode == '40') {
+                    // down arrow
+                    $('#nav li.next a').click();
+                }
+            };
+
+            var overviewMap = new Focus.Views.OverviewMapView({
+                model: new Backbone.Model({
+                    initialScene: new Focus.Models.SceneModel({
+                        baseLayer: {
+                            "type": "esri-basemap",
+                            "url": "NationalGeographic",
+                        },
+                        center: [0, 0],
+                        zoom: 10,
+                        showAttribution: false
+                    })
+                }),
+                showCenterPoint: true
+            });
+            var sceneManager = new Focus.Views.SceneManagerView({
+                el: $('body'),
+                initialScene: {
+                    baseLayer: {
+                        "type": "esri-basemap",
+                        "url": "NationalGeographic"
+                    },
+                    center: [32.38233, -86.30855],
+                    zoom: 14,
+                    zoomDelta: 3,
+                    markerZoomAnimation: false
+                },
+                navigatorClass: Focus.Views.ScrollingSceneNavigator,
+                mapEngineClass: Focus.Views.LeafletMapEngine
+            });
+
+            var shareView = new Focus.Views.ShareView();
+            shareView.render();
+        });
     </script>
 </body>
 
