@@ -1,8 +1,16 @@
 var Focus = Focus || {};
-Focus.Volumes = [
-    {
+Focus.Volumes = [{
         number: 64,
-        publications: [
+        publications: [{
+                "type": "Photo Essay",
+                "title": "Memory-Work in Montgomery, Alabama",
+                "author": "Derek Alderman and Joshua Inwood",
+                "description": "",
+                "date": "11/15/21",
+                "thumbnail": "publications/photoessays/alderman/images/7b.jpg",
+                "url": "publications/photoessays/alderman/index.html",
+                "location": []
+            },
             {
                 "type": "Feature Article",
                 "title": "Sports Infrastructure, Sports Entertainment, and Reshaping Place in St. Louis",
@@ -87,97 +95,97 @@ Focus.Volumes = [
     },
     {
         number: 63,
-        publications: [
-        {
-            "type": "Feature Article",
-            "title": "Understanding Riverbank Erosion in Majuli Island of India: Geomorphological Process and Policy Implications",
-            "author": "Avijit Sahay, Nikhil Roy, Azizur Rahman Siddiqui",
-            "description": "",
-            "date": "12/31/20",
-            "thumbnail": "publications/articles/majuli_2/files/250bda5355e41ed548dc47c0f6900e723fafe38f06618c46e8814f71025d.jpg",
-            "url": "publications/articles/majuli_2/index.html",
-            "location": []
-        },
-        {
-            "type": "Photo Essay",
-            "title": "Tweeting Images of Fandom: A Geographic Photo Analysis of Southeastern Conference Football Support",
-            "author": "J. A. Cooper",
-            "description": "",
-            "date": "12/21/20",
-            "thumbnail": "publications/photoessays/football_fans/img/pregame.jpg",
-            "url": "publications/photoessays/football_fans/index.html",
-            "location": []
-        },
-        {
-            type: 'Feature Article',
-            title: 'Trade, Tourism and the Environment in Asia’s Durian Boom',
-            author: 'Christopher Airriess',
-            description: '',
-            date: '10/13/20',
-            thumbnail: 'publications/articles/durian/img/figure10.jpg',
-            url: 'publications/articles/durian/index.html',
-            location: []
-        },
-        {
-            type: 'Feature Article',
-            title: 'Urbanism and Iron Mining in Labrador',
-            author: 'Arthur Krim',
-            description: '',
-            date: '9/20/20',
-            thumbnail: 'publications/articles/labrador/img/figure1.jpg',
-            url: 'publications/articles/labrador/index.html',
-            location: []
-        },
-        {
-            type: 'Photo Essay',
-            title: 'Can Making a Book Conserve a Forest? Bubango, Tanzania',
-            author: 'Maria Fadiman, Grace Gobbo',
-            description: '',
-            date: '6/15/20',
-            thumbnail: 'publications/photoessays/tanzania/img/figure15.jpg',
-            url: 'publications/photoessays/tanzania/index.html',
-            location: []
-        },
-        {
-            type: 'Feature Article',
-            title: 'Saving an Impacted Sacred River of Punjab (India) with the Help of a Volunteer Sikh Religious Community',
-            author: 'Ranbir Singh Kang',
-            description: '',
-            date: '6/6/20',
-            thumbnail: 'publications/articles/river_of_punjab/img/cover.png',
-            url: 'publications/articles/river_of_punjab/index.html',
-            location: []
-        },
-        {
-            type: 'Feature Article',
-            title: 'Colorism in Bangladeshi Society',
-            author: 'Kari Jensen',
-            description: '',
-            date: '4/8/20',
-            thumbnail: 'publications/articles/bangladeshi/img/figure11.jpg',
-            url: 'publications/articles/bangladeshi/index.html',
-            location: []
-        },
-        {
-            type: 'Photo Essay',
-            title: 'Landscapes of Multicultural Memory and Heritage in Wales',
-            author: 'Mark Alan Rhodes II, PhD',
-            description: '',
-            date: '3/14/20',
-            thumbnail: 'publications/photoessays/wales/images/figure19.jpg',
-            url: 'publications/photoessays/wales/index.html',
-            location: []
-        },
-        {
-            type: 'Feature Article',
-            title: 'Picturing the National Parks through postcards at the National Park Service Centennial',
-            author: 'Robert Briwa, Nicolas T. Bergmann',
-            description: '',
-            date: '1/30/20',
-            thumbnail: 'publications/articles/national_parks_postcards/images/main.jpg',
-            url: 'publications/articles/national_parks_postcards/index.html',
-            location: []
-        }]
+        publications: [{
+                "type": "Feature Article",
+                "title": "Understanding Riverbank Erosion in Majuli Island of India: Geomorphological Process and Policy Implications",
+                "author": "Avijit Sahay, Nikhil Roy, Azizur Rahman Siddiqui",
+                "description": "",
+                "date": "12/31/20",
+                "thumbnail": "publications/articles/majuli_2/files/250bda5355e41ed548dc47c0f6900e723fafe38f06618c46e8814f71025d.jpg",
+                "url": "publications/articles/majuli_2/index.html",
+                "location": []
+            },
+            {
+                "type": "Photo Essay",
+                "title": "Tweeting Images of Fandom: A Geographic Photo Analysis of Southeastern Conference Football Support",
+                "author": "J. A. Cooper",
+                "description": "",
+                "date": "12/21/20",
+                "thumbnail": "publications/photoessays/football_fans/img/pregame.jpg",
+                "url": "publications/photoessays/football_fans/index.html",
+                "location": []
+            },
+            {
+                type: 'Feature Article',
+                title: 'Trade, Tourism and the Environment in Asia’s Durian Boom',
+                author: 'Christopher Airriess',
+                description: '',
+                date: '10/13/20',
+                thumbnail: 'publications/articles/durian/img/figure10.jpg',
+                url: 'publications/articles/durian/index.html',
+                location: []
+            },
+            {
+                type: 'Feature Article',
+                title: 'Urbanism and Iron Mining in Labrador',
+                author: 'Arthur Krim',
+                description: '',
+                date: '9/20/20',
+                thumbnail: 'publications/articles/labrador/img/figure1.jpg',
+                url: 'publications/articles/labrador/index.html',
+                location: []
+            },
+            {
+                type: 'Photo Essay',
+                title: 'Can Making a Book Conserve a Forest? Bubango, Tanzania',
+                author: 'Maria Fadiman, Grace Gobbo',
+                description: '',
+                date: '6/15/20',
+                thumbnail: 'publications/photoessays/tanzania/img/figure15.jpg',
+                url: 'publications/photoessays/tanzania/index.html',
+                location: []
+            },
+            {
+                type: 'Feature Article',
+                title: 'Saving an Impacted Sacred River of Punjab (India) with the Help of a Volunteer Sikh Religious Community',
+                author: 'Ranbir Singh Kang',
+                description: '',
+                date: '6/6/20',
+                thumbnail: 'publications/articles/river_of_punjab/img/cover.png',
+                url: 'publications/articles/river_of_punjab/index.html',
+                location: []
+            },
+            {
+                type: 'Feature Article',
+                title: 'Colorism in Bangladeshi Society',
+                author: 'Kari Jensen',
+                description: '',
+                date: '4/8/20',
+                thumbnail: 'publications/articles/bangladeshi/img/figure11.jpg',
+                url: 'publications/articles/bangladeshi/index.html',
+                location: []
+            },
+            {
+                type: 'Photo Essay',
+                title: 'Landscapes of Multicultural Memory and Heritage in Wales',
+                author: 'Mark Alan Rhodes II, PhD',
+                description: '',
+                date: '3/14/20',
+                thumbnail: 'publications/photoessays/wales/images/figure19.jpg',
+                url: 'publications/photoessays/wales/index.html',
+                location: []
+            },
+            {
+                type: 'Feature Article',
+                title: 'Picturing the National Parks through postcards at the National Park Service Centennial',
+                author: 'Robert Briwa, Nicolas T. Bergmann',
+                description: '',
+                date: '1/30/20',
+                thumbnail: 'publications/articles/national_parks_postcards/images/main.jpg',
+                url: 'publications/articles/national_parks_postcards/index.html',
+                location: []
+            }
+        ]
     },
     {
         number: 62,
